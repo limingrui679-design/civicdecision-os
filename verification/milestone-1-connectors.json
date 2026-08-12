@@ -1,0 +1,31 @@
+{
+  "city_adapter_documents": 1,
+  "connector_families": {
+    "climate": 1,
+    "demography": 1,
+    "disaster": 1,
+    "health": 1,
+    "public-service": 1,
+    "seismic": 1,
+    "statistics": 1
+  },
+  "connectors": 7,
+  "decision_pack_content_hashes": [
+    "sha256:0a30507ab9045bcd162a580457bdfa3905028afd13db423d729cdf23e4c48b5f",
+    "sha256:b930f66e7b1335378b7f5a31574c2c83c4d89660102f95787b26efad89f8e63e"
+  ],
+  "decision_pack_statuses": {
+    "completed": 1,
+    "infeasible": 1
+  },
+  "decision_packs": 2,
+  "generated_schemas": 3,
+  "rebuilds_exactly_matched": 2,
+  "rebuilt_reference_hashes": [
+    "sha256:0a30507ab9045bcd162a580457bdfa3905028afd13db423d729cdf23e4c48b5f",
+    "sha256:b930f66e7b1335378b7f5a31574c2c83c4d89660102f95787b26efad89f8e63e"
+  ],
+  "scenario_documents": 2,
+  "source_manifest_records": 81,
+  "source_manifests": 7
+}

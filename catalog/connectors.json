@@ -1,0 +1,121 @@
+[
+  {
+    "authentication": "No key for bounded Socrata queries; app tokens may raise limits.",
+    "class_name": "CDCPlacesConnector",
+    "documentation_url": "https://data.cdc.gov/500-Cities-Places/PLACES-Census-Tract-Data-GIS-Friendly-Format-2025-/yjkw-uj5s",
+    "family": "health",
+    "id": "cdc-places-2025-tract",
+    "license_summary": "Public Domain with CDC attribution and methodology context",
+    "module": "civicdecision.connectors.cdc_places",
+    "name": "CDC PLACES 2025 census-tract estimates",
+    "paging_or_bound": "limit <= 50,000 plus explicit offset and optional state/county filter",
+    "primary_limitations": [
+      "Area estimates are not individual outcomes or causal effects."
+    ],
+    "publisher": "U.S. Centers for Disease Control and Prevention",
+    "record_semantics": "One model-based small-area estimate record per census tract",
+    "scope": "national"
+  },
+  {
+    "authentication": "No key for Statistics API requests.",
+    "class_name": "EurostatStatisticsConnector",
+    "documentation_url": "https://ec.europa.eu/eurostat/web/user-guides/data-browser/api-data-access/api-introduction",
+    "family": "statistics",
+    "id": "eurostat-statistics-api",
+    "license_summary": "Free reuse with attribution; dataset and third-party exceptions apply",
+    "module": "civicdecision.connectors.eurostat",
+    "name": "Eurostat Statistics API",
+    "paging_or_bound": "Required dimension filters plus local max_cells release gate",
+    "primary_limitations": [
+      "The API exposes latest data and does not version past snapshots."
+    ],
+    "publisher": "European Commission, Eurostat",
+    "record_semantics": "Non-null JSON-stat observation cells with explicit dimensions",
+    "scope": "multinational"
+  },
+  {
+    "authentication": "No key; requests must respect service and grid-rate guidance.",
+    "class_name": "NASAPowerDailyConnector",
+    "documentation_url": "https://power.larc.nasa.gov/docs/services/api/temporal/daily/",
+    "family": "climate",
+    "id": "nasa-power-daily-point",
+    "license_summary": "NASA public Earth science data with POWER citation guidance",
+    "module": "civicdecision.connectors.nasa_power",
+    "name": "NASA POWER daily point climate data",
+    "paging_or_bound": "One point, <= 20 parameters, <= 367 days per reference request",
+    "primary_limitations": [
+      "Gridded products are not station or street-level observations."
+    ],
+    "publisher": "NASA Langley Research Center POWER Project",
+    "record_semantics": "One gridded parameter value for each point-date-parameter tuple",
+    "scope": "global"
+  },
+  {
+    "authentication": "No key for bounded Socrata queries; app tokens may raise limits.",
+    "class_name": "NYC311Connector",
+    "documentation_url": "https://data.cityofnewyork.us/Social-Services/311-Service-Requests-from-2020-to-Present/erm2-nwe9",
+    "family": "public-service",
+    "id": "nyc-open-data-311-2020-present",
+    "license_summary": "NYC Open Data terms and any dataset-specific conditions",
+    "module": "civicdecision.connectors.nyc_311",
+    "name": "NYC 311 Service Requests",
+    "paging_or_bound": "Explicit half-open time window, limit <= 50,000, offset",
+    "primary_limitations": [
+      "Reporting access and behavior create selection effects."
+    ],
+    "publisher": "City of New York",
+    "record_semantics": "One resident/service request record, not one verified incident",
+    "scope": "local"
+  },
+  {
+    "authentication": "No registration or API key.",
+    "class_name": "OpenFEMADisasterConnector",
+    "documentation_url": "https://www.fema.gov/about/openfema",
+    "family": "disaster",
+    "id": "openfema-disaster-declarations-v2",
+    "license_summary": "U.S. federal open data subject to FEMA.gov/OpenFEMA terms",
+    "module": "civicdecision.connectors.open_fema",
+    "name": "OpenFEMA Disaster Declarations Summaries V2",
+    "paging_or_bound": "Explicit half-open time window, top <= 1,000, skip",
+    "primary_limitations": [
+      "A declaration does not measure loss, recovery, or policy effect."
+    ],
+    "publisher": "U.S. Federal Emergency Management Agency",
+    "record_semantics": "One designated-area declaration record",
+    "scope": "national"
+  },
+  {
+    "authentication": "No API key for bounded catalog queries.",
+    "class_name": "USGSEarthquakeConnector",
+    "documentation_url": "https://earthquake.usgs.gov/fdsnws/event/1/",
+    "family": "seismic",
+    "id": "usgs-earthquakes",
+    "license_summary": "U.S. government public data with source attribution guidance",
+    "module": "civicdecision.connectors.usgs_earthquakes",
+    "name": "USGS Earthquake Catalog",
+    "paging_or_bound": "Explicit time/magnitude window and limit <= 20,000",
+    "primary_limitations": [
+      "Catalog events can be revised and do not measure urban impact."
+    ],
+    "publisher": "U.S. Geological Survey",
+    "record_semantics": "One catalog earthquake feature",
+    "scope": "global"
+  },
+  {
+    "authentication": "No API key.",
+    "class_name": "WorldBankIndicatorConnector",
+    "documentation_url": "https://datahelpdesk.worldbank.org/knowledgebase/articles/889392",
+    "family": "demography",
+    "id": "world-bank-indicators-v2",
+    "license_summary": "CC BY 4.0 default for Bank-produced open data; verify metadata",
+    "module": "civicdecision.connectors.world_bank",
+    "name": "World Bank Indicators V2",
+    "paging_or_bound": "Indicator, country, year range, page, and per_page <= 1,000",
+    "primary_limitations": [
+      "Indicator methods, revisions, and comparability vary."
+    ],
+    "publisher": "World Bank Group",
+    "record_semantics": "One country/aggregate-year indicator value",
+    "scope": "global"
+  }
+]

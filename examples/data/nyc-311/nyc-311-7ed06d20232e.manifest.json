@@ -1,0 +1,36 @@
+{
+  "artifact_id": "nyc-311-7ed06d20232e",
+  "artifact_path": "nyc-311-7ed06d20232e.json",
+  "content_hash": "sha256:d047bf39e95c3afa5082a75d4157ad1121e575dedf129ab2929c7f3b85f55f13",
+  "data_url": "https://data.cityofnewyork.us/resource/erm2-nwe9.json?%24select=unique_key%2Ccreated_date%2Cclosed_date%2Cagency%2Cagency_name%2Ccomplaint_type%2Cdescriptor%2Clocation_type%2Cincident_zip%2Cborough%2Cstatus%2Cresolution_description%2Clatitude%2Clongitude&%24where=created_date+%3E%3D+%272024-01-01T00%3A00%3A00%27+AND+created_date+%3C+%272024-01-01T00%3A05%3A00%27&%24order=created_date%2Cunique_key&%24limit=5&%24offset=0",
+  "geographic_scope": "New York City, borough=ALL",
+  "landing_url": "https://data.cityofnewyork.us/Social-Services/311-Service-Requests-from-2020-to-Present/erm2-nwe9",
+  "license": "NYC Open Data terms; public resource with dataset-specific terms if present",
+  "limitations": [
+    "A service request is a report, not a verified incident or measured service outcome.",
+    "Reporting propensity, access, duplicates, and agency practices create selection effects.",
+    "Records can be corrected or overwritten and the portal does not retain all prior versions."
+  ],
+  "name": "NYC 311 Service Requests from 2020 to Present",
+  "publisher": "City of New York",
+  "query": {
+    "agency": null,
+    "borough": null,
+    "end": "2024-01-01T00:05:00Z",
+    "limit": 5,
+    "offset": 0,
+    "start": "2024-01-01T00:00:00Z"
+  },
+  "record_count": 5,
+  "response_headers": {
+    "content-type": "application/json;charset=utf-8",
+    "etag": "\"Zm94dHJvdC4xNTY1NV8xODNfMTkzMDgzZ3RUMkctQ2VYUzNpX1F6V0FxRFB5dTlxb0Yw---gzip8xiM6kBJjkdOO9cbuu0a7QiJYuw--gzip--gzip\"",
+    "last-modified": "Wed, 12 Aug 2026 01:54:30 GMT",
+    "x-soda2-truth-last-modified": "Wed, 12 Aug 2026 01:54:30 GMT"
+  },
+  "retrieved_at": "2026-08-12T09:40:26.471926Z",
+  "schema_fingerprint": "sha256:42b6d72792926e1a29b225d45af2549c3a23726552f483990c8b622a0c6487ef",
+  "schema_version": "1.0.0",
+  "source_id": "nyc-open-data-311-2020-present",
+  "temporal_scope": "created from 2024-01-01T00:00:00+00:00 to 2024-01-01T00:05:00+00:00"
+}

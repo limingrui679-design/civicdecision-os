@@ -1,0 +1,35 @@
+{
+  "artifact_id": "eurostat-71f0413fe625",
+  "artifact_path": "eurostat-demo_gind-71f0413fe625.json",
+  "content_hash": "sha256:7f535f7386f23b7e7ba753cbc64602c6cae578be9f426fadfec886470820f2d5",
+  "data_url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/demo_gind?lang=en&geo=DE&time=2023",
+  "geographic_scope": "filters={'geo': 'DE', 'time': '2023'}",
+  "landing_url": "https://ec.europa.eu/eurostat/web/user-guides/data-browser/api-data-access/api-introduction",
+  "license": "Eurostat free reuse with source acknowledgement; dataset exceptions may apply",
+  "limitations": [
+    "Eurostat exposes the latest dataset version and does not preserve prior API versions.",
+    "Status flags and dataset metadata are required for substantive interpretation.",
+    "Some third-party or non-European data have additional reuse restrictions."
+  ],
+  "name": "Eurostat dataset demo_gind",
+  "publisher": "European Commission, Eurostat",
+  "query": {
+    "dataset": "demo_gind",
+    "filters": {
+      "geo": "DE",
+      "time": "2023"
+    },
+    "language": "en",
+    "max_cells": 100
+  },
+  "record_count": 27,
+  "response_headers": {
+    "content-type": "application/json"
+  },
+  "retrieved_at": "2026-08-12T09:40:21.754712Z",
+  "schema_fingerprint": "sha256:d7914c1f850661131a3f8d24b5a697f5a661064ccbb4876cafe9dd124bdb14ee",
+  "schema_version": "1.0.0",
+  "source_id": "eurostat-statistics-api",
+  "temporal_scope": "filters={'geo': 'DE', 'time': '2023'}",
+  "upstream_updated_at": "2026-07-21T23:00:00+02:00"
+}

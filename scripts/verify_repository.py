@@ -9,6 +9,7 @@ import tempfile
 from collections import Counter
 from pathlib import Path
 
+from civicdecision.connectors.registry import CONNECTOR_REGISTRY, registry_json
 from civicdecision.demos.heat_access import (
     HeatAccessDemoConfig,
     build_heat_access_pack,
@@ -64,6 +65,10 @@ def rebuild_reference_workflow(
 
 
 def verify_repository() -> dict[str, object]:
+    catalog_path = ROOT / "catalog/connectors.json"
+    catalog = json.loads(catalog_path.read_text(encoding="utf-8"))
+    if catalog != json.loads(registry_json()):
+        raise RuntimeError("committed connector catalog does not match the code registry")
     manifest_paths = sorted(ROOT.glob("examples/data/**/*.manifest.json"))
     manifests: list[SourceManifest] = []
     for path in manifest_paths:
@@ -116,8 +121,11 @@ def verify_repository() -> dict[str, object]:
         ]
 
     statuses = Counter(pack.status.value for pack in packs)
+    connector_families = Counter(item.family.value for item in CONNECTOR_REGISTRY)
     return {
         "city_adapter_documents": len(city_paths),
+        "connector_families": dict(sorted(connector_families.items())),
+        "connectors": len(CONNECTOR_REGISTRY),
         "decision_pack_content_hashes": sorted(pack.content_hash() for pack in packs),
         "decision_packs": len(packs),
         "decision_pack_statuses": dict(sorted(statuses.items())),

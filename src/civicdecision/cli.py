@@ -3,7 +3,8 @@
 from __future__ import annotations
 
 import asyncio
-from datetime import datetime
+import json
+from datetime import date, datetime
 from enum import StrEnum
 from pathlib import Path
 from typing import Annotated
@@ -13,10 +14,31 @@ from rich.console import Console
 from rich.table import Table
 
 from civicdecision import __version__
+from civicdecision.connectors.base import atomic_write
 from civicdecision.connectors.cdc_places import CDCPlacesConnector, CDCPlacesQuery
+from civicdecision.connectors.eurostat import (
+    EurostatStatisticsConnector,
+    EurostatStatisticsQuery,
+)
+from civicdecision.connectors.nasa_power import (
+    NASAPowerDailyConnector,
+    NASAPowerDailyQuery,
+    PowerCommunity,
+    PowerTimeStandard,
+)
+from civicdecision.connectors.nyc_311 import NYC311Connector, NYC311Query
+from civicdecision.connectors.open_fema import (
+    OpenFEMADisasterConnector,
+    OpenFEMADisasterQuery,
+)
+from civicdecision.connectors.registry import CONNECTOR_REGISTRY, registry_json
 from civicdecision.connectors.usgs_earthquakes import (
     USGSEarthquakeConnector,
     USGSEarthquakeQuery,
+)
+from civicdecision.connectors.world_bank import (
+    WorldBankIndicatorConnector,
+    WorldBankIndicatorQuery,
 )
 from civicdecision.demos.heat_access import (
     HeatAccessDemoConfig,
@@ -60,6 +82,25 @@ def _parse_iso_datetime(value: str, field_name: str) -> datetime:
     if parsed.tzinfo is None or parsed.utcoffset() is None:
         raise ValueError(f"{field_name} must include a timezone")
     return parsed
+
+
+def _parse_iso_date(value: str, field_name: str) -> date:
+    try:
+        return date.fromisoformat(value)
+    except ValueError as exc:
+        raise ValueError(f"{field_name} must use YYYY-MM-DD") from exc
+
+
+def _parse_filters(values: list[str]) -> dict[str, str]:
+    filters: dict[str, str] = {}
+    for value in values:
+        if "=" not in value:
+            raise ValueError("filters must use key=value")
+        key, item = value.split("=", 1)
+        if not key or not item or key in filters:
+            raise ValueError("filters require unique non-empty key=value pairs")
+        filters[key] = item
+    return filters
 
 
 @app.command()
@@ -129,6 +170,37 @@ def verify_source(
     )
 
 
+@sources_app.command("catalog")
+def source_catalog(
+    output: Annotated[Path | None, typer.Option("--output", "-o")] = None,
+) -> None:
+    """List or write the deterministic implemented-connector catalog."""
+
+    if output is not None:
+        payload = json.dumps(
+            json.loads(registry_json()),
+            ensure_ascii=False,
+            indent=2,
+            sort_keys=True,
+        ).encode("utf-8")
+        atomic_write(output, payload + b"\n")
+        console.print(f"created {output}")
+        return
+    table = Table(title=f"Implemented source connectors ({len(CONNECTOR_REGISTRY)})")
+    table.add_column("Source ID")
+    table.add_column("Family")
+    table.add_column("Scope")
+    table.add_column("Authentication")
+    for descriptor in CONNECTOR_REGISTRY:
+        table.add_row(
+            descriptor.id,
+            descriptor.family.value,
+            descriptor.scope.value,
+            descriptor.authentication,
+        )
+    console.print(table)
+
+
 @sources_app.command("usgs-earthquakes")
 def fetch_usgs(
     start: Annotated[str, typer.Option("--start")],
@@ -177,6 +249,174 @@ def fetch_cdc_places(
             offset=offset,
         )
         result = asyncio.run(CDCPlacesConnector().fetch(query, output))
+    except (CivicDecisionError, ValueError) as exc:
+        console.print(f"[red]fetch failed safely[/red] {exc}")
+        raise typer.Exit(code=2) from exc
+    _print_fetch(
+        result.manifest.source_id,
+        result.artifact_path,
+        result.manifest_path,
+        result.manifest.record_count,
+        result.manifest.content_hash,
+    )
+
+
+@sources_app.command("world-bank")
+def fetch_world_bank(
+    indicator: Annotated[str, typer.Option("--indicator")],
+    start_year: Annotated[int, typer.Option("--start-year")],
+    end_year: Annotated[int, typer.Option("--end-year")],
+    country: Annotated[str, typer.Option("--country")] = "all",
+    page: Annotated[int, typer.Option("--page")] = 1,
+    per_page: Annotated[int, typer.Option("--per-page")] = 100,
+    output: Annotated[Path, typer.Option("--output", "-o")] = Path("data/raw/world-bank"),
+) -> None:
+    """Fetch one bounded World Bank V2 indicator page."""
+
+    try:
+        query = WorldBankIndicatorQuery(
+            indicator=indicator,
+            country=country,
+            start_year=start_year,
+            end_year=end_year,
+            page=page,
+            per_page=per_page,
+        )
+        result = asyncio.run(WorldBankIndicatorConnector().fetch(query, output))
+    except (CivicDecisionError, ValueError) as exc:
+        console.print(f"[red]fetch failed safely[/red] {exc}")
+        raise typer.Exit(code=2) from exc
+    _print_fetch(
+        result.manifest.source_id,
+        result.artifact_path,
+        result.manifest_path,
+        result.manifest.record_count,
+        result.manifest.content_hash,
+    )
+
+
+@sources_app.command("nasa-power")
+def fetch_nasa_power(
+    latitude: Annotated[float, typer.Option("--latitude")],
+    longitude: Annotated[float, typer.Option("--longitude")],
+    start: Annotated[str, typer.Option("--start")],
+    end: Annotated[str, typer.Option("--end")],
+    parameters: Annotated[str, typer.Option("--parameters")] = "T2M",
+    community: Annotated[str, typer.Option("--community")] = "RE",
+    time_standard: Annotated[str, typer.Option("--time-standard")] = "UTC",
+    output: Annotated[Path, typer.Option("--output", "-o")] = Path("data/raw/nasa-power"),
+) -> None:
+    """Fetch bounded NASA POWER daily gridded data for one point."""
+
+    try:
+        query = NASAPowerDailyQuery(
+            latitude=latitude,
+            longitude=longitude,
+            start=_parse_iso_date(start, "start"),
+            end=_parse_iso_date(end, "end"),
+            parameters=tuple(item.strip() for item in parameters.split(",") if item.strip()),
+            community=PowerCommunity(community),
+            time_standard=PowerTimeStandard(time_standard),
+        )
+        result = asyncio.run(NASAPowerDailyConnector().fetch(query, output))
+    except (CivicDecisionError, ValueError) as exc:
+        console.print(f"[red]fetch failed safely[/red] {exc}")
+        raise typer.Exit(code=2) from exc
+    _print_fetch(
+        result.manifest.source_id,
+        result.artifact_path,
+        result.manifest_path,
+        result.manifest.record_count,
+        result.manifest.content_hash,
+    )
+
+
+@sources_app.command("openfema")
+def fetch_openfema(
+    start: Annotated[str, typer.Option("--start")],
+    end: Annotated[str, typer.Option("--end")],
+    state: Annotated[str | None, typer.Option("--state")] = None,
+    incident_type: Annotated[str | None, typer.Option("--incident-type")] = None,
+    top: Annotated[int, typer.Option("--top")] = 100,
+    skip: Annotated[int, typer.Option("--skip")] = 0,
+    output: Annotated[Path, typer.Option("--output", "-o")] = Path("data/raw/openfema"),
+) -> None:
+    """Fetch one bounded OpenFEMA disaster-declaration page."""
+
+    try:
+        query = OpenFEMADisasterQuery(
+            start=_parse_iso_datetime(start, "start"),
+            end=_parse_iso_datetime(end, "end"),
+            state=state,
+            incident_type=incident_type,
+            top=top,
+            skip=skip,
+        )
+        result = asyncio.run(OpenFEMADisasterConnector().fetch(query, output))
+    except (CivicDecisionError, ValueError) as exc:
+        console.print(f"[red]fetch failed safely[/red] {exc}")
+        raise typer.Exit(code=2) from exc
+    _print_fetch(
+        result.manifest.source_id,
+        result.artifact_path,
+        result.manifest_path,
+        result.manifest.record_count,
+        result.manifest.content_hash,
+    )
+
+
+@sources_app.command("eurostat")
+def fetch_eurostat(
+    dataset: Annotated[str, typer.Option("--dataset")],
+    filters: Annotated[list[str] | None, typer.Option("--filter")] = None,
+    language: Annotated[str, typer.Option("--language")] = "en",
+    max_cells: Annotated[int, typer.Option("--max-cells")] = 1000,
+    output: Annotated[Path, typer.Option("--output", "-o")] = Path("data/raw/eurostat"),
+) -> None:
+    """Fetch a bounded Eurostat JSON-stat subset using repeated key=value filters."""
+
+    try:
+        query = EurostatStatisticsQuery(
+            dataset=dataset,
+            filters=_parse_filters(filters or []),
+            language=language,
+            max_cells=max_cells,
+        )
+        result = asyncio.run(EurostatStatisticsConnector().fetch(query, output))
+    except (CivicDecisionError, ValueError) as exc:
+        console.print(f"[red]fetch failed safely[/red] {exc}")
+        raise typer.Exit(code=2) from exc
+    _print_fetch(
+        result.manifest.source_id,
+        result.artifact_path,
+        result.manifest_path,
+        result.manifest.record_count,
+        result.manifest.content_hash,
+    )
+
+
+@sources_app.command("nyc-311")
+def fetch_nyc_311(
+    start: Annotated[str, typer.Option("--start")],
+    end: Annotated[str, typer.Option("--end")],
+    borough: Annotated[str | None, typer.Option("--borough")] = None,
+    agency: Annotated[str | None, typer.Option("--agency")] = None,
+    limit: Annotated[int, typer.Option("--limit")] = 1000,
+    offset: Annotated[int, typer.Option("--offset")] = 0,
+    output: Annotated[Path, typer.Option("--output", "-o")] = Path("data/raw/nyc-311"),
+) -> None:
+    """Fetch a bounded NYC 311 public-service request page."""
+
+    try:
+        query = NYC311Query(
+            start=_parse_iso_datetime(start, "start"),
+            end=_parse_iso_datetime(end, "end"),
+            borough=borough,
+            agency=agency,
+            limit=limit,
+            offset=offset,
+        )
+        result = asyncio.run(NYC311Connector().fetch(query, output))
     except (CivicDecisionError, ValueError) as exc:
         console.print(f"[red]fetch failed safely[/red] {exc}")
         raise typer.Exit(code=2) from exc

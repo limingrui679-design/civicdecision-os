@@ -15,11 +15,16 @@ data foundation and build normalized city-adapter semantics—is in progress.
 - Failed, insufficient-evidence, infeasible, and timed-out statuses validate as negative releases.
 - USGS and CDC connectors safely write real public artifacts with hashes, counts, query, license,
   scope, limitations, and schema fingerprints.
-- The committed public samples contain 15 records total: five USGS events and ten CDC tracts.
+- Seven loadable connectors span climate, demography, disaster, health, public service, seismic,
+  and multinational statistics. Each has query bounds, source terms, record semantics, and
+  limitations in a deterministic public catalog.
+- The committed public samples contain 81 defined observation units total: five USGS events,
+  ten CDC tracts, one World Bank indicator value, 28 NASA point-date-parameter values, five FEMA
+  declaration-area records, 27 non-null Eurostat cells, and five NYC 311 requests.
 - One completed and one infeasible heat-access DecisionPack rebuild exactly from committed inputs.
 - The completed bounded run evaluates 55 combinations, retains 16 feasible plans, and runs five
   declared service-radius sensitivity cases. These are computational results, not policy impact.
-- 105 automated tests pass with 97.85% branch-aware coverage; Ruff and strict mypy pass locally.
+- 145 automated tests pass with 93.09% branch-aware coverage; Ruff and strict mypy pass locally.
 - Portable `SHA256SUMS` entries contain filenames rather than local absolute paths.
 - `scripts/verify_repository.py` independently validates and exactly rebuilds all golden artifacts.
 

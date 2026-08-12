@@ -35,8 +35,13 @@ radius is not travel time, the population proxy is not individual demand, and th
 is not a municipal recommendation.
 
 Current local quality evidence is recorded in
-[`verification/milestone-0.json`](verification/milestone-0.json). The independent verifier
+[`verification/milestone-1-connectors.json`](verification/milestone-1-connectors.json). The independent verifier
 regenerates Schemas and both reference outputs in a temporary directory and requires exact bytes.
+
+The current source catalog contains seven verified connectors and seven real bounded public
+samples. See [`catalog/connectors.json`](catalog/connectors.json) for authentication, request
+bounds, licensing summaries, record semantics, and primary limitations. Seven is current scope,
+not the final 25–35-family target.
 
 ## Core protocols
 

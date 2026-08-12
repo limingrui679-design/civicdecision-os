@@ -11,7 +11,7 @@ Status vocabulary: `planned`, `in_progress`, `implemented_unverified`, `verified
 | SCALE-001 | 250 Tier-G global cities | planned | Versioned city catalog, successful build logs, coverage matrix, sampled artifact inspection |
 | SCALE-002 | 30 Tier-S standardized cities, at least 3 standard scenarios each | planned | 30 validated adapters, 90 scenario run records, cross-city comparison report |
 | SCALE-003 | 8 Tier-D cities, at least 12 deep scenarios each | planned | 8 independent adapters and 96 end-to-end scenario packs |
-| SCALE-004 | 25–35 public data families | in_progress | Connector registry, manifests, licenses, hashes, schema and data-quality results |
+| SCALE-004 | 25–35 public data families | in_progress | 7 loadable connector families currently verified; registry, manifests, terms, hashes, schema and negative tests exist |
 | SCALE-005 | At least 1 billion non-raster observations/relations | planned | Deduplicated manifest totals with anti-inflation audit and storage query evidence |
 | SCALE-006 | 1–3 TB compressed rebuildable data catalog | planned | Object inventory, byte totals, remote/local boundary and sampled rebuild |
 | SCALE-007 | Urban graph targeting 100 million nodes/edges | planned | Graph manifest, node/edge counts, construction and query benchmarks |
@@ -19,7 +19,7 @@ Status vocabulary: `planned`, `in_progress`, `implemented_unverified`, `verified
 | SCALE-009 | At least 40 historical replays | planned | Data-cutoff proof, replay configs, baselines and held-out results |
 | SCALE-010 | At least 100 optimization tasks | planned | Solver records, baseline comparisons, infeasible/timeout preservation |
 | SCALE-011 | Up to 12 identification-gated causal studies | planned | Estimands, designs, diagnostics, refutations and cautious result language |
-| SCALE-012 | 500–800 automated checks | in_progress | Test inventory, CI logs, coverage and mutation/negative-path evidence |
+| SCALE-012 | 500–800 automated checks | in_progress | 145 local tests and 93.09% branch-aware coverage; remote CI and mutation testing remain |
 | SCALE-013 | 500 static figures and 80 interactive views | planned | Generated artifact manifest plus visual inspection report |
 | SCALE-014 | 100 DecisionPacks and human-readable briefs | planned | Same-source JSON and rendered outputs, schema validation and sampled recomputation |
 | SCALE-015 | Web, REST API, Python SDK, CLI and adapter/plugin SDK | in_progress | Clean installs, contracts, browser/API tests, package and public demo |
