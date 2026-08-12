@@ -1,0 +1,33 @@
+{
+  "artifact_id": "usgs-earthquakes-06bebebaaf0d",
+  "artifact_path": "usgs-earthquakes-06bebebaaf0d.geojson",
+  "content_hash": "sha256:188d9cbc281b5f986e162336a448e1ac9769e10d167ce1ae0dffc53fd2fbf002",
+  "data_url": "https://earthquake.usgs.gov/fdsnws/event/1/query?format=geojson&starttime=2020-01-01T00%3A00%3A00Z&endtime=2020-01-02T00%3A00%3A00Z&minmagnitude=5.0&limit=5&orderby=time-asc",
+  "geographic_scope": "Query-defined global earthquake catalog results",
+  "landing_url": "https://earthquake.usgs.gov/fdsnws/event/1/",
+  "license": "U.S. government public data; check source terms and attribution guidance",
+  "limitations": [
+    "Catalog records can be revised after retrieval.",
+    "A bounded query is not the complete USGS earthquake catalog.",
+    "Earthquake observations alone do not establish urban impact or causality."
+  ],
+  "name": "USGS Earthquake Catalog query",
+  "publisher": "U.S. Geological Survey",
+  "query": {
+    "end": "2020-01-02T00:00:00Z",
+    "limit": 5,
+    "min_magnitude": 5.0,
+    "start": "2020-01-01T00:00:00Z"
+  },
+  "record_count": 5,
+  "response_headers": {
+    "content-type": "application/json; charset=utf-8",
+    "last-modified": "Wed, 12 Aug 2026 09:05:27 GMT"
+  },
+  "retrieved_at": "2026-08-12T09:05:27.222171Z",
+  "schema_fingerprint": "sha256:f6ce88bb536e9193b5d1172d76744dfb78e7af81ebe55a14e2cff29908b9a873",
+  "schema_version": "1.0.0",
+  "source_id": "usgs-earthquakes",
+  "temporal_scope": "2020-01-01T00:00:00+00:00 to 2020-01-02T00:00:00+00:00",
+  "upstream_updated_at": "2026-08-12T09:05:27Z"
+}

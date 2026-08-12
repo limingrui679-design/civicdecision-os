@@ -1,0 +1,67 @@
+schema_version: 1.0.0
+scenario_id: us.ma.suffolk.heat-access-demo.v1
+title: Bounded heat-access tract-centroid facility planning demonstration
+question: >-
+  Within a fixed demonstration budget, which tract-centroid planning candidates maximize
+  an estimated lack-of-transport population proxy while satisfying a priority-group
+  coverage threshold?
+city_id: us.ma.boston-cambridge
+as_of: 2026-08-12T17:00:00Z
+data_cutoff: 2025-12-04T10:40:53Z
+baseline: No new demonstration facility is assumed to cover any tract.
+interventions:
+  - id: tract-centroid-candidate-set
+    kind: add-facility-capacity
+    target: suffolk-county-bounded-public-sample
+    parameters:
+      candidate_definition: census-tract-centroid
+      maximum_candidates_selected: 2
+      assumed_cost_per_candidate_usd: 8000
+      assumed_service_radius_km: 1.25
+    evidence_type: proposed
+objectives:
+  - id: estimated-need-coverage
+    metric: estimated_transport_limited_population_coverage_rate
+    sense: maximize
+    weight: 0.85
+    unit: proportion
+  - id: normalized-cost
+    metric: candidate_cost_share_of_budget
+    sense: minimize
+    weight: 0.15
+    unit: proportion
+constraints:
+  - id: demonstration-budget
+    expression: candidate_cost <= 16000
+    kind: budget
+    hard: true
+  - id: priority-coverage
+    expression: top_quartile_transport_limited_proxy_coverage >= 0.60
+    kind: equity
+    hard: true
+analysis_modes:
+  - descriptive
+  - simulation
+  - optimization
+evidence_requirements:
+  - observed
+  - estimated
+  - simulated
+  - optimized
+  - proposed
+random_seed: 20260812
+assumptions:
+  - Tract centroids are used only as a transparent bounded candidate set.
+  - Straight-line radius is a simulation parameter and not observed travel time.
+  - Population multiplied by CDC PLACES lack-of-transport prevalence is a planning proxy.
+limitations:
+  - The ten-row API page is not the complete Suffolk County or national tract dataset.
+  - Candidate centroids are not verified facilities and no site has been audited.
+  - The workflow does not estimate causal effects or observed policy outcomes.
+  - The result is a methods demonstration, not an implementation recommendation.
+tags:
+  - heat
+  - health-access
+  - transport
+  - equity
+  - reference-workflow

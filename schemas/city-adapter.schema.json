@@ -1,0 +1,160 @@
+{
+  "$defs": {
+    "BoundingBox": {
+      "additionalProperties": false,
+      "properties": {
+        "east": {
+          "maximum": 180,
+          "minimum": -180,
+          "title": "East",
+          "type": "number"
+        },
+        "north": {
+          "maximum": 90,
+          "minimum": -90,
+          "title": "North",
+          "type": "number"
+        },
+        "south": {
+          "maximum": 90,
+          "minimum": -90,
+          "title": "South",
+          "type": "number"
+        },
+        "west": {
+          "maximum": 180,
+          "minimum": -180,
+          "title": "West",
+          "type": "number"
+        }
+      },
+      "required": [
+        "west",
+        "south",
+        "east",
+        "north"
+      ],
+      "title": "BoundingBox",
+      "type": "object"
+    },
+    "CityTier": {
+      "enum": [
+        "G",
+        "S",
+        "D"
+      ],
+      "title": "CityTier",
+      "type": "string"
+    },
+    "CoverageWindow": {
+      "additionalProperties": false,
+      "properties": {
+        "end": {
+          "format": "date-time",
+          "title": "End",
+          "type": "string"
+        },
+        "start": {
+          "format": "date-time",
+          "title": "Start",
+          "type": "string"
+        }
+      },
+      "required": [
+        "start",
+        "end"
+      ],
+      "title": "CoverageWindow",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "bbox": {
+      "$ref": "#/$defs/BoundingBox"
+    },
+    "capabilities": {
+      "items": {
+        "type": "string"
+      },
+      "minItems": 1,
+      "title": "Capabilities",
+      "type": "array"
+    },
+    "city_id": {
+      "pattern": "^[a-z0-9]+(?:[._-][a-z0-9]+)*$",
+      "title": "City Id",
+      "type": "string"
+    },
+    "country_code": {
+      "maxLength": 2,
+      "minLength": 2,
+      "title": "Country Code",
+      "type": "string"
+    },
+    "coverage": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/CoverageWindow"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null
+    },
+    "data_gaps": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Data Gaps",
+      "type": "array"
+    },
+    "display_name": {
+      "minLength": 1,
+      "title": "Display Name",
+      "type": "string"
+    },
+    "limitations": {
+      "items": {
+        "type": "string"
+      },
+      "minItems": 1,
+      "title": "Limitations",
+      "type": "array"
+    },
+    "schema_version": {
+      "default": "1.0.0",
+      "title": "Schema Version",
+      "type": "string"
+    },
+    "source_ids": {
+      "items": {
+        "type": "string"
+      },
+      "minItems": 1,
+      "title": "Source Ids",
+      "type": "array"
+    },
+    "tier": {
+      "$ref": "#/$defs/CityTier"
+    },
+    "timezone": {
+      "title": "Timezone",
+      "type": "string"
+    }
+  },
+  "required": [
+    "city_id",
+    "display_name",
+    "country_code",
+    "tier",
+    "timezone",
+    "bbox",
+    "source_ids",
+    "capabilities",
+    "limitations"
+  ],
+  "title": "CityAdapterManifest",
+  "type": "object"
+}

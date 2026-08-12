@@ -1,0 +1,13 @@
+max_facilities: 2
+facility_cost: 8000
+budget: 16000
+service_radius_km: 1.25
+minimum_priority_coverage: 0.60
+priority_group_share: 0.25
+cost_penalty: 0.15
+sensitivity_radii_km:
+  - 0.50
+  - 0.75
+  - 1.00
+  - 1.50
+  - 2.00

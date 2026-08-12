@@ -1,0 +1,35 @@
+{
+  "artifact_id": "cdc-places-7ccf6e7d6dc3",
+  "artifact_path": "cdc-places-7ccf6e7d6dc3.json",
+  "content_hash": "sha256:f6e3d27428c3a4fa913eeb06384b782509aab5e8491159c3c5476be5e5c75321",
+  "data_url": "https://data.cdc.gov/resource/yjkw-uj5s.json?%24select=stateabbr%2Cstatedesc%2Ccountyname%2Ccountyfips%2Ctractfips%2Ctotalpopulation%2Ctotalpop18plus%2Caccess2_crudeprev%2Ccasthma_crudeprev%2Ccopd_crudeprev%2Cdiabetes_crudeprev%2Cghlth_crudeprev%2Cobesity_crudeprev%2Clacktrpt_crudeprev%2Cgeolocation&%24limit=10&%24offset=0&%24order=tractfips&%24where=stateabbr%3D%27MA%27+AND+countyfips%3D%2725025%27",
+  "geographic_scope": "state=MA, county=25025",
+  "landing_url": "https://data.cdc.gov/500-Cities-Places/PLACES-Census-Tract-Data-GIS-Friendly-Format-2025-/yjkw-uj5s",
+  "license": "Public Domain; retain CDC attribution and methodology context",
+  "limitations": [
+    "PLACES values are model-based small-area estimates, not individual records.",
+    "A limited API page is not the complete 83,522-tract dataset.",
+    "Geographic estimates must not be interpreted as individual causal effects."
+  ],
+  "name": "CDC PLACES census-tract data, GIS-friendly 2025 release",
+  "publisher": "U.S. Centers for Disease Control and Prevention",
+  "query": {
+    "county_fips": "25025",
+    "limit": 10,
+    "offset": 0,
+    "state_abbr": "MA"
+  },
+  "record_count": 10,
+  "response_headers": {
+    "content-type": "application/json;charset=utf-8",
+    "etag": "\"aG90ZWwuNDg3NDFfNl8xODNVaHgtMVJmUDFORnplajhwOG8zNnhoV0lPUzA---gzioBXVY-z3UWqafWgfs2_QfRBOOqnw--gzip--gzip\"",
+    "last-modified": "Thu, 04 Dec 2025 10:40:53 GMT",
+    "x-soda2-truth-last-modified": "Thu, 04 Dec 2025 10:40:53 GMT"
+  },
+  "retrieved_at": "2026-08-12T09:05:29.764952Z",
+  "schema_fingerprint": "sha256:05cb741a5af92786200819ceea103690502827aa7e8d2a23f810f6c125335b54",
+  "schema_version": "1.0.0",
+  "source_id": "cdc-places-2025-tract",
+  "temporal_scope": "CDC PLACES 2025 release using stated BRFSS/Census/ACS source years",
+  "upstream_updated_at": "2025-12-04T10:40:53Z"
+}

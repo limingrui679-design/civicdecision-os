@@ -1,0 +1,67 @@
+schema_version: 1.0.0
+scenario_id: us.ma.boston-cambridge.heat-transit.v0
+title: Heat wave and transit disruption planning protocol example
+question: >-
+  Under a fixed pilot budget, which proposed cooling-center and shuttle configuration
+  should be tested if a heat wave coincides with a modeled transit disruption?
+city_id: us.ma.boston-cambridge
+as_of: 2025-07-01T12:00:00-04:00
+data_cutoff: 2025-06-30T23:59:59-04:00
+baseline: Existing public facilities and scheduled transit service before the modeled disruption.
+interventions:
+  - id: open-center-a
+    kind: add-facility-capacity
+    target: candidate.cooling-center.a
+    parameters:
+      added_capacity: 150
+      open_hours: 8
+    evidence_type: proposed
+  - id: shuttle-loop-a
+    kind: add-shuttle-service
+    target: candidate.shuttle-loop.a
+    parameters:
+      vehicles: 2
+      headway_minutes: 20
+    evidence_type: proposed
+objectives:
+  - id: vulnerable-access
+    metric: vulnerable_population_within_30_minutes
+    sense: maximize
+    weight: 0.7
+    unit: people
+  - id: operating-cost
+    metric: daily_operating_cost
+    sense: minimize
+    weight: 0.3
+    unit: USD
+constraints:
+  - id: pilot-budget
+    expression: daily_operating_cost <= 25000
+    kind: budget
+    hard: true
+  - id: minimum-equity
+    expression: worst_group_access_rate >= 0.60
+    kind: equity
+    hard: true
+analysis_modes:
+  - descriptive
+  - simulation
+  - optimization
+evidence_requirements:
+  - observed
+  - estimated
+  - simulated
+  - optimized
+random_seed: 20260812
+assumptions:
+  - Transit disruption edges will be explicitly supplied by the scenario, not inferred as observed closures.
+  - Candidate facility capacities and shuttle costs are planning inputs until sourced.
+limitations:
+  - This protocol fixture has not yet run a historical replay or optimization engine.
+  - Any future benefit estimate must remain simulated unless independent observed evidence exists.
+tags:
+  - heat
+  - transit
+  - health-access
+  - equity
+

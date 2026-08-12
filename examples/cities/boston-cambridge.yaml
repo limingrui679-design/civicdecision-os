@@ -1,0 +1,29 @@
+schema_version: 1.0.0
+city_id: us.ma.boston-cambridge
+display_name: Boston–Cambridge
+country_code: US
+tier: D
+timezone: America/New_York
+bbox:
+  west: -71.1912
+  south: 42.2279
+  east: -70.9860
+  north: 42.4230
+coverage:
+  start: 2020-01-01T00:00:00Z
+  end: 2025-12-31T23:59:59Z
+source_ids:
+  - cdc-places-2025-tract
+  - usgs-earthquakes
+capabilities:
+  - population-health
+  - compound-shock
+  - facility-location
+data_gaps:
+  - A validated historical transit-disruption feed is not yet connected.
+  - Cooling-center operating capacity has not yet been sourced.
+limitations:
+  - This is a protocol example, not a completed city adapter.
+  - CDC PLACES contains model-based area estimates, not individual outcomes.
+  - Earthquake data do not establish local service effects.
+

@@ -1,0 +1,1496 @@
+{
+  "created_at": "2026-08-12T17:00:00Z",
+  "evidence": [
+    {
+      "assumptions": [],
+      "constraints": [],
+      "diagnostics": [],
+      "id": "source-artifact-rows",
+      "limitations": [
+        "Observed here means artifact presence and parsed row count, not observed health outcomes."
+      ],
+      "source_refs": [
+        "cdc-places-7ccf6e7d6dc3"
+      ],
+      "status": "established",
+      "summary": "The verified artifact contains 10 parsed census-tract rows.",
+      "title": "Versioned public artifact rows",
+      "type": "observed"
+    },
+    {
+      "assumptions": [
+        "Area prevalence is applied to the corresponding tract population."
+      ],
+      "constraints": [],
+      "diagnostics": [],
+      "id": "transport-limited-proxy",
+      "limitations": [
+        "CDC PLACES values are model-based area estimates and are not individual observations.",
+        "The multiplication is a planning proxy and does not identify actual service users."
+      ],
+      "method": "tract total population multiplied by CDC PLACES lack-of-transport crude prevalence",
+      "source_refs": [
+        "cdc-places-7ccf6e7d6dc3"
+      ],
+      "status": "limited",
+      "summary": "The bounded sample contains an estimated proxy total of 3239.695 people.",
+      "title": "Estimated transport-limited population proxy",
+      "type": "estimated"
+    },
+    {
+      "assumptions": [
+        "A tract is covered when its centroid lies within the declared great-circle radius."
+      ],
+      "constraints": [],
+      "diagnostics": [],
+      "id": "radius-coverage-model",
+      "limitations": [
+        "The simulation omits street topology, schedules, barriers, capacity, and travel time."
+      ],
+      "scenario_ref": "us.ma.suffolk.heat-access-demo.v1",
+      "source_refs": [],
+      "status": "limited",
+      "summary": "Coverage is simulated at a 1.25 km radius around tract-centroid candidates.",
+      "title": "Straight-line service-radius coverage",
+      "type": "simulated"
+    },
+    {
+      "assumptions": [],
+      "constraints": [
+        "cost <= 16000.00",
+        "priority coverage >= 0.600",
+        "facility count <= 2"
+      ],
+      "diagnostics": [],
+      "id": "bounded-enumeration",
+      "limitations": [
+        "Optimality holds only for the bounded tract-centroid candidate set and declared proxy model."
+      ],
+      "objective": "maximize estimated need coverage minus a declared normalized cost penalty",
+      "source_refs": [],
+      "status": "limited",
+      "summary": "The engine evaluated 55 combinations and found 16 feasible under declared constraints.",
+      "title": "Exhaustive bounded candidate enumeration",
+      "type": "optimized"
+    },
+    {
+      "assumptions": [],
+      "constraints": [],
+      "diagnostics": [],
+      "id": "pilot-candidate-status",
+      "limitations": [
+        "Site ownership, operating feasibility, capacity, accessibility, and community acceptance are unknown."
+      ],
+      "source_refs": [],
+      "status": "limited",
+      "summary": "Every candidate location is a tract centroid used for demonstration, not a verified facility.",
+      "title": "Candidate sites are planning inputs",
+      "type": "proposed"
+    }
+  ],
+  "options": [
+    {
+      "binding_constraints": [],
+      "evidence_type": "optimized",
+      "feasible": false,
+      "id": "plan-25025000101",
+      "label": "Tract-centroid candidates 25025000101",
+      "limitations": [
+        "Candidate sites are tract centroids, not verified facilities.",
+        "Coverage is simulated by straight-line radius.",
+        "Need counts use model-based area prevalence as a planning proxy."
+      ],
+      "metrics": {
+        "cost": 8000.0,
+        "estimated_need_covered": 541.584,
+        "objective_score": 0.092171292,
+        "overall_coverage_rate": 0.167171292,
+        "priority_coverage_rate": 0.274569465,
+        "selected_sites": "25025000101"
+      }
+    },
+    {
+      "binding_constraints": [],
+      "evidence_type": "optimized",
+      "feasible": false,
+      "id": "plan-25025000102",
+      "label": "Tract-centroid candidates 25025000102",
+      "limitations": [
+        "Candidate sites are tract centroids, not verified facilities.",
+        "Coverage is simulated by straight-line radius.",
+        "Need counts use model-based area prevalence as a planning proxy."
+      ],
+      "metrics": {
+        "cost": 8000.0,
+        "estimated_need_covered": 989.568,
+        "objective_score": 0.230450976,
+        "overall_coverage_rate": 0.305450976,
+        "priority_coverage_rate": 0.565084084,
+        "selected_sites": "25025000102"
+      }
+    },
+    {
+      "binding_constraints": [],
+      "evidence_type": "optimized",
+      "feasible": false,
+      "id": "plan-25025000201",
+      "label": "Tract-centroid candidates 25025000201",
+      "limitations": [
+        "Candidate sites are tract centroids, not verified facilities.",
+        "Coverage is simulated by straight-line radius.",
+        "Need counts use model-based area prevalence as a planning proxy."
+      ],
+      "metrics": {
+        "cost": 8000.0,
+        "estimated_need_covered": 1422.022,
+        "objective_score": 0.363936999,
+        "overall_coverage_rate": 0.438936999,
+        "priority_coverage_rate": 0.290514618,
+        "selected_sites": "25025000201"
+      }
+    },
+    {
+      "binding_constraints": [],
+      "evidence_type": "optimized",
+      "feasible": false,
+      "id": "plan-25025000202",
+      "label": "Tract-centroid candidates 25025000202",
+      "limitations": [
+        "Candidate sites are tract centroids, not verified facilities.",
+        "Coverage is simulated by straight-line radius.",
+        "Need counts use model-based area prevalence as a planning proxy."
+      ],
+      "metrics": {
+        "cost": 8000.0,
+        "estimated_need_covered": 2296.099,
+        "objective_score": 0.633739249,
+        "overall_coverage_rate": 0.708739249,
+        "priority_coverage_rate": 0.565084084,
+        "selected_sites": "25025000202"
+      }
+    },
+    {
+      "binding_constraints": [],
+      "evidence_type": "optimized",
+      "feasible": false,
+      "id": "plan-25025000301",
+      "label": "Tract-centroid candidates 25025000301",
+      "limitations": [
+        "Candidate sites are tract centroids, not verified facilities.",
+        "Coverage is simulated by straight-line radius.",
+        "Need counts use model-based area prevalence as a planning proxy."
+      ],
+      "metrics": {
+        "cost": 8000.0,
+        "estimated_need_covered": 1163.298,
+        "objective_score": 0.284076395,
+        "overall_coverage_rate": 0.359076395,
+        "priority_coverage_rate": 0.290514618,
+        "selected_sites": "25025000301"
+      }
+    },
+    {
+      "binding_constraints": [],
+      "evidence_type": "optimized",
+      "feasible": false,
+      "id": "plan-25025000302",
+      "label": "Tract-centroid candidates 25025000302",
+      "limitations": [
+        "Candidate sites are tract centroids, not verified facilities.",
+        "Coverage is simulated by straight-line radius.",
+        "Need counts use model-based area prevalence as a planning proxy."
+      ],
+      "metrics": {
+        "cost": 8000.0,
+        "estimated_need_covered": 1422.022,
+        "objective_score": 0.363936999,
+        "overall_coverage_rate": 0.438936999,
+        "priority_coverage_rate": 0.290514618,
+        "selected_sites": "25025000302"
+      }
+    },
+    {
+      "binding_constraints": [],
+      "evidence_type": "optimized",
+      "feasible": false,
+      "id": "plan-25025000401",
+      "label": "Tract-centroid candidates 25025000401",
+      "limitations": [
+        "Candidate sites are tract centroids, not verified facilities.",
+        "Coverage is simulated by straight-line radius.",
+        "Need counts use model-based area prevalence as a planning proxy."
+      ],
+      "metrics": {
+        "cost": 8000.0,
+        "estimated_need_covered": 1312.141,
+        "objective_score": 0.330019917,
+        "overall_coverage_rate": 0.405019917,
+        "priority_coverage_rate": 0.290514618,
+        "selected_sites": "25025000401"
+      }
+    },
+    {
+      "binding_constraints": [],
+      "evidence_type": "optimized",
+      "feasible": false,
+      "id": "plan-25025000402",
+      "label": "Tract-centroid candidates 25025000402",
+      "limitations": [
+        "Candidate sites are tract centroids, not verified facilities.",
+        "Coverage is simulated by straight-line radius.",
+        "Need counts use model-based area prevalence as a planning proxy."
+      ],
+      "metrics": {
+        "cost": 8000.0,
+        "estimated_need_covered": 1826.751,
+        "objective_score": 0.488865117,
+        "overall_coverage_rate": 0.563865117,
+        "priority_coverage_rate": 0.290514618,
+        "selected_sites": "25025000402"
+      }
+    },
+    {
+      "binding_constraints": [],
+      "evidence_type": "optimized",
+      "feasible": false,
+      "id": "plan-25025000502",
+      "label": "Tract-centroid candidates 25025000502",
+      "limitations": [
+        "Candidate sites are tract centroids, not verified facilities.",
+        "Coverage is simulated by straight-line radius.",
+        "Need counts use model-based area prevalence as a planning proxy."
+      ],
+      "metrics": {
+        "cost": 8000.0,
+        "estimated_need_covered": 825.408,
+        "objective_score": 0.179779539,
+        "overall_coverage_rate": 0.254779539,
+        "priority_coverage_rate": 0.434915916,
+        "selected_sites": "25025000502"
+      }
+    },
+    {
+      "binding_constraints": [],
+      "evidence_type": "optimized",
+      "feasible": false,
+      "id": "plan-25025000503",
+      "label": "Tract-centroid candidates 25025000503",
+      "limitations": [
+        "Candidate sites are tract centroids, not verified facilities.",
+        "Coverage is simulated by straight-line radius.",
+        "Need counts use model-based area prevalence as a planning proxy."
+      ],
+      "metrics": {
+        "cost": 8000.0,
+        "estimated_need_covered": 1534.813,
+        "objective_score": 0.398752313,
+        "overall_coverage_rate": 0.473752313,
+        "priority_coverage_rate": 0.434915916,
+        "selected_sites": "25025000503"
+      }
+    },
+    {
+      "binding_constraints": [
+        "budget"
+      ],
+      "evidence_type": "optimized",
+      "feasible": false,
+      "id": "plan-25025000101-25025000102",
+      "label": "Tract-centroid candidates 25025000101, 25025000102",
+      "limitations": [
+        "Candidate sites are tract centroids, not verified facilities.",
+        "Coverage is simulated by straight-line radius.",
+        "Need counts use model-based area prevalence as a planning proxy."
+      ],
+      "metrics": {
+        "cost": 16000.0,
+        "estimated_need_covered": 989.568,
+        "objective_score": 0.155450976,
+        "overall_coverage_rate": 0.305450976,
+        "priority_coverage_rate": 0.565084084,
+        "selected_sites": "25025000101,25025000102"
+      }
+    },
+    {
+      "binding_constraints": [
+        "budget"
+      ],
+      "evidence_type": "optimized",
+      "feasible": false,
+      "id": "plan-25025000101-25025000201",
+      "label": "Tract-centroid candidates 25025000101, 25025000201",
+      "limitations": [
+        "Candidate sites are tract centroids, not verified facilities.",
+        "Coverage is simulated by straight-line radius.",
+        "Need counts use model-based area prevalence as a planning proxy."
+      ],
+      "metrics": {
+        "cost": 16000.0,
+        "estimated_need_covered": 1963.606,
+        "objective_score": 0.456108291,
+        "overall_coverage_rate": 0.606108291,
+        "priority_coverage_rate": 0.565084084,
+        "selected_sites": "25025000101,25025000201"
+      }
+    },
+    {
+      "binding_constraints": [
+        "budget"
+      ],
+      "evidence_type": "optimized",
+      "feasible": false,
+      "id": "plan-25025000101-25025000202",
+      "label": "Tract-centroid candidates 25025000101, 25025000202",
+      "limitations": [
+        "Candidate sites are tract centroids, not verified facilities.",
+        "Coverage is simulated by straight-line radius.",
+        "Need counts use model-based area prevalence as a planning proxy."
+      ],
+      "metrics": {
+        "cost": 16000.0,
+        "estimated_need_covered": 2414.287,
+        "objective_score": 0.595220461,
+        "overall_coverage_rate": 0.745220461,
+        "priority_coverage_rate": 0.565084084,
+        "selected_sites": "25025000101,25025000202"
+      }
+    },
+    {
+      "binding_constraints": [
+        "budget"
+      ],
+      "evidence_type": "optimized",
+      "feasible": false,
+      "id": "plan-25025000101-25025000301",
+      "label": "Tract-centroid candidates 25025000101, 25025000301",
+      "limitations": [
+        "Candidate sites are tract centroids, not verified facilities.",
+        "Coverage is simulated by straight-line radius.",
+        "Need counts use model-based area prevalence as a planning proxy."
+      ],
+      "metrics": {
+        "cost": 16000.0,
+        "estimated_need_covered": 1704.882,
+        "objective_score": 0.376247687,
+        "overall_coverage_rate": 0.526247687,
+        "priority_coverage_rate": 0.565084084,
+        "selected_sites": "25025000101,25025000301"
+      }
+    },
+    {
+      "binding_constraints": [
+        "budget"
+      ],
+      "evidence_type": "optimized",
+      "feasible": false,
+      "id": "plan-25025000101-25025000302",
+      "label": "Tract-centroid candidates 25025000101, 25025000302",
+      "limitations": [
+        "Candidate sites are tract centroids, not verified facilities.",
+        "Coverage is simulated by straight-line radius.",
+        "Need counts use model-based area prevalence as a planning proxy."
+      ],
+      "metrics": {
+        "cost": 16000.0,
+        "estimated_need_covered": 1963.606,
+        "objective_score": 0.456108291,
+        "overall_coverage_rate": 0.606108291,
+        "priority_coverage_rate": 0.565084084,
+        "selected_sites": "25025000101,25025000302"
+      }
+    },
+    {
+      "binding_constraints": [
+        "budget"
+      ],
+      "evidence_type": "optimized",
+      "feasible": false,
+      "id": "plan-25025000101-25025000401",
+      "label": "Tract-centroid candidates 25025000101, 25025000401",
+      "limitations": [
+        "Candidate sites are tract centroids, not verified facilities.",
+        "Coverage is simulated by straight-line radius.",
+        "Need counts use model-based area prevalence as a planning proxy."
+      ],
+      "metrics": {
+        "cost": 16000.0,
+        "estimated_need_covered": 1853.725,
+        "objective_score": 0.422191209,
+        "overall_coverage_rate": 0.572191209,
+        "priority_coverage_rate": 0.565084084,
+        "selected_sites": "25025000101,25025000401"
+      }
+    },
+    {
+      "binding_constraints": [
+        "budget"
+      ],
+      "evidence_type": "optimized",
+      "feasible": false,
+      "id": "plan-25025000101-25025000402",
+      "label": "Tract-centroid candidates 25025000101, 25025000402",
+      "limitations": [
+        "Candidate sites are tract centroids, not verified facilities.",
+        "Coverage is simulated by straight-line radius.",
+        "Need counts use model-based area prevalence as a planning proxy."
+      ],
+      "metrics": {
+        "cost": 16000.0,
+        "estimated_need_covered": 2368.335,
+        "objective_score": 0.581036409,
+        "overall_coverage_rate": 0.731036409,
+        "priority_coverage_rate": 0.565084084,
+        "selected_sites": "25025000101,25025000402"
+      }
+    },
+    {
+      "binding_constraints": [
+        "budget"
+      ],
+      "evidence_type": "optimized",
+      "feasible": true,
+      "id": "plan-25025000101-25025000502",
+      "label": "Tract-centroid candidates 25025000101, 25025000502",
+      "limitations": [
+        "Candidate sites are tract centroids, not verified facilities.",
+        "Coverage is simulated by straight-line radius.",
+        "Need counts use model-based area prevalence as a planning proxy."
+      ],
+      "metrics": {
+        "cost": 16000.0,
+        "estimated_need_covered": 1366.992,
+        "objective_score": 0.271950832,
+        "overall_coverage_rate": 0.421950832,
+        "priority_coverage_rate": 0.709485382,
+        "selected_sites": "25025000101,25025000502"
+      }
+    },
+    {
+      "binding_constraints": [
+        "budget"
+      ],
+      "evidence_type": "optimized",
+      "feasible": true,
+      "id": "plan-25025000101-25025000503",
+      "label": "Tract-centroid candidates 25025000101, 25025000503",
+      "limitations": [
+        "Candidate sites are tract centroids, not verified facilities.",
+        "Coverage is simulated by straight-line radius.",
+        "Need counts use model-based area prevalence as a planning proxy."
+      ],
+      "metrics": {
+        "cost": 16000.0,
+        "estimated_need_covered": 2076.397,
+        "objective_score": 0.490923605,
+        "overall_coverage_rate": 0.640923605,
+        "priority_coverage_rate": 0.709485382,
+        "selected_sites": "25025000101,25025000503"
+      }
+    },
+    {
+      "binding_constraints": [
+        "budget"
+      ],
+      "evidence_type": "optimized",
+      "feasible": false,
+      "id": "plan-25025000102-25025000201",
+      "label": "Tract-centroid candidates 25025000102, 25025000201",
+      "limitations": [
+        "Candidate sites are tract centroids, not verified facilities.",
+        "Coverage is simulated by straight-line radius.",
+        "Need counts use model-based area prevalence as a planning proxy."
+      ],
+      "metrics": {
+        "cost": 16000.0,
+        "estimated_need_covered": 1963.606,
+        "objective_score": 0.456108291,
+        "overall_coverage_rate": 0.606108291,
+        "priority_coverage_rate": 0.565084084,
+        "selected_sites": "25025000102,25025000201"
+      }
+    },
+    {
+      "binding_constraints": [
+        "budget"
+      ],
+      "evidence_type": "optimized",
+      "feasible": false,
+      "id": "plan-25025000102-25025000202",
+      "label": "Tract-centroid candidates 25025000102, 25025000202",
+      "limitations": [
+        "Candidate sites are tract centroids, not verified facilities.",
+        "Coverage is simulated by straight-line radius.",
+        "Need counts use model-based area prevalence as a planning proxy."
+      ],
+      "metrics": {
+        "cost": 16000.0,
+        "estimated_need_covered": 2414.287,
+        "objective_score": 0.595220461,
+        "overall_coverage_rate": 0.745220461,
+        "priority_coverage_rate": 0.565084084,
+        "selected_sites": "25025000102,25025000202"
+      }
+    },
+    {
+      "binding_constraints": [
+        "budget"
+      ],
+      "evidence_type": "optimized",
+      "feasible": false,
+      "id": "plan-25025000102-25025000301",
+      "label": "Tract-centroid candidates 25025000102, 25025000301",
+      "limitations": [
+        "Candidate sites are tract centroids, not verified facilities.",
+        "Coverage is simulated by straight-line radius.",
+        "Need counts use model-based area prevalence as a planning proxy."
+      ],
+      "metrics": {
+        "cost": 16000.0,
+        "estimated_need_covered": 1704.882,
+        "objective_score": 0.376247687,
+        "overall_coverage_rate": 0.526247687,
+        "priority_coverage_rate": 0.565084084,
+        "selected_sites": "25025000102,25025000301"
+      }
+    },
+    {
+      "binding_constraints": [
+        "budget"
+      ],
+      "evidence_type": "optimized",
+      "feasible": false,
+      "id": "plan-25025000102-25025000302",
+      "label": "Tract-centroid candidates 25025000102, 25025000302",
+      "limitations": [
+        "Candidate sites are tract centroids, not verified facilities.",
+        "Coverage is simulated by straight-line radius.",
+        "Need counts use model-based area prevalence as a planning proxy."
+      ],
+      "metrics": {
+        "cost": 16000.0,
+        "estimated_need_covered": 1963.606,
+        "objective_score": 0.456108291,
+        "overall_coverage_rate": 0.606108291,
+        "priority_coverage_rate": 0.565084084,
+        "selected_sites": "25025000102,25025000302"
+      }
+    },
+    {
+      "binding_constraints": [
+        "budget"
+      ],
+      "evidence_type": "optimized",
+      "feasible": false,
+      "id": "plan-25025000102-25025000401",
+      "label": "Tract-centroid candidates 25025000102, 25025000401",
+      "limitations": [
+        "Candidate sites are tract centroids, not verified facilities.",
+        "Coverage is simulated by straight-line radius.",
+        "Need counts use model-based area prevalence as a planning proxy."
+      ],
+      "metrics": {
+        "cost": 16000.0,
+        "estimated_need_covered": 1853.725,
+        "objective_score": 0.422191209,
+        "overall_coverage_rate": 0.572191209,
+        "priority_coverage_rate": 0.565084084,
+        "selected_sites": "25025000102,25025000401"
+      }
+    },
+    {
+      "binding_constraints": [
+        "budget"
+      ],
+      "evidence_type": "optimized",
+      "feasible": false,
+      "id": "plan-25025000102-25025000402",
+      "label": "Tract-centroid candidates 25025000102, 25025000402",
+      "limitations": [
+        "Candidate sites are tract centroids, not verified facilities.",
+        "Coverage is simulated by straight-line radius.",
+        "Need counts use model-based area prevalence as a planning proxy."
+      ],
+      "metrics": {
+        "cost": 16000.0,
+        "estimated_need_covered": 2368.335,
+        "objective_score": 0.581036409,
+        "overall_coverage_rate": 0.731036409,
+        "priority_coverage_rate": 0.565084084,
+        "selected_sites": "25025000102,25025000402"
+      }
+    },
+    {
+      "binding_constraints": [
+        "budget"
+      ],
+      "evidence_type": "optimized",
+      "feasible": true,
+      "id": "plan-25025000102-25025000502",
+      "label": "Tract-centroid candidates 25025000102, 25025000502",
+      "limitations": [
+        "Candidate sites are tract centroids, not verified facilities.",
+        "Coverage is simulated by straight-line radius.",
+        "Need counts use model-based area prevalence as a planning proxy."
+      ],
+      "metrics": {
+        "cost": 16000.0,
+        "estimated_need_covered": 1814.976,
+        "objective_score": 0.410230516,
+        "overall_coverage_rate": 0.560230516,
+        "priority_coverage_rate": 1.0,
+        "selected_sites": "25025000102,25025000502"
+      }
+    },
+    {
+      "binding_constraints": [
+        "budget"
+      ],
+      "evidence_type": "optimized",
+      "feasible": true,
+      "id": "plan-25025000102-25025000503",
+      "label": "Tract-centroid candidates 25025000102, 25025000503",
+      "limitations": [
+        "Candidate sites are tract centroids, not verified facilities.",
+        "Coverage is simulated by straight-line radius.",
+        "Need counts use model-based area prevalence as a planning proxy."
+      ],
+      "metrics": {
+        "cost": 16000.0,
+        "estimated_need_covered": 2524.381,
+        "objective_score": 0.629203289,
+        "overall_coverage_rate": 0.779203289,
+        "priority_coverage_rate": 1.0,
+        "selected_sites": "25025000102,25025000503"
+      }
+    },
+    {
+      "binding_constraints": [
+        "budget"
+      ],
+      "evidence_type": "optimized",
+      "feasible": false,
+      "id": "plan-25025000201-25025000202",
+      "label": "Tract-centroid candidates 25025000201, 25025000202",
+      "limitations": [
+        "Candidate sites are tract centroids, not verified facilities.",
+        "Coverage is simulated by straight-line radius.",
+        "Need counts use model-based area prevalence as a planning proxy."
+      ],
+      "metrics": {
+        "cost": 16000.0,
+        "estimated_need_covered": 2296.099,
+        "objective_score": 0.558739249,
+        "overall_coverage_rate": 0.708739249,
+        "priority_coverage_rate": 0.565084084,
+        "selected_sites": "25025000201,25025000202"
+      }
+    },
+    {
+      "binding_constraints": [
+        "budget"
+      ],
+      "evidence_type": "optimized",
+      "feasible": false,
+      "id": "plan-25025000201-25025000301",
+      "label": "Tract-centroid candidates 25025000201, 25025000301",
+      "limitations": [
+        "Candidate sites are tract centroids, not verified facilities.",
+        "Coverage is simulated by straight-line radius.",
+        "Need counts use model-based area prevalence as a planning proxy."
+      ],
+      "metrics": {
+        "cost": 16000.0,
+        "estimated_need_covered": 1422.022,
+        "objective_score": 0.288936999,
+        "overall_coverage_rate": 0.438936999,
+        "priority_coverage_rate": 0.290514618,
+        "selected_sites": "25025000201,25025000301"
+      }
+    },
+    {
+      "binding_constraints": [
+        "budget"
+      ],
+      "evidence_type": "optimized",
+      "feasible": false,
+      "id": "plan-25025000201-25025000302",
+      "label": "Tract-centroid candidates 25025000201, 25025000302",
+      "limitations": [
+        "Candidate sites are tract centroids, not verified facilities.",
+        "Coverage is simulated by straight-line radius.",
+        "Need counts use model-based area prevalence as a planning proxy."
+      ],
+      "metrics": {
+        "cost": 16000.0,
+        "estimated_need_covered": 1422.022,
+        "objective_score": 0.288936999,
+        "overall_coverage_rate": 0.438936999,
+        "priority_coverage_rate": 0.290514618,
+        "selected_sites": "25025000201,25025000302"
+      }
+    },
+    {
+      "binding_constraints": [
+        "budget"
+      ],
+      "evidence_type": "optimized",
+      "feasible": false,
+      "id": "plan-25025000201-25025000401",
+      "label": "Tract-centroid candidates 25025000201, 25025000401",
+      "limitations": [
+        "Candidate sites are tract centroids, not verified facilities.",
+        "Coverage is simulated by straight-line radius.",
+        "Need counts use model-based area prevalence as a planning proxy."
+      ],
+      "metrics": {
+        "cost": 16000.0,
+        "estimated_need_covered": 2027.455,
+        "objective_score": 0.475816628,
+        "overall_coverage_rate": 0.625816628,
+        "priority_coverage_rate": 0.290514618,
+        "selected_sites": "25025000201,25025000401"
+      }
+    },
+    {
+      "binding_constraints": [
+        "budget"
+      ],
+      "evidence_type": "optimized",
+      "feasible": false,
+      "id": "plan-25025000201-25025000402",
+      "label": "Tract-centroid candidates 25025000201, 25025000402",
+      "limitations": [
+        "Candidate sites are tract centroids, not verified facilities.",
+        "Coverage is simulated by straight-line radius.",
+        "Need counts use model-based area prevalence as a planning proxy."
+      ],
+      "metrics": {
+        "cost": 16000.0,
+        "estimated_need_covered": 2027.455,
+        "objective_score": 0.475816628,
+        "overall_coverage_rate": 0.625816628,
+        "priority_coverage_rate": 0.290514618,
+        "selected_sites": "25025000201,25025000402"
+      }
+    },
+    {
+      "binding_constraints": [
+        "budget"
+      ],
+      "evidence_type": "optimized",
+      "feasible": true,
+      "id": "plan-25025000201-25025000502",
+      "label": "Tract-centroid candidates 25025000201, 25025000502",
+      "limitations": [
+        "Candidate sites are tract centroids, not verified facilities.",
+        "Coverage is simulated by straight-line radius.",
+        "Need counts use model-based area prevalence as a planning proxy."
+      ],
+      "metrics": {
+        "cost": 16000.0,
+        "estimated_need_covered": 2247.43,
+        "objective_score": 0.543716538,
+        "overall_coverage_rate": 0.693716538,
+        "priority_coverage_rate": 0.725430535,
+        "selected_sites": "25025000201,25025000502"
+      }
+    },
+    {
+      "binding_constraints": [
+        "budget"
+      ],
+      "evidence_type": "optimized",
+      "feasible": true,
+      "id": "plan-25025000201-25025000503",
+      "label": "Tract-centroid candidates 25025000201, 25025000503",
+      "limitations": [
+        "Candidate sites are tract centroids, not verified facilities.",
+        "Coverage is simulated by straight-line radius.",
+        "Need counts use model-based area prevalence as a planning proxy."
+      ],
+      "metrics": {
+        "cost": 16000.0,
+        "estimated_need_covered": 2698.111,
+        "objective_score": 0.682828708,
+        "overall_coverage_rate": 0.832828708,
+        "priority_coverage_rate": 0.725430535,
+        "selected_sites": "25025000201,25025000503"
+      }
+    },
+    {
+      "binding_constraints": [
+        "budget"
+      ],
+      "evidence_type": "optimized",
+      "feasible": false,
+      "id": "plan-25025000202-25025000301",
+      "label": "Tract-centroid candidates 25025000202, 25025000301",
+      "limitations": [
+        "Candidate sites are tract centroids, not verified facilities.",
+        "Coverage is simulated by straight-line radius.",
+        "Need counts use model-based area prevalence as a planning proxy."
+      ],
+      "metrics": {
+        "cost": 16000.0,
+        "estimated_need_covered": 2296.099,
+        "objective_score": 0.558739249,
+        "overall_coverage_rate": 0.708739249,
+        "priority_coverage_rate": 0.565084084,
+        "selected_sites": "25025000202,25025000301"
+      }
+    },
+    {
+      "binding_constraints": [
+        "budget"
+      ],
+      "evidence_type": "optimized",
+      "feasible": false,
+      "id": "plan-25025000202-25025000302",
+      "label": "Tract-centroid candidates 25025000202, 25025000302",
+      "limitations": [
+        "Candidate sites are tract centroids, not verified facilities.",
+        "Coverage is simulated by straight-line radius.",
+        "Need counts use model-based area prevalence as a planning proxy."
+      ],
+      "metrics": {
+        "cost": 16000.0,
+        "estimated_need_covered": 2296.099,
+        "objective_score": 0.558739249,
+        "overall_coverage_rate": 0.708739249,
+        "priority_coverage_rate": 0.565084084,
+        "selected_sites": "25025000202,25025000302"
+      }
+    },
+    {
+      "binding_constraints": [
+        "budget"
+      ],
+      "evidence_type": "optimized",
+      "feasible": false,
+      "id": "plan-25025000202-25025000401",
+      "label": "Tract-centroid candidates 25025000202, 25025000401",
+      "limitations": [
+        "Candidate sites are tract centroids, not verified facilities.",
+        "Coverage is simulated by straight-line radius.",
+        "Need counts use model-based area prevalence as a planning proxy."
+      ],
+      "metrics": {
+        "cost": 16000.0,
+        "estimated_need_covered": 2450.851,
+        "objective_score": 0.606506708,
+        "overall_coverage_rate": 0.756506708,
+        "priority_coverage_rate": 0.565084084,
+        "selected_sites": "25025000202,25025000401"
+      }
+    },
+    {
+      "binding_constraints": [
+        "budget"
+      ],
+      "evidence_type": "optimized",
+      "feasible": false,
+      "id": "plan-25025000202-25025000402",
+      "label": "Tract-centroid candidates 25025000202, 25025000402",
+      "limitations": [
+        "Candidate sites are tract centroids, not verified facilities.",
+        "Coverage is simulated by straight-line radius.",
+        "Need counts use model-based area prevalence as a planning proxy."
+      ],
+      "metrics": {
+        "cost": 16000.0,
+        "estimated_need_covered": 2450.851,
+        "objective_score": 0.606506708,
+        "overall_coverage_rate": 0.756506708,
+        "priority_coverage_rate": 0.565084084,
+        "selected_sites": "25025000202,25025000402"
+      }
+    },
+    {
+      "binding_constraints": [
+        "budget"
+      ],
+      "evidence_type": "optimized",
+      "feasible": true,
+      "id": "plan-25025000202-25025000502",
+      "label": "Tract-centroid candidates 25025000202, 25025000502",
+      "limitations": [
+        "Candidate sites are tract centroids, not verified facilities.",
+        "Coverage is simulated by straight-line radius.",
+        "Need counts use model-based area prevalence as a planning proxy."
+      ],
+      "metrics": {
+        "cost": 16000.0,
+        "estimated_need_covered": 3121.507,
+        "objective_score": 0.813518788,
+        "overall_coverage_rate": 0.963518788,
+        "priority_coverage_rate": 1.0,
+        "selected_sites": "25025000202,25025000502"
+      }
+    },
+    {
+      "binding_constraints": [
+        "budget"
+      ],
+      "evidence_type": "optimized",
+      "feasible": true,
+      "id": "plan-25025000202-25025000503",
+      "label": "Tract-centroid candidates 25025000202, 25025000503",
+      "limitations": [
+        "Candidate sites are tract centroids, not verified facilities.",
+        "Coverage is simulated by straight-line radius.",
+        "Need counts use model-based area prevalence as a planning proxy."
+      ],
+      "metrics": {
+        "cost": 16000.0,
+        "estimated_need_covered": 3121.507,
+        "objective_score": 0.813518788,
+        "overall_coverage_rate": 0.963518788,
+        "priority_coverage_rate": 1.0,
+        "selected_sites": "25025000202,25025000503"
+      }
+    },
+    {
+      "binding_constraints": [
+        "budget"
+      ],
+      "evidence_type": "optimized",
+      "feasible": false,
+      "id": "plan-25025000301-25025000302",
+      "label": "Tract-centroid candidates 25025000301, 25025000302",
+      "limitations": [
+        "Candidate sites are tract centroids, not verified facilities.",
+        "Coverage is simulated by straight-line radius.",
+        "Need counts use model-based area prevalence as a planning proxy."
+      ],
+      "metrics": {
+        "cost": 16000.0,
+        "estimated_need_covered": 1422.022,
+        "objective_score": 0.288936999,
+        "overall_coverage_rate": 0.438936999,
+        "priority_coverage_rate": 0.290514618,
+        "selected_sites": "25025000301,25025000302"
+      }
+    },
+    {
+      "binding_constraints": [
+        "budget"
+      ],
+      "evidence_type": "optimized",
+      "feasible": false,
+      "id": "plan-25025000301-25025000401",
+      "label": "Tract-centroid candidates 25025000301, 25025000401",
+      "limitations": [
+        "Candidate sites are tract centroids, not verified facilities.",
+        "Coverage is simulated by straight-line radius.",
+        "Need counts use model-based area prevalence as a planning proxy."
+      ],
+      "metrics": {
+        "cost": 16000.0,
+        "estimated_need_covered": 2027.455,
+        "objective_score": 0.475816628,
+        "overall_coverage_rate": 0.625816628,
+        "priority_coverage_rate": 0.290514618,
+        "selected_sites": "25025000301,25025000401"
+      }
+    },
+    {
+      "binding_constraints": [
+        "budget"
+      ],
+      "evidence_type": "optimized",
+      "feasible": false,
+      "id": "plan-25025000301-25025000402",
+      "label": "Tract-centroid candidates 25025000301, 25025000402",
+      "limitations": [
+        "Candidate sites are tract centroids, not verified facilities.",
+        "Coverage is simulated by straight-line radius.",
+        "Need counts use model-based area prevalence as a planning proxy."
+      ],
+      "metrics": {
+        "cost": 16000.0,
+        "estimated_need_covered": 2027.455,
+        "objective_score": 0.475816628,
+        "overall_coverage_rate": 0.625816628,
+        "priority_coverage_rate": 0.290514618,
+        "selected_sites": "25025000301,25025000402"
+      }
+    },
+    {
+      "binding_constraints": [
+        "budget"
+      ],
+      "evidence_type": "optimized",
+      "feasible": true,
+      "id": "plan-25025000301-25025000502",
+      "label": "Tract-centroid candidates 25025000301, 25025000502",
+      "limitations": [
+        "Candidate sites are tract centroids, not verified facilities.",
+        "Coverage is simulated by straight-line radius.",
+        "Need counts use model-based area prevalence as a planning proxy."
+      ],
+      "metrics": {
+        "cost": 16000.0,
+        "estimated_need_covered": 1988.706,
+        "objective_score": 0.463855934,
+        "overall_coverage_rate": 0.613855934,
+        "priority_coverage_rate": 0.725430535,
+        "selected_sites": "25025000301,25025000502"
+      }
+    },
+    {
+      "binding_constraints": [
+        "budget"
+      ],
+      "evidence_type": "optimized",
+      "feasible": true,
+      "id": "plan-25025000301-25025000503",
+      "label": "Tract-centroid candidates 25025000301, 25025000503",
+      "limitations": [
+        "Candidate sites are tract centroids, not verified facilities.",
+        "Coverage is simulated by straight-line radius.",
+        "Need counts use model-based area prevalence as a planning proxy."
+      ],
+      "metrics": {
+        "cost": 16000.0,
+        "estimated_need_covered": 2698.111,
+        "objective_score": 0.682828708,
+        "overall_coverage_rate": 0.832828708,
+        "priority_coverage_rate": 0.725430535,
+        "selected_sites": "25025000301,25025000503"
+      }
+    },
+    {
+      "binding_constraints": [
+        "budget"
+      ],
+      "evidence_type": "optimized",
+      "feasible": false,
+      "id": "plan-25025000302-25025000401",
+      "label": "Tract-centroid candidates 25025000302, 25025000401",
+      "limitations": [
+        "Candidate sites are tract centroids, not verified facilities.",
+        "Coverage is simulated by straight-line radius.",
+        "Need counts use model-based area prevalence as a planning proxy."
+      ],
+      "metrics": {
+        "cost": 16000.0,
+        "estimated_need_covered": 2027.455,
+        "objective_score": 0.475816628,
+        "overall_coverage_rate": 0.625816628,
+        "priority_coverage_rate": 0.290514618,
+        "selected_sites": "25025000302,25025000401"
+      }
+    },
+    {
+      "binding_constraints": [
+        "budget"
+      ],
+      "evidence_type": "optimized",
+      "feasible": false,
+      "id": "plan-25025000302-25025000402",
+      "label": "Tract-centroid candidates 25025000302, 25025000402",
+      "limitations": [
+        "Candidate sites are tract centroids, not verified facilities.",
+        "Coverage is simulated by straight-line radius.",
+        "Need counts use model-based area prevalence as a planning proxy."
+      ],
+      "metrics": {
+        "cost": 16000.0,
+        "estimated_need_covered": 2027.455,
+        "objective_score": 0.475816628,
+        "overall_coverage_rate": 0.625816628,
+        "priority_coverage_rate": 0.290514618,
+        "selected_sites": "25025000302,25025000402"
+      }
+    },
+    {
+      "binding_constraints": [
+        "budget"
+      ],
+      "evidence_type": "optimized",
+      "feasible": true,
+      "id": "plan-25025000302-25025000502",
+      "label": "Tract-centroid candidates 25025000302, 25025000502",
+      "limitations": [
+        "Candidate sites are tract centroids, not verified facilities.",
+        "Coverage is simulated by straight-line radius.",
+        "Need counts use model-based area prevalence as a planning proxy."
+      ],
+      "metrics": {
+        "cost": 16000.0,
+        "estimated_need_covered": 2247.43,
+        "objective_score": 0.543716538,
+        "overall_coverage_rate": 0.693716538,
+        "priority_coverage_rate": 0.725430535,
+        "selected_sites": "25025000302,25025000502"
+      }
+    },
+    {
+      "binding_constraints": [
+        "budget"
+      ],
+      "evidence_type": "optimized",
+      "feasible": true,
+      "id": "plan-25025000302-25025000503",
+      "label": "Tract-centroid candidates 25025000302, 25025000503",
+      "limitations": [
+        "Candidate sites are tract centroids, not verified facilities.",
+        "Coverage is simulated by straight-line radius.",
+        "Need counts use model-based area prevalence as a planning proxy."
+      ],
+      "metrics": {
+        "cost": 16000.0,
+        "estimated_need_covered": 2698.111,
+        "objective_score": 0.682828708,
+        "overall_coverage_rate": 0.832828708,
+        "priority_coverage_rate": 0.725430535,
+        "selected_sites": "25025000302,25025000503"
+      }
+    },
+    {
+      "binding_constraints": [
+        "budget"
+      ],
+      "evidence_type": "optimized",
+      "feasible": false,
+      "id": "plan-25025000401-25025000402",
+      "label": "Tract-centroid candidates 25025000401, 25025000402",
+      "limitations": [
+        "Candidate sites are tract centroids, not verified facilities.",
+        "Coverage is simulated by straight-line radius.",
+        "Need counts use model-based area prevalence as a planning proxy."
+      ],
+      "metrics": {
+        "cost": 16000.0,
+        "estimated_need_covered": 1826.751,
+        "objective_score": 0.413865117,
+        "overall_coverage_rate": 0.563865117,
+        "priority_coverage_rate": 0.290514618,
+        "selected_sites": "25025000401,25025000402"
+      }
+    },
+    {
+      "binding_constraints": [
+        "budget"
+      ],
+      "evidence_type": "optimized",
+      "feasible": true,
+      "id": "plan-25025000401-25025000502",
+      "label": "Tract-centroid candidates 25025000401, 25025000502",
+      "limitations": [
+        "Candidate sites are tract centroids, not verified facilities.",
+        "Coverage is simulated by straight-line radius.",
+        "Need counts use model-based area prevalence as a planning proxy."
+      ],
+      "metrics": {
+        "cost": 16000.0,
+        "estimated_need_covered": 1982.797,
+        "objective_score": 0.462031997,
+        "overall_coverage_rate": 0.612031997,
+        "priority_coverage_rate": 0.725430535,
+        "selected_sites": "25025000401,25025000502"
+      }
+    },
+    {
+      "binding_constraints": [
+        "budget"
+      ],
+      "evidence_type": "optimized",
+      "feasible": true,
+      "id": "plan-25025000401-25025000503",
+      "label": "Tract-centroid candidates 25025000401, 25025000503",
+      "limitations": [
+        "Candidate sites are tract centroids, not verified facilities.",
+        "Coverage is simulated by straight-line radius.",
+        "Need counts use model-based area prevalence as a planning proxy."
+      ],
+      "metrics": {
+        "cost": 16000.0,
+        "estimated_need_covered": 1982.797,
+        "objective_score": 0.462031997,
+        "overall_coverage_rate": 0.612031997,
+        "priority_coverage_rate": 0.725430535,
+        "selected_sites": "25025000401,25025000503"
+      }
+    },
+    {
+      "binding_constraints": [
+        "budget"
+      ],
+      "evidence_type": "optimized",
+      "feasible": true,
+      "id": "plan-25025000402-25025000502",
+      "label": "Tract-centroid candidates 25025000402, 25025000502",
+      "limitations": [
+        "Candidate sites are tract centroids, not verified facilities.",
+        "Coverage is simulated by straight-line radius.",
+        "Need counts use model-based area prevalence as a planning proxy."
+      ],
+      "metrics": {
+        "cost": 16000.0,
+        "estimated_need_covered": 2497.407,
+        "objective_score": 0.620877197,
+        "overall_coverage_rate": 0.770877197,
+        "priority_coverage_rate": 0.725430535,
+        "selected_sites": "25025000402,25025000502"
+      }
+    },
+    {
+      "binding_constraints": [
+        "budget"
+      ],
+      "evidence_type": "optimized",
+      "feasible": true,
+      "id": "plan-25025000402-25025000503",
+      "label": "Tract-centroid candidates 25025000402, 25025000503",
+      "limitations": [
+        "Candidate sites are tract centroids, not verified facilities.",
+        "Coverage is simulated by straight-line radius.",
+        "Need counts use model-based area prevalence as a planning proxy."
+      ],
+      "metrics": {
+        "cost": 16000.0,
+        "estimated_need_covered": 2497.407,
+        "objective_score": 0.620877197,
+        "overall_coverage_rate": 0.770877197,
+        "priority_coverage_rate": 0.725430535,
+        "selected_sites": "25025000402,25025000503"
+      }
+    },
+    {
+      "binding_constraints": [
+        "budget"
+      ],
+      "evidence_type": "optimized",
+      "feasible": false,
+      "id": "plan-25025000502-25025000503",
+      "label": "Tract-centroid candidates 25025000502, 25025000503",
+      "limitations": [
+        "Candidate sites are tract centroids, not verified facilities.",
+        "Coverage is simulated by straight-line radius.",
+        "Need counts use model-based area prevalence as a planning proxy."
+      ],
+      "metrics": {
+        "cost": 16000.0,
+        "estimated_need_covered": 1534.813,
+        "objective_score": 0.323752313,
+        "overall_coverage_rate": 0.473752313,
+        "priority_coverage_rate": 0.434915916,
+        "selected_sites": "25025000502,25025000503"
+      }
+    }
+  ],
+  "recommendation": {
+    "evidence_type": "optimized",
+    "limitations": [
+      "The selected plan is optimized only within the declared proxy model.",
+      "No facility has been verified, opened, funded, or observed in operation."
+    ],
+    "rationale": "This option has the highest declared objective score among feasible bounded tract-centroid combinations. It is a methods demonstration, not an implementation recommendation.",
+    "required_next_evidence": [
+      "Build a versioned pedestrian and transit network with timed routing.",
+      "Verify candidate facilities, hours, accessibility, capacity, and cost.",
+      "Collect privacy-preserving, consented service-demand evidence."
+    ],
+    "reversal_conditions": [
+      "Selection changes at service_radius_km=0.75; the tested option is plan-25025000201-25025000502.",
+      "Selection changes at service_radius_km=1.0; the tested option is plan-25025000201-25025000502.",
+      "Selection changes at service_radius_km=1.5; the tested option is plan-25025000101-25025000402.",
+      "Selection changes at service_radius_km=2.0; the tested option is plan-25025000401."
+    ],
+    "selected_option_id": "plan-25025000202-25025000502"
+  },
+  "reproducibility": {
+    "command": [
+      "civicdecision",
+      "demo",
+      "heat-access",
+      "--data",
+      "examples/data/cdc-places/cdc-places-7ccf6e7d6dc3.json",
+      "--manifest",
+      "examples/data/cdc-places/cdc-places-7ccf6e7d6dc3.manifest.json",
+      "--scenario",
+      "examples/scenarios/suffolk-heat-access-demo.yaml",
+      "--config",
+      "examples/configs/suffolk-heat-access-default.yaml"
+    ],
+    "environment": {
+      "algorithm": "exhaustive-enumeration",
+      "python": "3.12.13"
+    },
+    "parameters": {
+      "budget": 16000.0,
+      "cost_penalty": 0.15,
+      "facility_cost": 8000.0,
+      "max_facilities": 2,
+      "minimum_priority_coverage": 0.6,
+      "priority_group_share": 0.25,
+      "sensitivity_radii_km": [
+        0.5,
+        0.75,
+        1.0,
+        1.5,
+        2.0
+      ],
+      "service_radius_km": 1.25
+    },
+    "random_seed": 20260812,
+    "software_version": "0.1.0",
+    "source_hashes": [
+      "sha256:f6e3d27428c3a4fa913eeb06384b782509aab5e8491159c3c5476be5e5c75321"
+    ]
+  },
+  "reversal_tests": [
+    {
+      "baseline_option_id": "plan-25025000202-25025000502",
+      "baseline_value": 1.25,
+      "evidence_type": "simulated",
+      "id": "service-radius-0-50",
+      "limitations": [
+        "Sensitivity results inherit the straight-line coverage and tract-centroid assumptions."
+      ],
+      "method": "Re-enumerate every candidate combination while changing only service radius.",
+      "outcome": "stable",
+      "parameter": "service_radius_km",
+      "selected_option_id_after_test": "plan-25025000202-25025000502",
+      "tested_value": 0.5,
+      "unit": "km"
+    },
+    {
+      "baseline_option_id": "plan-25025000202-25025000502",
+      "baseline_value": 1.25,
+      "evidence_type": "simulated",
+      "id": "service-radius-0-75",
+      "limitations": [
+        "Sensitivity results inherit the straight-line coverage and tract-centroid assumptions."
+      ],
+      "method": "Re-enumerate every candidate combination while changing only service radius.",
+      "outcome": "reversed",
+      "parameter": "service_radius_km",
+      "selected_option_id_after_test": "plan-25025000201-25025000502",
+      "tested_value": 0.75,
+      "unit": "km"
+    },
+    {
+      "baseline_option_id": "plan-25025000202-25025000502",
+      "baseline_value": 1.25,
+      "evidence_type": "simulated",
+      "id": "service-radius-1-00",
+      "limitations": [
+        "Sensitivity results inherit the straight-line coverage and tract-centroid assumptions."
+      ],
+      "method": "Re-enumerate every candidate combination while changing only service radius.",
+      "outcome": "reversed",
+      "parameter": "service_radius_km",
+      "selected_option_id_after_test": "plan-25025000201-25025000502",
+      "tested_value": 1.0,
+      "unit": "km"
+    },
+    {
+      "baseline_option_id": "plan-25025000202-25025000502",
+      "baseline_value": 1.25,
+      "evidence_type": "simulated",
+      "id": "service-radius-1-50",
+      "limitations": [
+        "Sensitivity results inherit the straight-line coverage and tract-centroid assumptions."
+      ],
+      "method": "Re-enumerate every candidate combination while changing only service radius.",
+      "outcome": "reversed",
+      "parameter": "service_radius_km",
+      "selected_option_id_after_test": "plan-25025000101-25025000402",
+      "tested_value": 1.5,
+      "unit": "km"
+    },
+    {
+      "baseline_option_id": "plan-25025000202-25025000502",
+      "baseline_value": 1.25,
+      "evidence_type": "simulated",
+      "id": "service-radius-2-00",
+      "limitations": [
+        "Sensitivity results inherit the straight-line coverage and tract-centroid assumptions."
+      ],
+      "method": "Re-enumerate every candidate combination while changing only service radius.",
+      "outcome": "reversed",
+      "parameter": "service_radius_km",
+      "selected_option_id_after_test": "plan-25025000401",
+      "tested_value": 2.0,
+      "unit": "km"
+    }
+  ],
+  "run_id": "run-aff7c38b12c1",
+  "scenario_id": "us.ma.suffolk.heat-access-demo.v1",
+  "schema_version": "1.0.0",
+  "source_manifests": [
+    {
+      "artifact_id": "cdc-places-7ccf6e7d6dc3",
+      "artifact_path": "cdc-places-7ccf6e7d6dc3.json",
+      "content_hash": "sha256:f6e3d27428c3a4fa913eeb06384b782509aab5e8491159c3c5476be5e5c75321",
+      "data_url": "https://data.cdc.gov/resource/yjkw-uj5s.json?%24select=stateabbr%2Cstatedesc%2Ccountyname%2Ccountyfips%2Ctractfips%2Ctotalpopulation%2Ctotalpop18plus%2Caccess2_crudeprev%2Ccasthma_crudeprev%2Ccopd_crudeprev%2Cdiabetes_crudeprev%2Cghlth_crudeprev%2Cobesity_crudeprev%2Clacktrpt_crudeprev%2Cgeolocation&%24limit=10&%24offset=0&%24order=tractfips&%24where=stateabbr%3D%27MA%27+AND+countyfips%3D%2725025%27",
+      "geographic_scope": "state=MA, county=25025",
+      "landing_url": "https://data.cdc.gov/500-Cities-Places/PLACES-Census-Tract-Data-GIS-Friendly-Format-2025-/yjkw-uj5s",
+      "license": "Public Domain; retain CDC attribution and methodology context",
+      "limitations": [
+        "PLACES values are model-based small-area estimates, not individual records.",
+        "A limited API page is not the complete 83,522-tract dataset.",
+        "Geographic estimates must not be interpreted as individual causal effects."
+      ],
+      "name": "CDC PLACES census-tract data, GIS-friendly 2025 release",
+      "publisher": "U.S. Centers for Disease Control and Prevention",
+      "query": {
+        "county_fips": "25025",
+        "limit": 10,
+        "offset": 0,
+        "state_abbr": "MA"
+      },
+      "record_count": 10,
+      "response_headers": {
+        "content-type": "application/json;charset=utf-8",
+        "etag": "\"aG90ZWwuNDg3NDFfNl8xODNVaHgtMVJmUDFORnplajhwOG8zNnhoV0lPUzA---gzioBXVY-z3UWqafWgfs2_QfRBOOqnw--gzip--gzip\"",
+        "last-modified": "Thu, 04 Dec 2025 10:40:53 GMT",
+        "x-soda2-truth-last-modified": "Thu, 04 Dec 2025 10:40:53 GMT"
+      },
+      "retrieved_at": "2026-08-12T09:05:29.764952Z",
+      "schema_fingerprint": "sha256:05cb741a5af92786200819ceea103690502827aa7e8d2a23f810f6c125335b54",
+      "schema_version": "1.0.0",
+      "source_id": "cdc-places-2025-tract",
+      "temporal_scope": "CDC PLACES 2025 release using stated BRFSS/Census/ACS source years",
+      "upstream_updated_at": "2025-12-04T10:40:53Z"
+    }
+  ],
+  "status": "completed",
+  "value_of_information": [
+    {
+      "collection_action": "Build a versioned pedestrian and transit network with timed routing.",
+      "decision_link": "A network model can change coverage, feasibility, and the selected sites.",
+      "evidence_type": "proposed",
+      "id": "network-travel-time",
+      "limitations": [
+        "Priority is a declared planning judgment, not a monetized EVPI estimate."
+      ],
+      "priority_score": 1.0,
+      "uncertainty": "Straight-line radius may misrepresent accessible travel time."
+    },
+    {
+      "collection_action": "Verify candidate facilities, hours, accessibility, capacity, and cost.",
+      "decision_link": "Ineligible sites would invalidate or constrain the selected plan.",
+      "evidence_type": "proposed",
+      "id": "facility-feasibility",
+      "limitations": [
+        "This item proposes field validation; no facility audit has been performed."
+      ],
+      "priority_score": 0.98,
+      "uncertainty": "Tract centroids have not been verified as operable cooling facilities."
+    },
+    {
+      "collection_action": "Collect privacy-preserving, consented service-demand evidence.",
+      "decision_link": "Observed demand could alter equity weights and facility priorities.",
+      "evidence_type": "proposed",
+      "id": "individual-demand",
+      "limitations": [
+        "Collection must pass privacy, ethics, and representativeness review."
+      ],
+      "priority_score": 0.92,
+      "uncertainty": "Area-level modeled prevalence does not identify actual service demand."
+    }
+  ]
+}
