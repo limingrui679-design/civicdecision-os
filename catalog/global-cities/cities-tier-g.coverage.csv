@@ -1,0 +1,251 @@
+selection_rank,city_id,name,country_code,timezone,latitude,longitude,source_population,selection_basis,source_modification_date
+1,geonames.1796236,Shanghai,CN,Asia/Shanghai,31.22222,121.45806,24874500,country-leader,2026-04-13
+2,geonames.2314302,Kinshasa,CD,Africa/Kinshasa,-4.32758,15.31357,16000000,country-leader,2023-11-29
+3,geonames.745044,Istanbul,TR,Europe/Istanbul,41.01384,28.94966,15701602,country-leader,2026-04-14
+4,geonames.2332459,Lagos,NG,Africa/Lagos,6.45407,3.39467,15388000,country-leader,2023-10-25
+5,geonames.1566083,Ho Chi Minh City,VN,Asia/Ho_Chi_Minh,10.82302,106.62965,14002598,country-leader,2025-10-19
+6,geonames.1172451,Lahore,PK,Asia/Karachi,31.558,74.35071,13004135,country-leader,2026-04-14
+7,geonames.1275339,Mumbai,IN,Asia/Kolkata,19.07283,72.88261,12691836,country-leader,2024-09-05
+8,geonames.3448439,São Paulo,BR,America/Sao_Paulo,-23.5475,-46.63611,12400232,country-leader,2026-04-13
+9,geonames.3530597,Mexico City,MX,America/Mexico_City,19.42847,-99.12766,12294193,country-leader,2024-03-26
+10,geonames.524901,Moscow,RU,Europe/Moscow,55.75204,37.61781,10381222,country-leader,2025-09-09
+11,geonames.1185241,Dhaka,BD,Asia/Dhaka,23.7104,90.40744,10356500,country-leader,2024-09-05
+12,geonames.1835848,Seoul,KR,Asia/Seoul,37.566,126.9784,10349312,country-leader,2024-12-01
+13,geonames.1850147,Tokyo,JP,Asia/Tokyo,35.6895,139.69171,9733276,country-leader,2025-07-22
+14,geonames.360630,Cairo,EG,Africa/Cairo,30.06263,31.24967,9606916,country-leader,2026-02-23
+15,geonames.993800,Johannesburg,ZA,Africa/Johannesburg,-26.20227,28.04363,9418183,country-leader,2026-04-14
+16,geonames.2643743,London,GB,Europe/London,51.50853,-0.12574,8961989,country-leader,2026-03-23
+17,geonames.5128581,New York City,US,America/New_York,40.71427,-74.00597,8804190,country-leader,2026-03-07
+18,geonames.1642911,Jakarta,ID,Asia/Jakarta,-6.21462,106.84513,8540121,country-leader,2026-02-23
+19,geonames.1668341,Taipei,TW,Asia/Taipei,25.05306,121.52639,7871900,country-leader,2025-02-24
+20,geonames.3936456,Lima,PE,America/Lima,-12.04318,-77.02824,7737002,country-leader,2023-10-25
+21,geonames.3688689,Bogotá,CO,America/Bogota,4.60971,-74.08175,7674366,country-leader,2024-03-26
+22,geonames.1819729,Hong Kong,HK,Asia/Hong_Kong,22.27832,114.17469,7396076,country-leader,2025-08-25
+23,geonames.98182,Baghdad,IQ,Asia/Baghdad,33.34058,44.40088,7216000,country-leader,2024-02-14
+24,geonames.112931,Tehran,IR,Asia/Tehran,35.69439,51.42151,7153309,country-leader,2024-03-26
+25,geonames.2293538,Abidjan,CI,Africa/Abidjan,5.35444,-4.00167,6321017,country-leader,2026-04-13
+26,geonames.2147714,Sydney,AU,Australia/Sydney,-33.86785,151.20732,5638830,country-leader,2026-06-24
+27,geonames.1880252,Singapore,SG,Asia/Singapore,1.28967,103.85007,5638700,country-leader,2025-07-23
+28,geonames.160263,Dar es Salaam,TZ,Africa/Dar_es_Salaam,-6.82349,39.26951,5383728,country-leader,2026-04-14
+29,geonames.1609350,Bangkok,TH,Asia/Bangkok,13.75398,100.50144,5104476,country-leader,2024-03-26
+30,geonames.3871336,Santiago,CL,America/Santiago,-33.45694,-70.64827,4837295,country-leader,2025-06-21
+31,geonames.105343,Jeddah,SA,Asia/Riyadh,21.49012,39.18624,4697000,country-leader,2024-04-21
+32,geonames.1298824,Yangon,MM,Asia/Yangon,16.80528,96.15611,4477638,country-leader,2026-04-14
+33,geonames.1138958,Kabul,AF,Asia/Kabul,34.52813,69.17233,4434550,country-leader,2024-11-12
+34,geonames.184745,Nairobi,KE,Africa/Nairobi,-1.28333,36.81667,4397073,country-leader,2023-12-21
+35,geonames.2460596,Bamako,ML,Africa/Bamako,12.60915,-7.97522,4227569,country-leader,2025-02-18
+36,geonames.344979,Addis Ababa,ET,Africa/Addis_Ababa,9.02497,38.74689,3860000,country-leader,2026-02-23
+37,geonames.292223,Dubai,AE,Asia/Dubai,25.07725,55.30927,3790000,country-leader,2026-04-13
+38,geonames.2553604,Casablanca,MA,Africa/Casablanca,33.58831,-7.61138,3665954,country-leader,2026-04-14
+39,geonames.2950159,Berlin,DE,Europe/Berlin,52.52437,13.41053,3426354,country-leader,2025-07-22
+40,geonames.3117735,Madrid,ES,Europe/Madrid,40.4165,-3.70256,3255944,country-leader,2026-02-23
+41,geonames.1871859,Pyongyang,KP,Asia/Pyongyang,39.03385,125.75432,3222000,country-leader,2024-06-19
+42,geonames.1692192,Quezon City,PH,Asia/Manila,14.6488,121.0509,3084270,country-leader,2025-09-24
+43,geonames.3646738,Caracas,VE,America/Caracas,10.48801,-66.87919,3000000,country-leader,2025-11-01
+44,geonames.703448,Kyiv,UA,Europe/Kyiv,50.45466,30.5238,2952301,country-leader,2026-03-29
+45,geonames.3435910,Buenos Aires,AR,America/Argentina/Buenos_Aires,-34.61315,-58.37723,2891082,country-leader,2024-06-19
+46,geonames.6167865,Toronto,CA,America/Toronto,43.70643,-79.39864,2794356,country-leader,2026-04-13
+47,geonames.3652462,Quito,EC,America/Guayaquil,-0.22985,-78.52495,2781641,country-leader,2025-12-15
+48,geonames.2240449,Luanda,AO,Africa/Luanda,-8.83682,13.23432,2776168,country-leader,2024-03-26
+49,geonames.2253354,Dakar,SN,Africa/Dakar,14.6937,-17.44406,2646503,country-leader,2024-07-27
+50,geonames.53654,Mogadishu,SO,Africa/Mogadishu,2.03711,45.34375,2587183,country-leader,2025-10-18
+51,geonames.2298890,Kumasi,GH,Africa/Accra,6.68848,-1.62443,2544530,country-leader,2024-06-22
+52,geonames.2357048,Ouagadougou,BF,Africa/Ouagadougou,12.36566,-1.53388,2415266,country-leader,2025-06-20
+53,geonames.2507480,Algiers,DZ,Africa/Algiers,36.73225,3.08746,2364230,country-leader,2024-08-05
+54,geonames.587084,Baku,AZ,Asia/Baku,40.37767,49.89201,2351300,country-leader,2026-06-02
+55,geonames.3169070,Rome,IT,Europe/Rome,41.89193,12.51133,2318895,country-leader,2025-07-22
+56,geonames.909137,Lusaka,ZM,Africa/Lusaka,-15.40669,28.28713,2212301,country-leader,2025-10-26
+57,geonames.3492908,Santo Domingo,DO,America/Santo_Domingo,18.47186,-69.89232,2201941,country-leader,2025-03-09
+58,geonames.2365267,Lomé,TG,Africa/Lome,6.12874,1.22154,2188376,country-leader,2025-10-31
+59,geonames.3553478,Havana,CU,America/Havana,23.13302,-82.38304,2163824,country-leader,2025-10-31
+60,geonames.2988507,Paris,FR,Europe/Paris,48.85341,2.3488,2138551,country-leader,2026-02-23
+61,geonames.170063,Aleppo,SY,Asia/Damascus,36.20124,37.16117,2098210,country-leader,2026-06-16
+62,geonames.3911925,La Paz,BO,America/La_Paz,-16.5,-68.15,2004652,country-leader,2025-07-19
+63,geonames.2260535,Brazzaville,CG,Africa/Brazzaville,-4.26613,15.28318,1982000,country-leader,2025-10-31
+64,geonames.1512569,Tashkent,UZ,Asia/Tashkent,41.26465,69.21627,1978028,country-leader,2024-06-22
+65,geonames.1526384,Almaty,KZ,Asia/Almaty,43.25249,76.9115,1977011,country-leader,2026-04-14
+66,geonames.379252,Khartoum,SD,Africa/Khartoum,15.55177,32.53241,1974647,country-leader,2025-11-03
+67,geonames.71137,Sanaa,YE,Asia/Aden,15.35452,44.20646,1937451,country-leader,2025-06-14
+68,geonames.2422465,Conakry,GN,Africa/Conakry,9.53795,-13.67729,1928389,country-leader,2023-12-20
+69,geonames.276781,Beirut,LB,Asia/Beirut,33.89332,35.50157,1916100,country-leader,2026-04-04
+70,geonames.683506,Bucharest,RO,Europe/Bucharest,44.43225,26.10626,1877155,country-leader,2026-01-09
+71,geonames.625144,Minsk,BY,Europe/Minsk,53.90019,27.56653,1742124,country-leader,2025-11-01
+72,geonames.3054643,Budapest,HU,Europe/Budapest,47.49835,19.04045,1741041,country-leader,2026-07-29
+73,geonames.756135,Warsaw,PL,Europe/Warsaw,52.22977,21.01178,1702139,country-leader,2026-06-30
+74,geonames.2761369,Vienna,AT,Europe/Vienna,48.20849,16.37208,1691468,country-leader,2025-11-01
+75,geonames.232422,Kampala,UG,Africa/Kampala,0.31628,32.58219,1680600,country-leader,2025-12-14
+76,geonames.1821306,Phnom Penh,KH,Asia/Phnom_Penh,11.56245,104.91601,1573544,country-leader,2025-10-19
+77,geonames.2193733,Auckland,NZ,Pacific/Auckland,-36.84853,174.76349,1547200,country-leader,2026-05-02
+78,geonames.890299,Harare,ZW,Africa/Harare,-17.82772,31.05337,1542813,country-leader,2025-02-07
+79,geonames.2274895,Monrovia,LR,Africa/Monrovia,6.30054,-10.7969,1542549,country-leader,2025-12-15
+80,geonames.2673730,Stockholm,SE,Europe/Stockholm,59.32938,18.06871,1515017,country-leader,2024-06-20
+81,geonames.3439389,Asunción,PY,America/Asuncion,-25.28646,-57.647,1482200,country-leader,2019-09-05
+82,geonames.1735161,Kuala Lumpur,MY,Asia/Kuala_Lumpur,3.1412,101.68653,1453975,country-leader,2026-04-29
+83,geonames.1283240,Kathmandu,NP,Asia/Kathmandu,27.70169,85.3206,1442271,country-leader,2019-10-18
+84,geonames.2427123,N'Djamena,TD,Africa/Ndjamena,12.10672,15.0444,1359526,country-leader,2023-11-29
+85,geonames.1070940,Antananarivo,MG,Indian/Antananarivo,-18.91368,47.53613,1349501,country-leader,2025-05-18
+86,geonames.2232593,Douala,CM,Africa/Douala,4.04827,9.70428,1338082,country-leader,2026-04-13
+87,geonames.2440485,Niamey,NE,Africa/Niamey,13.51366,2.1098,1323691,country-leader,2024-01-18
+88,geonames.2210247,Tripoli,LY,Africa/Tripoli,32.88743,13.18733,1302947,country-leader,2026-07-08
+89,geonames.250441,Amman,JO,Asia/Amman,31.95522,35.94503,1275857,country-leader,2019-09-05
+90,geonames.792680,Belgrade,RS,Europe/Belgrade,44.80401,20.46513,1273651,country-leader,2026-01-15
+91,geonames.3441575,Montevideo,UY,America/Montevideo,-34.90328,-56.18816,1270737,country-leader,2026-02-23
+92,geonames.1040652,Maputo,MZ,Africa/Maputo,-25.96553,32.58322,1254837,country-leader,2024-01-18
+93,geonames.3718426,Port-au-Prince,HT,America/Port-au-Prince,18.54349,-72.33881,1234742,country-leader,2019-09-05
+94,geonames.2377450,Nouakchott,MR,Africa/Nouakchott,18.08581,-15.9785,1184530,country-leader,2024-01-18
+95,geonames.3067696,Prague,CZ,Europe/Prague,50.08804,14.42076,1165581,country-leader,2026-02-23
+96,geonames.2618425,Copenhagen,DK,Europe/Copenhagen,55.67594,12.56553,1153615,country-leader,2024-09-05
+97,geonames.727011,Sofia,BG,Europe/Sofia,42.69751,23.32415,1152556,country-leader,2023-09-08
+98,geonames.616052,Yerevan,AM,Asia/Yerevan,40.17765,44.5126,1144700,country-leader,2026-04-04
+99,geonames.202061,Kigali,RW,Africa/Kigali,-1.94995,30.05885,1132686,country-leader,2021-11-09
+100,geonames.927967,Lilongwe,MW,Africa/Blantyre,-13.96692,33.78725,1115815,country-leader,2024-01-18
+101,geonames.3143244,Oslo,NO,Europe/Oslo,59.91273,10.74609,1082575,country-leader,2024-08-27
+102,geonames.611717,Tbilisi,GE,Asia/Tbilisi,41.69143,44.83412,1049498,country-leader,2026-06-11
+103,geonames.162183,Ashgabat,TM,Asia/Ashgabat,37.95,58.38333,1030063,country-leader,2026-04-15
+104,geonames.2964574,Dublin,IE,Europe/Dublin,53.33306,-6.24889,1024027,country-leader,2022-03-09
+105,geonames.2800866,Brussels,BE,Europe/Brussels,50.85045,4.34878,1019022,country-leader,2024-05-03
+106,geonames.3598132,Guatemala City,GT,America/Guatemala,14.64072,-90.51327,994938,country-leader,2020-07-15
+107,geonames.3617763,Managua,NI,America/Managua,12.13282,-86.2504,973087,country-leader,2026-01-02
+108,geonames.281184,Jerusalem,IL,Asia/Jerusalem,31.76904,35.21633,971800,country-leader,2025-09-23
+109,geonames.3489854,Kingston,JM,America/Jamaica,17.99702,-76.79358,937700,country-leader,2021-08-01
+110,geonames.1528675,Bishkek,KG,Asia/Bishkek,42.87,74.59,900000,country-leader,2025-08-22
+111,geonames.2747891,Rotterdam,NL,Europe/Amsterdam,51.9225,4.47917,868135,country-leader,2025-10-26
+112,geonames.3600949,Tegucigalpa,HN,America/Tegucigalpa,14.0818,-87.20681,850848,country-leader,2024-09-12
+113,geonames.2399697,Libreville,GA,Africa/Libreville,0.39241,9.45356,846090,country-leader,2023-12-01
+114,geonames.2028462,Ulan Bator,MN,Asia/Ulaanbaatar,47.90771,106.88324,844818,country-leader,2025-08-25
+115,geonames.1651944,Vientiane,LA,Asia/Vientiane,17.96667,102.6,840940,country-leader,2026-03-29
+116,geonames.2389853,Bangui,CF,Africa/Bangui,4.36122,18.55496,812407,country-leader,2023-11-29
+117,geonames.2409306,Freetown,SL,Africa/Freetown,8.48714,-13.2356,802639,country-leader,2024-01-18
+118,geonames.287286,Muscat,OM,Asia/Muscat,23.58413,58.40778,797000,country-leader,2019-09-05
+119,geonames.425378,Bujumbura,BI,Africa/Bujumbura,-3.38193,29.36142,769317,country-leader,2026-04-13
+120,geonames.456172,Riga,LV,Europe/Riga,56.946,24.10589,742572,country-leader,2019-09-05
+121,geonames.3191281,Sarajevo,BA,Europe/Sarajevo,43.84864,18.35644,696731,country-leader,2019-09-05
+122,geonames.2464470,Tunis,TN,Africa/Tunis,36.81897,10.16579,693210,country-leader,2026-02-23
+123,geonames.1221874,Dushanbe,TJ,Asia/Dushanbe,38.53575,68.77905,679400,country-leader,2016-10-19
+124,geonames.2394819,Cotonou,BJ,Africa/Porto-Novo,6.36536,2.41833,679012,country-leader,2023-11-29
+125,geonames.264371,Athens,GR,Europe/Athens,37.98376,23.72784,664046,country-leader,2026-03-11
+126,geonames.3186886,Zagreb,HR,Europe/Zagreb,45.81444,15.97798,663592,country-leader,2023-11-25
+127,geonames.658225,Helsinki,FI,Europe/Helsinki,60.16952,24.93545,658864,country-leader,2023-02-13
+128,geonames.1821274,Macau,MO,Asia/Macau,22.20056,113.54611,649335,country-leader,2024-08-27
+129,geonames.1248991,Colombo,LK,Asia/Colombo,6.93548,79.84868,648034,country-leader,2019-09-05
+130,geonames.285839,Al Aḩmadī,KW,Asia/Kuwait,29.07694,48.08389,637411,country-leader,2026-04-14
+131,geonames.618426,Chisinau,MD,Europe/Chisinau,47.00902,28.85938,635994,country-leader,2025-06-12
+132,geonames.223817,Djibouti,DJ,Africa/Djibouti,11.58901,43.14503,626512,country-leader,2023-11-29
+133,geonames.343300,Asmara,ER,Africa/Asmara,15.33805,38.93184,563930,country-leader,2021-03-10
+134,geonames.786714,Pristina,XK,Europe/Belgrade,42.67272,21.16688,550000,country-leader,2022-09-14
+135,geonames.593116,Vilnius,LT,Europe/Vilnius,54.68916,25.2798,542366,country-leader,2021-07-25
+136,geonames.3583361,San Salvador,SV,America/El_Salvador,13.68935,-89.18718,525990,country-leader,2019-09-05
+137,geonames.2267057,Lisbon,PT,Europe/Lisbon,38.72509,-9.1498,517802,country-leader,2026-02-23
+138,geonames.785842,Skopje,MK,Europe/Skopje,41.99646,21.43141,474889,country-leader,2019-10-04
+139,geonames.373303,Juba,SS,Africa/Juba,4.85165,31.58247,450000,country-leader,2020-07-12
+140,geonames.2374775,Bissau,GW,Africa/Bissau,11.86357,-15.59767,439704,country-leader,2024-09-05
+141,geonames.7303419,East Jerusalem,PS,Asia/Hebron,31.78336,35.23388,428304,country-leader,2025-09-23
+142,geonames.3060972,Bratislava,SK,Europe/Bratislava,48.14816,17.10674,423737,country-leader,2026-01-18
+143,geonames.3183875,Tirana,AL,Europe/Tirane,41.32744,19.81866,418495,country-leader,2026-06-05
+144,geonames.4568127,San Juan,PR,America/Puerto_Rico,18.46633,-66.10572,418140,country-leader,2019-09-05
+145,geonames.2657896,Zürich,CH,Europe/Zurich,47.36667,8.55,415367,country-leader,2026-04-13
+146,geonames.3703443,Panama City,PA,America/Panama,8.9936,-79.51973,408168,country-leader,2026-05-01
+147,geonames.588409,Tallinn,EE,Europe/Tallinn,59.43696,24.75353,394024,country-leader,2026-02-23
+148,geonames.3352136,Windhoek,NA,Africa/Windhoek,-22.55941,17.08323,386219,country-leader,2024-01-18
+149,geonames.932505,Maseru,LS,Africa/Maseru,-29.31667,27.48333,359753,country-leader,2023-12-21
+150,geonames.290030,Doha,QA,Asia/Qatar,25.28545,51.53096,344939,country-leader,2022-11-15
+151,geonames.2411989,Serekunda,GM,Africa/Banjul,13.43833,-16.67806,340000,country-leader,2017-11-20
+152,geonames.3621849,San José,CR,America/Costa_Rica,9.93388,-84.08489,335007,country-leader,2025-05-15
+153,geonames.2088122,Port Moresby,PG,Pacific/Port_Moresby,-9.47723,147.15089,283733,country-leader,2022-03-06
+154,geonames.3196359,Ljubljana,SI,Europe/Ljubljana,46.05108,14.50513,272220,country-leader,2019-09-05
+155,geonames.933773,Gaborone,BW,Africa/Gaborone,-24.65451,25.90859,246325,country-leader,2023-11-29
+156,geonames.3193044,Podgorica,ME,Europe/Podgorica,42.44124,19.26309,236852,country-leader,2025-06-12
+157,geonames.3378644,Georgetown,GY,America/Guyana,6.80448,-58.15527,235017,country-leader,2021-08-01
+158,geonames.3571824,Nassau,BS,America/Nassau,25.05823,-77.34306,227940,country-leader,2019-09-05
+159,geonames.3383330,Paramaribo,SR,America/Paramaribo,5.86638,-55.16682,223757,country-leader,2019-09-05
+160,geonames.146268,Nicosia,CY,Asia/Nicosia,35.17284,33.35397,200452,country-leader,2025-06-12
+161,geonames.2462881,Laayoune,EH,Africa/El_Aaiun,27.1418,-13.18797,196331,country-leader,2026-04-08
+162,geonames.290332,Al Muharraq,BH,Asia/Bahrain,26.25722,50.61194,176583,country-leader,2025-11-13
+163,geonames.2310046,Bata,GQ,Africa/Malabo,1.86391,9.76582,173046,country-leader,2019-09-05
+164,geonames.934154,Port Louis,MU,Indian/Mauritius,-20.16194,57.49889,155226,country-leader,2019-09-05
+165,geonames.935264,Saint-Denis,RE,Indian/Reunion,-20.88231,55.4504,154765,country-leader,2024-01-18
+166,geonames.1645457,Dili,TL,Asia/Dili,-8.55861,125.57361,150000,country-leader,2019-09-05
+167,geonames.3374333,Praia,CV,Atlantic/Cape_Verde,14.93152,-23.51254,137868,country-leader,2026-07-01
+168,geonames.3513090,Willemstad,CW,America/Curacao,12.12246,-68.88641,125000,country-leader,2024-01-10
+169,geonames.3413829,Reykjavík,IS,Atlantic/Reykjavik,64.13548,-21.89541,118918,country-leader,2025-05-08
+170,geonames.934995,Manzini,SZ,Africa/Mbabane,-26.49884,31.38004,110537,country-leader,2026-04-14
+171,geonames.1282027,Male,MV,Indian/Maldives,4.17521,73.50916,103693,country-leader,2025-08-06
+172,geonames.1252416,Thimphu,BT,Asia/Thimphu,27.46609,89.64191,98676,country-leader,2019-09-05
+173,geonames.3374036,Bridgetown,BB,America/Barbados,13.10732,-59.62021,98511,country-leader,2021-08-08
+174,geonames.2139521,Nouméa,NC,Pacific/Noumea,-22.27407,166.44884,93060,country-leader,2017-07-27
+175,geonames.8740209,Nasinu,FJ,Pacific/Fiji,-18.07051,178.51313,92043,country-leader,2023-02-14
+176,geonames.3570675,Fort-de-France,MQ,America/Martinique,14.60365,-61.07418,89995,country-leader,2025-04-28
+177,geonames.2960316,Luxembourg,LU,Europe/Luxembourg,49.60982,6.13268,76684,country-leader,2025-06-20
+178,geonames.921772,Moroni,KM,Indian/Comoro,-11.70216,43.25506,74749,country-leader,2023-11-29
+179,geonames.3574810,Chaguanas,TT,America/Port_of_Spain,10.51667,-61.41667,67433,country-leader,2026-04-14
+180,geonames.3582677,Belize City,BZ,America/Belize,17.49952,-88.19756,65222,country-leader,2026-04-13
+181,geonames.1820906,Bandar Seri Begawan,BN,Asia/Brunei,4.89035,114.94006,64409,country-leader,2019-09-05
+182,geonames.3382160,Cayenne,GF,America/Cayenne,4.9381,-52.33455,61550,country-leader,2024-11-27
+183,geonames.2108502,Honiara,SB,Pacific/Guadalcanal,-9.43333,159.95,56298,country-leader,2025-10-04
+184,geonames.921815,Mamoudzou,YT,Indian/Mayotte,-12.78234,45.22878,54831,country-leader,2023-02-01
+185,geonames.3578959,Les Abymes,GP,America/Guadeloupe,16.273,-61.50507,53514,country-leader,2022-12-23
+186,geonames.2410763,São Tomé,ST,Africa/Sao_Tome,0.33756,6.7299,53300,country-leader,2025-01-07
+187,geonames.3576022,Saint John’s,AG,America/Antigua,17.12096,-61.84329,51737,country-leader,2026-02-02
+188,geonames.4796512,Saint Croix,VI,America/St_Thomas,17.72751,-64.74698,50601,country-leader,2026-04-14
+189,geonames.7828758,Saipan,MP,Pacific/Saipan,15.21233,145.7545,48220,country-leader,2017-12-07
+190,geonames.4043909,Dededo Village,GU,Pacific/Guam,13.51777,144.8391,44943,country-leader,2013-07-07
+191,geonames.4035413,Apia,WS,Pacific/Apia,-13.83333,-171.76666,40407,country-leader,2019-09-05
+192,geonames.2110257,Tarawa,KI,Pacific/Tarawa,1.3278,172.97696,40311,country-leader,2025-05-08
+193,geonames.2135171,Port-Vila,VU,Pacific/Efate,-17.73648,168.31366,35901,country-leader,2025-05-08
+194,geonames.2993458,Monaco,MC,Europe/Monaco,43.73718,7.42145,32965,country-leader,2025-12-13
+195,geonames.2562541,San Pawl il-Baħar,MT,Europe/Malta,35.95064,14.41561,32042,country-leader,2026-04-14
+196,geonames.3577154,Oranjestad,AW,America/Aruba,12.52398,-70.02703,29998,country-leader,2024-01-10
+197,geonames.4034561,Faaa,PF,Pacific/Tahiti,-17.55933,-149.60352,29851,country-leader,2024-06-04
+198,geonames.3580661,George Town,KY,America/Cayman,19.2866,-81.37436,29370,country-leader,2021-08-01
+199,geonames.3042091,Saint Helier,JE,Europe/Jersey,49.18804,-2.10491,28000,country-leader,2021-08-01
+200,geonames.2411585,Gibraltar,GI,Europe/Gibraltar,36.14474,-5.35257,26544,country-leader,2024-09-05
+201,geonames.3042237,Douglas,IM,Europe/Isle_of_Man,54.15,-4.48333,26218,country-leader,2021-08-01
+202,geonames.2113779,Majuro,MH,Pacific/Majuro,7.08971,171.38027,25400,country-leader,2025-05-08
+203,geonames.3576686,Gros Islet,LC,America/St_Lucia,14.06667,-60.95,25210,country-leader,2026-04-14
+204,geonames.3577887,Kingstown,VC,America/St_Vincent,13.15527,-61.22742,24518,country-leader,2019-09-05
+205,geonames.11703857,Providenciales,TC,America/Grand_Turk,21.78254,-72.25206,23769,country-leader,2025-05-25
+206,geonames.241131,Victoria,SC,Indian/Mahe,-4.62001,55.45501,22881,country-leader,2019-09-05
+207,geonames.4032402,Nuku‘alofa,TO,Pacific/Tongatapu,-21.13683,-175.20114,22400,country-leader,2025-05-08
+208,geonames.3041563,Andorra la Vella,AD,Europe/Andorra,42.50779,1.52109,20430,country-leader,2020-03-03
+209,geonames.3575635,Roseau,DM,America/Dominica,15.30174,-61.38808,16571,country-leader,2023-09-05
+210,geonames.3042287,Saint Peter Port,GG,Europe/Guernsey,49.45981,-2.53527,16488,country-leader,2019-09-05
+211,geonames.3421319,Nuuk,GL,America/Nuuk,64.18347,-51.72157,14798,country-leader,2024-01-07
+212,geonames.4035715,Avarua,CK,Pacific/Rarotonga,-21.2075,-159.77546,13373,country-leader,2023-11-08
+213,geonames.2611396,Tórshavn,FO,Atlantic/Faroe,62.00973,-6.77164,13200,country-leader,2024-01-07
+214,geonames.3575551,Basseterre,KN,America/St_Kitts,17.2955,-62.72499,12920,country-leader,2019-09-05
+215,geonames.5881576,Pago Pago,AS,Pacific/Pago_Pago,-14.27806,-170.7025,11500,country-leader,2019-09-05
+216,geonames.3041732,Mariehamn,AX,Europe/Mariehamn,60.09726,19.93481,10682,country-leader,2024-01-07
+217,geonames.3513563,Kralendijk,BQ,America/Kralendijk,12.15,-68.26667,10620,country-leader,2025-05-02
+218,geonames.3577430,Road Town,VG,America/Tortola,18.42693,-64.62079,8449,country-leader,2019-09-05
+219,geonames.3579925,Saint George's,GD,America/Grenada,12.05288,-61.75226,7500,country-leader,2021-02-20
+220,geonames.2081986,Palikir,FM,Pacific/Pohnpei,6.92477,158.16109,6942,country-leader,2025-12-03
+221,geonames.2110394,Funafuti,TV,Pacific/Funafuti,-8.52425,179.19417,6320,country-leader,2025-08-02
+222,geonames.3424934,Saint-Pierre,PM,America/Miquelon,46.77914,-56.1773,6200,country-leader,2025-01-05
+223,geonames.3579132,Gustavia,BL,America/St_Barthelemy,17.89618,-62.84978,5988,country-leader,2019-09-05
+224,geonames.3578851,Marigot,MF,America/Marigot,18.06819,-63.08302,5700,country-leader,2019-09-05
+225,geonames.3042030,Vaduz,LI,Europe/Vaduz,47.14151,9.52154,5197,country-leader,2013-04-02
+226,geonames.3168070,San Marino,SM,Europe/San_Marino,43.93667,12.44639,4500,country-leader,2023-08-07
+227,geonames.2729907,Longyearbyen,SJ,Arctic/Longyearbyen,78.22334,15.64689,2368,country-leader,2022-01-04
+228,geonames.3426691,Stanley,FK,Atlantic/Stanley,-51.69382,-57.85701,2213,country-leader,2023-10-26
+229,geonames.3573374,The Valley,AI,America/Anguilla,18.21704,-63.05783,2035,country-leader,2019-09-05
+230,geonames.3513392,Philipsburg,SX,America/Lower_Princes,18.026,-63.04582,1400,country-leader,2019-09-05
+231,geonames.4034821,Mata-Utu,WF,Pacific/Wallis,-13.28163,-176.17453,1200,country-leader,2019-09-05
+232,geonames.7626461,Yaren,NR,Pacific/Nauru,-0.55085,166.9252,1100,country-leader,2016-10-03
+233,geonames.7266440,Brades,MS,America/Montserrat,16.79183,-62.21058,1000,country-leader,2024-11-13
+234,geonames.3573197,Hamilton,BM,Atlantic/Bermuda,32.2949,-64.78303,902,country-leader,2019-09-05
+235,geonames.2161314,Kingston,NF,Pacific/Norfolk,-29.05459,167.96628,880,country-leader,2014-08-18
+236,geonames.6691831,Vatican City,VA,Europe/Vatican,41.90268,12.45414,829,country-leader,2026-02-25
+237,geonames.3370903,Jamestown,SH,Atlantic/St_Helena,-15.92488,-5.71816,637,country-leader,2024-03-04
+238,geonames.4036284,Alofi,NU,Pacific/Niue,-19.05294,-169.91957,624,country-leader,2026-02-14
+239,geonames.2078127,Flying Fish Cove,CX,Indian/Christmas,-10.42172,105.67912,500,country-leader,2019-09-05
+240,geonames.7304591,West Island,CC,Indian/Cocos,-12.15681,96.82251,120,country-leader,2026-03-24
+241,geonames.4030723,Adamstown,PN,Pacific/Pitcairn,-25.06597,-130.10147,46,country-leader,2021-08-27
+242,geonames.1546102,Port-aux-Français,TF,Indian/Kerguelen,-49.34916,70.21937,45,country-leader,2018-08-17
+243,geonames.3426466,Grytviken,GS,Atlantic/South_Georgia,-54.28111,-36.5092,2,country-leader,2018-07-15
+244,geonames.8063361,Ngerulmud,PW,Pacific/Palau,7.50077,134.6238,0,country-leader,2026-05-01
+245,geonames.1816670,Beijing,CN,Asia/Shanghai,39.9075,116.39723,18960744,global-fill,2025-12-15
+246,geonames.1795565,Shenzhen,CN,Asia/Shanghai,22.54554,114.0683,17494398,global-fill,2025-10-22
+247,geonames.1809858,Guangzhou,CN,Asia/Shanghai,23.11667,113.25,16096724,global-fill,2026-04-13
+248,geonames.1815286,Chengdu,CN,Asia/Shanghai,30.66667,104.06667,13568357,global-fill,2026-04-13
+249,geonames.1174872,Karachi,PK,Asia/Karachi,24.8608,67.0104,11624219,global-fill,2026-04-14
+250,geonames.1792947,Tianjin,CN,Asia/Shanghai,39.14222,117.17667,11090314,global-fill,2026-04-13

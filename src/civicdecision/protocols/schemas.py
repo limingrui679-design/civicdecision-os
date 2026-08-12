@@ -1,4 +1,4 @@
-"""Generate the three stable public JSON Schemas."""
+"""Generate stable public protocol and semantic JSON Schemas."""
 
 from __future__ import annotations
 
@@ -10,11 +10,17 @@ from pydantic import BaseModel
 from civicdecision.protocols.city import CityAdapterManifest
 from civicdecision.protocols.decision import DecisionPack
 from civicdecision.protocols.scenario import PolicyScenario
+from civicdecision.semantic.city_catalog import GlobalCityCatalog
+from civicdecision.semantic.core import SemanticBundle
+from civicdecision.semantic.graph import UrbanGraphBundle
 
 SCHEMAS: dict[str, type[BaseModel]] = {
     "city-adapter.schema.json": CityAdapterManifest,
     "policy-scenario.schema.json": PolicyScenario,
     "decision-pack.schema.json": DecisionPack,
+    "global-city-catalog.schema.json": GlobalCityCatalog,
+    "semantic-bundle.schema.json": SemanticBundle,
+    "urban-graph.schema.json": UrbanGraphBundle,
 }
 
 

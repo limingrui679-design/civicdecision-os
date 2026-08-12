@@ -1,0 +1,220 @@
+{
+  "$defs": {
+    "EvidenceType": {
+      "enum": [
+        "observed",
+        "estimated",
+        "causal",
+        "simulated",
+        "optimized",
+        "proposed"
+      ],
+      "title": "EvidenceType",
+      "type": "string"
+    },
+    "JsonValue": {},
+    "UrbanEdge": {
+      "additionalProperties": false,
+      "properties": {
+        "attributes": {
+          "additionalProperties": {
+            "$ref": "#/$defs/JsonValue"
+          },
+          "title": "Attributes",
+          "type": "object"
+        },
+        "directed": {
+          "default": true,
+          "title": "Directed",
+          "type": "boolean"
+        },
+        "evidence_type": {
+          "$ref": "#/$defs/EvidenceType"
+        },
+        "id": {
+          "pattern": "^[a-z0-9]+(?:[._-][a-z0-9]+)*$",
+          "title": "Id",
+          "type": "string"
+        },
+        "kind": {
+          "$ref": "#/$defs/UrbanEdgeKind"
+        },
+        "limitations": {
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1,
+          "title": "Limitations",
+          "type": "array"
+        },
+        "source_node_id": {
+          "pattern": "^[a-z0-9]+(?:[._-][a-z0-9]+)*$",
+          "title": "Source Node Id",
+          "type": "string"
+        },
+        "source_refs": {
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1,
+          "title": "Source Refs",
+          "type": "array"
+        },
+        "target_node_id": {
+          "pattern": "^[a-z0-9]+(?:[._-][a-z0-9]+)*$",
+          "title": "Target Node Id",
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "kind",
+        "source_node_id",
+        "target_node_id",
+        "evidence_type",
+        "source_refs",
+        "limitations"
+      ],
+      "title": "UrbanEdge",
+      "type": "object"
+    },
+    "UrbanEdgeKind": {
+      "enum": [
+        "located-in",
+        "connected-to",
+        "serves",
+        "exposed-to",
+        "affects",
+        "measured-by",
+        "derived-from",
+        "candidate-for"
+      ],
+      "title": "UrbanEdgeKind",
+      "type": "string"
+    },
+    "UrbanNode": {
+      "additionalProperties": false,
+      "properties": {
+        "attributes": {
+          "additionalProperties": {
+            "$ref": "#/$defs/JsonValue"
+          },
+          "title": "Attributes",
+          "type": "object"
+        },
+        "id": {
+          "pattern": "^[a-z0-9]+(?:[._-][a-z0-9]+)*$",
+          "title": "Id",
+          "type": "string"
+        },
+        "kind": {
+          "$ref": "#/$defs/UrbanNodeKind"
+        },
+        "label": {
+          "minLength": 1,
+          "title": "Label",
+          "type": "string"
+        },
+        "limitations": {
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1,
+          "title": "Limitations",
+          "type": "array"
+        },
+        "source_refs": {
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1,
+          "title": "Source Refs",
+          "type": "array"
+        }
+      },
+      "required": [
+        "id",
+        "kind",
+        "label",
+        "source_refs",
+        "limitations"
+      ],
+      "title": "UrbanNode",
+      "type": "object"
+    },
+    "UrbanNodeKind": {
+      "enum": [
+        "country-or-territory",
+        "city",
+        "administrative-area",
+        "facility",
+        "network",
+        "event",
+        "measure",
+        "population-group",
+        "policy",
+        "asset"
+      ],
+      "title": "UrbanNodeKind",
+      "type": "string"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "created_at": {
+      "format": "date-time",
+      "title": "Created At",
+      "type": "string"
+    },
+    "edges": {
+      "items": {
+        "$ref": "#/$defs/UrbanEdge"
+      },
+      "title": "Edges",
+      "type": "array"
+    },
+    "graph_id": {
+      "pattern": "^[a-z0-9]+(?:[._-][a-z0-9]+)*$",
+      "title": "Graph Id",
+      "type": "string"
+    },
+    "limitations": {
+      "items": {
+        "type": "string"
+      },
+      "minItems": 1,
+      "title": "Limitations",
+      "type": "array"
+    },
+    "nodes": {
+      "items": {
+        "$ref": "#/$defs/UrbanNode"
+      },
+      "minItems": 1,
+      "title": "Nodes",
+      "type": "array"
+    },
+    "schema_version": {
+      "default": "1.0.0",
+      "title": "Schema Version",
+      "type": "string"
+    },
+    "source_hashes": {
+      "items": {
+        "type": "string"
+      },
+      "minItems": 1,
+      "title": "Source Hashes",
+      "type": "array"
+    }
+  },
+  "required": [
+    "graph_id",
+    "created_at",
+    "nodes",
+    "source_hashes",
+    "limitations"
+  ],
+  "title": "UrbanGraphBundle",
+  "type": "object"
+}

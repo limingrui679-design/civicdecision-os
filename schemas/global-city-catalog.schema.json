@@ -1,0 +1,342 @@
+{
+  "$defs": {
+    "Coordinate": {
+      "additionalProperties": false,
+      "properties": {
+        "latitude": {
+          "maximum": 90,
+          "minimum": -90,
+          "title": "Latitude",
+          "type": "number"
+        },
+        "longitude": {
+          "maximum": 180,
+          "minimum": -180,
+          "title": "Longitude",
+          "type": "number"
+        }
+      },
+      "required": [
+        "latitude",
+        "longitude"
+      ],
+      "title": "Coordinate",
+      "type": "object"
+    },
+    "GlobalCityCatalogEntry": {
+      "additionalProperties": false,
+      "properties": {
+        "admin1_code": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Admin1 Code"
+        },
+        "ascii_name": {
+          "minLength": 1,
+          "title": "Ascii Name",
+          "type": "string"
+        },
+        "city_id": {
+          "pattern": "^[a-z0-9]+(?:[._-][a-z0-9]+)*$",
+          "title": "City Id",
+          "type": "string"
+        },
+        "country_code": {
+          "pattern": "^[A-Z]{2}$",
+          "title": "Country Code",
+          "type": "string"
+        },
+        "feature_code": {
+          "minLength": 1,
+          "title": "Feature Code",
+          "type": "string"
+        },
+        "geoname_id": {
+          "exclusiveMinimum": 0,
+          "title": "Geoname Id",
+          "type": "integer"
+        },
+        "limitations": {
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1,
+          "title": "Limitations",
+          "type": "array"
+        },
+        "location": {
+          "$ref": "#/$defs/Coordinate"
+        },
+        "name": {
+          "minLength": 1,
+          "title": "Name",
+          "type": "string"
+        },
+        "selection_basis": {
+          "enum": [
+            "country-leader",
+            "global-fill"
+          ],
+          "title": "Selection Basis",
+          "type": "string"
+        },
+        "selection_rank": {
+          "minimum": 1,
+          "title": "Selection Rank",
+          "type": "integer"
+        },
+        "source_modification_date": {
+          "format": "date",
+          "title": "Source Modification Date",
+          "type": "string"
+        },
+        "source_population": {
+          "minimum": 0,
+          "title": "Source Population",
+          "type": "integer"
+        },
+        "source_ref": {
+          "minLength": 1,
+          "title": "Source Ref",
+          "type": "string"
+        },
+        "tier": {
+          "const": "G",
+          "default": "G",
+          "title": "Tier",
+          "type": "string"
+        },
+        "timezone": {
+          "title": "Timezone",
+          "type": "string"
+        }
+      },
+      "required": [
+        "city_id",
+        "selection_rank",
+        "selection_basis",
+        "geoname_id",
+        "name",
+        "ascii_name",
+        "country_code",
+        "location",
+        "timezone",
+        "source_population",
+        "feature_code",
+        "source_modification_date",
+        "source_ref",
+        "limitations"
+      ],
+      "title": "GlobalCityCatalogEntry",
+      "type": "object"
+    },
+    "JsonValue": {},
+    "SourceManifest": {
+      "additionalProperties": false,
+      "description": "Evidence required to identify and independently verify a downloaded artifact.",
+      "properties": {
+        "artifact_id": {
+          "pattern": "^[a-z0-9]+(?:[._-][a-z0-9]+)*$",
+          "title": "Artifact Id",
+          "type": "string"
+        },
+        "artifact_path": {
+          "minLength": 1,
+          "title": "Artifact Path",
+          "type": "string"
+        },
+        "content_hash": {
+          "title": "Content Hash",
+          "type": "string"
+        },
+        "data_url": {
+          "format": "uri",
+          "minLength": 1,
+          "title": "Data Url",
+          "type": "string"
+        },
+        "geographic_scope": {
+          "minLength": 1,
+          "title": "Geographic Scope",
+          "type": "string"
+        },
+        "landing_url": {
+          "format": "uri",
+          "minLength": 1,
+          "title": "Landing Url",
+          "type": "string"
+        },
+        "license": {
+          "minLength": 1,
+          "title": "License",
+          "type": "string"
+        },
+        "limitations": {
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1,
+          "title": "Limitations",
+          "type": "array"
+        },
+        "name": {
+          "minLength": 1,
+          "title": "Name",
+          "type": "string"
+        },
+        "publisher": {
+          "minLength": 1,
+          "title": "Publisher",
+          "type": "string"
+        },
+        "query": {
+          "additionalProperties": {
+            "$ref": "#/$defs/JsonValue"
+          },
+          "title": "Query",
+          "type": "object"
+        },
+        "record_count": {
+          "minimum": 0,
+          "title": "Record Count",
+          "type": "integer"
+        },
+        "response_headers": {
+          "additionalProperties": {
+            "type": "string"
+          },
+          "title": "Response Headers",
+          "type": "object"
+        },
+        "retrieved_at": {
+          "format": "date-time",
+          "title": "Retrieved At",
+          "type": "string"
+        },
+        "schema_fingerprint": {
+          "title": "Schema Fingerprint",
+          "type": "string"
+        },
+        "schema_version": {
+          "default": "1.0.0",
+          "title": "Schema Version",
+          "type": "string"
+        },
+        "source_id": {
+          "pattern": "^[a-z0-9]+(?:[._-][a-z0-9]+)*$",
+          "title": "Source Id",
+          "type": "string"
+        },
+        "temporal_scope": {
+          "minLength": 1,
+          "title": "Temporal Scope",
+          "type": "string"
+        },
+        "upstream_updated_at": {
+          "anyOf": [
+            {
+              "format": "date-time",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Upstream Updated At"
+        }
+      },
+      "required": [
+        "source_id",
+        "artifact_id",
+        "name",
+        "publisher",
+        "landing_url",
+        "data_url",
+        "license",
+        "retrieved_at",
+        "query",
+        "artifact_path",
+        "content_hash",
+        "record_count",
+        "schema_fingerprint",
+        "geographic_scope",
+        "temporal_scope",
+        "limitations"
+      ],
+      "title": "SourceManifest",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "catalog_id": {
+      "pattern": "^[a-z0-9]+(?:[._-][a-z0-9]+)*$",
+      "title": "Catalog Id",
+      "type": "string"
+    },
+    "cities": {
+      "items": {
+        "$ref": "#/$defs/GlobalCityCatalogEntry"
+      },
+      "minItems": 1,
+      "title": "Cities",
+      "type": "array"
+    },
+    "country_or_territory_count": {
+      "minimum": 1,
+      "title": "Country Or Territory Count",
+      "type": "integer"
+    },
+    "created_at": {
+      "format": "date-time",
+      "title": "Created At",
+      "type": "string"
+    },
+    "limitations": {
+      "items": {
+        "type": "string"
+      },
+      "minItems": 1,
+      "title": "Limitations",
+      "type": "array"
+    },
+    "schema_version": {
+      "default": "1.0.0",
+      "title": "Schema Version",
+      "type": "string"
+    },
+    "selection_algorithm": {
+      "minLength": 1,
+      "title": "Selection Algorithm",
+      "type": "string"
+    },
+    "source_manifest": {
+      "$ref": "#/$defs/SourceManifest"
+    },
+    "target_count": {
+      "minimum": 1,
+      "title": "Target Count",
+      "type": "integer"
+    }
+  },
+  "required": [
+    "catalog_id",
+    "created_at",
+    "source_manifest",
+    "target_count",
+    "country_or_territory_count",
+    "selection_algorithm",
+    "cities",
+    "limitations"
+  ],
+  "title": "GlobalCityCatalog",
+  "type": "object"
+}

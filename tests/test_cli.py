@@ -8,6 +8,7 @@ from typer.testing import CliRunner
 from civicdecision.cli import app
 from civicdecision.connectors.base import FetchResult
 from civicdecision.connectors.cdc_places import CDCPlacesConnector
+from civicdecision.connectors.geonames import GeoNamesCitiesConnector
 from civicdecision.connectors.usgs_earthquakes import USGSEarthquakeConnector
 from civicdecision.errors import ConnectorError
 from civicdecision.protocols.source import SourceManifest
@@ -25,7 +26,7 @@ def test_cli_version() -> None:
 def test_cli_builds_schemas(tmp_path: Path) -> None:
     result = runner.invoke(app, ["schemas", "build", "--output", str(tmp_path)])
     assert result.exit_code == 0
-    assert len(list(tmp_path.glob("*.schema.json"))) == 3
+    assert len(list(tmp_path.glob("*.schema.json"))) == 6
 
 
 @pytest.mark.parametrize(
@@ -106,6 +107,59 @@ def test_cli_fetches_cdc_with_injected_connector(
     )
     assert result.exit_code == 0
     assert "Fetched test-source" in result.output
+
+
+def test_cli_fetches_geonames_with_injected_connector(
+    tmp_path: Path, source_manifest: SourceManifest, monkeypatch: pytest.MonkeyPatch
+) -> None:
+    async def fake_fetch(self: GeoNamesCitiesConnector, query: object, output: Path) -> FetchResult:
+        return fake_fetch_result(tmp_path, source_manifest)
+
+    monkeypatch.setattr(GeoNamesCitiesConnector, "fetch", fake_fetch)
+    result = runner.invoke(
+        app,
+        ["sources", "geonames-cities", "--output", str(tmp_path)],
+    )
+    assert result.exit_code == 0
+    assert "Fetched test-source" in result.output
+
+
+def test_cli_builds_global_city_artifacts(tmp_path: Path) -> None:
+    manifest = ROOT / "examples/data/geonames/geonames-cities15000-98bc5fbd4deb.manifest.json"
+    output = tmp_path / "cities"
+    result = runner.invoke(
+        app,
+        [
+            "cities",
+            "build-global",
+            "--manifest",
+            str(manifest),
+            "--target-count",
+            "5",
+            "--output",
+            str(output),
+        ],
+    )
+    assert result.exit_code == 0
+    assert "Built global Tier-G city foundation" in result.output
+    assert "coverage matrix" in result.output
+    assert len(list(output.iterdir())) == 5
+
+
+def test_cli_global_city_failure_is_nonzero(tmp_path: Path) -> None:
+    result = runner.invoke(
+        app,
+        [
+            "cities",
+            "build-global",
+            "--manifest",
+            str(tmp_path / "missing.manifest.json"),
+            "--output",
+            str(tmp_path / "cities"),
+        ],
+    )
+    assert result.exit_code == 2
+    assert "city catalog failed safely" in result.output
 
 
 def test_cli_connector_failure_is_nonzero(tmp_path: Path, monkeypatch: pytest.MonkeyPatch) -> None:

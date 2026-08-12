@@ -1,0 +1,34 @@
+{
+  "artifact_id": "geonames-cities15000-98bc5fbd4deb",
+  "artifact_path": "geonames-cities15000-98bc5fbd4deb.zip",
+  "content_hash": "sha256:60c00392b1ff827b11838ebd037634bd06a452c4e161dc91678e03f316b287e7",
+  "data_url": "https://download.geonames.org/export/dump/cities15000.zip",
+  "geographic_scope": "Worldwide populated places in the cities15000 extract",
+  "landing_url": "https://download.geonames.org/export/dump/",
+  "license": "Creative Commons Attribution 4.0; attribution to GeoNames required",
+  "limitations": [
+    "GeoNames aggregates many sources and provides no warranty of accuracy or completeness.",
+    "Population and administrative attributes may use different source years or definitions.",
+    "The gazetteer contains points, not official municipal boundaries or service areas."
+  ],
+  "name": "GeoNames cities15000 gazetteer extract",
+  "publisher": "GeoNames",
+  "query": {
+    "dataset": "cities15000",
+    "max_compressed_bytes": 10000000,
+    "max_uncompressed_bytes": 25000000
+  },
+  "record_count": 34086,
+  "response_headers": {
+    "content-length": "3305810",
+    "content-type": "application/zip",
+    "etag": "\"327152-658d00dc66457\"",
+    "last-modified": "Wed, 12 Aug 2026 02:07:47 GMT"
+  },
+  "retrieved_at": "2026-08-12T09:50:52.090093Z",
+  "schema_fingerprint": "sha256:d74b2a02aa96673bb28b96960fdd28d274515c42abbaca9c7f8f1ae909c31077",
+  "schema_version": "1.0.0",
+  "source_id": "geonames-cities15000",
+  "temporal_scope": "Current GeoNames extract as of the recorded modification/retrieval time",
+  "upstream_updated_at": "2026-08-12T02:07:47Z"
+}

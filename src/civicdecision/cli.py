@@ -20,6 +20,7 @@ from civicdecision.connectors.eurostat import (
     EurostatStatisticsConnector,
     EurostatStatisticsQuery,
 )
+from civicdecision.connectors.geonames import GeoNamesCitiesConnector, GeoNamesCitiesQuery
 from civicdecision.connectors.nasa_power import (
     NASAPowerDailyConnector,
     NASAPowerDailyQuery,
@@ -52,16 +53,22 @@ from civicdecision.protocols.decision import DecisionPack
 from civicdecision.protocols.scenario import PolicyScenario
 from civicdecision.protocols.schemas import build_schemas
 from civicdecision.protocols.source import SourceManifest
+from civicdecision.semantic.city_catalog import (
+    build_global_city_catalog,
+    write_catalog_artifacts,
+)
 
 app = typer.Typer(no_args_is_help=True, pretty_exceptions_show_locals=False)
 schemas_app = typer.Typer(no_args_is_help=True)
 protocol_app = typer.Typer(no_args_is_help=True)
 sources_app = typer.Typer(no_args_is_help=True)
 demo_app = typer.Typer(no_args_is_help=True)
+cities_app = typer.Typer(no_args_is_help=True)
 app.add_typer(schemas_app, name="schemas")
 app.add_typer(protocol_app, name="protocol")
 app.add_typer(sources_app, name="sources")
 app.add_typer(demo_app, name="demo")
+app.add_typer(cities_app, name="cities")
 console = Console()
 
 
@@ -114,7 +121,7 @@ def version() -> None:
 def schemas_build(
     output: Annotated[Path, typer.Option("--output", "-o")] = Path("schemas"),
 ) -> None:
-    """Generate the three deterministic public JSON Schemas."""
+    """Generate deterministic public protocol and semantic JSON Schemas."""
 
     for path in build_schemas(output):
         console.print(f"created {path}")
@@ -427,6 +434,53 @@ def fetch_nyc_311(
         result.manifest.record_count,
         result.manifest.content_hash,
     )
+
+
+@sources_app.command("geonames-cities")
+def fetch_geonames_cities(
+    output: Annotated[Path, typer.Option("--output", "-o")] = Path("data/raw/geonames"),
+) -> None:
+    """Fetch and safety-check the GeoNames cities15000 ZIP extract."""
+
+    try:
+        result = asyncio.run(GeoNamesCitiesConnector().fetch(GeoNamesCitiesQuery(), output))
+    except (CivicDecisionError, ValueError) as exc:
+        console.print(f"[red]fetch failed safely[/red] {exc}")
+        raise typer.Exit(code=2) from exc
+    _print_fetch(
+        result.manifest.source_id,
+        result.artifact_path,
+        result.manifest_path,
+        result.manifest.record_count,
+        result.manifest.content_hash,
+    )
+
+
+@cities_app.command("build-global")
+def cities_build_global(
+    manifest: Annotated[Path, typer.Option("--manifest")],
+    target: Annotated[int, typer.Option("--target-count")] = 250,
+    output: Annotated[Path, typer.Option("--output", "-o")] = Path("catalog/global-cities"),
+) -> None:
+    """Build deterministic Tier-G catalog, semantic bundle, and seed graph."""
+
+    try:
+        catalog = build_global_city_catalog(manifest, target)
+        artifacts = write_catalog_artifacts(catalog, output)
+    except CivicDecisionError as exc:
+        console.print(f"[red]city catalog failed safely[/red] {exc}")
+        raise typer.Exit(code=2) from exc
+    table = Table(title="Built global Tier-G city foundation")
+    table.add_column("Field")
+    table.add_column("Value")
+    table.add_row("cities", str(len(catalog.cities)))
+    table.add_row("country/territory codes", str(catalog.country_or_territory_count))
+    table.add_row("catalog", str(artifacts.catalog_path))
+    table.add_row("coverage matrix", str(artifacts.coverage_matrix_path))
+    table.add_row("semantic bundle", str(artifacts.semantic_bundle_path))
+    table.add_row("seed graph", str(artifacts.graph_path))
+    table.add_row("content hash", catalog.content_hash())
+    console.print(table)
 
 
 @demo_app.command("heat-access")

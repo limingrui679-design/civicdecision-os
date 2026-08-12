@@ -39,6 +39,18 @@ Three versioned public contracts prevent hidden coupling:
 
 Extra fields are rejected at protocol boundaries so schema drift cannot pass silently.
 
+### 2a. Semantic and graph layer
+
+The semantic contract normalizes geography, time intervals, measure definitions, observations,
+facilities, and events while retaining source references and limitations. It rejects duplicate
+identifiers, missing parent geographies, missing observation measures, missing facility/event
+geographies, unsupported evidence upgrades, and estimated observations without a method.
+
+The graph contract represents evidence-typed urban nodes and edges. It rejects duplicate node or
+edge identifiers, dangling endpoints, and causal or optimized labels on source relationships. The
+current Tier-G seed graph contains only observed city-to-country gazetteer relationships; it is a
+contract and identity foundation, not yet a routing or behavioral network.
+
 ### 3. Analytical layer
 
 Each engine consumes typed semantic inputs and returns evidence items with the weakest accurate
@@ -85,6 +97,7 @@ a temporary directory and requires byte-for-byte equality with committed artifac
 
 ## Current limits
 
-The current milestone does not yet implement the global city catalog, semantic knowledge graph,
+The current milestone implements a 250-point global catalog and a small semantic seed graph, not
+250 standardized adapters or official municipal geometries. It does not yet implement production
 network routing, forecasting, causal identification, large-scale simulation, API, web UI, hosted
 demo, production security controls, external review, real users, or policy impact.

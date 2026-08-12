@@ -496,7 +496,7 @@ async def test_new_connectors_wrap_http_and_json_failures(tmp_path: Path, fetche
 
 def test_connector_registry_is_unique_loadable_and_deterministic() -> None:
     ids = [item.id for item in CONNECTOR_REGISTRY]
-    assert len(ids) == 7
+    assert len(ids) == 8
     assert len(ids) == len(set(ids))
     assert json.loads(registry_json())[0]["id"] == ids[0]
     assert connector_descriptor("nasa-power-daily-point").scope.value == "global"

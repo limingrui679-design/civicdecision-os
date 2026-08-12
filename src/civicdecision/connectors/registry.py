@@ -16,6 +16,7 @@ class ConnectorFamily(StrEnum):
     CLIMATE = "climate"
     DEMOGRAPHY = "demography"
     DISASTER = "disaster"
+    GEOGRAPHY = "geography"
     HEALTH = "health"
     PUBLIC_SERVICE = "public-service"
     SEISMIC = "seismic"
@@ -91,6 +92,21 @@ CONNECTOR_REGISTRY = (
         license_summary="Free reuse with attribution; dataset and third-party exceptions apply",
         record_semantics="Non-null JSON-stat observation cells with explicit dimensions",
         primary_limitations=["The API exposes latest data and does not version past snapshots."],
+    ),
+    ConnectorDescriptor(
+        id="geonames-cities15000",
+        name="GeoNames cities15000 gazetteer extract",
+        family=ConnectorFamily.GEOGRAPHY,
+        scope=ConnectorScope.GLOBAL,
+        publisher="GeoNames",
+        module="civicdecision.connectors.geonames",
+        class_name="GeoNamesCitiesConnector",
+        documentation_url=AnyHttpUrl("https://download.geonames.org/export/dump/"),
+        authentication="No key for the downloadable gazetteer extract.",
+        paging_or_bound="One fixed ZIP with compressed/uncompressed size and member-path gates",
+        license_summary="Creative Commons Attribution 4.0; GeoNames attribution required",
+        record_semantics="One populated-place gazetteer point per tab-delimited row",
+        primary_limitations=["Points are not official city boundaries; source attributes vary."],
     ),
     ConnectorDescriptor(
         id="nasa-power-daily-point",

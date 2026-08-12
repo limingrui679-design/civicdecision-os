@@ -34,6 +34,23 @@
     "scope": "multinational"
   },
   {
+    "authentication": "No key for the downloadable gazetteer extract.",
+    "class_name": "GeoNamesCitiesConnector",
+    "documentation_url": "https://download.geonames.org/export/dump/",
+    "family": "geography",
+    "id": "geonames-cities15000",
+    "license_summary": "Creative Commons Attribution 4.0; GeoNames attribution required",
+    "module": "civicdecision.connectors.geonames",
+    "name": "GeoNames cities15000 gazetteer extract",
+    "paging_or_bound": "One fixed ZIP with compressed/uncompressed size and member-path gates",
+    "primary_limitations": [
+      "Points are not official city boundaries; source attributes vary."
+    ],
+    "publisher": "GeoNames",
+    "record_semantics": "One populated-place gazetteer point per tab-delimited row",
+    "scope": "global"
+  },
+  {
     "authentication": "No key; requests must respect service and grid-rate guidance.",
     "class_name": "NASAPowerDailyConnector",
     "documentation_url": "https://power.larc.nasa.gov/docs/services/api/temporal/daily/",
