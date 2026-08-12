@@ -57,6 +57,7 @@ from civicdecision.semantic.city_catalog import (
     build_global_city_catalog,
     write_catalog_artifacts,
 )
+from civicdecision.standardized.build import build_tier_s_registry, write_tier_s_artifacts
 
 app = typer.Typer(no_args_is_help=True, pretty_exceptions_show_locals=False)
 schemas_app = typer.Typer(no_args_is_help=True)
@@ -480,6 +481,45 @@ def cities_build_global(
     table.add_row("semantic bundle", str(artifacts.semantic_bundle_path))
     table.add_row("seed graph", str(artifacts.graph_path))
     table.add_row("content hash", catalog.content_hash())
+    console.print(table)
+
+
+@cities_app.command("build-standardized")
+def cities_build_standardized(
+    catalog: Annotated[Path, typer.Option("--catalog")],
+    climate: Annotated[Path, typer.Option("--climate-directory")],
+    country_context: Annotated[Path, typer.Option("--country-context-directory")],
+    target: Annotated[int, typer.Option("--target-count")] = 30,
+    output: Annotated[Path, typer.Option("--output", "-o")] = Path("catalog/standardized-cities"),
+) -> None:
+    """Build strict Tier-S bundles and descriptive screening records."""
+
+    try:
+        registry, bundles = build_tier_s_registry(
+            catalog,
+            climate,
+            country_context,
+            target,
+        )
+        artifacts = write_tier_s_artifacts(registry, bundles, output)
+    except CivicDecisionError as exc:
+        console.print(f"[red]standardized city build failed safely[/red] {exc}")
+        raise typer.Exit(code=2) from exc
+    statuses: dict[str, int] = {}
+    for entry in registry.entries:
+        for status in entry.scenario_statuses:
+            statuses[status.value] = statuses.get(status.value, 0) + 1
+    table = Table(title="Built Tier-S standardized city foundation")
+    table.add_column("Field")
+    table.add_column("Value")
+    table.add_row("cities", str(len(registry.entries)))
+    table.add_row("scenario runs", str(len(artifacts.run_paths)))
+    table.add_row("scenario statuses", json.dumps(statuses, sort_keys=True))
+    table.add_row("registry", str(artifacts.registry_path))
+    table.add_row("coverage matrix", str(artifacts.coverage_matrix_path))
+    table.add_row("comparison CSV", str(artifacts.comparison_csv_path))
+    table.add_row("comparison report", str(artifacts.comparison_markdown_path))
+    table.add_row("content hash", registry.content_hash())
     console.print(table)
 
 

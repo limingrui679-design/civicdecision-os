@@ -1,0 +1,100 @@
+{
+  "analysis_mode": "descriptive",
+  "city_id": "geonames.160263",
+  "created_at": "2026-08-12T10:07:39.133117Z",
+  "decision_readiness": "descriptive-only",
+  "interpretation": "The run summarizes gridded precipitation and wind context but does not model inundation, damages, or service disruption.",
+  "limitations": [
+    "This is a standardized descriptive screen, not a forecast, causal result, simulation, optimization, or recommendation.",
+    "No municipal boundary, population exposure surface, asset inventory, service network, or local policy constraint is present."
+  ],
+  "metrics": [
+    {
+      "evidence_type": "estimated",
+      "geographic_scope": "gridded-point-near=(-6.82349,39.26951)",
+      "id": "climate-precipitation-annual-sum",
+      "limitations": [
+        "NASA POWER is a gridded analysis-ready product, not a station observation.",
+        "One point does not measure within-city microclimate or individual exposure."
+      ],
+      "method": "Direct summary of the named source series; no causal or municipal inference.",
+      "source_refs": [
+        "nasa-power-29a9bae0a416"
+      ],
+      "temporal_scope": "2024 sum of daily corrected precipitation",
+      "unit": "millimeters",
+      "value": 1759.65
+    },
+    {
+      "evidence_type": "estimated",
+      "geographic_scope": "gridded-point-near=(-6.82349,39.26951)",
+      "id": "climate-days-precipitation-ge-20mm",
+      "limitations": [
+        "NASA POWER is a gridded analysis-ready product, not a station observation.",
+        "One point does not measure within-city microclimate or individual exposure.",
+        "The 20-millimeter threshold is a transparent screen, not a flood model."
+      ],
+      "method": "Direct summary of the named source series; no causal or municipal inference.",
+      "source_refs": [
+        "nasa-power-29a9bae0a416"
+      ],
+      "temporal_scope": "2024 count using a declared 20 millimeters per day screening threshold",
+      "unit": "days",
+      "value": 18.0
+    },
+    {
+      "evidence_type": "estimated",
+      "geographic_scope": "gridded-point-near=(-6.82349,39.26951)",
+      "id": "climate-wind-speed-annual-mean",
+      "limitations": [
+        "NASA POWER is a gridded analysis-ready product, not a station observation.",
+        "One point does not measure within-city microclimate or individual exposure."
+      ],
+      "method": "Direct summary of the named source series; no causal or municipal inference.",
+      "source_refs": [
+        "nasa-power-29a9bae0a416"
+      ],
+      "temporal_scope": "2024 daily series summarized annually",
+      "unit": "meters per second",
+      "value": 4.800027
+    },
+    {
+      "evidence_type": "estimated",
+      "geographic_scope": "country-context=TZ",
+      "id": "country-sp-pop-totl",
+      "limitations": [
+        "This national aggregate is context only and must not be interpreted as a city value.",
+        "World Bank indicator definitions, revisions, and comparability limits apply."
+      ],
+      "method": "Direct summary of the named source series; no causal or municipal inference.",
+      "source_refs": [
+        "world-bank-388618048c6c"
+      ],
+      "temporal_scope": "2023",
+      "unit": "people",
+      "value": 66617606.0
+    }
+  ],
+  "proposed_follow_up": [
+    "Acquire official drainage, elevation, land-cover, asset, and incident data.",
+    "Calibrate a local hydrologic or disruption model before comparing interventions."
+  ],
+  "question": "What does the standardized point series show, and what evidence is still required before flood or disruption planning?",
+  "recommendation_issued": false,
+  "required_next_evidence": [
+    "Locally validated rainfall and flood observations.",
+    "Versioned assets, networks, capacities, costs, and jurisdictional constraints."
+  ],
+  "run_id": "geonames.160263.screen.precipitation.2024",
+  "scenario_id": "geonames.160263.precipitation-screen.v1",
+  "schema_version": "1.0.0",
+  "source_refs": [
+    "nasa-power-29a9bae0a416",
+    "world-bank-a690c36b4644",
+    "world-bank-388618048c6c",
+    "world-bank-88e0fde05ae4"
+  ],
+  "status": "screened",
+  "template_id": "standard.precipitation-screen.v1",
+  "title": "Dar es Salaam 2024 precipitation-context descriptive screen"
+}

@@ -1,0 +1,240 @@
+{
+  "$defs": {
+    "QualityStatus": {
+      "enum": [
+        "pass",
+        "warn",
+        "fail"
+      ],
+      "title": "QualityStatus",
+      "type": "string"
+    },
+    "ScenarioScreenStatus": {
+      "enum": [
+        "screened",
+        "insufficient-evidence",
+        "failed"
+      ],
+      "title": "ScenarioScreenStatus",
+      "type": "string"
+    },
+    "TierSExclusionRecord": {
+      "additionalProperties": false,
+      "properties": {
+        "city_id": {
+          "pattern": "^[a-z0-9]+(?:[._-][a-z0-9]+)*$",
+          "title": "City Id",
+          "type": "string"
+        },
+        "country_code": {
+          "pattern": "^[A-Z]{2}$",
+          "title": "Country Code",
+          "type": "string"
+        },
+        "name": {
+          "minLength": 1,
+          "title": "Name",
+          "type": "string"
+        },
+        "reasons": {
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1,
+          "title": "Reasons",
+          "type": "array"
+        },
+        "tier_g_rank": {
+          "minimum": 1,
+          "title": "Tier G Rank",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "tier_g_rank",
+        "city_id",
+        "name",
+        "country_code",
+        "reasons"
+      ],
+      "title": "TierSExclusionRecord",
+      "type": "object"
+    },
+    "TierSRegistryEntry": {
+      "additionalProperties": false,
+      "properties": {
+        "bundle_hash": {
+          "pattern": "^sha256:[0-9a-f]{64}$",
+          "title": "Bundle Hash",
+          "type": "string"
+        },
+        "bundle_ref": {
+          "minLength": 1,
+          "title": "Bundle Ref",
+          "type": "string"
+        },
+        "city_id": {
+          "pattern": "^[a-z0-9]+(?:[._-][a-z0-9]+)*$",
+          "title": "City Id",
+          "type": "string"
+        },
+        "country_code": {
+          "pattern": "^[A-Z]{2}$",
+          "title": "Country Code",
+          "type": "string"
+        },
+        "name": {
+          "minLength": 1,
+          "title": "Name",
+          "type": "string"
+        },
+        "quality_status": {
+          "$ref": "#/$defs/QualityStatus"
+        },
+        "run_hashes": {
+          "items": {
+            "type": "string"
+          },
+          "minItems": 3,
+          "title": "Run Hashes",
+          "type": "array"
+        },
+        "run_refs": {
+          "items": {
+            "type": "string"
+          },
+          "minItems": 3,
+          "title": "Run Refs",
+          "type": "array"
+        },
+        "scenario_statuses": {
+          "items": {
+            "$ref": "#/$defs/ScenarioScreenStatus"
+          },
+          "minItems": 3,
+          "title": "Scenario Statuses",
+          "type": "array"
+        },
+        "selection_order": {
+          "minimum": 1,
+          "title": "Selection Order",
+          "type": "integer"
+        },
+        "tier_g_rank": {
+          "minimum": 1,
+          "title": "Tier G Rank",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "selection_order",
+        "tier_g_rank",
+        "city_id",
+        "name",
+        "country_code",
+        "bundle_ref",
+        "bundle_hash",
+        "run_refs",
+        "run_hashes",
+        "scenario_statuses",
+        "quality_status"
+      ],
+      "title": "TierSRegistryEntry",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "created_at": {
+      "format": "date-time",
+      "title": "Created At",
+      "type": "string"
+    },
+    "entries": {
+      "items": {
+        "$ref": "#/$defs/TierSRegistryEntry"
+      },
+      "minItems": 1,
+      "title": "Entries",
+      "type": "array"
+    },
+    "exclusions_before_target": {
+      "items": {
+        "$ref": "#/$defs/TierSExclusionRecord"
+      },
+      "title": "Exclusions Before Target",
+      "type": "array"
+    },
+    "limitations": {
+      "items": {
+        "type": "string"
+      },
+      "minItems": 1,
+      "title": "Limitations",
+      "type": "array"
+    },
+    "reference_climate_year": {
+      "maximum": 2100,
+      "minimum": 1981,
+      "title": "Reference Climate Year",
+      "type": "integer"
+    },
+    "reference_context_year": {
+      "maximum": 2100,
+      "minimum": 1960,
+      "title": "Reference Context Year",
+      "type": "integer"
+    },
+    "registry_id": {
+      "pattern": "^[a-z0-9]+(?:[._-][a-z0-9]+)*$",
+      "title": "Registry Id",
+      "type": "string"
+    },
+    "required_climate_parameters": {
+      "items": {
+        "type": "string"
+      },
+      "minItems": 1,
+      "title": "Required Climate Parameters",
+      "type": "array"
+    },
+    "required_country_indicators": {
+      "items": {
+        "type": "string"
+      },
+      "minItems": 1,
+      "title": "Required Country Indicators",
+      "type": "array"
+    },
+    "schema_version": {
+      "const": "1.0.0",
+      "default": "1.0.0",
+      "title": "Schema Version",
+      "type": "string"
+    },
+    "selection_method": {
+      "minLength": 1,
+      "title": "Selection Method",
+      "type": "string"
+    },
+    "target_count": {
+      "minimum": 1,
+      "title": "Target Count",
+      "type": "integer"
+    }
+  },
+  "required": [
+    "registry_id",
+    "created_at",
+    "target_count",
+    "selection_method",
+    "reference_climate_year",
+    "reference_context_year",
+    "required_climate_parameters",
+    "required_country_indicators",
+    "entries",
+    "limitations"
+  ],
+  "title": "TierSRegistry",
+  "type": "object"
+}

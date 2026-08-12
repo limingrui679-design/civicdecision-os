@@ -1,0 +1,793 @@
+{
+  "created_at": "2026-08-12T10:07:41.052030Z",
+  "entries": [
+    {
+      "bundle_hash": "sha256:46f2a8b647709115712ea51c6dc2da2704f96c6a1ee92129d8a578fff02b3473",
+      "bundle_ref": "cities/geonames.1796236/bundle.json",
+      "city_id": "geonames.1796236",
+      "country_code": "CN",
+      "name": "Shanghai",
+      "quality_status": "pass",
+      "run_hashes": [
+        "sha256:2afe918be6d5ed5658d66a2997fe16cf28be43005fc0b7e0ad21ff02dae4cb54",
+        "sha256:6d2c6ff3a250d0467c9ffae4db52c66cda6c85343f319caaa7e83d0d78123af9",
+        "sha256:9d0b8100465f8f2a277c038bcaf1c4d10c9184ff7dd5363a70f79d9157d5f55e"
+      ],
+      "run_refs": [
+        "runs/geonames.1796236.screen.heat.2024.json",
+        "runs/geonames.1796236.screen.precipitation.2024.json",
+        "runs/geonames.1796236.screen.policy-readiness.2024.json"
+      ],
+      "scenario_statuses": [
+        "screened",
+        "screened",
+        "insufficient-evidence"
+      ],
+      "selection_order": 1,
+      "tier_g_rank": 1
+    },
+    {
+      "bundle_hash": "sha256:640d4796e4146fc1b3b1688e02f166f389a9941be28eaf7c2f056419ad63723e",
+      "bundle_ref": "cities/geonames.2314302/bundle.json",
+      "city_id": "geonames.2314302",
+      "country_code": "CD",
+      "name": "Kinshasa",
+      "quality_status": "pass",
+      "run_hashes": [
+        "sha256:172b5e1a7c6d89d93dadde558a89d6551d794e4bd726c911e122bebf0ad88280",
+        "sha256:66a3cc1c4c1cddad48d32b7e2ed3312d774cba919dcf8efed1c3e59ea33b22c7",
+        "sha256:8255bc66b0b6d00edf43f29e81ebe2eb62c8332970cba4af7c29e8f8e72496df"
+      ],
+      "run_refs": [
+        "runs/geonames.2314302.screen.heat.2024.json",
+        "runs/geonames.2314302.screen.precipitation.2024.json",
+        "runs/geonames.2314302.screen.policy-readiness.2024.json"
+      ],
+      "scenario_statuses": [
+        "screened",
+        "screened",
+        "insufficient-evidence"
+      ],
+      "selection_order": 2,
+      "tier_g_rank": 2
+    },
+    {
+      "bundle_hash": "sha256:39c1875aa8e6a126185c9d87a0604c8cc76c40a77bee70510aacccafd8027ecd",
+      "bundle_ref": "cities/geonames.745044/bundle.json",
+      "city_id": "geonames.745044",
+      "country_code": "TR",
+      "name": "Istanbul",
+      "quality_status": "pass",
+      "run_hashes": [
+        "sha256:b2323b27b913e755da51aaa85b5d5c8f1c57ca58b69a3b45172dee4d3f6c998f",
+        "sha256:e8c79aad5a4b85b91461fef296fb63ab0ea65f1a42ad057e6feddc6388996c8f",
+        "sha256:4d04d595fc68ee313f7cade12f0f3b46f2d2b3aa3260b2ce04918aa6875da400"
+      ],
+      "run_refs": [
+        "runs/geonames.745044.screen.heat.2024.json",
+        "runs/geonames.745044.screen.precipitation.2024.json",
+        "runs/geonames.745044.screen.policy-readiness.2024.json"
+      ],
+      "scenario_statuses": [
+        "screened",
+        "screened",
+        "insufficient-evidence"
+      ],
+      "selection_order": 3,
+      "tier_g_rank": 3
+    },
+    {
+      "bundle_hash": "sha256:bba7290f45844085e131ddae8504570cc4e1d122d53e46b8104dfa5a7b5ee36f",
+      "bundle_ref": "cities/geonames.2332459/bundle.json",
+      "city_id": "geonames.2332459",
+      "country_code": "NG",
+      "name": "Lagos",
+      "quality_status": "pass",
+      "run_hashes": [
+        "sha256:d2d7cdb667128f6f4fe3ad3751e584c67744de1c00ac09c560100bef47d0f8ea",
+        "sha256:b119b362347efc312e45ae81eea0cfe79233e993735c6c3636b7b004ba9496f2",
+        "sha256:780c7ec8a1c35228cde37d1c237a0363445db1bc4dbe1ef4f7e5d63a1cbd78e6"
+      ],
+      "run_refs": [
+        "runs/geonames.2332459.screen.heat.2024.json",
+        "runs/geonames.2332459.screen.precipitation.2024.json",
+        "runs/geonames.2332459.screen.policy-readiness.2024.json"
+      ],
+      "scenario_statuses": [
+        "screened",
+        "screened",
+        "insufficient-evidence"
+      ],
+      "selection_order": 4,
+      "tier_g_rank": 4
+    },
+    {
+      "bundle_hash": "sha256:98eeef80e96c7492c0f12e798c762223cd8fc21e7eaab57889786ecfa0638d56",
+      "bundle_ref": "cities/geonames.1566083/bundle.json",
+      "city_id": "geonames.1566083",
+      "country_code": "VN",
+      "name": "Ho Chi Minh City",
+      "quality_status": "pass",
+      "run_hashes": [
+        "sha256:3400dbbad6857b97b34a6d7c5bb127ef1230076a926776b79d042257ae98207d",
+        "sha256:e917b945a0144e537b55e00b953cf120393fd4e423649fb2f2e46094ce2162c5",
+        "sha256:5224555aedf8f8c02af232547e193c949314b56f8d40a032fdb101dbf4fb6504"
+      ],
+      "run_refs": [
+        "runs/geonames.1566083.screen.heat.2024.json",
+        "runs/geonames.1566083.screen.precipitation.2024.json",
+        "runs/geonames.1566083.screen.policy-readiness.2024.json"
+      ],
+      "scenario_statuses": [
+        "screened",
+        "screened",
+        "insufficient-evidence"
+      ],
+      "selection_order": 5,
+      "tier_g_rank": 5
+    },
+    {
+      "bundle_hash": "sha256:da1525128c462b4e48c87c4d75452fe8ce93e768441965ed11781d4c9981733b",
+      "bundle_ref": "cities/geonames.1172451/bundle.json",
+      "city_id": "geonames.1172451",
+      "country_code": "PK",
+      "name": "Lahore",
+      "quality_status": "pass",
+      "run_hashes": [
+        "sha256:ac60009c87ef44aec78ed4ac36f9093141761e3d471b0f282782a00af6dfcb49",
+        "sha256:2b713e7e1811e319bf8700896e918c3f6f6e8c7b279c8d72288e2365db89c279",
+        "sha256:d0bc5d4ffd51ff9fe71d11dab4143ea1e85cf61699462bdb812c96903ef947e6"
+      ],
+      "run_refs": [
+        "runs/geonames.1172451.screen.heat.2024.json",
+        "runs/geonames.1172451.screen.precipitation.2024.json",
+        "runs/geonames.1172451.screen.policy-readiness.2024.json"
+      ],
+      "scenario_statuses": [
+        "screened",
+        "screened",
+        "insufficient-evidence"
+      ],
+      "selection_order": 6,
+      "tier_g_rank": 6
+    },
+    {
+      "bundle_hash": "sha256:e71a60426d5cb21ba0e09aedcc1df488ed4b3a824632ccba55fb6b231824bfc6",
+      "bundle_ref": "cities/geonames.1275339/bundle.json",
+      "city_id": "geonames.1275339",
+      "country_code": "IN",
+      "name": "Mumbai",
+      "quality_status": "pass",
+      "run_hashes": [
+        "sha256:954b03c522e83a34fa400365092c427133d4e797178fa78004d122b03a730788",
+        "sha256:70583ac321ef6dbf5601d26febc4762ea9e79688c747953600cdf4da6ac703ec",
+        "sha256:84510f5ef08dd309f73aefd4518f5cbcf344016f718547b36c56a9ce239c7a5e"
+      ],
+      "run_refs": [
+        "runs/geonames.1275339.screen.heat.2024.json",
+        "runs/geonames.1275339.screen.precipitation.2024.json",
+        "runs/geonames.1275339.screen.policy-readiness.2024.json"
+      ],
+      "scenario_statuses": [
+        "screened",
+        "screened",
+        "insufficient-evidence"
+      ],
+      "selection_order": 7,
+      "tier_g_rank": 7
+    },
+    {
+      "bundle_hash": "sha256:95552c7fbd9ff13d7c70b9c6aa3fa637b54811344546258fef8dae0bbb99b28b",
+      "bundle_ref": "cities/geonames.3448439/bundle.json",
+      "city_id": "geonames.3448439",
+      "country_code": "BR",
+      "name": "São Paulo",
+      "quality_status": "pass",
+      "run_hashes": [
+        "sha256:dca732ed5aab6c3132fd8f34075feb4d730fff6ca2a693cc00c97cb658cece34",
+        "sha256:3b86c42997ccc36ae1056c365e49b2f968d48e9f551126203f4a36fab8090c12",
+        "sha256:46a0602c5bff3690df1d7a19c84d48304afec9be10a94eea375d8c12b8e4d27b"
+      ],
+      "run_refs": [
+        "runs/geonames.3448439.screen.heat.2024.json",
+        "runs/geonames.3448439.screen.precipitation.2024.json",
+        "runs/geonames.3448439.screen.policy-readiness.2024.json"
+      ],
+      "scenario_statuses": [
+        "screened",
+        "screened",
+        "insufficient-evidence"
+      ],
+      "selection_order": 8,
+      "tier_g_rank": 8
+    },
+    {
+      "bundle_hash": "sha256:aa39f5d26edea14dd15b20bb055b00840501e9a3b5ef23bb6dbb08affd2674da",
+      "bundle_ref": "cities/geonames.3530597/bundle.json",
+      "city_id": "geonames.3530597",
+      "country_code": "MX",
+      "name": "Mexico City",
+      "quality_status": "pass",
+      "run_hashes": [
+        "sha256:dacc056ad66954925cd2a1b2b78817a42fb7538f1d14e886e4440e45233e0714",
+        "sha256:b32a305f00a110c0de1dc1b1a111d8d70550aca6c7e8e3b97b98f80a9831bbaa",
+        "sha256:f4f717d67e0fdcce563cc156a9a1d1f0be84bc46ad88ff05182970512a96ed09"
+      ],
+      "run_refs": [
+        "runs/geonames.3530597.screen.heat.2024.json",
+        "runs/geonames.3530597.screen.precipitation.2024.json",
+        "runs/geonames.3530597.screen.policy-readiness.2024.json"
+      ],
+      "scenario_statuses": [
+        "screened",
+        "screened",
+        "insufficient-evidence"
+      ],
+      "selection_order": 9,
+      "tier_g_rank": 9
+    },
+    {
+      "bundle_hash": "sha256:cfa2f51f4c3d7b21b0c340386d28a22d3f11f785303e0d1bfed23feac31c6a1e",
+      "bundle_ref": "cities/geonames.524901/bundle.json",
+      "city_id": "geonames.524901",
+      "country_code": "RU",
+      "name": "Moscow",
+      "quality_status": "pass",
+      "run_hashes": [
+        "sha256:5985579c3cc3e5b2cce4384e7dcaf58b88379e30b332694f0408fb0e5170be73",
+        "sha256:ec8f31b508c35941945db1c60c6621bfc87b87dbb8cd1ec3a37fea608d25d144",
+        "sha256:c76601fccbca64a9bb205ee75d218b07e29f227810feccf9175579cf915c16be"
+      ],
+      "run_refs": [
+        "runs/geonames.524901.screen.heat.2024.json",
+        "runs/geonames.524901.screen.precipitation.2024.json",
+        "runs/geonames.524901.screen.policy-readiness.2024.json"
+      ],
+      "scenario_statuses": [
+        "screened",
+        "screened",
+        "insufficient-evidence"
+      ],
+      "selection_order": 10,
+      "tier_g_rank": 10
+    },
+    {
+      "bundle_hash": "sha256:1422074278247ff9fec2f9eccd9c874b3a4f02571313df5f2faac4ee4d372ae0",
+      "bundle_ref": "cities/geonames.1185241/bundle.json",
+      "city_id": "geonames.1185241",
+      "country_code": "BD",
+      "name": "Dhaka",
+      "quality_status": "pass",
+      "run_hashes": [
+        "sha256:cd92689dcb8783ac51b9b1b03b61bbbc2dc96529afa9b5730b44c650a4b3dacf",
+        "sha256:3dc2aaf96f431d47ce856ac171f0175101937e6ea68d7ec477289e3e47f6e280",
+        "sha256:84539bea76b988339413482533513a3d36bdc2ac656266e1f2c2fa218c8f07b0"
+      ],
+      "run_refs": [
+        "runs/geonames.1185241.screen.heat.2024.json",
+        "runs/geonames.1185241.screen.precipitation.2024.json",
+        "runs/geonames.1185241.screen.policy-readiness.2024.json"
+      ],
+      "scenario_statuses": [
+        "screened",
+        "screened",
+        "insufficient-evidence"
+      ],
+      "selection_order": 11,
+      "tier_g_rank": 11
+    },
+    {
+      "bundle_hash": "sha256:0e72c955ab47d3db420d29f8e42e89afc21bba77c1491d294f84bcd1260bd3a6",
+      "bundle_ref": "cities/geonames.1835848/bundle.json",
+      "city_id": "geonames.1835848",
+      "country_code": "KR",
+      "name": "Seoul",
+      "quality_status": "pass",
+      "run_hashes": [
+        "sha256:aa08c3af87f14e0416100304b20d47930adcee02baed16d376f6108bfa469aec",
+        "sha256:997a155d5e3f707a31d7563ed60d98d665b32ace68f7e5bca14524b346862222",
+        "sha256:bbf6c8b9e53820ee0fd3cb64a23a821ad617989523e3c04bf0fae89b335101f7"
+      ],
+      "run_refs": [
+        "runs/geonames.1835848.screen.heat.2024.json",
+        "runs/geonames.1835848.screen.precipitation.2024.json",
+        "runs/geonames.1835848.screen.policy-readiness.2024.json"
+      ],
+      "scenario_statuses": [
+        "screened",
+        "screened",
+        "insufficient-evidence"
+      ],
+      "selection_order": 12,
+      "tier_g_rank": 12
+    },
+    {
+      "bundle_hash": "sha256:95469729f192b58f2a3f4383feb9b73c659fee993f77ab06c073fba82246cfc9",
+      "bundle_ref": "cities/geonames.1850147/bundle.json",
+      "city_id": "geonames.1850147",
+      "country_code": "JP",
+      "name": "Tokyo",
+      "quality_status": "pass",
+      "run_hashes": [
+        "sha256:1f179110380d89512955ca88bab15d3c73ac90a74ad78c9149566a6401d98f2b",
+        "sha256:7c735948a99d9f01a5b6387c0310777d0f5e7145a08c74d1d05ef538fca074f7",
+        "sha256:6146fd70ae68f6f3fa67e1e63ffa5d19a47b9882a2310913fa505fb4b6e51078"
+      ],
+      "run_refs": [
+        "runs/geonames.1850147.screen.heat.2024.json",
+        "runs/geonames.1850147.screen.precipitation.2024.json",
+        "runs/geonames.1850147.screen.policy-readiness.2024.json"
+      ],
+      "scenario_statuses": [
+        "screened",
+        "screened",
+        "insufficient-evidence"
+      ],
+      "selection_order": 13,
+      "tier_g_rank": 13
+    },
+    {
+      "bundle_hash": "sha256:5c8193013c010c0a31c760148660712d67b01a804dcc40cc602fa3c535c4737c",
+      "bundle_ref": "cities/geonames.360630/bundle.json",
+      "city_id": "geonames.360630",
+      "country_code": "EG",
+      "name": "Cairo",
+      "quality_status": "pass",
+      "run_hashes": [
+        "sha256:b8f286ab53c39cfc2070ceab343a4f409970563fe999361c0c35451882d06b95",
+        "sha256:375ca5a73727d246a3a9e53e9a98d0afabd9e32d5570cac96945a894d382263d",
+        "sha256:68ee2e1a686819622b5f7c5bae89784f820977a865c867fd75c4a79b2f86fc68"
+      ],
+      "run_refs": [
+        "runs/geonames.360630.screen.heat.2024.json",
+        "runs/geonames.360630.screen.precipitation.2024.json",
+        "runs/geonames.360630.screen.policy-readiness.2024.json"
+      ],
+      "scenario_statuses": [
+        "screened",
+        "screened",
+        "insufficient-evidence"
+      ],
+      "selection_order": 14,
+      "tier_g_rank": 14
+    },
+    {
+      "bundle_hash": "sha256:27f67ff94f4d0367ad5162f2ff5020684910b1970863b82f59c71c860204d40c",
+      "bundle_ref": "cities/geonames.993800/bundle.json",
+      "city_id": "geonames.993800",
+      "country_code": "ZA",
+      "name": "Johannesburg",
+      "quality_status": "pass",
+      "run_hashes": [
+        "sha256:39b880e8b20c9af6efe0a679317565fb0026df77708cee9f96220bc22e510c8a",
+        "sha256:8c66e05a0fcb806dc364129155811a3d907e516ebc9be3d41cf6aca843458f72",
+        "sha256:1915c1b674e39b8151e2784b26da443195e47f47d102634138330527c915ea04"
+      ],
+      "run_refs": [
+        "runs/geonames.993800.screen.heat.2024.json",
+        "runs/geonames.993800.screen.precipitation.2024.json",
+        "runs/geonames.993800.screen.policy-readiness.2024.json"
+      ],
+      "scenario_statuses": [
+        "screened",
+        "screened",
+        "insufficient-evidence"
+      ],
+      "selection_order": 15,
+      "tier_g_rank": 15
+    },
+    {
+      "bundle_hash": "sha256:537556ba5df7d32ceae2db0a1a68099a6089bc21f26f92a24910ceba958cd9f6",
+      "bundle_ref": "cities/geonames.2643743/bundle.json",
+      "city_id": "geonames.2643743",
+      "country_code": "GB",
+      "name": "London",
+      "quality_status": "pass",
+      "run_hashes": [
+        "sha256:8b064ac526bd2baf186f00dadca6574cd834a5268b8ff2ca29ed009b733749db",
+        "sha256:d3d22ed78c7af7e27dd85ec5d4574e24a8e460c4a71e8d728a5236200deddfea",
+        "sha256:8911a483427650d7c392c6a182d0fd1e3f9ec2c06cb4090a757fa6fbed393840"
+      ],
+      "run_refs": [
+        "runs/geonames.2643743.screen.heat.2024.json",
+        "runs/geonames.2643743.screen.precipitation.2024.json",
+        "runs/geonames.2643743.screen.policy-readiness.2024.json"
+      ],
+      "scenario_statuses": [
+        "screened",
+        "screened",
+        "insufficient-evidence"
+      ],
+      "selection_order": 16,
+      "tier_g_rank": 16
+    },
+    {
+      "bundle_hash": "sha256:768f7e8422abe93e9f19e97c59b54e866e70b1aa32005fe8ed950256ce0a5677",
+      "bundle_ref": "cities/geonames.5128581/bundle.json",
+      "city_id": "geonames.5128581",
+      "country_code": "US",
+      "name": "New York City",
+      "quality_status": "pass",
+      "run_hashes": [
+        "sha256:6f1659b9c8df272667c1c0b82533b905ec4acec37cff15d1fd53f0953e4f8ad4",
+        "sha256:6d11be2079fb74ff3e9d7f1ff563c8822d20e37d8d0e91fbe52e549392f72dc8",
+        "sha256:0bb628cd3ad040a4befe3b626a264285ca7fc0566d6517255e401bc75669e9ef"
+      ],
+      "run_refs": [
+        "runs/geonames.5128581.screen.heat.2024.json",
+        "runs/geonames.5128581.screen.precipitation.2024.json",
+        "runs/geonames.5128581.screen.policy-readiness.2024.json"
+      ],
+      "scenario_statuses": [
+        "screened",
+        "screened",
+        "insufficient-evidence"
+      ],
+      "selection_order": 17,
+      "tier_g_rank": 17
+    },
+    {
+      "bundle_hash": "sha256:3802f5623d1d3af603a04f84b40ecc8aa6877855216d09ba5048ceef3cd512f8",
+      "bundle_ref": "cities/geonames.1642911/bundle.json",
+      "city_id": "geonames.1642911",
+      "country_code": "ID",
+      "name": "Jakarta",
+      "quality_status": "pass",
+      "run_hashes": [
+        "sha256:6aefaf58bee5d3c12d3ea0cc72ccd989be11240857a166e418df00cd2caeed68",
+        "sha256:774845a7eeafa779b1c0ff422521dadb1123f5c5b37cdcc4a18f6101fa6d183d",
+        "sha256:61f08572532c276162df0b013c6ab129e5318623ef6cef823e0030dc5d33e0f6"
+      ],
+      "run_refs": [
+        "runs/geonames.1642911.screen.heat.2024.json",
+        "runs/geonames.1642911.screen.precipitation.2024.json",
+        "runs/geonames.1642911.screen.policy-readiness.2024.json"
+      ],
+      "scenario_statuses": [
+        "screened",
+        "screened",
+        "insufficient-evidence"
+      ],
+      "selection_order": 18,
+      "tier_g_rank": 18
+    },
+    {
+      "bundle_hash": "sha256:3eee27af9e7d384c233a1b515ac6dd5d8f4f99e6d69b2d99171c1ba417575464",
+      "bundle_ref": "cities/geonames.3936456/bundle.json",
+      "city_id": "geonames.3936456",
+      "country_code": "PE",
+      "name": "Lima",
+      "quality_status": "pass",
+      "run_hashes": [
+        "sha256:569c69cd4eb93eab41f007dc4d6f7aa014cb649763e6a7553728e53a80d5ea0b",
+        "sha256:10063a9697f9a2e270c5e0e5b78e0b239c2dd106f62bb8517681c3f762cec3b4",
+        "sha256:803406321ebd14cf4ae23ccf1ac69fbd2d6976c494c7f3406972553608e5a86d"
+      ],
+      "run_refs": [
+        "runs/geonames.3936456.screen.heat.2024.json",
+        "runs/geonames.3936456.screen.precipitation.2024.json",
+        "runs/geonames.3936456.screen.policy-readiness.2024.json"
+      ],
+      "scenario_statuses": [
+        "screened",
+        "screened",
+        "insufficient-evidence"
+      ],
+      "selection_order": 19,
+      "tier_g_rank": 20
+    },
+    {
+      "bundle_hash": "sha256:5a608c864722e05a566b0dc29466fb6786d84d6e7b196085d1c64a8297c59fd0",
+      "bundle_ref": "cities/geonames.3688689/bundle.json",
+      "city_id": "geonames.3688689",
+      "country_code": "CO",
+      "name": "Bogotá",
+      "quality_status": "pass",
+      "run_hashes": [
+        "sha256:6a13d69cc5b0e00da0cebc43660d20ad995736788cd31a7d2607790b515e2195",
+        "sha256:8f7d54933cd8895dd3cee2c85d038e610e3f0842d4636884e700fe8fb10dd4cf",
+        "sha256:e2dc9f7be734edff15f282ff55c4d31171955aaa6b2902cbd5d18e388aae5fb5"
+      ],
+      "run_refs": [
+        "runs/geonames.3688689.screen.heat.2024.json",
+        "runs/geonames.3688689.screen.precipitation.2024.json",
+        "runs/geonames.3688689.screen.policy-readiness.2024.json"
+      ],
+      "scenario_statuses": [
+        "screened",
+        "screened",
+        "insufficient-evidence"
+      ],
+      "selection_order": 20,
+      "tier_g_rank": 21
+    },
+    {
+      "bundle_hash": "sha256:e20fef6e2db6da775dcc4cab8e03034588a475c16b8e0a225d0fdc73c1e91cec",
+      "bundle_ref": "cities/geonames.1819729/bundle.json",
+      "city_id": "geonames.1819729",
+      "country_code": "HK",
+      "name": "Hong Kong",
+      "quality_status": "pass",
+      "run_hashes": [
+        "sha256:5f8edc26bf5e95b8a0531f5b260b2953116f1ef9dce3a07456a1ff86bfbb0777",
+        "sha256:6ffb2b804083d124cacb119cc598c97e1b1a43bc6369dfabfc147369816cee2c",
+        "sha256:8f2de49c0046d733ffc2178800ee0291de0995364a07955df3e08fd79bcd4244"
+      ],
+      "run_refs": [
+        "runs/geonames.1819729.screen.heat.2024.json",
+        "runs/geonames.1819729.screen.precipitation.2024.json",
+        "runs/geonames.1819729.screen.policy-readiness.2024.json"
+      ],
+      "scenario_statuses": [
+        "screened",
+        "screened",
+        "insufficient-evidence"
+      ],
+      "selection_order": 21,
+      "tier_g_rank": 22
+    },
+    {
+      "bundle_hash": "sha256:ce6ea037ad754cee03c361e233d3e8a9ad622ffa478ecb0661e9cf027d4d4fea",
+      "bundle_ref": "cities/geonames.98182/bundle.json",
+      "city_id": "geonames.98182",
+      "country_code": "IQ",
+      "name": "Baghdad",
+      "quality_status": "pass",
+      "run_hashes": [
+        "sha256:06608a88c33acc1a479f3a845d3388767f7ea45ac641bd5e63a1048a5cca2b17",
+        "sha256:c594f6d5b7a3fb918527ad09dba3e28ec3379bc894ac1b1997a87a659cd043ea",
+        "sha256:f11104d6d613261b3c4c50203b1e265d1a520d2509c1241393e45a9f2b565838"
+      ],
+      "run_refs": [
+        "runs/geonames.98182.screen.heat.2024.json",
+        "runs/geonames.98182.screen.precipitation.2024.json",
+        "runs/geonames.98182.screen.policy-readiness.2024.json"
+      ],
+      "scenario_statuses": [
+        "screened",
+        "screened",
+        "insufficient-evidence"
+      ],
+      "selection_order": 22,
+      "tier_g_rank": 23
+    },
+    {
+      "bundle_hash": "sha256:0f4e64ec2a379469fc588bb28df79e728fcb9a7040bb774a0332edbe76da476b",
+      "bundle_ref": "cities/geonames.112931/bundle.json",
+      "city_id": "geonames.112931",
+      "country_code": "IR",
+      "name": "Tehran",
+      "quality_status": "pass",
+      "run_hashes": [
+        "sha256:acac38d2002ba01d1193550d69c0d22d7d73504a78db6922f57a5e531ff13ab1",
+        "sha256:8a05034fc16aca930ca0549398c6c7e440145c22a5ecaffaa1182d63079832d1",
+        "sha256:7e13dfbf6b519570465c76d315c10594bb3fc1fe368270a3c543c220005fedf5"
+      ],
+      "run_refs": [
+        "runs/geonames.112931.screen.heat.2024.json",
+        "runs/geonames.112931.screen.precipitation.2024.json",
+        "runs/geonames.112931.screen.policy-readiness.2024.json"
+      ],
+      "scenario_statuses": [
+        "screened",
+        "screened",
+        "insufficient-evidence"
+      ],
+      "selection_order": 23,
+      "tier_g_rank": 24
+    },
+    {
+      "bundle_hash": "sha256:eb69f343c0fde41331affca8a7c18ff6654a2a857c8f4f8ee2ea864e52946489",
+      "bundle_ref": "cities/geonames.2293538/bundle.json",
+      "city_id": "geonames.2293538",
+      "country_code": "CI",
+      "name": "Abidjan",
+      "quality_status": "pass",
+      "run_hashes": [
+        "sha256:bbeb862866cd526d5856339384e2dbf72e0e04d390491656b3f295f1bbdf967f",
+        "sha256:07514a62e9fe108b0ecf32b5bf5b7b86d2ea7cfddc84a812edbe29e936526321",
+        "sha256:677a75900384cebef386b6a798b1d8e3e94f4b5c556893856b58ef4f46214428"
+      ],
+      "run_refs": [
+        "runs/geonames.2293538.screen.heat.2024.json",
+        "runs/geonames.2293538.screen.precipitation.2024.json",
+        "runs/geonames.2293538.screen.policy-readiness.2024.json"
+      ],
+      "scenario_statuses": [
+        "screened",
+        "screened",
+        "insufficient-evidence"
+      ],
+      "selection_order": 24,
+      "tier_g_rank": 25
+    },
+    {
+      "bundle_hash": "sha256:7f409680bd929a8319013ed76aa97a98eb50423baeece30c05e0fc7559eefe40",
+      "bundle_ref": "cities/geonames.2147714/bundle.json",
+      "city_id": "geonames.2147714",
+      "country_code": "AU",
+      "name": "Sydney",
+      "quality_status": "pass",
+      "run_hashes": [
+        "sha256:93da5ea8623fd8b97f7d3ea98a68d8df46bcb23d6d1e7ffde83a69f053aeba7b",
+        "sha256:9891ff29b86aa2b4dca0a063f9a9492a1c935b0f3bf98d6d779995d8a3ef2338",
+        "sha256:f978a8563ec594cb5ea7bc159b70d5aa338c124e939378262091338963a0ffb8"
+      ],
+      "run_refs": [
+        "runs/geonames.2147714.screen.heat.2024.json",
+        "runs/geonames.2147714.screen.precipitation.2024.json",
+        "runs/geonames.2147714.screen.policy-readiness.2024.json"
+      ],
+      "scenario_statuses": [
+        "screened",
+        "screened",
+        "insufficient-evidence"
+      ],
+      "selection_order": 25,
+      "tier_g_rank": 26
+    },
+    {
+      "bundle_hash": "sha256:dc11c691d2c270113973baee3bc9c0e38149f5dbf165ee44690b21395325426b",
+      "bundle_ref": "cities/geonames.1880252/bundle.json",
+      "city_id": "geonames.1880252",
+      "country_code": "SG",
+      "name": "Singapore",
+      "quality_status": "pass",
+      "run_hashes": [
+        "sha256:1b8c8a952def2f95589901638e242a6a4f20fb4305b115e41163e81f45df329e",
+        "sha256:cdb440e77eff6fba6a11d568d3dc9cf60ebf3acd0a21fc1b8f7a29633c7db90b",
+        "sha256:517f501b2ab930b9efc9ecf6ce0d01de25cf7d7089de48062be5be338055c043"
+      ],
+      "run_refs": [
+        "runs/geonames.1880252.screen.heat.2024.json",
+        "runs/geonames.1880252.screen.precipitation.2024.json",
+        "runs/geonames.1880252.screen.policy-readiness.2024.json"
+      ],
+      "scenario_statuses": [
+        "screened",
+        "screened",
+        "insufficient-evidence"
+      ],
+      "selection_order": 26,
+      "tier_g_rank": 27
+    },
+    {
+      "bundle_hash": "sha256:693fca19b98bf2b29bc0a019619b28d75bfaf682e0273bb0bb9d50c67f1233f4",
+      "bundle_ref": "cities/geonames.160263/bundle.json",
+      "city_id": "geonames.160263",
+      "country_code": "TZ",
+      "name": "Dar es Salaam",
+      "quality_status": "pass",
+      "run_hashes": [
+        "sha256:0b47c3bdcf5fb5917d21c3876bc69d3fa6536658580d64a237e77e22e6a166ec",
+        "sha256:cce3879a39e02db0f92ae191807f8ceb4c8e63239d28d593f8f079e368fd1112",
+        "sha256:fd896373a8264aa32e77dcc4e0e4d4a450f9aee99f29593b3d542a1a94fa9ab3"
+      ],
+      "run_refs": [
+        "runs/geonames.160263.screen.heat.2024.json",
+        "runs/geonames.160263.screen.precipitation.2024.json",
+        "runs/geonames.160263.screen.policy-readiness.2024.json"
+      ],
+      "scenario_statuses": [
+        "screened",
+        "screened",
+        "insufficient-evidence"
+      ],
+      "selection_order": 27,
+      "tier_g_rank": 28
+    },
+    {
+      "bundle_hash": "sha256:1cd416acf9b29c0497fe20bfe7abc215cb166045db06459990bc8b5d71e65a78",
+      "bundle_ref": "cities/geonames.1609350/bundle.json",
+      "city_id": "geonames.1609350",
+      "country_code": "TH",
+      "name": "Bangkok",
+      "quality_status": "pass",
+      "run_hashes": [
+        "sha256:298321a7dda719fbfcedc8512f557a84b9c8bed7de38de9a2e6e81bc63ce2d85",
+        "sha256:ed1fad82d9c63b45ee1d8ec2cb3c04b0d120e73e65cc2ccd22e2ce78bcb58e6a",
+        "sha256:718b0c1d847aace32f3c2644a75dc99d8951b3fa90357247b6c1fc6bc76f9675"
+      ],
+      "run_refs": [
+        "runs/geonames.1609350.screen.heat.2024.json",
+        "runs/geonames.1609350.screen.precipitation.2024.json",
+        "runs/geonames.1609350.screen.policy-readiness.2024.json"
+      ],
+      "scenario_statuses": [
+        "screened",
+        "screened",
+        "insufficient-evidence"
+      ],
+      "selection_order": 28,
+      "tier_g_rank": 29
+    },
+    {
+      "bundle_hash": "sha256:a6c6babb435d2b31b048e6a1d51b0add0589d862bd167c604468cdb21aa55f88",
+      "bundle_ref": "cities/geonames.3871336/bundle.json",
+      "city_id": "geonames.3871336",
+      "country_code": "CL",
+      "name": "Santiago",
+      "quality_status": "pass",
+      "run_hashes": [
+        "sha256:cccb1c5e03d935c8f092a30bfb1173ac5173f996124039656e192ee15986c126",
+        "sha256:038e79458e0d0a06f83b53524cb99ee1848fba6464fa546892d319b4f2b78218",
+        "sha256:b1958d5f62d6d16aef91049f2ee79cd90e2ed9df5d11b61d13d64f677d42a367"
+      ],
+      "run_refs": [
+        "runs/geonames.3871336.screen.heat.2024.json",
+        "runs/geonames.3871336.screen.precipitation.2024.json",
+        "runs/geonames.3871336.screen.policy-readiness.2024.json"
+      ],
+      "scenario_statuses": [
+        "screened",
+        "screened",
+        "insufficient-evidence"
+      ],
+      "selection_order": 29,
+      "tier_g_rank": 30
+    },
+    {
+      "bundle_hash": "sha256:c2a5fb2bf0c98221a7fa8e73314f0a99b60d87464c5a5d51b0b9b3b3a3164caf",
+      "bundle_ref": "cities/geonames.105343/bundle.json",
+      "city_id": "geonames.105343",
+      "country_code": "SA",
+      "name": "Jeddah",
+      "quality_status": "pass",
+      "run_hashes": [
+        "sha256:4de3211a527bb0b94691a5e8bb935621b3723a633731bc3a15ece3cde2600c5a",
+        "sha256:0325a75327bb950aadc2e16b602bc6a92fe8abe1b06c470c8086495a7c3b851c",
+        "sha256:81882f01323bff89fbf12af31c8d83a888d736372b8855da8f81362fc861a46c"
+      ],
+      "run_refs": [
+        "runs/geonames.105343.screen.heat.2024.json",
+        "runs/geonames.105343.screen.precipitation.2024.json",
+        "runs/geonames.105343.screen.policy-readiness.2024.json"
+      ],
+      "scenario_statuses": [
+        "screened",
+        "screened",
+        "insufficient-evidence"
+      ],
+      "selection_order": 30,
+      "tier_g_rank": 31
+    }
+  ],
+  "exclusions_before_target": [
+    {
+      "city_id": "geonames.1668341",
+      "country_code": "TW",
+      "name": "Taipei",
+      "reasons": [
+        "No matching 2024 NASA POWER six-parameter artifact is committed.",
+        "World Bank 2023 SP.URB.TOTL.IN.ZS is missing for TW.",
+        "World Bank 2023 SP.POP.TOTL is missing for TW.",
+        "World Bank 2023 NY.GDP.PCAP.CD is missing for TW."
+      ],
+      "tier_g_rank": 19
+    }
+  ],
+  "limitations": [
+    "Eligibility reflects source completeness, not policy priority or representativeness.",
+    "Tier-S city points and country proxies do not constitute deep local city data.",
+    "Scenario records are descriptive screens and explicit evidence gates, not DecisionPacks."
+  ],
+  "reference_climate_year": 2024,
+  "reference_context_year": 2023,
+  "registry_id": "tier-s-standardized-cities.2024.v1",
+  "required_climate_parameters": [
+    "T2M",
+    "T2M_MAX",
+    "T2M_MIN",
+    "PRECTOTCORR",
+    "WS10M",
+    "RH2M"
+  ],
+  "required_country_indicators": [
+    "SP.URB.TOTL.IN.ZS",
+    "SP.POP.TOTL",
+    "NY.GDP.PCAP.CD"
+  ],
+  "schema_version": "1.0.0",
+  "selection_method": "Scan Tier-G cities in catalog rank order; select the first cities with an exact 2024 NASA POWER six-parameter point artifact, non-null 2023 values for all three declared World Bank country-context indicators, and passing required quality gates.",
+  "target_count": 30
+}

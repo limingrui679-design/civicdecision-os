@@ -1,0 +1,41 @@
+{
+  "artifact_id": "nasa-power-8360e082740e",
+  "artifact_path": "nasa-power-8360e082740e.geojson",
+  "content_hash": "sha256:26b2a84df289fa83b385a3a2f25c402e2032698f98a2e0b6b11b7559ce4a13c0",
+  "data_url": "https://power.larc.nasa.gov/api/temporal/daily/point?parameters=T2M%2CT2M_MAX%2CT2M_MIN%2CPRECTOTCORR%2CWS10M%2CRH2M&community=RE&longitude=126.9784&latitude=37.566&start=20240101&end=20241231&format=JSON&time-standard=UTC",
+  "geographic_scope": "point=(37.566,126.9784)",
+  "landing_url": "https://power.larc.nasa.gov/docs/services/api/temporal/daily/",
+  "license": "NASA Earth science public data; retain POWER citation and access metadata",
+  "limitations": [
+    "POWER values are gridded analysis-ready products, not station observations.",
+    "Near-real-time meteorology can be replaced by improved products after retrieval.",
+    "One point does not characterize within-city microclimate or exposure."
+  ],
+  "name": "NASA POWER daily point data (v2.9.6)",
+  "publisher": "NASA Langley Research Center POWER Project",
+  "query": {
+    "community": "RE",
+    "end": "2024-12-31",
+    "latitude": 37.566,
+    "longitude": 126.9784,
+    "parameters": [
+      "T2M",
+      "T2M_MAX",
+      "T2M_MIN",
+      "PRECTOTCORR",
+      "WS10M",
+      "RH2M"
+    ],
+    "start": "2024-01-01",
+    "time_standard": "UTC"
+  },
+  "record_count": 2196,
+  "response_headers": {
+    "content-type": "application/json"
+  },
+  "retrieved_at": "2026-08-12T10:07:32.699590Z",
+  "schema_fingerprint": "sha256:9182786921dcf3a7cc07e1efbe75dbfeb386cdb76c454739bd6b28ccbd0e9335",
+  "schema_version": "1.0.0",
+  "source_id": "nasa-power-daily-point",
+  "temporal_scope": "2024-01-01 through 2024-12-31"
+}

@@ -1,0 +1,35 @@
+{
+  "artifact_id": "world-bank-88e0fde05ae4",
+  "artifact_path": "world-bank-ny.gdp.pcap.cd-88e0fde05ae4.json",
+  "content_hash": "sha256:7274fb80754753f1aaebfefd9b8f5cc167f121343c87315270c27cbd64e07306",
+  "data_url": "https://api.worldbank.org/v2/country/all/indicator/NY.GDP.PCAP.CD?date=2023%3A2023&format=json&page=1&per_page=1000",
+  "geographic_scope": "country=all",
+  "landing_url": "https://datahelpdesk.worldbank.org/knowledgebase/articles/889392",
+  "license": "CC BY 4.0 for World Bank-produced open data; verify indicator metadata",
+  "limitations": [
+    "Indicators may be estimates, modeled values, or aggregates; inspect metadata.",
+    "A bounded API page is not the complete indicator series.",
+    "Cross-country comparability and revision behavior vary by indicator."
+  ],
+  "name": "World Bank indicator NY.GDP.PCAP.CD",
+  "publisher": "World Bank Group",
+  "query": {
+    "country": "all",
+    "end_year": 2023,
+    "indicator": "NY.GDP.PCAP.CD",
+    "page": 1,
+    "per_page": 1000,
+    "start_year": 2023
+  },
+  "record_count": 265,
+  "response_headers": {
+    "content-type": "application/json;charset=utf-8",
+    "last-modified": "Wed, 12 Aug 2026 10:06:35 GMT"
+  },
+  "retrieved_at": "2026-08-12T10:06:35.034985Z",
+  "schema_fingerprint": "sha256:b8f91fd5ba18169e9881437f664577d1c86554a9dfe29f585de7f6602753e072",
+  "schema_version": "1.0.0",
+  "source_id": "world-bank-indicators-v2",
+  "temporal_scope": "2023 through 2023",
+  "upstream_updated_at": "2026-07-13T00:00:00Z"
+}

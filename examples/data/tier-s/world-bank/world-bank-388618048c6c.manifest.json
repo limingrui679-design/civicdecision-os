@@ -1,0 +1,35 @@
+{
+  "artifact_id": "world-bank-388618048c6c",
+  "artifact_path": "world-bank-sp.pop.totl-388618048c6c.json",
+  "content_hash": "sha256:ce1eb1a1b8a3eb90a2e06387d4286ba9d1797e9a1c1b957a566e0dda7367ecb8",
+  "data_url": "https://api.worldbank.org/v2/country/all/indicator/SP.POP.TOTL?date=2023%3A2023&format=json&page=1&per_page=1000",
+  "geographic_scope": "country=all",
+  "landing_url": "https://datahelpdesk.worldbank.org/knowledgebase/articles/889392",
+  "license": "CC BY 4.0 for World Bank-produced open data; verify indicator metadata",
+  "limitations": [
+    "Indicators may be estimates, modeled values, or aggregates; inspect metadata.",
+    "A bounded API page is not the complete indicator series.",
+    "Cross-country comparability and revision behavior vary by indicator."
+  ],
+  "name": "World Bank indicator SP.POP.TOTL",
+  "publisher": "World Bank Group",
+  "query": {
+    "country": "all",
+    "end_year": 2023,
+    "indicator": "SP.POP.TOTL",
+    "page": 1,
+    "per_page": 1000,
+    "start_year": 2023
+  },
+  "record_count": 265,
+  "response_headers": {
+    "content-type": "application/json;charset=utf-8",
+    "last-modified": "Wed, 12 Aug 2026 10:06:30 GMT"
+  },
+  "retrieved_at": "2026-08-12T10:06:30.411389Z",
+  "schema_fingerprint": "sha256:d07d07c6553fc87e6ec8b6600b7fcc280a12c1927359bb146bbe03ecbd567885",
+  "schema_version": "1.0.0",
+  "source_id": "world-bank-indicators-v2",
+  "temporal_scope": "2023 through 2023",
+  "upstream_updated_at": "2026-07-13T00:00:00Z"
+}

@@ -1,0 +1,35 @@
+{
+  "artifact_id": "world-bank-a690c36b4644",
+  "artifact_path": "world-bank-sp.urb.totl.in.zs-a690c36b4644.json",
+  "content_hash": "sha256:869ea9cdf51683bfc5f78211371110e1df3d422cc2c83b057b6240207164256e",
+  "data_url": "https://api.worldbank.org/v2/country/all/indicator/SP.URB.TOTL.IN.ZS?date=2023%3A2023&format=json&page=1&per_page=1000",
+  "geographic_scope": "country=all",
+  "landing_url": "https://datahelpdesk.worldbank.org/knowledgebase/articles/889392",
+  "license": "CC BY 4.0 for World Bank-produced open data; verify indicator metadata",
+  "limitations": [
+    "Indicators may be estimates, modeled values, or aggregates; inspect metadata.",
+    "A bounded API page is not the complete indicator series.",
+    "Cross-country comparability and revision behavior vary by indicator."
+  ],
+  "name": "World Bank indicator SP.URB.TOTL.IN.ZS",
+  "publisher": "World Bank Group",
+  "query": {
+    "country": "all",
+    "end_year": 2023,
+    "indicator": "SP.URB.TOTL.IN.ZS",
+    "page": 1,
+    "per_page": 1000,
+    "start_year": 2023
+  },
+  "record_count": 265,
+  "response_headers": {
+    "content-type": "application/json;charset=utf-8",
+    "last-modified": "Wed, 12 Aug 2026 10:06:25 GMT"
+  },
+  "retrieved_at": "2026-08-12T10:06:25.501697Z",
+  "schema_fingerprint": "sha256:ef676090f6185587f8fb10184e87ae4149eafac44cdb9d9f5c0a078727b09d3e",
+  "schema_version": "1.0.0",
+  "source_id": "world-bank-indicators-v2",
+  "temporal_scope": "2023 through 2023",
+  "upstream_updated_at": "2026-07-13T00:00:00Z"
+}

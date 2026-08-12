@@ -1,0 +1,69 @@
+{
+  "analysis_mode": "descriptive",
+  "city_id": "geonames.3448439",
+  "created_at": "2026-08-12T10:07:30.270635Z",
+  "decision_readiness": "insufficient-evidence",
+  "interpretation": "No. Point climate and country context do not identify affected people, feasible actions, costs, constraints, counterfactual outcomes, or observed impact.",
+  "limitations": [
+    "This is a standardized descriptive screen, not a forecast, causal result, simulation, optimization, or recommendation.",
+    "No municipal boundary, population exposure surface, asset inventory, service network, or local policy constraint is present.",
+    "Country GDP per capita is not a city budget, cost, income, or fiscal-capacity measure."
+  ],
+  "metrics": [
+    {
+      "evidence_type": "estimated",
+      "geographic_scope": "gridded-point-near=(-23.5475,-46.63611)",
+      "id": "climate-t2m-max-annual-maximum",
+      "limitations": [
+        "NASA POWER is a gridded analysis-ready product, not a station observation.",
+        "One point does not measure within-city microclimate or individual exposure."
+      ],
+      "method": "Direct summary of the named source series; no causal or municipal inference.",
+      "source_refs": [
+        "nasa-power-16da0b36cfc5"
+      ],
+      "temporal_scope": "2024 maximum of daily maximum series",
+      "unit": "degrees Celsius",
+      "value": 37.5
+    },
+    {
+      "evidence_type": "estimated",
+      "geographic_scope": "country-context=BR",
+      "id": "country-ny-gdp-pcap-cd",
+      "limitations": [
+        "This national aggregate is context only and must not be interpreted as a city value.",
+        "World Bank indicator definitions, revisions, and comparability limits apply."
+      ],
+      "method": "Direct summary of the named source series; no causal or municipal inference.",
+      "source_refs": [
+        "world-bank-88e0fde05ae4"
+      ],
+      "temporal_scope": "2023",
+      "unit": "current USD per person",
+      "value": 10377.589279
+    }
+  ],
+  "proposed_follow_up": [
+    "Build a separate Tier-D adapter from official local sources.",
+    "Release failed or infeasible results rather than upgrading these descriptors."
+  ],
+  "question": "Can the current Tier-S evidence support a city intervention choice or claimed outcome?",
+  "recommendation_issued": false,
+  "required_next_evidence": [
+    "Municipal geography and local administrative or sensor data.",
+    "Scenario-specific actions, budgets, capacities, equity constraints, and outcome evidence.",
+    "Historical replay, simulation validation, or identification diagnostics appropriate to the claim."
+  ],
+  "run_id": "geonames.3448439.screen.policy-readiness.2024",
+  "scenario_id": "geonames.3448439.policy-readiness.v1",
+  "schema_version": "1.0.0",
+  "source_refs": [
+    "nasa-power-16da0b36cfc5",
+    "world-bank-a690c36b4644",
+    "world-bank-388618048c6c",
+    "world-bank-88e0fde05ae4"
+  ],
+  "status": "insufficient-evidence",
+  "template_id": "standard.policy-readiness.v1",
+  "title": "São Paulo intervention-readiness evidence gate"
+}

@@ -1,0 +1,911 @@
+{
+  "$defs": {
+    "BoundingBox": {
+      "additionalProperties": false,
+      "properties": {
+        "east": {
+          "maximum": 180,
+          "minimum": -180,
+          "title": "East",
+          "type": "number"
+        },
+        "north": {
+          "maximum": 90,
+          "minimum": -90,
+          "title": "North",
+          "type": "number"
+        },
+        "south": {
+          "maximum": 90,
+          "minimum": -90,
+          "title": "South",
+          "type": "number"
+        },
+        "west": {
+          "maximum": 180,
+          "minimum": -180,
+          "title": "West",
+          "type": "number"
+        }
+      },
+      "required": [
+        "west",
+        "south",
+        "east",
+        "north"
+      ],
+      "title": "BoundingBox",
+      "type": "object"
+    },
+    "CityAdapterManifest": {
+      "additionalProperties": false,
+      "properties": {
+        "bbox": {
+          "$ref": "#/$defs/BoundingBox"
+        },
+        "capabilities": {
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1,
+          "title": "Capabilities",
+          "type": "array"
+        },
+        "city_id": {
+          "pattern": "^[a-z0-9]+(?:[._-][a-z0-9]+)*$",
+          "title": "City Id",
+          "type": "string"
+        },
+        "country_code": {
+          "maxLength": 2,
+          "minLength": 2,
+          "title": "Country Code",
+          "type": "string"
+        },
+        "coverage": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/CoverageWindow"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "data_gaps": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Data Gaps",
+          "type": "array"
+        },
+        "display_name": {
+          "minLength": 1,
+          "title": "Display Name",
+          "type": "string"
+        },
+        "limitations": {
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1,
+          "title": "Limitations",
+          "type": "array"
+        },
+        "schema_version": {
+          "default": "1.0.0",
+          "title": "Schema Version",
+          "type": "string"
+        },
+        "source_ids": {
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1,
+          "title": "Source Ids",
+          "type": "array"
+        },
+        "tier": {
+          "$ref": "#/$defs/CityTier"
+        },
+        "timezone": {
+          "title": "Timezone",
+          "type": "string"
+        }
+      },
+      "required": [
+        "city_id",
+        "display_name",
+        "country_code",
+        "tier",
+        "timezone",
+        "bbox",
+        "source_ids",
+        "capabilities",
+        "limitations"
+      ],
+      "title": "CityAdapterManifest",
+      "type": "object"
+    },
+    "CityTier": {
+      "enum": [
+        "G",
+        "S",
+        "D"
+      ],
+      "title": "CityTier",
+      "type": "string"
+    },
+    "Coordinate": {
+      "additionalProperties": false,
+      "properties": {
+        "latitude": {
+          "maximum": 90,
+          "minimum": -90,
+          "title": "Latitude",
+          "type": "number"
+        },
+        "longitude": {
+          "maximum": 180,
+          "minimum": -180,
+          "title": "Longitude",
+          "type": "number"
+        }
+      },
+      "required": [
+        "latitude",
+        "longitude"
+      ],
+      "title": "Coordinate",
+      "type": "object"
+    },
+    "CoverageWindow": {
+      "additionalProperties": false,
+      "properties": {
+        "end": {
+          "format": "date-time",
+          "title": "End",
+          "type": "string"
+        },
+        "start": {
+          "format": "date-time",
+          "title": "Start",
+          "type": "string"
+        }
+      },
+      "required": [
+        "start",
+        "end"
+      ],
+      "title": "CoverageWindow",
+      "type": "object"
+    },
+    "DataQualityReport": {
+      "additionalProperties": false,
+      "properties": {
+        "checks": {
+          "items": {
+            "$ref": "#/$defs/QualityCheck"
+          },
+          "minItems": 1,
+          "title": "Checks",
+          "type": "array"
+        },
+        "completeness_rate": {
+          "maximum": 1,
+          "minimum": 0,
+          "title": "Completeness Rate",
+          "type": "number"
+        },
+        "limitations": {
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1,
+          "title": "Limitations",
+          "type": "array"
+        },
+        "missing_values": {
+          "minimum": 0,
+          "title": "Missing Values",
+          "type": "integer"
+        },
+        "overall_status": {
+          "$ref": "#/$defs/QualityStatus"
+        }
+      },
+      "required": [
+        "overall_status",
+        "completeness_rate",
+        "missing_values",
+        "checks",
+        "limitations"
+      ],
+      "title": "DataQualityReport",
+      "type": "object"
+    },
+    "DecisionReadiness": {
+      "enum": [
+        "descriptive-only",
+        "insufficient-evidence"
+      ],
+      "title": "DecisionReadiness",
+      "type": "string"
+    },
+    "EvidenceType": {
+      "enum": [
+        "observed",
+        "estimated",
+        "causal",
+        "simulated",
+        "optimized",
+        "proposed"
+      ],
+      "title": "EvidenceType",
+      "type": "string"
+    },
+    "GeographicAlignment": {
+      "enum": [
+        "identity-point",
+        "gridded-point",
+        "country-context"
+      ],
+      "title": "GeographicAlignment",
+      "type": "string"
+    },
+    "GlobalCityCatalogEntry": {
+      "additionalProperties": false,
+      "properties": {
+        "admin1_code": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Admin1 Code"
+        },
+        "ascii_name": {
+          "minLength": 1,
+          "title": "Ascii Name",
+          "type": "string"
+        },
+        "city_id": {
+          "pattern": "^[a-z0-9]+(?:[._-][a-z0-9]+)*$",
+          "title": "City Id",
+          "type": "string"
+        },
+        "country_code": {
+          "pattern": "^[A-Z]{2}$",
+          "title": "Country Code",
+          "type": "string"
+        },
+        "feature_code": {
+          "minLength": 1,
+          "title": "Feature Code",
+          "type": "string"
+        },
+        "geoname_id": {
+          "exclusiveMinimum": 0,
+          "title": "Geoname Id",
+          "type": "integer"
+        },
+        "limitations": {
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1,
+          "title": "Limitations",
+          "type": "array"
+        },
+        "location": {
+          "$ref": "#/$defs/Coordinate"
+        },
+        "name": {
+          "minLength": 1,
+          "title": "Name",
+          "type": "string"
+        },
+        "selection_basis": {
+          "enum": [
+            "country-leader",
+            "global-fill"
+          ],
+          "title": "Selection Basis",
+          "type": "string"
+        },
+        "selection_rank": {
+          "minimum": 1,
+          "title": "Selection Rank",
+          "type": "integer"
+        },
+        "source_modification_date": {
+          "format": "date",
+          "title": "Source Modification Date",
+          "type": "string"
+        },
+        "source_population": {
+          "minimum": 0,
+          "title": "Source Population",
+          "type": "integer"
+        },
+        "source_ref": {
+          "minLength": 1,
+          "title": "Source Ref",
+          "type": "string"
+        },
+        "tier": {
+          "const": "G",
+          "default": "G",
+          "title": "Tier",
+          "type": "string"
+        },
+        "timezone": {
+          "title": "Timezone",
+          "type": "string"
+        }
+      },
+      "required": [
+        "city_id",
+        "selection_rank",
+        "selection_basis",
+        "geoname_id",
+        "name",
+        "ascii_name",
+        "country_code",
+        "location",
+        "timezone",
+        "source_population",
+        "feature_code",
+        "source_modification_date",
+        "source_ref",
+        "limitations"
+      ],
+      "title": "GlobalCityCatalogEntry",
+      "type": "object"
+    },
+    "JsonValue": {},
+    "QualityCheck": {
+      "additionalProperties": false,
+      "properties": {
+        "details": {
+          "minLength": 1,
+          "title": "Details",
+          "type": "string"
+        },
+        "expected": {
+          "$ref": "#/$defs/JsonValue"
+        },
+        "id": {
+          "pattern": "^[a-z0-9]+(?:[._-][a-z0-9]+)*$",
+          "title": "Id",
+          "type": "string"
+        },
+        "measured": {
+          "$ref": "#/$defs/JsonValue"
+        },
+        "status": {
+          "$ref": "#/$defs/QualityStatus"
+        }
+      },
+      "required": [
+        "id",
+        "status",
+        "measured",
+        "expected",
+        "details"
+      ],
+      "title": "QualityCheck",
+      "type": "object"
+    },
+    "QualityStatus": {
+      "enum": [
+        "pass",
+        "warn",
+        "fail"
+      ],
+      "title": "QualityStatus",
+      "type": "string"
+    },
+    "ScenarioScreenStatus": {
+      "enum": [
+        "screened",
+        "insufficient-evidence",
+        "failed"
+      ],
+      "title": "ScenarioScreenStatus",
+      "type": "string"
+    },
+    "SourceBinding": {
+      "additionalProperties": false,
+      "properties": {
+        "alignment": {
+          "$ref": "#/$defs/GeographicAlignment"
+        },
+        "artifact_id": {
+          "pattern": "^[a-z0-9]+(?:[._-][a-z0-9]+)*$",
+          "title": "Artifact Id",
+          "type": "string"
+        },
+        "content_hash": {
+          "pattern": "^sha256:[0-9a-f]{64}$",
+          "title": "Content Hash",
+          "type": "string"
+        },
+        "geographic_scope": {
+          "minLength": 1,
+          "title": "Geographic Scope",
+          "type": "string"
+        },
+        "limitations": {
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1,
+          "title": "Limitations",
+          "type": "array"
+        },
+        "role": {
+          "minLength": 1,
+          "title": "Role",
+          "type": "string"
+        },
+        "source_id": {
+          "pattern": "^[a-z0-9]+(?:[._-][a-z0-9]+)*$",
+          "title": "Source Id",
+          "type": "string"
+        },
+        "temporal_scope": {
+          "minLength": 1,
+          "title": "Temporal Scope",
+          "type": "string"
+        }
+      },
+      "required": [
+        "source_id",
+        "artifact_id",
+        "content_hash",
+        "alignment",
+        "role",
+        "geographic_scope",
+        "temporal_scope",
+        "limitations"
+      ],
+      "title": "SourceBinding",
+      "type": "object"
+    },
+    "SourceManifest": {
+      "additionalProperties": false,
+      "description": "Evidence required to identify and independently verify a downloaded artifact.",
+      "properties": {
+        "artifact_id": {
+          "pattern": "^[a-z0-9]+(?:[._-][a-z0-9]+)*$",
+          "title": "Artifact Id",
+          "type": "string"
+        },
+        "artifact_path": {
+          "minLength": 1,
+          "title": "Artifact Path",
+          "type": "string"
+        },
+        "content_hash": {
+          "title": "Content Hash",
+          "type": "string"
+        },
+        "data_url": {
+          "format": "uri",
+          "minLength": 1,
+          "title": "Data Url",
+          "type": "string"
+        },
+        "geographic_scope": {
+          "minLength": 1,
+          "title": "Geographic Scope",
+          "type": "string"
+        },
+        "landing_url": {
+          "format": "uri",
+          "minLength": 1,
+          "title": "Landing Url",
+          "type": "string"
+        },
+        "license": {
+          "minLength": 1,
+          "title": "License",
+          "type": "string"
+        },
+        "limitations": {
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1,
+          "title": "Limitations",
+          "type": "array"
+        },
+        "name": {
+          "minLength": 1,
+          "title": "Name",
+          "type": "string"
+        },
+        "publisher": {
+          "minLength": 1,
+          "title": "Publisher",
+          "type": "string"
+        },
+        "query": {
+          "additionalProperties": {
+            "$ref": "#/$defs/JsonValue"
+          },
+          "title": "Query",
+          "type": "object"
+        },
+        "record_count": {
+          "minimum": 0,
+          "title": "Record Count",
+          "type": "integer"
+        },
+        "response_headers": {
+          "additionalProperties": {
+            "type": "string"
+          },
+          "title": "Response Headers",
+          "type": "object"
+        },
+        "retrieved_at": {
+          "format": "date-time",
+          "title": "Retrieved At",
+          "type": "string"
+        },
+        "schema_fingerprint": {
+          "title": "Schema Fingerprint",
+          "type": "string"
+        },
+        "schema_version": {
+          "default": "1.0.0",
+          "title": "Schema Version",
+          "type": "string"
+        },
+        "source_id": {
+          "pattern": "^[a-z0-9]+(?:[._-][a-z0-9]+)*$",
+          "title": "Source Id",
+          "type": "string"
+        },
+        "temporal_scope": {
+          "minLength": 1,
+          "title": "Temporal Scope",
+          "type": "string"
+        },
+        "upstream_updated_at": {
+          "anyOf": [
+            {
+              "format": "date-time",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Upstream Updated At"
+        }
+      },
+      "required": [
+        "source_id",
+        "artifact_id",
+        "name",
+        "publisher",
+        "landing_url",
+        "data_url",
+        "license",
+        "retrieved_at",
+        "query",
+        "artifact_path",
+        "content_hash",
+        "record_count",
+        "schema_fingerprint",
+        "geographic_scope",
+        "temporal_scope",
+        "limitations"
+      ],
+      "title": "SourceManifest",
+      "type": "object"
+    },
+    "StandardMetric": {
+      "additionalProperties": false,
+      "properties": {
+        "evidence_type": {
+          "$ref": "#/$defs/EvidenceType"
+        },
+        "geographic_scope": {
+          "minLength": 1,
+          "title": "Geographic Scope",
+          "type": "string"
+        },
+        "id": {
+          "pattern": "^[a-z0-9]+(?:[._-][a-z0-9]+)*$",
+          "title": "Id",
+          "type": "string"
+        },
+        "limitations": {
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1,
+          "title": "Limitations",
+          "type": "array"
+        },
+        "method": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Method"
+        },
+        "source_refs": {
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1,
+          "title": "Source Refs",
+          "type": "array"
+        },
+        "temporal_scope": {
+          "minLength": 1,
+          "title": "Temporal Scope",
+          "type": "string"
+        },
+        "unit": {
+          "minLength": 1,
+          "title": "Unit",
+          "type": "string"
+        },
+        "value": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Value"
+        }
+      },
+      "required": [
+        "id",
+        "value",
+        "unit",
+        "evidence_type",
+        "geographic_scope",
+        "temporal_scope",
+        "source_refs",
+        "limitations"
+      ],
+      "title": "StandardMetric",
+      "type": "object"
+    },
+    "StandardScenarioRun": {
+      "additionalProperties": false,
+      "properties": {
+        "analysis_mode": {
+          "const": "descriptive",
+          "default": "descriptive",
+          "title": "Analysis Mode",
+          "type": "string"
+        },
+        "city_id": {
+          "pattern": "^[a-z0-9]+(?:[._-][a-z0-9]+)*$",
+          "title": "City Id",
+          "type": "string"
+        },
+        "created_at": {
+          "format": "date-time",
+          "title": "Created At",
+          "type": "string"
+        },
+        "decision_readiness": {
+          "$ref": "#/$defs/DecisionReadiness"
+        },
+        "interpretation": {
+          "minLength": 1,
+          "title": "Interpretation",
+          "type": "string"
+        },
+        "limitations": {
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1,
+          "title": "Limitations",
+          "type": "array"
+        },
+        "metrics": {
+          "items": {
+            "$ref": "#/$defs/StandardMetric"
+          },
+          "minItems": 1,
+          "title": "Metrics",
+          "type": "array"
+        },
+        "proposed_follow_up": {
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1,
+          "title": "Proposed Follow Up",
+          "type": "array"
+        },
+        "question": {
+          "minLength": 1,
+          "title": "Question",
+          "type": "string"
+        },
+        "recommendation_issued": {
+          "const": false,
+          "default": false,
+          "title": "Recommendation Issued",
+          "type": "boolean"
+        },
+        "required_next_evidence": {
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1,
+          "title": "Required Next Evidence",
+          "type": "array"
+        },
+        "run_id": {
+          "pattern": "^[a-z0-9]+(?:[._-][a-z0-9]+)*$",
+          "title": "Run Id",
+          "type": "string"
+        },
+        "scenario_id": {
+          "pattern": "^[a-z0-9]+(?:[._-][a-z0-9]+)*$",
+          "title": "Scenario Id",
+          "type": "string"
+        },
+        "schema_version": {
+          "const": "1.0.0",
+          "default": "1.0.0",
+          "title": "Schema Version",
+          "type": "string"
+        },
+        "source_refs": {
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1,
+          "title": "Source Refs",
+          "type": "array"
+        },
+        "status": {
+          "$ref": "#/$defs/ScenarioScreenStatus"
+        },
+        "template_id": {
+          "pattern": "^[a-z0-9]+(?:[._-][a-z0-9]+)*$",
+          "title": "Template Id",
+          "type": "string"
+        },
+        "title": {
+          "maxLength": 200,
+          "minLength": 1,
+          "title": "Title",
+          "type": "string"
+        }
+      },
+      "required": [
+        "run_id",
+        "scenario_id",
+        "template_id",
+        "city_id",
+        "created_at",
+        "title",
+        "question",
+        "status",
+        "decision_readiness",
+        "source_refs",
+        "metrics",
+        "interpretation",
+        "proposed_follow_up",
+        "required_next_evidence",
+        "limitations"
+      ],
+      "title": "StandardScenarioRun",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "adapter": {
+      "$ref": "#/$defs/CityAdapterManifest"
+    },
+    "bundle_id": {
+      "pattern": "^[a-z0-9]+(?:[._-][a-z0-9]+)*$",
+      "title": "Bundle Id",
+      "type": "string"
+    },
+    "catalog_entry": {
+      "$ref": "#/$defs/GlobalCityCatalogEntry"
+    },
+    "created_at": {
+      "format": "date-time",
+      "title": "Created At",
+      "type": "string"
+    },
+    "limitations": {
+      "items": {
+        "type": "string"
+      },
+      "minItems": 1,
+      "title": "Limitations",
+      "type": "array"
+    },
+    "metrics": {
+      "items": {
+        "$ref": "#/$defs/StandardMetric"
+      },
+      "minItems": 1,
+      "title": "Metrics",
+      "type": "array"
+    },
+    "quality_report": {
+      "$ref": "#/$defs/DataQualityReport"
+    },
+    "scenario_runs": {
+      "items": {
+        "$ref": "#/$defs/StandardScenarioRun"
+      },
+      "minItems": 3,
+      "title": "Scenario Runs",
+      "type": "array"
+    },
+    "schema_version": {
+      "const": "1.0.0",
+      "default": "1.0.0",
+      "title": "Schema Version",
+      "type": "string"
+    },
+    "source_bindings": {
+      "items": {
+        "$ref": "#/$defs/SourceBinding"
+      },
+      "minItems": 3,
+      "title": "Source Bindings",
+      "type": "array"
+    },
+    "source_manifests": {
+      "items": {
+        "$ref": "#/$defs/SourceManifest"
+      },
+      "minItems": 3,
+      "title": "Source Manifests",
+      "type": "array"
+    }
+  },
+  "required": [
+    "bundle_id",
+    "created_at",
+    "adapter",
+    "catalog_entry",
+    "source_manifests",
+    "source_bindings",
+    "quality_report",
+    "metrics",
+    "scenario_runs",
+    "limitations"
+  ],
+  "title": "StandardizedCityBundle",
+  "type": "object"
+}

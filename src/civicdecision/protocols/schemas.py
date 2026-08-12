@@ -13,6 +13,11 @@ from civicdecision.protocols.scenario import PolicyScenario
 from civicdecision.semantic.city_catalog import GlobalCityCatalog
 from civicdecision.semantic.core import SemanticBundle
 from civicdecision.semantic.graph import UrbanGraphBundle
+from civicdecision.standardized.models import (
+    StandardizedCityBundle,
+    StandardScenarioRun,
+    TierSRegistry,
+)
 
 SCHEMAS: dict[str, type[BaseModel]] = {
     "city-adapter.schema.json": CityAdapterManifest,
@@ -21,6 +26,9 @@ SCHEMAS: dict[str, type[BaseModel]] = {
     "global-city-catalog.schema.json": GlobalCityCatalog,
     "semantic-bundle.schema.json": SemanticBundle,
     "urban-graph.schema.json": UrbanGraphBundle,
+    "standard-scenario-run.schema.json": StandardScenarioRun,
+    "standardized-city-bundle.schema.json": StandardizedCityBundle,
+    "tier-s-registry.schema.json": TierSRegistry,
 }
 
 

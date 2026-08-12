@@ -1,0 +1,116 @@
+{
+  "analysis_mode": "descriptive",
+  "city_id": "geonames.112931",
+  "created_at": "2026-08-12T10:07:37.498894Z",
+  "decision_readiness": "descriptive-only",
+  "interpretation": "The run reports source-typed climate summaries and national context without estimating people exposed or an intervention effect.",
+  "limitations": [
+    "This is a standardized descriptive screen, not a forecast, causal result, simulation, optimization, or recommendation.",
+    "No municipal boundary, population exposure surface, asset inventory, service network, or local policy constraint is present."
+  ],
+  "metrics": [
+    {
+      "evidence_type": "estimated",
+      "geographic_scope": "gridded-point-near=(35.69439,51.42151)",
+      "id": "climate-t2m-annual-mean",
+      "limitations": [
+        "NASA POWER is a gridded analysis-ready product, not a station observation.",
+        "One point does not measure within-city microclimate or individual exposure."
+      ],
+      "method": "Direct summary of the named source series; no causal or municipal inference.",
+      "source_refs": [
+        "nasa-power-53c09f165a58"
+      ],
+      "temporal_scope": "2024 daily series summarized annually",
+      "unit": "degrees Celsius",
+      "value": 17.439344
+    },
+    {
+      "evidence_type": "estimated",
+      "geographic_scope": "gridded-point-near=(35.69439,51.42151)",
+      "id": "climate-t2m-max-annual-maximum",
+      "limitations": [
+        "NASA POWER is a gridded analysis-ready product, not a station observation.",
+        "One point does not measure within-city microclimate or individual exposure."
+      ],
+      "method": "Direct summary of the named source series; no causal or municipal inference.",
+      "source_refs": [
+        "nasa-power-53c09f165a58"
+      ],
+      "temporal_scope": "2024 maximum of daily maximum series",
+      "unit": "degrees Celsius",
+      "value": 42.42
+    },
+    {
+      "evidence_type": "estimated",
+      "geographic_scope": "gridded-point-near=(35.69439,51.42151)",
+      "id": "climate-days-t2m-max-ge-35c",
+      "limitations": [
+        "NASA POWER is a gridded analysis-ready product, not a station observation.",
+        "One point does not measure within-city microclimate or individual exposure.",
+        "The 35-degree threshold is a transparent screen, not a local warning standard."
+      ],
+      "method": "Direct summary of the named source series; no causal or municipal inference.",
+      "source_refs": [
+        "nasa-power-53c09f165a58"
+      ],
+      "temporal_scope": "2024 count using a declared 35 degrees Celsius screening threshold",
+      "unit": "days",
+      "value": 90.0
+    },
+    {
+      "evidence_type": "estimated",
+      "geographic_scope": "gridded-point-near=(35.69439,51.42151)",
+      "id": "climate-relative-humidity-annual-mean",
+      "limitations": [
+        "NASA POWER is a gridded analysis-ready product, not a station observation.",
+        "One point does not measure within-city microclimate or individual exposure."
+      ],
+      "method": "Direct summary of the named source series; no causal or municipal inference.",
+      "source_refs": [
+        "nasa-power-53c09f165a58"
+      ],
+      "temporal_scope": "2024 daily series summarized annually",
+      "unit": "percent",
+      "value": 43.048142
+    },
+    {
+      "evidence_type": "estimated",
+      "geographic_scope": "country-context=IR",
+      "id": "country-sp-urb-totl-in-zs",
+      "limitations": [
+        "This national aggregate is context only and must not be interpreted as a city value.",
+        "World Bank indicator definitions, revisions, and comparability limits apply."
+      ],
+      "method": "Direct summary of the named source series; no causal or municipal inference.",
+      "source_refs": [
+        "world-bank-a690c36b4644"
+      ],
+      "temporal_scope": "2023",
+      "unit": "percent",
+      "value": 76.675957
+    }
+  ],
+  "proposed_follow_up": [
+    "Acquire an official municipal boundary and sub-city heat or land-surface observations.",
+    "Add population, vulnerability, facilities, capacities, opening hours, and travel networks."
+  ],
+  "question": "What does the standardized point series show, and what evidence is still required before heat-access planning?",
+  "recommendation_issued": false,
+  "required_next_evidence": [
+    "Observed local exposure and outcome measures.",
+    "Versioned facilities and access network with jurisdiction-specific constraints."
+  ],
+  "run_id": "geonames.112931.screen.heat.2024",
+  "scenario_id": "geonames.112931.heat-screen.v1",
+  "schema_version": "1.0.0",
+  "source_refs": [
+    "nasa-power-53c09f165a58",
+    "world-bank-a690c36b4644",
+    "world-bank-388618048c6c",
+    "world-bank-88e0fde05ae4"
+  ],
+  "status": "screened",
+  "template_id": "standard.heat-screen.v1",
+  "title": "Tehran 2024 heat-context descriptive screen"
+}

@@ -51,6 +51,21 @@ edge identifiers, dangling endpoints, and causal or optimized labels on source r
 current Tier-G seed graph contains only observed city-to-country gazetteer relationships; it is a
 contract and identity foundation, not yet a routing or behavioral network.
 
+### 2b. Standardized city layer
+
+Tier S compiles three deliberately different geographic alignments without collapsing them:
+
+- `identity-point`: GeoNames city identity, source point, timezone, and country code;
+- `gridded-point`: NASA POWER daily climate values at the requested point; and
+- `country-context`: World Bank national aggregates retained only as context proxies.
+
+Each bundle embeds exact source manifests, source bindings, a six-check quality report, typed
+summary metrics, and three independent screening records. The protocol rejects missing alignment
+layers, unknown source references, failed required checks, incomplete values, duplicated
+templates, unsafe artifact paths, and recommendation or analysis-mode upgrades. Two templates are
+descriptive; the third must release `insufficient-evidence`. This layer is intentionally incapable
+of issuing an intervention recommendation.
+
 ### 3. Analytical layer
 
 Each engine consumes typed semantic inputs and returns evidence items with the weakest accurate
@@ -97,7 +112,8 @@ a temporary directory and requires byte-for-byte equality with committed artifac
 
 ## Current limits
 
-The current milestone implements a 250-point global catalog and a small semantic seed graph, not
-250 standardized adapters or official municipal geometries. It does not yet implement production
-network routing, forecasting, causal identification, large-scale simulation, API, web UI, hosted
-demo, production security controls, external review, real users, or policy impact.
+The current milestone implements a 250-point global catalog, a small semantic seed graph, and 30
+standardized descriptive bundles. It does not implement official municipal geometries or deep
+local evidence for those 30 cities. Production network routing, forecasting, causal
+identification, large-scale simulation, API, web UI, hosted demo, production security controls,
+external review, real users, and policy impact remain incomplete.

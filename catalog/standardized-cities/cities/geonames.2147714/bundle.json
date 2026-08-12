@@ -1,0 +1,847 @@
+{
+  "adapter": {
+    "bbox": {
+      "east": 151.25732000000002,
+      "north": -33.81785,
+      "south": -33.917849999999994,
+      "west": 151.15732
+    },
+    "capabilities": [
+      "city-identity",
+      "daily-climate-description",
+      "country-context-description",
+      "evidence-readiness-screening"
+    ],
+    "city_id": "geonames.2147714",
+    "country_code": "AU",
+    "coverage": {
+      "end": "2024-12-31T23:59:59Z",
+      "start": "2023-01-01T00:00:00Z"
+    },
+    "data_gaps": [
+      "No official municipal polygon is included.",
+      "No sub-city population, exposure, facility, network, asset, cost, budget, or policy-constraint data are included.",
+      "No source in this bundle establishes causal effects or observed intervention outcomes."
+    ],
+    "display_name": "Sydney",
+    "limitations": [
+      "Tier S is a standardized cross-city screening bundle, not a deep city adapter.",
+      "The bounding box is a deterministic point buffer for indexing, not an official boundary.",
+      "National World Bank indicators are context proxies and cannot be interpreted as city measures."
+    ],
+    "schema_version": "1.0.0",
+    "source_ids": [
+      "geonames-cities15000",
+      "nasa-power-daily-point",
+      "world-bank-indicators-v2"
+    ],
+    "tier": "S",
+    "timezone": "Australia/Sydney"
+  },
+  "bundle_id": "geonames.2147714.tier-s.2024",
+  "catalog_entry": {
+    "admin1_code": "02",
+    "ascii_name": "Sydney",
+    "city_id": "geonames.2147714",
+    "country_code": "AU",
+    "feature_code": "PPLA",
+    "geoname_id": 2147714,
+    "limitations": [
+      "This is a gazetteer point, not an official municipal boundary.",
+      "Source population values may use different years and definitions.",
+      "Tier G denotes catalog discoverability, not deep analytical readiness."
+    ],
+    "location": {
+      "latitude": -33.86785,
+      "longitude": 151.20732
+    },
+    "name": "Sydney",
+    "selection_basis": "country-leader",
+    "selection_rank": 26,
+    "source_modification_date": "2026-06-24",
+    "source_population": 5638830,
+    "source_ref": "geonames-cities15000-98bc5fbd4deb",
+    "tier": "G",
+    "timezone": "Australia/Sydney"
+  },
+  "created_at": "2026-08-12T10:07:38.058078Z",
+  "limitations": [
+    "This bundle supports reproducible descriptive comparison and evidence-gap screening only.",
+    "It does not support a city intervention recommendation, forecast, causal claim, simulated impact, or optimized action."
+  ],
+  "metrics": [
+    {
+      "evidence_type": "estimated",
+      "geographic_scope": "gridded-point-near=(-33.86785,151.20732)",
+      "id": "climate-t2m-annual-mean",
+      "limitations": [
+        "NASA POWER is a gridded analysis-ready product, not a station observation.",
+        "One point does not measure within-city microclimate or individual exposure."
+      ],
+      "method": "Direct summary of the named source series; no causal or municipal inference.",
+      "source_refs": [
+        "nasa-power-bddb5efb56aa"
+      ],
+      "temporal_scope": "2024 daily series summarized annually",
+      "unit": "degrees Celsius",
+      "value": 19.339098
+    },
+    {
+      "evidence_type": "estimated",
+      "geographic_scope": "gridded-point-near=(-33.86785,151.20732)",
+      "id": "climate-t2m-max-annual-maximum",
+      "limitations": [
+        "NASA POWER is a gridded analysis-ready product, not a station observation.",
+        "One point does not measure within-city microclimate or individual exposure."
+      ],
+      "method": "Direct summary of the named source series; no causal or municipal inference.",
+      "source_refs": [
+        "nasa-power-bddb5efb56aa"
+      ],
+      "temporal_scope": "2024 maximum of daily maximum series",
+      "unit": "degrees Celsius",
+      "value": 34.54
+    },
+    {
+      "evidence_type": "estimated",
+      "geographic_scope": "gridded-point-near=(-33.86785,151.20732)",
+      "id": "climate-t2m-min-annual-minimum",
+      "limitations": [
+        "NASA POWER is a gridded analysis-ready product, not a station observation.",
+        "One point does not measure within-city microclimate or individual exposure."
+      ],
+      "method": "Direct summary of the named source series; no causal or municipal inference.",
+      "source_refs": [
+        "nasa-power-bddb5efb56aa"
+      ],
+      "temporal_scope": "2024 minimum of daily minimum series",
+      "unit": "degrees Celsius",
+      "value": 8.84
+    },
+    {
+      "evidence_type": "estimated",
+      "geographic_scope": "gridded-point-near=(-33.86785,151.20732)",
+      "id": "climate-precipitation-annual-sum",
+      "limitations": [
+        "NASA POWER is a gridded analysis-ready product, not a station observation.",
+        "One point does not measure within-city microclimate or individual exposure."
+      ],
+      "method": "Direct summary of the named source series; no causal or municipal inference.",
+      "source_refs": [
+        "nasa-power-bddb5efb56aa"
+      ],
+      "temporal_scope": "2024 sum of daily corrected precipitation",
+      "unit": "millimeters",
+      "value": 812.88
+    },
+    {
+      "evidence_type": "estimated",
+      "geographic_scope": "gridded-point-near=(-33.86785,151.20732)",
+      "id": "climate-wind-speed-annual-mean",
+      "limitations": [
+        "NASA POWER is a gridded analysis-ready product, not a station observation.",
+        "One point does not measure within-city microclimate or individual exposure."
+      ],
+      "method": "Direct summary of the named source series; no causal or municipal inference.",
+      "source_refs": [
+        "nasa-power-bddb5efb56aa"
+      ],
+      "temporal_scope": "2024 daily series summarized annually",
+      "unit": "meters per second",
+      "value": 4.054836
+    },
+    {
+      "evidence_type": "estimated",
+      "geographic_scope": "gridded-point-near=(-33.86785,151.20732)",
+      "id": "climate-relative-humidity-annual-mean",
+      "limitations": [
+        "NASA POWER is a gridded analysis-ready product, not a station observation.",
+        "One point does not measure within-city microclimate or individual exposure."
+      ],
+      "method": "Direct summary of the named source series; no causal or municipal inference.",
+      "source_refs": [
+        "nasa-power-bddb5efb56aa"
+      ],
+      "temporal_scope": "2024 daily series summarized annually",
+      "unit": "percent",
+      "value": 73.725956
+    },
+    {
+      "evidence_type": "estimated",
+      "geographic_scope": "gridded-point-near=(-33.86785,151.20732)",
+      "id": "climate-days-t2m-max-ge-35c",
+      "limitations": [
+        "NASA POWER is a gridded analysis-ready product, not a station observation.",
+        "One point does not measure within-city microclimate or individual exposure.",
+        "The 35-degree threshold is a transparent screen, not a local warning standard."
+      ],
+      "method": "Direct summary of the named source series; no causal or municipal inference.",
+      "source_refs": [
+        "nasa-power-bddb5efb56aa"
+      ],
+      "temporal_scope": "2024 count using a declared 35 degrees Celsius screening threshold",
+      "unit": "days",
+      "value": 0.0
+    },
+    {
+      "evidence_type": "estimated",
+      "geographic_scope": "gridded-point-near=(-33.86785,151.20732)",
+      "id": "climate-days-precipitation-ge-20mm",
+      "limitations": [
+        "NASA POWER is a gridded analysis-ready product, not a station observation.",
+        "One point does not measure within-city microclimate or individual exposure.",
+        "The 20-millimeter threshold is a transparent screen, not a flood model."
+      ],
+      "method": "Direct summary of the named source series; no causal or municipal inference.",
+      "source_refs": [
+        "nasa-power-bddb5efb56aa"
+      ],
+      "temporal_scope": "2024 count using a declared 20 millimeters per day screening threshold",
+      "unit": "days",
+      "value": 9.0
+    },
+    {
+      "evidence_type": "estimated",
+      "geographic_scope": "country-context=AU",
+      "id": "country-sp-urb-totl-in-zs",
+      "limitations": [
+        "This national aggregate is context only and must not be interpreted as a city value.",
+        "World Bank indicator definitions, revisions, and comparability limits apply."
+      ],
+      "method": "Direct summary of the named source series; no causal or municipal inference.",
+      "source_refs": [
+        "world-bank-a690c36b4644"
+      ],
+      "temporal_scope": "2023",
+      "unit": "percent",
+      "value": 87.486696
+    },
+    {
+      "evidence_type": "estimated",
+      "geographic_scope": "country-context=AU",
+      "id": "country-sp-pop-totl",
+      "limitations": [
+        "This national aggregate is context only and must not be interpreted as a city value.",
+        "World Bank indicator definitions, revisions, and comparability limits apply."
+      ],
+      "method": "Direct summary of the named source series; no causal or municipal inference.",
+      "source_refs": [
+        "world-bank-388618048c6c"
+      ],
+      "temporal_scope": "2023",
+      "unit": "people",
+      "value": 26659922.0
+    },
+    {
+      "evidence_type": "estimated",
+      "geographic_scope": "country-context=AU",
+      "id": "country-ny-gdp-pcap-cd",
+      "limitations": [
+        "This national aggregate is context only and must not be interpreted as a city value.",
+        "World Bank indicator definitions, revisions, and comparability limits apply."
+      ],
+      "method": "Direct summary of the named source series; no causal or municipal inference.",
+      "source_refs": [
+        "world-bank-88e0fde05ae4"
+      ],
+      "temporal_scope": "2023",
+      "unit": "current USD per person",
+      "value": 65058.377315
+    }
+  ],
+  "quality_report": {
+    "checks": [
+      {
+        "details": "Six parameters must each contain all 366 dates in leap year 2024.",
+        "expected": 2196,
+        "id": "parsed-value-count",
+        "measured": 2196,
+        "status": "pass"
+      },
+      {
+        "details": "The source manifest count must equal the independently parsed value count.",
+        "expected": 2196,
+        "id": "source-manifest-record-count",
+        "measured": 2196,
+        "status": "pass"
+      },
+      {
+        "details": "All standardized climate parameters must share the same daily keys.",
+        "expected": 366,
+        "id": "aligned-daily-keys",
+        "measured": 366,
+        "status": "pass"
+      },
+      {
+        "details": "Required Tier-S climate values cannot use the source fill marker.",
+        "expected": 0,
+        "id": "fill-value-count",
+        "measured": 0,
+        "status": "pass"
+      },
+      {
+        "details": "POWER response coordinates are rounded relative to the GeoNames source point.",
+        "expected": "maximum coordinate difference <= 0.001 degrees",
+        "id": "coordinate-rounding",
+        "measured": 0.00032000000001630724,
+        "status": "pass"
+      },
+      {
+        "details": "The request point must exactly equal the catalog city point.",
+        "expected": "-33.86785,151.20732",
+        "id": "query-city-point",
+        "measured": "-33.86785,151.20732",
+        "status": "pass"
+      }
+    ],
+    "completeness_rate": 1.0,
+    "limitations": [
+      "Completeness validates the retrieved gridded series, not its within-city representativeness.",
+      "Coordinate agreement does not turn a gazetteer point into a municipal boundary."
+    ],
+    "missing_values": 0,
+    "overall_status": "pass"
+  },
+  "scenario_runs": [
+    {
+      "analysis_mode": "descriptive",
+      "city_id": "geonames.2147714",
+      "created_at": "2026-08-12T10:07:38.058078Z",
+      "decision_readiness": "descriptive-only",
+      "interpretation": "The run reports source-typed climate summaries and national context without estimating people exposed or an intervention effect.",
+      "limitations": [
+        "This is a standardized descriptive screen, not a forecast, causal result, simulation, optimization, or recommendation.",
+        "No municipal boundary, population exposure surface, asset inventory, service network, or local policy constraint is present."
+      ],
+      "metrics": [
+        {
+          "evidence_type": "estimated",
+          "geographic_scope": "gridded-point-near=(-33.86785,151.20732)",
+          "id": "climate-t2m-annual-mean",
+          "limitations": [
+            "NASA POWER is a gridded analysis-ready product, not a station observation.",
+            "One point does not measure within-city microclimate or individual exposure."
+          ],
+          "method": "Direct summary of the named source series; no causal or municipal inference.",
+          "source_refs": [
+            "nasa-power-bddb5efb56aa"
+          ],
+          "temporal_scope": "2024 daily series summarized annually",
+          "unit": "degrees Celsius",
+          "value": 19.339098
+        },
+        {
+          "evidence_type": "estimated",
+          "geographic_scope": "gridded-point-near=(-33.86785,151.20732)",
+          "id": "climate-t2m-max-annual-maximum",
+          "limitations": [
+            "NASA POWER is a gridded analysis-ready product, not a station observation.",
+            "One point does not measure within-city microclimate or individual exposure."
+          ],
+          "method": "Direct summary of the named source series; no causal or municipal inference.",
+          "source_refs": [
+            "nasa-power-bddb5efb56aa"
+          ],
+          "temporal_scope": "2024 maximum of daily maximum series",
+          "unit": "degrees Celsius",
+          "value": 34.54
+        },
+        {
+          "evidence_type": "estimated",
+          "geographic_scope": "gridded-point-near=(-33.86785,151.20732)",
+          "id": "climate-days-t2m-max-ge-35c",
+          "limitations": [
+            "NASA POWER is a gridded analysis-ready product, not a station observation.",
+            "One point does not measure within-city microclimate or individual exposure.",
+            "The 35-degree threshold is a transparent screen, not a local warning standard."
+          ],
+          "method": "Direct summary of the named source series; no causal or municipal inference.",
+          "source_refs": [
+            "nasa-power-bddb5efb56aa"
+          ],
+          "temporal_scope": "2024 count using a declared 35 degrees Celsius screening threshold",
+          "unit": "days",
+          "value": 0.0
+        },
+        {
+          "evidence_type": "estimated",
+          "geographic_scope": "gridded-point-near=(-33.86785,151.20732)",
+          "id": "climate-relative-humidity-annual-mean",
+          "limitations": [
+            "NASA POWER is a gridded analysis-ready product, not a station observation.",
+            "One point does not measure within-city microclimate or individual exposure."
+          ],
+          "method": "Direct summary of the named source series; no causal or municipal inference.",
+          "source_refs": [
+            "nasa-power-bddb5efb56aa"
+          ],
+          "temporal_scope": "2024 daily series summarized annually",
+          "unit": "percent",
+          "value": 73.725956
+        },
+        {
+          "evidence_type": "estimated",
+          "geographic_scope": "country-context=AU",
+          "id": "country-sp-urb-totl-in-zs",
+          "limitations": [
+            "This national aggregate is context only and must not be interpreted as a city value.",
+            "World Bank indicator definitions, revisions, and comparability limits apply."
+          ],
+          "method": "Direct summary of the named source series; no causal or municipal inference.",
+          "source_refs": [
+            "world-bank-a690c36b4644"
+          ],
+          "temporal_scope": "2023",
+          "unit": "percent",
+          "value": 87.486696
+        }
+      ],
+      "proposed_follow_up": [
+        "Acquire an official municipal boundary and sub-city heat or land-surface observations.",
+        "Add population, vulnerability, facilities, capacities, opening hours, and travel networks."
+      ],
+      "question": "What does the standardized point series show, and what evidence is still required before heat-access planning?",
+      "recommendation_issued": false,
+      "required_next_evidence": [
+        "Observed local exposure and outcome measures.",
+        "Versioned facilities and access network with jurisdiction-specific constraints."
+      ],
+      "run_id": "geonames.2147714.screen.heat.2024",
+      "scenario_id": "geonames.2147714.heat-screen.v1",
+      "schema_version": "1.0.0",
+      "source_refs": [
+        "nasa-power-bddb5efb56aa",
+        "world-bank-a690c36b4644",
+        "world-bank-388618048c6c",
+        "world-bank-88e0fde05ae4"
+      ],
+      "status": "screened",
+      "template_id": "standard.heat-screen.v1",
+      "title": "Sydney 2024 heat-context descriptive screen"
+    },
+    {
+      "analysis_mode": "descriptive",
+      "city_id": "geonames.2147714",
+      "created_at": "2026-08-12T10:07:38.058078Z",
+      "decision_readiness": "descriptive-only",
+      "interpretation": "The run summarizes gridded precipitation and wind context but does not model inundation, damages, or service disruption.",
+      "limitations": [
+        "This is a standardized descriptive screen, not a forecast, causal result, simulation, optimization, or recommendation.",
+        "No municipal boundary, population exposure surface, asset inventory, service network, or local policy constraint is present."
+      ],
+      "metrics": [
+        {
+          "evidence_type": "estimated",
+          "geographic_scope": "gridded-point-near=(-33.86785,151.20732)",
+          "id": "climate-precipitation-annual-sum",
+          "limitations": [
+            "NASA POWER is a gridded analysis-ready product, not a station observation.",
+            "One point does not measure within-city microclimate or individual exposure."
+          ],
+          "method": "Direct summary of the named source series; no causal or municipal inference.",
+          "source_refs": [
+            "nasa-power-bddb5efb56aa"
+          ],
+          "temporal_scope": "2024 sum of daily corrected precipitation",
+          "unit": "millimeters",
+          "value": 812.88
+        },
+        {
+          "evidence_type": "estimated",
+          "geographic_scope": "gridded-point-near=(-33.86785,151.20732)",
+          "id": "climate-days-precipitation-ge-20mm",
+          "limitations": [
+            "NASA POWER is a gridded analysis-ready product, not a station observation.",
+            "One point does not measure within-city microclimate or individual exposure.",
+            "The 20-millimeter threshold is a transparent screen, not a flood model."
+          ],
+          "method": "Direct summary of the named source series; no causal or municipal inference.",
+          "source_refs": [
+            "nasa-power-bddb5efb56aa"
+          ],
+          "temporal_scope": "2024 count using a declared 20 millimeters per day screening threshold",
+          "unit": "days",
+          "value": 9.0
+        },
+        {
+          "evidence_type": "estimated",
+          "geographic_scope": "gridded-point-near=(-33.86785,151.20732)",
+          "id": "climate-wind-speed-annual-mean",
+          "limitations": [
+            "NASA POWER is a gridded analysis-ready product, not a station observation.",
+            "One point does not measure within-city microclimate or individual exposure."
+          ],
+          "method": "Direct summary of the named source series; no causal or municipal inference.",
+          "source_refs": [
+            "nasa-power-bddb5efb56aa"
+          ],
+          "temporal_scope": "2024 daily series summarized annually",
+          "unit": "meters per second",
+          "value": 4.054836
+        },
+        {
+          "evidence_type": "estimated",
+          "geographic_scope": "country-context=AU",
+          "id": "country-sp-pop-totl",
+          "limitations": [
+            "This national aggregate is context only and must not be interpreted as a city value.",
+            "World Bank indicator definitions, revisions, and comparability limits apply."
+          ],
+          "method": "Direct summary of the named source series; no causal or municipal inference.",
+          "source_refs": [
+            "world-bank-388618048c6c"
+          ],
+          "temporal_scope": "2023",
+          "unit": "people",
+          "value": 26659922.0
+        }
+      ],
+      "proposed_follow_up": [
+        "Acquire official drainage, elevation, land-cover, asset, and incident data.",
+        "Calibrate a local hydrologic or disruption model before comparing interventions."
+      ],
+      "question": "What does the standardized point series show, and what evidence is still required before flood or disruption planning?",
+      "recommendation_issued": false,
+      "required_next_evidence": [
+        "Locally validated rainfall and flood observations.",
+        "Versioned assets, networks, capacities, costs, and jurisdictional constraints."
+      ],
+      "run_id": "geonames.2147714.screen.precipitation.2024",
+      "scenario_id": "geonames.2147714.precipitation-screen.v1",
+      "schema_version": "1.0.0",
+      "source_refs": [
+        "nasa-power-bddb5efb56aa",
+        "world-bank-a690c36b4644",
+        "world-bank-388618048c6c",
+        "world-bank-88e0fde05ae4"
+      ],
+      "status": "screened",
+      "template_id": "standard.precipitation-screen.v1",
+      "title": "Sydney 2024 precipitation-context descriptive screen"
+    },
+    {
+      "analysis_mode": "descriptive",
+      "city_id": "geonames.2147714",
+      "created_at": "2026-08-12T10:07:38.058078Z",
+      "decision_readiness": "insufficient-evidence",
+      "interpretation": "No. Point climate and country context do not identify affected people, feasible actions, costs, constraints, counterfactual outcomes, or observed impact.",
+      "limitations": [
+        "This is a standardized descriptive screen, not a forecast, causal result, simulation, optimization, or recommendation.",
+        "No municipal boundary, population exposure surface, asset inventory, service network, or local policy constraint is present.",
+        "Country GDP per capita is not a city budget, cost, income, or fiscal-capacity measure."
+      ],
+      "metrics": [
+        {
+          "evidence_type": "estimated",
+          "geographic_scope": "gridded-point-near=(-33.86785,151.20732)",
+          "id": "climate-t2m-max-annual-maximum",
+          "limitations": [
+            "NASA POWER is a gridded analysis-ready product, not a station observation.",
+            "One point does not measure within-city microclimate or individual exposure."
+          ],
+          "method": "Direct summary of the named source series; no causal or municipal inference.",
+          "source_refs": [
+            "nasa-power-bddb5efb56aa"
+          ],
+          "temporal_scope": "2024 maximum of daily maximum series",
+          "unit": "degrees Celsius",
+          "value": 34.54
+        },
+        {
+          "evidence_type": "estimated",
+          "geographic_scope": "country-context=AU",
+          "id": "country-ny-gdp-pcap-cd",
+          "limitations": [
+            "This national aggregate is context only and must not be interpreted as a city value.",
+            "World Bank indicator definitions, revisions, and comparability limits apply."
+          ],
+          "method": "Direct summary of the named source series; no causal or municipal inference.",
+          "source_refs": [
+            "world-bank-88e0fde05ae4"
+          ],
+          "temporal_scope": "2023",
+          "unit": "current USD per person",
+          "value": 65058.377315
+        }
+      ],
+      "proposed_follow_up": [
+        "Build a separate Tier-D adapter from official local sources.",
+        "Release failed or infeasible results rather than upgrading these descriptors."
+      ],
+      "question": "Can the current Tier-S evidence support a city intervention choice or claimed outcome?",
+      "recommendation_issued": false,
+      "required_next_evidence": [
+        "Municipal geography and local administrative or sensor data.",
+        "Scenario-specific actions, budgets, capacities, equity constraints, and outcome evidence.",
+        "Historical replay, simulation validation, or identification diagnostics appropriate to the claim."
+      ],
+      "run_id": "geonames.2147714.screen.policy-readiness.2024",
+      "scenario_id": "geonames.2147714.policy-readiness.v1",
+      "schema_version": "1.0.0",
+      "source_refs": [
+        "nasa-power-bddb5efb56aa",
+        "world-bank-a690c36b4644",
+        "world-bank-388618048c6c",
+        "world-bank-88e0fde05ae4"
+      ],
+      "status": "insufficient-evidence",
+      "template_id": "standard.policy-readiness.v1",
+      "title": "Sydney intervention-readiness evidence gate"
+    }
+  ],
+  "schema_version": "1.0.0",
+  "source_bindings": [
+    {
+      "alignment": "identity-point",
+      "artifact_id": "geonames-cities15000-98bc5fbd4deb",
+      "content_hash": "sha256:60c00392b1ff827b11838ebd037634bd06a452c4e161dc91678e03f316b287e7",
+      "geographic_scope": "Worldwide populated places in the cities15000 extract",
+      "limitations": [
+        "GeoNames aggregates many sources and provides no warranty of accuracy or completeness.",
+        "Population and administrative attributes may use different source years or definitions.",
+        "The gazetteer contains points, not official municipal boundaries or service areas."
+      ],
+      "role": "City identity, country code, timezone, and source point.",
+      "source_id": "geonames-cities15000",
+      "temporal_scope": "Current GeoNames extract as of the recorded modification/retrieval time"
+    },
+    {
+      "alignment": "gridded-point",
+      "artifact_id": "nasa-power-bddb5efb56aa",
+      "content_hash": "sha256:d38fa857d037167b64fc43dfd4dae7e0299b3dba027a51a019e8a99db1e56926",
+      "geographic_scope": "point=(-33.86785,151.20732)",
+      "limitations": [
+        "POWER values are gridded analysis-ready products, not station observations.",
+        "Near-real-time meteorology can be replaced by improved products after retrieval.",
+        "One point does not characterize within-city microclimate or exposure."
+      ],
+      "role": "Daily gridded climate series at the catalog point.",
+      "source_id": "nasa-power-daily-point",
+      "temporal_scope": "2024-01-01 through 2024-12-31"
+    },
+    {
+      "alignment": "country-context",
+      "artifact_id": "world-bank-a690c36b4644",
+      "content_hash": "sha256:869ea9cdf51683bfc5f78211371110e1df3d422cc2c83b057b6240207164256e",
+      "geographic_scope": "country=all",
+      "limitations": [
+        "Indicators may be estimates, modeled values, or aggregates; inspect metadata.",
+        "A bounded API page is not the complete indicator series.",
+        "Cross-country comparability and revision behavior vary by indicator."
+      ],
+      "role": "Country-level context only: SP.URB.TOTL.IN.ZS.",
+      "source_id": "world-bank-indicators-v2",
+      "temporal_scope": "2023 through 2023"
+    },
+    {
+      "alignment": "country-context",
+      "artifact_id": "world-bank-388618048c6c",
+      "content_hash": "sha256:ce1eb1a1b8a3eb90a2e06387d4286ba9d1797e9a1c1b957a566e0dda7367ecb8",
+      "geographic_scope": "country=all",
+      "limitations": [
+        "Indicators may be estimates, modeled values, or aggregates; inspect metadata.",
+        "A bounded API page is not the complete indicator series.",
+        "Cross-country comparability and revision behavior vary by indicator."
+      ],
+      "role": "Country-level context only: SP.POP.TOTL.",
+      "source_id": "world-bank-indicators-v2",
+      "temporal_scope": "2023 through 2023"
+    },
+    {
+      "alignment": "country-context",
+      "artifact_id": "world-bank-88e0fde05ae4",
+      "content_hash": "sha256:7274fb80754753f1aaebfefd9b8f5cc167f121343c87315270c27cbd64e07306",
+      "geographic_scope": "country=all",
+      "limitations": [
+        "Indicators may be estimates, modeled values, or aggregates; inspect metadata.",
+        "A bounded API page is not the complete indicator series.",
+        "Cross-country comparability and revision behavior vary by indicator."
+      ],
+      "role": "Country-level context only: NY.GDP.PCAP.CD.",
+      "source_id": "world-bank-indicators-v2",
+      "temporal_scope": "2023 through 2023"
+    }
+  ],
+  "source_manifests": [
+    {
+      "artifact_id": "geonames-cities15000-98bc5fbd4deb",
+      "artifact_path": "geonames-cities15000-98bc5fbd4deb.zip",
+      "content_hash": "sha256:60c00392b1ff827b11838ebd037634bd06a452c4e161dc91678e03f316b287e7",
+      "data_url": "https://download.geonames.org/export/dump/cities15000.zip",
+      "geographic_scope": "Worldwide populated places in the cities15000 extract",
+      "landing_url": "https://download.geonames.org/export/dump/",
+      "license": "Creative Commons Attribution 4.0; attribution to GeoNames required",
+      "limitations": [
+        "GeoNames aggregates many sources and provides no warranty of accuracy or completeness.",
+        "Population and administrative attributes may use different source years or definitions.",
+        "The gazetteer contains points, not official municipal boundaries or service areas."
+      ],
+      "name": "GeoNames cities15000 gazetteer extract",
+      "publisher": "GeoNames",
+      "query": {
+        "dataset": "cities15000",
+        "max_compressed_bytes": 10000000,
+        "max_uncompressed_bytes": 25000000
+      },
+      "record_count": 34086,
+      "response_headers": {
+        "content-length": "3305810",
+        "content-type": "application/zip",
+        "etag": "\"327152-658d00dc66457\"",
+        "last-modified": "Wed, 12 Aug 2026 02:07:47 GMT"
+      },
+      "retrieved_at": "2026-08-12T09:50:52.090093Z",
+      "schema_fingerprint": "sha256:d74b2a02aa96673bb28b96960fdd28d274515c42abbaca9c7f8f1ae909c31077",
+      "schema_version": "1.0.0",
+      "source_id": "geonames-cities15000",
+      "temporal_scope": "Current GeoNames extract as of the recorded modification/retrieval time",
+      "upstream_updated_at": "2026-08-12T02:07:47Z"
+    },
+    {
+      "artifact_id": "nasa-power-bddb5efb56aa",
+      "artifact_path": "nasa-power-bddb5efb56aa.geojson",
+      "content_hash": "sha256:d38fa857d037167b64fc43dfd4dae7e0299b3dba027a51a019e8a99db1e56926",
+      "data_url": "https://power.larc.nasa.gov/api/temporal/daily/point?parameters=T2M%2CT2M_MAX%2CT2M_MIN%2CPRECTOTCORR%2CWS10M%2CRH2M&community=RE&longitude=151.20732&latitude=-33.86785&start=20240101&end=20241231&format=JSON&time-standard=UTC",
+      "geographic_scope": "point=(-33.86785,151.20732)",
+      "landing_url": "https://power.larc.nasa.gov/docs/services/api/temporal/daily/",
+      "license": "NASA Earth science public data; retain POWER citation and access metadata",
+      "limitations": [
+        "POWER values are gridded analysis-ready products, not station observations.",
+        "Near-real-time meteorology can be replaced by improved products after retrieval.",
+        "One point does not characterize within-city microclimate or exposure."
+      ],
+      "name": "NASA POWER daily point data (v2.9.6)",
+      "publisher": "NASA Langley Research Center POWER Project",
+      "query": {
+        "community": "RE",
+        "end": "2024-12-31",
+        "latitude": -33.86785,
+        "longitude": 151.20732,
+        "parameters": [
+          "T2M",
+          "T2M_MAX",
+          "T2M_MIN",
+          "PRECTOTCORR",
+          "WS10M",
+          "RH2M"
+        ],
+        "start": "2024-01-01",
+        "time_standard": "UTC"
+      },
+      "record_count": 2196,
+      "response_headers": {
+        "content-type": "application/json"
+      },
+      "retrieved_at": "2026-08-12T10:07:38.058078Z",
+      "schema_fingerprint": "sha256:9182786921dcf3a7cc07e1efbe75dbfeb386cdb76c454739bd6b28ccbd0e9335",
+      "schema_version": "1.0.0",
+      "source_id": "nasa-power-daily-point",
+      "temporal_scope": "2024-01-01 through 2024-12-31"
+    },
+    {
+      "artifact_id": "world-bank-a690c36b4644",
+      "artifact_path": "world-bank-sp.urb.totl.in.zs-a690c36b4644.json",
+      "content_hash": "sha256:869ea9cdf51683bfc5f78211371110e1df3d422cc2c83b057b6240207164256e",
+      "data_url": "https://api.worldbank.org/v2/country/all/indicator/SP.URB.TOTL.IN.ZS?date=2023%3A2023&format=json&page=1&per_page=1000",
+      "geographic_scope": "country=all",
+      "landing_url": "https://datahelpdesk.worldbank.org/knowledgebase/articles/889392",
+      "license": "CC BY 4.0 for World Bank-produced open data; verify indicator metadata",
+      "limitations": [
+        "Indicators may be estimates, modeled values, or aggregates; inspect metadata.",
+        "A bounded API page is not the complete indicator series.",
+        "Cross-country comparability and revision behavior vary by indicator."
+      ],
+      "name": "World Bank indicator SP.URB.TOTL.IN.ZS",
+      "publisher": "World Bank Group",
+      "query": {
+        "country": "all",
+        "end_year": 2023,
+        "indicator": "SP.URB.TOTL.IN.ZS",
+        "page": 1,
+        "per_page": 1000,
+        "start_year": 2023
+      },
+      "record_count": 265,
+      "response_headers": {
+        "content-type": "application/json;charset=utf-8",
+        "last-modified": "Wed, 12 Aug 2026 10:06:25 GMT"
+      },
+      "retrieved_at": "2026-08-12T10:06:25.501697Z",
+      "schema_fingerprint": "sha256:ef676090f6185587f8fb10184e87ae4149eafac44cdb9d9f5c0a078727b09d3e",
+      "schema_version": "1.0.0",
+      "source_id": "world-bank-indicators-v2",
+      "temporal_scope": "2023 through 2023",
+      "upstream_updated_at": "2026-07-13T00:00:00Z"
+    },
+    {
+      "artifact_id": "world-bank-388618048c6c",
+      "artifact_path": "world-bank-sp.pop.totl-388618048c6c.json",
+      "content_hash": "sha256:ce1eb1a1b8a3eb90a2e06387d4286ba9d1797e9a1c1b957a566e0dda7367ecb8",
+      "data_url": "https://api.worldbank.org/v2/country/all/indicator/SP.POP.TOTL?date=2023%3A2023&format=json&page=1&per_page=1000",
+      "geographic_scope": "country=all",
+      "landing_url": "https://datahelpdesk.worldbank.org/knowledgebase/articles/889392",
+      "license": "CC BY 4.0 for World Bank-produced open data; verify indicator metadata",
+      "limitations": [
+        "Indicators may be estimates, modeled values, or aggregates; inspect metadata.",
+        "A bounded API page is not the complete indicator series.",
+        "Cross-country comparability and revision behavior vary by indicator."
+      ],
+      "name": "World Bank indicator SP.POP.TOTL",
+      "publisher": "World Bank Group",
+      "query": {
+        "country": "all",
+        "end_year": 2023,
+        "indicator": "SP.POP.TOTL",
+        "page": 1,
+        "per_page": 1000,
+        "start_year": 2023
+      },
+      "record_count": 265,
+      "response_headers": {
+        "content-type": "application/json;charset=utf-8",
+        "last-modified": "Wed, 12 Aug 2026 10:06:30 GMT"
+      },
+      "retrieved_at": "2026-08-12T10:06:30.411389Z",
+      "schema_fingerprint": "sha256:d07d07c6553fc87e6ec8b6600b7fcc280a12c1927359bb146bbe03ecbd567885",
+      "schema_version": "1.0.0",
+      "source_id": "world-bank-indicators-v2",
+      "temporal_scope": "2023 through 2023",
+      "upstream_updated_at": "2026-07-13T00:00:00Z"
+    },
+    {
+      "artifact_id": "world-bank-88e0fde05ae4",
+      "artifact_path": "world-bank-ny.gdp.pcap.cd-88e0fde05ae4.json",
+      "content_hash": "sha256:7274fb80754753f1aaebfefd9b8f5cc167f121343c87315270c27cbd64e07306",
+      "data_url": "https://api.worldbank.org/v2/country/all/indicator/NY.GDP.PCAP.CD?date=2023%3A2023&format=json&page=1&per_page=1000",
+      "geographic_scope": "country=all",
+      "landing_url": "https://datahelpdesk.worldbank.org/knowledgebase/articles/889392",
+      "license": "CC BY 4.0 for World Bank-produced open data; verify indicator metadata",
+      "limitations": [
+        "Indicators may be estimates, modeled values, or aggregates; inspect metadata.",
+        "A bounded API page is not the complete indicator series.",
+        "Cross-country comparability and revision behavior vary by indicator."
+      ],
+      "name": "World Bank indicator NY.GDP.PCAP.CD",
+      "publisher": "World Bank Group",
+      "query": {
+        "country": "all",
+        "end_year": 2023,
+        "indicator": "NY.GDP.PCAP.CD",
+        "page": 1,
+        "per_page": 1000,
+        "start_year": 2023
+      },
+      "record_count": 265,
+      "response_headers": {
+        "content-type": "application/json;charset=utf-8",
+        "last-modified": "Wed, 12 Aug 2026 10:06:35 GMT"
+      },
+      "retrieved_at": "2026-08-12T10:06:35.034985Z",
+      "schema_fingerprint": "sha256:b8f91fd5ba18169e9881437f664577d1c86554a9dfe29f585de7f6602753e072",
+      "schema_version": "1.0.0",
+      "source_id": "world-bank-indicators-v2",
+      "temporal_scope": "2023 through 2023",
+      "upstream_updated_at": "2026-07-13T00:00:00Z"
+    }
+  ]
+}

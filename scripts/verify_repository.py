@@ -8,7 +8,7 @@ import csv
 import json
 import tempfile
 from collections import Counter
-from pathlib import Path
+from pathlib import Path, PurePosixPath
 
 from civicdecision.connectors.registry import CONNECTOR_REGISTRY, registry_json
 from civicdecision.demos.heat_access import (
@@ -30,6 +30,13 @@ from civicdecision.semantic.city_catalog import (
 )
 from civicdecision.semantic.core import SemanticBundle
 from civicdecision.semantic.graph import UrbanGraphBundle
+from civicdecision.standardized.build import build_tier_s_registry, write_tier_s_artifacts
+from civicdecision.standardized.models import (
+    QualityStatus,
+    StandardizedCityBundle,
+    StandardScenarioRun,
+    TierSRegistry,
+)
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -39,18 +46,46 @@ def assert_same(left: Path, right: Path) -> None:
         raise RuntimeError(f"golden artifact mismatch: {left.relative_to(ROOT)} != {right.name}")
 
 
+def assert_tree_same(expected: Path, actual: Path) -> None:
+    expected_files = sorted(
+        path.relative_to(expected) for path in expected.rglob("*") if path.is_file()
+    )
+    actual_files = sorted(path.relative_to(actual) for path in actual.rglob("*") if path.is_file())
+    if expected_files != actual_files:
+        raise RuntimeError("golden artifact tree contains missing or unexpected files")
+    for relative in expected_files:
+        assert_same(expected / relative, actual / relative)
+
+
+def safe_relative_artifact(directory: Path, filename: str) -> Path:
+    relative = PurePosixPath(filename)
+    if relative.is_absolute() or not relative.parts or ".." in relative.parts or "\\" in filename:
+        raise RuntimeError(f"checksum path is not a safe relative POSIX path: {filename}")
+    artifact = (directory / Path(*relative.parts)).resolve()
+    if not artifact.is_relative_to(directory.resolve()) or not artifact.is_file():
+        raise RuntimeError(f"checksum target is missing or escapes its directory: {filename}")
+    return artifact
+
+
 def verify_checksum(directory: Path) -> None:
     checksum_path = directory / "SHA256SUMS"
     lines = checksum_path.read_text(encoding="ascii").splitlines()
     if not lines:
         raise RuntimeError(f"empty checksum file: {checksum_path.relative_to(ROOT)}")
+    seen: set[str] = set()
     for line in lines:
-        digest, filename = line.split("  ", 1)
-        artifact = directory / filename
+        try:
+            digest, filename = line.split("  ", 1)
+        except ValueError as exc:
+            raise RuntimeError(f"invalid checksum line: {line}") from exc
+        if len(digest) != 64 or any(character not in "0123456789abcdef" for character in digest):
+            raise RuntimeError(f"invalid SHA-256 digest in {checksum_path.relative_to(ROOT)}")
+        if filename in seen:
+            raise RuntimeError(f"duplicate checksum target: {filename}")
+        seen.add(filename)
+        artifact = safe_relative_artifact(directory, filename)
         if sha256_file(artifact)[7:] != digest:
             raise RuntimeError(f"checksum mismatch: {checksum_path.relative_to(ROOT)}")
-        if Path(filename).is_absolute() or "/" in filename:
-            raise RuntimeError(f"checksum path is not portable: {filename}")
 
 
 def rebuild_reference_workflow(
@@ -97,6 +132,9 @@ def verify_repository() -> dict[str, object]:
     )
     if missing_attributions:
         raise RuntimeError(f"missing source attribution entries: {missing_attributions}")
+    manifests_by_artifact = {item.artifact_id: item for item in manifests}
+    if len(manifests_by_artifact) != len(manifests):
+        raise RuntimeError("source manifest artifact identifiers are not globally unique")
 
     city_paths = sorted(ROOT.glob("examples/cities/*.yaml"))
     for path in city_paths:
@@ -149,6 +187,49 @@ def verify_repository() -> dict[str, object]:
         ):
             raise RuntimeError(f"global city coverage row differs at rank {city.selection_rank}")
 
+    standardized_dir = ROOT / "catalog/standardized-cities"
+    tier_s_registry = validate_document(standardized_dir / "registry.json", TierSRegistry)
+    verify_checksum(standardized_dir)
+    tier_s_bundles: list[StandardizedCityBundle] = []
+    tier_s_runs: list[StandardScenarioRun] = []
+    for entry in tier_s_registry.entries:
+        bundle_path = safe_relative_artifact(standardized_dir, entry.bundle_ref)
+        bundle = validate_document(bundle_path, StandardizedCityBundle)
+        if bundle.content_hash() != entry.bundle_hash:
+            raise RuntimeError(f"Tier-S bundle hash mismatch: {entry.city_id}")
+        for embedded in bundle.source_manifests:
+            if manifests_by_artifact.get(embedded.artifact_id) != embedded:
+                raise RuntimeError(
+                    f"Tier-S bundle embeds an unknown source: {embedded.artifact_id}"
+                )
+        for index, reference in enumerate(entry.run_refs):
+            run_path = safe_relative_artifact(standardized_dir, reference)
+            run = validate_document(run_path, StandardScenarioRun)
+            if run != bundle.scenario_runs[index] or run.content_hash() != entry.run_hashes[index]:
+                raise RuntimeError(f"Tier-S scenario run mismatch: {reference}")
+            tier_s_runs.append(run)
+        tier_s_bundles.append(bundle)
+    tier_s_coverage_path = standardized_dir / "coverage.csv"
+    with tier_s_coverage_path.open(encoding="utf-8", newline="") as handle:
+        tier_s_coverage_reader = csv.DictReader(handle)
+        tier_s_coverage_rows = list(tier_s_coverage_reader)
+    if len(tier_s_coverage_rows) != tier_s_registry.target_count:
+        raise RuntimeError("Tier-S coverage matrix row count does not match the registry")
+    for row, entry in zip(tier_s_coverage_rows, tier_s_registry.entries, strict=True):
+        if (
+            int(row["selection_order"]) != entry.selection_order
+            or row["city_id"] != entry.city_id
+            or row["bundle_hash"] != entry.bundle_hash
+        ):
+            raise RuntimeError(f"Tier-S coverage row differs for {entry.city_id}")
+    tier_s_comparison_path = standardized_dir / "cross-city-comparison.csv"
+    with tier_s_comparison_path.open(encoding="utf-8", newline="") as handle:
+        tier_s_comparison_rows = list(csv.DictReader(handle))
+    if len(tier_s_comparison_rows) != tier_s_registry.target_count:
+        raise RuntimeError("Tier-S comparison row count does not match the registry")
+    if any(int(row["recommendations_issued"]) != 0 for row in tier_s_comparison_rows):
+        raise RuntimeError("Tier-S comparison cannot contain issued recommendations")
+
     cdc_dir = ROOT / "examples/data/cdc-places"
     data = cdc_dir / "cdc-places-7ccf6e7d6dc3.json"
     manifest = cdc_dir / "cdc-places-7ccf6e7d6dc3.manifest.json"
@@ -196,9 +277,33 @@ def verify_repository() -> dict[str, object]:
             "SHA256SUMS",
         ):
             assert_same(global_catalog_dir / filename, rebuilt_city_dir / filename)
+        rebuilt_tier_s_registry, rebuilt_tier_s_bundles = build_tier_s_registry(
+            global_catalog_dir / "cities-tier-g.json",
+            ROOT / "examples/data/tier-s/nasa-power",
+            ROOT / "examples/data/tier-s/world-bank",
+            tier_s_registry.target_count,
+        )
+        rebuilt_tier_s_dir = temporary_root / "standardized-cities"
+        write_tier_s_artifacts(
+            rebuilt_tier_s_registry,
+            rebuilt_tier_s_bundles,
+            rebuilt_tier_s_dir,
+        )
+        assert_tree_same(standardized_dir, rebuilt_tier_s_dir)
 
     statuses = Counter(pack.status.value for pack in packs)
     connector_families = Counter(item.family.value for item in CONNECTOR_REGISTRY)
+    tier_s_statuses = Counter(item.status.value for item in tier_s_runs)
+    tier_s_nasa_records = sum(
+        manifest.record_count
+        for path, manifest in zip(manifest_paths, manifests, strict=True)
+        if path.is_relative_to(ROOT / "examples/data/tier-s/nasa-power")
+    )
+    tier_s_context_records = sum(
+        manifest.record_count
+        for path, manifest in zip(manifest_paths, manifests, strict=True)
+        if path.is_relative_to(ROOT / "examples/data/tier-s/world-bank")
+    )
     inspection_ranks = {1, 2, 3, 25, 50, 75, 100, 125, 150, 175, 200, 225, 244, 245, 250}
     inspected_cities = [
         {
@@ -243,6 +348,28 @@ def verify_repository() -> dict[str, object]:
         "source_manifest_records": sum(item.record_count for item in manifests),
         "source_manifests": len(manifests),
         "source_attributions": len({item.source_id for item in manifests}),
+        "tier_s_bundle_metrics": sum(len(item.metrics) for item in tier_s_bundles),
+        "tier_s_city_bundles": len(tier_s_bundles),
+        "tier_s_checksum_entries": len(
+            (standardized_dir / "SHA256SUMS").read_text(encoding="ascii").splitlines()
+        ),
+        "tier_s_country_context_records": tier_s_context_records,
+        "tier_s_cross_city_comparison_csv_hash": sha256_file(tier_s_comparison_path),
+        "tier_s_cross_city_comparison_markdown_hash": sha256_file(
+            standardized_dir / "cross-city-comparison.md"
+        ),
+        "tier_s_cross_city_comparison_rows": len(tier_s_comparison_rows),
+        "tier_s_coverage_matrix_rows": len(tier_s_coverage_rows),
+        "tier_s_exactly_rebuilt": True,
+        "tier_s_exclusions_before_target": len(tier_s_registry.exclusions_before_target),
+        "tier_s_nasa_parameter_date_values": tier_s_nasa_records,
+        "tier_s_quality_passes": sum(
+            item.quality_report.overall_status is QualityStatus.PASS for item in tier_s_bundles
+        ),
+        "tier_s_registry_content_hash": tier_s_registry.content_hash(),
+        "tier_s_scenario_runs": len(tier_s_runs),
+        "tier_s_scenario_statuses": dict(sorted(tier_s_statuses.items())),
+        "tier_s_source_bindings": sum(len(item.source_bindings) for item in tier_s_bundles),
     }
 
 

@@ -26,7 +26,7 @@ def test_cli_version() -> None:
 def test_cli_builds_schemas(tmp_path: Path) -> None:
     result = runner.invoke(app, ["schemas", "build", "--output", str(tmp_path)])
     assert result.exit_code == 0
-    assert len(list(tmp_path.glob("*.schema.json"))) == 6
+    assert len(list(tmp_path.glob("*.schema.json"))) == 9
 
 
 @pytest.mark.parametrize(
@@ -160,6 +160,52 @@ def test_cli_global_city_failure_is_nonzero(tmp_path: Path) -> None:
     )
     assert result.exit_code == 2
     assert "city catalog failed safely" in result.output
+
+
+def test_cli_builds_standardized_city_artifacts(tmp_path: Path) -> None:
+    output = tmp_path / "standardized"
+    result = runner.invoke(
+        app,
+        [
+            "cities",
+            "build-standardized",
+            "--catalog",
+            str(ROOT / "catalog/global-cities/cities-tier-g.json"),
+            "--climate-directory",
+            str(ROOT / "examples/data/tier-s/nasa-power"),
+            "--country-context-directory",
+            str(ROOT / "examples/data/tier-s/world-bank"),
+            "--target-count",
+            "2",
+            "--output",
+            str(output),
+        ],
+    )
+    assert result.exit_code == 0
+    assert "Built Tier-S standardized city foundation" in result.output
+    assert "scenario runs" in result.output
+    assert len(list((output / "cities").glob("*/bundle.json"))) == 2
+    assert len(list((output / "runs").glob("*.json"))) == 6
+
+
+def test_cli_standardized_city_failure_is_nonzero(tmp_path: Path) -> None:
+    result = runner.invoke(
+        app,
+        [
+            "cities",
+            "build-standardized",
+            "--catalog",
+            str(tmp_path / "missing.json"),
+            "--climate-directory",
+            str(tmp_path),
+            "--country-context-directory",
+            str(tmp_path),
+            "--output",
+            str(tmp_path / "output"),
+        ],
+    )
+    assert result.exit_code == 2
+    assert "standardized city build failed safely" in result.output
 
 
 def test_cli_connector_failure_is_nonzero(tmp_path: Path, monkeypatch: pytest.MonkeyPatch) -> None:

@@ -20,10 +20,11 @@ intervention definition
 
 This repository is an early implementation. The global scale described in the project blueprint is a target, not a completed result. Current, verified capabilities are listed in [`docs/STATUS.md`](docs/STATUS.md); the complete requirement-to-evidence matrix is in [`docs/REQUIREMENTS.md`](docs/REQUIREMENTS.md).
 
-The second implementation milestone establishes six generated public contracts, the evidence type
-system, deterministic validation, eight real public-data connectors, and a reproducible Tier-G
-catalog of 250 city points. Tier G means global discoverability only; it does **not** claim 250
-deep city adapters, production deployment, municipal adoption, or real-world impact.
+The third implementation milestone establishes nine generated public contracts, the evidence type
+system, deterministic validation, eight real public-data connectors, a reproducible Tier-G catalog
+of 250 city points, and 30 Tier-S standardized descriptive bundles. Tier G means global
+discoverability and Tier S means bounded cross-city screening; neither means a deep city adapter,
+production deployment, municipal adoption, or real-world impact.
 
 ## Verified reference workflow
 
@@ -38,13 +39,16 @@ radius is not travel time, the population proxy is not individual demand, and th
 is not a municipal recommendation.
 
 Current local quality evidence is recorded in
-[`verification/milestone-2-global-cities.json`](verification/milestone-2-global-cities.json). The
-independent verifier regenerates Schemas, both reference outputs, and all four global-city
-artifacts in a temporary directory and requires exact bytes.
+[`verification/milestone-3-standardized-cities.json`](verification/milestone-3-standardized-cities.json).
+The independent verifier regenerates Schemas, both reference outputs, all four global-city
+artifacts, and the complete standardized-city artifact tree in a temporary directory and requires
+exact bytes.
 
-The current source catalog contains eight verified connectors across eight source families and
-eight real public artifacts with 34,167 source records. GeoNames contributes 34,086 gazetteer
-rows; that total is not presented as 34,167 independent analytical observations. See
+The current source catalog contains eight verified connectors across eight source families. The 41
+committed source manifests cover 100,842 declared source units: 34,086 GeoNames gazetteer rows,
+65,880 NASA POWER parameter-date values for the Tier-S layer, 795 World Bank response rows for
+three context indicators, and 81 earlier bounded source units. These heterogeneous units are not
+presented as 100,842 independent policy observations. See
 [`catalog/connectors.json`](catalog/connectors.json) for authentication, request bounds, licensing
 summaries, record semantics, and primary limitations. Eight is current scope, not the final
 25–35-family target.
@@ -66,6 +70,25 @@ selection rank, and limitations for every row. It is a reproducible geographic i
 official municipal boundaries or evidence that all 250 cities are analytically ready. See
 [`docs/GLOBAL_CITY_COVERAGE.md`](docs/GLOBAL_CITY_COVERAGE.md) for the method and claim boundary.
 
+## Thirty standardized city bundles
+
+[`catalog/standardized-cities/registry.json`](catalog/standardized-cities/registry.json) indexes 30
+Tier-S bundles selected by an auditable completeness rule. Every bundle binds the same five
+artifacts: GeoNames identity, one complete 2024 NASA POWER six-parameter point series, and three
+2023 World Bank country-context pages. The compiler emits:
+
+- 30 embedded, validated Tier-S City Adapters and 30 passing quality reports;
+- 330 evidence-typed summary metrics and 150 explicit source bindings;
+- 90 independent scenario-screening records: 60 descriptive screens and 30 deliberate
+  `insufficient-evidence` releases;
+- a 30-row coverage matrix and [cross-city comparison
+  report](catalog/standardized-cities/cross-city-comparison.md); and
+- a recursive portable checksum inventory, independently rebuilt byte-for-byte.
+
+Every screening record fixes `recommendation_issued=false`. National indicators remain explicitly
+typed as country context, and the point climate series is never described as a municipal exposure
+surface. See [`docs/STANDARDIZED_CITY_COVERAGE.md`](docs/STANDARDIZED_CITY_COVERAGE.md).
+
 ## Core protocols
 
 1. `city-adapter.schema.json` — how a city declares sources, coverage, capabilities, and limitations.
@@ -74,6 +97,9 @@ official municipal boundaries or evidence that all 250 cities are analytically r
 4. `global-city-catalog.schema.json` — how Tier-G point selection and source limits are recorded.
 5. `semantic-bundle.schema.json` — canonical geography, measure, observation, facility, and event semantics.
 6. `urban-graph.schema.json` — evidence-typed nodes, edges, source references, and limitations.
+7. `standard-scenario-run.schema.json` — descriptive and insufficient-evidence screening outputs.
+8. `standardized-city-bundle.schema.json` — source alignment, quality, metrics, and scenario gates.
+9. `tier-s-registry.schema.json` — selection, exclusions, hashes, and cross-city artifact references.
 
 ## Evidence types
 
@@ -117,6 +143,13 @@ civicdecision cities build-global \
   --manifest examples/data/geonames/geonames-cities15000-98bc5fbd4deb.manifest.json \
   --target-count 250 \
   --output catalog/global-cities
+
+civicdecision cities build-standardized \
+  --catalog catalog/global-cities/cities-tier-g.json \
+  --climate-directory examples/data/tier-s/nasa-power \
+  --country-context-directory examples/data/tier-s/world-bank \
+  --target-count 30 \
+  --output catalog/standardized-cities
 ```
 
 Verify a downloaded artifact and compile the committed reference workflow:
@@ -152,6 +185,7 @@ python scripts/verify_repository.py
 - Public data are not client data.
 - Historical replay is not production deployment.
 - A gazetteer point is not an official city boundary or a deep adapter.
+- A gridded point series plus national context is not a local intervention evidence base.
 - Simulation is not observed impact.
 - Optimization is not institutional adoption.
 - Tests prove implementation behavior, not policy effectiveness.
