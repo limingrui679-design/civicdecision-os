@@ -11,7 +11,9 @@ from pathlib import Path
 
 import pytest
 
+import civicdecision.claim_audit as claim_contract
 import civicdecision.release as release_contract
+from civicdecision.claim_audit import ClaimAuditError, audit_claims
 from civicdecision.errors import IntegrityError
 from civicdecision.product.build import ProductArtifactManifest, build_product_artifacts
 from civicdecision.protocols.base import sha256_file
@@ -19,6 +21,7 @@ from civicdecision.release import (
     ReleaseValidationError,
     extract_validated_sdist,
     sha256_path,
+    validate_dependency_audit,
     validate_sdist,
     validate_wheel,
     verify_checksum_inventory,
@@ -148,12 +151,58 @@ def test_product_builder_allows_exact_regeneration_in_place(rebuilt_product: Pat
 
 def test_product_builder_rejects_stale_files_and_release_archives_fail_closed(
     tmp_path: Path,
+    monkeypatch: pytest.MonkeyPatch,
 ) -> None:
     output = tmp_path / "product"
     output.mkdir()
     (output / "stale.txt").write_text("untracked", encoding="utf-8")
     with pytest.raises(IntegrityError, match="unexpected files"):
         build_product_artifacts(ROOT, output)
+
+    installed_runtime = {"alpha": "1.0", "beta-core": "2.0"}
+    clean_audit = {
+        "dependencies": [
+            {"name": "alpha", "version": "1.0", "vulns": []},
+            {"name": "beta_core", "version": "2.0", "vulns": []},
+        ]
+    }
+    assert validate_dependency_audit(
+        clean_audit, installed_versions=installed_runtime, expected_count=2
+    ) == (clean_audit["dependencies"], 0)
+    audit_failures = (
+        ([], "report must be an object"),
+        ({}, "dependencies must be a list"),
+        ({"dependencies": ["invalid", {}]}, "malformed dependency record"),
+        (
+            {
+                "dependencies": [
+                    {"name": "alpha", "version": "1.0", "vulns": []},
+                    {"name": "alpha", "version": "1.0", "vulns": []},
+                ]
+            },
+            "incomplete, duplicated, or malformed",
+        ),
+        (
+            {"dependencies": [{"name": "alpha", "version": "1.0"}]},
+            "omitted vulnerability results",
+        ),
+        (
+            {"dependencies": [{"name": "alpha", "version": "1.1", "vulns": []}]},
+            "differs from the hash-locked installed runtime",
+        ),
+        (
+            {"dependencies": [{"name": "alpha", "version": "1.0", "vulns": [{"id": "CVE-test"}]}]},
+            "found known vulnerabilities",
+        ),
+    )
+    for audit_report, message in audit_failures:
+        expected_versions = {"alpha": "1.0"}
+        with pytest.raises(ReleaseValidationError, match=message):
+            validate_dependency_audit(
+                audit_report,
+                installed_versions=expected_versions,
+                expected_count=1 if audit_report else 0,
+            )
 
     release_dist = tmp_path / "release-dist"
     subprocess.run(
@@ -527,3 +576,549 @@ def test_product_builder_rejects_stale_files_and_release_archives_fail_closed(
     )
     with pytest.raises(ReleaseValidationError, match="duplicate member"):
         validate_sdist(duplicate_sdist, version="0.8.0")
+
+    audit_root = tmp_path / "claim-audit"
+    (audit_root / "governance").mkdir(parents=True)
+    (audit_root / "verification").mkdir()
+    (audit_root / "doc.md").write_text("Count 3. Local-only boundary.\n", encoding="utf-8")
+    (audit_root / "evidence.json").write_text('{"value": 3}\n', encoding="utf-8")
+    (audit_root / "pyproject.toml").write_text(
+        '[project]\nname = "claim-audit-fixture"\n', encoding="utf-8"
+    )
+    public_state = {
+        "schema_version": "1.0.0",
+        "checked_at": "2026-08-13T00:00:00Z",
+        "github_repository": "example/missing",
+        "github_repository_api": "https://api.github.com/repos/example/missing",
+        "github_repository_http_status": 404,
+        "local_git_remotes": [],
+        "package_project_urls": [],
+        "public_hosted_demo_url": None,
+    }
+    (audit_root / "verification/public-state.json").write_text(
+        json.dumps(public_state) + "\n", encoding="utf-8"
+    )
+    policy = {
+        "schema_version": "1.0.0",
+        "scan_patterns": ["doc.md", "pyproject.toml"],
+        "forbidden_literals": [{"id": "false-claim", "literal": "FALSE CLAIM"}],
+        "required_boundaries": [
+            {
+                "id": "local-boundary",
+                "path": "doc.md",
+                "contains": "Local-only boundary.",
+            }
+        ],
+        "public_state_contract": {
+            "github_repository": "example/missing",
+            "github_repository_http_status": 404,
+            "local_git_remotes": [],
+            "package_project_urls": [],
+            "public_hosted_demo_url": None,
+        },
+        "quantitative_claims": [
+            {
+                "id": "fixture-count",
+                "expected": 3,
+                "sources": [{"path": "evidence.json", "pointer": "/value"}],
+                "renderings": [{"path": "doc.md", "template": "Count {value}."}],
+            }
+        ],
+        "public_state_snapshot": "verification/public-state.json",
+    }
+    policy_path = audit_root / "governance/CLAIM_AUDIT_POLICY.json"
+    policy_path.write_text(json.dumps(policy) + "\n", encoding="utf-8")
+
+    passing_audit = audit_claims(audit_root)
+    assert passing_audit["status"] == "passed"
+    assert passing_audit["checks"] == {"total": 13, "passed": 13, "failed": 0}
+    assert passing_audit["quantitative_values"] == {"fixture-count": 3}
+    assert passing_audit["public_state"]["local_git_remotes"] is None
+    assert passing_audit["audit_completed_at"] is None
+    assert set(passing_audit["governed_surface_sha256"]) == {"doc.md", "pyproject.toml"}
+    assert (
+        audit_claims(
+            audit_root,
+            policy_path=Path("governance/CLAIM_AUDIT_POLICY.json"),
+        )["status"]
+        == "passed"
+    )
+
+    (audit_root / "doc.md").write_text(
+        "Count 3. Local-only boundary. FALSE CLAIM\n", encoding="utf-8"
+    )
+    failed_literal_audit = audit_claims(audit_root)
+    assert failed_literal_audit["status"] == "failed"
+    assert failed_literal_audit["failures"][0]["category"] == "forbidden-literal"
+
+    (audit_root / "doc.md").write_text("Count 3. Local-only boundary.\n", encoding="utf-8")
+    invalid_template = json.loads(json.dumps(policy))
+    invalid_template["quantitative_claims"][0]["renderings"][0]["template"] = "Count 3."
+    policy_path.write_text(json.dumps(invalid_template) + "\n", encoding="utf-8")
+    with pytest.raises(ClaimAuditError, match="must interpolate value"):
+        audit_claims(audit_root)
+
+    invalid_operation = json.loads(json.dumps(policy))
+    invalid_operation["quantitative_claims"][0]["operation"] = "invented"
+    policy_path.write_text(json.dumps(invalid_operation) + "\n", encoding="utf-8")
+    with pytest.raises(ClaimAuditError, match="unknown operation"):
+        audit_claims(audit_root)
+
+    unsafe_source = json.loads(json.dumps(policy))
+    unsafe_source["quantitative_claims"][0]["sources"][0]["path"] = "../escape.json"
+    policy_path.write_text(json.dumps(unsafe_source) + "\n", encoding="utf-8")
+    with pytest.raises(ClaimAuditError, match="safe and relative"):
+        audit_claims(audit_root)
+
+    policy_path.write_text(json.dumps(policy) + "\n", encoding="utf-8")
+    real_fetch_http_status = claim_contract._fetch_http_status
+    monkeypatch.setattr(claim_contract, "_fetch_http_status", lambda *args, **kwargs: 404)
+    refreshed_audit = audit_claims(audit_root, refresh_public_state=True)
+    assert refreshed_audit["status"] == "passed"
+    assert refreshed_audit["checks"] == {"total": 14, "passed": 14, "failed": 0}
+    assert refreshed_audit["public_state"]["refreshed_http_status"] == 404
+    assert refreshed_audit["audit_completed_at"].endswith("Z")
+
+    monkeypatch.setattr(claim_contract, "_fetch_http_status", lambda *args, **kwargs: 200)
+    changed_public_state = audit_claims(audit_root, refresh_public_state=True)
+    assert changed_public_state["status"] == "failed"
+    assert changed_public_state["failures"][0]["check"] == "live-public-repository-state"
+    monkeypatch.setattr(claim_contract, "_fetch_http_status", real_fetch_http_status)
+
+    missing_json = audit_root / "missing.json"
+    with pytest.raises(ClaimAuditError, match="cannot load JSON object"):
+        claim_contract._load_object(missing_json)
+    array_json = audit_root / "array.json"
+    array_json.write_text("[]\n", encoding="utf-8")
+    with pytest.raises(ClaimAuditError, match="must be an object"):
+        claim_contract._load_object(array_json)
+    malformed_json = audit_root / "malformed.json"
+    malformed_json.write_text("{\n", encoding="utf-8")
+    with pytest.raises(ClaimAuditError, match="cannot load JSON object"):
+        claim_contract._load_object(malformed_json)
+    nonfinite_json = audit_root / "nonfinite.json"
+    nonfinite_json.write_text('{"value": NaN}\n', encoding="utf-8")
+    with pytest.raises(ClaimAuditError, match="non-finite number"):
+        claim_contract._load_object(nonfinite_json)
+
+    outside = tmp_path / "outside.json"
+    outside.write_text("{}\n", encoding="utf-8")
+    escape_link = audit_root / "escape-link.json"
+    escape_link.symlink_to(outside)
+    with pytest.raises(ClaimAuditError, match="escapes repository root"):
+        claim_contract._safe_relative(audit_root, "escape-link.json")
+
+    pointer_document = {"a/b": {"~key": [3]}}
+    assert claim_contract._resolve_pointer(pointer_document, "") == pointer_document
+    assert claim_contract._resolve_pointer(pointer_document, "/a~1b/~0key/0") == 3
+    for pointer, message in (
+        ("not-a-pointer", "must be empty or start"),
+        ("/missing", "component is absent"),
+        ("/a~1b/~0key/not-an-index", "list index is invalid"),
+        ("/a~1b/~0key/-1", "list index is invalid"),
+        ("/a~1b/~0key/01", "list index is invalid"),
+        ("/a~1b/~0key/1", "list index is invalid"),
+        ("/a~2b", "invalid escape"),
+        ("/a~1b/~0key/0/child", "traverses a scalar"),
+    ):
+        with pytest.raises(ClaimAuditError, match=message):
+            claim_contract._resolve_pointer(pointer_document, pointer)
+
+    with pytest.raises(ClaimAuditError, match="non-scalar"):
+        claim_contract._scalar([], claim_id="fixture")
+    with pytest.raises(ClaimAuditError, match="numeric evidence"):
+        claim_contract._number(True, claim_id="fixture")
+    with pytest.raises(ClaimAuditError, match="finite numeric evidence"):
+        claim_contract._number(float("inf"), claim_id="fixture")
+
+    compound_evidence = audit_root / "compound-evidence.json"
+    compound_evidence.write_text(
+        json.dumps({"first": 5, "second": 2, "items": [1, 2, 3], "float": 3.5, "negative": -1})
+        + "\n",
+        encoding="utf-8",
+    )
+
+    def source(pointer: str) -> dict[str, str]:
+        return {"path": "compound-evidence.json", "pointer": pointer}
+
+    assert (
+        claim_contract._evaluate_claim(
+            audit_root,
+            {"id": "sum", "operation": "sum", "sources": [source("/first"), source("/second")]},
+        )[0]
+        == 7
+    )
+    assert (
+        claim_contract._evaluate_claim(
+            audit_root,
+            {"id": "count", "operation": "count", "sources": [source("/items")]},
+        )[0]
+        == 3
+    )
+    assert (
+        claim_contract._evaluate_claim(
+            audit_root,
+            {
+                "id": "subtract",
+                "operation": "subtract",
+                "sources": [source("/first"), source("/second")],
+            },
+        )[0]
+        == 3
+    )
+    assert (
+        claim_contract._evaluate_claim(
+            audit_root,
+            {"id": "choose", "operation": "choose-two", "sources": [source("/first")]},
+        )[0]
+        == 10
+    )
+    for candidate, message in (
+        ({"id": "none", "sources": []}, "must declare sources"),
+        ({"id": "bad-source", "sources": [1]}, "malformed source"),
+        (
+            {"id": "single", "sources": [source("/first"), source("/second")]},
+            "exactly one source",
+        ),
+        (
+            {"id": "count", "operation": "count", "sources": [source("/first")]},
+            "one list or object",
+        ),
+        (
+            {"id": "subtract", "operation": "subtract", "sources": [source("/first")]},
+            "requires two sources",
+        ),
+        (
+            {"id": "choose", "operation": "choose-two", "sources": [source("/float")]},
+            "requires one non-negative integer",
+        ),
+        (
+            {"id": "choose", "operation": "choose-two", "sources": [source("/negative")]},
+            "requires one non-negative integer",
+        ),
+        (
+            {"id": "nonscalar", "sources": [source("/items")]},
+            "non-scalar",
+        ),
+    ):
+        with pytest.raises(ClaimAuditError, match=message):
+            claim_contract._evaluate_claim(audit_root, candidate)
+
+    invalid_utf8 = audit_root / "invalid-utf8.md"
+    invalid_utf8.write_bytes(b"\xff")
+    with pytest.raises(ClaimAuditError, match="cannot read claim surface"):
+        claim_contract._read_text(invalid_utf8)
+    scan_link = audit_root / "linked-doc.md"
+    scan_link.symlink_to(audit_root / "doc.md")
+    assert len(claim_contract._scanned_files(audit_root, ["*.md"])) == 2
+
+    class GitHubResponse:
+        def __init__(self, status: int) -> None:
+            self.status = status
+
+        def __enter__(self) -> GitHubResponse:
+            return self
+
+        def __exit__(self, *args: object) -> None:
+            return None
+
+    class GitHubConnection:
+        response_status = 204
+
+        def __init__(self, host: str, *, timeout: float) -> None:
+            assert host == "api.github.com"
+            assert timeout == 1
+            self.closed = False
+            self.request_arguments: tuple[str, str, dict[str, str]] | None = None
+            github_connections.append(self)
+
+        def request(self, method: str, path: str, *, headers: dict[str, str]) -> None:
+            self.request_arguments = (method, path, headers)
+
+        def getresponse(self) -> GitHubResponse:
+            return GitHubResponse(self.response_status)
+
+        def close(self) -> None:
+            self.closed = True
+
+    github_connections: list[GitHubConnection] = []
+
+    with monkeypatch.context() as scoped_patch:
+        scoped_patch.setattr(
+            claim_contract.http.client,
+            "HTTPSConnection",
+            GitHubConnection,
+        )
+        assert (
+            claim_contract._fetch_http_status(
+                "https://api.github.com/repos/example/missing", timeout_seconds=1
+            )
+            == 204
+        )
+        assert github_connections[-1].request_arguments == (
+            "GET",
+            "/repos/example/missing",
+            {
+                "Accept": "application/vnd.github+json",
+                "User-Agent": "CivicDecision-claim-audit",
+            },
+        )
+        assert github_connections[-1].closed is True
+
+        GitHubConnection.response_status = 404
+        assert (
+            claim_contract._fetch_http_status(
+                "https://api.github.com/repos/example/missing", timeout_seconds=1
+            )
+            == 404
+        )
+        assert github_connections[-1].closed is True
+
+    for unsafe_url in (
+        "http://api.github.com/repos/example/missing",
+        "https://example.invalid/repos/example/missing",
+        "https://api.github.com/repos/example/missing?redirect=1",
+        "https://api.github.com/users/example",
+    ):
+        with pytest.raises(ClaimAuditError, match="exact GitHub API repository URL"):
+            claim_contract._fetch_http_status(unsafe_url, timeout_seconds=1)
+
+    git_marker = audit_root / ".git"
+    git_marker.mkdir()
+    failed_git = subprocess.CompletedProcess(
+        args=["git", "remote", "-v"], returncode=1, stdout="", stderr="not a repository"
+    )
+    with monkeypatch.context() as scoped_patch:
+        scoped_patch.setattr(claim_contract.subprocess, "run", lambda *args, **kwargs: failed_git)
+        with pytest.raises(ClaimAuditError, match="git remote inspection failed"):
+            claim_contract._git_remotes(audit_root)
+    with monkeypatch.context() as scoped_patch:
+        scoped_patch.setattr(
+            claim_contract.subprocess,
+            "run",
+            lambda *args, **kwargs: (_ for _ in ()).throw(subprocess.TimeoutExpired("git", 30)),
+        )
+        with pytest.raises(ClaimAuditError, match="git remote inspection failed"):
+            claim_contract._git_remotes(audit_root)
+    successful_git = subprocess.CompletedProcess(
+        args=["git", "remote", "-v"],
+        returncode=0,
+        stdout=(
+            "upstream\thttps://example.com/upstream.git (fetch)\n"
+            "origin\thttps://example.com/repo.git (fetch)\n"
+        ),
+        stderr="",
+    )
+    with monkeypatch.context() as scoped_patch:
+        scoped_patch.setattr(
+            claim_contract.subprocess, "run", lambda *args, **kwargs: successful_git
+        )
+        assert claim_contract._git_remotes(audit_root) == [
+            "origin\thttps://example.com/repo.git (fetch)",
+            "upstream\thttps://example.com/upstream.git (fetch)",
+        ]
+    git_marker.rmdir()
+
+    claim_contract._validate_check_accounting(2, 2, [])
+    with pytest.raises(ClaimAuditError, match="internal check accounting drifted"):
+        claim_contract._validate_check_accounting(2, 1, [])
+
+    def write_policy(candidate: object) -> None:
+        policy_path.write_text(json.dumps(candidate) + "\n", encoding="utf-8")
+
+    malformed_policy_cases: list[tuple[object, str]] = []
+    bad_schema = json.loads(json.dumps(policy))
+    bad_schema["schema_version"] = "2.0.0"
+    malformed_policy_cases.append((bad_schema, "schema_version"))
+    bad_patterns = json.loads(json.dumps(policy))
+    bad_patterns["scan_patterns"] = "doc.md"
+    malformed_policy_cases.append((bad_patterns, "scan_patterns"))
+    unsafe_pattern = json.loads(json.dumps(policy))
+    unsafe_pattern["scan_patterns"] = ["../*.md"]
+    malformed_policy_cases.append((unsafe_pattern, "scan pattern must be safe and relative"))
+    bad_public_contract = json.loads(json.dumps(policy))
+    bad_public_contract["public_state_contract"] = {}
+    malformed_policy_cases.append((bad_public_contract, "public_state_contract"))
+    empty_patterns = json.loads(json.dumps(policy))
+    empty_patterns["scan_patterns"] = ["absent/**/*.md"]
+    malformed_policy_cases.append((empty_patterns, "resolved no files"))
+    bad_forbidden_list = json.loads(json.dumps(policy))
+    bad_forbidden_list["forbidden_literals"] = "bad"
+    malformed_policy_cases.append((bad_forbidden_list, "forbidden_literals"))
+    bad_forbidden_rule = json.loads(json.dumps(policy))
+    bad_forbidden_rule["forbidden_literals"] = ["bad"]
+    malformed_policy_cases.append((bad_forbidden_rule, "must be an object"))
+    bad_rule_id = json.loads(json.dumps(policy))
+    bad_rule_id["forbidden_literals"][0]["id"] = "Bad_ID"
+    malformed_policy_cases.append((bad_rule_id, "id must use lowercase"))
+    duplicate_rule_id = json.loads(json.dumps(policy))
+    duplicate_rule_id["required_boundaries"][0]["id"] = "false-claim"
+    malformed_policy_cases.append((duplicate_rule_id, "duplicate claim-audit check id"))
+    empty_forbidden_rule = json.loads(json.dumps(policy))
+    empty_forbidden_rule["forbidden_literals"] = [{"id": "empty", "literal": ""}]
+    malformed_policy_cases.append((empty_forbidden_rule, "is empty"))
+    bad_boundaries = json.loads(json.dumps(policy))
+    bad_boundaries["required_boundaries"] = "bad"
+    malformed_policy_cases.append((bad_boundaries, "required_boundaries"))
+    bad_boundary_rule = json.loads(json.dumps(policy))
+    bad_boundary_rule["required_boundaries"] = ["bad"]
+    malformed_policy_cases.append((bad_boundary_rule, "boundary rule must be an object"))
+    empty_boundary = json.loads(json.dumps(policy))
+    empty_boundary["required_boundaries"][0]["contains"] = ""
+    malformed_policy_cases.append((empty_boundary, "required boundary .* is empty"))
+    bad_claims = json.loads(json.dumps(policy))
+    bad_claims["quantitative_claims"] = "bad"
+    malformed_policy_cases.append((bad_claims, "quantitative_claims"))
+    bad_claim_rule = json.loads(json.dumps(policy))
+    bad_claim_rule["quantitative_claims"] = ["bad"]
+    malformed_policy_cases.append((bad_claim_rule, "claim must be an object"))
+    bad_renderings = json.loads(json.dumps(policy))
+    bad_renderings["quantitative_claims"][0]["renderings"] = "bad"
+    malformed_policy_cases.append((bad_renderings, "renderings must be a list"))
+    empty_renderings = json.loads(json.dumps(policy))
+    empty_renderings["quantitative_claims"][0]["renderings"] = []
+    malformed_policy_cases.append((empty_renderings, "renderings must be a non-empty list"))
+    bad_rendering_rule = json.loads(json.dumps(policy))
+    bad_rendering_rule["quantitative_claims"][0]["renderings"] = [1]
+    malformed_policy_cases.append((bad_rendering_rule, "rendering is malformed"))
+    bad_rendering_format = json.loads(json.dumps(policy))
+    bad_rendering_format["quantitative_claims"][0]["renderings"][0]["template"] = (
+        "Count {value:invalid}."
+    )
+    malformed_policy_cases.append((bad_rendering_format, "invalid rendering template"))
+    for candidate, message in malformed_policy_cases:
+        write_policy(candidate)
+        with pytest.raises(ClaimAuditError, match=message):
+            audit_claims(audit_root)
+
+    outside_policy = tmp_path / "outside-policy.json"
+    outside_policy.write_text(json.dumps(policy) + "\n", encoding="utf-8")
+    with pytest.raises(ClaimAuditError, match="policy must be inside"):
+        audit_claims(audit_root, policy_path=outside_policy)
+
+    missing_boundary = json.loads(json.dumps(policy))
+    missing_boundary["required_boundaries"][0]["contains"] = "missing boundary"
+    write_policy(missing_boundary)
+    assert audit_claims(audit_root)["failures"][0]["category"] == "required-boundary"
+
+    wrong_value = json.loads(json.dumps(policy))
+    wrong_value["quantitative_claims"][0]["expected"] = 4
+    write_policy(wrong_value)
+    assert audit_claims(audit_root)["failures"][0]["category"] == "evidence-value"
+    wrong_value_type = json.loads(json.dumps(policy))
+    wrong_value_type["quantitative_claims"][0]["expected"] = 3.0
+    write_policy(wrong_value_type)
+    assert audit_claims(audit_root)["failures"][0]["category"] == "evidence-value"
+
+    missing_rendering = json.loads(json.dumps(policy))
+    missing_rendering["quantitative_claims"][0]["renderings"][0]["template"] = "Absent {value}."
+    write_policy(missing_rendering)
+    assert audit_claims(audit_root)["failures"][0]["category"] == "claim-rendering"
+
+    invalid_public_state = dict(public_state)
+    invalid_public_state["schema_version"] = "2.0.0"
+    (audit_root / "verification/public-state.json").write_text(
+        json.dumps(invalid_public_state) + "\n", encoding="utf-8"
+    )
+    write_policy(policy)
+    assert audit_claims(audit_root)["failures"][0]["check"] == "public-state-schema"
+    (audit_root / "verification/public-state.json").write_text(
+        json.dumps(public_state) + "\n", encoding="utf-8"
+    )
+
+    for invalid_timestamp in ("2026-08-13", "not-a-dateZ"):
+        bad_timestamp_state = dict(public_state)
+        bad_timestamp_state["checked_at"] = invalid_timestamp
+        (audit_root / "verification/public-state.json").write_text(
+            json.dumps(bad_timestamp_state) + "\n", encoding="utf-8"
+        )
+        with pytest.raises(ClaimAuditError, match="RFC 3339 UTC timestamp"):
+            audit_claims(audit_root)
+    (audit_root / "verification/public-state.json").write_text(
+        json.dumps(public_state) + "\n", encoding="utf-8"
+    )
+
+    mismatched_public_state = dict(public_state)
+    mismatched_public_state["github_repository_http_status"] = 200
+    (audit_root / "verification/public-state.json").write_text(
+        json.dumps(mismatched_public_state) + "\n", encoding="utf-8"
+    )
+    assert audit_claims(audit_root)["failures"][0]["check"].startswith("public-state-contract:")
+    (audit_root / "verification/public-state.json").write_text(
+        json.dumps(public_state) + "\n", encoding="utf-8"
+    )
+
+    mismatched_endpoint = dict(public_state)
+    mismatched_endpoint["github_repository_api"] = "https://api.github.com/repos/example/other"
+    (audit_root / "verification/public-state.json").write_text(
+        json.dumps(mismatched_endpoint) + "\n", encoding="utf-8"
+    )
+    assert (
+        audit_claims(audit_root)["failures"][0]["check"]
+        == "public-state-contract:github_repository_api"
+    )
+    fetched_urls: list[str] = []
+    with monkeypatch.context() as scoped_patch:
+        scoped_patch.setattr(
+            claim_contract,
+            "_fetch_http_status",
+            lambda url, **kwargs: fetched_urls.append(url) or 404,
+        )
+        assert audit_claims(audit_root, refresh_public_state=True)["status"] == "failed"
+    assert fetched_urls == ["https://api.github.com/repos/example/missing"]
+    (audit_root / "verification/public-state.json").write_text(
+        json.dumps(public_state) + "\n", encoding="utf-8"
+    )
+
+    missing_contract_field = json.loads(json.dumps(policy))
+    missing_contract_field["public_state_contract"].pop("package_project_urls")
+    invalid_repository_contract = json.loads(json.dumps(policy))
+    invalid_repository_contract["public_state_contract"]["github_repository"] = "not-a-repository"
+    for invalid_contract, message in (
+        (missing_contract_field, "missing required fields"),
+        (invalid_repository_contract, "must be owner/repository"),
+    ):
+        write_policy(invalid_contract)
+        with pytest.raises(ClaimAuditError, match=message):
+            audit_claims(audit_root)
+    write_policy(policy)
+
+    for invalid_status in (True, 99, 600):
+        bad_status_state = dict(public_state)
+        bad_status_state["github_repository_http_status"] = invalid_status
+        (audit_root / "verification/public-state.json").write_text(
+            json.dumps(bad_status_state) + "\n", encoding="utf-8"
+        )
+        with pytest.raises(ClaimAuditError, match="HTTP status must be an integer"):
+            audit_claims(audit_root)
+    (audit_root / "verification/public-state.json").write_text(
+        json.dumps(public_state) + "\n", encoding="utf-8"
+    )
+
+    (audit_root / "pyproject.toml").write_text(
+        '[project]\nname = "claim-audit-fixture"\n[project.urls]\nRepository = "https://example.com"\n',
+        encoding="utf-8",
+    )
+    assert audit_claims(audit_root)["failures"][0]["check"] == "package-project-urls"
+    (audit_root / "pyproject.toml").write_text(
+        '[project]\nname = "claim-audit-fixture"\n', encoding="utf-8"
+    )
+
+    with monkeypatch.context() as scoped_patch:
+        scoped_patch.setattr(
+            claim_contract,
+            "_git_remotes",
+            lambda root: ["origin\thttps://example.com/repo.git (fetch)"],
+        )
+        assert audit_claims(audit_root)["failures"][0]["check"] == "local-git-remotes"
+
+    with monkeypatch.context() as scoped_patch:
+        scoped_patch.setattr(
+            claim_contract,
+            "_fetch_http_status",
+            lambda *args, **kwargs: (_ for _ in ()).throw(OSError("offline")),
+        )
+        failed_refresh = audit_claims(audit_root, refresh_public_state=True)
+        assert failed_refresh["failures"][0]["check"] == "live-public-repository-state"
+
+    write_policy(policy)

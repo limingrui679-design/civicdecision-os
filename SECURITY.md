@@ -32,7 +32,8 @@ import, execute, or automatically merge plugin code. Any future executable plugi
 a separately reviewed signature, provenance, permission, sandbox, resource-limit, revocation, and
 audit-log protocol.
 
-The current public samples contain public aggregate records. The repository does not claim
+The current public-data samples contain aggregate records from public sources. The repository does
+not claim
 authorization for protected health information, personal data, confidential government data,
 or client data.
 

@@ -1,0 +1,844 @@
+{
+  "forbidden_literals": [
+    {
+      "id": "unpublished-project-github-url",
+      "literal": "https://github.com/limingrui679-design/civicdecision-os"
+    },
+    {
+      "id": "unregistered-project-host-domain",
+      "literal": "https://civicdecision.dev"
+    },
+    {
+      "id": "undeclared-package-project-urls",
+      "literal": "[project.urls]"
+    },
+    {
+      "id": "stale-sdist-member-count",
+      "literal": "2,006"
+    },
+    {
+      "id": "stale-codeql-plan-language",
+      "literal": "planned CodeQL workflow"
+    },
+    {
+      "id": "ambiguous-public-sample-language",
+      "literal": "current public samples"
+    },
+    {
+      "id": "ambiguous-public-explorer-language",
+      "literal": "public read-only explorer"
+    },
+    {
+      "id": "unpublished-open-source-tagline",
+      "literal": "The open-source compiler"
+    },
+    {
+      "id": "obsolete-claim-linter-roadmap-language",
+      "literal": "Repository-wide claim linter and UI enforcement"
+    }
+  ],
+  "public_state_contract": {
+    "github_repository": "limingrui679-design/civicdecision-os",
+    "github_repository_http_status": 404,
+    "github_repository_state": "not-publicly-available-at-check-time",
+    "local_git_remotes": [],
+    "package_project_urls": [],
+    "public_hosted_demo_url": null
+  },
+  "public_state_snapshot": "verification/milestone-8-public-state.json",
+  "quantitative_claims": [
+    {
+      "expected": 22,
+      "id": "core-generated-schemas",
+      "renderings": [
+        {
+          "path": "verification/README.md",
+          "template": "all {value} core JSON Schemas"
+        }
+      ],
+      "sources": [
+        {
+          "path": "verification/milestone-8-repository.json",
+          "pointer": "/generated_schemas"
+        }
+      ]
+    },
+    {
+      "expected": 10,
+      "id": "loadable-connectors",
+      "renderings": [
+        {
+          "path": "docs/REQUIREMENTS.md",
+          "template": "{value} loadable connector implementations"
+        }
+      ],
+      "sources": [
+        {
+          "path": "verification/milestone-8-repository.json",
+          "pointer": "/connectors"
+        }
+      ]
+    },
+    {
+      "expected": 90,
+      "id": "source-manifests",
+      "renderings": [
+        {
+          "path": "README.md",
+          "template": "The {value} committed source manifests"
+        },
+        {
+          "path": "docs/PRODUCT_SURFACES.md",
+          "template": "| Source artifacts | {value} |"
+        }
+      ],
+      "sources": [
+        {
+          "path": "verification/milestone-8-repository.json",
+          "pointer": "/source_manifests"
+        }
+      ]
+    },
+    {
+      "expected": 258478,
+      "id": "declared-source-units",
+      "renderings": [
+        {
+          "path": "README.md",
+          "template": "cover {value:,} declared heterogeneous units"
+        },
+        {
+          "path": "docs/PRODUCT_SURFACES.md",
+          "template": "| Declared heterogeneous source units | {value:,} |"
+        }
+      ],
+      "sources": [
+        {
+          "path": "verification/milestone-8-repository.json",
+          "pointer": "/source_manifest_records"
+        }
+      ]
+    },
+    {
+      "expected": 250,
+      "id": "tier-g-cities",
+      "renderings": [
+        {
+          "path": "docs/REQUIREMENTS.md",
+          "template": "{value} Tier-G global cities"
+        },
+        {
+          "path": "docs/RELEASE_NOTES_0.8.0.md",
+          "template": "{value} Tier-G global city identities"
+        }
+      ],
+      "sources": [
+        {
+          "path": "verification/milestone-8-repository.json",
+          "pointer": "/global_tier_g_cities"
+        }
+      ]
+    },
+    {
+      "expected": 30,
+      "id": "tier-s-cities",
+      "renderings": [
+        {
+          "path": "docs/REQUIREMENTS.md",
+          "template": "{value} Tier-S standardized cities"
+        },
+        {
+          "path": "README.md",
+          "template": "{value} Tier-S standardized descriptive bundles"
+        }
+      ],
+      "sources": [
+        {
+          "path": "verification/milestone-8-repository.json",
+          "pointer": "/tier_s_city_bundles"
+        }
+      ]
+    },
+    {
+      "expected": 8,
+      "id": "tier-d-cities",
+      "renderings": [
+        {
+          "path": "docs/REQUIREMENTS.md",
+          "template": "{value} Tier-D cities"
+        }
+      ],
+      "sources": [
+        {
+          "path": "verification/milestone-8-repository.json",
+          "pointer": "/tier_d_city_bundles"
+        }
+      ]
+    },
+    {
+      "expected": 145,
+      "id": "benchmark-artifacts",
+      "renderings": [
+        {
+          "path": "docs/RELEASE_NOTES_0.8.0.md",
+          "template": "{value} analytical benchmark runs"
+        },
+        {
+          "path": "docs/PRODUCT_SURFACES.md",
+          "template": "| Analytical benchmark run artifacts | {value} |"
+        }
+      ],
+      "sources": [
+        {
+          "path": "verification/milestone-8-repository.json",
+          "pointer": "/benchmark_artifacts"
+        }
+      ]
+    },
+    {
+      "expected": 96,
+      "id": "tier-d-scenario-packs",
+      "renderings": [
+        {
+          "path": "docs/STATUS.md",
+          "template": "It emits {value} validated Policy Scenarios"
+        },
+        {
+          "path": "docs/REQUIREMENTS.md",
+          "template": "{value} Policy Scenarios / DecisionPacks / briefs"
+        }
+      ],
+      "sources": [
+        {
+          "path": "verification/milestone-8-repository.json",
+          "pointer": "/tier_d_scenario_packs"
+        }
+      ]
+    },
+    {
+      "expected": 76,
+      "id": "tier-d-completed-executions",
+      "renderings": [
+        {
+          "path": "docs/RELEASE_NOTES_0.8.0.md",
+          "template": "{value} completed Tier-D planning-support runs"
+        },
+        {
+          "path": "README.md",
+          "template": "{value} completed planning-support packs"
+        }
+      ],
+      "sources": [
+        {
+          "path": "verification/milestone-8-repository.json",
+          "pointer": "/tier_d_scenario_statuses/completed"
+        }
+      ]
+    },
+    {
+      "expected": 20,
+      "id": "tier-d-negative-executions",
+      "renderings": [
+        {
+          "path": "docs/RELEASE_NOTES_0.8.0.md",
+          "template": "{value} explicit insufficient-evidence releases"
+        },
+        {
+          "path": "README.md",
+          "template": "{value} explicit `insufficient-evidence` packs"
+        }
+      ],
+      "sources": [
+        {
+          "path": "verification/milestone-8-repository.json",
+          "pointer": "/tier_d_scenario_statuses/insufficient-evidence"
+        }
+      ]
+    },
+    {
+      "expected": 240,
+      "id": "scenario-designs",
+      "renderings": [
+        {
+          "path": "docs/RELEASE_NOTES_0.8.0.md",
+          "template": "{value} non-duplicative scenario designs"
+        },
+        {
+          "path": "README.md",
+          "template": "contains {value} strict decision designs"
+        },
+        {
+          "path": "docs/PRODUCT_SURFACES.md",
+          "template": "| Audited scenario designs | {value} |"
+        }
+      ],
+      "sources": [
+        {
+          "path": "verification/milestone-8-repository.json",
+          "pointer": "/scenario_library_designs"
+        }
+      ]
+    },
+    {
+      "expected": 30,
+      "id": "scenario-families",
+      "renderings": [
+        {
+          "path": "docs/RELEASE_NOTES_0.8.0.md",
+          "template": "in {value} families"
+        },
+        {
+          "path": "README.md",
+          "template": "scenario designs in {value} families"
+        },
+        {
+          "path": "docs/PRODUCT_SURFACES.md",
+          "template": "| Scenario-design families | {value} |"
+        }
+      ],
+      "sources": [
+        {
+          "path": "verification/milestone-8-repository.json",
+          "pointer": "/scenario_library_families"
+        }
+      ]
+    },
+    {
+      "expected": 12,
+      "id": "reference-implemented-designs",
+      "renderings": [
+        {
+          "path": "docs/PRODUCT_SURFACES.md",
+          "template": "| Reference-implemented designs | {value} |"
+        }
+      ],
+      "sources": [
+        {
+          "path": "verification/milestone-8-repository.json",
+          "pointer": "/scenario_library_reference_implementations"
+        }
+      ]
+    },
+    {
+      "expected": 228,
+      "id": "design-only-records",
+      "operation": "subtract",
+      "renderings": [
+        {
+          "path": "docs/PRODUCT_SURFACES.md",
+          "template": "| Design-only records | {value} |"
+        },
+        {
+          "path": "CHANGELOG.md",
+          "template": "The remaining {value} are explicitly design-only"
+        }
+      ],
+      "sources": [
+        {
+          "path": "verification/milestone-8-repository.json",
+          "pointer": "/scenario_library_designs"
+        },
+        {
+          "path": "verification/milestone-8-repository.json",
+          "pointer": "/scenario_library_reference_implementations"
+        }
+      ]
+    },
+    {
+      "expected": 28680,
+      "id": "pairwise-design-comparisons",
+      "operation": "choose-two",
+      "renderings": [
+        {
+          "path": "docs/RELEASE_NOTES_0.8.0.md",
+          "template": "{value:,} pairwise design comparisons"
+        },
+        {
+          "path": "README.md",
+          "template": "All {value:,} unordered design pairs are audited"
+        }
+      ],
+      "sources": [
+        {
+          "path": "verification/milestone-8-repository.json",
+          "pointer": "/scenario_library_designs"
+        }
+      ]
+    },
+    {
+      "expected": 0.646154,
+      "id": "maximum-design-similarity",
+      "renderings": [
+        {
+          "path": "docs/REQUIREMENTS.md",
+          "template": "maximum {value:.6f}"
+        },
+        {
+          "path": "CHANGELOG.md",
+          "template": "similarity is {value:.6f}"
+        }
+      ],
+      "sources": [
+        {
+          "path": "verification/milestone-8-repository.json",
+          "pointer": "/scenario_library_maximum_pairwise_similarity"
+        }
+      ]
+    },
+    {
+      "expected": 282,
+      "id": "scenario-library-files",
+      "renderings": [
+        {
+          "path": "docs/REQUIREMENTS.md",
+          "template": "all {value} library files exactly rebuild"
+        },
+        {
+          "path": "README.md",
+          "template": "The committed library has {value} files"
+        }
+      ],
+      "sources": [
+        {
+          "path": "verification/milestone-8-repository.json",
+          "pointer": "/scenario_library_files"
+        }
+      ]
+    },
+    {
+      "expected": 338,
+      "id": "product-files",
+      "renderings": [
+        {
+          "path": "docs/REQUIREMENTS.md",
+          "template": "The {value}-file product tree exactly rebuilds"
+        },
+        {
+          "path": "README.md",
+          "template": "projection contains {value} files"
+        },
+        {
+          "path": "docs/PRODUCT_SURFACES.md",
+          "template": "tree contains {value} files"
+        }
+      ],
+      "sources": [
+        {
+          "path": "verification/milestone-8-repository.json",
+          "pointer": "/product_artifacts"
+        }
+      ]
+    },
+    {
+      "expected": 336,
+      "id": "product-manifest-artifacts",
+      "renderings": [
+        {
+          "path": "docs/PRODUCT_SURFACES.md",
+          "template": "{value} manifest-indexed artifacts"
+        },
+        {
+          "path": "CHANGELOG.md",
+          "template": "{value} manifest-indexed artifacts"
+        }
+      ],
+      "sources": [
+        {
+          "path": "catalog/product/artifact-manifest.json",
+          "pointer": "/artifact_count"
+        }
+      ]
+    },
+    {
+      "expected": 337,
+      "id": "product-checksum-targets",
+      "renderings": [
+        {
+          "path": "docs/PRODUCT_SURFACES.md",
+          "template": "covering the other {value} files"
+        },
+        {
+          "path": "verification/README.md",
+          "template": "{value} checksum targets"
+        }
+      ],
+      "sources": [
+        {
+          "path": "verification/milestone-8-repository.json",
+          "pointer": "/product_checksum_entries"
+        }
+      ]
+    },
+    {
+      "expected": 28,
+      "id": "product-schemas",
+      "renderings": [
+        {
+          "path": "docs/PRODUCT_SURFACES.md",
+          "template": "and {value} product/plugin/library JSON Schemas"
+        },
+        {
+          "path": "README.md",
+          "template": "includes {value} product/plugin/library Schemas"
+        }
+      ],
+      "sources": [
+        {
+          "path": "verification/milestone-8-repository.json",
+          "pointer": "/product_schema_artifacts"
+        }
+      ]
+    },
+    {
+      "expected": 19,
+      "id": "openapi-paths",
+      "renderings": [
+        {
+          "path": "docs/RELEASE_NOTES_0.8.0.md",
+          "template": "{value}-path read-only API"
+        },
+        {
+          "path": "docs/STATUS.md",
+          "template": "a {value}-path OpenAPI contract"
+        }
+      ],
+      "sources": [
+        {
+          "path": "verification/milestone-8-repository.json",
+          "pointer": "/product_openapi_paths"
+        }
+      ]
+    },
+    {
+      "expected": 258,
+      "id": "highest-tier-city-records",
+      "renderings": [
+        {
+          "path": "docs/REQUIREMENTS.md",
+          "template": "projects {value} cities"
+        },
+        {
+          "path": "docs/PRODUCT_SURFACES.md",
+          "template": "| Distinct highest-tier city records | {value} |"
+        }
+      ],
+      "sources": [
+        {
+          "path": "catalog/product/catalog-summary.json",
+          "pointer": "/exposed_city_records"
+        }
+      ]
+    },
+    {
+      "expected": 188,
+      "id": "scenario-executions",
+      "renderings": [
+        {
+          "path": "docs/REQUIREMENTS.md",
+          "template": "{value} executions"
+        },
+        {
+          "path": "docs/PRODUCT_SURFACES.md",
+          "template": "| Total scenario executions | {value} |"
+        }
+      ],
+      "sources": [
+        {
+          "path": "catalog/product/scenarios/all.json",
+          "pointer": "/record_count"
+        }
+      ]
+    },
+    {
+      "expected": 98,
+      "id": "decision-packs",
+      "renderings": [
+        {
+          "path": "docs/REQUIREMENTS.md",
+          "template": "{value} DecisionPacks"
+        },
+        {
+          "path": "docs/PRODUCT_SURFACES.md",
+          "template": "| DecisionPacks | {value} |"
+        }
+      ],
+      "sources": [
+        {
+          "path": "catalog/product/catalog-summary.json",
+          "pointer": "/decision_packs"
+        }
+      ]
+    },
+    {
+      "expected": 800,
+      "id": "passing-tests",
+      "renderings": [
+        {
+          "path": "docs/REQUIREMENTS.md",
+          "template": "Exactly {value} local tests pass"
+        },
+        {
+          "path": "verification/README.md",
+          "template": "exactly {value} tests"
+        },
+        {
+          "path": "docs/RELEASE_NOTES_0.8.0.md",
+          "template": "{value} passing automated tests"
+        }
+      ],
+      "sources": [
+        {
+          "path": "verification/milestone-8-quality.json",
+          "pointer": "/tests/passed"
+        }
+      ]
+    },
+    {
+      "expected": 97.10005350454789,
+      "id": "statement-coverage-percent",
+      "renderings": [
+        {
+          "path": "docs/REQUIREMENTS.md",
+          "template": "{value:.3f}% statement"
+        },
+        {
+          "path": "CHANGELOG.md",
+          "template": "{value:.3f}% statement coverage"
+        }
+      ],
+      "sources": [
+        {
+          "path": "verification/milestone-8-coverage.json",
+          "pointer": "/totals/percent_statements_covered"
+        }
+      ]
+    },
+    {
+      "expected": 91.07600341588386,
+      "id": "branch-coverage-percent",
+      "renderings": [
+        {
+          "path": "docs/REQUIREMENTS.md",
+          "template": "{value:.3f}% branch"
+        },
+        {
+          "path": "CHANGELOG.md",
+          "template": "{value:.3f}% branch coverage"
+        }
+      ],
+      "sources": [
+        {
+          "path": "verification/milestone-8-coverage.json",
+          "pointer": "/totals/percent_branches_covered"
+        }
+      ]
+    },
+    {
+      "expected": 95.89287242234963,
+      "id": "combined-coverage-percent",
+      "renderings": [
+        {
+          "path": "docs/REQUIREMENTS.md",
+          "template": "{value:.3f}% combined line-and-branch coverage"
+        },
+        {
+          "path": "README.md",
+          "template": "{value:.3f}% combined line-and-branch"
+        }
+      ],
+      "sources": [
+        {
+          "path": "verification/milestone-8-coverage.json",
+          "pointer": "/totals/percent_covered"
+        }
+      ]
+    },
+    {
+      "expected": 9,
+      "id": "local-performance-budgets",
+      "operation": "count",
+      "renderings": [
+        {
+          "path": "docs/CLAIM_AUDIT.md",
+          "template": "resolves {value} local performance budgets"
+        }
+      ],
+      "sources": [
+        {
+          "path": "verification/milestone-8-performance.json",
+          "pointer": "/budget_checks"
+        }
+      ]
+    },
+    {
+      "expected": "0.8.0",
+      "id": "software-version",
+      "renderings": [
+        {
+          "path": "docs/STATUS.md",
+          "template": "Milestone 8—the {value} release-assurance layer"
+        },
+        {
+          "path": "docs/RELEASE_NOTES_0.8.0.md",
+          "template": "Version {value} is the first release candidate"
+        }
+      ],
+      "sources": [
+        {
+          "path": "verification/milestone-8-performance.json",
+          "pointer": "/software_version"
+        }
+      ]
+    },
+    {
+      "expected": 23,
+      "id": "locked-runtime-packages",
+      "renderings": [
+        {
+          "path": "docs/REQUIREMENTS.md",
+          "template": "fresh {value}-package hash-locked runtime install"
+        }
+      ],
+      "sources": [
+        {
+          "path": "verification/milestone-8-quality.json",
+          "pointer": "/runtime_lock/package_count"
+        }
+      ]
+    },
+    {
+      "expected": 4148633,
+      "id": "deduplicated-underlying-requests",
+      "renderings": [
+        {
+          "path": "README.md",
+          "template": "same {value:,} underlying requests"
+        },
+        {
+          "path": "docs/STATUS.md",
+          "template": "reconcile to {value:,} underlying requests"
+        }
+      ],
+      "sources": [
+        {
+          "path": "verification/milestone-8-repository.json",
+          "pointer": "/tier_d_deduplicated_underlying_requests"
+        }
+      ]
+    },
+    {
+      "expected": 190000,
+      "id": "tier-d-simulation-iterations",
+      "renderings": [
+        {
+          "path": "README.md",
+          "template": "{value:,} seeded simulation iterations"
+        },
+        {
+          "path": "docs/STATUS.md",
+          "template": "{value:,} seeded simulation iterations"
+        }
+      ],
+      "sources": [
+        {
+          "path": "verification/milestone-8-repository.json",
+          "pointer": "/tier_d_simulation_iterations"
+        }
+      ]
+    },
+    {
+      "expected": 100,
+      "id": "benchmark-optimization-tasks",
+      "renderings": [
+        {
+          "path": "README.md",
+          "template": "The {value} synthetic solver tasks"
+        },
+        {
+          "path": "docs/REQUIREMENTS.md",
+          "template": "At least {value} optimization tasks"
+        }
+      ],
+      "sources": [
+        {
+          "path": "verification/milestone-8-repository.json",
+          "pointer": "/benchmark_optimization_tasks"
+        }
+      ]
+    }
+  ],
+  "required_boundaries": [
+    {
+      "contains": "signed or published GitHub Release, remote CI success, public hosting, or external review.",
+      "id": "readme-external-release-boundary",
+      "path": "README.md"
+    },
+    {
+      "contains": "Do not describe a local candidate as a public release",
+      "id": "contributing-publication-boundary",
+      "path": "CONTRIBUTING.md"
+    },
+    {
+      "contains": "not a penetration-test result.",
+      "id": "security-scan-boundary",
+      "path": "SECURITY.md"
+    },
+    {
+      "contains": "External review, real users, municipal adoption, or real-world impact.",
+      "id": "status-external-evidence-boundary",
+      "path": "docs/STATUS.md"
+    },
+    {
+      "contains": "It does not establish public hosting, production readiness, external validation",
+      "id": "release-notes-publication-boundary",
+      "path": "docs/RELEASE_NOTES_0.8.0.md"
+    },
+    {
+      "contains": "These are regression budgets, not service-level objectives.",
+      "id": "performance-sla-boundary",
+      "path": "docs/PERFORMANCE.md"
+    },
+    {
+      "contains": "The local builder does not manufacture evidence for public state.",
+      "id": "release-builder-public-state-boundary",
+      "path": "docs/RELEASE_PROCESS.md"
+    },
+    {
+      "contains": "Local browser inspection confirms rendering and interaction for the current build.",
+      "id": "browser-local-only-boundary",
+      "path": "docs/WEB_EXPLORER.md"
+    },
+    {
+      "contains": "Every quantitative claim must resolve to a committed manifest",
+      "id": "governance-evidence-resolution",
+      "path": "governance/CLAIM_BOUNDARIES.md"
+    },
+    {
+      "contains": "A passing audit proves that the selected governed text is internally consistent",
+      "id": "claim-audit-self-boundary",
+      "path": "docs/CLAIM_AUDIT.md"
+    },
+    {
+      "contains": "PROBLEM_TYPE_PREFIX = \"urn:civicdecision:problem:\"",
+      "id": "non-hosted-problem-type-namespace",
+      "path": "src/civicdecision/api/app.py"
+    },
+    {
+      "contains": "This report verifies a local release candidate; it is not a public deployment",
+      "id": "release-report-local-candidate-boundary",
+      "path": "scripts/build_release_candidate.py"
+    }
+  ],
+  "scan_patterns": [
+    "README.md",
+    "CHANGELOG.md",
+    "CONTRIBUTING.md",
+    "SECURITY.md",
+    "docs/**/*.md",
+    "governance/**/*.md",
+    "pyproject.toml",
+    "src/civicdecision/api/app.py",
+    "scripts/build_release_candidate.py"
+  ],
+  "schema_version": "1.0.0"
+}

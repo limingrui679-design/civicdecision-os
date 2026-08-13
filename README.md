@@ -1,6 +1,6 @@
 # CivicDecision OS
 
-**The open-source compiler for urban interventions.**
+**A local, evidence-typed compiler for urban interventions.**
 
 CivicDecision OS turns versioned public data, urban networks, policy constraints, simulation results, and optimization runs into reproducible `DecisionPack` artifacts.
 
@@ -87,12 +87,14 @@ This demonstrates implementation behavior only. Tract centroids are not verified
 radius is not travel time, the population proxy is not individual demand, and the selected option
 is not a municipal recommendation.
 
-Current repository and browser evidence is recorded in
+Current repository and local-browser evidence is recorded in
 [`verification/milestone-8-repository.json`](verification/milestone-8-repository.json),
 [`verification/milestone-7-browser-qa.json`](verification/milestone-7-browser-qa.json),
 [`verification/milestone-8-coverage.json`](verification/milestone-8-coverage.json), and
-[`verification/milestone-8-performance.json`](verification/milestone-8-performance.json). Exactly
-800 tests pass with 96.987% statement, 90.422% branch, and 95.705% combined line-and-branch
+[`verification/milestone-8-performance.json`](verification/milestone-8-performance.json). The
+machine-readable claim and dated public-state checks are documented in
+[`docs/CLAIM_AUDIT.md`](docs/CLAIM_AUDIT.md). Exactly
+800 tests pass with 97.100% statement, 91.076% branch, and 95.893% combined line-and-branch
 coverage. The independent verifier regenerates Schemas, both earlier reference outputs, all four
 global-city artifacts, the complete standardized-city and analytical-benchmark trees, all 707
 Tier-D artifacts, the 282-file scenario library, and the 338-file product projection in a
@@ -385,12 +387,15 @@ add production authentication, TLS, quotas, or authorization.
   runtime assets.
 - `src/civicdecision/demos/` — end-to-end reference compilers.
 - `src/civicdecision/release.py` — fail-closed wheel, sdist, source-ZIP, and checksum validation.
+- `src/civicdecision/claim_audit.py` — deterministic quantitative-claim, boundary, URL, and
+  dated public-state checks.
 - `schemas/` — generated versioned JSON Schemas.
 - `requirements/runtime-api.lock` — exact, fully hashed local API/runtime dependency contract.
 - `examples/data/` — small public fixtures plus manifests.
 - `examples/outputs/` — completed and negative golden DecisionPacks.
 - `docs/` — architecture, governance, threat model, ADRs, and scope matrix.
-- `verification/` — machine-readable exact-rebuild, coverage, browser, and performance evidence.
+- `verification/` — machine-readable exact-rebuild, coverage, browser, performance, quality,
+  claim-language, and public-state evidence.
 - `benchmarks/` — complete runs, row-level evidence ledgers, reports, and portable hashes.
 - `catalog/deep-cities/` — 8 city bundles, 96 scenario packs, 96 briefs, evidence ledgers, and
   anti-inflation audit.

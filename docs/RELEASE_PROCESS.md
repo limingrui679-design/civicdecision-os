@@ -83,10 +83,26 @@ python scripts/build_release_candidate.py \
 - Bandit: fail on medium-or-higher severity and confidence findings in `src/civicdecision`.
 - Detect Secrets: freshly scan source, scripts, tests, docs, governance, workflows, and root config
   offline; inline allowlists are limited to identified public dataset URLs.
-- pip-audit: audit the exact hashed runtime lock and fail on a known advisory at check time.
+- pip-audit: audit the exact hashed runtime lock without re-resolving packages, require its
+  name/version inventory to equal the successfully installed isolated runtime, and fail on a known
+  advisory at check time.
 - CycloneDX: validate a reproducible 1.6 JSON SBOM for the installed runtime.
 - pip-licenses: inventory the installed package name, version, declared license, and project URL.
 - Performance: require all nine committed local budgets to pass for the same software version.
+
+### Quality and claim governance
+
+- Reconcile the committed quality snapshot against exactly 800 passing tests, zero failures, the
+  full coverage report hash, and its exact statement, branch, and combined totals.
+- Run the claim audit from the extracted no-Git sdist and require every offline check to pass.
+- Require the committed audit to be a passing live refresh whose official GitHub status matches
+  the dated public-state snapshot.
+- Require the live and offline audits to resolve the same policy, scope, all 36 quantitative
+  evidence values, individual evidence hashes, and individual governed-surface hashes. The release
+  carries both reports so a reviewer can distinguish mutable public state from deterministic
+  archive checks.
+- Publish only after all 24 release gates pass; a dirty source tree is rejected unless the
+  development-only override is explicit and remains visible in the report.
 
 ## Output layout
 
@@ -107,6 +123,11 @@ dist/release-0.8.0/
 │   ├── sbom.cdx.json
 │   ├── third-party-licenses.json
 │   ├── performance.json
+│   ├── coverage.json
+│   ├── quality.json
+│   ├── claim-audit-live.json
+│   ├── claim-audit-offline.json
+│   ├── public-state.json
 │   ├── runtime-api.lock
 │   ├── RELEASE_NOTES.md
 │   └── SHA256SUMS

@@ -54,6 +54,7 @@ from civicdecision.scenario_library.models import (
 )
 
 REQUEST_ID_PATTERN = re.compile(r"^[A-Za-z0-9._-]{8,80}$")
+PROBLEM_TYPE_PREFIX = "urn:civicdecision:problem:"
 
 
 class ProblemDetail(StrictModel):
@@ -203,7 +204,7 @@ def create_app(
             status=404,
             title="Artifact not found",
             detail=str(exc),
-            problem_type="https://civicdecision.dev/problems/not-found",
+            problem_type=f"{PROBLEM_TYPE_PREFIX}not-found",
         )
 
     @app.exception_handler(IntegrityError)
@@ -214,7 +215,7 @@ def create_app(
             status=503,
             title="Catalog integrity failure",
             detail=str(exc),
-            problem_type="https://civicdecision.dev/problems/catalog-integrity",
+            problem_type=f"{PROBLEM_TYPE_PREFIX}catalog-integrity",
         )
 
     @app.exception_handler(RequestValidationError)
@@ -224,7 +225,7 @@ def create_app(
             status=422,
             title="Request validation failed",
             detail=str(exc),
-            problem_type="https://civicdecision.dev/problems/request-validation",
+            problem_type=f"{PROBLEM_TYPE_PREFIX}request-validation",
         )
 
     @app.exception_handler(StarletteHTTPException)
@@ -239,7 +240,7 @@ def create_app(
             status=status,
             title=title,
             detail=str(exc.detail),
-            problem_type=f"https://civicdecision.dev/problems/http-{status}",
+            problem_type=f"{PROBLEM_TYPE_PREFIX}http-{status}",
         )
 
     @app.get("/healthz", response_model=ProductHealth, tags=["operations"])

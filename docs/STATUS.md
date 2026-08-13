@@ -133,7 +133,7 @@ performance, security, SBOM, license, and checksum evidence.
 - Current local browser inspection passed at the default desktop viewport and 390×844, including
   family-to-eight-design filtering, compound search, design and audit drawers, mobile navigation,
   zero horizontal scroll, and zero browser warnings/errors.
-- 800 automated tests pass. Coverage is 96.987% for statements, 90.422% for branches, and 95.705%
+- 800 automated tests pass. Coverage is 97.100% for statements, 91.076% for branches, and 95.893%
   under coverage.py's combined line-and-branch measure. The release module alone reaches 96%
   combined coverage and is exercised against real wheel/sdist files plus adversarial paths,
   members, metadata, hashes, inventories, links, budgets, and checksum failures.
@@ -141,19 +141,24 @@ performance, security, SBOM, license, and checksum evidence.
   cold store initialization, two direct-store reads, four API reads, and exact 282-/338-file
   builds. These are single-process regression measurements rather than service-level evidence.
 - Two independent 0.8.0 wheel and sdist builds are byte-identical under the recorded epoch. The
-  wheel has 91 verified members and complete `RECORD` hashes/sizes; the sdist has 2,006 safe regular
-  files; two normalized 2,006-file source ZIP writes are byte-identical.
+  wheel has complete `RECORD` hashes/sizes; the sdist contains only validated regular files; and
+  two normalized source ZIP writes are byte-identical. Exact archive counts and hashes live in the
+  candidate's embedded release report rather than a source document that can drift as files change.
 - A fresh virtual environment installs 23 exact hash-locked runtime dependencies and the wheel
   with no index or dependency resolution. `pip check`, installed CLI/SDK/API/Web/plugin smoke, and
   the complete verifier from a source archive containing no Git metadata all pass.
 - The local release gate records zero medium-or-higher Bandit findings, zero unresolved findings
-  across 157 secret-scanned code/document files, zero known advisories among the 23 locked
+  across all eligible secret-scanned code/document files, zero known advisories among the 23 locked
   dependencies at check time, 24 installed-license entries, and a validated CycloneDX 1.6 SBOM
   with 25 components including the root application.
 - A deterministic release bundle contains wheel, sdist, source ZIP, release report, no-Git and
   installed-product evidence, security reports, SBOM, licenses, performance, lock file, notes, and
-  a 15-file asset directory with 14 portable checksum targets; a detached SHA-256 sidecar covers
-  the bundle itself.
+  claim-audit evidence, with a portable per-asset checksum inventory; a detached SHA-256 sidecar
+  covers the bundle itself.
+- A governed claim audit reconciles core quantitative statements against committed JSON evidence,
+  rejects undeclared publication URLs and stale hosted-domain identifiers, requires explicit
+  local/external boundaries, and records the dated absence of a public repository, hosted demo,
+  Git remote, or package project URL. A live refresh uses the official GitHub repository API.
 
 ## Implementing next
 

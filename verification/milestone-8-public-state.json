@@ -1,0 +1,21 @@
+{
+  "checked_at": "2026-08-13T08:10:25Z",
+  "claim_boundary": [
+    "An HTTP 404 is a dated absence check, not proof that a repository can never exist.",
+    "An empty local Git remote list does not inspect private repositories or other machines.",
+    "No public repository, hosted demo, remote CI result, external review, users, adoption, or impact is claimed."
+  ],
+  "github_repository": "limingrui679-design/civicdecision-os",
+  "github_repository_api": "https://api.github.com/repos/limingrui679-design/civicdecision-os",
+  "github_repository_http_status": 404,
+  "github_repository_state": "not-publicly-available-at-check-time",
+  "local_git_remotes": [],
+  "package_project_urls": [],
+  "public_hosted_demo_url": null,
+  "schema_version": "1.0.0",
+  "source": {
+    "api": "GitHub REST API get-a-repository endpoint",
+    "local": "git remote -v",
+    "package": "pyproject.toml project.urls"
+  }
+}

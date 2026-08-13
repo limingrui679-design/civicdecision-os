@@ -95,7 +95,7 @@ The application adds content-type sniffing protection, frame denial, no-referrer
 permissions restrictions, same-origin opener/resource policies, and a strict Content Security
 Policy. The packaged UI uses no third-party runtime scripts, styles, fonts, or network services.
 
-These are defense-in-depth controls for a public read-only explorer. They are not a substitute for
+These are defense-in-depth controls for the read-only explorer. They are not a substitute for
 authentication, authorization, deployment isolation, dependency scanning, rate limiting, or an
 independent penetration test.
 

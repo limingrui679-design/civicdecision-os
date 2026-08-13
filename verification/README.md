@@ -53,8 +53,8 @@ pytest -q --cov=civicdecision --cov-branch \
   --cov-report=json:verification/milestone-8-coverage.json
 ```
 
-The final collection contains exactly 800 tests. The current report records 96.987% statement
-coverage, 90.422% branch coverage, and 95.705% under coverage.py's combined line-and-branch
+The final collection contains exactly 800 tests. The current report records 97.100% statement
+coverage, 91.076% branch coverage, and 95.893% under coverage.py's combined line-and-branch
 measure. In addition to the product and library gates, the collection validates real wheel and
 sdist outputs, complete wheel `RECORD` hashes and sizes, safe paths, bounded expansion, required
 release inventory, deterministic source ZIPs, portable checksums, and adversarial archive and
@@ -69,6 +69,13 @@ formal accessibility, cross-browser, performance, or penetration-test evidence.
 
 [`milestone-8-performance.json`](milestone-8-performance.json) records nine passing, versioned local
 budgets over the real catalog, API, design filters/details, and exact library/product builders.
+[`milestone-8-quality.json`](milestone-8-quality.json) binds the exact test collection, coverage
+totals, lint, formatting, typing, JavaScript, structured-document, workflow, and whitespace checks.
+[`milestone-8-claim-audit.json`](milestone-8-claim-audit.json) records the governed quantitative
+claim and boundary checks, while [`milestone-8-public-state.json`](milestone-8-public-state.json)
+preserves the dated official-API result and absent local publication coordinates. Public state is
+refreshed before a candidate is described externally; the offline release build validates the
+committed snapshot so deterministic packaging does not depend on a mutable network response.
 The complete release candidate adds a clean hash-locked install, installed-product smoke test,
 full no-Git rebuild, security scans, SBOM, licenses, and deterministic bundle evidence under the
 output contract in [`../docs/RELEASE_PROCESS.md`](../docs/RELEASE_PROCESS.md). Release output is
@@ -76,7 +83,8 @@ not tracked as source; its embedded `release-report.json` and portable hashes tr
 bundle.
 
 Milestone 0 through Milestone 7 reports remain immutable historical snapshots. The Milestone-8
-exact-rebuild, coverage, performance, and release evidence plus Milestone-7 browser evidence
+exact-rebuild, coverage, performance, quality, claim-audit, public-state, and release evidence plus
+Milestone-7 browser evidence
 together describe the current local source, artifacts, product UI, packaging, and supply-chain
 checks.
 

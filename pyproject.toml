@@ -79,11 +79,6 @@ all = [
 [project.scripts]
 civicdecision = "civicdecision.cli:app"
 
-[project.urls]
-Documentation = "https://github.com/limingrui679-design/civicdecision-os"
-Repository = "https://github.com/limingrui679-design/civicdecision-os"
-Issues = "https://github.com/limingrui679-design/civicdecision-os/issues"
-
 [tool.hatch.build.targets.wheel]
 packages = ["src/civicdecision"]
 core-metadata-version = "2.4"

@@ -35,7 +35,7 @@ secret detection, advisory lookup, software inventory, and explicit deployment b
 | Reconstruction | Full verifier in extracted no-Git source | Any non-identical golden artifact |
 | Static analysis | Bandit medium severity and confidence | Any result |
 | Secrets | Offline fresh Detect Secrets scan | Any unresolved result |
-| Advisories | pip-audit of the exact lock | Any known finding at check time |
+| Advisories | Resolver-free pip-audit of the exact hashed lock, reconciled with the isolated installed runtime | Any inventory mismatch or known finding at check time |
 | Inventory | CycloneDX 1.6 SBOM and package-license inventory | Missing or invalid inventory |
 | Integrity | Per-asset and bundle SHA-256 | Any mismatch |
 

@@ -13,7 +13,7 @@ from collections.abc import Iterable
 from email.parser import BytesParser
 from email.policy import default
 from pathlib import Path, PurePosixPath
-from typing import Any
+from typing import Any, cast
 
 
 class ReleaseValidationError(ValueError):
@@ -252,21 +252,29 @@ def validate_sdist(
         "catalog/scenario-library/artifact-manifest.json",
         "catalog/scenario-library/SHA256SUMS",
         "docs/RELEASE_PROCESS.md",
+        "docs/CLAIM_AUDIT.md",
         "docs/PERFORMANCE.md",
         "docs/RELEASE_NOTES_0.8.0.md",
         "docs/SECURITY_ASSURANCE.md",
         "examples/outputs/suffolk-heat-access/SHA256SUMS",
         "governance/CLAIM_BOUNDARIES.md",
+        "governance/CLAIM_AUDIT_POLICY.json",
         "pyproject.toml",
         "requirements/runtime-api.lock",
+        "scripts/audit_claims.py",
         "scripts/build_release_candidate.py",
         "scripts/release_smoke.py",
         "scripts/verify_repository.py",
         "src/civicdecision/__init__.py",
+        "src/civicdecision/claim_audit.py",
         "src/civicdecision/release.py",
         "tests/test_product_build.py",
         "verification/milestone-7-scenario-library-and-product.json",
+        "verification/milestone-8-claim-audit.json",
+        "verification/milestone-8-coverage.json",
         "verification/milestone-8-performance.json",
+        "verification/milestone-8-public-state.json",
+        "verification/milestone-8-quality.json",
         "verification/milestone-8-repository.json",
     }
     required = {f"{root}/{relative}" for relative in required_relative}
@@ -430,3 +438,43 @@ def verify_checksum_inventory(directory: Path, checksum_path: Path) -> dict[str,
             f"missing={sorted(seen - expected)}"
         )
     return {"entry_count": len(seen), "complete": True, "portable_paths": True}
+
+
+def validate_dependency_audit(
+    dependency_audit: object,
+    *,
+    installed_versions: dict[str, str],
+    expected_count: int,
+) -> tuple[list[dict[str, Any]], int]:
+    """Reconcile a pip-audit report with the installed hash-locked runtime."""
+
+    if not isinstance(dependency_audit, dict):
+        raise ReleaseValidationError("dependency audit report must be an object")
+    raw_dependencies = dependency_audit.get("dependencies")
+    if not isinstance(raw_dependencies, list):
+        raise ReleaseValidationError("dependency audit dependencies must be a list")
+    if not all(isinstance(item, dict) for item in raw_dependencies):
+        raise ReleaseValidationError("dependency audit contains a malformed dependency record")
+    dependencies = cast(list[dict[str, Any]], raw_dependencies)
+    audited_versions = {
+        str(item.get("name", "")).casefold().replace("_", "-"): str(item.get("version", ""))
+        for item in dependencies
+    }
+    if (
+        len(dependencies) != len(audited_versions)
+        or len(audited_versions) != expected_count
+        or not all(name and version for name, version in audited_versions.items())
+    ):
+        raise ReleaseValidationError(
+            "dependency audit inventory is incomplete, duplicated, or malformed"
+        )
+    if not all(isinstance(item.get("vulns"), list) for item in dependencies):
+        raise ReleaseValidationError("dependency audit omitted vulnerability results")
+    if audited_versions != installed_versions:
+        raise ReleaseValidationError(
+            "dependency audit inventory differs from the hash-locked installed runtime"
+        )
+    vulnerabilities = sum(len(cast(list[object], item["vulns"])) for item in dependencies)
+    if vulnerabilities:
+        raise ReleaseValidationError("dependency audit found known vulnerabilities")
+    return dependencies, vulnerabilities

@@ -1,0 +1,66 @@
+{
+  "checked_at": "2026-08-13T11:36:01Z",
+  "claim_boundary": [
+    "This file is refreshed only after the full local suite and every named static check complete.",
+    "Local quality checks do not establish remote CI, external review, production readiness, users, adoption, or impact."
+  ],
+  "coverage": {
+    "branches_percent": 91.07600341588386,
+    "combined_percent": 95.89287242234963,
+    "report": "verification/milestone-8-coverage.json",
+    "report_sha256": "sha256:f29ba838776524372c655a54d0cf1107e36ea6ad571c75c142b3b76fd516a267",
+    "statements_percent": 97.10005350454789,
+    "claim_audit_module": {
+      "branches_percent": 100.0,
+      "combined_percent": 100.0,
+      "statements_percent": 100.0
+    }
+  },
+  "runtime_lock": {
+    "package_count": 23
+  },
+  "schema_version": "1.0.0",
+  "software_version": "0.8.0",
+  "static_quality": {
+    "git_diff_check": {
+      "status": "passed"
+    },
+    "javascript_syntax": {
+      "files": 1,
+      "status": "passed"
+    },
+    "json_documents": {
+      "files": 1668,
+      "status": "passed"
+    },
+    "mypy_strict": {
+      "source_files": 83,
+      "status": "passed"
+    },
+    "python_syntax": {
+      "files": 121,
+      "status": "passed"
+    },
+    "ruff_check": {
+      "status": "passed"
+    },
+    "ruff_format_check": {
+      "files": 257,
+      "status": "passed"
+    },
+    "toml_documents": {
+      "files": 1,
+      "status": "passed"
+    },
+    "workflow_yaml": {
+      "files": 4,
+      "status": "passed"
+    }
+  },
+  "status": "passed",
+  "tests": {
+    "collected": 800,
+    "failed": 0,
+    "passed": 800
+  }
+}

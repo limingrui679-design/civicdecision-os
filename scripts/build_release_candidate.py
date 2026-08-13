@@ -21,6 +21,7 @@ from civicdecision.release import (
     ReleaseValidationError,
     extract_validated_sdist,
     sha256_path,
+    validate_dependency_audit,
     validate_sdist,
     validate_wheel,
     verify_checksum_inventory,
@@ -276,6 +277,39 @@ def _runtime_site_packages(runtime_python: Path, environment: dict[str, str]) ->
     return Path(result.stdout.strip())
 
 
+def _installed_runtime_versions(
+    runtime_python: Path,
+    environment: dict[str, str],
+) -> dict[str, str]:
+    result = subprocess.run(
+        [
+            str(runtime_python),
+            "-I",
+            "-c",
+            (
+                "import importlib.metadata as m, json; "
+                "skip={'civicdecision','pip','setuptools'}; "
+                "print(json.dumps({d.metadata['Name'].casefold().replace('_','-'): d.version "
+                "for d in m.distributions() if d.metadata['Name'].casefold() not in skip}, "
+                "sort_keys=True))"
+            ),
+        ],
+        env=environment,
+        text=True,
+        capture_output=True,
+        check=True,
+    )
+    payload = json.loads(result.stdout)
+    require(
+        isinstance(payload, dict)
+        and all(
+            isinstance(name, str) and isinstance(version, str) for name, version in payload.items()
+        ),
+        "installed runtime package inventory is malformed",
+    )
+    return payload
+
+
 def _scan_candidates(source_root: Path) -> list[str]:
     candidates: list[Path] = []
     for directory in ("src", "scripts", "tests", "docs", "governance", ".github/workflows"):
@@ -380,6 +414,27 @@ def build_release(
     performance = _json(ROOT / "verification/milestone-8-performance.json")
     require(performance["all_budgets_passed"] is True, "performance budget report is not passing")
     require(performance["software_version"] == __version__, "performance report version drift")
+    coverage = _json(ROOT / "verification/milestone-8-coverage.json")
+    quality = _json(ROOT / "verification/milestone-8-quality.json")
+    require(quality["status"] == "passed", "quality snapshot is not passing")
+    require(quality["software_version"] == __version__, "quality snapshot version drift")
+    require(
+        quality["tests"] == {"collected": 800, "failed": 0, "passed": 800}, "test snapshot drift"
+    )
+    require(
+        quality["coverage"]["report_sha256"]
+        == f"sha256:{sha256_path(ROOT / 'verification/milestone-8-coverage.json')}",
+        "quality snapshot does not bind the committed coverage report",
+    )
+    for quality_key, coverage_key in (
+        ("statements_percent", "percent_statements_covered"),
+        ("branches_percent", "percent_branches_covered"),
+        ("combined_percent", "percent_covered"),
+    ):
+        require(
+            quality["coverage"][quality_key] == coverage["totals"][coverage_key],
+            f"quality and coverage reports disagree: {quality_key}",
+        )
 
     with tempfile.TemporaryDirectory(prefix="civicdecision-release-") as temporary_name:
         temporary = Path(temporary_name)
@@ -425,6 +480,49 @@ def build_release(
             expected_source_root=source_root.name,
         )
 
+        claim_audit_report = temporary / "claim-audit-offline.json"
+        _run(
+            "offline governed-claim and public-state snapshot audit",
+            [
+                sys.executable,
+                source_root / "scripts/audit_claims.py",
+                "--root",
+                source_root,
+                "--report",
+                claim_audit_report,
+            ],
+            cwd=source_root,
+            environment=environment,
+            log=command_log,
+            output_path=temporary / "claim-audit.log",
+        )
+        claim_audit = _json(claim_audit_report)
+        committed_claim_audit = _json(source_root / "verification/milestone-8-claim-audit.json")
+        require(claim_audit["status"] == "passed", "offline claim audit is not passing")
+        require(claim_audit["refresh_mode"] == "snapshot-only", "offline claim audit mode drift")
+        require(committed_claim_audit["status"] == "passed", "committed live claim audit failed")
+        require(committed_claim_audit["refresh_mode"] == "live", "public state was not refreshed")
+        require(
+            isinstance(committed_claim_audit["audit_completed_at"], str),
+            "committed live claim audit has no completion timestamp",
+        )
+        require(
+            committed_claim_audit["public_state"]["refreshed_http_status"]
+            == committed_claim_audit["public_state"]["snapshot_http_status"],
+            "committed public-state refresh does not match its snapshot",
+        )
+        for field in (
+            "policy",
+            "scope",
+            "quantitative_values",
+            "evidence_sha256",
+            "governed_surface_sha256",
+        ):
+            require(
+                claim_audit[field] == committed_claim_audit[field],
+                f"offline and live claim-audit {field} disagree",
+            )
+
         runtime = temporary / "runtime"
         _run(
             "create isolated runtime environment",
@@ -436,6 +534,7 @@ def build_release(
         runtime_python = runtime / "bin/python"
         runtime_pip = runtime / "bin/pip"
         lock_path = source_root / "requirements/runtime-api.lock"
+        runtime_packages = _package_count_from_lock(lock_path)
         _run(
             "install fully hashed runtime lock",
             [runtime_pip, "install", "--require-hashes", "--no-cache-dir", "-r", lock_path],
@@ -562,13 +661,13 @@ def build_release(
 
         dependency_audit_path = temporary / "dependency-audit.json"
         _run(
-            "hashed-lock known-vulnerability audit",
+            "resolver-free hashed-lock known-vulnerability audit",
             [
                 _tool("pip-audit"),
                 "-r",
                 lock_path,
                 "--require-hashes",
-                "--no-deps",
+                "--disable-pip",
                 "--progress-spinner",
                 "off",
                 "--format",
@@ -582,9 +681,12 @@ def build_release(
             timeout=1_800,
         )
         dependency_audit = _json(dependency_audit_path)
-        audited_dependencies = dependency_audit.get("dependencies", [])
-        vulnerabilities = sum(len(item.get("vulns", [])) for item in audited_dependencies)
-        require(vulnerabilities == 0, "dependency audit found known vulnerabilities")
+        installed_versions = _installed_runtime_versions(runtime_python, environment)
+        audited_dependencies, vulnerabilities = validate_dependency_audit(
+            dependency_audit,
+            installed_versions=installed_versions,
+            expected_count=runtime_packages,
+        )
 
         license_path = temporary / "third-party-licenses.json"
         _run(
@@ -648,7 +750,6 @@ def build_release(
         release_time = (
             dt.datetime.fromtimestamp(epoch, tz=dt.UTC).isoformat().replace("+00:00", "Z")
         )
-        runtime_packages = _package_count_from_lock(lock_path)
         gates = [
             "clean-or-explicitly-overridden-source-state",
             "two-byte-identical-wheel-builds",
@@ -672,6 +773,8 @@ def build_release(
             "third-party-license-inventory-present",
             "cyclonedx-1.6-sbom-valid",
             "all-nine-local-performance-budgets-passed",
+            "committed-800-test-quality-and-coverage-snapshot-reconciled",
+            "governed-claim-and-dated-public-state-audit-passed",
         ]
         report: dict[str, Any] = {
             "schema_version": "1.0.0",
@@ -716,6 +819,8 @@ def build_release(
                 "bandit_medium_or_higher_findings": len(bandit["results"]),
                 "cyclonedx_spec_version": sbom.get("specVersion"),
                 "locked_dependency_audit_count": len(audited_dependencies),
+                "dependency_audit_inventory_matches_installed_runtime": True,
+                "dependency_audit_resolver_disabled": True,
                 "known_vulnerabilities_at_check_time": vulnerabilities,
                 "license_inventory_entries": len(licenses),
                 "runtime_lock_sha256": sha256_path(lock_path),
@@ -731,6 +836,27 @@ def build_release(
                 "budget_count": len(performance["budget_checks"]),
                 "boundary": performance["boundary"],
                 "environment": performance["environment"],
+            },
+            "quality_snapshot": {
+                "tests": quality["tests"],
+                "coverage": quality["coverage"],
+                "static_quality": quality["static_quality"],
+            },
+            "claim_audit": {
+                "status": claim_audit["status"],
+                "checks": claim_audit["checks"],
+                "scope": claim_audit["scope"],
+                "snapshot_checked_at": claim_audit["snapshot_checked_at"],
+                "live_audit_completed_at": committed_claim_audit["audit_completed_at"],
+                "policy_sha256": claim_audit["policy"]["sha256"],
+                "governed_surface_hashes_reconciled": True,
+                "evidence_hashes_reconciled": True,
+                "github_repository_http_status": claim_audit["public_state"][
+                    "snapshot_http_status"
+                ],
+                "local_git_metadata_available_in_sdist": False,
+                "package_project_urls": claim_audit["public_state"]["package_project_urls"],
+                "public_hosted_demo_url": claim_audit["public_state"]["public_hosted_demo_url"],
             },
             "release_gates": {
                 "passed": len(gates),
@@ -778,6 +904,15 @@ def build_release(
             lock_path: asset_directory / lock_path.name,
             ROOT / "verification/milestone-8-performance.json": (
                 asset_directory / "performance.json"
+            ),
+            ROOT / "verification/milestone-8-coverage.json": asset_directory / "coverage.json",
+            ROOT / "verification/milestone-8-quality.json": asset_directory / "quality.json",
+            source_root / "verification/milestone-8-claim-audit.json": (
+                asset_directory / "claim-audit-live.json"
+            ),
+            claim_audit_report: asset_directory / "claim-audit-offline.json",
+            source_root / "verification/milestone-8-public-state.json": (
+                asset_directory / "public-state.json"
             ),
             ROOT / "docs/RELEASE_NOTES_0.8.0.md": asset_directory / "RELEASE_NOTES.md",
         }

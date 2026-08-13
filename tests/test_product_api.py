@@ -140,8 +140,10 @@ def test_city_detail_and_path_validation_are_fail_closed(api_client: httpx.Clien
     assert detail.json()["city"]["tier"] == "D"
     assert invalid.status_code == 422
     assert invalid.json()["title"] == "Request validation failed"
+    assert invalid.json()["type"] == "urn:civicdecision:problem:request-validation"
     assert missing.status_code == 404
     assert missing.json()["title"] == "Artifact not found"
+    assert missing.json()["type"] == "urn:civicdecision:problem:not-found"
 
 
 def test_scenario_collection_exposes_exact_filter_counts(api_client: httpx.Client) -> None:
@@ -298,6 +300,7 @@ def test_method_not_allowed_and_missing_routes_use_problem_details(
     assert (method.status_code, method.json()["title"]) == (405, "Method not allowed")
     assert (missing.status_code, missing.json()["title"]) == (404, "Route not found")
     assert method.headers["content-type"].startswith("application/problem+json")
+    assert method.json()["type"] == "urn:civicdecision:problem:http-405"
 
 
 def test_request_id_policy_accepts_safe_values_and_replaces_unsafe_values(
