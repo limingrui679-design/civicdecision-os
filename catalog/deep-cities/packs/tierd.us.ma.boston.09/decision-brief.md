@@ -3,7 +3,7 @@
 - Scenario: `tierd.us.ma.boston.09`
 - Application suite: `behavioral-policy-equity`
 - Status: `completed`
-- DecisionPack content hash: `sha256:1b2a315128e9940c430c20b22ec65482f4a9d32f7d65e14bac735b5cffdd2f16`
+- DecisionPack content hash: `sha256:694dbd10160ac94f831ac2184f0e877b2e94ee75f7ddb452066a59c8873da715`
 
 ## Claim boundary
 

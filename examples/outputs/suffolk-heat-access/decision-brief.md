@@ -3,7 +3,7 @@
 - Run: `run-aff7c38b12c1`
 - Scenario: `us.ma.suffolk.heat-access-demo.v1`
 - Status: `completed`
-- DecisionPack content hash: `sha256:b930f66e7b1335378b7f5a31574c2c83c4d89660102f95787b26efad89f8e63e`
+- DecisionPack content hash: `sha256:6673fcf19094daae7f5e5554d07793bbbfec098e88ca22f68a620d7d553692a4`
 
 ## Claim boundary
 

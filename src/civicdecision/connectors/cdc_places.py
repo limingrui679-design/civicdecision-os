@@ -23,7 +23,7 @@ from civicdecision.protocols.source import SourceManifest
 CDC_PLACES_ENDPOINT = "https://data.cdc.gov/resource/yjkw-uj5s.json"
 CDC_PLACES_LANDING = (
     "https://data.cdc.gov/500-Cities-Places/"
-    "PLACES-Census-Tract-Data-GIS-Friendly-Format-2025-/yjkw-uj5s"
+    "PLACES-Census-Tract-Data-GIS-Friendly-Format-2025-/yjkw-uj5s"  # pragma: allowlist secret
 )
 DEFAULT_FIELDS = (
     "stateabbr,statedesc,countyname,countyfips,tractfips,totalpopulation,totalpop18plus,"

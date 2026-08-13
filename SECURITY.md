@@ -35,3 +35,16 @@ audit-log protocol.
 The current public samples contain public aggregate records. The repository does not claim
 authorization for protected health information, personal data, confidential government data,
 or client data.
+
+## Release assurance
+
+The current release process performs two byte-identical wheel/sdist builds, archive path and
+inventory validation, complete wheel `RECORD` verification, a hash-locked clean install, installed
+CLI/SDK/API/Web/plugin smoke tests, full no-Git golden reconstruction, Bandit, offline secret
+scanning, dependency advisory audit, a CycloneDX SBOM, a third-party license inventory, and
+portable SHA-256 manifests. See [`docs/SECURITY_ASSURANCE.md`](docs/SECURITY_ASSURANCE.md) and
+[`docs/RELEASE_PROCESS.md`](docs/RELEASE_PROCESS.md).
+
+These automated controls are time- and scope-bounded. They are not a substitute for independent
+review, artifact signing, a deployment threat assessment, penetration testing, continuous
+monitoring, incident response, or production authorization.

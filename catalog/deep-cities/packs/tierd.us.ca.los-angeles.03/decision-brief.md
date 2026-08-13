@@ -3,7 +3,7 @@
 - Scenario: `tierd.us.ca.los-angeles.03`
 - Application suite: `public-service-operations`
 - Status: `completed`
-- DecisionPack content hash: `sha256:20e040de9aa59f1f23d20c9b7992104f8e97f411dc019fe2df101852712808d8`
+- DecisionPack content hash: `sha256:c059110e0255498736f91fa91d0b4f66fbdf4d5b49a7f64bcc650d0d3c22a959`
 
 ## Claim boundary
 

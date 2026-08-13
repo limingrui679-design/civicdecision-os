@@ -20,14 +20,15 @@ intervention definition
 
 This repository is an early implementation. The global scale described in the project blueprint is a target, not a completed result. Current, verified capabilities are listed in [`docs/STATUS.md`](docs/STATUS.md); the complete requirement-to-evidence matrix is in [`docs/REQUIREMENTS.md`](docs/REQUIREMENTS.md).
 
-The seventh implementation milestone establishes 27 generated core contracts, the evidence type
+The eighth implementation milestone establishes 27 generated core contracts, the evidence type
 system, deterministic validation, ten loadable public-data connectors, a reproducible Tier-G
 catalog of 250 city points, 30 Tier-S standardized descriptive bundles, five transparent
 analytical engines, 40 held-out historical replays, 100 bounded benchmark optimization tasks,
 eight Tier-D city adapters with 96 evidence-gated scenario packs, an audited 240-design scenario
-library, and five read-only product surfaces over one validated artifact store. Tier D, design
-breadth, and product visibility still do not mean production deployment, municipal adoption,
-policy validity, or real-world impact.
+library, five read-only product surfaces over one validated artifact store, and a reproducible
+0.8.0 release-candidate pipeline. Tier D, design breadth, packaging depth, and product visibility
+still do not mean production deployment, municipal adoption, policy validity, or real-world
+impact.
 
 ## One validated product core, five surfaces
 
@@ -86,20 +87,26 @@ This demonstrates implementation behavior only. Tract centroids are not verified
 radius is not travel time, the population proxy is not individual demand, and the selected option
 is not a municipal recommendation.
 
-Current local quality evidence is recorded in
-[`verification/milestone-7-scenario-library-and-product.json`](verification/milestone-7-scenario-library-and-product.json),
-[`verification/milestone-7-coverage.json`](verification/milestone-7-coverage.json), and
-[`verification/milestone-7-browser-qa.json`](verification/milestone-7-browser-qa.json). Exactly 800
-tests pass with 96.989% statement, 90.250% branch, and 95.696% combined line-and-branch coverage. The
-independent verifier regenerates Schemas, both earlier reference outputs, all four global-city
-artifacts, the complete standardized-city and analytical-benchmark trees, all 707 Tier-D
-artifacts, the 282-file scenario library, and the 338-file product projection in a temporary
-directory and requires exact bytes.
+Current repository and browser evidence is recorded in
+[`verification/milestone-8-repository.json`](verification/milestone-8-repository.json),
+[`verification/milestone-7-browser-qa.json`](verification/milestone-7-browser-qa.json),
+[`verification/milestone-8-coverage.json`](verification/milestone-8-coverage.json), and
+[`verification/milestone-8-performance.json`](verification/milestone-8-performance.json). Exactly
+800 tests pass with 96.987% statement, 90.422% branch, and 95.705% combined line-and-branch
+coverage. The independent verifier regenerates Schemas, both earlier reference outputs, all four
+global-city artifacts, the complete standardized-city and analytical-benchmark trees, all 707
+Tier-D artifacts, the 282-file scenario library, and the 338-file product projection in a
+temporary directory and requires exact bytes.
 
-The earlier
-[`verification/milestone-6-wheel-smoke.json`](verification/milestone-6-wheel-smoke.json) remains a
-historical packaging snapshot; it predates the scenario library and is not presented as current
-Milestone-7 wheel evidence.
+The release-candidate process builds byte-identical wheel, sdist, and normalized source-ZIP
+iterations; verifies every wheel `RECORD` row and required archive member; installs the hash-locked
+runtime and wheel in a clean environment; smoke-tests the installed CLI, SDK, API, Web explorer,
+and plugin contract; and reruns the full verifier from a no-Git source archive. It also emits
+Bandit, Detect Secrets, dependency-advisory, license, CycloneDX 1.6 SBOM, performance, and checksum
+evidence. See [`docs/RELEASE_PROCESS.md`](docs/RELEASE_PROCESS.md),
+[`docs/SECURITY_ASSURANCE.md`](docs/SECURITY_ASSURANCE.md), and
+[`docs/RELEASE_NOTES_0.8.0.md`](docs/RELEASE_NOTES_0.8.0.md). These local gates do not establish a
+signed or published GitHub Release, remote CI success, public hosting, or external review.
 
 The current source catalog contains ten loadable connector implementations across eight source
 families, plus eight audited municipal dataset configurations used by the generic aggregate
@@ -341,6 +348,14 @@ civicdecision demo heat-access \
 python scripts/verify_repository.py
 ```
 
+Build a clean, independently checked local release candidate only after the repository verifier
+and test suite pass:
+
+```bash
+python -m pip install -e '.[dev,release]'
+python scripts/build_release_candidate.py --output-dir dist/release-0.8.0
+```
+
 The local explorer opens at `http://127.0.0.1:8000/`; the versioned API is under
 `/api/v1`, and the deterministic OpenAPI document is available at `/api/openapi.json`. A
 non-loopback server bind requires the explicit `--allow-network` acknowledgement, which does not
@@ -369,11 +384,13 @@ add production authentication, TLS, quotas, or authorization.
 - `src/civicdecision/web/` — dependency-free responsive evidence explorer with no third-party
   runtime assets.
 - `src/civicdecision/demos/` — end-to-end reference compilers.
+- `src/civicdecision/release.py` — fail-closed wheel, sdist, source-ZIP, and checksum validation.
 - `schemas/` — generated versioned JSON Schemas.
+- `requirements/runtime-api.lock` — exact, fully hashed local API/runtime dependency contract.
 - `examples/data/` — small public fixtures plus manifests.
 - `examples/outputs/` — completed and negative golden DecisionPacks.
 - `docs/` — architecture, governance, threat model, ADRs, and scope matrix.
-- `verification/` — machine-readable exact-rebuild evidence.
+- `verification/` — machine-readable exact-rebuild, coverage, browser, and performance evidence.
 - `benchmarks/` — complete runs, row-level evidence ledgers, reports, and portable hashes.
 - `catalog/deep-cities/` — 8 city bundles, 96 scenario packs, 96 briefs, evidence ledgers, and
   anti-inflation audit.

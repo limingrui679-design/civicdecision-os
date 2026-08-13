@@ -4,10 +4,11 @@ Updated: 2026-08-13
 
 ## Current milestone
 
-Milestone 7—the audited 240-design scenario library and its integration across the shared store,
-REST API, Python SDK, CLI, static product projection, and evidence explorer—is implemented and
-repository-wide verified. The library preserves the earlier twelve Tier-D templates as bounded
-reference implementations without counting their repeated city bindings as new designs.
+Milestone 8—the 0.8.0 release-assurance layer over the audited 240-design scenario library and all
+five product surfaces—is implemented and locally verified. It preserves the earlier twelve Tier-D
+templates as bounded reference implementations, synchronizes every generated DecisionPack and
+product artifact to 0.8.0, and adds reproducible packaging, clean-install, no-Git reconstruction,
+performance, security, SBOM, license, and checksum evidence.
 
 ## Verified now
 
@@ -132,12 +133,27 @@ reference implementations without counting their repeated city bindings as new d
 - Current local browser inspection passed at the default desktop viewport and 390×844, including
   family-to-eight-design filtering, compound search, design and audit drawers, mobile navigation,
   zero horizontal scroll, and zero browser warnings/errors.
-- 800 automated tests pass. Coverage is 96.989% for statements, 90.250% for branches, and 95.696%
-  under coverage.py's combined line-and-branch measure; strict mypy, Ruff lint, Ruff format, web
-  JavaScript syntax, and whitespace-integrity checks pass locally.
-- The previous Milestone-6 wheel passed its isolated install and 35-file product smoke tests. It
-  does not cover the new library and 338-file projection; a fresh Milestone-7 wheel is a pending
-  release gate and will not inherit the older result.
+- 800 automated tests pass. Coverage is 96.987% for statements, 90.422% for branches, and 95.705%
+  under coverage.py's combined line-and-branch measure. The release module alone reaches 96%
+  combined coverage and is exercised against real wheel/sdist files plus adversarial paths,
+  members, metadata, hashes, inventories, links, budgets, and checksum failures.
+- Nine local performance budgets pass on the recorded CPython 3.12 / macOS arm64 environment:
+  cold store initialization, two direct-store reads, four API reads, and exact 282-/338-file
+  builds. These are single-process regression measurements rather than service-level evidence.
+- Two independent 0.8.0 wheel and sdist builds are byte-identical under the recorded epoch. The
+  wheel has 91 verified members and complete `RECORD` hashes/sizes; the sdist has 2,006 safe regular
+  files; two normalized 2,006-file source ZIP writes are byte-identical.
+- A fresh virtual environment installs 23 exact hash-locked runtime dependencies and the wheel
+  with no index or dependency resolution. `pip check`, installed CLI/SDK/API/Web/plugin smoke, and
+  the complete verifier from a source archive containing no Git metadata all pass.
+- The local release gate records zero medium-or-higher Bandit findings, zero unresolved findings
+  across 157 secret-scanned code/document files, zero known advisories among the 23 locked
+  dependencies at check time, 24 installed-license entries, and a validated CycloneDX 1.6 SBOM
+  with 25 components including the root application.
+- A deterministic release bundle contains wheel, sdist, source ZIP, release report, no-Git and
+  installed-product evidence, security reports, SBOM, licenses, performance, lock file, notes, and
+  a 15-file asset directory with 14 portable checksum targets; a detached SHA-256 sidecar covers
+  the bundle itself.
 
 ## Implementing next
 
@@ -147,9 +163,10 @@ reference implementations without counting their repeated city bindings as new d
 - Network routing, scalable solver interfaces, and deep-city engine orchestration.
 - City-specific compilation pilots, external domain review, transportability review, and
   independently checkable execution evidence for selected design-only records.
-- Performance budgets, dependency/security audit, fresh wheel/sdist smoke tests, release notes,
-  signed checksums, and a reproducible release candidate for the enlarged product.
-- CI/security workflows require a real remote run before their results can be called verified.
+- Cryptographic signing or trusted provenance, a published tag/GitHub Release, and independent
+  verification of a published bundle.
+- Remote CI, security, CodeQL, and release-candidate workflows require real GitHub runs before
+  their results can be called verified.
 
 ## Explicitly not complete
 
@@ -159,5 +176,5 @@ reference implementations without counting their repeated city bindings as new d
 - City-bound execution for the 228 design-only records. Their presence in the library establishes
   authored contracts and audited separation only.
 - Public hosted demo, production authentication/authorization, independent accessibility and
-  penetration testing, signed release artifacts, and remote-CI verification.
+  penetration testing, cryptographically signed release artifacts, and remote-CI verification.
 - External review, real users, municipal adoption, or real-world impact.

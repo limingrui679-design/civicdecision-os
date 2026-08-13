@@ -1,6 +1,6 @@
 {
   "benchmark_run_artifacts": 145,
-  "catalog_fingerprint": "sha256:cebf4dc6f8a1735905d1583a66b97f274ce488e5e8fcc7841cd11fdb4fc83890",
+  "catalog_fingerprint": "sha256:2f287e2349a6a091d280f15a2578d3dcad76e59ee044b5524015622bb9793429",
   "claim_boundary": [
     "Public data and deterministic software runs are not client work or field deployment.",
     "Simulation and optimization are not observed impact or institutional adoption.",
@@ -29,7 +29,7 @@
   "scenario_library_maximum_similarity": 0.646154,
   "scenario_library_methods_claimed": 0,
   "schema_version": "1.0.0",
-  "software_version": "0.1.0",
+  "software_version": "0.8.0",
   "source_artifacts": 90,
   "standard_scenario_screens": 90,
   "tier_assignments": 288,

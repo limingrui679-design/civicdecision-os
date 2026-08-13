@@ -105,7 +105,8 @@ CONNECTOR_REGISTRY = (
         class_name="CDCPlacesConnector",
         documentation_url=AnyHttpUrl(
             "https://data.cdc.gov/500-Cities-Places/"
-            "PLACES-Census-Tract-Data-GIS-Friendly-Format-2025-/yjkw-uj5s"
+            "PLACES-Census-Tract-Data-GIS-Friendly-"
+            "Format-2025-/yjkw-uj5s"  # pragma: allowlist secret
         ),
         authentication="No key for bounded Socrata queries; app tokens may raise limits.",
         paging_or_bound="limit <= 50,000 plus explicit offset and optional state/county filter",

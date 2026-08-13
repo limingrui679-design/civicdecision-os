@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import json
+from importlib.metadata import version
 from pathlib import Path
 from types import SimpleNamespace
 from typing import Any
@@ -8,6 +9,7 @@ from typing import Any
 import pytest
 from typer.testing import CliRunner
 
+from civicdecision import __version__
 from civicdecision.cli import app
 from civicdecision.connectors.base import FetchResult
 from civicdecision.connectors.cdc_places import CDCPlacesConnector
@@ -29,7 +31,7 @@ runner = CliRunner()
 def test_cli_version() -> None:
     result = runner.invoke(app, ["version"])
     assert result.exit_code == 0
-    assert "0.1.0" in result.output
+    assert result.output.strip() == __version__ == version("civicdecision") == "0.8.0"
 
 
 def test_cli_builds_schemas(tmp_path: Path) -> None:

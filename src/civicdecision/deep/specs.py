@@ -344,7 +344,7 @@ DEEP_CITY_SPECS = (
             endpoint=_url("https://data.lacity.org/resource/h73f-gn57.json"),
             landing_url=_url(
                 "https://data.lacity.org/City-Infrastructure-Service-Requests/"
-                "MyLA311-Service-Request-Data-2025/h73f-gn57"
+                "MyLA311-Service-Request-Data-2025/h73f-gn57"  # pragma: allowlist secret
             ),
             dataset_identifier="h73f-gn57",
             fields=MunicipalFieldMap(

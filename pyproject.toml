@@ -4,11 +4,12 @@ build-backend = "hatchling.build"
 
 [project]
 name = "civicdecision"
-version = "0.1.0"
+dynamic = ["version"]
 description = "An evidence-typed compiler for urban interventions"
 readme = "README.md"
 requires-python = ">=3.11"
-license = { file = "LICENSE" }
+license = "MIT"
+license-files = ["LICENSE"]
 authors = [{ name = "Mingrui Li" }]
 keywords = [
   "urban analytics",
@@ -18,8 +19,7 @@ keywords = [
   "optimization",
 ]
 classifiers = [
-  "Development Status :: 2 - Pre-Alpha",
-  "License :: OSI Approved :: MIT License",
+  "Development Status :: 3 - Alpha",
   "Programming Language :: Python :: 3",
   "Programming Language :: Python :: 3.11",
   "Programming Language :: Python :: 3.12",
@@ -54,6 +54,17 @@ dev = [
   "types-PyYAML>=6.0,<7",
   "uvicorn>=0.34,<1",
 ]
+release = [
+  "bandit[toml]>=1.9,<2",
+  "build>=1.5,<2",
+  "check-wheel-contents>=0.6,<1",
+  "cyclonedx-bom>=7.3,<8",
+  "detect-secrets>=1.5,<2",
+  "pip-audit>=2.10,<3",
+  "pip-licenses>=5.5,<6",
+  "pip-tools>=7.6,<8",
+  "twine>=6.2,<7",
+]
 all = [
   "duckdb>=1.2,<2",
   "polars>=1.20,<2",
@@ -75,6 +86,38 @@ Issues = "https://github.com/limingrui679-design/civicdecision-os/issues"
 
 [tool.hatch.build.targets.wheel]
 packages = ["src/civicdecision"]
+core-metadata-version = "2.4"
+
+[tool.hatch.build.targets.sdist]
+core-metadata-version = "2.4"
+include = [
+  "/.github",
+  "/.secrets.baseline",
+  "/CHANGELOG.md",
+  "/CONTRIBUTING.md",
+  "/LICENSE",
+  "/Makefile",
+  "/README.md",
+  "/SECURITY.md",
+  "/benchmarks",
+  "/catalog",
+  "/docs",
+  "/examples",
+  "/governance",
+  "/pyproject.toml",
+  "/requirements",
+  "/schemas",
+  "/scripts",
+  "/src",
+  "/tests",
+  "/verification",
+]
+exclude = [
+  "/verification/milestone-8-release.json",
+]
+
+[tool.hatch.version]
+path = "src/civicdecision/__init__.py"
 
 [tool.pytest.ini_options]
 addopts = "-ra --strict-markers --strict-config"

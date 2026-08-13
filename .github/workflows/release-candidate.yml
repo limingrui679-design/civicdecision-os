@@ -1,0 +1,42 @@
+name: Reproducible release candidate
+
+on:
+  workflow_dispatch:
+  push:
+    tags:
+      - "v*"
+
+permissions:
+  contents: read
+
+concurrency:
+  group: release-candidate-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  build-and-verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - name: Install quality and release tooling
+        run: python -m pip install -e '.[dev,release]'
+      - name: Run repository quality gates
+        run: make check
+      - name: Build and independently verify release candidate
+        run: >-
+          python scripts/build_release_candidate.py
+          --output-dir dist/release-${{ github.sha }}
+      - uses: actions/upload-artifact@v4
+        with:
+          name: civicdecision-release-candidate-${{ github.sha }}
+          if-no-files-found: error
+          retention-days: 30
+          path: dist/release-${{ github.sha }}/

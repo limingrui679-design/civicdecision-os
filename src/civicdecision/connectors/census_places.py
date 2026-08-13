@@ -28,7 +28,7 @@ ACS_POPULATION_TABLE_URL = (
 ACS_SUMMARY_DOCUMENTATION = "https://www.census.gov/programs-surveys/acs/data/summary-file.html"
 TIGERWEB_ENDPOINT = (
     "https://tigerweb.geo.census.gov/arcgis/rest/services/"
-    "TIGERweb/Places_CouSub_ConCity_SubMCD/MapServer/4/query"
+    "TIGERweb/Places_CouSub_ConCity_SubMCD/MapServer/4/query"  # pragma: allowlist secret
 )
 TIGERWEB_DOCUMENTATION = "https://tigerweb.geo.census.gov/tigerwebmain/TIGERweb_restmapservice.html"
 TIGERWEB_FIELDS = "GEOID,BASENAME,NAME,STATE,PLACE,AREALAND,AREAWATER,LSADC,FUNCSTAT"

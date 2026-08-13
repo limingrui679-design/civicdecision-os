@@ -37,9 +37,16 @@ python scripts/verify_repository.py
 node --check src/civicdecision/web/assets/app.js
 ```
 
-The product build is accepted only when the committed 35-file tree, artifact manifest, OpenAPI
-document, web hashes, and portable checksums rebuild exactly. Browser changes require desktop and
-mobile interaction inspection; a screenshot alone is not functional evidence.
+The product build is accepted only when the committed 338-file tree, 336-entry artifact manifest,
+19-path OpenAPI document, 28 Schemas, web hashes, and portable checksums rebuild exactly. Browser
+changes require desktop and mobile interaction inspection; a screenshot alone is not functional
+evidence.
+
+Changes to packaging, dependencies, archive handling, version metadata, or public release inputs
+must also install `.[release]` and run the clean-tree process in
+[`docs/RELEASE_PROCESS.md`](docs/RELEASE_PROCESS.md). Do not hand-edit the hash lock, SBOM, audit
+reports, or checksum inventories. Release validation must exercise an installed wheel from a
+source archive with no Git metadata; an editable install is not release evidence.
 
 ## Add a public source
 
@@ -73,3 +80,7 @@ mobile interaction inspection; a screenshot alone is not functional evidence.
 State exactly what changed, which claims are supported, the commands run, the test result,
 the artifact hashes, and what remains unverified. Screenshots and README statements do not
 replace code, manifests, logs, or reproducible outputs.
+
+Do not describe a local candidate as a public release, hosted service, signed artifact, remote-CI
+success, external validation, adoption, or impact. Those claims require separate public or
+third-party evidence.
