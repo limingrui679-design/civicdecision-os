@@ -823,7 +823,7 @@
       "path": "src/civicdecision/api/app.py"
     },
     {
-      "contains": "This report verifies a local release candidate; it is not a public deployment",
+      "contains": "This report verifies the release assets; it does not by itself prove that a tag,",
       "id": "release-report-local-candidate-boundary",
       "path": "scripts/build_release_candidate.py"
     }

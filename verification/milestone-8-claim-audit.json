@@ -1,5 +1,5 @@
 {
-  "audit_completed_at": "2026-08-13T12:15:37Z",
+  "audit_completed_at": "2026-08-13T12:25:22Z",
   "checks": {
     "failed": 0,
     "passed": 136,
@@ -52,12 +52,12 @@
     "docs/adr/0003-one-validated-product-core.md": "sha256:996766f81f1bd2d8ec3954759b958a8d20dc3771f7ad15f9c178795170b5cff0",
     "governance/CLAIM_BOUNDARIES.md": "sha256:8ca3bc54912599bf3ecb43da88d1feb7c83c6ba2a22cf6f3170f5e732f239bf0",
     "pyproject.toml": "sha256:76fa3c0dc0b92e0f532ab58f79a7c80901ec82d2e11cfb500eafd29895c4f53e",
-    "scripts/build_release_candidate.py": "sha256:4f5182a0cdd0d88d6733044b9ad83db347f8dcaed449bcb0ab104a10c85687c7",
+    "scripts/build_release_candidate.py": "sha256:737cf36a8dc5a17ee80c06b4fd02c4f5ac424ea4412b7abc5c9ea16facbe1361",
     "src/civicdecision/api/app.py": "sha256:cd0b37b13b2416d7bcb6763bae82cdfdbf46e1c22a163cef7d2a467d4e147859"
   },
   "policy": {
     "path": "governance/CLAIM_AUDIT_POLICY.json",
-    "sha256": "sha256:bccd74ec6e081e4aaf010d5e99d580fd6d18d594051d50c2cf254fc1330e11f4"
+    "sha256": "sha256:664cf0419ff66f1bd1b4f7cd0701b9e7ad8265d53126bf1550184bb258e13ca3"
   },
   "public_state": {
     "github_repository": "limingrui679-design/civicdecision-os",
@@ -121,7 +121,7 @@
     "public_state_contract_fields": 7,
     "quantitative_claims": 36,
     "required_boundaries": 12,
-    "scanned_bytes": 239823,
+    "scanned_bytes": 239794,
     "scanned_files": 32
   },
   "snapshot_checked_at": "2026-08-13T12:15:16Z",
