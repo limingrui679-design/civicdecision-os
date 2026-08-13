@@ -1,0 +1,164 @@
+{
+  "affected_system": "public-sector analytical, scoring, triage, optimization, and human-review systems",
+  "alternatives": [
+    "rank verified high-consequence candidates for algorithmic governance and risk-control portfolio",
+    "select a risk-, equity-, and lifecycle-balanced portfolio for algorithmic governance and risk-control portfolio",
+    "pair impact, evidence gap, rights, feasibility, dependency, and lifecycle prioritization with an explicit stop, review, and escalation rule"
+  ],
+  "analysis_modes": [
+    "descriptive",
+    "optimization"
+  ],
+  "assumptions": [
+    "Model output, recommendation, human decision, action, appeal, service, and outcome remain distinct.",
+    "High-impact decisions require lawful authority, human responsibility, contestability, and incident response.",
+    "All alternatives, capacities, costs, effects, thresholds, and failure scenarios are proposed until bound to evidence."
+  ],
+  "baseline": "fund only already-committed work for algorithmic governance and risk-control portfolio.",
+  "city_bindings": [],
+  "constraints": [
+    {
+      "binding": true,
+      "constraint_id": "scenario.equity.algorithmic-governance.governance-controls.v1.constraint.binding",
+      "description": "The algorithmic decision support and governance prioritize must respect declared capital, operating, maintenance, and delivery budgets.",
+      "hard": true,
+      "kind": "budget",
+      "required_source_roles": [
+        "community-input",
+        "equity-attribute",
+        "financial-cost",
+        "legal-regulatory",
+        "operating-capacity",
+        "outcome-panel"
+      ]
+    },
+    {
+      "binding": false,
+      "constraint_id": "scenario.equity.algorithmic-governance.governance-controls.v1.constraint.evidence-scope",
+      "description": "Every released metric must retain evidence type, source lineage, geography, time, assumptions, and uncertainty.",
+      "hard": true,
+      "kind": "technical",
+      "required_source_roles": [
+        "community-input"
+      ]
+    },
+    {
+      "binding": false,
+      "constraint_id": "scenario.equity.algorithmic-governance.governance-controls.v1.constraint.decision-authority",
+      "description": "No analytical output may bypass lawful authority, accountable human review, or an applicable appeal process.",
+      "hard": true,
+      "kind": "regulatory",
+      "required_source_roles": [
+        "community-input"
+      ]
+    }
+  ],
+  "current_readiness": "blocked-missing-source",
+  "decision_cadence": "recompiled at each planning cycle and after material evidence change",
+  "decision_owner": "algorithmic accountability officer and responsible technology review board",
+  "decision_question": "Which documentation, data, evaluation, interface, human review, recourse, monitoring, and sunset controls should be funded?",
+  "decision_type": "prioritize",
+  "design_id": "scenario.equity.algorithmic-governance.governance-controls.v1",
+  "design_order": 235,
+  "design_signature": "sha256:a534214b1efeabb88abd9f9eb6f9dbaa819485cfb3fb31e0fd21473707840912",
+  "evidence_requirements": [
+    "estimated",
+    "observed",
+    "optimized",
+    "proposed"
+  ],
+  "family_id": "equity.algorithmic-governance",
+  "family_title": "Algorithmic decision support and governance",
+  "horizon": "multi-year",
+  "implementation_status": "design-only",
+  "independence_key": {
+    "binding_constraint": "The algorithmic decision support and governance prioritize must respect declared capital, operating, maintenance, and delivery budgets.",
+    "decision_object": "algorithmic governance and risk-control portfolio",
+    "evidence_gate": "Evidence for algorithmic governance and risk-control portfolio passes documented checks for cost, benefit, service life, dependencies, deliverability, and maintenance burden.",
+    "horizon": "multi-year",
+    "intervention_mechanism": "impact, evidence gap, rights, feasibility, dependency, and lifecycle prioritization",
+    "primary_outcome": "high-impact decision volume without verified controls",
+    "spatial_unit": "asset"
+  },
+  "intended_claim": "A versioned prioritize design for comparing declared alternatives affecting algorithmic governance and risk-control portfolio, conditional on its evidence gate.",
+  "limitations": [
+    "This library record has no city binding and therefore reports no local input, output, or recommendation.",
+    "Readiness describes explicit source and method gates; it does not certify implementation feasibility.",
+    "External domain, legal, community, security, and operational review remains outside this design artifact."
+  ],
+  "method_claimed": false,
+  "objectives": [
+    {
+      "evidence_type": "estimated",
+      "metric": "high-impact decision volume without verified controls",
+      "objective_id": "scenario.equity.algorithmic-governance.governance-controls.v1.objective.primary",
+      "primary": true,
+      "sense": "minimize",
+      "unit": "decisions"
+    },
+    {
+      "evidence_type": "estimated",
+      "metric": "distributional gap in high-impact decision volume without verified controls",
+      "objective_id": "scenario.equity.algorithmic-governance.governance-controls.v1.objective.equity",
+      "primary": false,
+      "sense": "minimize",
+      "unit": "decisions"
+    },
+    {
+      "evidence_type": "observed",
+      "metric": "decision claims with complete evidence lineage",
+      "objective_id": "scenario.equity.algorithmic-governance.governance-controls.v1.objective.traceability",
+      "primary": false,
+      "sense": "maximize",
+      "unit": "percent"
+    }
+  ],
+  "prohibited_claims": [
+    "Do not report a planned control as implemented, effective, lawful, certified, or independently audited.",
+    "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+    "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+    "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+  ],
+  "release_gate": {
+    "failure_release": "Release an explicit insufficient-evidence record naming missing sources, failed diagnostics, prohibited claims, and the next validation action.",
+    "failure_status": "insufficient-evidence",
+    "gate_id": "scenario.equity.algorithmic-governance.governance-controls.v1.gate.release",
+    "gate_type": "cost-capacity",
+    "pass_condition": "Evidence for algorithmic governance and risk-control portfolio passes documented checks for cost, benefit, service life, dependencies, deliverability, and maintenance burden.",
+    "required_evidence_types": [
+      "observed",
+      "proposed"
+    ],
+    "required_source_roles": [
+      "community-input",
+      "equity-attribute",
+      "financial-cost",
+      "legal-regulatory",
+      "operating-capacity",
+      "outcome-panel"
+    ]
+  },
+  "required_source_roles": [
+    "community-input",
+    "equity-attribute",
+    "financial-cost",
+    "legal-regulatory",
+    "operating-capacity",
+    "outcome-panel"
+  ],
+  "schema_version": "1.0.0",
+  "spatial_unit": "asset",
+  "suite": "behavioral-policy-equity",
+  "tags": [
+    "behavioral-policy-equity",
+    "design-only",
+    "equity.algorithmic-governance",
+    "prioritize",
+    "scenario-library"
+  ],
+  "title": "Prioritize algorithmic governance controls",
+  "transportability_risks": [
+    "Law, institutional process, data-generating systems, populations, incentives, and recourse differ.",
+    "Technical fairness metrics may conflict and cannot establish legal or substantive fairness alone."
+  ]
+}

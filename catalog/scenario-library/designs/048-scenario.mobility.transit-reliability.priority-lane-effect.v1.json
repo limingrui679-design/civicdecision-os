@@ -1,0 +1,167 @@
+{
+  "affected_system": "fixed-route public transit service and passenger connections",
+  "alternatives": [
+    "compare eligible treated and credible untreated units for phased transit-priority and timetable intervention",
+    "estimate pre-specified overall and distributional effects of phased transit-priority and timetable intervention",
+    "pair route-level event-study with comparable untreated corridors with an explicit stop, review, and escalation rule"
+  ],
+  "analysis_modes": [
+    "descriptive",
+    "causal"
+  ],
+  "assumptions": [
+    "Trips, stops, vehicle observations, disruptions, and calendars share a versioned service day.",
+    "Passenger loads and transfer behavior are measured or represented as bounded assumptions.",
+    "All alternatives, capacities, costs, effects, thresholds, and failure scenarios are proposed until bound to evidence."
+  ],
+  "baseline": "retain pre-intervention conditions for phased transit-priority and timetable intervention.",
+  "city_bindings": [],
+  "constraints": [
+    {
+      "binding": true,
+      "constraint_id": "scenario.mobility.transit-reliability.priority-lane-effect.v1.constraint.binding",
+      "description": "The transit reliability and passenger continuity evaluate must respect declared pre-specified assignment, comparison, outcome, spillover, and subgroup rules.",
+      "hard": true,
+      "kind": "equity",
+      "required_source_roles": [
+        "equity-attribute",
+        "geographic-identity",
+        "intervention-assignment",
+        "outcome-panel",
+        "real-time-state",
+        "service-schedule",
+        "transport-network"
+      ]
+    },
+    {
+      "binding": false,
+      "constraint_id": "scenario.mobility.transit-reliability.priority-lane-effect.v1.constraint.evidence-scope",
+      "description": "Every released metric must retain evidence type, source lineage, geography, time, assumptions, and uncertainty.",
+      "hard": true,
+      "kind": "technical",
+      "required_source_roles": [
+        "equity-attribute"
+      ]
+    },
+    {
+      "binding": false,
+      "constraint_id": "scenario.mobility.transit-reliability.priority-lane-effect.v1.constraint.decision-authority",
+      "description": "No analytical output may bypass lawful authority, accountable human review, or an applicable appeal process.",
+      "hard": true,
+      "kind": "regulatory",
+      "required_source_roles": [
+        "equity-attribute"
+      ]
+    }
+  ],
+  "current_readiness": "blocked-multiple-gates",
+  "decision_cadence": "recompiled at each planning cycle and after material evidence change",
+  "decision_owner": "transit chief operating officer and service-planning director",
+  "decision_question": "Did phased transit-priority and timetable changes improve reliable passenger travel without displacement?",
+  "decision_type": "evaluate",
+  "design_id": "scenario.mobility.transit-reliability.priority-lane-effect.v1",
+  "design_order": 48,
+  "design_signature": "sha256:54d7486501d89644390ec2e912e54383e7c2d506bcef72913eca5d99f2d30aa9",
+  "evidence_requirements": [
+    "causal",
+    "estimated",
+    "observed",
+    "proposed"
+  ],
+  "family_id": "mobility.transit-reliability",
+  "family_title": "Transit reliability and passenger continuity",
+  "horizon": "multi-year",
+  "implementation_status": "design-only",
+  "independence_key": {
+    "binding_constraint": "The transit reliability and passenger continuity evaluate must respect declared pre-specified assignment, comparison, outcome, spillover, and subgroup rules.",
+    "decision_object": "phased transit-priority and timetable intervention",
+    "evidence_gate": "Evidence for phased transit-priority and timetable intervention passes documented checks for dated assignment, comparison validity, pre-trends, outcome panels, attrition, spillovers, and falsification tests.",
+    "horizon": "multi-year",
+    "intervention_mechanism": "route-level event-study with comparable untreated corridors",
+    "primary_outcome": "change in passenger-weighted reliable travel time",
+    "spatial_unit": "corridor"
+  },
+  "intended_claim": "A versioned evaluate design for comparing declared alternatives affecting phased transit-priority and timetable intervention, conditional on its evidence gate.",
+  "limitations": [
+    "This library record has no city binding and therefore reports no local input, output, or recommendation.",
+    "Readiness describes explicit source and method gates; it does not certify implementation feasibility.",
+    "External domain, legal, community, security, and operational review remains outside this design artifact."
+  ],
+  "method_claimed": false,
+  "objectives": [
+    {
+      "evidence_type": "estimated",
+      "metric": "change in passenger-weighted reliable travel time",
+      "objective_id": "scenario.mobility.transit-reliability.priority-lane-effect.v1.objective.primary",
+      "primary": true,
+      "sense": "minimize",
+      "unit": "minutes per passenger-trip"
+    },
+    {
+      "evidence_type": "estimated",
+      "metric": "distributional gap in change in passenger-weighted reliable travel time",
+      "objective_id": "scenario.mobility.transit-reliability.priority-lane-effect.v1.objective.equity",
+      "primary": false,
+      "sense": "minimize",
+      "unit": "minutes per passenger-trip"
+    },
+    {
+      "evidence_type": "observed",
+      "metric": "decision claims with complete evidence lineage",
+      "objective_id": "scenario.mobility.transit-reliability.priority-lane-effect.v1.objective.traceability",
+      "primary": false,
+      "sense": "maximize",
+      "unit": "percent"
+    }
+  ],
+  "prohibited_claims": [
+    "Do not infer causal passenger benefits from simple before-after vehicle speed.",
+    "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+    "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+    "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+  ],
+  "release_gate": {
+    "failure_release": "Release an explicit insufficient-evidence record naming missing sources, failed diagnostics, prohibited claims, and the next validation action.",
+    "failure_status": "insufficient-evidence",
+    "gate_id": "scenario.mobility.transit-reliability.priority-lane-effect.v1.gate.release",
+    "gate_type": "causal-identification",
+    "pass_condition": "Evidence for phased transit-priority and timetable intervention passes documented checks for dated assignment, comparison validity, pre-trends, outcome panels, attrition, spillovers, and falsification tests.",
+    "required_evidence_types": [
+      "causal",
+      "observed"
+    ],
+    "required_source_roles": [
+      "equity-attribute",
+      "geographic-identity",
+      "intervention-assignment",
+      "outcome-panel",
+      "real-time-state",
+      "service-schedule",
+      "transport-network"
+    ]
+  },
+  "required_source_roles": [
+    "equity-attribute",
+    "geographic-identity",
+    "intervention-assignment",
+    "outcome-panel",
+    "real-time-state",
+    "service-schedule",
+    "transport-network"
+  ],
+  "schema_version": "1.0.0",
+  "spatial_unit": "corridor",
+  "suite": "mobility-accessibility-operations",
+  "tags": [
+    "design-only",
+    "evaluate",
+    "mobility-accessibility-operations",
+    "mobility.transit-reliability",
+    "scenario-library"
+  ],
+  "title": "Evaluate transit priority and schedule redesign",
+  "transportability_risks": [
+    "Fare policy, headways, fleet, labor rules, topology, and passenger behavior vary by operator.",
+    "Reliability metrics may not transfer between schedule-based and frequency-based service."
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "affected_system": "municipal capital planning, debt, grants, reserves, procurement, and asset delivery",
+  "claim_boundary": [
+    "Requests and proxy indicators do not replace engineering inspection, accounting, or legal review.",
+    "Selected projects and schedules are planning outputs, not appropriations, designs, contracts, or construction.",
+    "Modeled lifecycle, emissions, reliability, and fiscal effects are not realized outcomes."
+  ],
+  "common_source_roles": [
+    "asset-inventory",
+    "financial-cost",
+    "operating-capacity"
+  ],
+  "decision_owner": "chief financial officer and capital planning director",
+  "decision_types": [
+    "diagnose",
+    "forecast",
+    "prioritize",
+    "site",
+    "allocate",
+    "schedule",
+    "stress-test",
+    "evaluate"
+  ],
+  "description": "Eight decisions for obligation diagnosis, fiscal forecasting, portfolio selection, reserve siting, funding allocation, delivery scheduling, fiscal stress, and financing evaluation.",
+  "design_refs": [
+    "scenario.infrastructure.capital-finance.capital-obligation-friction.v1",
+    "scenario.infrastructure.capital-finance.capital-fiscal-outlook.v1",
+    "scenario.infrastructure.capital-finance.capital-investment-portfolio.v1",
+    "scenario.infrastructure.capital-finance.capital-reserve-assets.v1",
+    "scenario.infrastructure.capital-finance.capital-funding.v1",
+    "scenario.infrastructure.capital-finance.capital-delivery.v1",
+    "scenario.infrastructure.capital-finance.fiscal-capital-shock.v1",
+    "scenario.infrastructure.capital-finance.delivery-reform-effect.v1"
+  ],
+  "design_signatures": [
+    "sha256:c1fa35ac874c80f312edc0baa61dc774ea886868148d0112efd96d958ed3de7e",
+    "sha256:df8912da2b7c363790ea7263f08e82dfc65fc42a5605ca8c45c830b314a73bbe",
+    "sha256:371ba2bb2077c43ac2e3c2943cdeb378ab0eb63cf1d37ea2082634ecb1be96eb",
+    "sha256:92dc6b3fbf03e32ff42c95f5d8dbdfcae02b40845450834143c12571a4d07946",
+    "sha256:9e87c155a83ba4e74ede6f47f767869ad076dcf121401b417b1467741bd7675e",
+    "sha256:49ffdda0614777e50fd6f9222c6bf4ed77cddb58d265739c0c949f4a757bc8a7",
+    "sha256:1052ffda34586418d4958d1f3d6991950ffe7eafffcd7c82f4b89efbc6992b85",
+    "sha256:46f48a8a654b7e65c4f72b8b12b65dc2360e6089e0d8d95075c90dae88212c1c"
+  ],
+  "family_id": "infrastructure.capital-finance",
+  "family_order": 26,
+  "schema_version": "1.0.0",
+  "suite": "infrastructure-finance-asset-risk",
+  "title": "Capital portfolio and municipal finance"
+}

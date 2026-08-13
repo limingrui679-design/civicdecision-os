@@ -3,10 +3,16 @@ from __future__ import annotations
 from collections import Counter
 
 import pytest
-from pydantic import ValidationError
+from pydantic import BaseModel, ValidationError
 
+from civicdecision.deep.models import ApplicationSuite
 from civicdecision.product.models import Pagination, ProductTier, ScenarioKind, ScenarioStatus
 from civicdecision.product.store import ArtifactStore, ProductNotFoundError
+from civicdecision.scenario_library import (
+    CurrentReadiness,
+    DecisionType,
+    ImplementationStatus,
+)
 
 
 def test_catalog_summary_reconciles_committed_scale(product_store: ArtifactStore) -> None:
@@ -18,13 +24,24 @@ def test_catalog_summary_reconciles_committed_scale(product_store: ArtifactStore
     assert summary.tier_assignments == 288
     assert summary.source_artifacts == 90
     assert summary.standard_scenario_screens == 90
+    assert summary.scenario_library_designs == 240
+    assert summary.scenario_library_families == 30
+    assert (summary.reference_implemented_designs, summary.design_only_scenarios) == (12, 228)
+    assert summary.scenario_library_city_bindings == 0
+    assert summary.scenario_library_methods_claimed == 0
+    assert summary.scenario_library_audit_passed
+    assert summary.scenario_library_maximum_similarity == 0.646154
     assert summary.deep_scenario_executions == 96
     assert (summary.completed_deep_executions, summary.negative_deep_executions) == (76, 20)
     assert (summary.decision_packs, summary.completed_decision_packs) == (98, 77)
     assert summary.negative_decision_packs == 21
     assert summary.benchmark_run_artifacts == 145
     assert summary.catalog_fingerprint == product_store.catalog_fingerprint
-    assert product_store.etag == f'"{summary.catalog_fingerprint.removeprefix("sha256:")}"'
+    assert product_store.etag == product_store.etag_for("/api/v1/meta")
+    assert product_store.etag != product_store.etag_for("/api/v1/designs")
+    assert product_store.etag_for(
+        "/api/v1/designs", (("limit", "1"), ("q", "heat"))
+    ) != product_store.etag_for("/api/v1/designs", (("limit", "1"), ("q", "cooling")))
 
 
 @pytest.mark.parametrize(
@@ -117,6 +134,31 @@ def test_scenario_filters_and_pagination_compose(product_store: ArtifactStore) -
     assert page.pagination.total == 1
     assert page.items[0].execution_id == "tierd.us.tx.austin.11"
     assert not page.items[0].recommendation_issued
+    designs = product_store.list_scenario_designs(
+        suite=ApplicationSuite.CLIMATE_DISASTER,
+        family_id="climate.extreme-heat",
+        decision_type=DecisionType.SITE,
+        implementation_status=ImplementationStatus.DESIGN_ONLY,
+        current_readiness=CurrentReadiness.BLOCKED_SOURCE,
+        query="cooling center",
+        limit=1,
+    )
+    assert designs.pagination.total == 1
+    assert designs.items[0].design_id == ("scenario.climate.extreme-heat.cooling-center-network.v1")
+    families = product_store.list_scenario_families(
+        suite=ApplicationSuite.CLIMATE_DISASTER,
+        query="heat",
+        limit=1,
+    )
+    assert families.pagination.total == 1
+    assert families.items[0].design_count == 8
+    normalized_search = product_store.list_scenario_designs(
+        decision_type=DecisionType.EVALUATE,
+        query="cool roof",
+        limit=100,
+    )
+    assert normalized_search.pagination.total == 1
+    assert normalized_search.items[0].title == "Evaluate a cool-roof and household-cooling program"
 
 
 def test_scenario_detail_separates_screen_deep_and_reference_claims(
@@ -133,6 +175,17 @@ def test_scenario_detail_separates_screen_deep_and_reference_claims(
     assert deep.scenario.status is ScenarioStatus.INSUFFICIENT_EVIDENCE
     assert reference.payload_schema == "decision-pack.schema.json"
     assert reference.scenario.kind is ScenarioKind.REFERENCE_PACK
+    design = product_store.scenario_design_detail(
+        "scenario.climate.extreme-heat.heat-access-gaps.v1"
+    )
+    family = product_store.scenario_family_detail("climate.extreme-heat")
+    evidence = product_store.scenario_library_evidence()
+    assert design.design.city_bindings == [] and design.design.method_claimed is False
+    assert design.design.family_id == design.family.family_id
+    assert len(family.designs) == 8
+    assert [item.decision_type for item in family.designs] == list(DecisionType)
+    assert evidence.audit_passed and evidence.design_count == 240
+    assert evidence.high_similarity_pair_count == evidence.exact_signature_collision_count == 0
 
 
 def test_decision_pack_projection_excludes_standard_screens(product_store: ArtifactStore) -> None:
@@ -177,6 +230,10 @@ def test_suite_and_benchmark_overviews_reconcile(product_store: ArtifactStore) -
     benchmark = product_store.benchmark_overview()
     assert len(suites) == 7
     assert sum(item.template_count for item in suites) == 12
+    assert sum(item.design_family_count for item in suites) == 30
+    assert sum(item.design_count for item in suites) == 240
+    assert sum(item.reference_implemented_designs for item in suites) == 12
+    assert sum(item.design_only_scenarios for item in suites) == 228
     assert sum(item.execution_count for item in suites) == 96
     assert sum(item.completed_count for item in suites) == 76
     assert sum(item.negative_count for item in suites) == 20
@@ -193,10 +250,12 @@ def test_product_store_rejects_invalid_pagination(product_store: ArtifactStore) 
         ("list_scenarios", {"limit": 101}),
         ("list_scenarios", {"offset": -1}),
         ("list_decision_packs", {"limit": 0}),
+        ("list_scenario_designs", {"limit": 101}),
+        ("list_scenario_families", {"offset": -1}),
         ("list_sources", {"offset": -1}),
     ]
     for method, kwargs in cases:
-        with pytest.raises(ValueError, match="pagination"):
+        with pytest.raises(ValueError, match=r"(?i)pagination"):
             getattr(product_store, method)(**kwargs)
 
 
@@ -206,15 +265,126 @@ def test_product_store_not_found_failures_are_typed(product_store: ArtifactStore
         ("scenario_detail", "unknown.scenario"),
         ("decision_pack", "unknown.pack"),
         ("decision_brief", "unknown.brief"),
+        ("scenario_design_detail", "unknown.design"),
+        ("scenario_family_detail", "unknown.family"),
     ]
     for method, identifier in cases:
         with pytest.raises(ProductNotFoundError):
             getattr(product_store, method)(identifier)
 
 
-def test_pagination_contract_rejects_inconsistent_pages() -> None:
+def test_pagination_contract_rejects_inconsistent_pages(product_store: ArtifactStore) -> None:
+    def reject(model: BaseModel, payload: dict[str, object], message: str) -> None:
+        with pytest.raises(ValidationError, match=message):
+            type(model).model_validate(payload)
+
     assert Pagination(total=5, limit=2, offset=4, returned=1, next_offset=None)
     with pytest.raises(ValidationError, match="returned count"):
         Pagination(total=5, limit=2, offset=0, returned=1, next_offset=1)
     with pytest.raises(ValidationError, match="next offset"):
         Pagination(total=5, limit=2, offset=0, returned=2, next_offset=None)
+
+    summary = product_store.summary
+    summary_base = summary.model_dump(mode="json")
+    summary_mutations: list[tuple[str, str, int]] = [
+        ("tier_assignments", "catalog tier assignments must reconcile", 1),
+        ("deep_scenario_executions", "deep scenario status counts must reconcile", 1),
+        ("decision_packs", "DecisionPack status counts must reconcile", 1),
+        (
+            "reference_implemented_designs",
+            "scenario library implementation counts must reconcile",
+            1,
+        ),
+    ]
+    for field, message, delta in summary_mutations:
+        payload = summary.model_dump(mode="json")
+        payload[field] += delta
+        reject(summary, payload, message)
+
+    family_matrix_drift = dict(summary_base)
+    family_matrix_drift["scenario_library_designs"] = 232
+    family_matrix_drift["design_only_scenarios"] = 220
+    reject(summary, family_matrix_drift, "eight designs per family")
+
+    austin = product_store.city_detail("us.tx.austin")
+    bad_city = austin.city.model_dump(mode="json")
+    bad_city["scenario_count"] = 0
+    reject(austin.city, bad_city, "city scenario status counts exceed scenario count")
+
+    unsorted_sources = austin.model_dump(mode="json")
+    unsorted_sources["source_ids"] = list(reversed(unsorted_sources["source_ids"]))
+    reject(austin, unsorted_sources, "source identifiers must be sorted and unique")
+
+    standard = product_store.scenario_detail("geonames.2293538.screen.heat.2024").scenario
+    standard_recommendation = standard.model_dump(mode="json")
+    standard_recommendation["recommendation_issued"] = True
+    standard_recommendation["selected_option_id"] = "option.unverified"
+    reject(standard, standard_recommendation, "standard screens cannot issue recommendations")
+
+    completed = product_store.scenario_detail("tierd.us.tx.austin.01").scenario
+    recommendation_mismatch = completed.model_dump(mode="json")
+    recommendation_mismatch["recommendation_issued"] = False
+    reject(completed, recommendation_mismatch, "recommendation flag must match selected option")
+
+    page_models = [
+        product_store.list_cities(limit=1),
+        product_store.list_scenarios(limit=1),
+        product_store.list_scenario_designs(limit=1),
+        product_store.list_scenario_families(limit=1),
+        product_store.list_sources(limit=1),
+    ]
+    page_messages = [
+        "city page item count must match pagination",
+        "scenario page item count must match pagination",
+        "scenario design page item count must match pagination",
+        "scenario family page item count must match pagination",
+        "source page item count must match pagination",
+    ]
+    for page, message in zip(page_models, page_messages, strict=True):
+        payload = page.model_dump(mode="json")
+        payload["items"] = []
+        reject(page, payload, message)
+
+    family_summary = product_store.list_scenario_families(limit=1).items[0]
+    bad_family_summary = family_summary.model_dump(mode="json")
+    bad_family_summary["design_count"] += 1
+    reject(family_summary, bad_family_summary, "family implementation counts must reconcile")
+
+    design_detail = product_store.scenario_design_detail(
+        "scenario.climate.extreme-heat.heat-access-gaps.v1"
+    )
+    wrong_family = design_detail.model_dump(mode="json")
+    wrong_family["family"]["family_id"] = "synthetic.unrelated-family"
+    reject(design_detail, wrong_family, "family must match the design")
+
+    missing_design_ref = design_detail.model_dump(mode="json")
+    missing_design_ref["family"]["design_refs"][0] = "scenario.synthetic.absent-design.v1"
+    reject(design_detail, missing_design_ref, "family must reference the design")
+
+    family_detail = product_store.scenario_family_detail("climate.extreme-heat")
+    wrong_design_order = family_detail.model_dump(mode="json")
+    wrong_design_order["designs"][0], wrong_design_order["designs"][1] = (
+        wrong_design_order["designs"][1],
+        wrong_design_order["designs"][0],
+    )
+    reject(family_detail, wrong_design_order, "must follow registered references")
+
+    library_evidence = product_store.scenario_library_evidence()
+    bad_library_total = library_evidence.model_dump(mode="json")
+    bad_library_total["design_count"] += 1
+    reject(library_evidence, bad_library_total, "implementation counts must reconcile")
+
+    deep_detail = product_store.scenario_detail("tierd.us.tx.austin.01")
+    bad_artifact_hash = deep_detail.model_dump(mode="json")
+    first_hash = next(iter(bad_artifact_hash["artifact_hashes"]))
+    bad_artifact_hash["artifact_hashes"][first_hash] = "not-a-sha256"
+    reject(deep_detail, bad_artifact_hash, "artifact hashes must be SHA-256 values")
+
+    suite = product_store.suites()[0]
+    bad_execution_total = suite.model_dump(mode="json")
+    bad_execution_total["execution_count"] += 1
+    reject(suite, bad_execution_total, "suite execution statuses must reconcile")
+
+    bad_design_total = suite.model_dump(mode="json")
+    bad_design_total["design_count"] += 1
+    reject(suite, bad_design_total, "suite scenario-design statuses must reconcile")

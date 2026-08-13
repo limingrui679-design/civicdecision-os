@@ -1,0 +1,162 @@
+{
+  "affected_system": "multimodal evacuation, assisted transport, and emergency access network",
+  "alternatives": [
+    "activate a bounded reserve from forecast risk bands for hazard-specific evacuation demand and clearance time",
+    "use rolling forecasts and conservative capacity triggers for hazard-specific evacuation demand and clearance time",
+    "pair departure-choice and dynamic network forecasting with an explicit stop, review, and escalation rule"
+  ],
+  "analysis_modes": [
+    "forecast"
+  ],
+  "assumptions": [
+    "Evacuation demand, assistance eligibility, vehicle capacity, route state, and hazard timing are versioned.",
+    "Compliance, household departure, and network degradation remain observed inputs or bounded scenarios.",
+    "All alternatives, capacities, costs, effects, thresholds, and failure scenarios are proposed until bound to evidence."
+  ],
+  "baseline": "continue ordinary capacity planning for hazard-specific evacuation demand and clearance time.",
+  "city_bindings": [],
+  "constraints": [
+    {
+      "binding": true,
+      "constraint_id": "scenario.mobility.emergency-mobility.clearance-demand.v1.constraint.binding",
+      "description": "The evacuation and emergency mobility forecast must respect declared validated operational capacity and forecast uncertainty.",
+      "hard": true,
+      "kind": "capacity",
+      "required_source_roles": [
+        "climate-hazard",
+        "equity-attribute",
+        "geographic-identity",
+        "operating-capacity",
+        "real-time-state",
+        "transport-network"
+      ]
+    },
+    {
+      "binding": false,
+      "constraint_id": "scenario.mobility.emergency-mobility.clearance-demand.v1.constraint.evidence-scope",
+      "description": "Every released metric must retain evidence type, source lineage, geography, time, assumptions, and uncertainty.",
+      "hard": true,
+      "kind": "technical",
+      "required_source_roles": [
+        "climate-hazard"
+      ]
+    },
+    {
+      "binding": false,
+      "constraint_id": "scenario.mobility.emergency-mobility.clearance-demand.v1.constraint.decision-authority",
+      "description": "No analytical output may bypass lawful authority, accountable human review, or an applicable appeal process.",
+      "hard": true,
+      "kind": "regulatory",
+      "required_source_roles": [
+        "climate-hazard"
+      ]
+    }
+  ],
+  "current_readiness": "blocked-missing-source",
+  "decision_cadence": "recompiled at each planning cycle and after material evidence change",
+  "decision_owner": "emergency transportation coordinator and incident commander",
+  "decision_question": "What departure, assisted-transport, congestion, and clearance-time range follows the hazard envelope?",
+  "decision_type": "forecast",
+  "design_id": "scenario.mobility.emergency-mobility.clearance-demand.v1",
+  "design_order": 66,
+  "design_signature": "sha256:ce42127e1af46ad72ca368855e6bfd49a59915c1b76f49a33f156531d3912128",
+  "evidence_requirements": [
+    "estimated",
+    "observed",
+    "proposed"
+  ],
+  "family_id": "mobility.emergency-mobility",
+  "family_title": "Evacuation and emergency mobility",
+  "horizon": "weeks",
+  "implementation_status": "design-only",
+  "independence_key": {
+    "binding_constraint": "The evacuation and emergency mobility forecast must respect declared validated operational capacity and forecast uncertainty.",
+    "decision_object": "hazard-specific evacuation demand and clearance time",
+    "evidence_gate": "Evidence for hazard-specific evacuation demand and clearance time passes documented checks for held-out error, interval coverage, event detection, drift, and baseline comparison.",
+    "horizon": "weeks",
+    "intervention_mechanism": "departure-choice and dynamic network forecasting",
+    "primary_outcome": "people remaining in hazard areas after safe clearance time",
+    "spatial_unit": "network"
+  },
+  "intended_claim": "A versioned forecast design for comparing declared alternatives affecting hazard-specific evacuation demand and clearance time, conditional on its evidence gate.",
+  "limitations": [
+    "This library record has no city binding and therefore reports no local input, output, or recommendation.",
+    "Readiness describes explicit source and method gates; it does not certify implementation feasibility.",
+    "External domain, legal, community, security, and operational review remains outside this design artifact."
+  ],
+  "method_claimed": false,
+  "objectives": [
+    {
+      "evidence_type": "estimated",
+      "metric": "people remaining in hazard areas after safe clearance time",
+      "objective_id": "scenario.mobility.emergency-mobility.clearance-demand.v1.objective.primary",
+      "primary": true,
+      "sense": "minimize",
+      "unit": "people"
+    },
+    {
+      "evidence_type": "estimated",
+      "metric": "distributional gap in people remaining in hazard areas after safe clearance time",
+      "objective_id": "scenario.mobility.emergency-mobility.clearance-demand.v1.objective.equity",
+      "primary": false,
+      "sense": "minimize",
+      "unit": "people"
+    },
+    {
+      "evidence_type": "observed",
+      "metric": "decision claims with complete evidence lineage",
+      "objective_id": "scenario.mobility.emergency-mobility.clearance-demand.v1.objective.traceability",
+      "primary": false,
+      "sense": "maximize",
+      "unit": "percent"
+    }
+  ],
+  "prohibited_claims": [
+    "Do not present behavioral assumptions or simulated clearance as actual evacuation.",
+    "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+    "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+    "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+  ],
+  "release_gate": {
+    "failure_release": "Release an explicit insufficient-evidence record naming missing sources, failed diagnostics, prohibited claims, and the next validation action.",
+    "failure_status": "insufficient-evidence",
+    "gate_id": "scenario.mobility.emergency-mobility.clearance-demand.v1.gate.release",
+    "gate_type": "model-calibration",
+    "pass_condition": "Evidence for hazard-specific evacuation demand and clearance time passes documented checks for held-out error, interval coverage, event detection, drift, and baseline comparison.",
+    "required_evidence_types": [
+      "estimated",
+      "observed"
+    ],
+    "required_source_roles": [
+      "climate-hazard",
+      "equity-attribute",
+      "geographic-identity",
+      "operating-capacity",
+      "real-time-state",
+      "transport-network"
+    ]
+  },
+  "required_source_roles": [
+    "climate-hazard",
+    "equity-attribute",
+    "geographic-identity",
+    "operating-capacity",
+    "real-time-state",
+    "transport-network"
+  ],
+  "schema_version": "1.0.0",
+  "spatial_unit": "network",
+  "suite": "mobility-accessibility-operations",
+  "tags": [
+    "design-only",
+    "forecast",
+    "mobility-accessibility-operations",
+    "mobility.emergency-mobility",
+    "scenario-library"
+  ],
+  "title": "Forecast evacuation demand and clearance time",
+  "transportability_risks": [
+    "Hazards, vehicle ownership, disability access, road topology, trust, and compliance differ.",
+    "Registration systems may undercount people needing assistance."
+  ]
+}

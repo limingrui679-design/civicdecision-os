@@ -1,0 +1,164 @@
+{
+  "affected_system": "urban smoke exposure and clean-air protection system",
+  "alternatives": [
+    "open large qualified facilities near transit",
+    "add small neighborhood clean-air rooms in access gaps",
+    "combine fixed centers with transport and portable filtration support"
+  ],
+  "analysis_modes": [
+    "descriptive",
+    "optimization"
+  ],
+  "assumptions": [
+    "Air-quality observations carry calibration, siting, and temporal metadata.",
+    "Indoor infiltration and filtration effects are measured locally or labeled assumptions.",
+    "All alternatives, capacities, costs, effects, thresholds, and failure scenarios are proposed until bound to evidence."
+  ],
+  "baseline": "Only currently certified clean-air facilities operate.",
+  "city_bindings": [],
+  "constraints": [
+    {
+      "binding": true,
+      "constraint_id": "scenario.climate.wildfire-smoke.clean-air-centers.v1.constraint.binding",
+      "description": "Every selected center must pass indoor-air, power, accessible-entry, occupancy, and staffing requirements.",
+      "hard": true,
+      "kind": "technical",
+      "required_source_roles": [
+        "climate-hazard",
+        "environmental-exposure",
+        "facility-inventory",
+        "geographic-identity",
+        "operating-capacity",
+        "transport-network"
+      ]
+    },
+    {
+      "binding": false,
+      "constraint_id": "scenario.climate.wildfire-smoke.clean-air-centers.v1.constraint.evidence-scope",
+      "description": "Every released metric must retain evidence type, source lineage, geography, time, assumptions, and uncertainty.",
+      "hard": true,
+      "kind": "technical",
+      "required_source_roles": [
+        "climate-hazard"
+      ]
+    },
+    {
+      "binding": false,
+      "constraint_id": "scenario.climate.wildfire-smoke.clean-air-centers.v1.constraint.decision-authority",
+      "description": "No analytical output may bypass lawful authority, accountable human review, or an applicable appeal process.",
+      "hard": true,
+      "kind": "regulatory",
+      "required_source_roles": [
+        "climate-hazard"
+      ]
+    }
+  ],
+  "current_readiness": "blocked-missing-source",
+  "decision_cadence": "recompiled at each planning cycle and after material evidence change",
+  "decision_owner": "air-quality response coordinator and public-health director",
+  "decision_question": "Where should verified clean-air spaces operate to maximize safe access during smoke events?",
+  "decision_type": "site",
+  "design_id": "scenario.climate.wildfire-smoke.clean-air-centers.v1",
+  "design_order": 20,
+  "design_signature": "sha256:39d12b6a6616be6d89d5f2a336796cd02dc86b89023c393861f205f12da51dbb",
+  "evidence_requirements": [
+    "estimated",
+    "observed",
+    "optimized",
+    "proposed"
+  ],
+  "family_id": "climate.wildfire-smoke",
+  "family_title": "Wildfire smoke and air-quality resilience",
+  "horizon": "seasonal",
+  "implementation_status": "design-only",
+  "independence_key": {
+    "binding_constraint": "Every selected center must pass indoor-air, power, accessible-entry, occupancy, and staffing requirements.",
+    "decision_object": "public clean-air center network",
+    "evidence_gate": "Qualified facilities and validated travel networks support time-specific accessibility estimates.",
+    "horizon": "seasonal",
+    "intervention_mechanism": "capacitated location-allocation with indoor-air qualification",
+    "primary_outcome": "high-risk residents beyond a qualified clean-air space",
+    "spatial_unit": "facility"
+  },
+  "intended_claim": "A versioned site design for comparing declared alternatives affecting public clean-air center network, conditional on its evidence gate.",
+  "limitations": [
+    "This library record has no city binding and therefore reports no local input, output, or recommendation.",
+    "Readiness describes explicit source and method gates; it does not certify implementation feasibility.",
+    "External domain, legal, community, security, and operational review remains outside this design artifact."
+  ],
+  "method_claimed": false,
+  "objectives": [
+    {
+      "evidence_type": "estimated",
+      "metric": "high-risk residents beyond a qualified clean-air space",
+      "objective_id": "scenario.climate.wildfire-smoke.clean-air-centers.v1.objective.primary",
+      "primary": true,
+      "sense": "minimize",
+      "unit": "people"
+    },
+    {
+      "evidence_type": "estimated",
+      "metric": "distributional gap in high-risk residents beyond a qualified clean-air space",
+      "objective_id": "scenario.climate.wildfire-smoke.clean-air-centers.v1.objective.equity",
+      "primary": false,
+      "sense": "minimize",
+      "unit": "people"
+    },
+    {
+      "evidence_type": "observed",
+      "metric": "decision claims with complete evidence lineage",
+      "objective_id": "scenario.climate.wildfire-smoke.clean-air-centers.v1.objective.traceability",
+      "primary": false,
+      "sense": "maximize",
+      "unit": "percent"
+    }
+  ],
+  "prohibited_claims": [
+    "Do not call an ordinary public building a clean-air center without indoor-air verification.",
+    "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+    "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+    "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+  ],
+  "release_gate": {
+    "failure_release": "Release an explicit insufficient-evidence record naming missing sources, failed diagnostics, prohibited claims, and the next validation action.",
+    "failure_status": "insufficient-evidence",
+    "gate_id": "scenario.climate.wildfire-smoke.clean-air-centers.v1.gate.release",
+    "gate_type": "network-readiness",
+    "pass_condition": "Qualified facilities and validated travel networks support time-specific accessibility estimates.",
+    "required_evidence_types": [
+      "observed",
+      "proposed"
+    ],
+    "required_source_roles": [
+      "climate-hazard",
+      "environmental-exposure",
+      "facility-inventory",
+      "geographic-identity",
+      "operating-capacity",
+      "transport-network"
+    ]
+  },
+  "required_source_roles": [
+    "climate-hazard",
+    "environmental-exposure",
+    "facility-inventory",
+    "geographic-identity",
+    "operating-capacity",
+    "transport-network"
+  ],
+  "schema_version": "1.0.0",
+  "spatial_unit": "facility",
+  "suite": "climate-disaster-resilience",
+  "tags": [
+    "climate-disaster-resilience",
+    "climate.wildfire-smoke",
+    "design-only",
+    "scenario-library",
+    "site"
+  ],
+  "title": "Site a network of public clean-air centers",
+  "transportability_risks": [
+    "Smoke chemistry, building leakage, monitor density, and household behavior differ.",
+    "Regional forecasts and satellite products may have city-specific resolution limits."
+  ]
+}

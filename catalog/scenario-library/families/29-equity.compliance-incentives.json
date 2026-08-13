@@ -1,0 +1,50 @@
+{
+  "affected_system": "rights-preserving compliance assistance, incentives, inspections, and enforcement",
+  "claim_boundary": [
+    "Area and administrative differences do not establish discrimination, preferences, or individual behavior.",
+    "Behavioral and allocation designs require rights, accessibility, privacy, and non-coercion review.",
+    "Causal, fairness, adoption, and welfare claims require direct outcomes and independent governance evidence."
+  ],
+  "common_source_roles": [
+    "demographic-context",
+    "legal-regulatory",
+    "municipal-demand"
+  ],
+  "decision_owner": "regulatory operations director and behavioral insights lead",
+  "decision_types": [
+    "diagnose",
+    "forecast",
+    "prioritize",
+    "site",
+    "allocate",
+    "schedule",
+    "stress-test",
+    "evaluate"
+  ],
+  "description": "Eight decisions for process diagnosis, workload forecasting, policy portfolios, service siting, support allocation, contact scheduling, behavior stress, and incentive evaluation.",
+  "design_refs": [
+    "scenario.equity.compliance-incentives.compliance-process-friction.v1",
+    "scenario.equity.compliance-incentives.assistance-inspection-demand.v1",
+    "scenario.equity.compliance-incentives.compliance-policy-portfolio.v1",
+    "scenario.equity.compliance-incentives.compliance-assistance-access.v1",
+    "scenario.equity.compliance-incentives.assistance-enforcement-capacity.v1",
+    "scenario.equity.compliance-incentives.notice-assistance-inspection.v1",
+    "scenario.equity.compliance-incentives.policy-response-uncertainty.v1",
+    "scenario.equity.compliance-incentives.assistance-incentive-effect.v1"
+  ],
+  "design_signatures": [
+    "sha256:e122996843b38fc5546ca38bc2d6a13061fb233a64c9e4da2b673a70091dbaa3",
+    "sha256:3ac4d9a3edb49589e9ca83435acddf37a03c1fe2d070484456303724ca882617",
+    "sha256:e56cc51f81b9a9b79cd3abf88e0c655d8d4e2bafe879746057bbeca0ed457a97",
+    "sha256:9ac750bf7eabecbe4ac20e0c5617b72db324f46279619066c151355431fe7183",
+    "sha256:b453ebd29c0c874a77e6085ea54f391993602ce21d72cddd06b67c834448bf2a",
+    "sha256:09cc835fd6fc1447adbce974896f166b735e52d6d01d5d80d80111f7517391bb",
+    "sha256:0bedb113f76c72445c01cd0f985a2cb1e718462fba53b574f379296a48e0f192",
+    "sha256:e66e7f146adcf8b23e68ad057633d1f0c31e335ba3b009a1da59df3af01a0dbc"
+  ],
+  "family_id": "equity.compliance-incentives",
+  "family_order": 29,
+  "schema_version": "1.0.0",
+  "suite": "behavioral-policy-equity",
+  "title": "Compliance, incentives, and behavioral policy"
+}

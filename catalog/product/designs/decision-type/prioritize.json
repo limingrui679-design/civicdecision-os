@@ -1,0 +1,1035 @@
+{
+  "claim_boundary": "Design records are not city executions, deployments, adoptions, or impacts.",
+  "items": [
+    {
+      "analysis_modes": [
+        "descriptive",
+        "optimization"
+      ],
+      "binding_constraint": "Selected heat-mitigation projects must fit the adopted capital and maintenance budget envelope.",
+      "content_hash": "sha256:460a615c862b11a6e01ba2d630457e83804871bbc1ddb0e8bd5a0cc619d22955",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Which heat-mitigation projects should enter the funded portfolio under cost, exposure, and equity constraints?",
+      "decision_type": "prioritize",
+      "design_id": "scenario.climate.extreme-heat.cooling-investments.v1",
+      "design_order": 3,
+      "evidence_gate": "cost-capacity",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed"
+      ],
+      "family_id": "climate.extreme-heat",
+      "family_title": "Extreme heat exposure and response",
+      "horizon": "multi-year",
+      "implementation_status": "design-only",
+      "primary_outcome": "residual person-days of extreme heat exposure",
+      "prohibited_claims": [
+        "Do not call modeled exposure reduction a measured temperature or health outcome.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "asset",
+      "suite": "climate-disaster-resilience",
+      "title": "Prioritize shade, cool-roof, and cooling retrofit investments"
+    },
+    {
+      "analysis_modes": [
+        "simulation",
+        "optimization"
+      ],
+      "binding_constraint": "The selected portfolio must fit capital, maintenance, land, and delivery-year budgets.",
+      "content_hash": "sha256:f49f4930f8f691acfbad87ae7888a70547604e82cd9605be393c1c62fe1cd86f",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Which asset renewals and runoff-reduction projects best reduce expected disruption under the capital ceiling?",
+      "decision_type": "prioritize",
+      "design_id": "scenario.climate.flood-stormwater.drainage-renewal.v1",
+      "design_order": 11,
+      "evidence_gate": "cost-capacity",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "family_id": "climate.flood-stormwater",
+      "family_title": "Flood and stormwater resilience",
+      "horizon": "multi-year",
+      "implementation_status": "design-only",
+      "primary_outcome": "expected annual service-disruption hours",
+      "prohibited_claims": [
+        "Do not call modeled avoided disruption a realized financial saving.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "asset",
+      "suite": "climate-disaster-resilience",
+      "title": "Prioritize drainage renewal and green-infrastructure projects"
+    },
+    {
+      "analysis_modes": [
+        "descriptive",
+        "optimization"
+      ],
+      "binding_constraint": "Retrofit selection must fit capital, filter-replacement, energy, and maintenance budgets.",
+      "content_hash": "sha256:4920e0e06cef35c340f7dd5e897847bdcdc13294b280c2c91abdaa744940f4af",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Which public buildings should receive filtration and envelope upgrades first under limited capital?",
+      "decision_type": "prioritize",
+      "design_id": "scenario.climate.wildfire-smoke.filtration-retrofits.v1",
+      "design_order": 19,
+      "evidence_gate": "cost-capacity",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed"
+      ],
+      "family_id": "climate.wildfire-smoke",
+      "family_title": "Wildfire smoke and air-quality resilience",
+      "horizon": "multi-year",
+      "implementation_status": "design-only",
+      "primary_outcome": "vulnerable occupant-hours above indoor particulate thresholds",
+      "prohibited_claims": [
+        "Do not call engineering performance assumptions measured indoor exposure reduction.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "facility",
+      "suite": "climate-disaster-resilience",
+      "title": "Prioritize public-building filtration retrofits"
+    },
+    {
+      "analysis_modes": [
+        "simulation",
+        "optimization"
+      ],
+      "binding_constraint": "Selected projects must fit capital, energy, treatment, maintenance, and delivery-capacity limits.",
+      "content_hash": "sha256:0cb0e771e37e0c80d111fc225ea1c05fd2b059c3b902740707064cc422cecfa2",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Which investments best reduce shortage and failure risk within capital and operating limits?",
+      "decision_type": "prioritize",
+      "design_id": "scenario.climate.drought-water.water-security-portfolio.v1",
+      "design_order": 27,
+      "evidence_gate": "cost-capacity",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "family_id": "climate.drought-water",
+      "family_title": "Drought and urban water security",
+      "horizon": "multi-year",
+      "implementation_status": "design-only",
+      "primary_outcome": "expected annual shortage and leakage volume",
+      "prohibited_claims": [
+        "Do not report modeled yield or avoided shortage as delivered water.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "asset",
+      "suite": "climate-disaster-resilience",
+      "title": "Prioritize leakage, reuse, and supply-reliability investments"
+    },
+    {
+      "analysis_modes": [
+        "simulation",
+        "optimization"
+      ],
+      "binding_constraint": "The portfolio must fit capital, maintenance, acquisition, financing, and delivery constraints by phase.",
+      "content_hash": "sha256:a1655cbd2853d1cada48fe6a69531328742c7f07fee2bdc645f563ef4537f608",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Which phased adaptation portfolio best preserves services and equity under uncertain sea-level pathways?",
+      "decision_type": "prioritize",
+      "design_id": "scenario.climate.coastal-storms.coastal-adaptation-portfolio.v1",
+      "design_order": 35,
+      "evidence_gate": "cost-capacity",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "family_id": "climate.coastal-storms",
+      "family_title": "Coastal storms and sea-level adaptation",
+      "horizon": "multi-year",
+      "implementation_status": "design-only",
+      "primary_outcome": "expected critical-service disruption across sea-level pathways",
+      "prohibited_claims": [
+        "Do not call modeled avoided loss a realized benefit or a pathway an adopted land policy.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "asset",
+      "suite": "climate-disaster-resilience",
+      "title": "Prioritize coastal protection, accommodation, and retreat"
+    },
+    {
+      "analysis_modes": [
+        "descriptive",
+        "optimization"
+      ],
+      "binding_constraint": "The transit reliability and passenger continuity prioritize must respect declared capital, operating, maintenance, and delivery budgets.",
+      "content_hash": "sha256:df8f3e81b9b5f330114ecb8c3f26008a387aa7f7d1ec428eebfbc049714a4871",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Which signal, lane, stop, fleet, and operations projects best reduce passenger delay within lifecycle budgets?",
+      "decision_type": "prioritize",
+      "design_id": "scenario.mobility.transit-reliability.reliability-investments.v1",
+      "design_order": 43,
+      "evidence_gate": "cost-capacity",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed"
+      ],
+      "family_id": "mobility.transit-reliability",
+      "family_title": "Transit reliability and passenger continuity",
+      "horizon": "multi-year",
+      "implementation_status": "design-only",
+      "primary_outcome": "expected passenger-hours of unreliable service",
+      "prohibited_claims": [
+        "Do not report modeled passenger delay reduction as a realized project benefit.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "asset",
+      "suite": "mobility-accessibility-operations",
+      "title": "Prioritize transit reliability investments"
+    },
+    {
+      "analysis_modes": [
+        "descriptive",
+        "optimization"
+      ],
+      "binding_constraint": "The pedestrian safety and universal accessibility prioritize must respect declared capital, operating, maintenance, and delivery budgets.",
+      "content_hash": "sha256:d814b47fe4f80f6f9480b0be428adb268ef3f71360fe0dfa6c6cbcb4956c23be",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Which crossing, signal, curb-ramp, sidewalk, lighting, and speed treatments should be funded first?",
+      "decision_type": "prioritize",
+      "design_id": "scenario.mobility.pedestrian-safety.safety-accessibility-treatments.v1",
+      "design_order": 51,
+      "evidence_gate": "cost-capacity",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed"
+      ],
+      "family_id": "mobility.pedestrian-safety",
+      "family_title": "Pedestrian safety and universal accessibility",
+      "horizon": "multi-year",
+      "implementation_status": "design-only",
+      "primary_outcome": "expected severe conflict and inaccessible-route burden",
+      "prohibited_claims": [
+        "Do not present modeled risk reduction as prevented injuries.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "asset",
+      "suite": "mobility-accessibility-operations",
+      "title": "Prioritize pedestrian safety and accessibility treatments"
+    },
+    {
+      "analysis_modes": [
+        "descriptive",
+        "optimization"
+      ],
+      "binding_constraint": "The urban freight and curb operations prioritize must respect declared capital, operating, maintenance, and delivery budgets.",
+      "content_hash": "sha256:def3a7848db401dab995a5f6518afc3d5220b09a8899dec08f1a35f7de338ca4",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Which curb segments, loading technologies, and enforcement support should receive investment?",
+      "decision_type": "prioritize",
+      "design_id": "scenario.mobility.freight-curb.curb-conversion-portfolio.v1",
+      "design_order": 59,
+      "evidence_gate": "cost-capacity",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed"
+      ],
+      "family_id": "mobility.freight-curb",
+      "family_title": "Urban freight and curb operations",
+      "horizon": "multi-year",
+      "implementation_status": "design-only",
+      "primary_outcome": "freight delay and safety conflict burden",
+      "prohibited_claims": [
+        "Do not describe modeled delay or conflict reductions as realized business benefits.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "asset",
+      "suite": "mobility-accessibility-operations",
+      "title": "Prioritize curb conversion and loading investments"
+    },
+    {
+      "analysis_modes": [
+        "descriptive",
+        "optimization"
+      ],
+      "binding_constraint": "The evacuation and emergency mobility prioritize must respect declared capital, operating, maintenance, and delivery budgets.",
+      "content_hash": "sha256:80c1f8a6a96e3fe58b54c0843a920ecac1a8ecdcdd0f93d8a1149b3243d3ceb5",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Which route, fleet, communication, power, and accessibility upgrades most improve safe clearance?",
+      "decision_type": "prioritize",
+      "design_id": "scenario.mobility.emergency-mobility.evacuation-readiness.v1",
+      "design_order": 67,
+      "evidence_gate": "cost-capacity",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed"
+      ],
+      "family_id": "mobility.emergency-mobility",
+      "family_title": "Evacuation and emergency mobility",
+      "horizon": "multi-year",
+      "implementation_status": "design-only",
+      "primary_outcome": "expected people beyond safe clearance capacity",
+      "prohibited_claims": [
+        "Do not call modeled clearance improvements saved lives or completed readiness work.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "asset",
+      "suite": "mobility-accessibility-operations",
+      "title": "Prioritize emergency mobility readiness investments"
+    },
+    {
+      "analysis_modes": [
+        "descriptive",
+        "optimization"
+      ],
+      "binding_constraint": "The active mobility network and micromobility prioritize must respect declared capital, operating, maintenance, and delivery budgets.",
+      "content_hash": "sha256:5a15f5879e476711c1aada33768658870994ff8e009f85788966d6561e605a58",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Which protected links, crossings, greenways, and accessibility repairs close the most consequential gaps?",
+      "decision_type": "prioritize",
+      "design_id": "scenario.mobility.active-mobility.active-network-projects.v1",
+      "design_order": 75,
+      "evidence_gate": "cost-capacity",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed"
+      ],
+      "family_id": "mobility.active-mobility",
+      "family_title": "Active mobility network and micromobility",
+      "horizon": "multi-year",
+      "implementation_status": "design-only",
+      "primary_outcome": "essential trips remaining outside a low-stress accessible network",
+      "prohibited_claims": [
+        "Do not report modeled connectivity or safety gains as completed trips or prevented crashes.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "asset",
+      "suite": "mobility-accessibility-operations",
+      "title": "Prioritize active-mobility network projects"
+    },
+    {
+      "analysis_modes": [
+        "descriptive",
+        "optimization"
+      ],
+      "binding_constraint": "The heat-health surveillance and prevention prioritize must respect declared capital, operating, maintenance, and delivery budgets.",
+      "content_hash": "sha256:0de0268e9859e2b304324175014589bcbbdd9e6c00ed076c210860abb886125d",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Which surveillance, housing, clinical, outreach, and cooling measures should enter the prevention portfolio?",
+      "decision_type": "prioritize",
+      "design_id": "scenario.health.heat-health.heat-prevention-portfolio.v1",
+      "design_order": 83,
+      "evidence_gate": "cost-capacity",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed"
+      ],
+      "family_id": "health.heat-health",
+      "family_title": "Heat-health surveillance and prevention",
+      "horizon": "multi-year",
+      "implementation_status": "design-only",
+      "primary_outcome": "expected preventable heat-health burden",
+      "prohibited_claims": [
+        "Do not report modeled preventable burden as avoided illness or mortality.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "asset",
+      "suite": "population-health-environmental-exposure",
+      "title": "Prioritize heat-health prevention investments"
+    },
+    {
+      "analysis_modes": [
+        "descriptive",
+        "optimization"
+      ],
+      "binding_constraint": "The air-quality exposure and respiratory health prioritize must respect declared capital, operating, maintenance, and delivery budgets.",
+      "content_hash": "sha256:dea2ac696d18be9377a58d2c7d6c065fbf110f24a28d95efb0fc5f834c718e35",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Which source-control, building, monitoring, and health-protection measures should be funded first?",
+      "decision_type": "prioritize",
+      "design_id": "scenario.health.air-quality.exposure-reduction-portfolio.v1",
+      "design_order": 91,
+      "evidence_gate": "cost-capacity",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed"
+      ],
+      "family_id": "health.air-quality",
+      "family_title": "Air-quality exposure and respiratory health",
+      "horizon": "multi-year",
+      "implementation_status": "design-only",
+      "primary_outcome": "population-weighted exposure above health-protection thresholds",
+      "prohibited_claims": [
+        "Do not report modeled exposure reduction as avoided disease or realized emissions compliance.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "asset",
+      "suite": "population-health-environmental-exposure",
+      "title": "Prioritize air-exposure reduction investments"
+    },
+    {
+      "analysis_modes": [
+        "descriptive",
+        "optimization"
+      ],
+      "binding_constraint": "The infectious-disease public-health operations prioritize must respect declared capital, operating, maintenance, and delivery budgets.",
+      "content_hash": "sha256:7ee5511ff58dc1424413c4cc9c362447085d4e8c4793857ee4974cc14d14947e",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Which laboratory, ventilation, data, workforce, supply, and community measures best reduce response fragility?",
+      "decision_type": "prioritize",
+      "design_id": "scenario.health.infectious-operations.preparedness-portfolio.v1",
+      "design_order": 99,
+      "evidence_gate": "cost-capacity",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed"
+      ],
+      "family_id": "health.infectious-operations",
+      "family_title": "Infectious-disease public-health operations",
+      "horizon": "multi-year",
+      "implementation_status": "design-only",
+      "primary_outcome": "expected essential response-capacity shortfall",
+      "prohibited_claims": [
+        "Do not report modeled preparedness as prevented cases or completed capacity.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "asset",
+      "suite": "population-health-environmental-exposure",
+      "title": "Prioritize infectious-disease preparedness investments"
+    },
+    {
+      "analysis_modes": [
+        "descriptive",
+        "optimization"
+      ],
+      "binding_constraint": "The food access and environmental health prioritize must respect declared capital, operating, maintenance, and delivery budgets.",
+      "content_hash": "sha256:2162ea75f9be6f937dd65b5edc473b242d61450fd8960ec29d5746047c1419e5",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Which inspection, cold-chain, market, transportation, and assistance investments should be funded?",
+      "decision_type": "prioritize",
+      "design_id": "scenario.health.food-environment.food-health-portfolio.v1",
+      "design_order": 107,
+      "evidence_gate": "cost-capacity",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed"
+      ],
+      "family_id": "health.food-environment",
+      "family_title": "Food access and environmental health",
+      "horizon": "multi-year",
+      "implementation_status": "design-only",
+      "primary_outcome": "population-weighted food and environmental service gap",
+      "prohibited_claims": [
+        "Do not report modeled access improvement as better diet, health, or verified hazard reduction.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "asset",
+      "suite": "population-health-environmental-exposure",
+      "title": "Prioritize food-access and environmental-health investments"
+    },
+    {
+      "analysis_modes": [
+        "descriptive",
+        "optimization"
+      ],
+      "binding_constraint": "The housing habitability and code operations prioritize must respect declared capital, operating, maintenance, and delivery budgets.",
+      "content_hash": "sha256:fa42a1bb3e529b98a995da471c1366b36619c12f50257a2c1cbc3e21d33edec6",
+      "current_readiness": "reference-implemented",
+      "decision_question": "Which inspection, legal support, emergency repair, and rehabilitation cases should receive limited resources?",
+      "decision_type": "prioritize",
+      "design_id": "scenario.housing.habitability-code.habitability-interventions.v1",
+      "design_order": 115,
+      "evidence_gate": "cost-capacity",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed"
+      ],
+      "existing_template_ref": "deep.housing.request-triage.v1",
+      "family_id": "housing.habitability-code",
+      "family_title": "Housing habitability and code operations",
+      "horizon": "multi-year",
+      "implementation_status": "reference-implemented",
+      "primary_outcome": "verified severe condition-days unresolved",
+      "prohibited_claims": [
+        "Do not report ranked complaints as adjudicated violations or modeled repairs as completed.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "asset",
+      "suite": "housing-land-use-regeneration",
+      "title": "Prioritize habitability inspection and repair interventions"
+    },
+    {
+      "analysis_modes": [
+        "descriptive",
+        "optimization"
+      ],
+      "binding_constraint": "The homelessness prevention and housing stability prioritize must respect declared capital, operating, maintenance, and delivery budgets.",
+      "content_hash": "sha256:d09a7b553c8d2c2f70a139c5209a107a28fb0ef2948a35b249e576b08c519903",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Which legal aid, rental support, mediation, navigation, and diversion measures should be expanded?",
+      "decision_type": "prioritize",
+      "design_id": "scenario.housing.homelessness-prevention.stability-program-portfolio.v1",
+      "design_order": 123,
+      "evidence_gate": "cost-capacity",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed"
+      ],
+      "family_id": "housing.homelessness-prevention",
+      "family_title": "Homelessness prevention and housing stability",
+      "horizon": "multi-year",
+      "implementation_status": "design-only",
+      "primary_outcome": "expected unresolved housing-stability crises",
+      "prohibited_claims": [
+        "Do not report modeled crisis reduction as prevented eviction or homelessness.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "service-area",
+      "suite": "housing-land-use-regeneration",
+      "title": "Prioritize housing-stability prevention programs"
+    },
+    {
+      "analysis_modes": [
+        "descriptive",
+        "optimization"
+      ],
+      "binding_constraint": "The affordable housing siting and preservation prioritize must respect declared capital, operating, maintenance, and delivery budgets.",
+      "content_hash": "sha256:4b82d3a273cb9e153f2a27de1aa4346875e1d2f94238a4ca9fe2b7c0ae32c32b",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Which preservation, acquisition, rehabilitation, and new-development projects should receive funding?",
+      "decision_type": "prioritize",
+      "design_id": "scenario.housing.affordable-supply.preservation-development-portfolio.v1",
+      "design_order": 131,
+      "evidence_gate": "cost-capacity",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed"
+      ],
+      "family_id": "housing.affordable-supply",
+      "family_title": "Affordable housing siting and preservation",
+      "horizon": "multi-year",
+      "implementation_status": "design-only",
+      "primary_outcome": "affordable home-years lost relative to targets",
+      "prohibited_claims": [
+        "Do not report selected projects as financed, constructed, occupied, or preserved.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "parcel",
+      "suite": "housing-land-use-regeneration",
+      "title": "Prioritize affordable-housing preservation and development"
+    },
+    {
+      "analysis_modes": [
+        "descriptive",
+        "optimization"
+      ],
+      "binding_constraint": "The land use, regeneration, and neighborhood change prioritize must respect declared capital, operating, maintenance, and delivery budgets.",
+      "content_hash": "sha256:846c1744ce9446e5b64877737ea60f41874fe84b0518573b87a06b61d8af1d6b",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Which infrastructure, public realm, housing, business, and cultural-asset investments should be sequenced?",
+      "decision_type": "prioritize",
+      "design_id": "scenario.housing.land-use-regeneration.regeneration-investments.v1",
+      "design_order": 139,
+      "evidence_gate": "cost-capacity",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed"
+      ],
+      "family_id": "housing.land-use-regeneration",
+      "family_title": "Land use, regeneration, and neighborhood change",
+      "horizon": "multi-year",
+      "implementation_status": "design-only",
+      "primary_outcome": "unmet verified community-benefit and infrastructure need",
+      "prohibited_claims": [
+        "Do not report modeled community benefits as agreed, delivered, or causally achieved.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "asset",
+      "suite": "housing-land-use-regeneration",
+      "title": "Prioritize inclusive regeneration investments"
+    },
+    {
+      "analysis_modes": [
+        "descriptive",
+        "optimization"
+      ],
+      "binding_constraint": "The 311 and public-service demand operations prioritize must respect declared capital, operating, maintenance, and delivery budgets.",
+      "content_hash": "sha256:d0442f9578fd6c926c7393de00bc6bcf5ff82a9eeacf47c611bf374ed145f95d",
+      "current_readiness": "reference-implemented",
+      "decision_question": "Which intake, routing, self-service, field, translation, and quality improvements should be funded?",
+      "decision_type": "prioritize",
+      "design_id": "scenario.public-service.demand.service-improvement-portfolio.v1",
+      "design_order": 147,
+      "evidence_gate": "cost-capacity",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed"
+      ],
+      "existing_template_ref": "deep.public-service.total-demand.v1",
+      "family_id": "public-service.demand",
+      "family_title": "311 and public-service demand operations",
+      "horizon": "multi-year",
+      "implementation_status": "reference-implemented",
+      "primary_outcome": "expected avoidable request handling and resident effort",
+      "prohibited_claims": [
+        "Do not report modeled handling savings as realized productivity or resident satisfaction.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "asset",
+      "suite": "public-service-operations",
+      "title": "Prioritize public-service workflow improvements"
+    },
+    {
+      "analysis_modes": [
+        "descriptive",
+        "optimization"
+      ],
+      "binding_constraint": "The sanitation, waste, and street cleanliness prioritize must respect declared capital, operating, maintenance, and delivery budgets.",
+      "content_hash": "sha256:03ec772b9b5ce9667fd5c102c61c34851e14916e65fbe1e0888fad7647661f1a",
+      "current_readiness": "reference-implemented",
+      "decision_question": "Which vehicles, containers, depots, public bins, route tools, and prevention measures should be funded?",
+      "decision_type": "prioritize",
+      "design_id": "scenario.public-service.sanitation.sanitation-improvements.v1",
+      "design_order": 155,
+      "evidence_gate": "cost-capacity",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed"
+      ],
+      "existing_template_ref": "deep.public-service.sanitation-workload.v1",
+      "family_id": "public-service.sanitation",
+      "family_title": "Sanitation, waste, and street cleanliness",
+      "horizon": "multi-year",
+      "implementation_status": "reference-implemented",
+      "primary_outcome": "expected sanitation service failure and overflow burden",
+      "prohibited_claims": [
+        "Do not report modeled cleanliness or service gains as observed outcomes.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "asset",
+      "suite": "public-service-operations",
+      "title": "Prioritize sanitation assets and service improvements"
+    },
+    {
+      "analysis_modes": [
+        "descriptive",
+        "optimization"
+      ],
+      "binding_constraint": "The emergency response readiness and allocation prioritize must respect declared capital, operating, maintenance, and delivery budgets.",
+      "content_hash": "sha256:0488c8b91c870837d72c0683315ea1d4be5306aa97b1b18260204f67f90cd4eb",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Which communications, fleet, station, training, accessibility, and mutual-aid investments should be funded?",
+      "decision_type": "prioritize",
+      "design_id": "scenario.public-service.emergency-response.response-readiness-portfolio.v1",
+      "design_order": 163,
+      "evidence_gate": "cost-capacity",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed"
+      ],
+      "family_id": "public-service.emergency-response",
+      "family_title": "Emergency response readiness and allocation",
+      "horizon": "multi-year",
+      "implementation_status": "design-only",
+      "primary_outcome": "expected priority response-capacity shortfall",
+      "prohibited_claims": [
+        "Do not report modeled response improvements as lives saved or delivered readiness.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "asset",
+      "suite": "public-service-operations",
+      "title": "Prioritize emergency response readiness investments"
+    },
+    {
+      "analysis_modes": [
+        "descriptive",
+        "optimization"
+      ],
+      "binding_constraint": "The digital public access and administrative service delivery prioritize must respect declared capital, operating, maintenance, and delivery budgets.",
+      "content_hash": "sha256:7cc50780cb90696a1ecbe9420f5dc9ddfeada9dc9eb3b7d5940e3c9a3043823a",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Which identity, form, language, accessibility, integration, support, and privacy improvements should be funded?",
+      "decision_type": "prioritize",
+      "design_id": "scenario.public-service.digital-access.service-redesign-portfolio.v1",
+      "design_order": 171,
+      "evidence_gate": "cost-capacity",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed"
+      ],
+      "family_id": "public-service.digital-access",
+      "family_title": "Digital public access and administrative service delivery",
+      "horizon": "multi-year",
+      "implementation_status": "design-only",
+      "primary_outcome": "verified user effort and preventable service failure",
+      "prohibited_claims": [
+        "Do not report modeled time savings as realized uptake, eligibility, or resident welfare.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "asset",
+      "suite": "public-service-operations",
+      "title": "Prioritize accessible public-service redesign"
+    },
+    {
+      "analysis_modes": [
+        "descriptive",
+        "optimization"
+      ],
+      "binding_constraint": "The road and bridge asset management prioritize must respect declared capital, operating, maintenance, and delivery budgets.",
+      "content_hash": "sha256:e9302539d29e32df17e699ddf749511212d72aec24c75840a4b3a6541734aa57",
+      "current_readiness": "reference-implemented",
+      "decision_question": "Which preventive, rehabilitative, safety, accessibility, and replacement projects should be funded?",
+      "decision_type": "prioritize",
+      "design_id": "scenario.infrastructure.roads-bridges.maintenance-renewal.v1",
+      "design_order": 179,
+      "evidence_gate": "cost-capacity",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed"
+      ],
+      "existing_template_ref": "deep.infrastructure.maintenance-portfolio.v1",
+      "family_id": "infrastructure.roads-bridges",
+      "family_title": "Road and bridge asset management",
+      "horizon": "multi-year",
+      "implementation_status": "reference-implemented",
+      "primary_outcome": "expected risk-adjusted deficient asset-years",
+      "prohibited_claims": [
+        "Do not report request-based prioritization as engineering design, capital approval, or completed work.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "asset",
+      "suite": "infrastructure-finance-asset-risk",
+      "title": "Prioritize road and bridge maintenance and renewal"
+    },
+    {
+      "analysis_modes": [
+        "descriptive",
+        "optimization"
+      ],
+      "binding_constraint": "The water and wastewater infrastructure prioritize must respect declared capital, operating, maintenance, and delivery budgets.",
+      "content_hash": "sha256:874bbe070e36699e91882c9d501f50b4ea73491d5493364e39e573f4a7810c2f",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Which pipes, pumps, plants, storage, sensors, and process upgrades should enter the capital portfolio?",
+      "decision_type": "prioritize",
+      "design_id": "scenario.infrastructure.water-wastewater.utility-renewal.v1",
+      "design_order": 187,
+      "evidence_gate": "cost-capacity",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed"
+      ],
+      "family_id": "infrastructure.water-wastewater",
+      "family_title": "Water and wastewater infrastructure",
+      "horizon": "multi-year",
+      "implementation_status": "design-only",
+      "primary_outcome": "expected risk-adjusted service interruption and compliance burden",
+      "prohibited_claims": [
+        "Do not report modeled risk reduction as completed renewal, compliance, or avoided incidents.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "asset",
+      "suite": "infrastructure-finance-asset-risk",
+      "title": "Prioritize water and wastewater renewal"
+    },
+    {
+      "analysis_modes": [
+        "descriptive",
+        "optimization"
+      ],
+      "binding_constraint": "The municipal energy and building decarbonization prioritize must respect declared capital, operating, maintenance, and delivery budgets.",
+      "content_hash": "sha256:8606c8ca9781348c408a49587cd694f80eabe84a26c9e2b183add41e7a6b361a",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Which envelope, controls, heat-pump, solar, storage, and commissioning projects should be funded?",
+      "decision_type": "prioritize",
+      "design_id": "scenario.infrastructure.energy-buildings.decarbonization-portfolio.v1",
+      "design_order": 195,
+      "evidence_gate": "cost-capacity",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed"
+      ],
+      "family_id": "infrastructure.energy-buildings",
+      "family_title": "Municipal energy and building decarbonization",
+      "horizon": "multi-year",
+      "implementation_status": "design-only",
+      "primary_outcome": "remaining lifecycle greenhouse-gas emissions",
+      "prohibited_claims": [
+        "Do not report modeled energy, carbon, comfort, or cost savings as realized.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "asset",
+      "suite": "infrastructure-finance-asset-risk",
+      "title": "Prioritize municipal building decarbonization"
+    },
+    {
+      "analysis_modes": [
+        "descriptive",
+        "optimization"
+      ],
+      "binding_constraint": "The capital portfolio and municipal finance prioritize must respect declared capital, operating, maintenance, and delivery budgets.",
+      "content_hash": "sha256:0333f081879c843af4b177bc8d5499bb78237594f806a200a2a31cc7e47e66b8",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Which renewal, resilience, service, compliance, and growth projects should enter the constrained plan?",
+      "decision_type": "prioritize",
+      "design_id": "scenario.infrastructure.capital-finance.capital-investment-portfolio.v1",
+      "design_order": 203,
+      "evidence_gate": "cost-capacity",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed"
+      ],
+      "family_id": "infrastructure.capital-finance",
+      "family_title": "Capital portfolio and municipal finance",
+      "horizon": "multi-year",
+      "implementation_status": "design-only",
+      "primary_outcome": "expected risk-adjusted unmet capital-service need",
+      "prohibited_claims": [
+        "Do not call a selected project appropriated, financed, procured, constructed, or beneficial.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "asset",
+      "suite": "infrastructure-finance-asset-risk",
+      "title": "Prioritize the municipal capital investment portfolio"
+    },
+    {
+      "analysis_modes": [
+        "descriptive",
+        "optimization"
+      ],
+      "binding_constraint": "The distributional public-service equity prioritize must respect declared capital, operating, maintenance, and delivery budgets.",
+      "content_hash": "sha256:8ba4394e7bb47a6deac104a2b7b08971f4a0147f561957290c15f7b0194b666e",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Which access, language, staffing, process, facility, and accountability investments should be funded?",
+      "decision_type": "prioritize",
+      "design_id": "scenario.equity.distributional-service.equity-improvement-portfolio.v1",
+      "design_order": 211,
+      "evidence_gate": "cost-capacity",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed"
+      ],
+      "family_id": "equity.distributional-service",
+      "family_title": "Distributional public-service equity",
+      "horizon": "multi-year",
+      "implementation_status": "design-only",
+      "primary_outcome": "population-weighted verified minimum-service gap",
+      "prohibited_claims": [
+        "Do not report modeled gap reduction as delivered equity, legal compliance, or resident welfare.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "service-area",
+      "suite": "behavioral-policy-equity",
+      "title": "Prioritize cross-agency equity improvements"
+    },
+    {
+      "analysis_modes": [
+        "descriptive",
+        "optimization"
+      ],
+      "binding_constraint": "The public participation and risk communication prioritize must respect declared capital, operating, maintenance, and delivery budgets.",
+      "content_hash": "sha256:c2e139aee90cc2cdeecea064c994f33e161a466eaf186f85009a16abd46bcd71",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Which language, accessibility, facilitation, compensation, channel, and feedback reforms should be funded?",
+      "decision_type": "prioritize",
+      "design_id": "scenario.equity.participation-communication.inclusive-engagement-portfolio.v1",
+      "design_order": 219,
+      "evidence_gate": "cost-capacity",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed"
+      ],
+      "family_id": "equity.participation-communication",
+      "family_title": "Public participation and risk communication",
+      "horizon": "multi-year",
+      "implementation_status": "design-only",
+      "primary_outcome": "affected-population participation and feedback access gap",
+      "prohibited_claims": [
+        "Do not report modeled inclusion as representative participation, consent, trust, or influence.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "service-area",
+      "suite": "behavioral-policy-equity",
+      "title": "Prioritize inclusive participation and communication improvements"
+    },
+    {
+      "analysis_modes": [
+        "descriptive",
+        "optimization"
+      ],
+      "binding_constraint": "The compliance, incentives, and behavioral policy prioritize must respect declared capital, operating, maintenance, and delivery budgets.",
+      "content_hash": "sha256:0cf77ff25f8928bad6324d66a1f419d366e1818226d68b40e6ce168001b58fe4",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Which simplification, reminder, incentive, technical support, inspection, and accountability measures should be funded?",
+      "decision_type": "prioritize",
+      "design_id": "scenario.equity.compliance-incentives.compliance-policy-portfolio.v1",
+      "design_order": 227,
+      "evidence_gate": "cost-capacity",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed"
+      ],
+      "family_id": "equity.compliance-incentives",
+      "family_title": "Compliance, incentives, and behavioral policy",
+      "horizon": "multi-year",
+      "implementation_status": "design-only",
+      "primary_outcome": "verified unresolved compliance burden and harm risk",
+      "prohibited_claims": [
+        "Do not report modeled compliance change as lawful behavior, public benefit, or welfare improvement.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "service-area",
+      "suite": "behavioral-policy-equity",
+      "title": "Prioritize compliance assistance and policy redesign"
+    },
+    {
+      "analysis_modes": [
+        "descriptive",
+        "optimization"
+      ],
+      "binding_constraint": "The algorithmic decision support and governance prioritize must respect declared capital, operating, maintenance, and delivery budgets.",
+      "content_hash": "sha256:3e5192cafe9ed543b7788982468802820408b8a6d89d5c27f24dc414ee048cce",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Which documentation, data, evaluation, interface, human review, recourse, monitoring, and sunset controls should be funded?",
+      "decision_type": "prioritize",
+      "design_id": "scenario.equity.algorithmic-governance.governance-controls.v1",
+      "design_order": 235,
+      "evidence_gate": "cost-capacity",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed"
+      ],
+      "family_id": "equity.algorithmic-governance",
+      "family_title": "Algorithmic decision support and governance",
+      "horizon": "multi-year",
+      "implementation_status": "design-only",
+      "primary_outcome": "high-impact decision volume without verified controls",
+      "prohibited_claims": [
+        "Do not report a planned control as implemented, effective, lawful, certified, or independently audited.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "asset",
+      "suite": "behavioral-policy-equity",
+      "title": "Prioritize algorithmic governance controls"
+    }
+  ],
+  "kind": "scenario-designs.decision-type.prioritize",
+  "record_count": 30,
+  "schema_version": "1.0.0"
+}

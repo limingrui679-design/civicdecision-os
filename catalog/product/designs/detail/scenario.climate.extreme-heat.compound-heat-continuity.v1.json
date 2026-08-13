@@ -1,0 +1,225 @@
+{
+  "audit_maximum_pairwise_similarity": 0.646154,
+  "design": {
+    "affected_system": "urban heat-health and cooling-response system",
+    "alternatives": [
+      "pre-position backup power at the highest-load cooling sites",
+      "create redundant mobile cooling and welfare-check teams",
+      "stage capacity using conservative heat and outage scenarios"
+    ],
+    "analysis_modes": [
+      "forecast",
+      "simulation",
+      "optimization"
+    ],
+    "assumptions": [
+      "Heat indicators are aligned to a declared local time zone and spatial support.",
+      "Cooling capacity, costs, and response effects remain explicit planning inputs.",
+      "All alternatives, capacities, costs, effects, thresholds, and failure scenarios are proposed until bound to evidence."
+    ],
+    "baseline": "Existing facilities and ordinary surge protocols face the compound event without added redundancy.",
+    "city_bindings": [],
+    "constraints": [
+      {
+        "binding": true,
+        "constraint_id": "scenario.climate.extreme-heat.compound-heat-continuity.v1.constraint.binding",
+        "description": "Critical cooling and welfare-check functions must remain above the declared minimum continuity level.",
+        "hard": true,
+        "kind": "risk",
+        "required_source_roles": [
+          "climate-hazard",
+          "demographic-context",
+          "geographic-identity",
+          "municipal-demand",
+          "operating-capacity"
+        ]
+      },
+      {
+        "binding": false,
+        "constraint_id": "scenario.climate.extreme-heat.compound-heat-continuity.v1.constraint.evidence-scope",
+        "description": "Every released metric must retain evidence type, source lineage, geography, time, assumptions, and uncertainty.",
+        "hard": true,
+        "kind": "technical",
+        "required_source_roles": [
+          "climate-hazard"
+        ]
+      },
+      {
+        "binding": false,
+        "constraint_id": "scenario.climate.extreme-heat.compound-heat-continuity.v1.constraint.decision-authority",
+        "description": "No analytical output may bypass lawful authority, accountable human review, or an applicable appeal process.",
+        "hard": true,
+        "kind": "regulatory",
+        "required_source_roles": [
+          "climate-hazard"
+        ]
+      }
+    ],
+    "current_readiness": "reference-implemented",
+    "decision_cadence": "recompiled at each planning cycle and after material evidence change",
+    "decision_owner": "chief resilience officer and public-health incident lead",
+    "decision_question": "Which continuity portfolio remains feasible under prolonged heat, power loss, and service-demand surge assumptions?",
+    "decision_type": "stress-test",
+    "design_id": "scenario.climate.extreme-heat.compound-heat-continuity.v1",
+    "design_order": 7,
+    "design_signature": "sha256:bce74fc2d2251aa5404702222246b8c71044f56ceddb4f8ee73529e1e19b3833",
+    "evidence_requirements": [
+      "estimated",
+      "observed",
+      "optimized",
+      "proposed",
+      "simulated"
+    ],
+    "existing_template_ref": "deep.climate.heat-service-surge.v1",
+    "family_id": "climate.extreme-heat",
+    "family_title": "Extreme heat exposure and response",
+    "horizon": "weeks",
+    "implementation_status": "reference-implemented",
+    "independence_key": {
+      "binding_constraint": "Critical cooling and welfare-check functions must remain above the declared minimum continuity level.",
+      "decision_object": "compound-heat service-continuity portfolio",
+      "evidence_gate": "Observed workload and gridded heat inputs retain source lineage while outage and intervention effects remain labeled assumptions.",
+      "horizon": "weeks",
+      "intervention_mechanism": "multi-hazard Monte Carlo stress testing of facilities and response capacity",
+      "primary_outcome": "scenario-weighted hours of critical service interruption",
+      "spatial_unit": "citywide"
+    },
+    "intended_claim": "A versioned stress-test design for comparing declared alternatives affecting compound-heat service-continuity portfolio, conditional on its evidence gate.",
+    "limitations": [
+      "This library record has no city binding and therefore reports no local input, output, or recommendation.",
+      "Readiness describes explicit source and method gates; it does not certify implementation feasibility.",
+      "External domain, legal, community, security, and operational review remains outside this design artifact."
+    ],
+    "method_claimed": false,
+    "objectives": [
+      {
+        "evidence_type": "estimated",
+        "metric": "scenario-weighted hours of critical service interruption",
+        "objective_id": "scenario.climate.extreme-heat.compound-heat-continuity.v1.objective.primary",
+        "primary": true,
+        "sense": "minimize",
+        "unit": "service-hours"
+      },
+      {
+        "evidence_type": "estimated",
+        "metric": "distributional gap in scenario-weighted hours of critical service interruption",
+        "objective_id": "scenario.climate.extreme-heat.compound-heat-continuity.v1.objective.equity",
+        "primary": false,
+        "sense": "minimize",
+        "unit": "service-hours"
+      },
+      {
+        "evidence_type": "observed",
+        "metric": "decision claims with complete evidence lineage",
+        "objective_id": "scenario.climate.extreme-heat.compound-heat-continuity.v1.objective.traceability",
+        "primary": false,
+        "sense": "maximize",
+        "unit": "percent"
+      }
+    ],
+    "prohibited_claims": [
+      "Do not claim that simulated outages caused observed requests or that a stress test predicts an actual disaster.",
+      "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+      "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+      "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+    ],
+    "reference_implementation_note": "Tier-D template deep.climate.heat-service-surge.v1 (Heat-context service continuity) supplies a bounded reference workflow for this design axis. The mapping does not establish complete city-specific inputs, external validity, deployment, adoption, or impact.",
+    "release_gate": {
+      "failure_release": "Release an explicit insufficient-evidence record naming missing sources, failed diagnostics, prohibited claims, and the next validation action.",
+      "failure_status": "insufficient-evidence",
+      "gate_id": "scenario.climate.extreme-heat.compound-heat-continuity.v1.gate.release",
+      "gate_type": "source-lineage",
+      "pass_condition": "Observed workload and gridded heat inputs retain source lineage while outage and intervention effects remain labeled assumptions.",
+      "required_evidence_types": [
+        "observed",
+        "proposed"
+      ],
+      "required_source_roles": [
+        "climate-hazard",
+        "demographic-context",
+        "geographic-identity",
+        "municipal-demand",
+        "operating-capacity"
+      ]
+    },
+    "required_source_roles": [
+      "climate-hazard",
+      "demographic-context",
+      "geographic-identity",
+      "municipal-demand",
+      "operating-capacity"
+    ],
+    "schema_version": "1.0.0",
+    "spatial_unit": "citywide",
+    "suite": "climate-disaster-resilience",
+    "tags": [
+      "climate-disaster-resilience",
+      "climate.extreme-heat",
+      "reference-implemented",
+      "scenario-library",
+      "stress-test"
+    ],
+    "title": "Stress-test service continuity during compound heat",
+    "transportability_risks": [
+      "Building stock, acclimatization, canopy, humidity, and reporting behavior vary by city.",
+      "Thresholds calibrated in one climate zone may not transfer to another."
+    ]
+  },
+  "family": {
+    "affected_system": "urban heat-health and cooling-response system",
+    "claim_boundary": [
+      "Hazard observations and modeled exposure do not establish individual harm or causation.",
+      "Proposed adaptations are planning alternatives, not adopted policy or engineered designs.",
+      "A design-only record is not a city execution, validated forecast, or impact result."
+    ],
+    "common_source_roles": [
+      "climate-hazard",
+      "demographic-context",
+      "geographic-identity"
+    ],
+    "decision_owner": "chief resilience officer and public-health incident lead",
+    "decision_types": [
+      "diagnose",
+      "forecast",
+      "prioritize",
+      "site",
+      "allocate",
+      "schedule",
+      "stress-test",
+      "evaluate"
+    ],
+    "description": "Decision designs spanning heat-risk diagnosis, cooling access, operational response, adaptation investment, compound stress, and intervention evaluation.",
+    "design_refs": [
+      "scenario.climate.extreme-heat.heat-access-gaps.v1",
+      "scenario.climate.extreme-heat.heat-service-demand.v1",
+      "scenario.climate.extreme-heat.cooling-investments.v1",
+      "scenario.climate.extreme-heat.cooling-center-network.v1",
+      "scenario.climate.extreme-heat.heat-response-resources.v1",
+      "scenario.climate.extreme-heat.heat-operations-calendar.v1",
+      "scenario.climate.extreme-heat.compound-heat-continuity.v1",
+      "scenario.climate.extreme-heat.cool-roof-impact.v1"
+    ],
+    "design_signatures": [
+      "sha256:5aa9b517f4356eee6de34f345d4f20d0792352a4dae66379f3e72178791d0240",
+      "sha256:2a887f2efce290b0dac81c2204ccb431e1d904a018583490deb81ca5f4a0e342",
+      "sha256:e823416460130b3bfde10ee275413738aeaf561402c67eca043f6b6a53f4b31e",
+      "sha256:c67ba5740277612411f42824dac7fbecc60d23b72db149b76cb2276073ee5582",
+      "sha256:ab095537c3089d7cac11eaea322467b2ffdc090563993d33678f73cb5089260e",
+      "sha256:23fd784d81b2f7f4f1b5a64cc19a597c9c439c91e9ff5d7466674728d3f9721e",
+      "sha256:bce74fc2d2251aa5404702222246b8c71044f56ceddb4f8ee73529e1e19b3833",
+      "sha256:f8706f9c4c1295314043c519fad476aeb738acd468b67b9b6545fd5fc569c510"
+    ],
+    "family_id": "climate.extreme-heat",
+    "family_order": 1,
+    "schema_version": "1.0.0",
+    "suite": "climate-disaster-resilience",
+    "title": "Extreme heat exposure and response"
+  },
+  "library_claim_boundary": [
+    "The catalog contains 240 decision designs, not 240 city executions.",
+    "Exactly twelve designs map to existing Tier-D reference templates; 228 remain design-only.",
+    "A reference implementation can be an explicit negative release and does not imply impact.",
+    "No record claims a city binding, new method, deployment, adoption, or real-user outcome.",
+    "Future execution requires source binding, gate passage, and domain, legal, community, and operational review."
+  ]
+}

@@ -1,0 +1,164 @@
+{
+  "affected_system": "air-quality surveillance, exposure reduction, and respiratory-health response",
+  "alternatives": [
+    "verify the highest-consequence signals before acting on air-exposure and respiratory-health pattern discordance",
+    "combine targeted inspection, monitoring, and data-quality repair for air-exposure and respiratory-health pattern discordance",
+    "pair multi-source exposure, outcome, and reporting triangulation with an explicit stop, review, and escalation rule"
+  ],
+  "analysis_modes": [
+    "descriptive"
+  ],
+  "assumptions": [
+    "Monitor data retain calibration, siting, uptime, and spatial-representativeness metadata.",
+    "Exposure, diagnosis, care use, and service complaints are not interchangeable outcomes.",
+    "All alternatives, capacities, costs, effects, thresholds, and failure scenarios are proposed until bound to evidence."
+  ],
+  "baseline": "continue current inspection and reporting practice for air-exposure and respiratory-health pattern discordance.",
+  "city_bindings": [],
+  "constraints": [
+    {
+      "binding": true,
+      "constraint_id": "scenario.health.air-quality.exposure-health-discordance.v1.constraint.binding",
+      "description": "The air-quality exposure and respiratory health diagnose must respect declared measurement resolution and classification uncertainty.",
+      "hard": true,
+      "kind": "technical",
+      "required_source_roles": [
+        "demographic-context",
+        "environmental-exposure",
+        "equity-attribute",
+        "geographic-identity",
+        "health-outcome",
+        "municipal-demand"
+      ]
+    },
+    {
+      "binding": false,
+      "constraint_id": "scenario.health.air-quality.exposure-health-discordance.v1.constraint.evidence-scope",
+      "description": "Every released metric must retain evidence type, source lineage, geography, time, assumptions, and uncertainty.",
+      "hard": true,
+      "kind": "technical",
+      "required_source_roles": [
+        "demographic-context"
+      ]
+    },
+    {
+      "binding": false,
+      "constraint_id": "scenario.health.air-quality.exposure-health-discordance.v1.constraint.decision-authority",
+      "description": "No analytical output may bypass lawful authority, accountable human review, or an applicable appeal process.",
+      "hard": true,
+      "kind": "regulatory",
+      "required_source_roles": [
+        "demographic-context"
+      ]
+    }
+  ],
+  "current_readiness": "reference-implemented",
+  "decision_cadence": "recompiled at each planning cycle and after material evidence change",
+  "decision_owner": "environmental health director and air-quality program lead",
+  "decision_question": "Which areas show persistent pollutant, respiratory, and service signals after coverage differences are separated?",
+  "decision_type": "diagnose",
+  "design_id": "scenario.health.air-quality.exposure-health-discordance.v1",
+  "design_order": 89,
+  "design_signature": "sha256:6da859a0d3cc29552cebc51e432ee210e63700d6199d8d8244e14d37b57ea5e5",
+  "evidence_requirements": [
+    "estimated",
+    "observed",
+    "proposed"
+  ],
+  "existing_template_ref": "deep.health.environmental-request-screen.v1",
+  "family_id": "health.air-quality",
+  "family_title": "Air-quality exposure and respiratory health",
+  "horizon": "annual",
+  "implementation_status": "reference-implemented",
+  "independence_key": {
+    "binding_constraint": "The air-quality exposure and respiratory health diagnose must respect declared measurement resolution and classification uncertainty.",
+    "decision_object": "air-exposure and respiratory-health pattern discordance",
+    "evidence_gate": "Evidence for air-exposure and respiratory-health pattern discordance passes documented checks for coverage, semantics, geography, timestamps, and uncertainty.",
+    "horizon": "annual",
+    "intervention_mechanism": "multi-source exposure, outcome, and reporting triangulation",
+    "primary_outcome": "unresolved high-exposure high-burden population",
+    "spatial_unit": "neighborhood"
+  },
+  "intended_claim": "A versioned diagnose design for comparing declared alternatives affecting air-exposure and respiratory-health pattern discordance, conditional on its evidence gate.",
+  "limitations": [
+    "This library record has no city binding and therefore reports no local input, output, or recommendation.",
+    "Readiness describes explicit source and method gates; it does not certify implementation feasibility.",
+    "External domain, legal, community, security, and operational review remains outside this design artifact."
+  ],
+  "method_claimed": false,
+  "objectives": [
+    {
+      "evidence_type": "estimated",
+      "metric": "unresolved high-exposure high-burden population",
+      "objective_id": "scenario.health.air-quality.exposure-health-discordance.v1.objective.primary",
+      "primary": true,
+      "sense": "minimize",
+      "unit": "people"
+    },
+    {
+      "evidence_type": "estimated",
+      "metric": "distributional gap in unresolved high-exposure high-burden population",
+      "objective_id": "scenario.health.air-quality.exposure-health-discordance.v1.objective.equity",
+      "primary": false,
+      "sense": "minimize",
+      "unit": "people"
+    },
+    {
+      "evidence_type": "observed",
+      "metric": "decision claims with complete evidence lineage",
+      "objective_id": "scenario.health.air-quality.exposure-health-discordance.v1.objective.traceability",
+      "primary": false,
+      "sense": "maximize",
+      "unit": "percent"
+    }
+  ],
+  "prohibited_claims": [
+    "Do not convert environmental request labels into measured exposure, diagnosis, or causal health risk.",
+    "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+    "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+    "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+  ],
+  "reference_implementation_note": "Tier-D template deep.health.environmental-request-screen.v1 (Environmental request workload screen) supplies a bounded reference workflow for this design axis. The mapping does not establish complete city-specific inputs, external validity, deployment, adoption, or impact.",
+  "release_gate": {
+    "failure_release": "Release an explicit insufficient-evidence record naming missing sources, failed diagnostics, prohibited claims, and the next validation action.",
+    "failure_status": "insufficient-evidence",
+    "gate_id": "scenario.health.air-quality.exposure-health-discordance.v1.gate.release",
+    "gate_type": "geographic-alignment",
+    "pass_condition": "Evidence for air-exposure and respiratory-health pattern discordance passes documented checks for coverage, semantics, geography, timestamps, and uncertainty.",
+    "required_evidence_types": [
+      "observed",
+      "proposed"
+    ],
+    "required_source_roles": [
+      "demographic-context",
+      "environmental-exposure",
+      "equity-attribute",
+      "geographic-identity",
+      "health-outcome",
+      "municipal-demand"
+    ]
+  },
+  "required_source_roles": [
+    "demographic-context",
+    "environmental-exposure",
+    "equity-attribute",
+    "geographic-identity",
+    "health-outcome",
+    "municipal-demand"
+  ],
+  "schema_version": "1.0.0",
+  "spatial_unit": "neighborhood",
+  "suite": "population-health-environmental-exposure",
+  "tags": [
+    "diagnose",
+    "health.air-quality",
+    "population-health-environmental-exposure",
+    "reference-implemented",
+    "scenario-library"
+  ],
+  "title": "Diagnose environmental exposure and respiratory-health patterns",
+  "transportability_risks": [
+    "Pollutant mixtures, indoor infiltration, source profiles, coding, and monitor coverage differ.",
+    "Modeled concentration may not represent personal exposure."
+  ]
+}

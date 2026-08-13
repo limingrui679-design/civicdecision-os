@@ -1,0 +1,165 @@
+{
+  "affected_system": "commercial curb, loading, delivery, and urban freight network",
+  "alternatives": [
+    "protect minimum coverage before needs-based allocation of time-specific curb frontage allocation",
+    "adapt allocations using observed demand, uptake, and capacity for time-specific curb frontage allocation",
+    "pair multi-use equity and safety constrained curb allocation with an explicit stop, review, and escalation rule"
+  ],
+  "analysis_modes": [
+    "simulation",
+    "optimization"
+  ],
+  "assumptions": [
+    "Curb regulations, occupancy, deliveries, violations, and travel effects have consistent timestamps and locations.",
+    "Observed platform or sensor activity represents only its measured market and street coverage.",
+    "All alternatives, capacities, costs, effects, thresholds, and failure scenarios are proposed until bound to evidence."
+  ],
+  "baseline": "retain the current distribution rule for time-specific curb frontage allocation.",
+  "city_bindings": [],
+  "constraints": [
+    {
+      "binding": true,
+      "constraint_id": "scenario.mobility.freight-curb.curb-space.v1.constraint.binding",
+      "description": "The urban freight and curb operations allocate must respect declared minimum service, eligibility, capacity, and distributional safeguards.",
+      "hard": true,
+      "kind": "equity",
+      "required_source_roles": [
+        "community-input",
+        "equity-attribute",
+        "geographic-identity",
+        "legal-regulatory",
+        "real-time-state",
+        "transport-network"
+      ]
+    },
+    {
+      "binding": false,
+      "constraint_id": "scenario.mobility.freight-curb.curb-space.v1.constraint.evidence-scope",
+      "description": "Every released metric must retain evidence type, source lineage, geography, time, assumptions, and uncertainty.",
+      "hard": true,
+      "kind": "technical",
+      "required_source_roles": [
+        "community-input"
+      ]
+    },
+    {
+      "binding": false,
+      "constraint_id": "scenario.mobility.freight-curb.curb-space.v1.constraint.decision-authority",
+      "description": "No analytical output may bypass lawful authority, accountable human review, or an applicable appeal process.",
+      "hard": true,
+      "kind": "regulatory",
+      "required_source_roles": [
+        "community-input"
+      ]
+    }
+  ],
+  "current_readiness": "blocked-missing-source",
+  "decision_cadence": "recompiled at each planning cycle and after material evidence change",
+  "decision_owner": "curb-management director and city freight coordinator",
+  "decision_question": "How should finite curb frontage be divided among loading, access, transit, parking, and public space?",
+  "decision_type": "allocate",
+  "design_id": "scenario.mobility.freight-curb.curb-space.v1",
+  "design_order": 61,
+  "design_signature": "sha256:c6611bc444c60f7fb3d8e08db98e96041bce118cf08c91b60bbee6c998f43d44",
+  "evidence_requirements": [
+    "estimated",
+    "observed",
+    "optimized",
+    "proposed",
+    "simulated"
+  ],
+  "family_id": "mobility.freight-curb",
+  "family_title": "Urban freight and curb operations",
+  "horizon": "weeks",
+  "implementation_status": "design-only",
+  "independence_key": {
+    "binding_constraint": "The urban freight and curb operations allocate must respect declared minimum service, eligibility, capacity, and distributional safeguards.",
+    "decision_object": "time-specific curb frontage allocation",
+    "evidence_gate": "Evidence for time-specific curb frontage allocation passes documented checks for eligible denominators, group attributes, inventory, minimum-service rules, and allocation records.",
+    "horizon": "weeks",
+    "intervention_mechanism": "multi-use equity and safety constrained curb allocation",
+    "primary_outcome": "priority curb demand left unserved",
+    "spatial_unit": "corridor"
+  },
+  "intended_claim": "A versioned allocate design for comparing declared alternatives affecting time-specific curb frontage allocation, conditional on its evidence gate.",
+  "limitations": [
+    "This library record has no city binding and therefore reports no local input, output, or recommendation.",
+    "Readiness describes explicit source and method gates; it does not certify implementation feasibility.",
+    "External domain, legal, community, security, and operational review remains outside this design artifact."
+  ],
+  "method_claimed": false,
+  "objectives": [
+    {
+      "evidence_type": "estimated",
+      "metric": "priority curb demand left unserved",
+      "objective_id": "scenario.mobility.freight-curb.curb-space.v1.objective.primary",
+      "primary": true,
+      "sense": "minimize",
+      "unit": "curb-meter-hours"
+    },
+    {
+      "evidence_type": "estimated",
+      "metric": "distributional gap in priority curb demand left unserved",
+      "objective_id": "scenario.mobility.freight-curb.curb-space.v1.objective.equity",
+      "primary": false,
+      "sense": "minimize",
+      "unit": "curb-meter-hours"
+    },
+    {
+      "evidence_type": "observed",
+      "metric": "decision claims with complete evidence lineage",
+      "objective_id": "scenario.mobility.freight-curb.curb-space.v1.objective.traceability",
+      "primary": false,
+      "sense": "maximize",
+      "unit": "percent"
+    }
+  ],
+  "prohibited_claims": [
+    "Do not call an optimized curb allocation enacted regulation or public consensus.",
+    "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+    "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+    "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+  ],
+  "release_gate": {
+    "failure_release": "Release an explicit insufficient-evidence record naming missing sources, failed diagnostics, prohibited claims, and the next validation action.",
+    "failure_status": "insufficient-evidence",
+    "gate_id": "scenario.mobility.freight-curb.curb-space.v1.gate.release",
+    "gate_type": "equity-measurement",
+    "pass_condition": "Evidence for time-specific curb frontage allocation passes documented checks for eligible denominators, group attributes, inventory, minimum-service rules, and allocation records.",
+    "required_evidence_types": [
+      "observed",
+      "proposed"
+    ],
+    "required_source_roles": [
+      "community-input",
+      "equity-attribute",
+      "geographic-identity",
+      "legal-regulatory",
+      "real-time-state",
+      "transport-network"
+    ]
+  },
+  "required_source_roles": [
+    "community-input",
+    "equity-attribute",
+    "geographic-identity",
+    "legal-regulatory",
+    "real-time-state",
+    "transport-network"
+  ],
+  "schema_version": "1.0.0",
+  "spatial_unit": "corridor",
+  "suite": "mobility-accessibility-operations",
+  "tags": [
+    "allocate",
+    "design-only",
+    "mobility-accessibility-operations",
+    "mobility.freight-curb",
+    "scenario-library"
+  ],
+  "title": "Allocate curb space across freight and public uses",
+  "transportability_risks": [
+    "Delivery markets, curb law, enforcement, land use, vehicle mix, and sensor coverage differ.",
+    "Platform data may omit independent carriers and informal loading behavior."
+  ]
+}

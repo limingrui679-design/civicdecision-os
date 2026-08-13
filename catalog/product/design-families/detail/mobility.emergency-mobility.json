@@ -1,0 +1,334 @@
+{
+  "designs": [
+    {
+      "analysis_modes": [
+        "descriptive"
+      ],
+      "binding_constraint": "The evacuation and emergency mobility diagnose must respect declared measurement resolution and classification uncertainty.",
+      "content_hash": "sha256:a831a893c394f670ff78d969c9005e53858e4a088563fb3e32f01c4f8ac12335",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Which populations and critical facilities lack a verified feasible evacuation or responder-access path?",
+      "decision_type": "diagnose",
+      "design_id": "scenario.mobility.emergency-mobility.evacuation-access-gaps.v1",
+      "design_order": 65,
+      "evidence_gate": "geographic-alignment",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "proposed"
+      ],
+      "family_id": "mobility.emergency-mobility",
+      "family_title": "Evacuation and emergency mobility",
+      "horizon": "annual",
+      "implementation_status": "design-only",
+      "primary_outcome": "at-risk people without a verified feasible mobility plan",
+      "prohibited_claims": [
+        "Do not infer individual evacuation need or willingness from area demographics.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "network",
+      "suite": "mobility-accessibility-operations",
+      "title": "Diagnose evacuation and assisted-mobility gaps"
+    },
+    {
+      "analysis_modes": [
+        "forecast"
+      ],
+      "binding_constraint": "The evacuation and emergency mobility forecast must respect declared validated operational capacity and forecast uncertainty.",
+      "content_hash": "sha256:273223a6fde1d0106cf5efc70c8069c165254b560840b1ce3579aa979d422d89",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "What departure, assisted-transport, congestion, and clearance-time range follows the hazard envelope?",
+      "decision_type": "forecast",
+      "design_id": "scenario.mobility.emergency-mobility.clearance-demand.v1",
+      "design_order": 66,
+      "evidence_gate": "model-calibration",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "proposed"
+      ],
+      "family_id": "mobility.emergency-mobility",
+      "family_title": "Evacuation and emergency mobility",
+      "horizon": "weeks",
+      "implementation_status": "design-only",
+      "primary_outcome": "people remaining in hazard areas after safe clearance time",
+      "prohibited_claims": [
+        "Do not present behavioral assumptions or simulated clearance as actual evacuation.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "network",
+      "suite": "mobility-accessibility-operations",
+      "title": "Forecast evacuation demand and clearance time"
+    },
+    {
+      "analysis_modes": [
+        "descriptive",
+        "optimization"
+      ],
+      "binding_constraint": "The evacuation and emergency mobility prioritize must respect declared capital, operating, maintenance, and delivery budgets.",
+      "content_hash": "sha256:80c1f8a6a96e3fe58b54c0843a920ecac1a8ecdcdd0f93d8a1149b3243d3ceb5",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Which route, fleet, communication, power, and accessibility upgrades most improve safe clearance?",
+      "decision_type": "prioritize",
+      "design_id": "scenario.mobility.emergency-mobility.evacuation-readiness.v1",
+      "design_order": 67,
+      "evidence_gate": "cost-capacity",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed"
+      ],
+      "family_id": "mobility.emergency-mobility",
+      "family_title": "Evacuation and emergency mobility",
+      "horizon": "multi-year",
+      "implementation_status": "design-only",
+      "primary_outcome": "expected people beyond safe clearance capacity",
+      "prohibited_claims": [
+        "Do not call modeled clearance improvements saved lives or completed readiness work.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "asset",
+      "suite": "mobility-accessibility-operations",
+      "title": "Prioritize emergency mobility readiness investments"
+    },
+    {
+      "analysis_modes": [
+        "simulation",
+        "optimization"
+      ],
+      "binding_constraint": "The evacuation and emergency mobility site must respect declared land control, accessibility, permitting, safety, and operating feasibility.",
+      "content_hash": "sha256:ea16d2fae897cced5add1b1b0e0cecb106bc42bea7ed256857fb591c9b399e45",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Where should pickup, medical transfer, and staging points operate outside hazard and access failures?",
+      "decision_type": "site",
+      "design_id": "scenario.mobility.emergency-mobility.pickup-transfer-points.v1",
+      "design_order": 68,
+      "evidence_gate": "legal-authority",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "family_id": "mobility.emergency-mobility",
+      "family_title": "Evacuation and emergency mobility",
+      "horizon": "multi-year",
+      "implementation_status": "design-only",
+      "primary_outcome": "assistance-eligible people beyond safe pickup access",
+      "prohibited_claims": [
+        "Do not label a candidate point safe or accessible without field and operations validation.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "facility",
+      "suite": "mobility-accessibility-operations",
+      "title": "Site accessible evacuation pickup and transfer points"
+    },
+    {
+      "analysis_modes": [
+        "simulation",
+        "optimization"
+      ],
+      "binding_constraint": "The evacuation and emergency mobility allocate must respect declared minimum service, eligibility, capacity, and distributional safeguards.",
+      "content_hash": "sha256:bc1fe71578c7ec2ab246840181ad1df4abe86063d432f55916b459e9cb6e4833",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "How should accessible vehicles, drivers, escorts, and medical transport slots be assigned?",
+      "decision_type": "allocate",
+      "design_id": "scenario.mobility.emergency-mobility.assisted-transport.v1",
+      "design_order": 69,
+      "evidence_gate": "equity-measurement",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "family_id": "mobility.emergency-mobility",
+      "family_title": "Evacuation and emergency mobility",
+      "horizon": "weeks",
+      "implementation_status": "design-only",
+      "primary_outcome": "eligible evacuation needs without assigned transport",
+      "prohibited_claims": [
+        "Do not report assigned transport as passenger contact, pickup, or safe arrival.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "network",
+      "suite": "mobility-accessibility-operations",
+      "title": "Allocate accessible vehicles and emergency mobility teams"
+    },
+    {
+      "analysis_modes": [
+        "forecast",
+        "optimization"
+      ],
+      "binding_constraint": "The evacuation and emergency mobility schedule must respect declared labor, access, sequencing, notice, and completion windows.",
+      "content_hash": "sha256:b78921e1ed4a51e29624ff131bbf966e43adaf9d958ee987d60a39aed96d267b",
+      "current_readiness": "reference-implemented",
+      "decision_question": "When should zones, transit, assisted transport, control points, and responder routes activate?",
+      "decision_type": "schedule",
+      "design_id": "scenario.mobility.emergency-mobility.phased-evacuation.v1",
+      "design_order": 70,
+      "evidence_gate": "temporal-alignment",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed"
+      ],
+      "existing_template_ref": "deep.mobility.real-time-reroute.v1",
+      "family_id": "mobility.emergency-mobility",
+      "family_title": "Evacuation and emergency mobility",
+      "horizon": "weeks",
+      "implementation_status": "reference-implemented",
+      "primary_outcome": "people uncleared when route safety thresholds are crossed",
+      "prohibited_claims": [
+        "Do not call an optimized evacuation timetable an issued order or completed movement.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "network",
+      "suite": "mobility-accessibility-operations",
+      "title": "Schedule phased multimodal evacuation"
+    },
+    {
+      "analysis_modes": [
+        "forecast",
+        "simulation",
+        "optimization"
+      ],
+      "binding_constraint": "The evacuation and emergency mobility stress test must respect declared minimum continuity and safety thresholds across severe scenarios.",
+      "content_hash": "sha256:61566b2563a7bc12cd26e4153027a9022dee7c89387b089a976a149a19d71362",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Which plan preserves clearance and responder access under blocked links, outages, fleet loss, and demand surge?",
+      "decision_type": "stress-test",
+      "design_id": "scenario.mobility.emergency-mobility.evacuation-network-failure.v1",
+      "design_order": 71,
+      "evidence_gate": "external-validation",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "family_id": "mobility.emergency-mobility",
+      "family_title": "Evacuation and emergency mobility",
+      "horizon": "seasonal",
+      "implementation_status": "design-only",
+      "primary_outcome": "scenario-weighted people beyond safe clearance",
+      "prohibited_claims": [
+        "Do not treat synthetic network failures or compliance assumptions as predicted events.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "network",
+      "suite": "mobility-accessibility-operations",
+      "title": "Stress-test evacuation under correlated network failure"
+    },
+    {
+      "analysis_modes": [
+        "descriptive",
+        "causal"
+      ],
+      "binding_constraint": "The evacuation and emergency mobility evaluate must respect declared pre-specified assignment, comparison, outcome, spillover, and subgroup rules.",
+      "content_hash": "sha256:9c553bac3e7fc0aaab163e60f2c92b9a7a7b8b61a1c7de4931838aec305cbb5a",
+      "current_readiness": "blocked-multiple-gates",
+      "decision_question": "Did phased exercises and targeted outreach improve verified readiness and assisted-transport completion?",
+      "decision_type": "evaluate",
+      "design_id": "scenario.mobility.emergency-mobility.evacuation-exercise-effect.v1",
+      "design_order": 72,
+      "evidence_gate": "causal-identification",
+      "evidence_types": [
+        "causal",
+        "estimated",
+        "observed",
+        "proposed"
+      ],
+      "family_id": "mobility.emergency-mobility",
+      "family_title": "Evacuation and emergency mobility",
+      "horizon": "multi-year",
+      "implementation_status": "design-only",
+      "primary_outcome": "change in verified preparedness task completion",
+      "prohibited_claims": [
+        "Do not infer real-disaster evacuation or survival effects from an exercise outcome.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "population-group",
+      "suite": "mobility-accessibility-operations",
+      "title": "Evaluate emergency mobility exercises and outreach"
+    }
+  ],
+  "family": {
+    "affected_system": "multimodal evacuation, assisted transport, and emergency access network",
+    "claim_boundary": [
+      "Network, request, and schedule records do not establish individual travel behavior or harm.",
+      "Optimized routes and allocations are planning outputs, not dispatched or completed trips.",
+      "Design-only records do not claim current city data, implementation, compliance, or impact."
+    ],
+    "common_source_roles": [
+      "geographic-identity",
+      "operating-capacity",
+      "transport-network"
+    ],
+    "decision_owner": "emergency transportation coordinator and incident commander",
+    "decision_types": [
+      "diagnose",
+      "forecast",
+      "prioritize",
+      "site",
+      "allocate",
+      "schedule",
+      "stress-test",
+      "evaluate"
+    ],
+    "description": "Eight decisions for mobility-needs diagnosis, clearance forecasting, network upgrades, pickup siting, vehicle allocation, evacuation schedules, failure stress, and exercise evaluation.",
+    "design_refs": [
+      "scenario.mobility.emergency-mobility.evacuation-access-gaps.v1",
+      "scenario.mobility.emergency-mobility.clearance-demand.v1",
+      "scenario.mobility.emergency-mobility.evacuation-readiness.v1",
+      "scenario.mobility.emergency-mobility.pickup-transfer-points.v1",
+      "scenario.mobility.emergency-mobility.assisted-transport.v1",
+      "scenario.mobility.emergency-mobility.phased-evacuation.v1",
+      "scenario.mobility.emergency-mobility.evacuation-network-failure.v1",
+      "scenario.mobility.emergency-mobility.evacuation-exercise-effect.v1"
+    ],
+    "design_signatures": [
+      "sha256:bd0107a37a85a3d260e7af95aed16dfc590bee0066e6105d3d6f44740844e79c",
+      "sha256:ce42127e1af46ad72ca368855e6bfd49a59915c1b76f49a33f156531d3912128",
+      "sha256:5cac7071082c4f2aa5cdb786915e1934cab53196f73ab90f2f5ad7cb7fff1598",
+      "sha256:8207358a1a03a8be66cb28c9bac622bab1597a0ceafe03f947ceeec01126c043",
+      "sha256:b7988d08647a02dcc8d668ef31b0699218e27fc2aa748ba268eec20d36d546ab",
+      "sha256:d70dcaab56f58605def4bac6f27d87d353799cee6fe9a4fd52a5972e8965f03d",
+      "sha256:f90751b9e5785a69173a2678221875c6a842130a421529752e1cd5c5a293deb8",
+      "sha256:3cf956c70ec03918e5ee6a16988c784068eaa596662facb219ca4955b3a88046"
+    ],
+    "family_id": "mobility.emergency-mobility",
+    "family_order": 9,
+    "schema_version": "1.0.0",
+    "suite": "mobility-accessibility-operations",
+    "title": "Evacuation and emergency mobility"
+  },
+  "library_claim_boundary": [
+    "The catalog contains 240 decision designs, not 240 city executions.",
+    "Exactly twelve designs map to existing Tier-D reference templates; 228 remain design-only.",
+    "A reference implementation can be an explicit negative release and does not imply impact.",
+    "No record claims a city binding, new method, deployment, adoption, or real-user outcome.",
+    "Future execution requires source binding, gate passage, and domain, legal, community, and operational review."
+  ]
+}

@@ -10,6 +10,7 @@ from fastapi import FastAPI
 from civicdecision.api import create_app
 from civicdecision.product.models import ProductTier, ScenarioKind, ScenarioStatus
 from civicdecision.product.store import ArtifactStore
+from civicdecision.scenario_library import DecisionType, ImplementationStatus
 from civicdecision.sdk import (
     AsyncCivicDecisionClient,
     CivicDecisionClient,
@@ -62,6 +63,12 @@ def test_local_sdk_opens_repository_and_exposes_all_resource_families() -> None:
         == 20
     )
     assert sdk.scenario("tierd.us.tx.austin.11").scenario.recommendation_issued is False
+    assert sdk.designs(decision_type=DecisionType.EVALUATE, limit=100).pagination.total == 30
+    design = sdk.design("scenario.climate.extreme-heat.cooling-center-network.v1")
+    assert design.design.method_claimed is False and design.design.city_bindings == []
+    assert sdk.design_families(query="climate.extreme-heat", limit=100).pagination.total == 1
+    assert len(sdk.design_family("climate.extreme-heat").designs) == 8
+    assert sdk.scenario_library_evidence().design_only_scenarios == 228
     assert sdk.decision_pack("tierd.us.tx.austin.01").scenario_id == "tierd.us.tx.austin.01"
     assert "## Result" in sdk.decision_brief("tierd.us.tx.austin.11")
     assert sdk.sources(query="Austin", limit=100).pagination.total == 5
@@ -95,6 +102,22 @@ def test_synchronous_http_sdk_validates_every_response_model(
             client.scenario(scenarios.items[0].execution_id).scenario.status
             is ScenarioStatus.INSUFFICIENT_EVIDENCE
         )
+        assert (
+            client.designs(
+                implementation_status=ImplementationStatus.REFERENCE_IMPLEMENTED,
+                limit=100,
+            ).pagination.total
+            == 12
+        )
+        assert (
+            client.design(
+                "scenario.climate.extreme-heat.cooling-center-network.v1"
+            ).design.decision_type
+            is DecisionType.SITE
+        )
+        assert client.design_families(limit=100).pagination.total == 30
+        assert len(client.design_family("climate.extreme-heat").designs) == 8
+        assert client.scenario_library_evidence().audit_passed
         assert client.decision_pack("tierd.us.tx.austin.01").status.value == "completed"
         assert "# Austin" in client.decision_brief("tierd.us.tx.austin.11")
         assert client.sources(publisher="Austin", query="daily", limit=100).pagination.total == 2
@@ -148,6 +171,15 @@ async def test_asynchronous_http_sdk_matches_synchronous_surface(
         assert scenarios.pagination.total == 1
         execution_id = scenarios.items[0].execution_id
         assert (await client.scenario(execution_id)).scenario.kind is ScenarioKind.REFERENCE_PACK
+        assert (
+            await client.designs(decision_type=DecisionType.DIAGNOSE, limit=100)
+        ).pagination.total == 30
+        assert (
+            await client.design("scenario.climate.extreme-heat.heat-access-gaps.v1")
+        ).design.method_claimed is False
+        assert (await client.design_families(limit=100)).pagination.total == 30
+        assert len((await client.design_family("climate.extreme-heat")).designs) == 8
+        assert (await client.scenario_library_evidence()).reference_implemented_designs == 12
         assert (await client.decision_pack(execution_id)).status.value == "infeasible"
         assert "## Result" in await client.decision_brief(execution_id)
         assert (

@@ -1,0 +1,50 @@
+{
+  "affected_system": "urban heat-health and cooling-response system",
+  "claim_boundary": [
+    "Hazard observations and modeled exposure do not establish individual harm or causation.",
+    "Proposed adaptations are planning alternatives, not adopted policy or engineered designs.",
+    "A design-only record is not a city execution, validated forecast, or impact result."
+  ],
+  "common_source_roles": [
+    "climate-hazard",
+    "demographic-context",
+    "geographic-identity"
+  ],
+  "decision_owner": "chief resilience officer and public-health incident lead",
+  "decision_types": [
+    "diagnose",
+    "forecast",
+    "prioritize",
+    "site",
+    "allocate",
+    "schedule",
+    "stress-test",
+    "evaluate"
+  ],
+  "description": "Decision designs spanning heat-risk diagnosis, cooling access, operational response, adaptation investment, compound stress, and intervention evaluation.",
+  "design_refs": [
+    "scenario.climate.extreme-heat.heat-access-gaps.v1",
+    "scenario.climate.extreme-heat.heat-service-demand.v1",
+    "scenario.climate.extreme-heat.cooling-investments.v1",
+    "scenario.climate.extreme-heat.cooling-center-network.v1",
+    "scenario.climate.extreme-heat.heat-response-resources.v1",
+    "scenario.climate.extreme-heat.heat-operations-calendar.v1",
+    "scenario.climate.extreme-heat.compound-heat-continuity.v1",
+    "scenario.climate.extreme-heat.cool-roof-impact.v1"
+  ],
+  "design_signatures": [
+    "sha256:5aa9b517f4356eee6de34f345d4f20d0792352a4dae66379f3e72178791d0240",
+    "sha256:2a887f2efce290b0dac81c2204ccb431e1d904a018583490deb81ca5f4a0e342",
+    "sha256:e823416460130b3bfde10ee275413738aeaf561402c67eca043f6b6a53f4b31e",
+    "sha256:c67ba5740277612411f42824dac7fbecc60d23b72db149b76cb2276073ee5582",
+    "sha256:ab095537c3089d7cac11eaea322467b2ffdc090563993d33678f73cb5089260e",
+    "sha256:23fd784d81b2f7f4f1b5a64cc19a597c9c439c91e9ff5d7466674728d3f9721e",
+    "sha256:bce74fc2d2251aa5404702222246b8c71044f56ceddb4f8ee73529e1e19b3833",
+    "sha256:f8706f9c4c1295314043c519fad476aeb738acd468b67b9b6545fd5fc569c510"
+  ],
+  "family_id": "climate.extreme-heat",
+  "family_order": 1,
+  "schema_version": "1.0.0",
+  "suite": "climate-disaster-resilience",
+  "title": "Extreme heat exposure and response"
+}

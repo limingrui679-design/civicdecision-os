@@ -1,0 +1,1056 @@
+{
+  "claim_boundary": "Design records are not city executions, deployments, adoptions, or impacts.",
+  "items": [
+    {
+      "analysis_modes": [
+        "descriptive",
+        "optimization"
+      ],
+      "binding_constraint": "Each selected facility must satisfy occupancy, backup-power, staffing, and accessible-entry capacity.",
+      "content_hash": "sha256:d504a3dab11cb5a95cc6e16f70b264a6c961b080d76e26bebdb5f2bbf4509c39",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Where should seasonal cooling centers open to reduce travel barriers while respecting facility capacity?",
+      "decision_type": "site",
+      "design_id": "scenario.climate.extreme-heat.cooling-center-network.v1",
+      "design_order": 4,
+      "evidence_gate": "network-readiness",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed"
+      ],
+      "family_id": "climate.extreme-heat",
+      "family_title": "Extreme heat exposure and response",
+      "horizon": "seasonal",
+      "implementation_status": "design-only",
+      "primary_outcome": "high-risk residents beyond the cooling-access threshold",
+      "prohibited_claims": [
+        "Do not infer accessible cooling from straight-line distance or an unvalidated network.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "facility",
+      "suite": "climate-disaster-resilience",
+      "title": "Site an accessible cooling-center network"
+    },
+    {
+      "analysis_modes": [
+        "simulation",
+        "optimization"
+      ],
+      "binding_constraint": "Sites must avoid protected habitat, contaminated land, displacement risk, and infeasible subsurface conditions.",
+      "content_hash": "sha256:349713f802d4894902b35d923274aafad0b4ac43b2836d7305499aa8e7ac2c58",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Which parcels can host retention while reducing runoff and avoiding displacement or environmental harm?",
+      "decision_type": "site",
+      "design_id": "scenario.climate.flood-stormwater.retention-storage-sites.v1",
+      "design_order": 12,
+      "evidence_gate": "legal-authority",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "family_id": "climate.flood-stormwater",
+      "family_title": "Flood and stormwater resilience",
+      "horizon": "multi-year",
+      "implementation_status": "design-only",
+      "primary_outcome": "unmanaged design-storm runoff volume",
+      "prohibited_claims": [
+        "Do not treat a screened parcel as acquired, permitted, or hydraulically designed.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "parcel",
+      "suite": "climate-disaster-resilience",
+      "title": "Site distributed stormwater retention and storage"
+    },
+    {
+      "analysis_modes": [
+        "descriptive",
+        "optimization"
+      ],
+      "binding_constraint": "Every selected center must pass indoor-air, power, accessible-entry, occupancy, and staffing requirements.",
+      "content_hash": "sha256:6e3b568b1baee25bc51ff6e1052886dbe1e22c2ade175ecf410f9b72c63803b4",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Where should verified clean-air spaces operate to maximize safe access during smoke events?",
+      "decision_type": "site",
+      "design_id": "scenario.climate.wildfire-smoke.clean-air-centers.v1",
+      "design_order": 20,
+      "evidence_gate": "network-readiness",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed"
+      ],
+      "family_id": "climate.wildfire-smoke",
+      "family_title": "Wildfire smoke and air-quality resilience",
+      "horizon": "seasonal",
+      "implementation_status": "design-only",
+      "primary_outcome": "high-risk residents beyond a qualified clean-air space",
+      "prohibited_claims": [
+        "Do not call an ordinary public building a clean-air center without indoor-air verification.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "facility",
+      "suite": "climate-disaster-resilience",
+      "title": "Site a network of public clean-air centers"
+    },
+    {
+      "analysis_modes": [
+        "simulation",
+        "optimization"
+      ],
+      "binding_constraint": "Sites must meet water-quality, discharge, land, energy, permitting, and community-burden constraints.",
+      "content_hash": "sha256:e3fcfd9faecd2a7bdb5822314e54305895d3cf8371d565219ddc7e3e5f0ab847",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Where can reuse treatment or storage connect feasible supply to demand with acceptable environmental and community burdens?",
+      "decision_type": "site",
+      "design_id": "scenario.climate.drought-water.reuse-storage-facilities.v1",
+      "design_order": 28,
+      "evidence_gate": "legal-authority",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "family_id": "climate.drought-water",
+      "family_title": "Drought and urban water security",
+      "horizon": "multi-year",
+      "implementation_status": "design-only",
+      "primary_outcome": "unserved reliable non-potable water demand",
+      "prohibited_claims": [
+        "Do not describe a screened location as permitted, engineered, or publicly accepted.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "facility",
+      "suite": "climate-disaster-resilience",
+      "title": "Site water reuse and distributed storage facilities"
+    },
+    {
+      "analysis_modes": [
+        "simulation",
+        "optimization"
+      ],
+      "binding_constraint": "Candidate sites must remain operable under design surge, wind, access, power, and supply scenarios.",
+      "content_hash": "sha256:5171a90211c0e0d5960c6ae9e57ea33fe47d24209302242754e4e3b74bf3498f",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Where should shelters and logistics hubs remain accessible outside compound surge, wind, and outage exposure?",
+      "decision_type": "site",
+      "design_id": "scenario.climate.coastal-storms.coastal-shelter-logistics.v1",
+      "design_order": 36,
+      "evidence_gate": "network-readiness",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "family_id": "climate.coastal-storms",
+      "family_title": "Coastal storms and sea-level adaptation",
+      "horizon": "multi-year",
+      "implementation_status": "design-only",
+      "primary_outcome": "at-risk population beyond safe shelter capacity",
+      "prohibited_claims": [
+        "Do not label a candidate facility safe without structural, access, and continuity verification.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "facility",
+      "suite": "climate-disaster-resilience",
+      "title": "Site coastal shelters and resilient logistics hubs"
+    },
+    {
+      "analysis_modes": [
+        "simulation",
+        "optimization"
+      ],
+      "binding_constraint": "The transit reliability and passenger continuity site must respect declared land control, accessibility, permitting, safety, and operating feasibility.",
+      "content_hash": "sha256:cbd420196326beaf86c8c0fa4d7065d7845344c93679ebe0dc2607d1fd2a547f",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Where should timed-transfer, layover, charging, and passenger-recovery capacity be located?",
+      "decision_type": "site",
+      "design_id": "scenario.mobility.transit-reliability.transfer-hubs.v1",
+      "design_order": 44,
+      "evidence_gate": "legal-authority",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "family_id": "mobility.transit-reliability",
+      "family_title": "Transit reliability and passenger continuity",
+      "horizon": "multi-year",
+      "implementation_status": "design-only",
+      "primary_outcome": "passengers beyond a reliable accessible transfer",
+      "prohibited_claims": [
+        "Do not call a candidate hub accessible, permitted, or operationally feasible without verification.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "facility",
+      "suite": "mobility-accessibility-operations",
+      "title": "Site accessible transfer and recovery hubs"
+    },
+    {
+      "analysis_modes": [
+        "simulation",
+        "optimization"
+      ],
+      "binding_constraint": "The pedestrian safety and universal accessibility site must respect declared land control, accessibility, permitting, safety, and operating feasibility.",
+      "content_hash": "sha256:4e24256ea1f887e6bc6d9115e73301151b53e7073538d2cde8cf179572bfeee6",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Where should new crossings and route connections close verified network gaps?",
+      "decision_type": "site",
+      "design_id": "scenario.mobility.pedestrian-safety.safe-crossings.v1",
+      "design_order": 52,
+      "evidence_gate": "legal-authority",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "family_id": "mobility.pedestrian-safety",
+      "family_title": "Pedestrian safety and universal accessibility",
+      "horizon": "multi-year",
+      "implementation_status": "design-only",
+      "primary_outcome": "high-demand crossings without a safe accessible connection",
+      "prohibited_claims": [
+        "Do not call a screened crossing compliant or safe without engineering review.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "corridor",
+      "suite": "mobility-accessibility-operations",
+      "title": "Site safe crossings and accessible route connections"
+    },
+    {
+      "analysis_modes": [
+        "simulation",
+        "optimization"
+      ],
+      "binding_constraint": "The urban freight and curb operations site must respect declared land control, accessibility, permitting, safety, and operating feasibility.",
+      "content_hash": "sha256:27f2bcfbf56784ff1e00f8bb9e1f613333d0482724406f84dbfbf8bd3a103667",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Where should consolidation hubs and loading zones intercept demand without shifting burdens?",
+      "decision_type": "site",
+      "design_id": "scenario.mobility.freight-curb.microhubs-loading-zones.v1",
+      "design_order": 60,
+      "evidence_gate": "legal-authority",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "family_id": "mobility.freight-curb",
+      "family_title": "Urban freight and curb operations",
+      "horizon": "multi-year",
+      "implementation_status": "design-only",
+      "primary_outcome": "freight demand beyond compliant loading or consolidation access",
+      "prohibited_claims": [
+        "Do not label a screened microhub site viable without carrier, parcel, permitting, and community evidence.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "parcel",
+      "suite": "mobility-accessibility-operations",
+      "title": "Site freight microhubs and loading zones"
+    },
+    {
+      "analysis_modes": [
+        "simulation",
+        "optimization"
+      ],
+      "binding_constraint": "The evacuation and emergency mobility site must respect declared land control, accessibility, permitting, safety, and operating feasibility.",
+      "content_hash": "sha256:ea16d2fae897cced5add1b1b0e0cecb106bc42bea7ed256857fb591c9b399e45",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Where should pickup, medical transfer, and staging points operate outside hazard and access failures?",
+      "decision_type": "site",
+      "design_id": "scenario.mobility.emergency-mobility.pickup-transfer-points.v1",
+      "design_order": 68,
+      "evidence_gate": "legal-authority",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "family_id": "mobility.emergency-mobility",
+      "family_title": "Evacuation and emergency mobility",
+      "horizon": "multi-year",
+      "implementation_status": "design-only",
+      "primary_outcome": "assistance-eligible people beyond safe pickup access",
+      "prohibited_claims": [
+        "Do not label a candidate point safe or accessible without field and operations validation.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "facility",
+      "suite": "mobility-accessibility-operations",
+      "title": "Site accessible evacuation pickup and transfer points"
+    },
+    {
+      "analysis_modes": [
+        "simulation",
+        "optimization"
+      ],
+      "binding_constraint": "The active mobility network and micromobility site must respect declared land control, accessibility, permitting, safety, and operating feasibility.",
+      "content_hash": "sha256:64a40def4298f85495b7882b7275fc710c5ca0d0730e70652dc5aacc24fa6fe2",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Where should stations and secure parking expand access without obstructing pedestrian use?",
+      "decision_type": "site",
+      "design_id": "scenario.mobility.active-mobility.shared-mobility-stations.v1",
+      "design_order": 76,
+      "evidence_gate": "legal-authority",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "family_id": "mobility.active-mobility",
+      "family_title": "Active mobility network and micromobility",
+      "horizon": "multi-year",
+      "implementation_status": "design-only",
+      "primary_outcome": "residents beyond reliable shared-mobility access",
+      "prohibited_claims": [
+        "Do not label a candidate station feasible, accessible, or publicly accepted without validation.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "facility",
+      "suite": "mobility-accessibility-operations",
+      "title": "Site shared-mobility stations and secure parking"
+    },
+    {
+      "analysis_modes": [
+        "simulation",
+        "optimization"
+      ],
+      "binding_constraint": "The heat-health surveillance and prevention site must respect declared land control, accessibility, permitting, safety, and operating feasibility.",
+      "content_hash": "sha256:8b22fc56cc7b39d9ea6689dcc9b6c3125a7f480cba7c0bcce6cc9f81c0dfbdd0",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Where should non-emergency assessment, respite, and referral sites operate during heat events?",
+      "decision_type": "site",
+      "design_id": "scenario.health.heat-health.heat-health-access-points.v1",
+      "design_order": 84,
+      "evidence_gate": "legal-authority",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "family_id": "health.heat-health",
+      "family_title": "Heat-health surveillance and prevention",
+      "horizon": "multi-year",
+      "implementation_status": "design-only",
+      "primary_outcome": "high-risk residents beyond timely heat-health support",
+      "prohibited_claims": [
+        "Do not call a community facility a clinical site or safe respite without qualification.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "facility",
+      "suite": "population-health-environmental-exposure",
+      "title": "Site heat-health assessment and respite access points"
+    },
+    {
+      "analysis_modes": [
+        "simulation",
+        "optimization"
+      ],
+      "binding_constraint": "The air-quality exposure and respiratory health site must respect declared land control, accessibility, permitting, safety, and operating feasibility.",
+      "content_hash": "sha256:06b04d86a7425d39003ab91923fb701e8133b7c66dab93d650a5b80f1c3624e1",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Where should calibrated monitoring and qualified protection resources fill population and uncertainty gaps?",
+      "decision_type": "site",
+      "design_id": "scenario.health.air-quality.monitor-protection-network.v1",
+      "design_order": 92,
+      "evidence_gate": "legal-authority",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "family_id": "health.air-quality",
+      "family_title": "Air-quality exposure and respiratory health",
+      "horizon": "multi-year",
+      "implementation_status": "design-only",
+      "primary_outcome": "high-risk population without representative monitoring or protection access",
+      "prohibited_claims": [
+        "Do not call a low-cost sensor regulatory-grade or a candidate facility clinically qualified.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "facility",
+      "suite": "population-health-environmental-exposure",
+      "title": "Site monitors and clean-air health resources"
+    },
+    {
+      "analysis_modes": [
+        "simulation",
+        "optimization"
+      ],
+      "binding_constraint": "The infectious-disease public-health operations site must respect declared land control, accessibility, permitting, safety, and operating feasibility.",
+      "content_hash": "sha256:f2f7791b2e22af98c4dc302085b408a2e0d49ec302f9141fe021841b9b0544f9",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Where should temporary health access points operate under demand, equity, cold-chain, and infection-control constraints?",
+      "decision_type": "site",
+      "design_id": "scenario.health.infectious-operations.testing-vaccination-sites.v1",
+      "design_order": 100,
+      "evidence_gate": "legal-authority",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "family_id": "health.infectious-operations",
+      "family_title": "Infectious-disease public-health operations",
+      "horizon": "multi-year",
+      "implementation_status": "design-only",
+      "primary_outcome": "eligible population beyond timely qualified service access",
+      "prohibited_claims": [
+        "Do not call a candidate site clinically qualified, staffed, supplied, or publicly accepted.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "facility",
+      "suite": "population-health-environmental-exposure",
+      "title": "Site accessible testing, vaccination, and treatment access points"
+    },
+    {
+      "analysis_modes": [
+        "simulation",
+        "optimization"
+      ],
+      "binding_constraint": "The food access and environmental health site must respect declared land control, accessibility, permitting, safety, and operating feasibility.",
+      "content_hash": "sha256:8cf95520b77a3c1d0bb3a937b6d7109fc3659f6fd0cbee0ae414eaff7acbe794",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Where should mobile markets, benefit navigation, cooling, and field-service access points operate?",
+      "decision_type": "site",
+      "design_id": "scenario.health.food-environment.food-access-services.v1",
+      "design_order": 108,
+      "evidence_gate": "legal-authority",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "family_id": "health.food-environment",
+      "family_title": "Food access and environmental health",
+      "horizon": "multi-year",
+      "implementation_status": "design-only",
+      "primary_outcome": "eligible people beyond affordable timely service access",
+      "prohibited_claims": [
+        "Do not label a site affordable, culturally appropriate, permitted, or used without evidence.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "facility",
+      "suite": "population-health-environmental-exposure",
+      "title": "Site food-access and environmental-health service points"
+    },
+    {
+      "analysis_modes": [
+        "simulation",
+        "optimization"
+      ],
+      "binding_constraint": "The housing habitability and code operations site must respect declared land control, accessibility, permitting, safety, and operating feasibility.",
+      "content_hash": "sha256:06c1d32fcfac87756fb9ec41afc5f1e4c25233239e64c96526d76bfe532bd727",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Where should multilingual inspection intake, legal navigation, repair, and temporary housing services operate?",
+      "decision_type": "site",
+      "design_id": "scenario.housing.habitability-code.tenant-service-access.v1",
+      "design_order": 116,
+      "evidence_gate": "legal-authority",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "family_id": "housing.habitability-code",
+      "family_title": "Housing habitability and code operations",
+      "horizon": "multi-year",
+      "implementation_status": "design-only",
+      "primary_outcome": "at-risk tenants beyond timely qualified support",
+      "prohibited_claims": [
+        "Do not call a candidate site legally qualified, accessible, trusted, or used.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "facility",
+      "suite": "housing-land-use-regeneration",
+      "title": "Site tenant-support and emergency housing access points"
+    },
+    {
+      "analysis_modes": [
+        "simulation",
+        "optimization"
+      ],
+      "binding_constraint": "The homelessness prevention and housing stability site must respect declared land control, accessibility, permitting, safety, and operating feasibility.",
+      "content_hash": "sha256:f15d194fc2a70bb291de951ce6084d00427cf2baf6b7b7fc13157b35dfb19f13",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Where should legal, benefits, diversion, document, and housing-navigation services be co-located?",
+      "decision_type": "site",
+      "design_id": "scenario.housing.homelessness-prevention.stability-access-hubs.v1",
+      "design_order": 124,
+      "evidence_gate": "legal-authority",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "family_id": "housing.homelessness-prevention",
+      "family_title": "Homelessness prevention and housing stability",
+      "horizon": "multi-year",
+      "implementation_status": "design-only",
+      "primary_outcome": "eligible households beyond timely prevention access",
+      "prohibited_claims": [
+        "Do not call a candidate site trusted, low-barrier, accessible, or effective without user evidence.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "facility",
+      "suite": "housing-land-use-regeneration",
+      "title": "Site low-barrier housing-stability access hubs"
+    },
+    {
+      "analysis_modes": [
+        "simulation",
+        "optimization"
+      ],
+      "binding_constraint": "The affordable housing siting and preservation site must respect declared land control, accessibility, permitting, safety, and operating feasibility.",
+      "content_hash": "sha256:4ba0f36a9c18954051162ae487a95e732200f712ef3c2cc048354e89e54a51e5",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Which parcels support feasible affordable homes near opportunity while avoiding hazard and displacement burdens?",
+      "decision_type": "site",
+      "design_id": "scenario.housing.affordable-supply.affordable-housing-sites.v1",
+      "design_order": 132,
+      "evidence_gate": "legal-authority",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "family_id": "housing.affordable-supply",
+      "family_title": "Affordable housing siting and preservation",
+      "horizon": "multi-year",
+      "implementation_status": "design-only",
+      "primary_outcome": "feasible affordable homes outside opportunity access",
+      "prohibited_claims": [
+        "Do not call a screened parcel entitled, acquired, financeable, buildable, or community-supported.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "parcel",
+      "suite": "housing-land-use-regeneration",
+      "title": "Site affordable housing with access and anti-displacement safeguards"
+    },
+    {
+      "analysis_modes": [
+        "simulation",
+        "optimization"
+      ],
+      "binding_constraint": "The land use, regeneration, and neighborhood change site must respect declared land control, accessibility, permitting, safety, and operating feasibility.",
+      "content_hash": "sha256:dfa364eb2e5ce6b1b39e80db12c0e8f36afc65addf04804cb487a5cd132ba896",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Which parcels can support public anchors and mixed use while protecting access, heritage, affordability, and climate safety?",
+      "decision_type": "site",
+      "design_id": "scenario.housing.land-use-regeneration.community-anchor-sites.v1",
+      "design_order": 140,
+      "evidence_gate": "legal-authority",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "family_id": "housing.land-use-regeneration",
+      "family_title": "Land use, regeneration, and neighborhood change",
+      "horizon": "multi-year",
+      "implementation_status": "design-only",
+      "primary_outcome": "verified service and opportunity need beyond feasible anchor access",
+      "prohibited_claims": [
+        "Do not call a screened parcel approved, acquired, financeable, consented, or beneficial.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "parcel",
+      "suite": "housing-land-use-regeneration",
+      "title": "Site public anchors and mixed-use regeneration projects"
+    },
+    {
+      "analysis_modes": [
+        "simulation",
+        "optimization"
+      ],
+      "binding_constraint": "The 311 and public-service demand operations site must respect declared land control, accessibility, permitting, safety, and operating feasibility.",
+      "content_hash": "sha256:d69b1ed6f964c962ec016e72d05ef1a9220e972c73e76b1e1ad67201de07c850",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Where should in-person, mobile, kiosk, and partner-assisted access fill verified channel gaps?",
+      "decision_type": "site",
+      "design_id": "scenario.public-service.demand.service-access-points.v1",
+      "design_order": 148,
+      "evidence_gate": "legal-authority",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "family_id": "public-service.demand",
+      "family_title": "311 and public-service demand operations",
+      "horizon": "multi-year",
+      "implementation_status": "design-only",
+      "primary_outcome": "residents beyond usable public-service access",
+      "prohibited_claims": [
+        "Do not call a candidate access point usable, trusted, staffed, or accessible without user evidence.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "facility",
+      "suite": "public-service-operations",
+      "title": "Site multilingual public-service access points"
+    },
+    {
+      "analysis_modes": [
+        "simulation",
+        "optimization"
+      ],
+      "binding_constraint": "The sanitation, waste, and street cleanliness site must respect declared land control, accessibility, permitting, safety, and operating feasibility.",
+      "content_hash": "sha256:a90cbc36a244666a3162e7a35728181781a28010bea9cfc0baa38eebd4cbaacb",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Where should operations and public facilities improve access while limiting traffic and environmental burdens?",
+      "decision_type": "site",
+      "design_id": "scenario.public-service.sanitation.sanitation-facilities.v1",
+      "design_order": 156,
+      "evidence_gate": "legal-authority",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "family_id": "public-service.sanitation",
+      "family_title": "Sanitation, waste, and street cleanliness",
+      "horizon": "multi-year",
+      "implementation_status": "design-only",
+      "primary_outcome": "service demand beyond feasible sanitation facility coverage",
+      "prohibited_claims": [
+        "Do not call a screened sanitation site permitted, safe, accepted, or built.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "facility",
+      "suite": "public-service-operations",
+      "title": "Site sanitation depots, public bins, and drop-off facilities"
+    },
+    {
+      "analysis_modes": [
+        "simulation",
+        "optimization"
+      ],
+      "binding_constraint": "The emergency response readiness and allocation site must respect declared land control, accessibility, permitting, safety, and operating feasibility.",
+      "content_hash": "sha256:3f908446461001bef243238c5c7bcbe5e72e0503679ee0d68d97270bffe9629e",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Where should fixed and temporary bases improve resilient time-dependent coverage?",
+      "decision_type": "site",
+      "design_id": "scenario.public-service.emergency-response.response-bases.v1",
+      "design_order": 164,
+      "evidence_gate": "legal-authority",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "family_id": "public-service.emergency-response",
+      "family_title": "Emergency response readiness and allocation",
+      "horizon": "multi-year",
+      "implementation_status": "design-only",
+      "primary_outcome": "priority demand beyond resilient response coverage",
+      "prohibited_claims": [
+        "Do not call a screened base operational, safe, staffed, or guaranteed to meet response targets.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "facility",
+      "suite": "public-service-operations",
+      "title": "Site emergency response and standby bases"
+    },
+    {
+      "analysis_modes": [
+        "simulation",
+        "optimization"
+      ],
+      "binding_constraint": "The digital public access and administrative service delivery site must respect declared land control, accessibility, permitting, safety, and operating feasibility.",
+      "content_hash": "sha256:c952cadcefeb21f329e1e40c33163aa4b4e13a1a8a2ce6e6004fc15e3d2671d7",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Where should private, accessible, multilingual assisted-service points close verified access gaps?",
+      "decision_type": "site",
+      "design_id": "scenario.public-service.digital-access.assisted-digital-access.v1",
+      "design_order": 172,
+      "evidence_gate": "legal-authority",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "family_id": "public-service.digital-access",
+      "family_title": "Digital public access and administrative service delivery",
+      "horizon": "multi-year",
+      "implementation_status": "design-only",
+      "primary_outcome": "eligible residents beyond usable assisted service access",
+      "prohibited_claims": [
+        "Do not call a candidate site usable, private, accessible, trusted, connected, or staffed.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "facility",
+      "suite": "public-service-operations",
+      "title": "Site assisted digital and administrative access"
+    },
+    {
+      "analysis_modes": [
+        "simulation",
+        "optimization"
+      ],
+      "binding_constraint": "The road and bridge asset management site must respect declared land control, accessibility, permitting, safety, and operating feasibility.",
+      "content_hash": "sha256:519c30a4ead065b51d29d2ebcdb7dfd31fed4db8651ee5696b296ed32d1bf081",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Where should depots, materials, equipment, and emergency staging improve resilient network coverage?",
+      "decision_type": "site",
+      "design_id": "scenario.infrastructure.roads-bridges.maintenance-depots.v1",
+      "design_order": 180,
+      "evidence_gate": "legal-authority",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "family_id": "infrastructure.roads-bridges",
+      "family_title": "Road and bridge asset management",
+      "horizon": "multi-year",
+      "implementation_status": "design-only",
+      "primary_outcome": "high-consequence assets beyond feasible maintenance response",
+      "prohibited_claims": [
+        "Do not call a candidate depot permitted, safe, acquired, accepted, or operational.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "facility",
+      "suite": "infrastructure-finance-asset-risk",
+      "title": "Site maintenance depots and material staging"
+    },
+    {
+      "analysis_modes": [
+        "simulation",
+        "optimization"
+      ],
+      "binding_constraint": "The water and wastewater infrastructure site must respect declared land control, accessibility, permitting, safety, and operating feasibility.",
+      "content_hash": "sha256:52e3579aaefd413e186ab3617f01ab0d6089a21e95eb66645890b168e9927801",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Where should new facilities satisfy hydraulic need while limiting hazard and community burdens?",
+      "decision_type": "site",
+      "design_id": "scenario.infrastructure.water-wastewater.utility-facilities.v1",
+      "design_order": 188,
+      "evidence_gate": "legal-authority",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "family_id": "infrastructure.water-wastewater",
+      "family_title": "Water and wastewater infrastructure",
+      "horizon": "multi-year",
+      "implementation_status": "design-only",
+      "primary_outcome": "critical service demand beyond resilient facility capacity",
+      "prohibited_claims": [
+        "Do not call a screened utility site permitted, engineered, acquired, safe, or accepted.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "facility",
+      "suite": "infrastructure-finance-asset-risk",
+      "title": "Site utility storage, pumping, treatment, and recovery facilities"
+    },
+    {
+      "analysis_modes": [
+        "simulation",
+        "optimization"
+      ],
+      "binding_constraint": "The municipal energy and building decarbonization site must respect declared land control, accessibility, permitting, safety, and operating feasibility.",
+      "content_hash": "sha256:baeec0338364d18f61ebe6a3db666ec1a0ff1b399137d72220a4406b12d50c14",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Where should distributed clean-energy assets improve emissions, resilience, and service value?",
+      "decision_type": "site",
+      "design_id": "scenario.infrastructure.energy-buildings.distributed-clean-energy.v1",
+      "design_order": 196,
+      "evidence_gate": "legal-authority",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "family_id": "infrastructure.energy-buildings",
+      "family_title": "Municipal energy and building decarbonization",
+      "horizon": "multi-year",
+      "implementation_status": "design-only",
+      "primary_outcome": "critical load without feasible clean-energy resilience coverage",
+      "prohibited_claims": [
+        "Do not call a screened site interconnected, structurally feasible, permitted, financed, or built.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "facility",
+      "suite": "infrastructure-finance-asset-risk",
+      "title": "Site solar, storage, charging, and thermal assets"
+    },
+    {
+      "analysis_modes": [
+        "simulation",
+        "optimization"
+      ],
+      "binding_constraint": "The capital portfolio and municipal finance site must respect declared land control, accessibility, permitting, safety, and operating feasibility.",
+      "content_hash": "sha256:4a5b612f29956962822e4e1d5489d80301f52f0887234ea9699b903c53bfe0d5",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Where should shared depots, reserves, equipment, and continuity assets reduce portfolio-wide risk?",
+      "decision_type": "site",
+      "design_id": "scenario.infrastructure.capital-finance.capital-reserve-assets.v1",
+      "design_order": 204,
+      "evidence_gate": "legal-authority",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "family_id": "infrastructure.capital-finance",
+      "family_title": "Capital portfolio and municipal finance",
+      "horizon": "multi-year",
+      "implementation_status": "design-only",
+      "primary_outcome": "critical municipal services beyond resilient reserve coverage",
+      "prohibited_claims": [
+        "Do not call a screened site acquired, appropriated, permitted, or operational.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "facility",
+      "suite": "infrastructure-finance-asset-risk",
+      "title": "Site strategic reserve and shared municipal assets"
+    },
+    {
+      "analysis_modes": [
+        "simulation",
+        "optimization"
+      ],
+      "binding_constraint": "The distributional public-service equity site must respect declared land control, accessibility, permitting, safety, and operating feasibility.",
+      "content_hash": "sha256:0a4d38202d95c5e3304fe7d76e37ea48a400daa69aa0ea82edd65ef771fbc2f6",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Where should multilingual, accessible, trusted service points close verified need-adjusted access gaps?",
+      "decision_type": "site",
+      "design_id": "scenario.equity.distributional-service.equitable-service-network.v1",
+      "design_order": 212,
+      "evidence_gate": "legal-authority",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "family_id": "equity.distributional-service",
+      "family_title": "Distributional public-service equity",
+      "horizon": "multi-year",
+      "implementation_status": "design-only",
+      "primary_outcome": "eligible people beyond usable qualified service access",
+      "prohibited_claims": [
+        "Do not call a candidate site equitable, trusted, accessible, lawful, or used.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "facility",
+      "suite": "behavioral-policy-equity",
+      "title": "Site an equitable network of public-service access points"
+    },
+    {
+      "analysis_modes": [
+        "simulation",
+        "optimization"
+      ],
+      "binding_constraint": "The public participation and risk communication site must respect declared land control, accessibility, permitting, safety, and operating feasibility.",
+      "content_hash": "sha256:1ee4296fb7137ac80bd9567d6fcea8d15f28cbab5be6e6e6aa368b8f9bfbc919",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Where should in-person, mobile, partner, and digital access support close verified engagement barriers?",
+      "decision_type": "site",
+      "design_id": "scenario.equity.participation-communication.engagement-venues.v1",
+      "design_order": 220,
+      "evidence_gate": "legal-authority",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "family_id": "equity.participation-communication",
+      "family_title": "Public participation and risk communication",
+      "horizon": "multi-year",
+      "implementation_status": "design-only",
+      "primary_outcome": "affected people beyond usable participation access",
+      "prohibited_claims": [
+        "Do not call a candidate venue accessible, neutral, trusted, safe, or representative.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "facility",
+      "suite": "behavioral-policy-equity",
+      "title": "Site accessible participation and communication venues"
+    },
+    {
+      "analysis_modes": [
+        "simulation",
+        "optimization"
+      ],
+      "binding_constraint": "The compliance, incentives, and behavioral policy site must respect declared land control, accessibility, permitting, safety, and operating feasibility.",
+      "content_hash": "sha256:20aebf6c7f1618ee6fe893bc24139a4d16d0b1772f57df615d1eb78a2bf6a708",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Where should non-enforcement assistance, document, inspection, and technical services reduce verified barriers?",
+      "decision_type": "site",
+      "design_id": "scenario.equity.compliance-incentives.compliance-assistance-access.v1",
+      "design_order": 228,
+      "evidence_gate": "legal-authority",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "family_id": "equity.compliance-incentives",
+      "family_title": "Compliance, incentives, and behavioral policy",
+      "horizon": "multi-year",
+      "implementation_status": "design-only",
+      "primary_outcome": "eligible cases beyond usable qualified assistance",
+      "prohibited_claims": [
+        "Do not call a candidate assistance site trusted, neutral, accessible, qualified, or used.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "facility",
+      "suite": "behavioral-policy-equity",
+      "title": "Site compliance assistance and technical-support access"
+    },
+    {
+      "analysis_modes": [
+        "simulation",
+        "optimization"
+      ],
+      "binding_constraint": "The algorithmic decision support and governance site must respect declared land control, accessibility, permitting, safety, and operating feasibility.",
+      "content_hash": "sha256:aa35e1d9d5c48673a5706ff52688de4794154aacea50b4461792159faf57a629",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Where should accessible human review, appeal assistance, and independent oversight be available?",
+      "decision_type": "site",
+      "design_id": "scenario.equity.algorithmic-governance.human-review-access.v1",
+      "design_order": 236,
+      "evidence_gate": "legal-authority",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "family_id": "equity.algorithmic-governance",
+      "family_title": "Algorithmic decision support and governance",
+      "horizon": "multi-year",
+      "implementation_status": "design-only",
+      "primary_outcome": "affected people beyond usable independent review access",
+      "prohibited_claims": [
+        "Do not call a candidate review channel independent, accessible, confidential, lawful, or used.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "facility",
+      "suite": "behavioral-policy-equity",
+      "title": "Site independent review and recourse access"
+    }
+  ],
+  "kind": "scenario-designs.decision-type.site",
+  "record_count": 30,
+  "schema_version": "1.0.0"
+}

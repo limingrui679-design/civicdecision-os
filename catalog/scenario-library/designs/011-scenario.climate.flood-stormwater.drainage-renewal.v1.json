@@ -1,0 +1,165 @@
+{
+  "affected_system": "urban drainage, stormwater, and flood-response system",
+  "alternatives": [
+    "renew highest expected-loss drainage assets",
+    "fund distributed green infrastructure in overloaded catchments",
+    "optimize a mixed structural and nature-based portfolio"
+  ],
+  "analysis_modes": [
+    "simulation",
+    "optimization"
+  ],
+  "assumptions": [
+    "Rainfall, terrain, drainage, and complaint records use explicit spatial and temporal supports.",
+    "Hydraulic capacities and intervention effects remain measured inputs or labeled assumptions.",
+    "All alternatives, capacities, costs, effects, thresholds, and failure scenarios are proposed until bound to evidence."
+  ],
+  "baseline": "Only already-funded drainage renewal proceeds.",
+  "city_bindings": [],
+  "constraints": [
+    {
+      "binding": true,
+      "constraint_id": "scenario.climate.flood-stormwater.drainage-renewal.v1.constraint.binding",
+      "description": "The selected portfolio must fit capital, maintenance, land, and delivery-year budgets.",
+      "hard": true,
+      "kind": "budget",
+      "required_source_roles": [
+        "asset-condition",
+        "asset-inventory",
+        "climate-hazard",
+        "financial-cost",
+        "geographic-identity",
+        "operating-capacity"
+      ]
+    },
+    {
+      "binding": false,
+      "constraint_id": "scenario.climate.flood-stormwater.drainage-renewal.v1.constraint.evidence-scope",
+      "description": "Every released metric must retain evidence type, source lineage, geography, time, assumptions, and uncertainty.",
+      "hard": true,
+      "kind": "technical",
+      "required_source_roles": [
+        "asset-condition"
+      ]
+    },
+    {
+      "binding": false,
+      "constraint_id": "scenario.climate.flood-stormwater.drainage-renewal.v1.constraint.decision-authority",
+      "description": "No analytical output may bypass lawful authority, accountable human review, or an applicable appeal process.",
+      "hard": true,
+      "kind": "regulatory",
+      "required_source_roles": [
+        "asset-condition"
+      ]
+    }
+  ],
+  "current_readiness": "blocked-missing-source",
+  "decision_cadence": "recompiled at each planning cycle and after material evidence change",
+  "decision_owner": "stormwater utility director and emergency-management lead",
+  "decision_question": "Which asset renewals and runoff-reduction projects best reduce expected disruption under the capital ceiling?",
+  "decision_type": "prioritize",
+  "design_id": "scenario.climate.flood-stormwater.drainage-renewal.v1",
+  "design_order": 11,
+  "design_signature": "sha256:b47d97eba11c2c9cf654c592bc46b5c4755a2787128dd2302604a591bc8069dc",
+  "evidence_requirements": [
+    "estimated",
+    "observed",
+    "optimized",
+    "proposed",
+    "simulated"
+  ],
+  "family_id": "climate.flood-stormwater",
+  "family_title": "Flood and stormwater resilience",
+  "horizon": "multi-year",
+  "implementation_status": "design-only",
+  "independence_key": {
+    "binding_constraint": "The selected portfolio must fit capital, maintenance, land, and delivery-year budgets.",
+    "decision_object": "stormwater capital-renewal portfolio",
+    "evidence_gate": "Candidate costs, hydraulic benefits, maintenance loads, dependencies, and delivery capacity are independently reviewed.",
+    "horizon": "multi-year",
+    "intervention_mechanism": "risk-adjusted asset and green-infrastructure portfolio optimization",
+    "primary_outcome": "expected annual service-disruption hours",
+    "spatial_unit": "asset"
+  },
+  "intended_claim": "A versioned prioritize design for comparing declared alternatives affecting stormwater capital-renewal portfolio, conditional on its evidence gate.",
+  "limitations": [
+    "This library record has no city binding and therefore reports no local input, output, or recommendation.",
+    "Readiness describes explicit source and method gates; it does not certify implementation feasibility.",
+    "External domain, legal, community, security, and operational review remains outside this design artifact."
+  ],
+  "method_claimed": false,
+  "objectives": [
+    {
+      "evidence_type": "estimated",
+      "metric": "expected annual service-disruption hours",
+      "objective_id": "scenario.climate.flood-stormwater.drainage-renewal.v1.objective.primary",
+      "primary": true,
+      "sense": "minimize",
+      "unit": "service-hours per year"
+    },
+    {
+      "evidence_type": "estimated",
+      "metric": "distributional gap in expected annual service-disruption hours",
+      "objective_id": "scenario.climate.flood-stormwater.drainage-renewal.v1.objective.equity",
+      "primary": false,
+      "sense": "minimize",
+      "unit": "service-hours per year"
+    },
+    {
+      "evidence_type": "observed",
+      "metric": "decision claims with complete evidence lineage",
+      "objective_id": "scenario.climate.flood-stormwater.drainage-renewal.v1.objective.traceability",
+      "primary": false,
+      "sense": "maximize",
+      "unit": "percent"
+    }
+  ],
+  "prohibited_claims": [
+    "Do not call modeled avoided disruption a realized financial saving.",
+    "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+    "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+    "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+  ],
+  "release_gate": {
+    "failure_release": "Release an explicit insufficient-evidence record naming missing sources, failed diagnostics, prohibited claims, and the next validation action.",
+    "failure_status": "insufficient-evidence",
+    "gate_id": "scenario.climate.flood-stormwater.drainage-renewal.v1.gate.release",
+    "gate_type": "cost-capacity",
+    "pass_condition": "Candidate costs, hydraulic benefits, maintenance loads, dependencies, and delivery capacity are independently reviewed.",
+    "required_evidence_types": [
+      "observed",
+      "proposed"
+    ],
+    "required_source_roles": [
+      "asset-condition",
+      "asset-inventory",
+      "climate-hazard",
+      "financial-cost",
+      "geographic-identity",
+      "operating-capacity"
+    ]
+  },
+  "required_source_roles": [
+    "asset-condition",
+    "asset-inventory",
+    "climate-hazard",
+    "financial-cost",
+    "geographic-identity",
+    "operating-capacity"
+  ],
+  "schema_version": "1.0.0",
+  "spatial_unit": "asset",
+  "suite": "climate-disaster-resilience",
+  "tags": [
+    "climate-disaster-resilience",
+    "climate.flood-stormwater",
+    "design-only",
+    "prioritize",
+    "scenario-library"
+  ],
+  "title": "Prioritize drainage renewal and green-infrastructure projects",
+  "transportability_risks": [
+    "Drainage standards, imperviousness, topography, tides, and maintenance regimes differ.",
+    "Complaint density may reflect reporting access rather than flood incidence."
+  ]
+}

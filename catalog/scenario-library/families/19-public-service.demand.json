@@ -1,0 +1,50 @@
+{
+  "affected_system": "multichannel public-service intake, triage, dispatch, and resolution workflow",
+  "claim_boundary": [
+    "Service requests measure reported workload, not verified incidents, need, harm, or resolution.",
+    "Assignments and schedules are proposed operations, not completed work or public outcomes.",
+    "Design records do not establish agency adoption, deployment, productivity, or resident impact."
+  ],
+  "common_source_roles": [
+    "geographic-identity",
+    "municipal-demand",
+    "operating-capacity"
+  ],
+  "decision_owner": "chief service officer and 311 operations director",
+  "decision_types": [
+    "diagnose",
+    "forecast",
+    "prioritize",
+    "site",
+    "allocate",
+    "schedule",
+    "stress-test",
+    "evaluate"
+  ],
+  "description": "Eight decisions for intake-pattern diagnosis, workload forecasting, service improvement, access siting, case allocation, staffing schedules, demand stress, and channel evaluation.",
+  "design_refs": [
+    "scenario.public-service.demand.request-workload.v1",
+    "scenario.public-service.demand.service-workload.v1",
+    "scenario.public-service.demand.service-improvement-portfolio.v1",
+    "scenario.public-service.demand.service-access-points.v1",
+    "scenario.public-service.demand.case-routing-capacity.v1",
+    "scenario.public-service.demand.seasonal-service-staffing.v1",
+    "scenario.public-service.demand.service-demand-surge.v1",
+    "scenario.public-service.demand.channel-redesign-effect.v1"
+  ],
+  "design_signatures": [
+    "sha256:24bc68b9382f16a8873ca47ff7b8d180dc019b18eae92a43f1e34780a2c9b448",
+    "sha256:4f7078643ac840978d301e0515129a99312574a98ca361ec4c902937cb29bc9a",
+    "sha256:01b3dc98d336ce7bc0c3d2860e29b8505e028250d350a02184012c42d8043039",
+    "sha256:6b6a3b089caad8a5c356a54af2cdc1c2f9528451a1dd50a296d9b25943ea37e4",
+    "sha256:f670e56583514ab85e41d89ad1b60faee717cb81d2714106b875ede7fcdb2c78",
+    "sha256:da0c166fd88e805d5fb6a4687d4830fa2ee213bd14b31d23c9625cf6a5dcf357",
+    "sha256:1bcd7ac4bf15391258a8ef99fadebc4c15a3a42292f7a4f4c947891be020cef3",
+    "sha256:edf7a7aa89bdba1b0135e840b4d872887739efca9c91107bd5377393bcdf8bb4"
+  ],
+  "family_id": "public-service.demand",
+  "family_order": 19,
+  "schema_version": "1.0.0",
+  "suite": "public-service-operations",
+  "title": "311 and public-service demand operations"
+}

@@ -1,0 +1,165 @@
+{
+  "affected_system": "food access, environmental health inspection, and community protection",
+  "alternatives": [
+    "screen feasible locations against the largest access gaps for food-access and environmental-health service locations",
+    "co-optimize distributed and high-capacity locations for food-access and environmental-health service locations",
+    "pair capacitated multi-service access location-allocation with an explicit stop, review, and escalation rule"
+  ],
+  "analysis_modes": [
+    "simulation",
+    "optimization"
+  ],
+  "assumptions": [
+    "Food outlets, inspections, assistance, prices, access, and environmental complaints have separate semantics.",
+    "Area food access is not treated as individual diet, food security, or health outcome.",
+    "All alternatives, capacities, costs, effects, thresholds, and failure scenarios are proposed until bound to evidence."
+  ],
+  "baseline": "retain only existing approved locations for food-access and environmental-health service locations.",
+  "city_bindings": [],
+  "constraints": [
+    {
+      "binding": true,
+      "constraint_id": "scenario.health.food-environment.food-access-services.v1.constraint.binding",
+      "description": "The food access and environmental health site must respect declared land control, accessibility, permitting, safety, and operating feasibility.",
+      "hard": true,
+      "kind": "regulatory",
+      "required_source_roles": [
+        "demographic-context",
+        "equity-attribute",
+        "facility-inventory",
+        "geographic-identity",
+        "land-parcel",
+        "transport-network"
+      ]
+    },
+    {
+      "binding": false,
+      "constraint_id": "scenario.health.food-environment.food-access-services.v1.constraint.evidence-scope",
+      "description": "Every released metric must retain evidence type, source lineage, geography, time, assumptions, and uncertainty.",
+      "hard": true,
+      "kind": "technical",
+      "required_source_roles": [
+        "demographic-context"
+      ]
+    },
+    {
+      "binding": false,
+      "constraint_id": "scenario.health.food-environment.food-access-services.v1.constraint.decision-authority",
+      "description": "No analytical output may bypass lawful authority, accountable human review, or an applicable appeal process.",
+      "hard": true,
+      "kind": "regulatory",
+      "required_source_roles": [
+        "demographic-context"
+      ]
+    }
+  ],
+  "current_readiness": "blocked-missing-source",
+  "decision_cadence": "recompiled at each planning cycle and after material evidence change",
+  "decision_owner": "environmental health commissioner and food-access program director",
+  "decision_question": "Where should mobile markets, benefit navigation, cooling, and field-service access points operate?",
+  "decision_type": "site",
+  "design_id": "scenario.health.food-environment.food-access-services.v1",
+  "design_order": 108,
+  "design_signature": "sha256:6e736562003ad5397b5b986855fd077e1a10fbc7a804bf4a255a3f981a874705",
+  "evidence_requirements": [
+    "estimated",
+    "observed",
+    "optimized",
+    "proposed",
+    "simulated"
+  ],
+  "family_id": "health.food-environment",
+  "family_title": "Food access and environmental health",
+  "horizon": "multi-year",
+  "implementation_status": "design-only",
+  "independence_key": {
+    "binding_constraint": "The food access and environmental health site must respect declared land control, accessibility, permitting, safety, and operating feasibility.",
+    "decision_object": "food-access and environmental-health service locations",
+    "evidence_gate": "Evidence for food-access and environmental-health service locations passes documented checks for parcel control, legal authority, environmental review, access, capacity, and operator responsibility.",
+    "horizon": "multi-year",
+    "intervention_mechanism": "capacitated multi-service access location-allocation",
+    "primary_outcome": "eligible people beyond affordable timely service access",
+    "spatial_unit": "facility"
+  },
+  "intended_claim": "A versioned site design for comparing declared alternatives affecting food-access and environmental-health service locations, conditional on its evidence gate.",
+  "limitations": [
+    "This library record has no city binding and therefore reports no local input, output, or recommendation.",
+    "Readiness describes explicit source and method gates; it does not certify implementation feasibility.",
+    "External domain, legal, community, security, and operational review remains outside this design artifact."
+  ],
+  "method_claimed": false,
+  "objectives": [
+    {
+      "evidence_type": "estimated",
+      "metric": "eligible people beyond affordable timely service access",
+      "objective_id": "scenario.health.food-environment.food-access-services.v1.objective.primary",
+      "primary": true,
+      "sense": "minimize",
+      "unit": "people"
+    },
+    {
+      "evidence_type": "estimated",
+      "metric": "distributional gap in eligible people beyond affordable timely service access",
+      "objective_id": "scenario.health.food-environment.food-access-services.v1.objective.equity",
+      "primary": false,
+      "sense": "minimize",
+      "unit": "people"
+    },
+    {
+      "evidence_type": "observed",
+      "metric": "decision claims with complete evidence lineage",
+      "objective_id": "scenario.health.food-environment.food-access-services.v1.objective.traceability",
+      "primary": false,
+      "sense": "maximize",
+      "unit": "percent"
+    }
+  ],
+  "prohibited_claims": [
+    "Do not label a site affordable, culturally appropriate, permitted, or used without evidence.",
+    "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+    "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+    "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+  ],
+  "release_gate": {
+    "failure_release": "Release an explicit insufficient-evidence record naming missing sources, failed diagnostics, prohibited claims, and the next validation action.",
+    "failure_status": "insufficient-evidence",
+    "gate_id": "scenario.health.food-environment.food-access-services.v1.gate.release",
+    "gate_type": "legal-authority",
+    "pass_condition": "Evidence for food-access and environmental-health service locations passes documented checks for parcel control, legal authority, environmental review, access, capacity, and operator responsibility.",
+    "required_evidence_types": [
+      "observed",
+      "proposed"
+    ],
+    "required_source_roles": [
+      "demographic-context",
+      "equity-attribute",
+      "facility-inventory",
+      "geographic-identity",
+      "land-parcel",
+      "transport-network"
+    ]
+  },
+  "required_source_roles": [
+    "demographic-context",
+    "equity-attribute",
+    "facility-inventory",
+    "geographic-identity",
+    "land-parcel",
+    "transport-network"
+  ],
+  "schema_version": "1.0.0",
+  "spatial_unit": "facility",
+  "suite": "population-health-environmental-exposure",
+  "tags": [
+    "design-only",
+    "health.food-environment",
+    "population-health-environmental-exposure",
+    "scenario-library",
+    "site"
+  ],
+  "title": "Site food-access and environmental-health service points",
+  "transportability_risks": [
+    "Retail markets, informal food systems, inspection law, mobility, prices, and eligibility vary.",
+    "Administrative participation can understate eligible need."
+  ]
+}

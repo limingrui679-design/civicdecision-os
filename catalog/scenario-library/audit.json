@@ -1,0 +1,164 @@
+{
+  "analysis_mode_counts": {
+    "causal": 30,
+    "descriptive": 89,
+    "forecast": 90,
+    "optimization": 150,
+    "simulation": 94
+  },
+  "audit_passed": true,
+  "city_bound_executions_counted": 0,
+  "completeness_checks": {
+    "alternatives": 240,
+    "assumption_registers": 240,
+    "claim_boundaries": 240,
+    "decision_questions": 240,
+    "evidence_gates": 240,
+    "hard_constraints": 240,
+    "limitations": 240,
+    "negative_release_rules": 240,
+    "source_requirements": 240,
+    "transportability_risks": 240
+  },
+  "constraint_kind_counts": {
+    "budget": 30,
+    "capacity": 30,
+    "environmental": 2,
+    "equity": 58,
+    "regulatory": 267,
+    "risk": 33,
+    "technical": 270,
+    "time": 30
+  },
+  "current_readiness_counts": {
+    "blocked-method": 0,
+    "blocked-missing-source": 199,
+    "blocked-multiple-gates": 29,
+    "reference-implemented": 12,
+    "uncompiled-current-inputs": 0
+  },
+  "decision_type_counts": {
+    "allocate": 30,
+    "diagnose": 30,
+    "evaluate": 30,
+    "forecast": 30,
+    "prioritize": 30,
+    "schedule": 30,
+    "site": 30,
+    "stress-test": 30
+  },
+  "design_count": 240,
+  "duplicate_questions": [],
+  "duplicate_titles": [],
+  "evidence_type_counts": {
+    "causal": 30,
+    "estimated": 240,
+    "observed": 240,
+    "optimized": 150,
+    "proposed": 240,
+    "simulated": 94
+  },
+  "exact_signature_collisions": [],
+  "existing_template_refs": 12,
+  "family_count": 30,
+  "family_counts": {
+    "behavioral-policy-equity": 4,
+    "climate-disaster-resilience": 5,
+    "housing-land-use-regeneration": 4,
+    "infrastructure-finance-asset-risk": 4,
+    "mobility-accessibility-operations": 5,
+    "population-health-environmental-exposure": 4,
+    "public-service-operations": 4
+  },
+  "gate_type_counts": {
+    "causal-identification": 30,
+    "cost-capacity": 30,
+    "data-completeness": 1,
+    "equity-measurement": 27,
+    "external-validation": 28,
+    "geographic-alignment": 29,
+    "legal-authority": 28,
+    "model-calibration": 30,
+    "network-readiness": 4,
+    "source-lineage": 2,
+    "temporal-alignment": 31
+  },
+  "high_similarity_pairs": [],
+  "high_similarity_threshold": 0.9,
+  "horizon_counts": {
+    "annual": 28,
+    "days": 9,
+    "multi-year": 88,
+    "real-time": 1,
+    "seasonal": 32,
+    "weeks": 82
+  },
+  "implementation_status_counts": {
+    "design-only": 228,
+    "reference-implemented": 12
+  },
+  "invariants": [
+    "Thirty domain families each contain exactly one design for every decision type.",
+    "All 240 substantive independence signatures are unique.",
+    "Titles and decision questions are exact-normalized unique.",
+    "No pair reaches the fixed high-similarity threshold.",
+    "Every design declares alternatives, objectives, and a single binding hard constraint.",
+    "Every design declares source roles, evidence types, and a negative release gate.",
+    "Every design preserves assumptions, limitations, prohibited claims, and transfer risks.",
+    "Exactly twelve existing Tier-D templates map one-to-one to reference implementations.",
+    "The other 228 records remain design-only and report source or method readiness gaps.",
+    "No design counts a city binding, execution, deployment, adoption, impact, or new method."
+  ],
+  "limitations": [
+    "Token Jaccard is a transparent duplication diagnostic, not proof of conceptual novelty.",
+    "Domain experts and affected communities have not externally reviewed all 240 designs.",
+    "Readiness is computed against the current repository source roles, not every possible city source.",
+    "Design breadth does not substitute for future city-specific validation and implementation evidence."
+  ],
+  "maximum_pairwise_similarity": 0.646154,
+  "methods_claimed": 0,
+  "schema_version": "1.0.0",
+  "source_role_counts": {
+    "asset-condition": 70,
+    "asset-inventory": 88,
+    "climate-hazard": 84,
+    "community-input": 45,
+    "demographic-context": 66,
+    "environmental-exposure": 43,
+    "equity-attribute": 125,
+    "facility-inventory": 43,
+    "financial-cost": 65,
+    "geographic-identity": 152,
+    "health-outcome": 24,
+    "housing-market": 35,
+    "intervention-assignment": 31,
+    "land-parcel": 35,
+    "legal-regulatory": 72,
+    "municipal-demand": 75,
+    "operating-capacity": 143,
+    "outcome-panel": 44,
+    "real-time-state": 89,
+    "service-schedule": 68,
+    "transport-network": 84
+  },
+  "spatial_unit_counts": {
+    "asset": 44,
+    "citywide": 17,
+    "corridor": 11,
+    "facility": 28,
+    "neighborhood": 9,
+    "network": 51,
+    "parcel": 11,
+    "population-group": 32,
+    "service-area": 37
+  },
+  "suite_counts": {
+    "behavioral-policy-equity": 32,
+    "climate-disaster-resilience": 40,
+    "housing-land-use-regeneration": 32,
+    "infrastructure-finance-asset-risk": 32,
+    "mobility-accessibility-operations": 40,
+    "population-health-environmental-exposure": 32,
+    "public-service-operations": 32
+  }
+}

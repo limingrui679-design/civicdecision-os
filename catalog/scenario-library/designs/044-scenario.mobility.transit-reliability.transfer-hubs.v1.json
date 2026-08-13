@@ -1,0 +1,165 @@
+{
+  "affected_system": "fixed-route public transit service and passenger connections",
+  "alternatives": [
+    "screen feasible locations against the largest access gaps for accessible transfer and operational recovery hubs",
+    "co-optimize distributed and high-capacity locations for accessible transfer and operational recovery hubs",
+    "pair network-constrained hub location with timetable dependencies with an explicit stop, review, and escalation rule"
+  ],
+  "analysis_modes": [
+    "simulation",
+    "optimization"
+  ],
+  "assumptions": [
+    "Trips, stops, vehicle observations, disruptions, and calendars share a versioned service day.",
+    "Passenger loads and transfer behavior are measured or represented as bounded assumptions.",
+    "All alternatives, capacities, costs, effects, thresholds, and failure scenarios are proposed until bound to evidence."
+  ],
+  "baseline": "retain only existing approved locations for accessible transfer and operational recovery hubs.",
+  "city_bindings": [],
+  "constraints": [
+    {
+      "binding": true,
+      "constraint_id": "scenario.mobility.transit-reliability.transfer-hubs.v1.constraint.binding",
+      "description": "The transit reliability and passenger continuity site must respect declared land control, accessibility, permitting, safety, and operating feasibility.",
+      "hard": true,
+      "kind": "regulatory",
+      "required_source_roles": [
+        "facility-inventory",
+        "geographic-identity",
+        "land-parcel",
+        "legal-regulatory",
+        "service-schedule",
+        "transport-network"
+      ]
+    },
+    {
+      "binding": false,
+      "constraint_id": "scenario.mobility.transit-reliability.transfer-hubs.v1.constraint.evidence-scope",
+      "description": "Every released metric must retain evidence type, source lineage, geography, time, assumptions, and uncertainty.",
+      "hard": true,
+      "kind": "technical",
+      "required_source_roles": [
+        "facility-inventory"
+      ]
+    },
+    {
+      "binding": false,
+      "constraint_id": "scenario.mobility.transit-reliability.transfer-hubs.v1.constraint.decision-authority",
+      "description": "No analytical output may bypass lawful authority, accountable human review, or an applicable appeal process.",
+      "hard": true,
+      "kind": "regulatory",
+      "required_source_roles": [
+        "facility-inventory"
+      ]
+    }
+  ],
+  "current_readiness": "blocked-missing-source",
+  "decision_cadence": "recompiled at each planning cycle and after material evidence change",
+  "decision_owner": "transit chief operating officer and service-planning director",
+  "decision_question": "Where should timed-transfer, layover, charging, and passenger-recovery capacity be located?",
+  "decision_type": "site",
+  "design_id": "scenario.mobility.transit-reliability.transfer-hubs.v1",
+  "design_order": 44,
+  "design_signature": "sha256:70c27057b255536ab7da8d68244d618f9607b1f82c0fff62311e6c002c813ed1",
+  "evidence_requirements": [
+    "estimated",
+    "observed",
+    "optimized",
+    "proposed",
+    "simulated"
+  ],
+  "family_id": "mobility.transit-reliability",
+  "family_title": "Transit reliability and passenger continuity",
+  "horizon": "multi-year",
+  "implementation_status": "design-only",
+  "independence_key": {
+    "binding_constraint": "The transit reliability and passenger continuity site must respect declared land control, accessibility, permitting, safety, and operating feasibility.",
+    "decision_object": "accessible transfer and operational recovery hubs",
+    "evidence_gate": "Evidence for accessible transfer and operational recovery hubs passes documented checks for parcel control, legal authority, environmental review, access, capacity, and operator responsibility.",
+    "horizon": "multi-year",
+    "intervention_mechanism": "network-constrained hub location with timetable dependencies",
+    "primary_outcome": "passengers beyond a reliable accessible transfer",
+    "spatial_unit": "facility"
+  },
+  "intended_claim": "A versioned site design for comparing declared alternatives affecting accessible transfer and operational recovery hubs, conditional on its evidence gate.",
+  "limitations": [
+    "This library record has no city binding and therefore reports no local input, output, or recommendation.",
+    "Readiness describes explicit source and method gates; it does not certify implementation feasibility.",
+    "External domain, legal, community, security, and operational review remains outside this design artifact."
+  ],
+  "method_claimed": false,
+  "objectives": [
+    {
+      "evidence_type": "estimated",
+      "metric": "passengers beyond a reliable accessible transfer",
+      "objective_id": "scenario.mobility.transit-reliability.transfer-hubs.v1.objective.primary",
+      "primary": true,
+      "sense": "minimize",
+      "unit": "passengers per day"
+    },
+    {
+      "evidence_type": "estimated",
+      "metric": "distributional gap in passengers beyond a reliable accessible transfer",
+      "objective_id": "scenario.mobility.transit-reliability.transfer-hubs.v1.objective.equity",
+      "primary": false,
+      "sense": "minimize",
+      "unit": "passengers per day"
+    },
+    {
+      "evidence_type": "observed",
+      "metric": "decision claims with complete evidence lineage",
+      "objective_id": "scenario.mobility.transit-reliability.transfer-hubs.v1.objective.traceability",
+      "primary": false,
+      "sense": "maximize",
+      "unit": "percent"
+    }
+  ],
+  "prohibited_claims": [
+    "Do not call a candidate hub accessible, permitted, or operationally feasible without verification.",
+    "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+    "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+    "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+  ],
+  "release_gate": {
+    "failure_release": "Release an explicit insufficient-evidence record naming missing sources, failed diagnostics, prohibited claims, and the next validation action.",
+    "failure_status": "insufficient-evidence",
+    "gate_id": "scenario.mobility.transit-reliability.transfer-hubs.v1.gate.release",
+    "gate_type": "legal-authority",
+    "pass_condition": "Evidence for accessible transfer and operational recovery hubs passes documented checks for parcel control, legal authority, environmental review, access, capacity, and operator responsibility.",
+    "required_evidence_types": [
+      "observed",
+      "proposed"
+    ],
+    "required_source_roles": [
+      "facility-inventory",
+      "geographic-identity",
+      "land-parcel",
+      "legal-regulatory",
+      "service-schedule",
+      "transport-network"
+    ]
+  },
+  "required_source_roles": [
+    "facility-inventory",
+    "geographic-identity",
+    "land-parcel",
+    "legal-regulatory",
+    "service-schedule",
+    "transport-network"
+  ],
+  "schema_version": "1.0.0",
+  "spatial_unit": "facility",
+  "suite": "mobility-accessibility-operations",
+  "tags": [
+    "design-only",
+    "mobility-accessibility-operations",
+    "mobility.transit-reliability",
+    "scenario-library",
+    "site"
+  ],
+  "title": "Site accessible transfer and recovery hubs",
+  "transportability_risks": [
+    "Fare policy, headways, fleet, labor rules, topology, and passenger behavior vary by operator.",
+    "Reliability metrics may not transfer between schedule-based and frequency-based service."
+  ]
+}

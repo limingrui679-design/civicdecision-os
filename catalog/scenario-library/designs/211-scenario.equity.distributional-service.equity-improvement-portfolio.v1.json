@@ -1,0 +1,164 @@
+{
+  "affected_system": "cross-agency public-service access, workload, quality, and outcome distribution",
+  "alternatives": [
+    "rank verified high-consequence candidates for cross-agency service-equity improvement portfolio",
+    "select a risk-, equity-, and lifecycle-balanced portfolio for cross-agency service-equity improvement portfolio",
+    "pair need, rights, disparity, evidence, cost, and deliverability prioritization with an explicit stop, review, and escalation rule"
+  ],
+  "analysis_modes": [
+    "descriptive",
+    "optimization"
+  ],
+  "assumptions": [
+    "Need, eligibility, access, requests, service, quality, and outcomes remain separate measures.",
+    "Protected and vulnerable group reporting follows privacy, legal, and small-cell safeguards.",
+    "All alternatives, capacities, costs, effects, thresholds, and failure scenarios are proposed until bound to evidence."
+  ],
+  "baseline": "fund only already-committed work for cross-agency service-equity improvement portfolio.",
+  "city_bindings": [],
+  "constraints": [
+    {
+      "binding": true,
+      "constraint_id": "scenario.equity.distributional-service.equity-improvement-portfolio.v1.constraint.binding",
+      "description": "The distributional public-service equity prioritize must respect declared capital, operating, maintenance, and delivery budgets.",
+      "hard": true,
+      "kind": "budget",
+      "required_source_roles": [
+        "community-input",
+        "demographic-context",
+        "equity-attribute",
+        "financial-cost",
+        "legal-regulatory",
+        "municipal-demand"
+      ]
+    },
+    {
+      "binding": false,
+      "constraint_id": "scenario.equity.distributional-service.equity-improvement-portfolio.v1.constraint.evidence-scope",
+      "description": "Every released metric must retain evidence type, source lineage, geography, time, assumptions, and uncertainty.",
+      "hard": true,
+      "kind": "technical",
+      "required_source_roles": [
+        "community-input"
+      ]
+    },
+    {
+      "binding": false,
+      "constraint_id": "scenario.equity.distributional-service.equity-improvement-portfolio.v1.constraint.decision-authority",
+      "description": "No analytical output may bypass lawful authority, accountable human review, or an applicable appeal process.",
+      "hard": true,
+      "kind": "regulatory",
+      "required_source_roles": [
+        "community-input"
+      ]
+    }
+  ],
+  "current_readiness": "blocked-missing-source",
+  "decision_cadence": "recompiled at each planning cycle and after material evidence change",
+  "decision_owner": "chief equity officer and city performance director",
+  "decision_question": "Which access, language, staffing, process, facility, and accountability investments should be funded?",
+  "decision_type": "prioritize",
+  "design_id": "scenario.equity.distributional-service.equity-improvement-portfolio.v1",
+  "design_order": 211,
+  "design_signature": "sha256:8a947f5af67c2183af01352650751209f5534bce98b8bee684895284c06d318c",
+  "evidence_requirements": [
+    "estimated",
+    "observed",
+    "optimized",
+    "proposed"
+  ],
+  "family_id": "equity.distributional-service",
+  "family_title": "Distributional public-service equity",
+  "horizon": "multi-year",
+  "implementation_status": "design-only",
+  "independence_key": {
+    "binding_constraint": "The distributional public-service equity prioritize must respect declared capital, operating, maintenance, and delivery budgets.",
+    "decision_object": "cross-agency service-equity improvement portfolio",
+    "evidence_gate": "Evidence for cross-agency service-equity improvement portfolio passes documented checks for cost, benefit, service life, dependencies, deliverability, and maintenance burden.",
+    "horizon": "multi-year",
+    "intervention_mechanism": "need, rights, disparity, evidence, cost, and deliverability prioritization",
+    "primary_outcome": "population-weighted verified minimum-service gap",
+    "spatial_unit": "service-area"
+  },
+  "intended_claim": "A versioned prioritize design for comparing declared alternatives affecting cross-agency service-equity improvement portfolio, conditional on its evidence gate.",
+  "limitations": [
+    "This library record has no city binding and therefore reports no local input, output, or recommendation.",
+    "Readiness describes explicit source and method gates; it does not certify implementation feasibility.",
+    "External domain, legal, community, security, and operational review remains outside this design artifact."
+  ],
+  "method_claimed": false,
+  "objectives": [
+    {
+      "evidence_type": "estimated",
+      "metric": "population-weighted verified minimum-service gap",
+      "objective_id": "scenario.equity.distributional-service.equity-improvement-portfolio.v1.objective.primary",
+      "primary": true,
+      "sense": "minimize",
+      "unit": "person-service units"
+    },
+    {
+      "evidence_type": "estimated",
+      "metric": "distributional gap in population-weighted verified minimum-service gap",
+      "objective_id": "scenario.equity.distributional-service.equity-improvement-portfolio.v1.objective.equity",
+      "primary": false,
+      "sense": "minimize",
+      "unit": "person-service units"
+    },
+    {
+      "evidence_type": "observed",
+      "metric": "decision claims with complete evidence lineage",
+      "objective_id": "scenario.equity.distributional-service.equity-improvement-portfolio.v1.objective.traceability",
+      "primary": false,
+      "sense": "maximize",
+      "unit": "percent"
+    }
+  ],
+  "prohibited_claims": [
+    "Do not report modeled gap reduction as delivered equity, legal compliance, or resident welfare.",
+    "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+    "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+    "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+  ],
+  "release_gate": {
+    "failure_release": "Release an explicit insufficient-evidence record naming missing sources, failed diagnostics, prohibited claims, and the next validation action.",
+    "failure_status": "insufficient-evidence",
+    "gate_id": "scenario.equity.distributional-service.equity-improvement-portfolio.v1.gate.release",
+    "gate_type": "cost-capacity",
+    "pass_condition": "Evidence for cross-agency service-equity improvement portfolio passes documented checks for cost, benefit, service life, dependencies, deliverability, and maintenance burden.",
+    "required_evidence_types": [
+      "observed",
+      "proposed"
+    ],
+    "required_source_roles": [
+      "community-input",
+      "demographic-context",
+      "equity-attribute",
+      "financial-cost",
+      "legal-regulatory",
+      "municipal-demand"
+    ]
+  },
+  "required_source_roles": [
+    "community-input",
+    "demographic-context",
+    "equity-attribute",
+    "financial-cost",
+    "legal-regulatory",
+    "municipal-demand"
+  ],
+  "schema_version": "1.0.0",
+  "spatial_unit": "service-area",
+  "suite": "behavioral-policy-equity",
+  "tags": [
+    "behavioral-policy-equity",
+    "design-only",
+    "equity.distributional-service",
+    "prioritize",
+    "scenario-library"
+  ],
+  "title": "Prioritize cross-agency equity improvements",
+  "transportability_risks": [
+    "Rights, demographics, service rules, need measurement, geography, and reporting access differ.",
+    "Administrative denominators may omit eligible or underserved populations."
+  ]
+}

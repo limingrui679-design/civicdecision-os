@@ -1,6 +1,17 @@
 {
   "components": {
     "schemas": {
+      "AnalysisMode": {
+        "enum": [
+          "descriptive",
+          "forecast",
+          "causal",
+          "simulation",
+          "optimization"
+        ],
+        "title": "AnalysisMode",
+        "type": "string"
+      },
       "ApplicationSuite": {
         "enum": [
           "climate-disaster-resilience",
@@ -207,6 +218,11 @@
             "title": "Deep Scenario Executions",
             "type": "integer"
           },
+          "design_only_scenarios": {
+            "minimum": 0.0,
+            "title": "Design Only Scenarios",
+            "type": "integer"
+          },
           "exposed_city_records": {
             "minimum": 0.0,
             "title": "Exposed City Records",
@@ -240,6 +256,41 @@
           "optimization_benchmarks": {
             "minimum": 0.0,
             "title": "Optimization Benchmarks",
+            "type": "integer"
+          },
+          "reference_implemented_designs": {
+            "minimum": 0.0,
+            "title": "Reference Implemented Designs",
+            "type": "integer"
+          },
+          "scenario_library_audit_passed": {
+            "title": "Scenario Library Audit Passed",
+            "type": "boolean"
+          },
+          "scenario_library_city_bindings": {
+            "minimum": 0.0,
+            "title": "Scenario Library City Bindings",
+            "type": "integer"
+          },
+          "scenario_library_designs": {
+            "minimum": 0.0,
+            "title": "Scenario Library Designs",
+            "type": "integer"
+          },
+          "scenario_library_families": {
+            "minimum": 0.0,
+            "title": "Scenario Library Families",
+            "type": "integer"
+          },
+          "scenario_library_maximum_similarity": {
+            "maximum": 1.0,
+            "minimum": 0.0,
+            "title": "Scenario Library Maximum Similarity",
+            "type": "number"
+          },
+          "scenario_library_methods_claimed": {
+            "minimum": 0.0,
+            "title": "Scenario Library Methods Claimed",
             "type": "integer"
           },
           "schema_version": {
@@ -296,6 +347,14 @@
           "source_artifacts",
           "declared_source_units",
           "standard_scenario_screens",
+          "scenario_library_designs",
+          "scenario_library_families",
+          "reference_implemented_designs",
+          "design_only_scenarios",
+          "scenario_library_city_bindings",
+          "scenario_library_methods_claimed",
+          "scenario_library_audit_passed",
+          "scenario_library_maximum_similarity",
           "nonduplicative_deep_designs",
           "deep_scenario_executions",
           "completed_deep_executions",
@@ -526,6 +585,29 @@
         "title": "CitySummary",
         "type": "object"
       },
+      "CurrentReadiness": {
+        "enum": [
+          "reference-implemented",
+          "uncompiled-current-inputs",
+          "blocked-missing-source",
+          "blocked-method",
+          "blocked-multiple-gates"
+        ],
+        "title": "CurrentReadiness",
+        "type": "string"
+      },
+      "DecisionHorizon": {
+        "enum": [
+          "real-time",
+          "days",
+          "weeks",
+          "seasonal",
+          "annual",
+          "multi-year"
+        ],
+        "title": "DecisionHorizon",
+        "type": "string"
+      },
       "DecisionOption": {
         "additionalProperties": false,
         "properties": {
@@ -687,6 +769,20 @@
         "title": "DecisionPack",
         "type": "object"
       },
+      "DecisionType": {
+        "enum": [
+          "diagnose",
+          "forecast",
+          "prioritize",
+          "site",
+          "allocate",
+          "schedule",
+          "stress-test",
+          "evaluate"
+        ],
+        "title": "DecisionType",
+        "type": "string"
+      },
       "DeepScenarioStatus": {
         "enum": [
           "completed",
@@ -695,6 +791,37 @@
           "failed"
         ],
         "title": "DeepScenarioStatus",
+        "type": "string"
+      },
+      "DesignConstraintKind": {
+        "enum": [
+          "budget",
+          "capacity",
+          "equity",
+          "risk",
+          "time",
+          "regulatory",
+          "technical",
+          "environmental"
+        ],
+        "title": "DesignConstraintKind",
+        "type": "string"
+      },
+      "EvidenceGateType": {
+        "enum": [
+          "data-completeness",
+          "source-lineage",
+          "temporal-alignment",
+          "geographic-alignment",
+          "network-readiness",
+          "causal-identification",
+          "model-calibration",
+          "cost-capacity",
+          "legal-authority",
+          "equity-measurement",
+          "external-validation"
+        ],
+        "title": "EvidenceGateType",
         "type": "string"
       },
       "EvidenceItem": {
@@ -847,7 +974,42 @@
         "title": "HTTPValidationError",
         "type": "object"
       },
+      "ImplementationStatus": {
+        "enum": [
+          "reference-implemented",
+          "design-only"
+        ],
+        "title": "ImplementationStatus",
+        "type": "string"
+      },
       "JsonValue": {},
+      "LibrarySourceRole": {
+        "enum": [
+          "municipal-demand",
+          "climate-hazard",
+          "geographic-identity",
+          "demographic-context",
+          "transport-network",
+          "service-schedule",
+          "facility-inventory",
+          "asset-inventory",
+          "asset-condition",
+          "land-parcel",
+          "housing-market",
+          "health-outcome",
+          "environmental-exposure",
+          "financial-cost",
+          "operating-capacity",
+          "intervention-assignment",
+          "outcome-panel",
+          "equity-attribute",
+          "legal-regulatory",
+          "real-time-state",
+          "community-input"
+        ],
+        "title": "LibrarySourceRole",
+        "type": "string"
+      },
       "MetricView": {
         "additionalProperties": false,
         "properties": {
@@ -1252,6 +1414,538 @@
         "title": "RunStatus",
         "type": "string"
       },
+      "ScenarioDesign": {
+        "additionalProperties": false,
+        "properties": {
+          "affected_system": {
+            "minLength": 5,
+            "title": "Affected System",
+            "type": "string"
+          },
+          "alternatives": {
+            "items": {
+              "type": "string"
+            },
+            "minItems": 2,
+            "title": "Alternatives",
+            "type": "array"
+          },
+          "analysis_modes": {
+            "items": {
+              "$ref": "#/components/schemas/AnalysisMode"
+            },
+            "minItems": 1,
+            "title": "Analysis Modes",
+            "type": "array"
+          },
+          "assumptions": {
+            "items": {
+              "type": "string"
+            },
+            "minItems": 1,
+            "title": "Assumptions",
+            "type": "array"
+          },
+          "baseline": {
+            "minLength": 8,
+            "title": "Baseline",
+            "type": "string"
+          },
+          "city_bindings": {
+            "items": {
+              "type": "string"
+            },
+            "maxItems": 0,
+            "title": "City Bindings",
+            "type": "array"
+          },
+          "constraints": {
+            "items": {
+              "$ref": "#/components/schemas/ScenarioDesignConstraint"
+            },
+            "minItems": 1,
+            "title": "Constraints",
+            "type": "array"
+          },
+          "current_readiness": {
+            "$ref": "#/components/schemas/CurrentReadiness"
+          },
+          "decision_cadence": {
+            "minLength": 3,
+            "title": "Decision Cadence",
+            "type": "string"
+          },
+          "decision_owner": {
+            "minLength": 3,
+            "title": "Decision Owner",
+            "type": "string"
+          },
+          "decision_question": {
+            "minLength": 12,
+            "title": "Decision Question",
+            "type": "string"
+          },
+          "decision_type": {
+            "$ref": "#/components/schemas/DecisionType"
+          },
+          "design_id": {
+            "pattern": "^[a-z0-9]+(?:[._-][a-z0-9]+)*$",
+            "title": "Design Id",
+            "type": "string"
+          },
+          "design_order": {
+            "maximum": 240.0,
+            "minimum": 1.0,
+            "title": "Design Order",
+            "type": "integer"
+          },
+          "design_signature": {
+            "pattern": "^sha256:[0-9a-f]{64}$",
+            "title": "Design Signature",
+            "type": "string"
+          },
+          "evidence_requirements": {
+            "items": {
+              "$ref": "#/components/schemas/EvidenceType"
+            },
+            "minItems": 1,
+            "title": "Evidence Requirements",
+            "type": "array"
+          },
+          "existing_template_ref": {
+            "anyOf": [
+              {
+                "pattern": "^[a-z0-9]+(?:[._-][a-z0-9]+)*$",
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Existing Template Ref"
+          },
+          "family_id": {
+            "pattern": "^[a-z0-9]+(?:[._-][a-z0-9]+)*$",
+            "title": "Family Id",
+            "type": "string"
+          },
+          "family_title": {
+            "minLength": 3,
+            "title": "Family Title",
+            "type": "string"
+          },
+          "horizon": {
+            "$ref": "#/components/schemas/DecisionHorizon"
+          },
+          "implementation_status": {
+            "$ref": "#/components/schemas/ImplementationStatus"
+          },
+          "independence_key": {
+            "$ref": "#/components/schemas/ScenarioIndependenceKey"
+          },
+          "intended_claim": {
+            "minLength": 12,
+            "title": "Intended Claim",
+            "type": "string"
+          },
+          "limitations": {
+            "items": {
+              "type": "string"
+            },
+            "minItems": 2,
+            "title": "Limitations",
+            "type": "array"
+          },
+          "method_claimed": {
+            "const": false,
+            "default": false,
+            "title": "Method Claimed",
+            "type": "boolean"
+          },
+          "objectives": {
+            "items": {
+              "$ref": "#/components/schemas/ScenarioDesignObjective"
+            },
+            "minItems": 1,
+            "title": "Objectives",
+            "type": "array"
+          },
+          "prohibited_claims": {
+            "items": {
+              "type": "string"
+            },
+            "minItems": 2,
+            "title": "Prohibited Claims",
+            "type": "array"
+          },
+          "reference_implementation_note": {
+            "anyOf": [
+              {
+                "minLength": 24,
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Reference Implementation Note"
+          },
+          "release_gate": {
+            "$ref": "#/components/schemas/ScenarioEvidenceGate"
+          },
+          "required_source_roles": {
+            "items": {
+              "$ref": "#/components/schemas/LibrarySourceRole"
+            },
+            "minItems": 1,
+            "title": "Required Source Roles",
+            "type": "array"
+          },
+          "schema_version": {
+            "const": "1.0.0",
+            "default": "1.0.0",
+            "title": "Schema Version",
+            "type": "string"
+          },
+          "spatial_unit": {
+            "$ref": "#/components/schemas/SpatialUnit"
+          },
+          "suite": {
+            "$ref": "#/components/schemas/ApplicationSuite"
+          },
+          "tags": {
+            "items": {
+              "type": "string"
+            },
+            "minItems": 3,
+            "title": "Tags",
+            "type": "array"
+          },
+          "title": {
+            "maxLength": 180,
+            "minLength": 5,
+            "title": "Title",
+            "type": "string"
+          },
+          "transportability_risks": {
+            "items": {
+              "type": "string"
+            },
+            "minItems": 1,
+            "title": "Transportability Risks",
+            "type": "array"
+          }
+        },
+        "required": [
+          "design_order",
+          "design_id",
+          "family_id",
+          "suite",
+          "family_title",
+          "title",
+          "decision_question",
+          "decision_type",
+          "decision_owner",
+          "affected_system",
+          "horizon",
+          "decision_cadence",
+          "spatial_unit",
+          "baseline",
+          "alternatives",
+          "objectives",
+          "constraints",
+          "analysis_modes",
+          "evidence_requirements",
+          "required_source_roles",
+          "release_gate",
+          "independence_key",
+          "design_signature",
+          "implementation_status",
+          "current_readiness",
+          "intended_claim",
+          "prohibited_claims",
+          "assumptions",
+          "limitations",
+          "transportability_risks",
+          "tags"
+        ],
+        "title": "ScenarioDesign",
+        "type": "object"
+      },
+      "ScenarioDesignConstraint": {
+        "additionalProperties": false,
+        "properties": {
+          "binding": {
+            "default": false,
+            "title": "Binding",
+            "type": "boolean"
+          },
+          "constraint_id": {
+            "pattern": "^[a-z0-9]+(?:[._-][a-z0-9]+)*$",
+            "title": "Constraint Id",
+            "type": "string"
+          },
+          "description": {
+            "minLength": 8,
+            "title": "Description",
+            "type": "string"
+          },
+          "hard": {
+            "default": true,
+            "title": "Hard",
+            "type": "boolean"
+          },
+          "kind": {
+            "$ref": "#/components/schemas/DesignConstraintKind"
+          },
+          "required_source_roles": {
+            "items": {
+              "$ref": "#/components/schemas/LibrarySourceRole"
+            },
+            "title": "Required Source Roles",
+            "type": "array"
+          }
+        },
+        "required": [
+          "constraint_id",
+          "kind",
+          "description",
+          "required_source_roles"
+        ],
+        "title": "ScenarioDesignConstraint",
+        "type": "object"
+      },
+      "ScenarioDesignDetail": {
+        "additionalProperties": false,
+        "properties": {
+          "audit_maximum_pairwise_similarity": {
+            "maximum": 1.0,
+            "minimum": 0.0,
+            "title": "Audit Maximum Pairwise Similarity",
+            "type": "number"
+          },
+          "design": {
+            "$ref": "#/components/schemas/ScenarioDesign"
+          },
+          "family": {
+            "$ref": "#/components/schemas/ScenarioFamily"
+          },
+          "library_claim_boundary": {
+            "items": {
+              "type": "string"
+            },
+            "minItems": 4,
+            "title": "Library Claim Boundary",
+            "type": "array"
+          }
+        },
+        "required": [
+          "design",
+          "family",
+          "library_claim_boundary",
+          "audit_maximum_pairwise_similarity"
+        ],
+        "title": "ScenarioDesignDetail",
+        "type": "object"
+      },
+      "ScenarioDesignObjective": {
+        "additionalProperties": false,
+        "properties": {
+          "evidence_type": {
+            "$ref": "#/components/schemas/EvidenceType"
+          },
+          "metric": {
+            "minLength": 3,
+            "title": "Metric",
+            "type": "string"
+          },
+          "objective_id": {
+            "pattern": "^[a-z0-9]+(?:[._-][a-z0-9]+)*$",
+            "title": "Objective Id",
+            "type": "string"
+          },
+          "primary": {
+            "default": false,
+            "title": "Primary",
+            "type": "boolean"
+          },
+          "sense": {
+            "enum": [
+              "minimize",
+              "maximize"
+            ],
+            "title": "Sense",
+            "type": "string"
+          },
+          "unit": {
+            "minLength": 1,
+            "title": "Unit",
+            "type": "string"
+          }
+        },
+        "required": [
+          "objective_id",
+          "metric",
+          "sense",
+          "unit",
+          "evidence_type"
+        ],
+        "title": "ScenarioDesignObjective",
+        "type": "object"
+      },
+      "ScenarioDesignPage": {
+        "additionalProperties": false,
+        "properties": {
+          "items": {
+            "items": {
+              "$ref": "#/components/schemas/ScenarioDesignSummary"
+            },
+            "title": "Items",
+            "type": "array"
+          },
+          "pagination": {
+            "$ref": "#/components/schemas/Pagination"
+          }
+        },
+        "required": [
+          "pagination",
+          "items"
+        ],
+        "title": "ScenarioDesignPage",
+        "type": "object"
+      },
+      "ScenarioDesignSummary": {
+        "additionalProperties": false,
+        "properties": {
+          "analysis_modes": {
+            "items": {
+              "type": "string"
+            },
+            "minItems": 1,
+            "title": "Analysis Modes",
+            "type": "array"
+          },
+          "binding_constraint": {
+            "minLength": 5,
+            "title": "Binding Constraint",
+            "type": "string"
+          },
+          "content_hash": {
+            "pattern": "^sha256:[0-9a-f]{64}$",
+            "title": "Content Hash",
+            "type": "string"
+          },
+          "current_readiness": {
+            "$ref": "#/components/schemas/CurrentReadiness"
+          },
+          "decision_question": {
+            "minLength": 12,
+            "title": "Decision Question",
+            "type": "string"
+          },
+          "decision_type": {
+            "$ref": "#/components/schemas/DecisionType"
+          },
+          "design_id": {
+            "pattern": "^[a-z0-9]+(?:[._-][a-z0-9]+)*$",
+            "title": "Design Id",
+            "type": "string"
+          },
+          "design_order": {
+            "minimum": 1.0,
+            "title": "Design Order",
+            "type": "integer"
+          },
+          "evidence_gate": {
+            "$ref": "#/components/schemas/EvidenceGateType"
+          },
+          "evidence_types": {
+            "items": {
+              "$ref": "#/components/schemas/EvidenceType"
+            },
+            "minItems": 1,
+            "title": "Evidence Types",
+            "type": "array"
+          },
+          "existing_template_ref": {
+            "anyOf": [
+              {
+                "pattern": "^[a-z0-9]+(?:[._-][a-z0-9]+)*$",
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Existing Template Ref"
+          },
+          "family_id": {
+            "pattern": "^[a-z0-9]+(?:[._-][a-z0-9]+)*$",
+            "title": "Family Id",
+            "type": "string"
+          },
+          "family_title": {
+            "minLength": 3,
+            "title": "Family Title",
+            "type": "string"
+          },
+          "horizon": {
+            "$ref": "#/components/schemas/DecisionHorizon"
+          },
+          "implementation_status": {
+            "$ref": "#/components/schemas/ImplementationStatus"
+          },
+          "primary_outcome": {
+            "minLength": 5,
+            "title": "Primary Outcome",
+            "type": "string"
+          },
+          "prohibited_claims": {
+            "items": {
+              "type": "string"
+            },
+            "minItems": 2,
+            "title": "Prohibited Claims",
+            "type": "array"
+          },
+          "spatial_unit": {
+            "$ref": "#/components/schemas/SpatialUnit"
+          },
+          "suite": {
+            "minLength": 1,
+            "title": "Suite",
+            "type": "string"
+          },
+          "title": {
+            "minLength": 5,
+            "title": "Title",
+            "type": "string"
+          }
+        },
+        "required": [
+          "design_order",
+          "design_id",
+          "family_id",
+          "suite",
+          "family_title",
+          "title",
+          "decision_question",
+          "decision_type",
+          "horizon",
+          "spatial_unit",
+          "primary_outcome",
+          "binding_constraint",
+          "evidence_gate",
+          "implementation_status",
+          "current_readiness",
+          "analysis_modes",
+          "evidence_types",
+          "prohibited_claims",
+          "content_hash"
+        ],
+        "title": "ScenarioDesignSummary",
+        "type": "object"
+      },
       "ScenarioDetail": {
         "additionalProperties": false,
         "properties": {
@@ -1297,6 +1991,350 @@
         "title": "ScenarioDetail",
         "type": "object"
       },
+      "ScenarioEvidenceGate": {
+        "additionalProperties": false,
+        "properties": {
+          "failure_release": {
+            "minLength": 12,
+            "title": "Failure Release",
+            "type": "string"
+          },
+          "failure_status": {
+            "const": "insufficient-evidence",
+            "default": "insufficient-evidence",
+            "title": "Failure Status",
+            "type": "string"
+          },
+          "gate_id": {
+            "pattern": "^[a-z0-9]+(?:[._-][a-z0-9]+)*$",
+            "title": "Gate Id",
+            "type": "string"
+          },
+          "gate_type": {
+            "$ref": "#/components/schemas/EvidenceGateType"
+          },
+          "pass_condition": {
+            "minLength": 12,
+            "title": "Pass Condition",
+            "type": "string"
+          },
+          "required_evidence_types": {
+            "items": {
+              "$ref": "#/components/schemas/EvidenceType"
+            },
+            "minItems": 1,
+            "title": "Required Evidence Types",
+            "type": "array"
+          },
+          "required_source_roles": {
+            "items": {
+              "$ref": "#/components/schemas/LibrarySourceRole"
+            },
+            "minItems": 1,
+            "title": "Required Source Roles",
+            "type": "array"
+          }
+        },
+        "required": [
+          "gate_id",
+          "gate_type",
+          "pass_condition",
+          "failure_release",
+          "required_source_roles",
+          "required_evidence_types"
+        ],
+        "title": "ScenarioEvidenceGate",
+        "type": "object"
+      },
+      "ScenarioFamily": {
+        "additionalProperties": false,
+        "properties": {
+          "affected_system": {
+            "minLength": 5,
+            "title": "Affected System",
+            "type": "string"
+          },
+          "claim_boundary": {
+            "items": {
+              "type": "string"
+            },
+            "minItems": 2,
+            "title": "Claim Boundary",
+            "type": "array"
+          },
+          "common_source_roles": {
+            "items": {
+              "$ref": "#/components/schemas/LibrarySourceRole"
+            },
+            "minItems": 1,
+            "title": "Common Source Roles",
+            "type": "array"
+          },
+          "decision_owner": {
+            "minLength": 3,
+            "title": "Decision Owner",
+            "type": "string"
+          },
+          "decision_types": {
+            "items": {
+              "$ref": "#/components/schemas/DecisionType"
+            },
+            "maxItems": 8,
+            "minItems": 8,
+            "title": "Decision Types",
+            "type": "array"
+          },
+          "description": {
+            "minLength": 12,
+            "title": "Description",
+            "type": "string"
+          },
+          "design_refs": {
+            "items": {
+              "type": "string"
+            },
+            "maxItems": 8,
+            "minItems": 8,
+            "title": "Design Refs",
+            "type": "array"
+          },
+          "design_signatures": {
+            "items": {
+              "type": "string"
+            },
+            "maxItems": 8,
+            "minItems": 8,
+            "title": "Design Signatures",
+            "type": "array"
+          },
+          "family_id": {
+            "pattern": "^[a-z0-9]+(?:[._-][a-z0-9]+)*$",
+            "title": "Family Id",
+            "type": "string"
+          },
+          "family_order": {
+            "maximum": 30.0,
+            "minimum": 1.0,
+            "title": "Family Order",
+            "type": "integer"
+          },
+          "schema_version": {
+            "const": "1.0.0",
+            "default": "1.0.0",
+            "title": "Schema Version",
+            "type": "string"
+          },
+          "suite": {
+            "$ref": "#/components/schemas/ApplicationSuite"
+          },
+          "title": {
+            "minLength": 3,
+            "title": "Title",
+            "type": "string"
+          }
+        },
+        "required": [
+          "family_order",
+          "family_id",
+          "suite",
+          "title",
+          "description",
+          "affected_system",
+          "decision_owner",
+          "design_refs",
+          "decision_types",
+          "design_signatures",
+          "common_source_roles",
+          "claim_boundary"
+        ],
+        "title": "ScenarioFamily",
+        "type": "object"
+      },
+      "ScenarioFamilyDetail": {
+        "additionalProperties": false,
+        "properties": {
+          "designs": {
+            "items": {
+              "$ref": "#/components/schemas/ScenarioDesignSummary"
+            },
+            "maxItems": 8,
+            "minItems": 8,
+            "title": "Designs",
+            "type": "array"
+          },
+          "family": {
+            "$ref": "#/components/schemas/ScenarioFamily"
+          },
+          "library_claim_boundary": {
+            "items": {
+              "type": "string"
+            },
+            "minItems": 4,
+            "title": "Library Claim Boundary",
+            "type": "array"
+          }
+        },
+        "required": [
+          "family",
+          "designs",
+          "library_claim_boundary"
+        ],
+        "title": "ScenarioFamilyDetail",
+        "type": "object"
+      },
+      "ScenarioFamilyPage": {
+        "additionalProperties": false,
+        "properties": {
+          "items": {
+            "items": {
+              "$ref": "#/components/schemas/ScenarioFamilySummary"
+            },
+            "title": "Items",
+            "type": "array"
+          },
+          "pagination": {
+            "$ref": "#/components/schemas/Pagination"
+          }
+        },
+        "required": [
+          "pagination",
+          "items"
+        ],
+        "title": "ScenarioFamilyPage",
+        "type": "object"
+      },
+      "ScenarioFamilySummary": {
+        "additionalProperties": false,
+        "properties": {
+          "affected_system": {
+            "minLength": 5,
+            "title": "Affected System",
+            "type": "string"
+          },
+          "content_hash": {
+            "pattern": "^sha256:[0-9a-f]{64}$",
+            "title": "Content Hash",
+            "type": "string"
+          },
+          "decision_owner": {
+            "minLength": 3,
+            "title": "Decision Owner",
+            "type": "string"
+          },
+          "decision_types": {
+            "items": {
+              "$ref": "#/components/schemas/DecisionType"
+            },
+            "minItems": 1,
+            "title": "Decision Types",
+            "type": "array"
+          },
+          "description": {
+            "minLength": 12,
+            "title": "Description",
+            "type": "string"
+          },
+          "design_count": {
+            "minimum": 1.0,
+            "title": "Design Count",
+            "type": "integer"
+          },
+          "design_only_count": {
+            "minimum": 0.0,
+            "title": "Design Only Count",
+            "type": "integer"
+          },
+          "family_id": {
+            "pattern": "^[a-z0-9]+(?:[._-][a-z0-9]+)*$",
+            "title": "Family Id",
+            "type": "string"
+          },
+          "family_order": {
+            "minimum": 1.0,
+            "title": "Family Order",
+            "type": "integer"
+          },
+          "reference_implemented_count": {
+            "minimum": 0.0,
+            "title": "Reference Implemented Count",
+            "type": "integer"
+          },
+          "suite": {
+            "minLength": 1,
+            "title": "Suite",
+            "type": "string"
+          },
+          "title": {
+            "minLength": 3,
+            "title": "Title",
+            "type": "string"
+          }
+        },
+        "required": [
+          "family_order",
+          "family_id",
+          "suite",
+          "title",
+          "description",
+          "affected_system",
+          "decision_owner",
+          "design_count",
+          "reference_implemented_count",
+          "design_only_count",
+          "decision_types",
+          "content_hash"
+        ],
+        "title": "ScenarioFamilySummary",
+        "type": "object"
+      },
+      "ScenarioIndependenceKey": {
+        "additionalProperties": false,
+        "description": "Substantive axes used to detect renamed or city-copied designs.",
+        "properties": {
+          "binding_constraint": {
+            "minLength": 5,
+            "title": "Binding Constraint",
+            "type": "string"
+          },
+          "decision_object": {
+            "minLength": 5,
+            "title": "Decision Object",
+            "type": "string"
+          },
+          "evidence_gate": {
+            "minLength": 5,
+            "title": "Evidence Gate",
+            "type": "string"
+          },
+          "horizon": {
+            "$ref": "#/components/schemas/DecisionHorizon"
+          },
+          "intervention_mechanism": {
+            "minLength": 5,
+            "title": "Intervention Mechanism",
+            "type": "string"
+          },
+          "primary_outcome": {
+            "minLength": 5,
+            "title": "Primary Outcome",
+            "type": "string"
+          },
+          "spatial_unit": {
+            "$ref": "#/components/schemas/SpatialUnit"
+          }
+        },
+        "required": [
+          "decision_object",
+          "intervention_mechanism",
+          "primary_outcome",
+          "binding_constraint",
+          "evidence_gate",
+          "horizon",
+          "spatial_unit"
+        ],
+        "title": "ScenarioIndependenceKey",
+        "type": "object"
+      },
       "ScenarioKind": {
         "enum": [
           "standard-screen",
@@ -1305,6 +2343,139 @@
         ],
         "title": "ScenarioKind",
         "type": "string"
+      },
+      "ScenarioLibraryEvidence": {
+        "additionalProperties": false,
+        "properties": {
+          "artifact_set_hash": {
+            "pattern": "^sha256:[0-9a-f]{64}$",
+            "title": "Artifact Set Hash",
+            "type": "string"
+          },
+          "audit_passed": {
+            "title": "Audit Passed",
+            "type": "boolean"
+          },
+          "city_bound_executions_counted": {
+            "minimum": 0.0,
+            "title": "City Bound Executions Counted",
+            "type": "integer"
+          },
+          "claim_boundary": {
+            "items": {
+              "type": "string"
+            },
+            "minItems": 4,
+            "title": "Claim Boundary",
+            "type": "array"
+          },
+          "design_count": {
+            "minimum": 0.0,
+            "title": "Design Count",
+            "type": "integer"
+          },
+          "design_only_scenarios": {
+            "minimum": 0.0,
+            "title": "Design Only Scenarios",
+            "type": "integer"
+          },
+          "duplicate_question_count": {
+            "minimum": 0.0,
+            "title": "Duplicate Question Count",
+            "type": "integer"
+          },
+          "duplicate_title_count": {
+            "minimum": 0.0,
+            "title": "Duplicate Title Count",
+            "type": "integer"
+          },
+          "exact_signature_collision_count": {
+            "minimum": 0.0,
+            "title": "Exact Signature Collision Count",
+            "type": "integer"
+          },
+          "family_count": {
+            "minimum": 0.0,
+            "title": "Family Count",
+            "type": "integer"
+          },
+          "high_similarity_pair_count": {
+            "minimum": 0.0,
+            "title": "High Similarity Pair Count",
+            "type": "integer"
+          },
+          "high_similarity_threshold": {
+            "exclusiveMinimum": 0.0,
+            "maximum": 1.0,
+            "title": "High Similarity Threshold",
+            "type": "number"
+          },
+          "invariants": {
+            "items": {
+              "type": "string"
+            },
+            "minItems": 8,
+            "title": "Invariants",
+            "type": "array"
+          },
+          "library_content_hash": {
+            "pattern": "^sha256:[0-9a-f]{64}$",
+            "title": "Library Content Hash",
+            "type": "string"
+          },
+          "limitations": {
+            "items": {
+              "type": "string"
+            },
+            "minItems": 3,
+            "title": "Limitations",
+            "type": "array"
+          },
+          "maximum_pairwise_similarity": {
+            "maximum": 1.0,
+            "minimum": 0.0,
+            "title": "Maximum Pairwise Similarity",
+            "type": "number"
+          },
+          "methods_claimed": {
+            "minimum": 0.0,
+            "title": "Methods Claimed",
+            "type": "integer"
+          },
+          "reference_implemented_designs": {
+            "minimum": 0.0,
+            "title": "Reference Implemented Designs",
+            "type": "integer"
+          },
+          "schema_version": {
+            "const": "1.0.0",
+            "default": "1.0.0",
+            "title": "Schema Version",
+            "type": "string"
+          }
+        },
+        "required": [
+          "design_count",
+          "family_count",
+          "reference_implemented_designs",
+          "design_only_scenarios",
+          "city_bound_executions_counted",
+          "methods_claimed",
+          "audit_passed",
+          "high_similarity_threshold",
+          "maximum_pairwise_similarity",
+          "high_similarity_pair_count",
+          "exact_signature_collision_count",
+          "duplicate_title_count",
+          "duplicate_question_count",
+          "artifact_set_hash",
+          "library_content_hash",
+          "claim_boundary",
+          "invariants",
+          "limitations"
+        ],
+        "title": "ScenarioLibraryEvidence",
+        "type": "object"
       },
       "ScenarioPage": {
         "additionalProperties": false,
@@ -1714,6 +2885,21 @@
         "title": "SourceSummary",
         "type": "object"
       },
+      "SpatialUnit": {
+        "enum": [
+          "facility",
+          "asset",
+          "parcel",
+          "corridor",
+          "network",
+          "service-area",
+          "neighborhood",
+          "citywide",
+          "population-group"
+        ],
+        "title": "SpatialUnit",
+        "type": "string"
+      },
       "SuiteOverview": {
         "additionalProperties": false,
         "properties": {
@@ -1732,6 +2918,21 @@
             "title": "Completed Count",
             "type": "integer"
           },
+          "design_count": {
+            "minimum": 0.0,
+            "title": "Design Count",
+            "type": "integer"
+          },
+          "design_family_count": {
+            "minimum": 0.0,
+            "title": "Design Family Count",
+            "type": "integer"
+          },
+          "design_only_scenarios": {
+            "minimum": 0.0,
+            "title": "Design Only Scenarios",
+            "type": "integer"
+          },
           "execution_count": {
             "minimum": 0.0,
             "title": "Execution Count",
@@ -1740,6 +2941,11 @@
           "negative_count": {
             "minimum": 0.0,
             "title": "Negative Count",
+            "type": "integer"
+          },
+          "reference_implemented_designs": {
+            "minimum": 0.0,
+            "title": "Reference Implemented Designs",
             "type": "integer"
           },
           "suite": {
@@ -1755,6 +2961,10 @@
         },
         "required": [
           "suite",
+          "design_family_count",
+          "design_count",
+          "reference_implemented_designs",
+          "design_only_scenarios",
           "template_count",
           "execution_count",
           "completed_count",
@@ -2141,7 +3351,7 @@
     "contact": {
       "name": "CivicDecision OS"
     },
-    "description": "Read-only projections of versioned public sources, city bundles, scenario screens, evidence-gated DecisionPacks, and analytical benchmarks. The API preserves negative releases and never upgrades the claims in an underlying artifact.",
+    "description": "Read-only projections of versioned public sources, city bundles, 240 evidence-gated scenario designs, scenario screens, DecisionPacks, and analytical benchmarks. Designs remain distinct from executions; the API preserves negative releases and never upgrades the claims in an underlying artifact.",
     "license": {
       "identifier": "MIT",
       "name": "MIT"
@@ -2535,6 +3745,341 @@
         ]
       }
     },
+    "/api/v1/design-families": {
+      "get": {
+        "operationId": "scenario_families_api_v1_design_families_get",
+        "parameters": [
+          {
+            "in": "query",
+            "name": "suite",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "$ref": "#/components/schemas/ApplicationSuite"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Suite"
+            }
+          },
+          {
+            "in": "query",
+            "name": "q",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "maxLength": 80,
+                  "minLength": 1,
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Q"
+            }
+          },
+          {
+            "in": "query",
+            "name": "limit",
+            "required": false,
+            "schema": {
+              "default": 50,
+              "maximum": 100,
+              "minimum": 1,
+              "title": "Limit",
+              "type": "integer"
+            }
+          },
+          {
+            "in": "query",
+            "name": "offset",
+            "required": false,
+            "schema": {
+              "default": 0,
+              "minimum": 0,
+              "title": "Offset",
+              "type": "integer"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ScenarioFamilyPage"
+                }
+              }
+            },
+            "description": "Successful Response"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            },
+            "description": "Validation Error"
+          }
+        },
+        "summary": "Scenario Families",
+        "tags": [
+          "scenario-designs"
+        ]
+      }
+    },
+    "/api/v1/design-families/{family_id}": {
+      "get": {
+        "operationId": "scenario_family_api_v1_design_families__family_id__get",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "family_id",
+            "required": true,
+            "schema": {
+              "maxLength": 160,
+              "minLength": 1,
+              "pattern": "^[a-z0-9]+(?:[._-][a-z0-9]+)*$",
+              "title": "Family Id",
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ScenarioFamilyDetail"
+                }
+              }
+            },
+            "description": "Successful Response"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            },
+            "description": "Validation Error"
+          }
+        },
+        "summary": "Scenario Family",
+        "tags": [
+          "scenario-designs"
+        ]
+      }
+    },
+    "/api/v1/designs": {
+      "get": {
+        "operationId": "scenario_designs_api_v1_designs_get",
+        "parameters": [
+          {
+            "in": "query",
+            "name": "suite",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "$ref": "#/components/schemas/ApplicationSuite"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Suite"
+            }
+          },
+          {
+            "in": "query",
+            "name": "family_id",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "maxLength": 120,
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Family Id"
+            }
+          },
+          {
+            "in": "query",
+            "name": "decision_type",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "$ref": "#/components/schemas/DecisionType"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Decision Type"
+            }
+          },
+          {
+            "in": "query",
+            "name": "implementation_status",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "$ref": "#/components/schemas/ImplementationStatus"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Implementation Status"
+            }
+          },
+          {
+            "in": "query",
+            "name": "current_readiness",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "$ref": "#/components/schemas/CurrentReadiness"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Current Readiness"
+            }
+          },
+          {
+            "in": "query",
+            "name": "q",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "maxLength": 80,
+                  "minLength": 1,
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Q"
+            }
+          },
+          {
+            "in": "query",
+            "name": "limit",
+            "required": false,
+            "schema": {
+              "default": 50,
+              "maximum": 100,
+              "minimum": 1,
+              "title": "Limit",
+              "type": "integer"
+            }
+          },
+          {
+            "in": "query",
+            "name": "offset",
+            "required": false,
+            "schema": {
+              "default": 0,
+              "minimum": 0,
+              "title": "Offset",
+              "type": "integer"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ScenarioDesignPage"
+                }
+              }
+            },
+            "description": "Successful Response"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            },
+            "description": "Validation Error"
+          }
+        },
+        "summary": "Scenario Designs",
+        "tags": [
+          "scenario-designs"
+        ]
+      }
+    },
+    "/api/v1/designs/{design_id}": {
+      "get": {
+        "operationId": "scenario_design_api_v1_designs__design_id__get",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "design_id",
+            "required": true,
+            "schema": {
+              "maxLength": 160,
+              "minLength": 1,
+              "pattern": "^[a-z0-9]+(?:[._-][a-z0-9]+)*$",
+              "title": "Design Id",
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ScenarioDesignDetail"
+                }
+              }
+            },
+            "description": "Successful Response"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            },
+            "description": "Validation Error"
+          }
+        },
+        "summary": "Scenario Design",
+        "tags": [
+          "scenario-designs"
+        ]
+      }
+    },
     "/api/v1/evidence/deep": {
       "get": {
         "operationId": "deep_evidence_api_v1_evidence_deep_get",
@@ -2553,6 +4098,28 @@
         "summary": "Deep Evidence",
         "tags": [
           "evidence"
+        ]
+      }
+    },
+    "/api/v1/evidence/scenario-library": {
+      "get": {
+        "operationId": "scenario_library_evidence_api_v1_evidence_scenario_library_get",
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ScenarioLibraryEvidence"
+                }
+              }
+            },
+            "description": "Successful Response"
+          }
+        },
+        "summary": "Scenario Library Evidence",
+        "tags": [
+          "evidence",
+          "scenario-designs"
         ]
       }
     },

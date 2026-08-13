@@ -20,13 +20,14 @@ intervention definition
 
 This repository is an early implementation. The global scale described in the project blueprint is a target, not a completed result. Current, verified capabilities are listed in [`docs/STATUS.md`](docs/STATUS.md); the complete requirement-to-evidence matrix is in [`docs/REQUIREMENTS.md`](docs/REQUIREMENTS.md).
 
-The sixth implementation milestone establishes 22 generated core contracts, the evidence type
+The seventh implementation milestone establishes 27 generated core contracts, the evidence type
 system, deterministic validation, ten loadable public-data connectors, a reproducible Tier-G
 catalog of 250 city points, 30 Tier-S standardized descriptive bundles, five transparent
 analytical engines, 40 held-out historical replays, 100 bounded benchmark optimization tasks,
-eight Tier-D city adapters with 96 evidence-gated scenario packs, and five read-only product
-surfaces over one validated artifact store. Tier D and product visibility still do not mean
-production deployment, municipal adoption, policy validity, or real-world impact.
+eight Tier-D city adapters with 96 evidence-gated scenario packs, an audited 240-design scenario
+library, and five read-only product surfaces over one validated artifact store. Tier D, design
+breadth, and product visibility still do not mean production deployment, municipal adoption,
+policy validity, or real-world impact.
 
 ## One validated product core, five surfaces
 
@@ -34,20 +35,44 @@ The local product layer exposes the same immutable snapshot through a responsive
 explorer, versioned REST API, local/synchronous/asynchronous Python SDKs, CLI, and data-only
 adapter plugin SDK. The shared store reconciles 258 highest-available city records, 288 tier
 assignments, 90 source artifacts, 188 scenario executions, 98 DecisionPacks, seven application
-suites, and 145 analytical benchmark runs before any surface can return them.
+suites, 240 scenario designs in 30 families, and 145 analytical benchmark runs before any surface
+can return them.
 
-The committed [`catalog/product/`](catalog/product/) projection contains 35 files: 33
+The committed [`catalog/product/`](catalog/product/) projection contains 338 files: 336
 manifest-indexed JSON artifacts, one artifact manifest, and one portable checksum file. It
-includes 17 product/plugin Schemas, a deterministic 14-path OpenAPI document, four hashed web
-assets, city/source/scenario/suite indexes, benchmark evidence, and the catalog-wide claim
-boundary. The entire tree rebuilds path-for-path and byte-for-byte.
+includes 28 product/plugin/library Schemas, a deterministic 19-path OpenAPI document, four hashed
+web assets, 240 API-shaped design details, 30 family details, suite/type/status indexes,
+city/source/execution indexes, benchmark evidence, and the catalog-wide claim boundary. The
+entire tree rebuilds path-for-path and byte-for-byte.
 
 Negative releases remain first-class. The product snapshot contains 77 completed and 21 negative
 DecisionPacks; Tier-S screens are never promoted into DecisionPacks, and the browser, API, SDK,
 and CLI all preserve a withheld recommendation as withheld. See
 [`docs/PRODUCT_SURFACES.md`](docs/PRODUCT_SURFACES.md), [`docs/API.md`](docs/API.md),
 [`docs/SDK.md`](docs/SDK.md), [`docs/WEB_EXPLORER.md`](docs/WEB_EXPLORER.md), and
-[`docs/PLUGIN_SDK.md`](docs/PLUGIN_SDK.md).
+[`docs/PLUGIN_SDK.md`](docs/PLUGIN_SDK.md). The design-library construction, coverage matrix,
+reference mappings, audit method, and remaining evidence gates are documented in
+[`docs/SCENARIO_LIBRARY.md`](docs/SCENARIO_LIBRARY.md).
+
+## Audited 240-design scenario library
+
+[`catalog/scenario-library/`](catalog/scenario-library/) contains 240 strict decision designs in
+30 domain families. Every family covers diagnose, forecast, prioritize, site, allocate, schedule,
+stress-test, and evaluate exactly once. Every design declares a baseline, at least three
+alternatives, three objectives, one binding constraint, typed evidence and source requirements,
+an explicit release gate, a required negative release, assumptions, limitations, prohibited
+claims, and transportability risks.
+
+All 28,680 unordered design pairs are audited. There are no exact substantive-signature,
+normalized-title, or normalized-question collisions; no pair reaches the fixed 0.90 token-Jaccard
+failure threshold; and the maximum observed value is 0.646154. Exactly 12 designs map one-to-one
+to existing Tier-D reference templates and 228 remain design-only. The schema fixes city bindings
+at zero and method claims at false.
+
+The committed library has 282 files: 240 designs, 30 family documents, registry, audit, coverage
+CSV, two human-readable reports, five Schemas, a 280-entry manifest, and portable checksums. It
+rebuilds path-for-path and byte-for-byte. These counts establish authored and validated design
+work—not 240 executions, delivered projects, deployments, adoptions, or impacts.
 
 ## Verified reference workflow
 
@@ -62,13 +87,19 @@ radius is not travel time, the population proxy is not individual demand, and th
 is not a municipal recommendation.
 
 Current local quality evidence is recorded in
-[`verification/milestone-6-product-surfaces.json`](verification/milestone-6-product-surfaces.json),
-[`verification/milestone-6-coverage.json`](verification/milestone-6-coverage.json),
-[`verification/milestone-6-wheel-smoke.json`](verification/milestone-6-wheel-smoke.json), and
-[`verification/milestone-6-browser-qa.json`](verification/milestone-6-browser-qa.json). The
+[`verification/milestone-7-scenario-library-and-product.json`](verification/milestone-7-scenario-library-and-product.json),
+[`verification/milestone-7-coverage.json`](verification/milestone-7-coverage.json), and
+[`verification/milestone-7-browser-qa.json`](verification/milestone-7-browser-qa.json). Exactly 800
+tests pass with 96.989% statement, 90.250% branch, and 95.696% combined line-and-branch coverage. The
 independent verifier regenerates Schemas, both earlier reference outputs, all four global-city
 artifacts, the complete standardized-city and analytical-benchmark trees, all 707 Tier-D
-artifacts, and the 35-file product projection in a temporary directory and requires exact bytes.
+artifacts, the 282-file scenario library, and the 338-file product projection in a temporary
+directory and requires exact bytes.
+
+The earlier
+[`verification/milestone-6-wheel-smoke.json`](verification/milestone-6-wheel-smoke.json) remains a
+historical packaging snapshot; it predates the scenario library and is not presented as current
+Milestone-7 wheel evidence.
 
 The current source catalog contains ten loadable connector implementations across eight source
 families, plus eight audited municipal dataset configurations used by the generic aggregate
@@ -203,10 +234,20 @@ claim boundaries.
     anti-duplication structure.
 22. `tier-d-evidence-summary.schema.json` — source, scenario, forecast, simulation, optimization,
     uncertainty, and anti-inflation workload ledger.
+23. `scenario-design.schema.json` — decision context, alternatives, objectives, constraints,
+    evidence gate, independence key, and claim boundary.
+24. `scenario-family.schema.json` — one eight-type family, shared source roles, signatures, and
+    interpretation limits.
+25. `scenario-library-registry.schema.json` — 240 ordered designs, 30 ordered families, counts,
+    mappings, hashes, and zero-inflation fields.
+26. `scenario-library-audit.schema.json` — exact collision, pairwise similarity, completeness,
+    coverage, implementation, and readiness evidence.
+27. `scenario-library-manifest.schema.json` — portable byte counts, media types, record counts,
+    hashes, and artifact-set binding.
 
-The product projection adds 17 generated review contracts for health and catalog summaries, city,
-scenario, source, suite, and benchmark projections, plugin manifests/packages, artifact manifests,
-and their paginated collection models. These live under
+The product projection adds 28 generated review contracts for health and catalog summaries, city,
+scenario execution, scenario-design, family, source, suite, benchmark, plugin, artifact-manifest,
+and paginated collection projections. These live under
 [`catalog/product/schemas/`](catalog/product/schemas/) and are intentionally separate from the 22
 domain/compiler protocols above.
 
@@ -273,6 +314,10 @@ civicdecision deep build \
   --source-directory examples/data/tier-d \
   --output-directory catalog/deep-cities
 
+civicdecision catalog build-scenario-library \
+  --root . \
+  --output catalog/scenario-library
+
 civicdecision catalog build-product \
   --root . \
   --output catalog/product
@@ -311,8 +356,10 @@ add production authentication, TLS, quotas, or authorization.
   evidence-ledger builders.
 - `src/civicdecision/deep/` — audited city specifications, acquisition, evidence reconciliation,
   twelve scenario templates, compilation, ledgers, and exact-rebuild output.
+- `src/civicdecision/scenario_library/` — 30-family authored matrix, 240 strict design contracts,
+  anti-duplication audit, reference mappings, artifact builder, and claim boundaries.
 - `src/civicdecision/product/` — fail-closed artifact store, typed product models, and deterministic
-  35-file projection builder.
+  338-file projection builder.
 - `src/civicdecision/api/` — versioned read-only REST resources, problem details, ETags, and
   browser security headers.
 - `src/civicdecision/sdk/` — local, synchronous HTTP, and asynchronous HTTP clients over the same

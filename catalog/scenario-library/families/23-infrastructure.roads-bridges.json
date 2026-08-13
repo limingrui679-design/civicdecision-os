@@ -1,0 +1,50 @@
+{
+  "affected_system": "roadway, bridge, sidewalk, signal, and public right-of-way asset network",
+  "claim_boundary": [
+    "Requests and proxy indicators do not replace engineering inspection, accounting, or legal review.",
+    "Selected projects and schedules are planning outputs, not appropriations, designs, contracts, or construction.",
+    "Modeled lifecycle, emissions, reliability, and fiscal effects are not realized outcomes."
+  ],
+  "common_source_roles": [
+    "asset-condition",
+    "asset-inventory",
+    "geographic-identity"
+  ],
+  "decision_owner": "public works asset manager and chief infrastructure engineer",
+  "decision_types": [
+    "diagnose",
+    "forecast",
+    "prioritize",
+    "site",
+    "allocate",
+    "schedule",
+    "stress-test",
+    "evaluate"
+  ],
+  "description": "Eight decisions for condition diagnosis, failure forecasting, maintenance portfolios, depot siting, crew allocation, work scheduling, network stress, and treatment evaluation.",
+  "design_refs": [
+    "scenario.infrastructure.roads-bridges.asset-condition-failure.v1",
+    "scenario.infrastructure.roads-bridges.asset-deterioration.v1",
+    "scenario.infrastructure.roads-bridges.maintenance-renewal.v1",
+    "scenario.infrastructure.roads-bridges.maintenance-depots.v1",
+    "scenario.infrastructure.roads-bridges.maintenance-crews-equipment.v1",
+    "scenario.infrastructure.roads-bridges.maintenance-construction.v1",
+    "scenario.infrastructure.roads-bridges.transport-asset-failure.v1",
+    "scenario.infrastructure.roads-bridges.preventive-maintenance-effect.v1"
+  ],
+  "design_signatures": [
+    "sha256:a5c660144ab5e285d9ec2a3415aa7deb68f5bc95501ef1c7c7cab1a3b939038a",
+    "sha256:def90bcc24f8fd64b2c219ab9aa08a1af3fb39fd6e65f9c86f2e8b8a273ad26f",
+    "sha256:d2e07bee1ab0a4f304e0486d722c85e4b3ce6ba2eb2680d7b977d978d1bc750c",
+    "sha256:c6669b12d428e7bdb7656081882641b771c67e084325243eb8994c09338d9730",
+    "sha256:44c75b2d042e14a62c1452e07b9e153be1f5cf91100544015ca4e72343542b2b",
+    "sha256:b564534d6bf70b70b13b9187c5ebdc4b7fbf56db52789a4e1e102f1cedd36eda",
+    "sha256:f411b99614d6cc6e70621508361b2fe94c6d3db23fb24b8ceb1485533d0e85a1",
+    "sha256:291748e867e2ea1acffbca454fb917e653d583010f8111ae478b92d129aa18c5"
+  ],
+  "family_id": "infrastructure.roads-bridges",
+  "family_order": 23,
+  "schema_version": "1.0.0",
+  "suite": "infrastructure-finance-asset-risk",
+  "title": "Road and bridge asset management"
+}

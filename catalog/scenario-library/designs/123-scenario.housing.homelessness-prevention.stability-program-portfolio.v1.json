@@ -1,0 +1,164 @@
+{
+  "affected_system": "housing-stability, eviction prevention, shelter diversion, and support coordination",
+  "alternatives": [
+    "rank verified high-consequence candidates for housing-stability prevention program portfolio",
+    "select a risk-, equity-, and lifecycle-balanced portfolio for housing-stability prevention program portfolio",
+    "pair outcome-, equity-, cost-, and capacity-aware program prioritization with an explicit stop, review, and escalation rule"
+  ],
+  "analysis_modes": [
+    "descriptive",
+    "optimization"
+  ],
+  "assumptions": [
+    "Court, assistance, shelter, outreach, housing, and service records use privacy-preserving linkage.",
+    "Risk models support outreach only and never determine legal rights or automatic denial.",
+    "All alternatives, capacities, costs, effects, thresholds, and failure scenarios are proposed until bound to evidence."
+  ],
+  "baseline": "fund only already-committed work for housing-stability prevention program portfolio.",
+  "city_bindings": [],
+  "constraints": [
+    {
+      "binding": true,
+      "constraint_id": "scenario.housing.homelessness-prevention.stability-program-portfolio.v1.constraint.binding",
+      "description": "The homelessness prevention and housing stability prioritize must respect declared capital, operating, maintenance, and delivery budgets.",
+      "hard": true,
+      "kind": "budget",
+      "required_source_roles": [
+        "demographic-context",
+        "equity-attribute",
+        "financial-cost",
+        "housing-market",
+        "operating-capacity",
+        "outcome-panel"
+      ]
+    },
+    {
+      "binding": false,
+      "constraint_id": "scenario.housing.homelessness-prevention.stability-program-portfolio.v1.constraint.evidence-scope",
+      "description": "Every released metric must retain evidence type, source lineage, geography, time, assumptions, and uncertainty.",
+      "hard": true,
+      "kind": "technical",
+      "required_source_roles": [
+        "demographic-context"
+      ]
+    },
+    {
+      "binding": false,
+      "constraint_id": "scenario.housing.homelessness-prevention.stability-program-portfolio.v1.constraint.decision-authority",
+      "description": "No analytical output may bypass lawful authority, accountable human review, or an applicable appeal process.",
+      "hard": true,
+      "kind": "regulatory",
+      "required_source_roles": [
+        "demographic-context"
+      ]
+    }
+  ],
+  "current_readiness": "blocked-missing-source",
+  "decision_cadence": "recompiled at each planning cycle and after material evidence change",
+  "decision_owner": "homelessness response director and housing-stability administrator",
+  "decision_question": "Which legal aid, rental support, mediation, navigation, and diversion measures should be expanded?",
+  "decision_type": "prioritize",
+  "design_id": "scenario.housing.homelessness-prevention.stability-program-portfolio.v1",
+  "design_order": 123,
+  "design_signature": "sha256:78d27da969d67ca86ea94ba1a1c48a2880120a7d5b4476bfc2ab769ad718718c",
+  "evidence_requirements": [
+    "estimated",
+    "observed",
+    "optimized",
+    "proposed"
+  ],
+  "family_id": "housing.homelessness-prevention",
+  "family_title": "Homelessness prevention and housing stability",
+  "horizon": "multi-year",
+  "implementation_status": "design-only",
+  "independence_key": {
+    "binding_constraint": "The homelessness prevention and housing stability prioritize must respect declared capital, operating, maintenance, and delivery budgets.",
+    "decision_object": "housing-stability prevention program portfolio",
+    "evidence_gate": "Evidence for housing-stability prevention program portfolio passes documented checks for cost, benefit, service life, dependencies, deliverability, and maintenance burden.",
+    "horizon": "multi-year",
+    "intervention_mechanism": "outcome-, equity-, cost-, and capacity-aware program prioritization",
+    "primary_outcome": "expected unresolved housing-stability crises",
+    "spatial_unit": "service-area"
+  },
+  "intended_claim": "A versioned prioritize design for comparing declared alternatives affecting housing-stability prevention program portfolio, conditional on its evidence gate.",
+  "limitations": [
+    "This library record has no city binding and therefore reports no local input, output, or recommendation.",
+    "Readiness describes explicit source and method gates; it does not certify implementation feasibility.",
+    "External domain, legal, community, security, and operational review remains outside this design artifact."
+  ],
+  "method_claimed": false,
+  "objectives": [
+    {
+      "evidence_type": "estimated",
+      "metric": "expected unresolved housing-stability crises",
+      "objective_id": "scenario.housing.homelessness-prevention.stability-program-portfolio.v1.objective.primary",
+      "primary": true,
+      "sense": "minimize",
+      "unit": "household episodes"
+    },
+    {
+      "evidence_type": "estimated",
+      "metric": "distributional gap in expected unresolved housing-stability crises",
+      "objective_id": "scenario.housing.homelessness-prevention.stability-program-portfolio.v1.objective.equity",
+      "primary": false,
+      "sense": "minimize",
+      "unit": "household episodes"
+    },
+    {
+      "evidence_type": "observed",
+      "metric": "decision claims with complete evidence lineage",
+      "objective_id": "scenario.housing.homelessness-prevention.stability-program-portfolio.v1.objective.traceability",
+      "primary": false,
+      "sense": "maximize",
+      "unit": "percent"
+    }
+  ],
+  "prohibited_claims": [
+    "Do not report modeled crisis reduction as prevented eviction or homelessness.",
+    "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+    "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+    "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+  ],
+  "release_gate": {
+    "failure_release": "Release an explicit insufficient-evidence record naming missing sources, failed diagnostics, prohibited claims, and the next validation action.",
+    "failure_status": "insufficient-evidence",
+    "gate_id": "scenario.housing.homelessness-prevention.stability-program-portfolio.v1.gate.release",
+    "gate_type": "cost-capacity",
+    "pass_condition": "Evidence for housing-stability prevention program portfolio passes documented checks for cost, benefit, service life, dependencies, deliverability, and maintenance burden.",
+    "required_evidence_types": [
+      "observed",
+      "proposed"
+    ],
+    "required_source_roles": [
+      "demographic-context",
+      "equity-attribute",
+      "financial-cost",
+      "housing-market",
+      "operating-capacity",
+      "outcome-panel"
+    ]
+  },
+  "required_source_roles": [
+    "demographic-context",
+    "equity-attribute",
+    "financial-cost",
+    "housing-market",
+    "operating-capacity",
+    "outcome-panel"
+  ],
+  "schema_version": "1.0.0",
+  "spatial_unit": "service-area",
+  "suite": "housing-land-use-regeneration",
+  "tags": [
+    "design-only",
+    "housing-land-use-regeneration",
+    "housing.homelessness-prevention",
+    "prioritize",
+    "scenario-library"
+  ],
+  "title": "Prioritize housing-stability prevention programs",
+  "transportability_risks": [
+    "Eviction law, rents, benefits, shelter systems, informal displacement, and data linkage differ.",
+    "Administrative records omit people who do not seek or cannot access services."
+  ]
+}

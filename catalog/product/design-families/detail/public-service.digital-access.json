@@ -1,0 +1,333 @@
+{
+  "designs": [
+    {
+      "analysis_modes": [
+        "descriptive"
+      ],
+      "binding_constraint": "The digital public access and administrative service delivery diagnose must respect declared measurement resolution and classification uncertainty.",
+      "content_hash": "sha256:1d941b0acff84ea9d05b11092219d3a342d7e6aa470974f5d990a27ff10fa37a",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Where do users encounter verified error, abandonment, repeat contact, language, access, or handoff friction?",
+      "decision_type": "diagnose",
+      "design_id": "scenario.public-service.digital-access.service-journey-friction.v1",
+      "design_order": 169,
+      "evidence_gate": "geographic-alignment",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "proposed"
+      ],
+      "family_id": "public-service.digital-access",
+      "family_title": "Digital public access and administrative service delivery",
+      "horizon": "annual",
+      "implementation_status": "design-only",
+      "primary_outcome": "eligible service journeys with unresolved verified friction",
+      "prohibited_claims": [
+        "Do not interpret non-completion as ineligibility, user error, disinterest, or lack of need.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "population-group",
+      "suite": "public-service-operations",
+      "title": "Diagnose digital and assisted-service journey friction"
+    },
+    {
+      "analysis_modes": [
+        "forecast"
+      ],
+      "binding_constraint": "The digital public access and administrative service delivery forecast must respect declared validated operational capacity and forecast uncertainty.",
+      "content_hash": "sha256:dafdca1813b467fb178aec9d74e1bb4f506f41e918783feb0c60499789d87d1a",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "What service, language, channel, device, and time-specific demand should support operations prepare for?",
+      "decision_type": "forecast",
+      "design_id": "scenario.public-service.digital-access.channel-support-demand.v1",
+      "design_order": 170,
+      "evidence_gate": "model-calibration",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "proposed"
+      ],
+      "family_id": "public-service.digital-access",
+      "family_title": "Digital public access and administrative service delivery",
+      "horizon": "weeks",
+      "implementation_status": "design-only",
+      "primary_outcome": "eligible journey demand above qualified channel capacity",
+      "prohibited_claims": [
+        "Do not call forecast contacts eligible applicants, completed services, or verified unmet need.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "service-area",
+      "suite": "public-service-operations",
+      "title": "Forecast digital, phone, and in-person support demand"
+    },
+    {
+      "analysis_modes": [
+        "descriptive",
+        "optimization"
+      ],
+      "binding_constraint": "The digital public access and administrative service delivery prioritize must respect declared capital, operating, maintenance, and delivery budgets.",
+      "content_hash": "sha256:7cc50780cb90696a1ecbe9420f5dc9ddfeada9dc9eb3b7d5940e3c9a3043823a",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Which identity, form, language, accessibility, integration, support, and privacy improvements should be funded?",
+      "decision_type": "prioritize",
+      "design_id": "scenario.public-service.digital-access.service-redesign-portfolio.v1",
+      "design_order": 171,
+      "evidence_gate": "cost-capacity",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed"
+      ],
+      "family_id": "public-service.digital-access",
+      "family_title": "Digital public access and administrative service delivery",
+      "horizon": "multi-year",
+      "implementation_status": "design-only",
+      "primary_outcome": "verified user effort and preventable service failure",
+      "prohibited_claims": [
+        "Do not report modeled time savings as realized uptake, eligibility, or resident welfare.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "asset",
+      "suite": "public-service-operations",
+      "title": "Prioritize accessible public-service redesign"
+    },
+    {
+      "analysis_modes": [
+        "simulation",
+        "optimization"
+      ],
+      "binding_constraint": "The digital public access and administrative service delivery site must respect declared land control, accessibility, permitting, safety, and operating feasibility.",
+      "content_hash": "sha256:c952cadcefeb21f329e1e40c33163aa4b4e13a1a8a2ce6e6004fc15e3d2671d7",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Where should private, accessible, multilingual assisted-service points close verified access gaps?",
+      "decision_type": "site",
+      "design_id": "scenario.public-service.digital-access.assisted-digital-access.v1",
+      "design_order": 172,
+      "evidence_gate": "legal-authority",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "family_id": "public-service.digital-access",
+      "family_title": "Digital public access and administrative service delivery",
+      "horizon": "multi-year",
+      "implementation_status": "design-only",
+      "primary_outcome": "eligible residents beyond usable assisted service access",
+      "prohibited_claims": [
+        "Do not call a candidate site usable, private, accessible, trusted, connected, or staffed.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "facility",
+      "suite": "public-service-operations",
+      "title": "Site assisted digital and administrative access"
+    },
+    {
+      "analysis_modes": [
+        "simulation",
+        "optimization"
+      ],
+      "binding_constraint": "The digital public access and administrative service delivery allocate must respect declared minimum service, eligibility, capacity, and distributional safeguards.",
+      "content_hash": "sha256:63658c502d04919d2de5db5ef4f4d5e5e97c0263e5856dd383c70c77cd4b6c18",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "How should navigators, interpreters, accessibility specialists, devices, and appointment capacity be assigned?",
+      "decision_type": "allocate",
+      "design_id": "scenario.public-service.digital-access.navigation-support.v1",
+      "design_order": 173,
+      "evidence_gate": "equity-measurement",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "family_id": "public-service.digital-access",
+      "family_title": "Digital public access and administrative service delivery",
+      "horizon": "weeks",
+      "implementation_status": "design-only",
+      "primary_outcome": "eligible complex journeys without qualified support",
+      "prohibited_claims": [
+        "Do not report assigned support as contact, completed application, eligibility, or benefit receipt.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "population-group",
+      "suite": "public-service-operations",
+      "title": "Allocate navigation, language, and accessibility support"
+    },
+    {
+      "analysis_modes": [
+        "forecast",
+        "optimization"
+      ],
+      "binding_constraint": "The digital public access and administrative service delivery schedule must respect declared labor, access, sequencing, notice, and completion windows.",
+      "content_hash": "sha256:091b71de68dc36dea39d7a00370761f76d5f8ebeba40934ae3ce97851d37f347",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "When should appointments, callbacks, interpreters, specialists, and assisted access operate?",
+      "decision_type": "schedule",
+      "design_id": "scenario.public-service.digital-access.appointments-support.v1",
+      "design_order": 174,
+      "evidence_gate": "temporal-alignment",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed"
+      ],
+      "family_id": "public-service.digital-access",
+      "family_title": "Digital public access and administrative service delivery",
+      "horizon": "weeks",
+      "implementation_status": "design-only",
+      "primary_outcome": "eligible journey-hours outside service targets",
+      "prohibited_claims": [
+        "Do not call a scheduled appointment attended, completed, eligible, or successful.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "service-area",
+      "suite": "public-service-operations",
+      "title": "Schedule appointments and multichannel support"
+    },
+    {
+      "analysis_modes": [
+        "forecast",
+        "simulation",
+        "optimization"
+      ],
+      "binding_constraint": "The digital public access and administrative service delivery stress test must respect declared minimum continuity and safety thresholds across severe scenarios.",
+      "content_hash": "sha256:c1daac7efd433ac0cf0dfb2fad82f9aca5358119d015d8472b5a144949b9d61a",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Which fallback strategy preserves lawful accessible service during identity, platform, network, vendor, and staffing failures?",
+      "decision_type": "stress-test",
+      "design_id": "scenario.public-service.digital-access.digital-service-continuity.v1",
+      "design_order": 175,
+      "evidence_gate": "external-validation",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "family_id": "public-service.digital-access",
+      "family_title": "Digital public access and administrative service delivery",
+      "horizon": "seasonal",
+      "implementation_status": "design-only",
+      "primary_outcome": "scenario-weighted eligible journeys without lawful service path",
+      "prohibited_claims": [
+        "Do not present synthetic outages or modeled fallback completions as observed incidents.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "network",
+      "suite": "public-service-operations",
+      "title": "Stress-test public-service continuity during digital outage"
+    },
+    {
+      "analysis_modes": [
+        "descriptive",
+        "causal"
+      ],
+      "binding_constraint": "The digital public access and administrative service delivery evaluate must respect declared pre-specified assignment, comparison, outcome, spillover, and subgroup rules.",
+      "content_hash": "sha256:d09ffbda636019323c578b6a1e3e516cdd91380a2ea7b901abbb5cd5a7b32f30",
+      "current_readiness": "blocked-multiple-gates",
+      "decision_question": "Did phased redesign reduce verified completion friction without excluding non-digital users?",
+      "decision_type": "evaluate",
+      "design_id": "scenario.public-service.digital-access.assisted-service-effect.v1",
+      "design_order": 176,
+      "evidence_gate": "causal-identification",
+      "evidence_types": [
+        "causal",
+        "estimated",
+        "observed",
+        "proposed"
+      ],
+      "family_id": "public-service.digital-access",
+      "family_title": "Digital public access and administrative service delivery",
+      "horizon": "multi-year",
+      "implementation_status": "design-only",
+      "primary_outcome": "change in verified eligible journey completion and user effort",
+      "prohibited_claims": [
+        "Do not infer benefit receipt, well-being, or causal inclusion from page completion alone.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "population-group",
+      "suite": "public-service-operations",
+      "title": "Evaluate assisted digital service redesign"
+    }
+  ],
+  "family": {
+    "affected_system": "public digital services, identity, applications, appointments, and assisted access",
+    "claim_boundary": [
+      "Service requests measure reported workload, not verified incidents, need, harm, or resolution.",
+      "Assignments and schedules are proposed operations, not completed work or public outcomes.",
+      "Design records do not establish agency adoption, deployment, productivity, or resident impact."
+    ],
+    "common_source_roles": [
+      "demographic-context",
+      "municipal-demand",
+      "service-schedule"
+    ],
+    "decision_owner": "chief digital officer and administrative service delivery director",
+    "decision_types": [
+      "diagnose",
+      "forecast",
+      "prioritize",
+      "site",
+      "allocate",
+      "schedule",
+      "stress-test",
+      "evaluate"
+    ],
+    "description": "Eight decisions for journey diagnosis, channel forecasting, service redesign, assisted-access siting, support allocation, appointment scheduling, outage stress, and digital-service evaluation.",
+    "design_refs": [
+      "scenario.public-service.digital-access.service-journey-friction.v1",
+      "scenario.public-service.digital-access.channel-support-demand.v1",
+      "scenario.public-service.digital-access.service-redesign-portfolio.v1",
+      "scenario.public-service.digital-access.assisted-digital-access.v1",
+      "scenario.public-service.digital-access.navigation-support.v1",
+      "scenario.public-service.digital-access.appointments-support.v1",
+      "scenario.public-service.digital-access.digital-service-continuity.v1",
+      "scenario.public-service.digital-access.assisted-service-effect.v1"
+    ],
+    "design_signatures": [
+      "sha256:8ac3bdc9644032b56a5b6340c10a2456b1630d4cb5c38d5a2da74790471e5dce",
+      "sha256:44c387d44c5e64b626d9615f48849e3eee4176e598ca49a77ddfe8daaae7c4a0",
+      "sha256:6d4053f717d9e7e792a671a67d231b3d87dd990ec356a45040eafe12110b6696",
+      "sha256:0a22e2773b5f11e3abd69d86c2ec7e4560c11f749e07ce986e9f096470b62639",
+      "sha256:0f8cda764b18e9a2892625d5fa6e36760dd0ff008b91a92984312dbea9c8724a",
+      "sha256:e7779a0f51951a3b834bb25c8e9e86fb6ee59deedf5ef3611f2272ecf883342f",
+      "sha256:23937f4fa3a049e377b16e43c56f795ee1f02a28dee7deb6e6cb76c601e4dcc1",
+      "sha256:ffacf5b0c8ed1221a8adf135f38fd96cd60bc8625f4a7e682501295452480e09"
+    ],
+    "family_id": "public-service.digital-access",
+    "family_order": 22,
+    "schema_version": "1.0.0",
+    "suite": "public-service-operations",
+    "title": "Digital public access and administrative service delivery"
+  },
+  "library_claim_boundary": [
+    "The catalog contains 240 decision designs, not 240 city executions.",
+    "Exactly twelve designs map to existing Tier-D reference templates; 228 remain design-only.",
+    "A reference implementation can be an explicit negative release and does not imply impact.",
+    "No record claims a city binding, new method, deployment, adoption, or real-user outcome.",
+    "Future execution requires source binding, gate passage, and domain, legal, community, and operational review."
+  ]
+}

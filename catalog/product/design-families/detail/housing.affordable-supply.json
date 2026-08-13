@@ -1,0 +1,333 @@
+{
+  "designs": [
+    {
+      "analysis_modes": [
+        "descriptive"
+      ],
+      "binding_constraint": "The affordable housing siting and preservation diagnose must respect declared measurement resolution and classification uncertainty.",
+      "content_hash": "sha256:2ee65f6e07ef7871370c7ac4a1af2ad19c054a32f06fa73dfed204d4dea52226",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Which properties, restrictions, market pressures, conditions, and access patterns indicate preservation or supply risk?",
+      "decision_type": "diagnose",
+      "design_id": "scenario.housing.affordable-supply.affordability-loss-risk.v1",
+      "design_order": 129,
+      "evidence_gate": "geographic-alignment",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "proposed"
+      ],
+      "family_id": "housing.affordable-supply",
+      "family_title": "Affordable housing siting and preservation",
+      "horizon": "annual",
+      "implementation_status": "design-only",
+      "primary_outcome": "affordable homes at verified near-term loss risk",
+      "prohibited_claims": [
+        "Do not label market pressure displacement or a unit affordable without restriction and rent evidence.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "parcel",
+      "suite": "housing-land-use-regeneration",
+      "title": "Diagnose affordable-housing loss and supply gaps"
+    },
+    {
+      "analysis_modes": [
+        "forecast"
+      ],
+      "binding_constraint": "The affordable housing siting and preservation forecast must respect declared validated operational capacity and forecast uncertainty.",
+      "content_hash": "sha256:ddeb87ff6d89320e611f49b9f97501434bc6933c9b4a966f4e514c1884d0acdc",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "What probabilistic completion, expiry, cost, and unit-loss range should housing operations plan around?",
+      "decision_type": "forecast",
+      "design_id": "scenario.housing.affordable-supply.affordable-pipeline.v1",
+      "design_order": 130,
+      "evidence_gate": "model-calibration",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "proposed"
+      ],
+      "family_id": "housing.affordable-supply",
+      "family_title": "Affordable housing siting and preservation",
+      "horizon": "weeks",
+      "implementation_status": "design-only",
+      "primary_outcome": "net affordable homes below adopted supply targets",
+      "prohibited_claims": [
+        "Do not count proposed, permitted, or financed units as completed occupied homes.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "citywide",
+      "suite": "housing-land-use-regeneration",
+      "title": "Forecast affordable-housing pipeline and preservation need"
+    },
+    {
+      "analysis_modes": [
+        "descriptive",
+        "optimization"
+      ],
+      "binding_constraint": "The affordable housing siting and preservation prioritize must respect declared capital, operating, maintenance, and delivery budgets.",
+      "content_hash": "sha256:4b82d3a273cb9e153f2a27de1aa4346875e1d2f94238a4ca9fe2b7c0ae32c32b",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Which preservation, acquisition, rehabilitation, and new-development projects should receive funding?",
+      "decision_type": "prioritize",
+      "design_id": "scenario.housing.affordable-supply.preservation-development-portfolio.v1",
+      "design_order": 131,
+      "evidence_gate": "cost-capacity",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed"
+      ],
+      "family_id": "housing.affordable-supply",
+      "family_title": "Affordable housing siting and preservation",
+      "horizon": "multi-year",
+      "implementation_status": "design-only",
+      "primary_outcome": "affordable home-years lost relative to targets",
+      "prohibited_claims": [
+        "Do not report selected projects as financed, constructed, occupied, or preserved.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "parcel",
+      "suite": "housing-land-use-regeneration",
+      "title": "Prioritize affordable-housing preservation and development"
+    },
+    {
+      "analysis_modes": [
+        "simulation",
+        "optimization"
+      ],
+      "binding_constraint": "The affordable housing siting and preservation site must respect declared land control, accessibility, permitting, safety, and operating feasibility.",
+      "content_hash": "sha256:4ba0f36a9c18954051162ae487a95e732200f712ef3c2cc048354e89e54a51e5",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Which parcels support feasible affordable homes near opportunity while avoiding hazard and displacement burdens?",
+      "decision_type": "site",
+      "design_id": "scenario.housing.affordable-supply.affordable-housing-sites.v1",
+      "design_order": 132,
+      "evidence_gate": "legal-authority",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "family_id": "housing.affordable-supply",
+      "family_title": "Affordable housing siting and preservation",
+      "horizon": "multi-year",
+      "implementation_status": "design-only",
+      "primary_outcome": "feasible affordable homes outside opportunity access",
+      "prohibited_claims": [
+        "Do not call a screened parcel entitled, acquired, financeable, buildable, or community-supported.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "parcel",
+      "suite": "housing-land-use-regeneration",
+      "title": "Site affordable housing with access and anti-displacement safeguards"
+    },
+    {
+      "analysis_modes": [
+        "simulation",
+        "optimization"
+      ],
+      "binding_constraint": "The affordable housing siting and preservation allocate must respect declared minimum service, eligibility, capacity, and distributional safeguards.",
+      "content_hash": "sha256:0d090e208e9f63261a9b1587cabe62a8cb7bf74ff3747f63ff587351cdc560be",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "How should tax credits, loans, grants, vouchers, and technical capacity be allocated?",
+      "decision_type": "allocate",
+      "design_id": "scenario.housing.affordable-supply.housing-subsidy.v1",
+      "design_order": 133,
+      "evidence_gate": "equity-measurement",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "family_id": "housing.affordable-supply",
+      "family_title": "Affordable housing siting and preservation",
+      "horizon": "weeks",
+      "implementation_status": "design-only",
+      "primary_outcome": "eligible affordable home-years without assigned subsidy",
+      "prohibited_claims": [
+        "Do not report a modeled subsidy allocation as an award, closing, or completed home.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "parcel",
+      "suite": "housing-land-use-regeneration",
+      "title": "Allocate housing subsidy and preservation capacity"
+    },
+    {
+      "analysis_modes": [
+        "forecast",
+        "optimization"
+      ],
+      "binding_constraint": "The affordable housing siting and preservation schedule must respect declared labor, access, sequencing, notice, and completion windows.",
+      "content_hash": "sha256:ecd3df03fc37a6946797e4e3b122fec540b807215aee00ed5882105c91bdee57",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "When should acquisition, resident protection, design, entitlement, finance, construction, and compliance actions occur?",
+      "decision_type": "schedule",
+      "design_id": "scenario.housing.affordable-supply.housing-pipeline-sequence.v1",
+      "design_order": 134,
+      "evidence_gate": "temporal-alignment",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed"
+      ],
+      "family_id": "housing.affordable-supply",
+      "family_title": "Affordable housing siting and preservation",
+      "horizon": "weeks",
+      "implementation_status": "design-only",
+      "primary_outcome": "affordable home-years lost to avoidable project delay",
+      "prohibited_claims": [
+        "Do not call a project schedule approved, financed, under construction, or complete.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "parcel",
+      "suite": "housing-land-use-regeneration",
+      "title": "Schedule affordable-housing pipeline and preservation actions"
+    },
+    {
+      "analysis_modes": [
+        "forecast",
+        "simulation",
+        "optimization"
+      ],
+      "binding_constraint": "The affordable housing siting and preservation stress test must respect declared minimum continuity and safety thresholds across severe scenarios.",
+      "content_hash": "sha256:485a1da96a7f264a694d1200fd5d12e1208165a8599b8bc8ce5e3dd2998d2004",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Which preservation and production strategy sustains affordability across rate, cost, subsidy, and market shocks?",
+      "decision_type": "stress-test",
+      "design_id": "scenario.housing.affordable-supply.housing-finance-shock.v1",
+      "design_order": 135,
+      "evidence_gate": "external-validation",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "family_id": "housing.affordable-supply",
+      "family_title": "Affordable housing siting and preservation",
+      "horizon": "seasonal",
+      "implementation_status": "design-only",
+      "primary_outcome": "scenario-weighted affordable home-years not delivered or preserved",
+      "prohibited_claims": [
+        "Do not present synthetic financing failures or modeled units as observed outcomes.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "citywide",
+      "suite": "housing-land-use-regeneration",
+      "title": "Stress-test affordable-housing delivery under finance and cost shocks"
+    },
+    {
+      "analysis_modes": [
+        "descriptive",
+        "causal"
+      ],
+      "binding_constraint": "The affordable housing siting and preservation evaluate must respect declared pre-specified assignment, comparison, outcome, spillover, and subgroup rules.",
+      "content_hash": "sha256:b425da0d91ee16d0e5a8ffde4daaf2cbaeef7e6976af3fe6c6d6d9fad6e33711",
+      "current_readiness": "blocked-multiple-gates",
+      "decision_question": "Did phased acquisition or rehabilitation preserve verified affordability and housing stability?",
+      "decision_type": "evaluate",
+      "design_id": "scenario.housing.affordable-supply.preservation-program-effect.v1",
+      "design_order": 136,
+      "evidence_gate": "causal-identification",
+      "evidence_types": [
+        "causal",
+        "estimated",
+        "observed",
+        "proposed"
+      ],
+      "family_id": "housing.affordable-supply",
+      "family_title": "Affordable housing siting and preservation",
+      "horizon": "multi-year",
+      "implementation_status": "design-only",
+      "primary_outcome": "change in verified affordable home-years and tenant retention",
+      "prohibited_claims": [
+        "Do not infer causal anti-displacement or well-being effects from project completion alone.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "parcel",
+      "suite": "housing-land-use-regeneration",
+      "title": "Evaluate affordable-housing preservation interventions"
+    }
+  ],
+  "family": {
+    "affected_system": "affordable housing production, preservation, subsidy, and compliance system",
+    "claim_boundary": [
+      "Requests, listings, parcels, and administrative records do not alone verify conditions or need.",
+      "Screened sites and portfolios are not permits, acquisitions, adopted plans, or completed housing.",
+      "Displacement, affordability, habitability, and program effects require direct outcomes and identification."
+    ],
+    "common_source_roles": [
+      "geographic-identity",
+      "housing-market",
+      "land-parcel"
+    ],
+    "decision_owner": "housing development commissioner and affordable-housing finance director",
+    "decision_types": [
+      "diagnose",
+      "forecast",
+      "prioritize",
+      "site",
+      "allocate",
+      "schedule",
+      "stress-test",
+      "evaluate"
+    ],
+    "description": "Eight decisions for supply-risk diagnosis, pipeline forecasting, preservation portfolios, new site selection, subsidy allocation, development scheduling, financing stress, and evaluation.",
+    "design_refs": [
+      "scenario.housing.affordable-supply.affordability-loss-risk.v1",
+      "scenario.housing.affordable-supply.affordable-pipeline.v1",
+      "scenario.housing.affordable-supply.preservation-development-portfolio.v1",
+      "scenario.housing.affordable-supply.affordable-housing-sites.v1",
+      "scenario.housing.affordable-supply.housing-subsidy.v1",
+      "scenario.housing.affordable-supply.housing-pipeline-sequence.v1",
+      "scenario.housing.affordable-supply.housing-finance-shock.v1",
+      "scenario.housing.affordable-supply.preservation-program-effect.v1"
+    ],
+    "design_signatures": [
+      "sha256:760df56edf6b758b4dde2fa47bf3de3295054382d3758b598d9bc00c04a5136c",
+      "sha256:a3c3c890f0bea2183712848a6415f119472b5a3458838acb8b73a17679e50f19",
+      "sha256:c270647f563e8682ffabb52c1ffbae18473b964935a30110d224c277b6f4014a",
+      "sha256:2abdd3400e71da58a66c9b9a8e365b7010a43995afc7310480261f0c8321c322",
+      "sha256:777d03b2ad4feaeee413826ac0405d84dc74c80919475cb14914f7124280af10",
+      "sha256:51f9a90fafe725060b793acc7628eda614052e458bbe3f63e125b307a9d85a6e",
+      "sha256:9b5e49f039ec4a2f6e8cb1c4fdce922f2dceff0872ec90894a81bf4b10730477",
+      "sha256:bfec72e4199c873f19cbcd39a88a4626775ff7bc7be7ea624a7f4ec096ed86f6"
+    ],
+    "family_id": "housing.affordable-supply",
+    "family_order": 17,
+    "schema_version": "1.0.0",
+    "suite": "housing-land-use-regeneration",
+    "title": "Affordable housing siting and preservation"
+  },
+  "library_claim_boundary": [
+    "The catalog contains 240 decision designs, not 240 city executions.",
+    "Exactly twelve designs map to existing Tier-D reference templates; 228 remain design-only.",
+    "A reference implementation can be an explicit negative release and does not imply impact.",
+    "No record claims a city binding, new method, deployment, adoption, or real-user outcome.",
+    "Future execution requires source binding, gate passage, and domain, legal, community, and operational review."
+  ]
+}

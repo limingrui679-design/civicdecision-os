@@ -44,6 +44,11 @@
       "title": "Deep Scenario Executions",
       "type": "integer"
     },
+    "design_only_scenarios": {
+      "minimum": 0,
+      "title": "Design Only Scenarios",
+      "type": "integer"
+    },
     "exposed_city_records": {
       "minimum": 0,
       "title": "Exposed City Records",
@@ -77,6 +82,41 @@
     "optimization_benchmarks": {
       "minimum": 0,
       "title": "Optimization Benchmarks",
+      "type": "integer"
+    },
+    "reference_implemented_designs": {
+      "minimum": 0,
+      "title": "Reference Implemented Designs",
+      "type": "integer"
+    },
+    "scenario_library_audit_passed": {
+      "title": "Scenario Library Audit Passed",
+      "type": "boolean"
+    },
+    "scenario_library_city_bindings": {
+      "minimum": 0,
+      "title": "Scenario Library City Bindings",
+      "type": "integer"
+    },
+    "scenario_library_designs": {
+      "minimum": 0,
+      "title": "Scenario Library Designs",
+      "type": "integer"
+    },
+    "scenario_library_families": {
+      "minimum": 0,
+      "title": "Scenario Library Families",
+      "type": "integer"
+    },
+    "scenario_library_maximum_similarity": {
+      "maximum": 1,
+      "minimum": 0,
+      "title": "Scenario Library Maximum Similarity",
+      "type": "number"
+    },
+    "scenario_library_methods_claimed": {
+      "minimum": 0,
+      "title": "Scenario Library Methods Claimed",
       "type": "integer"
     },
     "schema_version": {
@@ -133,6 +173,14 @@
     "source_artifacts",
     "declared_source_units",
     "standard_scenario_screens",
+    "scenario_library_designs",
+    "scenario_library_families",
+    "reference_implemented_designs",
+    "design_only_scenarios",
+    "scenario_library_city_bindings",
+    "scenario_library_methods_claimed",
+    "scenario_library_audit_passed",
+    "scenario_library_maximum_similarity",
     "nonduplicative_deep_designs",
     "deep_scenario_executions",
     "completed_deep_executions",

@@ -1,0 +1,307 @@
+{
+  "$defs": {
+    "ApplicationSuite": {
+      "enum": [
+        "climate-disaster-resilience",
+        "mobility-accessibility-operations",
+        "population-health-environmental-exposure",
+        "housing-land-use-regeneration",
+        "public-service-operations",
+        "infrastructure-finance-asset-risk",
+        "behavioral-policy-equity"
+      ],
+      "title": "ApplicationSuite",
+      "type": "string"
+    },
+    "CurrentReadiness": {
+      "enum": [
+        "reference-implemented",
+        "uncompiled-current-inputs",
+        "blocked-missing-source",
+        "blocked-method",
+        "blocked-multiple-gates"
+      ],
+      "title": "CurrentReadiness",
+      "type": "string"
+    },
+    "DecisionType": {
+      "enum": [
+        "diagnose",
+        "forecast",
+        "prioritize",
+        "site",
+        "allocate",
+        "schedule",
+        "stress-test",
+        "evaluate"
+      ],
+      "title": "DecisionType",
+      "type": "string"
+    },
+    "ImplementationStatus": {
+      "enum": [
+        "reference-implemented",
+        "design-only"
+      ],
+      "title": "ImplementationStatus",
+      "type": "string"
+    },
+    "ScenarioDesignIndexEntry": {
+      "additionalProperties": false,
+      "properties": {
+        "artifact_path": {
+          "title": "Artifact Path",
+          "type": "string"
+        },
+        "content_hash": {
+          "pattern": "^sha256:[0-9a-f]{64}$",
+          "title": "Content Hash",
+          "type": "string"
+        },
+        "current_readiness": {
+          "$ref": "#/$defs/CurrentReadiness"
+        },
+        "decision_type": {
+          "$ref": "#/$defs/DecisionType"
+        },
+        "design_id": {
+          "pattern": "^[a-z0-9]+(?:[._-][a-z0-9]+)*$",
+          "title": "Design Id",
+          "type": "string"
+        },
+        "design_order": {
+          "maximum": 240,
+          "minimum": 1,
+          "title": "Design Order",
+          "type": "integer"
+        },
+        "design_signature": {
+          "pattern": "^sha256:[0-9a-f]{64}$",
+          "title": "Design Signature",
+          "type": "string"
+        },
+        "existing_template_ref": {
+          "anyOf": [
+            {
+              "pattern": "^[a-z0-9]+(?:[._-][a-z0-9]+)*$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Existing Template Ref"
+        },
+        "family_id": {
+          "pattern": "^[a-z0-9]+(?:[._-][a-z0-9]+)*$",
+          "title": "Family Id",
+          "type": "string"
+        },
+        "implementation_status": {
+          "$ref": "#/$defs/ImplementationStatus"
+        },
+        "suite": {
+          "$ref": "#/$defs/ApplicationSuite"
+        },
+        "title": {
+          "minLength": 5,
+          "title": "Title",
+          "type": "string"
+        }
+      },
+      "required": [
+        "design_order",
+        "design_id",
+        "family_id",
+        "suite",
+        "title",
+        "decision_type",
+        "implementation_status",
+        "current_readiness",
+        "design_signature",
+        "artifact_path",
+        "content_hash"
+      ],
+      "title": "ScenarioDesignIndexEntry",
+      "type": "object"
+    },
+    "ScenarioFamilyIndexEntry": {
+      "additionalProperties": false,
+      "properties": {
+        "artifact_path": {
+          "title": "Artifact Path",
+          "type": "string"
+        },
+        "content_hash": {
+          "pattern": "^sha256:[0-9a-f]{64}$",
+          "title": "Content Hash",
+          "type": "string"
+        },
+        "design_count": {
+          "const": 8,
+          "default": 8,
+          "title": "Design Count",
+          "type": "integer"
+        },
+        "family_id": {
+          "pattern": "^[a-z0-9]+(?:[._-][a-z0-9]+)*$",
+          "title": "Family Id",
+          "type": "string"
+        },
+        "family_order": {
+          "maximum": 30,
+          "minimum": 1,
+          "title": "Family Order",
+          "type": "integer"
+        },
+        "suite": {
+          "$ref": "#/$defs/ApplicationSuite"
+        },
+        "title": {
+          "minLength": 3,
+          "title": "Title",
+          "type": "string"
+        }
+      },
+      "required": [
+        "family_order",
+        "family_id",
+        "suite",
+        "title",
+        "artifact_path",
+        "content_hash"
+      ],
+      "title": "ScenarioFamilyIndexEntry",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "artifact_set_hash": {
+      "pattern": "^sha256:[0-9a-f]{64}$",
+      "title": "Artifact Set Hash",
+      "type": "string"
+    },
+    "city_bound_execution_count": {
+      "const": 0,
+      "default": 0,
+      "title": "City Bound Execution Count",
+      "type": "integer"
+    },
+    "claim_boundary": {
+      "items": {
+        "type": "string"
+      },
+      "minItems": 4,
+      "title": "Claim Boundary",
+      "type": "array"
+    },
+    "current_readiness_counts": {
+      "additionalProperties": {
+        "type": "integer"
+      },
+      "propertyNames": {
+        "$ref": "#/$defs/CurrentReadiness"
+      },
+      "title": "Current Readiness Counts",
+      "type": "object"
+    },
+    "decision_type_counts": {
+      "additionalProperties": {
+        "type": "integer"
+      },
+      "propertyNames": {
+        "$ref": "#/$defs/DecisionType"
+      },
+      "title": "Decision Type Counts",
+      "type": "object"
+    },
+    "definitions_hash": {
+      "pattern": "^sha256:[0-9a-f]{64}$",
+      "title": "Definitions Hash",
+      "type": "string"
+    },
+    "design_count": {
+      "const": 240,
+      "default": 240,
+      "title": "Design Count",
+      "type": "integer"
+    },
+    "designs": {
+      "items": {
+        "$ref": "#/$defs/ScenarioDesignIndexEntry"
+      },
+      "maxItems": 240,
+      "minItems": 240,
+      "title": "Designs",
+      "type": "array"
+    },
+    "families": {
+      "items": {
+        "$ref": "#/$defs/ScenarioFamilyIndexEntry"
+      },
+      "maxItems": 30,
+      "minItems": 30,
+      "title": "Families",
+      "type": "array"
+    },
+    "family_count": {
+      "const": 30,
+      "default": 30,
+      "title": "Family Count",
+      "type": "integer"
+    },
+    "implementation_status_counts": {
+      "additionalProperties": {
+        "type": "integer"
+      },
+      "propertyNames": {
+        "$ref": "#/$defs/ImplementationStatus"
+      },
+      "title": "Implementation Status Counts",
+      "type": "object"
+    },
+    "method_count_claimed": {
+      "const": 0,
+      "default": 0,
+      "title": "Method Count Claimed",
+      "type": "integer"
+    },
+    "published_at": {
+      "format": "date-time",
+      "title": "Published At",
+      "type": "string"
+    },
+    "schema_version": {
+      "const": "1.0.0",
+      "default": "1.0.0",
+      "title": "Schema Version",
+      "type": "string"
+    },
+    "suite_counts": {
+      "additionalProperties": {
+        "type": "integer"
+      },
+      "propertyNames": {
+        "$ref": "#/$defs/ApplicationSuite"
+      },
+      "title": "Suite Counts",
+      "type": "object"
+    }
+  },
+  "required": [
+    "published_at",
+    "suite_counts",
+    "decision_type_counts",
+    "implementation_status_counts",
+    "current_readiness_counts",
+    "definitions_hash",
+    "artifact_set_hash",
+    "designs",
+    "families",
+    "claim_boundary"
+  ],
+  "title": "ScenarioLibraryRegistry",
+  "type": "object"
+}

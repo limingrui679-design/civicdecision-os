@@ -1,0 +1,50 @@
+{
+  "affected_system": "coastal protection, evacuation, and long-term adaptation system",
+  "claim_boundary": [
+    "Hazard observations and modeled exposure do not establish individual harm or causation.",
+    "Proposed adaptations are planning alternatives, not adopted policy or engineered designs.",
+    "A design-only record is not a city execution, validated forecast, or impact result."
+  ],
+  "common_source_roles": [
+    "asset-inventory",
+    "climate-hazard",
+    "geographic-identity"
+  ],
+  "decision_owner": "coastal resilience director and emergency-management commissioner",
+  "decision_types": [
+    "diagnose",
+    "forecast",
+    "prioritize",
+    "site",
+    "allocate",
+    "schedule",
+    "stress-test",
+    "evaluate"
+  ],
+  "description": "Decision designs for coastal exposure diagnosis, surge forecasting, adaptation portfolios, protective siting, emergency allocation, closure timing, compound stress, and evaluation.",
+  "design_refs": [
+    "scenario.climate.coastal-storms.coastal-dependency-exposure.v1",
+    "scenario.climate.coastal-storms.storm-surge-operations.v1",
+    "scenario.climate.coastal-storms.coastal-adaptation-portfolio.v1",
+    "scenario.climate.coastal-storms.coastal-shelter-logistics.v1",
+    "scenario.climate.coastal-storms.coastal-emergency-resources.v1",
+    "scenario.climate.coastal-storms.coastal-closure-evacuation.v1",
+    "scenario.climate.coastal-storms.compound-coastal-failure.v1",
+    "scenario.climate.coastal-storms.coastal-adaptation-effect.v1"
+  ],
+  "design_signatures": [
+    "sha256:15238f45da74dfc8dc6cd35c266002563fad7530acf7c11ba70f27e4b6bfc929",
+    "sha256:4767ba34af4bdd68a85871ec7b31c91a5f17c371e3961a7766d4469238cd4934",
+    "sha256:8ba00fc5c5c54857a3f18bbdf2da65113a70f1c4bc95ea463b860cb51cdb9f88",
+    "sha256:f0a78c4f5696c8816a0e01915c680f329afa3a8ea1ab971205a1bfccbd57f264",
+    "sha256:a0a1c06f0cdbd3836d31084f55d63811abf2c3538193b8776fe9a54260de5b8f",
+    "sha256:2b881f1919d571a1abde072c7806340e7ecc093256bf1ef7582bd62dbdfc244c",
+    "sha256:59fd4094acd8ab9869c6f5c3515f33ef4638d8f7bf0381034a4494b19e9254cb",
+    "sha256:3929cec2ff6ba4949a96e7ee3441b8b8031babd89a68eeddd66f9a2baa81bf66"
+  ],
+  "family_id": "climate.coastal-storms",
+  "family_order": 5,
+  "schema_version": "1.0.0",
+  "suite": "climate-disaster-resilience",
+  "title": "Coastal storms and sea-level adaptation"
+}

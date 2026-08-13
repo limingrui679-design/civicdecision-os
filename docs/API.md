@@ -28,6 +28,10 @@ deterministic copy is `catalog/product/openapi-v1.json`.
 | `GET /api/v1/cities/{city_id}` | Typed city metrics, capabilities, gaps, and provenance |
 | `GET /api/v1/scenarios` | Standard, deep, and reference execution index |
 | `GET /api/v1/scenarios/{execution_id}` | Validated scenario payload and artifact hashes |
+| `GET /api/v1/designs` | Audited scenario-design summaries and compound filters |
+| `GET /api/v1/designs/{design_id}` | Full design contract, family context, audit maximum, and claim boundary |
+| `GET /api/v1/design-families` | Thirty domain-family summaries |
+| `GET /api/v1/design-families/{family_id}` | Full family and its eight ordered design summaries |
 | `GET /api/v1/decision-packs` | Deep and reference DecisionPack index |
 | `GET /api/v1/decision-packs/{execution_id}` | Native DecisionPack contract |
 | `GET /api/v1/decision-packs/{execution_id}/brief` | Same-source Markdown brief |
@@ -35,6 +39,7 @@ deterministic copy is `catalog/product/openapi-v1.json`.
 | `GET /api/v1/suites` | Seven application-suite execution totals |
 | `GET /api/v1/benchmarks` | Analytical benchmark projection |
 | `GET /api/v1/evidence/deep` | Full Tier-D evidence ledger |
+| `GET /api/v1/evidence/scenario-library` | Anti-duplication, implementation, and non-inflation evidence |
 
 ## Filters and pagination
 
@@ -43,6 +48,9 @@ Supported filters include:
 
 - cities: `tier`, `q`, and two-letter `country_code`;
 - scenarios: `kind`, `city_id`, `suite`, `status`, and `q`;
+- designs: `suite`, `family_id`, `decision_type`, `implementation_status`,
+  `current_readiness`, and `q`;
+- design families: `suite` and `q`;
 - DecisionPacks: `city_id`, `status`, and `q`;
 - sources: `source_id`, `publisher`, and `q`.
 
@@ -50,18 +58,30 @@ Scenario status is a closed enum: `completed`, `screened`, `insufficient-evidenc
 `infeasible`. An invented status is a validation error rather than an empty result that could be
 mistaken for absence of evidence.
 
+Design filters are closed enums. The eight decision types are `diagnose`, `forecast`,
+`prioritize`, `site`, `allocate`, `schedule`, `stress-test`, and `evaluate`. Implementation status
+is either `reference-implemented` or `design-only`. Search is case-insensitive and normalizes
+punctuation, allowing `cool roof` to match `cool-roof` without weakening exact identity fields.
+
 Example:
 
 ```bash
 curl -sS \
   'http://127.0.0.1:8000/api/v1/scenarios?kind=deep-pack&status=insufficient-evidence&limit=20'
+
+curl -sS \
+  'http://127.0.0.1:8000/api/v1/designs?decision_type=evaluate&implementation_status=design-only&limit=30'
 ```
 
 ## HTTP behavior
 
-- Successful API GET responses include one catalog-wide strong ETag.
-- `If-None-Match` returns `304` only after a real route resolves successfully; an unknown route
-  cannot be converted into a cache hit.
+- Successful API GET responses include a weak representation-scoped ETag derived from the
+  catalog fingerprint, software version, route path, and sorted query pairs. Validators therefore
+  change across releases, resources, and filters while equivalent query-parameter orderings retain
+  the same semantic identity. Weak notation is deliberate because the tag does not hash the final
+  content-encoded response bytes.
+- `If-None-Match` supports lists, weak/strong comparison, and `*`, but returns `304` only after a
+  real route resolves successfully; an unknown route cannot be converted into a cache hit.
 - API responses use a short revalidation cache policy; health and HTML responses use `no-store`.
 - Responses carry a generated request ID, or preserve a caller-provided ID only when it matches a
   constrained character and length policy.
@@ -84,3 +104,7 @@ independent penetration test.
 Asking for a Tier-S screen as if it were a DecisionPack returns a typed `404` explaining that the
 promotion is deliberately forbidden. Asking for a negative Tier-D pack succeeds because negative
 releases are valid artifacts; its recommendation remains absent.
+
+Retrieving a design succeeds independently of execution readiness. The response preserves
+`city_bindings=[]`, `method_claimed=false`, prohibited claims, and its negative release gate. A
+design detail route never fabricates a DecisionPack or recommendation.

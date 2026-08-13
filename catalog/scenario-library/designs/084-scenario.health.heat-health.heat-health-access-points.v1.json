@@ -1,0 +1,165 @@
+{
+  "affected_system": "heat-health surveillance, prevention, and care coordination",
+  "alternatives": [
+    "screen feasible locations against the largest access gaps for heat-health assessment and referral locations",
+    "co-optimize distributed and high-capacity locations for heat-health assessment and referral locations",
+    "pair care-access facility location with clinical escalation constraints with an explicit stop, review, and escalation rule"
+  ],
+  "analysis_modes": [
+    "simulation",
+    "optimization"
+  ],
+  "assumptions": [
+    "Health records are privacy-preserving, population-defined, timely, and separated from service-request proxies.",
+    "Heat exposure, care seeking, reporting, and intervention effects remain distinct constructs.",
+    "All alternatives, capacities, costs, effects, thresholds, and failure scenarios are proposed until bound to evidence."
+  ],
+  "baseline": "retain only existing approved locations for heat-health assessment and referral locations.",
+  "city_bindings": [],
+  "constraints": [
+    {
+      "binding": true,
+      "constraint_id": "scenario.health.heat-health.heat-health-access-points.v1.constraint.binding",
+      "description": "The heat-health surveillance and prevention site must respect declared land control, accessibility, permitting, safety, and operating feasibility.",
+      "hard": true,
+      "kind": "regulatory",
+      "required_source_roles": [
+        "climate-hazard",
+        "demographic-context",
+        "facility-inventory",
+        "health-outcome",
+        "operating-capacity",
+        "transport-network"
+      ]
+    },
+    {
+      "binding": false,
+      "constraint_id": "scenario.health.heat-health.heat-health-access-points.v1.constraint.evidence-scope",
+      "description": "Every released metric must retain evidence type, source lineage, geography, time, assumptions, and uncertainty.",
+      "hard": true,
+      "kind": "technical",
+      "required_source_roles": [
+        "climate-hazard"
+      ]
+    },
+    {
+      "binding": false,
+      "constraint_id": "scenario.health.heat-health.heat-health-access-points.v1.constraint.decision-authority",
+      "description": "No analytical output may bypass lawful authority, accountable human review, or an applicable appeal process.",
+      "hard": true,
+      "kind": "regulatory",
+      "required_source_roles": [
+        "climate-hazard"
+      ]
+    }
+  ],
+  "current_readiness": "blocked-missing-source",
+  "decision_cadence": "recompiled at each planning cycle and after material evidence change",
+  "decision_owner": "public-health preparedness director and emergency medical services lead",
+  "decision_question": "Where should non-emergency assessment, respite, and referral sites operate during heat events?",
+  "decision_type": "site",
+  "design_id": "scenario.health.heat-health.heat-health-access-points.v1",
+  "design_order": 84,
+  "design_signature": "sha256:5fec244d6c7bc006687d0db8f52d3ea440a269b76274c5cc1eb4a186d95b4912",
+  "evidence_requirements": [
+    "estimated",
+    "observed",
+    "optimized",
+    "proposed",
+    "simulated"
+  ],
+  "family_id": "health.heat-health",
+  "family_title": "Heat-health surveillance and prevention",
+  "horizon": "multi-year",
+  "implementation_status": "design-only",
+  "independence_key": {
+    "binding_constraint": "The heat-health surveillance and prevention site must respect declared land control, accessibility, permitting, safety, and operating feasibility.",
+    "decision_object": "heat-health assessment and referral locations",
+    "evidence_gate": "Evidence for heat-health assessment and referral locations passes documented checks for parcel control, legal authority, environmental review, access, capacity, and operator responsibility.",
+    "horizon": "multi-year",
+    "intervention_mechanism": "care-access facility location with clinical escalation constraints",
+    "primary_outcome": "high-risk residents beyond timely heat-health support",
+    "spatial_unit": "facility"
+  },
+  "intended_claim": "A versioned site design for comparing declared alternatives affecting heat-health assessment and referral locations, conditional on its evidence gate.",
+  "limitations": [
+    "This library record has no city binding and therefore reports no local input, output, or recommendation.",
+    "Readiness describes explicit source and method gates; it does not certify implementation feasibility.",
+    "External domain, legal, community, security, and operational review remains outside this design artifact."
+  ],
+  "method_claimed": false,
+  "objectives": [
+    {
+      "evidence_type": "estimated",
+      "metric": "high-risk residents beyond timely heat-health support",
+      "objective_id": "scenario.health.heat-health.heat-health-access-points.v1.objective.primary",
+      "primary": true,
+      "sense": "minimize",
+      "unit": "people"
+    },
+    {
+      "evidence_type": "estimated",
+      "metric": "distributional gap in high-risk residents beyond timely heat-health support",
+      "objective_id": "scenario.health.heat-health.heat-health-access-points.v1.objective.equity",
+      "primary": false,
+      "sense": "minimize",
+      "unit": "people"
+    },
+    {
+      "evidence_type": "observed",
+      "metric": "decision claims with complete evidence lineage",
+      "objective_id": "scenario.health.heat-health.heat-health-access-points.v1.objective.traceability",
+      "primary": false,
+      "sense": "maximize",
+      "unit": "percent"
+    }
+  ],
+  "prohibited_claims": [
+    "Do not call a community facility a clinical site or safe respite without qualification.",
+    "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+    "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+    "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+  ],
+  "release_gate": {
+    "failure_release": "Release an explicit insufficient-evidence record naming missing sources, failed diagnostics, prohibited claims, and the next validation action.",
+    "failure_status": "insufficient-evidence",
+    "gate_id": "scenario.health.heat-health.heat-health-access-points.v1.gate.release",
+    "gate_type": "legal-authority",
+    "pass_condition": "Evidence for heat-health assessment and referral locations passes documented checks for parcel control, legal authority, environmental review, access, capacity, and operator responsibility.",
+    "required_evidence_types": [
+      "observed",
+      "proposed"
+    ],
+    "required_source_roles": [
+      "climate-hazard",
+      "demographic-context",
+      "facility-inventory",
+      "health-outcome",
+      "operating-capacity",
+      "transport-network"
+    ]
+  },
+  "required_source_roles": [
+    "climate-hazard",
+    "demographic-context",
+    "facility-inventory",
+    "health-outcome",
+    "operating-capacity",
+    "transport-network"
+  ],
+  "schema_version": "1.0.0",
+  "spatial_unit": "facility",
+  "suite": "population-health-environmental-exposure",
+  "tags": [
+    "design-only",
+    "health.heat-health",
+    "population-health-environmental-exposure",
+    "scenario-library",
+    "site"
+  ],
+  "title": "Site heat-health assessment and respite access points",
+  "transportability_risks": [
+    "Clinical coding, surveillance coverage, acclimatization, housing, and care access vary.",
+    "Small-area health estimates may be unstable or disclosure-sensitive."
+  ]
+}

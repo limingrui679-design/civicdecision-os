@@ -1,5 +1,5 @@
 {
-  "artifact_count": 33,
+  "artifact_count": 336,
   "artifacts": [
     {
       "byte_count": 1008,
@@ -8,8 +8,8 @@
       "path": "benchmarks/overview.json"
     },
     {
-      "byte_count": 1146,
-      "content_hash": "sha256:aa2cc26c88bbbbce3e58c3182c180cb53e6bb4ed0a16d8b9694b78ea11cecf96",
+      "byte_count": 1609,
+      "content_hash": "sha256:c8ff2d960ac13104db0b9d110a314cbb6376813b70bdeca44dac4d15b12a07ba",
       "media_type": "application/json",
       "path": "catalog-summary.json"
     },
@@ -42,6 +42,2050 @@
       "record_count": 30
     },
     {
+      "byte_count": 16690,
+      "content_hash": "sha256:3a968ba14e5077a0c80c935420f2d0882842399d2ec8fb3ebfa93670029dfbbe",
+      "media_type": "application/json",
+      "path": "design-families/detail/climate.coastal-storms.json",
+      "record_count": 8
+    },
+    {
+      "byte_count": 16421,
+      "content_hash": "sha256:16cc5b7e4196365cf2f206d7439be0c933c2d3d1ce034b86ef06e1483e71df3e",
+      "media_type": "application/json",
+      "path": "design-families/detail/climate.drought-water.json",
+      "record_count": 8
+    },
+    {
+      "byte_count": 16459,
+      "content_hash": "sha256:27586a0751f20658d7d0b327c7a74637299cb890dda13368a472f355fd64d8fa",
+      "media_type": "application/json",
+      "path": "design-families/detail/climate.extreme-heat.json",
+      "record_count": 8
+    },
+    {
+      "byte_count": 16522,
+      "content_hash": "sha256:0cb0158c349087b2809f66fbdd4fe03d750bbe01497f742acd35ef1ee1241a0d",
+      "media_type": "application/json",
+      "path": "design-families/detail/climate.flood-stormwater.json",
+      "record_count": 8
+    },
+    {
+      "byte_count": 16383,
+      "content_hash": "sha256:d94cc5e972d8fe1f89d49b5b3d7d2198a9dad122b23a4cb78cc6590771508472",
+      "media_type": "application/json",
+      "path": "design-families/detail/climate.wildfire-smoke.json",
+      "record_count": 8
+    },
+    {
+      "byte_count": 17396,
+      "content_hash": "sha256:5b75b5fb73d3bb2e0dbd3aee1ce7a8c480cb34fedce502e49a94e66dcd65750e",
+      "media_type": "application/json",
+      "path": "design-families/detail/equity.algorithmic-governance.json",
+      "record_count": 8
+    },
+    {
+      "byte_count": 17454,
+      "content_hash": "sha256:e951b6f30050a829139fcbf76b8dbf5fda50a63e04649d5030eb925a95d81554",
+      "media_type": "application/json",
+      "path": "design-families/detail/equity.compliance-incentives.json",
+      "record_count": 8
+    },
+    {
+      "byte_count": 17158,
+      "content_hash": "sha256:9c2ed19ec0bdfcc754c9f2eea1548461d5811f8aac43d2a330342ffeaa72ff7e",
+      "media_type": "application/json",
+      "path": "design-families/detail/equity.distributional-service.json",
+      "record_count": 8
+    },
+    {
+      "byte_count": 17464,
+      "content_hash": "sha256:c55694e13a829fcb585e923ed9e3b778cc9ef707c3ac50cc789365e91a9e46bf",
+      "media_type": "application/json",
+      "path": "design-families/detail/equity.participation-communication.json",
+      "record_count": 8
+    },
+    {
+      "byte_count": 17192,
+      "content_hash": "sha256:3c081a884ddfe5c87a71038e478dddc90608adda69c8b15297933725a1c7e31b",
+      "media_type": "application/json",
+      "path": "design-families/detail/health.air-quality.json",
+      "record_count": 8
+    },
+    {
+      "byte_count": 17067,
+      "content_hash": "sha256:629e3087f1e8c489f3de94153adb95c31afee8cd6a6f7a7cd6791dfafe6fbc2a",
+      "media_type": "application/json",
+      "path": "design-families/detail/health.food-environment.json",
+      "record_count": 8
+    },
+    {
+      "byte_count": 16808,
+      "content_hash": "sha256:f3c3cdc5f4f7f7729fd08228132c1e471b546ac259fd63a91fbe1e2633af0592",
+      "media_type": "application/json",
+      "path": "design-families/detail/health.heat-health.json",
+      "record_count": 8
+    },
+    {
+      "byte_count": 17247,
+      "content_hash": "sha256:8467921b4bc3a02b53dbe143bb703fc95d1a8a2f1ddddc3dddd8b063ea2c6aaf",
+      "media_type": "application/json",
+      "path": "design-families/detail/health.infectious-operations.json",
+      "record_count": 8
+    },
+    {
+      "byte_count": 17156,
+      "content_hash": "sha256:49debc12c16e4eb64f124bf8cf20655da87caeb73f6a478b75d50df858984613",
+      "media_type": "application/json",
+      "path": "design-families/detail/housing.affordable-supply.json",
+      "record_count": 8
+    },
+    {
+      "byte_count": 17213,
+      "content_hash": "sha256:0fa44164cccab1fc92ba54edee61392e171024f654a067e81a1738fa331fd91f",
+      "media_type": "application/json",
+      "path": "design-families/detail/housing.habitability-code.json",
+      "record_count": 8
+    },
+    {
+      "byte_count": 17306,
+      "content_hash": "sha256:f97606890bb824f348a420b608c390309b692b23b269a65f1d5fe1a1aecf6e31",
+      "media_type": "application/json",
+      "path": "design-families/detail/housing.homelessness-prevention.json",
+      "record_count": 8
+    },
+    {
+      "byte_count": 17495,
+      "content_hash": "sha256:7eabd6e02096c08a58f9ef96df3157df47390ea81391ac8eeac433c5c4842bbb",
+      "media_type": "application/json",
+      "path": "design-families/detail/housing.land-use-regeneration.json",
+      "record_count": 8
+    },
+    {
+      "byte_count": 17219,
+      "content_hash": "sha256:a6ed4fb3a7a3015ab945b879d5134154c3fb2649c67815fbc5189709a9035d76",
+      "media_type": "application/json",
+      "path": "design-families/detail/infrastructure.capital-finance.json",
+      "record_count": 8
+    },
+    {
+      "byte_count": 17368,
+      "content_hash": "sha256:75c055a8f8b20321f88ca65be30cd1a89110a2fb0d9cafadbb35128147f6f006",
+      "media_type": "application/json",
+      "path": "design-families/detail/infrastructure.energy-buildings.json",
+      "record_count": 8
+    },
+    {
+      "byte_count": 17124,
+      "content_hash": "sha256:c8b08464e56512c0227ab832f6476dedb0d6466b4224a69aa621b41e662eb1a0",
+      "media_type": "application/json",
+      "path": "design-families/detail/infrastructure.roads-bridges.json",
+      "record_count": 8
+    },
+    {
+      "byte_count": 17058,
+      "content_hash": "sha256:a2aa54b786ce1afb2560a192fe82360c48e206c2a5b08ae7fe33b94b26bc7f95",
+      "media_type": "application/json",
+      "path": "design-families/detail/infrastructure.water-wastewater.json",
+      "record_count": 8
+    },
+    {
+      "byte_count": 16923,
+      "content_hash": "sha256:ea412e5e12a1ff672854ffc9ec7729b7daa212fc9fd6e49f2f5e75d4ff179f4c",
+      "media_type": "application/json",
+      "path": "design-families/detail/mobility.active-mobility.json",
+      "record_count": 8
+    },
+    {
+      "byte_count": 16925,
+      "content_hash": "sha256:99bb979a831431d7c2f64ec0f075ebba304eb992e44e308a1568d934010a139e",
+      "media_type": "application/json",
+      "path": "design-families/detail/mobility.emergency-mobility.json",
+      "record_count": 8
+    },
+    {
+      "byte_count": 16547,
+      "content_hash": "sha256:6665afbfd616410a8c366066534a1456515c67f41fe89ae56cd2376148bf10fd",
+      "media_type": "application/json",
+      "path": "design-families/detail/mobility.freight-curb.json",
+      "record_count": 8
+    },
+    {
+      "byte_count": 17108,
+      "content_hash": "sha256:fa9d80011f8ad85f1d9ca774fa0c30c281693032629a51b6b57b49db43c877d2",
+      "media_type": "application/json",
+      "path": "design-families/detail/mobility.pedestrian-safety.json",
+      "record_count": 8
+    },
+    {
+      "byte_count": 16980,
+      "content_hash": "sha256:00aed1d9a7119d6af16bb5ce0dd208b09d8f8c35d737c682e42b7cda362f8b44",
+      "media_type": "application/json",
+      "path": "design-families/detail/mobility.transit-reliability.json",
+      "record_count": 8
+    },
+    {
+      "byte_count": 16997,
+      "content_hash": "sha256:252c863659a6f510eba32f3e898f2875b9fa09a5c23ce48d4b9bfcb62d7b1a84",
+      "media_type": "application/json",
+      "path": "design-families/detail/public-service.demand.json",
+      "record_count": 8
+    },
+    {
+      "byte_count": 17461,
+      "content_hash": "sha256:7c922bfcfa91fdb440669afd82e17a6dcee842a7324092f6adc136144bce72ad",
+      "media_type": "application/json",
+      "path": "design-families/detail/public-service.digital-access.json",
+      "record_count": 8
+    },
+    {
+      "byte_count": 17151,
+      "content_hash": "sha256:55edd97a406d72582f92d4ff90f0e928cd489727542ac8f1d7d3a187e1036206",
+      "media_type": "application/json",
+      "path": "design-families/detail/public-service.emergency-response.json",
+      "record_count": 8
+    },
+    {
+      "byte_count": 17094,
+      "content_hash": "sha256:490770acccbcda0f40870138f4c5b0853380430b36336e5f4b8e4b3bedfa2678",
+      "media_type": "application/json",
+      "path": "design-families/detail/public-service.sanitation.json",
+      "record_count": 8
+    },
+    {
+      "byte_count": 29502,
+      "content_hash": "sha256:e095ac57b6df29f758af1bc5dbfa10cf00d3b2707a90d3fe80b49af93825b78e",
+      "media_type": "application/json",
+      "path": "design-families/index.json",
+      "record_count": 30
+    },
+    {
+      "byte_count": 53297,
+      "content_hash": "sha256:17d9059c3a0690b4c797924e554e0940fb9a34e721486a85e683d7e2f74579f9",
+      "media_type": "application/json",
+      "path": "designs/decision-type/allocate.json",
+      "record_count": 30
+    },
+    {
+      "byte_count": 51610,
+      "content_hash": "sha256:0fe032e4437b49b3e0aaa85e6b05c1556032c02361088c0919e206eafc5edca2",
+      "media_type": "application/json",
+      "path": "designs/decision-type/diagnose.json",
+      "record_count": 30
+    },
+    {
+      "byte_count": 53296,
+      "content_hash": "sha256:b291742c61c7fced5d5611db71fb95735c5950d93ead337f15258dea6ab38c5d",
+      "media_type": "application/json",
+      "path": "designs/decision-type/evaluate.json",
+      "record_count": 30
+    },
+    {
+      "byte_count": 50628,
+      "content_hash": "sha256:f711d70f8d214dc780d8e0cce47fcc88d03d444e2093596e87e1133a9d5e23b4",
+      "media_type": "application/json",
+      "path": "designs/decision-type/forecast.json",
+      "record_count": 30
+    },
+    {
+      "byte_count": 52557,
+      "content_hash": "sha256:39315d3f8d4f21530a3f8eb193eb7e0698039d0d0a507c80f2dcf290ade38248",
+      "media_type": "application/json",
+      "path": "designs/decision-type/prioritize.json",
+      "record_count": 30
+    },
+    {
+      "byte_count": 52037,
+      "content_hash": "sha256:95fec58220254122b6a22c44f5af6ffbe1904862f8658740a3d7a83792597f4e",
+      "media_type": "application/json",
+      "path": "designs/decision-type/schedule.json",
+      "record_count": 30
+    },
+    {
+      "byte_count": 53142,
+      "content_hash": "sha256:b4df07d69547851d6793d2ded0e31383ce22080783da245688b1852d8af06df5",
+      "media_type": "application/json",
+      "path": "designs/decision-type/site.json",
+      "record_count": 30
+    },
+    {
+      "byte_count": 54795,
+      "content_hash": "sha256:27984eadc56d8a008442b9cd86a373d32f735c3a8a905755dfb41f629438c5ba",
+      "media_type": "application/json",
+      "path": "designs/decision-type/stress-test.json",
+      "record_count": 30
+    },
+    {
+      "byte_count": 397875,
+      "content_hash": "sha256:83c18b339273b258545bb35a894d4d3e2ba31c69161f2dfaa6dbb320df0cca89",
+      "media_type": "application/json",
+      "path": "designs/design-only.json",
+      "record_count": 228
+    },
+    {
+      "byte_count": 10680,
+      "content_hash": "sha256:92897cfb6a81092d9036d7b43383f109db887310df59009559815bbc82045260",
+      "media_type": "application/json",
+      "path": "designs/detail/scenario.climate.coastal-storms.coastal-adaptation-effect.v1.json",
+      "record_count": 1
+    },
+    {
+      "byte_count": 10573,
+      "content_hash": "sha256:c0e57c50be2a88caf9298d7f435c3c6e69fac65d4b0b46ad4b09fbb32bf86c14",
+      "media_type": "application/json",
+      "path": "designs/detail/scenario.climate.coastal-storms.coastal-adaptation-portfolio.v1.json",
+      "record_count": 1
+    },
+    {
+      "byte_count": 10595,
+      "content_hash": "sha256:bbcb7d25befca80317f93f7d8ef3574c33d20293dc303c838aa77b7e87c005aa",
+      "media_type": "application/json",
+      "path": "designs/detail/scenario.climate.coastal-storms.coastal-closure-evacuation.v1.json",
+      "record_count": 1
+    },
+    {
+      "byte_count": 10484,
+      "content_hash": "sha256:16c6726b22a6a5038973e3d2fb32bd09103692855324c368448d789cbbf89c2c",
+      "media_type": "application/json",
+      "path": "designs/detail/scenario.climate.coastal-storms.coastal-dependency-exposure.v1.json",
+      "record_count": 1
+    },
+    {
+      "byte_count": 10637,
+      "content_hash": "sha256:4bc4b304e8e8a6b4beca1c736386f175b15fb441ad75ab2dafc5371dd3152398",
+      "media_type": "application/json",
+      "path": "designs/detail/scenario.climate.coastal-storms.coastal-emergency-resources.v1.json",
+      "record_count": 1
+    },
+    {
+      "byte_count": 10480,
+      "content_hash": "sha256:0c9618693028d2116a52d84f6da34d993ed1a0beb8aefe521803c7a8b25309e2",
+      "media_type": "application/json",
+      "path": "designs/detail/scenario.climate.coastal-storms.coastal-shelter-logistics.v1.json",
+      "record_count": 1
+    },
+    {
+      "byte_count": 10489,
+      "content_hash": "sha256:0a4073df8fb21c4e86ea64870f46e980c05f55d75c380fcd491a24124646725f",
+      "media_type": "application/json",
+      "path": "designs/detail/scenario.climate.coastal-storms.compound-coastal-failure.v1.json",
+      "record_count": 1
+    },
+    {
+      "byte_count": 10397,
+      "content_hash": "sha256:bc1cc45a523a031eadd8bf8655f18464eba79b856999474ef9cf921dc7d9166e",
+      "media_type": "application/json",
+      "path": "designs/detail/scenario.climate.coastal-storms.storm-surge-operations.v1.json",
+      "record_count": 1
+    },
+    {
+      "byte_count": 10584,
+      "content_hash": "sha256:3c20c7c23fc02e725244abd2fa7f1aeb72fade930dfa9df92f6889cbcda76181",
+      "media_type": "application/json",
+      "path": "designs/detail/scenario.climate.drought-water.conservation-incentive-effect.v1.json",
+      "record_count": 1
+    },
+    {
+      "byte_count": 10183,
+      "content_hash": "sha256:c877bd31af6c66e4a66de34805309892073083d823c3f91787b4e380a46518e4",
+      "media_type": "application/json",
+      "path": "designs/detail/scenario.climate.drought-water.drought-operations.v1.json",
+      "record_count": 1
+    },
+    {
+      "byte_count": 10174,
+      "content_hash": "sha256:138232cc4b961a678d32c45ebf9ff34f65dc7f19072ce08e4d1da573aa0bd0d3",
+      "media_type": "application/json",
+      "path": "designs/detail/scenario.climate.drought-water.drought-supply-demand.v1.json",
+      "record_count": 1
+    },
+    {
+      "byte_count": 10419,
+      "content_hash": "sha256:ccd45f3552a9166f71182aa72339443565d404c9e5f9319a34be68b84d208514",
+      "media_type": "application/json",
+      "path": "designs/detail/scenario.climate.drought-water.multi-year-water-security.v1.json",
+      "record_count": 1
+    },
+    {
+      "byte_count": 10380,
+      "content_hash": "sha256:529e6e5d87260663effa472b799e161e087d8e35c0a2c2b59a2236ce77e3e44e",
+      "media_type": "application/json",
+      "path": "designs/detail/scenario.climate.drought-water.reuse-storage-facilities.v1.json",
+      "record_count": 1
+    },
+    {
+      "byte_count": 10276,
+      "content_hash": "sha256:35f4bc63f0ae5473e23af2aa2fc62fc232da56bf0b0fa067c7032a2cf33ec58b",
+      "media_type": "application/json",
+      "path": "designs/detail/scenario.climate.drought-water.scarce-water-allocation.v1.json",
+      "record_count": 1
+    },
+    {
+      "byte_count": 10088,
+      "content_hash": "sha256:eec9edef406419bc5305ec7a718a127fdddcee92e4516f8bb182de8cdf2c1551",
+      "media_type": "application/json",
+      "path": "designs/detail/scenario.climate.drought-water.water-loss-balance.v1.json",
+      "record_count": 1
+    },
+    {
+      "byte_count": 10293,
+      "content_hash": "sha256:d5d99f22435a5629dcbb3a3d674ca1c8cdbcc865338a6384290f078978d9ea4b",
+      "media_type": "application/json",
+      "path": "designs/detail/scenario.climate.drought-water.water-security-portfolio.v1.json",
+      "record_count": 1
+    },
+    {
+      "byte_count": 10720,
+      "content_hash": "sha256:408f99ee003726176fd2880369ab177e527d90d495418c2f2e3c600c90beec4f",
+      "media_type": "application/json",
+      "path": "designs/detail/scenario.climate.extreme-heat.compound-heat-continuity.v1.json",
+      "record_count": 1
+    },
+    {
+      "byte_count": 10458,
+      "content_hash": "sha256:9f6163ebe5a868bbb0f4aae554fe44bf52aad75f9536f3dcdc33cb34eea028a1",
+      "media_type": "application/json",
+      "path": "designs/detail/scenario.climate.extreme-heat.cool-roof-impact.v1.json",
+      "record_count": 1
+    },
+    {
+      "byte_count": 10228,
+      "content_hash": "sha256:30f95a5334a3fb639f44d63865239df247492cfd2e149f4a548aa9e35c202750",
+      "media_type": "application/json",
+      "path": "designs/detail/scenario.climate.extreme-heat.cooling-center-network.v1.json",
+      "record_count": 1
+    },
+    {
+      "byte_count": 10169,
+      "content_hash": "sha256:5538a3bc5552cd3414ccdc636c9e79e2d75056538bcadc4238be1a74112b70c3",
+      "media_type": "application/json",
+      "path": "designs/detail/scenario.climate.extreme-heat.cooling-investments.v1.json",
+      "record_count": 1
+    },
+    {
+      "byte_count": 10151,
+      "content_hash": "sha256:1bc6ee89ab91657b9ada9f246cc37de941b3d990c9c52a1d5b438e48eae55e4c",
+      "media_type": "application/json",
+      "path": "designs/detail/scenario.climate.extreme-heat.heat-access-gaps.v1.json",
+      "record_count": 1
+    },
+    {
+      "byte_count": 10131,
+      "content_hash": "sha256:628b8a60c286b6354e1715b40f5394fefa6a99a6dab13f53b67fe884b6d02efa",
+      "media_type": "application/json",
+      "path": "designs/detail/scenario.climate.extreme-heat.heat-operations-calendar.v1.json",
+      "record_count": 1
+    },
+    {
+      "byte_count": 10260,
+      "content_hash": "sha256:0abeedf68ce65813abfec082207156d746e105a7fe5ba856b3fb907231bc9bd8",
+      "media_type": "application/json",
+      "path": "designs/detail/scenario.climate.extreme-heat.heat-response-resources.v1.json",
+      "record_count": 1
+    },
+    {
+      "byte_count": 10005,
+      "content_hash": "sha256:5f34bc20c46699bd7e9e5ad8a6a9524acf436e23fffe15aa8774170112836040",
+      "media_type": "application/json",
+      "path": "designs/detail/scenario.climate.extreme-heat.heat-service-demand.v1.json",
+      "record_count": 1
+    },
+    {
+      "byte_count": 10855,
+      "content_hash": "sha256:1d1a9605ac04d32ca6193cb78c57ae42c8b1aa1a26115b0068b283854520523d",
+      "media_type": "application/json",
+      "path": "designs/detail/scenario.climate.flood-stormwater.compound-rainfall-continuity.v1.json",
+      "record_count": 1
+    },
+    {
+      "byte_count": 10387,
+      "content_hash": "sha256:a64cdd7d04732b6104f700bbed9bbe39bbfe60ef466635bb0daa476a6aa695a0",
+      "media_type": "application/json",
+      "path": "designs/detail/scenario.climate.flood-stormwater.drainage-failure-patterns.v1.json",
+      "record_count": 1
+    },
+    {
+      "byte_count": 10372,
+      "content_hash": "sha256:ab1880bbc2e743b8a4f868487007b6395f5f3a06a2bf9e6984e36889960e55b5",
+      "media_type": "application/json",
+      "path": "designs/detail/scenario.climate.flood-stormwater.drainage-maintenance-window.v1.json",
+      "record_count": 1
+    },
+    {
+      "byte_count": 10277,
+      "content_hash": "sha256:79dd2687d67eb9968ee1d8eb99ca53b17b5b650f8390cf199d39f84e83a36f04",
+      "media_type": "application/json",
+      "path": "designs/detail/scenario.climate.flood-stormwater.drainage-renewal.v1.json",
+      "record_count": 1
+    },
+    {
+      "byte_count": 10285,
+      "content_hash": "sha256:b9904414ca2d115fa2e3528484405d40544f8dcaaf8c646e256cc3e56d112775",
+      "media_type": "application/json",
+      "path": "designs/detail/scenario.climate.flood-stormwater.flood-response-assets.v1.json",
+      "record_count": 1
+    },
+    {
+      "byte_count": 10469,
+      "content_hash": "sha256:8a747f86b10233c1b4ac7c2c324dab92dfd2b0273665626de4854b48d9d56c0e",
+      "media_type": "application/json",
+      "path": "designs/detail/scenario.climate.flood-stormwater.green-infrastructure-effect.v1.json",
+      "record_count": 1
+    },
+    {
+      "byte_count": 10342,
+      "content_hash": "sha256:f7a8ed2aa0c4e3d689d2245b5b5d716ea43fe8d6a9b5d745f58806f3ade62d08",
+      "media_type": "application/json",
+      "path": "designs/detail/scenario.climate.flood-stormwater.retention-storage-sites.v1.json",
+      "record_count": 1
+    },
+    {
+      "byte_count": 10207,
+      "content_hash": "sha256:a599d13f7c2645e74e87c772f569c6be5819c0071a0d776956ef2734654b6d7f",
+      "media_type": "application/json",
+      "path": "designs/detail/scenario.climate.flood-stormwater.runoff-response-demand.v1.json",
+      "record_count": 1
+    },
+    {
+      "byte_count": 10249,
+      "content_hash": "sha256:559e58b6abe3692d45ac172967089c2a4b7e20ca96ed5d477df1fbedf93e9f73",
+      "media_type": "application/json",
+      "path": "designs/detail/scenario.climate.wildfire-smoke.clean-air-centers.v1.json",
+      "record_count": 1
+    },
+    {
+      "byte_count": 10402,
+      "content_hash": "sha256:09d46c334cde5edf93bd6799fd92b9cb1b201a6a8d331e922573323d90c9fd29",
+      "media_type": "application/json",
+      "path": "designs/detail/scenario.climate.wildfire-smoke.filters-monitors-outreach.v1.json",
+      "record_count": 1
+    },
+    {
+      "byte_count": 10443,
+      "content_hash": "sha256:b24895b41a0f46121e9782868db7587299b3c41994e8f51bb4f4dceeb7dc61e4",
+      "media_type": "application/json",
+      "path": "designs/detail/scenario.climate.wildfire-smoke.filtration-program-effect.v1.json",
+      "record_count": 1
+    },
+    {
+      "byte_count": 10417,
+      "content_hash": "sha256:38fa88c2a95406d5bd3d26c7bed19224f6eefb823b0a8e8f47d9fab61019c911",
+      "media_type": "application/json",
+      "path": "designs/detail/scenario.climate.wildfire-smoke.filtration-retrofits.v1.json",
+      "record_count": 1
+    },
+    {
+      "byte_count": 10406,
+      "content_hash": "sha256:5efba76fbeb469f69621db3eb2f98a2e9cc25c93112e08f33931b11927064ac3",
+      "media_type": "application/json",
+      "path": "designs/detail/scenario.climate.wildfire-smoke.prolonged-smoke-continuity.v1.json",
+      "record_count": 1
+    },
+    {
+      "byte_count": 10226,
+      "content_hash": "sha256:5fa92ad8b8c4dd6938e23277be861744bf1a887ecfffbdb7dc32c919b88f3c35",
+      "media_type": "application/json",
+      "path": "designs/detail/scenario.climate.wildfire-smoke.smoke-episode-load.v1.json",
+      "record_count": 1
+    },
+    {
+      "byte_count": 10216,
+      "content_hash": "sha256:fff8ba9a592f81b5f25f9a985595d2edbaf31f2659ee81d0bab9713270a2ef65",
+      "media_type": "application/json",
+      "path": "designs/detail/scenario.climate.wildfire-smoke.smoke-protection-gaps.v1.json",
+      "record_count": 1
+    },
+    {
+      "byte_count": 10341,
+      "content_hash": "sha256:d480d902076735a628143b81c430c5d54084d90edf81fd1412247c5b4774f587",
+      "media_type": "application/json",
+      "path": "designs/detail/scenario.climate.wildfire-smoke.smoke-safe-activities.v1.json",
+      "record_count": 1
+    },
+    {
+      "byte_count": 11349,
+      "content_hash": "sha256:e772c58071766e661c9f978b75027cc29b1808faab9cc67318f75b87a4c0b8c0",
+      "media_type": "application/json",
+      "path": "designs/detail/scenario.equity.algorithmic-governance.algorithmic-failure.v1.json",
+      "record_count": 1
+    },
+    {
+      "byte_count": 11112,
+      "content_hash": "sha256:cdf5dfb90f0a7fc0a47215ac35069ed556b959a590d94f2b0f4bff0c7d29a5ef",
+      "media_type": "application/json",
+      "path": "designs/detail/scenario.equity.algorithmic-governance.audit-monitoring-cycle.v1.json",
+      "record_count": 1
+    },
+    {
+      "byte_count": 11892,
+      "content_hash": "sha256:1a4e18a472978400a8615d634a9180667f97c54c7e143065814d9b01598363f3",
+      "media_type": "application/json",
+      "path": "designs/detail/scenario.equity.algorithmic-governance.decision-support-effect.v1.json",
+      "record_count": 1
+    },
+    {
+      "byte_count": 11071,
+      "content_hash": "sha256:bebd94ba0dee6b130d71bdf343843ef434f5936789dc34d5bf596343446aa86b",
+      "media_type": "application/json",
+      "path": "designs/detail/scenario.equity.algorithmic-governance.decision-system-risks.v1.json",
+      "record_count": 1
+    },
+    {
+      "byte_count": 11081,
+      "content_hash": "sha256:14a3eb2e4f5496c81af50ce5f8e95abd3aa381a8e915ab663804607aa5daa2b2",
+      "media_type": "application/json",
+      "path": "designs/detail/scenario.equity.algorithmic-governance.governance-controls.v1.json",
+      "record_count": 1
+    },
+    {
+      "byte_count": 11141,
+      "content_hash": "sha256:3459123acbdbbad80b2c71016c45499d6331b5f59df58a81abe6c5c95cac45b3",
+      "media_type": "application/json",
+      "path": "designs/detail/scenario.equity.algorithmic-governance.human-review-access.v1.json",
+      "record_count": 1
+    },
+    {
+      "byte_count": 11140,
+      "content_hash": "sha256:dd163821e2cd0c023e52980d568c31391e2b77e32a81b07dff531050d9d34c22",
+      "media_type": "application/json",
+      "path": "designs/detail/scenario.equity.algorithmic-governance.oversight-capacity.v1.json",
+      "record_count": 1
+    },
+    {
+      "byte_count": 11076,
+      "content_hash": "sha256:74af4b5df806a9451abd02742efe03bab4b1dde2cf6b37e6c95b740b464ffc7c",
+      "media_type": "application/json",
+      "path": "designs/detail/scenario.equity.algorithmic-governance.review-appeal-demand.v1.json",
+      "record_count": 1
+    },
+    {
+      "byte_count": 11364,
+      "content_hash": "sha256:ef9f1c526988f9aaca13dcb46aea2a64c8fbfd55778bbcd04e20a020097466fb",
+      "media_type": "application/json",
+      "path": "designs/detail/scenario.equity.compliance-incentives.assistance-enforcement-capacity.v1.json",
+      "record_count": 1
+    },
+    {
+      "byte_count": 11484,
+      "content_hash": "sha256:d0cb91379030e16666e6621a87f1d251e4700ad146be0b87173abdec78e14023",
+      "media_type": "application/json",
+      "path": "designs/detail/scenario.equity.compliance-incentives.assistance-incentive-effect.v1.json",
+      "record_count": 1
+    },
+    {
+      "byte_count": 11088,
+      "content_hash": "sha256:c22096e3a2be4de6fab9f1a20adc2281b5e7b49b87327c206191a07f392c13ad",
+      "media_type": "application/json",
+      "path": "designs/detail/scenario.equity.compliance-incentives.assistance-inspection-demand.v1.json",
+      "record_count": 1
+    },
+    {
+      "byte_count": 11279,
+      "content_hash": "sha256:3ff22d962898a6166753d77dfdaf731f0d62fec1250ed6213d825e0312692ab6",
+      "media_type": "application/json",
+      "path": "designs/detail/scenario.equity.compliance-incentives.compliance-assistance-access.v1.json",
+      "record_count": 1
+    },
+    {
+      "byte_count": 11223,
+      "content_hash": "sha256:46b126009de7c9d55c8c82bb15b3e3765a02427209b466099edf836263d5d26b",
+      "media_type": "application/json",
+      "path": "designs/detail/scenario.equity.compliance-incentives.compliance-policy-portfolio.v1.json",
+      "record_count": 1
+    },
+    {
+      "byte_count": 11138,
+      "content_hash": "sha256:8bce7103ebb990ee71066305a66f0092b9f61ae6cb57a30e7521226efbf061c3",
+      "media_type": "application/json",
+      "path": "designs/detail/scenario.equity.compliance-incentives.compliance-process-friction.v1.json",
+      "record_count": 1
+    },
+    {
+      "byte_count": 11302,
+      "content_hash": "sha256:b5f196e6ccd284d4fa60512d90f0f7d5848498639558e87144a60a858ff6860e",
+      "media_type": "application/json",
+      "path": "designs/detail/scenario.equity.compliance-incentives.notice-assistance-inspection.v1.json",
+      "record_count": 1
+    },
+    {
+      "byte_count": 11391,
+      "content_hash": "sha256:ea1e0f75ed4e8c9372d103b83f613761f21829a2bdfa0b5d1a99ebd4a56fedd0",
+      "media_type": "application/json",
+      "path": "designs/detail/scenario.equity.compliance-incentives.policy-response-uncertainty.v1.json",
+      "record_count": 1
+    },
+    {
+      "byte_count": 10963,
+      "content_hash": "sha256:dca95e63a5a3a43671d854b886a776a22079f7f1e99e0188d76ae24a7b397f8f",
+      "media_type": "application/json",
+      "path": "designs/detail/scenario.equity.distributional-service.equitable-service-need.v1.json",
+      "record_count": 1
+    },
+    {
+      "byte_count": 11029,
+      "content_hash": "sha256:9b547de8491d2021d2961c55119e74096716e0a7a2ff0163f207265414a1823f",
+      "media_type": "application/json",
+      "path": "designs/detail/scenario.equity.distributional-service.equitable-service-network.v1.json",
+      "record_count": 1
+    },
+    {
+      "byte_count": 11031,
+      "content_hash": "sha256:08b81f2a2040b1c2a7fe1b49f569583831d72341fed9dc4cbb38b792d73a61cf",
+      "media_type": "application/json",
+      "path": "designs/detail/scenario.equity.distributional-service.equity-improvement-portfolio.v1.json",
+      "record_count": 1
+    },
+    {
+      "byte_count": 11250,
+      "content_hash": "sha256:22601bbd722673ec6fae862a705477af37ae5b438d5b40423df3e09b951635c0",
+      "media_type": "application/json",
+      "path": "designs/detail/scenario.equity.distributional-service.equity-policy-effect.v1.json",
+      "record_count": 1
+    },
+    {
+      "byte_count": 10971,
+      "content_hash": "sha256:53143636d23064c99c18454a0e812e819c34eb18adf35a817fad9c1d901a17d0",
+      "media_type": "application/json",
+      "path": "designs/detail/scenario.equity.distributional-service.equity-remediation.v1.json",
+      "record_count": 1
+    },
+    {
+      "byte_count": 11154,
+      "content_hash": "sha256:8bd57a844abd5950712b6048dc5f75f1efeaf3819678ea85455a58347e786ad9",
+      "media_type": "application/json",
+      "path": "designs/detail/scenario.equity.distributional-service.equity-under-disruption.v1.json",
+      "record_count": 1
+    },
+    {
+      "byte_count": 11381,
+      "content_hash": "sha256:576a868ab9f85be0bf10c924844c422d84e611df30c156b3dad6f20bb9ba5569",
+      "media_type": "application/json",
+      "path": "designs/detail/scenario.equity.distributional-service.minimum-service-capacity.v1.json",
+      "record_count": 1
+    },
+    {
+      "byte_count": 10967,
+      "content_hash": "sha256:a428637682dca52ff77a5f067e520f763798fb943f7f01f89176f3036e481b93",
+      "media_type": "application/json",
+      "path": "designs/detail/scenario.equity.distributional-service.service-disparities.v1.json",
+      "record_count": 1
+    },
+    {
+      "byte_count": 11388,
+      "content_hash": "sha256:309b403cda9979c98084468a2afa47f34f4f967b10a539d47901dc60e1c2cc0d",
+      "media_type": "application/json",
+      "path": "designs/detail/scenario.equity.participation-communication.communication-failure.v1.json",
+      "record_count": 1
+    },
+    {
+      "byte_count": 11136,
+      "content_hash": "sha256:d5fc14667e9bd74387b832e03f75e068c0c64fc2933f4b0609fa0ada15b5360d",
+      "media_type": "application/json",
+      "path": "designs/detail/scenario.equity.participation-communication.engagement-demand.v1.json",
+      "record_count": 1
+    },
+    {
+      "byte_count": 11515,
+      "content_hash": "sha256:6d6594f098fd12c9d070c4e60b1a38e0a42d4f5316e3a55ab187b807c6d94c16",
+      "media_type": "application/json",
+      "path": "designs/detail/scenario.equity.participation-communication.engagement-design-effect.v1.json",
+      "record_count": 1
+    },
+    {
+      "byte_count": 11243,
+      "content_hash": "sha256:677edfc87406807a47c027afb8f253e3004d385cfd6f66e77f7a611db96c962f",
+      "media_type": "application/json",
+      "path": "designs/detail/scenario.equity.participation-communication.engagement-feedback-cycle.v1.json",
+      "record_count": 1
+    },
+    {
+      "byte_count": 11266,
+      "content_hash": "sha256:93da6291674005c6ede44e52fed82e92be94e9cb296b495fea2a9d112c095a42",
+      "media_type": "application/json",
+      "path": "designs/detail/scenario.equity.participation-communication.engagement-support.v1.json",
+      "record_count": 1
+    },
+    {
+      "byte_count": 11216,
+      "content_hash": "sha256:755f57073e1ec92c6c754dddabdfb97d0d47f1ca38ad11f44a18d8863079a4fc",
+      "media_type": "application/json",
+      "path": "designs/detail/scenario.equity.participation-communication.engagement-venues.v1.json",
+      "record_count": 1
+    },
+    {
+      "byte_count": 11390,
+      "content_hash": "sha256:5f2a0b29b69d258747455f917121b7de31f987d210c475034627672b77935d39",
+      "media_type": "application/json",
+      "path": "designs/detail/scenario.equity.participation-communication.inclusive-engagement-portfolio.v1.json",
+      "record_count": 1
+    },
+    {
+      "byte_count": 11071,
+      "content_hash": "sha256:59bbdd0f543a6751d874b038d00a47f23d8cd32ef6f980acd10b589113f53fe7",
+      "media_type": "application/json",
+      "path": "designs/detail/scenario.equity.participation-communication.participation-gaps.v1.json",
+      "record_count": 1
+    },
+    {
+      "byte_count": 10740,
+      "content_hash": "sha256:4abdce5f59863a0f433a7aec5253579a8104d93a687140a34972011f2e126b5d",
+      "media_type": "application/json",
+      "path": "designs/detail/scenario.health.air-quality.air-health-response.v1.json",
+      "record_count": 1
+    },
+    {
+      "byte_count": 11216,
+      "content_hash": "sha256:77dfe51c97b4a38ffc7a6901930434acfdd5464498d37514fb48064b610ae643",
+      "media_type": "application/json",
+      "path": "designs/detail/scenario.health.air-quality.clean-air-program-effect.v1.json",
+      "record_count": 1
+    },
+    {
+      "byte_count": 11278,
+      "content_hash": "sha256:32a994a11f704ec52d77090249c4ca58e2d6e30ed9c13d56f651282abc111d59",
+      "media_type": "application/json",
+      "path": "designs/detail/scenario.health.air-quality.exposure-health-discordance.v1.json",
+      "record_count": 1
+    },
+    {
+      "byte_count": 10951,
+      "content_hash": "sha256:8866bbb45ae55e5368ae789493bac6c88e04b755964b541174765eb77144a9c9",
+      "media_type": "application/json",
+      "path": "designs/detail/scenario.health.air-quality.exposure-reduction-portfolio.v1.json",
+      "record_count": 1
+    },
+    {
+      "byte_count": 10992,
+      "content_hash": "sha256:bb05af16090633a9345305ac36b786697c96669c6aaa4e1ed4115a2a4af51b16",
+      "media_type": "application/json",
+      "path": "designs/detail/scenario.health.air-quality.monitor-protection-network.v1.json",
+      "record_count": 1
+    },
+    {
+      "byte_count": 11091,
+      "content_hash": "sha256:ae8cf4678488222199cfae4d488e596e76b859ac9c69c2df24547a57d5ab486f",
+      "media_type": "application/json",
+      "path": "designs/detail/scenario.health.air-quality.pollution-health-continuity.v1.json",
+      "record_count": 1
+    },
+    {
+      "byte_count": 10768,
+      "content_hash": "sha256:c4bdb5cff8f4e02eda8c14bd22e1e314b9f409aa00b49f5630119689df92c025",
+      "media_type": "application/json",
+      "path": "designs/detail/scenario.health.air-quality.respiratory-demand.v1.json",
+      "record_count": 1
+    },
+    {
+      "byte_count": 10878,
+      "content_hash": "sha256:8b99c01f24b114c7f67f3115684d6e2fb6ff5e1c0f80129278e76401b2dfb767",
+      "media_type": "application/json",
+      "path": "designs/detail/scenario.health.air-quality.respiratory-protection.v1.json",
+      "record_count": 1
+    },
+    {
+      "byte_count": 11006,
+      "content_hash": "sha256:4e22faab25869fd3f2dd7f1390ff3b6c429029592c8320878c02428fed05e5a0",
+      "media_type": "application/json",
+      "path": "designs/detail/scenario.health.food-environment.food-access-services.v1.json",
+      "record_count": 1
+    },
+    {
+      "byte_count": 10845,
+      "content_hash": "sha256:0e540ba7fa14dc1a5ceeac9a88b6e37be1d9014a4fb20a25052b9ab220a0bf4c",
+      "media_type": "application/json",
+      "path": "designs/detail/scenario.health.food-environment.food-environment-gaps.v1.json",
+      "record_count": 1
+    },
+    {
+      "byte_count": 10963,
+      "content_hash": "sha256:c30342ab4dc33cf1606098383315ea837f0b7a9b6131236b5877b1ffd2bcd8a4",
+      "media_type": "application/json",
+      "path": "designs/detail/scenario.health.food-environment.food-health-portfolio.v1.json",
+      "record_count": 1
+    },
+    {
+      "byte_count": 11161,
+      "content_hash": "sha256:ab5f8262cdf695ab6fd15b13eb60064ca2c27159b82b55fea90687fe15fe186f",
+      "media_type": "application/json",
+      "path": "designs/detail/scenario.health.food-environment.food-system-disruption.v1.json",
+      "record_count": 1
+    },
+    {
+      "byte_count": 10975,
+      "content_hash": "sha256:c3badce73f4197ad02a918e845b8c01df909d4b4965494aff3cabd74e9fc5417",
+      "media_type": "application/json",
+      "path": "designs/detail/scenario.health.food-environment.inspection-assistance-demand.v1.json",
+      "record_count": 1
+    },
+    {
+      "byte_count": 11144,
+      "content_hash": "sha256:731a885558c7446fc39f1f7b0ac9bd39b8d94115b40df590becd525ceeb70cf0",
+      "media_type": "application/json",
+      "path": "designs/detail/scenario.health.food-environment.inspection-assistance-resources.v1.json",
+      "record_count": 1
+    },
+    {
+      "byte_count": 11038,
+      "content_hash": "sha256:99a87cdc3221578f7b09eb92ddf879f748e6e12d94b2433671f26866bb02b535",
+      "media_type": "application/json",
+      "path": "designs/detail/scenario.health.food-environment.inspection-mobile-service.v1.json",
+      "record_count": 1
+    },
+    {
+      "byte_count": 11293,
+      "content_hash": "sha256:61087d02818d42a337274a1c628e61146f1cd04bf215e0439d85d9ef42b4354f",
+      "media_type": "application/json",
+      "path": "designs/detail/scenario.health.food-environment.mobile-food-access-effect.v1.json",
+      "record_count": 1
+    },
+    {
+      "byte_count": 10480,
+      "content_hash": "sha256:b1f8333e0af3d50526cd21aaf2a8a914575cf4e3a550f197f9573c7ee60e471a",
+      "media_type": "application/json",
+      "path": "designs/detail/scenario.health.heat-health.heat-care-demand.v1.json",
+      "record_count": 1
+    },
+    {
+      "byte_count": 10854,
+      "content_hash": "sha256:b927a0bf5a1abef492ae6126e193ca3eeca5dc03920886bf310d3319c211c72f",
+      "media_type": "application/json",
+      "path": "designs/detail/scenario.health.heat-health.heat-health-access-points.v1.json",
+      "record_count": 1
+    },
+    {
+      "byte_count": 10748,
+      "content_hash": "sha256:e440e09def2596101c60d804ff11b9c409fb04e11b40e110274e22185969b948",
+      "media_type": "application/json",
+      "path": "designs/detail/scenario.health.heat-health.heat-health-outreach.v1.json",
+      "record_count": 1
+    },
+    {
+      "byte_count": 10837,
+      "content_hash": "sha256:0326c7ebe29f1fa370611f151d281d399da7b49edb37008ee5dd875157f232d5",
+      "media_type": "application/json",
+      "path": "designs/detail/scenario.health.heat-health.heat-health-surge.v1.json",
+      "record_count": 1
+    },
+    {
+      "byte_count": 10775,
+      "content_hash": "sha256:27a32dd6bce938481df80c6c532cb0a99400a8544957ee22f82e239f198db38e",
+      "media_type": "application/json",
+      "path": "designs/detail/scenario.health.heat-health.heat-health-surveillance.v1.json",
+      "record_count": 1
+    },
+    {
+      "byte_count": 10579,
+      "content_hash": "sha256:21e443baad370fa994dc4c618bf9e17684a6cdcc9711b4475f038d7e1892a144",
+      "media_type": "application/json",
+      "path": "designs/detail/scenario.health.heat-health.heat-illness-patterns.v1.json",
+      "record_count": 1
+    },
+    {
+      "byte_count": 10963,
+      "content_hash": "sha256:6dbe5147ed192f08668560ae1d38880cf685bd0a1bef6d005ea62d877e80f222",
+      "media_type": "application/json",
+      "path": "designs/detail/scenario.health.heat-health.heat-outreach-effect.v1.json",
+      "record_count": 1
+    },
+    {
+      "byte_count": 10744,
+      "content_hash": "sha256:1bedc31097c2726738934d021d0be3c129771d9f02cff89ce90086ebb3940259",
+      "media_type": "application/json",
+      "path": "designs/detail/scenario.health.heat-health.heat-prevention-portfolio.v1.json",
+      "record_count": 1
+    },
+    {
+      "byte_count": 10733,
+      "content_hash": "sha256:8ad85780b021c7a122e4a04796be5c3247673454070c9e7952cab6b8dccfc57a",
+      "media_type": "application/json",
+      "path": "designs/detail/scenario.health.infectious-operations.care-testing-demand.v1.json",
+      "record_count": 1
+    },
+    {
+      "byte_count": 11046,
+      "content_hash": "sha256:8e38bc0046d2600b1cc6debf8eb980c6d105436bf6ae2af87e2f14977dd7d141",
+      "media_type": "application/json",
+      "path": "designs/detail/scenario.health.infectious-operations.clinic-lab-calendar.v1.json",
+      "record_count": 1
+    },
+    {
+      "byte_count": 11131,
+      "content_hash": "sha256:48ad113111daa1a3af646f595c754588bbae03d9c386b1a6f7484aa965ab55bb",
+      "media_type": "application/json",
+      "path": "designs/detail/scenario.health.infectious-operations.multi-pathogen-surge.v1.json",
+      "record_count": 1
+    },
+    {
+      "byte_count": 11220,
+      "content_hash": "sha256:a982021c0f9ba46d7b3fb80156173fc93f622df9df03af8f6c388905b945cf91",
+      "media_type": "application/json",
+      "path": "designs/detail/scenario.health.infectious-operations.outreach-access-effect.v1.json",
+      "record_count": 1
+    },
+    {
+      "byte_count": 10891,
+      "content_hash": "sha256:9329ff0d85cc0266ff3d0eaaca9d345b7d2a5d5d8b052cdf2a95981ddd785383",
+      "media_type": "application/json",
+      "path": "designs/detail/scenario.health.infectious-operations.preparedness-portfolio.v1.json",
+      "record_count": 1
+    },
+    {
+      "byte_count": 10875,
+      "content_hash": "sha256:0b1377be9affd7a7af6dd78c5f0f2cd73de15aea40455fca1a23c9402833b1dd",
+      "media_type": "application/json",
+      "path": "designs/detail/scenario.health.infectious-operations.surveillance-discordance.v1.json",
+      "record_count": 1
+    },
+    {
+      "byte_count": 11121,
+      "content_hash": "sha256:2e6e7d7d1eb18e1a6d31f8ac5cefbe447b353530dbbdbff9e96a4e797453757d",
+      "media_type": "application/json",
+      "path": "designs/detail/scenario.health.infectious-operations.testing-vaccination-sites.v1.json",
+      "record_count": 1
+    },
+    {
+      "byte_count": 11086,
+      "content_hash": "sha256:d5bdffa1aa1f2d97142bbfdefb99404dbf2df3c431eccccbad17fd510334f3d5",
+      "media_type": "application/json",
+      "path": "designs/detail/scenario.health.infectious-operations.vaccines-tests-treatment.v1.json",
+      "record_count": 1
+    },
+    {
+      "byte_count": 10964,
+      "content_hash": "sha256:cca6ca130c554ee9a8b3585ec7e6154bdd6dc1a5f34474ddc77bf1a023be0cf0",
+      "media_type": "application/json",
+      "path": "designs/detail/scenario.housing.affordable-supply.affordability-loss-risk.v1.json",
+      "record_count": 1
+    },
+    {
+      "byte_count": 11130,
+      "content_hash": "sha256:afc82eee3ce40eb5ebe48e195d6accaab2c712fad9bd810314da314cc8e3719a",
+      "media_type": "application/json",
+      "path": "designs/detail/scenario.housing.affordable-supply.affordable-housing-sites.v1.json",
+      "record_count": 1
+    },
+    {
+      "byte_count": 10890,
+      "content_hash": "sha256:29a8a1b9dbd87b5b9dbd5945a4247f7674334718378a8d0cfbd8f1501fa6f1cc",
+      "media_type": "application/json",
+      "path": "designs/detail/scenario.housing.affordable-supply.affordable-pipeline.v1.json",
+      "record_count": 1
+    },
+    {
+      "byte_count": 11236,
+      "content_hash": "sha256:c53f0726b0d34d71bc92b88013ca8788cef3245d764fe9cb4cc7d84138ca5912",
+      "media_type": "application/json",
+      "path": "designs/detail/scenario.housing.affordable-supply.housing-finance-shock.v1.json",
+      "record_count": 1
+    },
+    {
+      "byte_count": 11064,
+      "content_hash": "sha256:fd1b20a35153780ce0fc1e2c7a5134babb4ccbae7fc8a99cbd9e687bb22a6abf",
+      "media_type": "application/json",
+      "path": "designs/detail/scenario.housing.affordable-supply.housing-pipeline-sequence.v1.json",
+      "record_count": 1
+    },
+    {
+      "byte_count": 10985,
+      "content_hash": "sha256:5254bcfdd54b66737087e6206b06917f948f06a52c5ec120e1391d8422359846",
+      "media_type": "application/json",
+      "path": "designs/detail/scenario.housing.affordable-supply.housing-subsidy.v1.json",
+      "record_count": 1
+    },
+    {
+      "byte_count": 11109,
+      "content_hash": "sha256:fbea48724edbed5f43ea0ad164fa0edcccca09e35d2fdfb8c68d93f14dc31e29",
+      "media_type": "application/json",
+      "path": "designs/detail/scenario.housing.affordable-supply.preservation-development-portfolio.v1.json",
+      "record_count": 1
+    },
+    {
+      "byte_count": 11422,
+      "content_hash": "sha256:5bb7e2cd994be519e4e82bccac06c8fc878e6c81dcbda4b8b367a4d49126b4ba",
+      "media_type": "application/json",
+      "path": "designs/detail/scenario.housing.affordable-supply.preservation-program-effect.v1.json",
+      "record_count": 1
+    },
+    {
+      "byte_count": 11322,
+      "content_hash": "sha256:1049a0f37e1e1109b12c46de7677053293c193a9466cafc6db270de2ba0ca276",
+      "media_type": "application/json",
+      "path": "designs/detail/scenario.housing.habitability-code.habitability-interventions.v1.json",
+      "record_count": 1
+    },
+    {
+      "byte_count": 10853,
+      "content_hash": "sha256:d57a4e94a0faec10fdea1db432dccee8b3ed2411572c46c171b141e681d9a8a2",
+      "media_type": "application/json",
+      "path": "designs/detail/scenario.housing.habitability-code.habitability-signals.v1.json",
+      "record_count": 1
+    },
+    {
+      "byte_count": 11212,
+      "content_hash": "sha256:e4f61fff00ba9fe07c9736b2b17cce09b33f54e95d0fa335fca56d8b0ed4a42c",
+      "media_type": "application/json",
+      "path": "designs/detail/scenario.housing.habitability-code.housing-emergency-surge.v1.json",
+      "record_count": 1
+    },
+    {
+      "byte_count": 11045,
+      "content_hash": "sha256:a37671bcfb47bb4280541de7a5a17b62083cd4b97cc43854a7664ceeaba4cd63",
+      "media_type": "application/json",
+      "path": "designs/detail/scenario.housing.habitability-code.inspection-enforcement-calendar.v1.json",
+      "record_count": 1
+    },
+    {
+      "byte_count": 10917,
+      "content_hash": "sha256:62925d09c8f26265bf8d4392a7819b7674daefc48665ff69397bd99e1506866a",
+      "media_type": "application/json",
+      "path": "designs/detail/scenario.housing.habitability-code.inspection-repair-demand.v1.json",
+      "record_count": 1
+    },
+    {
+      "byte_count": 11175,
+      "content_hash": "sha256:f68a5abb8c62b4a35327d64f5320b1c4d26a89d36cb4e44d1fbb2e6f8c6f5819",
+      "media_type": "application/json",
+      "path": "designs/detail/scenario.housing.habitability-code.inspectors-repair-support.v1.json",
+      "record_count": 1
+    },
+    {
+      "byte_count": 11313,
+      "content_hash": "sha256:f253d6c05c403447ea77252feb64d72ac9ca9ad8ce75b1f9923d867554e047f7",
+      "media_type": "application/json",
+      "path": "designs/detail/scenario.housing.habitability-code.proactive-inspection-effect.v1.json",
+      "record_count": 1
+    },
+    {
+      "byte_count": 11058,
+      "content_hash": "sha256:544e636c37e816ec397684ac72f8c1b9413712cf58f1fe2cbaa1b48ea84d5018",
+      "media_type": "application/json",
+      "path": "designs/detail/scenario.housing.habitability-code.tenant-service-access.v1.json",
+      "record_count": 1
+    },
+    {
+      "byte_count": 11294,
+      "content_hash": "sha256:05a5a089a9cc8a3cdf86db1581dae2f5cf772fffd303a538cd31143cdc19c325",
+      "media_type": "application/json",
+      "path": "designs/detail/scenario.housing.homelessness-prevention.housing-stability-surge.v1.json",
+      "record_count": 1
+    },
+    {
+      "byte_count": 11128,
+      "content_hash": "sha256:b45433aa0eb2ce1fda66e50bb0b665be92ecbb9b9a250194562d06fd59980d72",
+      "media_type": "application/json",
+      "path": "designs/detail/scenario.housing.homelessness-prevention.prevention-assistance.v1.json",
+      "record_count": 1
+    },
+    {
+      "byte_count": 11043,
+      "content_hash": "sha256:4db3bc9f41ec792ca7c161e540e82ceb24b9249baed398f85eddb079ddc5051c",
+      "media_type": "application/json",
+      "path": "designs/detail/scenario.housing.homelessness-prevention.prevention-caseflow.v1.json",
+      "record_count": 1
+    },
+    {
+      "byte_count": 11088,
+      "content_hash": "sha256:8e5caf7b87068c3c263a87ae5488593329d6cb391c9a9afed2121898bf959afb",
+      "media_type": "application/json",
+      "path": "designs/detail/scenario.housing.homelessness-prevention.prevention-service-demand.v1.json",
+      "record_count": 1
+    },
+    {
+      "byte_count": 11383,
+      "content_hash": "sha256:d546388da6109502ef0b4f65f94d1ef9520799da91f7b36f2ea9537cb400615a",
+      "media_type": "application/json",
+      "path": "designs/detail/scenario.housing.homelessness-prevention.rental-assistance-effect.v1.json",
+      "record_count": 1
+    },
+    {
+      "byte_count": 11145,
+      "content_hash": "sha256:327e4e67c1a7e21b0428dfea145e112b058c93828bff9d56eb1b6bfde3459100",
+      "media_type": "application/json",
+      "path": "designs/detail/scenario.housing.homelessness-prevention.stability-access-hubs.v1.json",
+      "record_count": 1
+    },
+    {
+      "byte_count": 11091,
+      "content_hash": "sha256:61597557d92a612c73ab970e202cda0da5933732ae646c61ed5f063b891d8d01",
+      "media_type": "application/json",
+      "path": "designs/detail/scenario.housing.homelessness-prevention.stability-program-portfolio.v1.json",
+      "record_count": 1
+    },
+    {
+      "byte_count": 11126,
+      "content_hash": "sha256:867796ab22f3450f49ccdeccdafb00f912d42936165434dbc416beea6f7eca1a",
+      "media_type": "application/json",
+      "path": "designs/detail/scenario.housing.homelessness-prevention.stability-service-gaps.v1.json",
+      "record_count": 1
+    },
+    {
+      "byte_count": 11251,
+      "content_hash": "sha256:02f85b9ab089827a71872cfcb10f0d28a5c129753ab1ed68410839843318c90a",
+      "media_type": "application/json",
+      "path": "designs/detail/scenario.housing.land-use-regeneration.community-anchor-sites.v1.json",
+      "record_count": 1
+    },
+    {
+      "byte_count": 11128,
+      "content_hash": "sha256:5c9dc1f09030ff8ad38a61b7c1fcc427a4cf8cd34c2db626cfd7e58d31f4e318",
+      "media_type": "application/json",
+      "path": "designs/detail/scenario.housing.land-use-regeneration.development-displacement.v1.json",
+      "record_count": 1
+    },
+    {
+      "byte_count": 11108,
+      "content_hash": "sha256:6ed4d726b9cee08d0cea4994dd6fb9cccc87ac8ca8a6f2bfdc82ae1c830a49b3",
+      "media_type": "application/json",
+      "path": "designs/detail/scenario.housing.land-use-regeneration.land-use-friction.v1.json",
+      "record_count": 1
+    },
+    {
+      "byte_count": 11295,
+      "content_hash": "sha256:e7783d5c0fb1a5f969579a17c3a5f3e94cbaccf321486019fe7beaf27b2732b1",
+      "media_type": "application/json",
+      "path": "designs/detail/scenario.housing.land-use-regeneration.regeneration-benefits.v1.json",
+      "record_count": 1
+    },
+    {
+      "byte_count": 11433,
+      "content_hash": "sha256:af180642fb1615df7d2f3cbe5f1a6c958e05dd88f49ba05618c18e9c9898b987",
+      "media_type": "application/json",
+      "path": "designs/detail/scenario.housing.land-use-regeneration.regeneration-effect.v1.json",
+      "record_count": 1
+    },
+    {
+      "byte_count": 11097,
+      "content_hash": "sha256:ca78fad8f7e0ee6698b14d3b759af23fcf0e3603de6757e28ba9439cbb8ae6ba",
+      "media_type": "application/json",
+      "path": "designs/detail/scenario.housing.land-use-regeneration.regeneration-investments.v1.json",
+      "record_count": 1
+    },
+    {
+      "byte_count": 11351,
+      "content_hash": "sha256:bffccc96df21f43fff502fb15500f7a03557bdde736ec986e33a74f6782a792b",
+      "media_type": "application/json",
+      "path": "designs/detail/scenario.housing.land-use-regeneration.regeneration-market-shock.v1.json",
+      "record_count": 1
+    },
+    {
+      "byte_count": 11066,
+      "content_hash": "sha256:1a8a4089cdd4a775231dfa772ff774854d83039036fed52b46cbfa5da9a30b7c",
+      "media_type": "application/json",
+      "path": "designs/detail/scenario.housing.land-use-regeneration.regeneration-phasing.v1.json",
+      "record_count": 1
+    },
+    {
+      "byte_count": 10972,
+      "content_hash": "sha256:f2effb266e16f359565a644b786c9f94c11cd30710577338f62ce70750a547a2",
+      "media_type": "application/json",
+      "path": "designs/detail/scenario.infrastructure.capital-finance.capital-delivery.v1.json",
+      "record_count": 1
+    },
+    {
+      "byte_count": 10988,
+      "content_hash": "sha256:ff65e07481d418781a78686fbc204d0a4c49f9890ec1cefbb01d568283c665a5",
+      "media_type": "application/json",
+      "path": "designs/detail/scenario.infrastructure.capital-finance.capital-fiscal-outlook.v1.json",
+      "record_count": 1
+    },
+    {
+      "byte_count": 11020,
+      "content_hash": "sha256:8bb852b3b0fef4262eb6851512030b4ce362c9a4e2976f9cf77972c6a415db35",
+      "media_type": "application/json",
+      "path": "designs/detail/scenario.infrastructure.capital-finance.capital-funding.v1.json",
+      "record_count": 1
+    },
+    {
+      "byte_count": 10993,
+      "content_hash": "sha256:fabf524d504835fb6c63163d745f234bacdc176cd23e88670b95d475e4ab2e6b",
+      "media_type": "application/json",
+      "path": "designs/detail/scenario.infrastructure.capital-finance.capital-investment-portfolio.v1.json",
+      "record_count": 1
+    },
+    {
+      "byte_count": 10948,
+      "content_hash": "sha256:c66af26d24c9bb879e37dd7e8520a8e6dd2fb5955eed48ffae9a6bbed223359b",
+      "media_type": "application/json",
+      "path": "designs/detail/scenario.infrastructure.capital-finance.capital-obligation-friction.v1.json",
+      "record_count": 1
+    },
+    {
+      "byte_count": 11237,
+      "content_hash": "sha256:d58bd7a57e88018152d98aea49bdb4448a52d2b3ebab02e08b41b3193494de01",
+      "media_type": "application/json",
+      "path": "designs/detail/scenario.infrastructure.capital-finance.capital-reserve-assets.v1.json",
+      "record_count": 1
+    },
+    {
+      "byte_count": 11338,
+      "content_hash": "sha256:b3073827f14a21048968c9debdb503dc74874643cab333094ceefc0fca0f30f1",
+      "media_type": "application/json",
+      "path": "designs/detail/scenario.infrastructure.capital-finance.delivery-reform-effect.v1.json",
+      "record_count": 1
+    },
+    {
+      "byte_count": 11204,
+      "content_hash": "sha256:55058f51088094f059093747d4f131ee820df02fc854a2c72cc452e48241166b",
+      "media_type": "application/json",
+      "path": "designs/detail/scenario.infrastructure.capital-finance.fiscal-capital-shock.v1.json",
+      "record_count": 1
+    },
+    {
+      "byte_count": 11220,
+      "content_hash": "sha256:94599de3d3721ad1ccac1bf8f1d4d388d2b18cbfabbabc65dee174967cb1082f",
+      "media_type": "application/json",
+      "path": "designs/detail/scenario.infrastructure.energy-buildings.building-energy-performance.v1.json",
+      "record_count": 1
+    },
+    {
+      "byte_count": 11337,
+      "content_hash": "sha256:ab80ad6f329bdaf9faf6ce15f732f9fb814571ae64fae19462e06493f243a5ea",
+      "media_type": "application/json",
+      "path": "designs/detail/scenario.infrastructure.energy-buildings.building-grid-stress.v1.json",
+      "record_count": 1
+    },
+    {
+      "byte_count": 11055,
+      "content_hash": "sha256:a39a2604f8d0f4ea471058f486de51d488ee7f79bc9d217dfdee4fa0cfc57be6",
+      "media_type": "application/json",
+      "path": "designs/detail/scenario.infrastructure.energy-buildings.building-load-emissions.v1.json",
+      "record_count": 1
+    },
+    {
+      "byte_count": 11013,
+      "content_hash": "sha256:c4ac8048ee0bd6db41b4c9ae926d29468188b6e9ab4f5c7282b5846ecf5b5ca6",
+      "media_type": "application/json",
+      "path": "designs/detail/scenario.infrastructure.energy-buildings.decarbonization-portfolio.v1.json",
+      "record_count": 1
+    },
+    {
+      "byte_count": 11146,
+      "content_hash": "sha256:9163dd367b450ee3fcc8f87bb68a899cff48698aa948674b365e59157a952701",
+      "media_type": "application/json",
+      "path": "designs/detail/scenario.infrastructure.energy-buildings.decarbonization-projects.v1.json",
+      "record_count": 1
+    },
+    {
+      "byte_count": 11341,
+      "content_hash": "sha256:d902474e3277d9026d499ccf88e89b13cc6f4b29d994b4e008ef249359417497",
+      "media_type": "application/json",
+      "path": "designs/detail/scenario.infrastructure.energy-buildings.distributed-clean-energy.v1.json",
+      "record_count": 1
+    },
+    {
+      "byte_count": 11256,
+      "content_hash": "sha256:55c3042db163a4f7c65c5b06ac13f785206f621c4b5936b89b1bcbca0447422c",
+      "media_type": "application/json",
+      "path": "designs/detail/scenario.infrastructure.energy-buildings.energy-capital-capacity.v1.json",
+      "record_count": 1
+    },
+    {
+      "byte_count": 11345,
+      "content_hash": "sha256:ed9543ec0cc714046ed3a3f12045fe6776582163ef670491c99809b483912f74",
+      "media_type": "application/json",
+      "path": "designs/detail/scenario.infrastructure.energy-buildings.retrofit-performance.v1.json",
+      "record_count": 1
+    },
+    {
+      "byte_count": 10886,
+      "content_hash": "sha256:6e2bbba405aff8d428e4ec7a7bcae887b3b9735634ce70eaadd21c9ba9b65b68",
+      "media_type": "application/json",
+      "path": "designs/detail/scenario.infrastructure.roads-bridges.asset-condition-failure.v1.json",
+      "record_count": 1
+    },
+    {
+      "byte_count": 10894,
+      "content_hash": "sha256:b79e609bce930a375db83173139d7ce7751490310730a1e9d3479114b7507982",
+      "media_type": "application/json",
+      "path": "designs/detail/scenario.infrastructure.roads-bridges.asset-deterioration.v1.json",
+      "record_count": 1
+    },
+    {
+      "byte_count": 10995,
+      "content_hash": "sha256:21d7b6f648d6e558bc3ae9c87ef8748fc2e9e4288af57009c5953584cddffb5f",
+      "media_type": "application/json",
+      "path": "designs/detail/scenario.infrastructure.roads-bridges.maintenance-construction.v1.json",
+      "record_count": 1
+    },
+    {
+      "byte_count": 10962,
+      "content_hash": "sha256:73ff1fedcfffc23af50a3c72191a1e4861dfeb58408497e132e066f697fd9638",
+      "media_type": "application/json",
+      "path": "designs/detail/scenario.infrastructure.roads-bridges.maintenance-crews-equipment.v1.json",
+      "record_count": 1
+    },
+    {
+      "byte_count": 11102,
+      "content_hash": "sha256:0a3783c015a386c8587edc6e12d8eb2017152896427cdfd558743bae869d061e",
+      "media_type": "application/json",
+      "path": "designs/detail/scenario.infrastructure.roads-bridges.maintenance-depots.v1.json",
+      "record_count": 1
+    },
+    {
+      "byte_count": 11333,
+      "content_hash": "sha256:496ee49148c86ec9afb6d9cf1acb11e0a2645046dca64c274b2c54891bd4828c",
+      "media_type": "application/json",
+      "path": "designs/detail/scenario.infrastructure.roads-bridges.maintenance-renewal.v1.json",
+      "record_count": 1
+    },
+    {
+      "byte_count": 11381,
+      "content_hash": "sha256:da94d7b47c0f0deae5b40b4071c7a09e91af3c99f220f6e11e7b734e6d481665",
+      "media_type": "application/json",
+      "path": "designs/detail/scenario.infrastructure.roads-bridges.preventive-maintenance-effect.v1.json",
+      "record_count": 1
+    },
+    {
+      "byte_count": 11166,
+      "content_hash": "sha256:a50ed6576038e82b2025ca5927f8d586e04d60c0d5e2fa5594208ea05651b20f",
+      "media_type": "application/json",
+      "path": "designs/detail/scenario.infrastructure.roads-bridges.transport-asset-failure.v1.json",
+      "record_count": 1
+    },
+    {
+      "byte_count": 11383,
+      "content_hash": "sha256:cd36cd8c462eaeb2d9ac524ba242b1aa0b46c59d5584ae5e76d6d12177a491dd",
+      "media_type": "application/json",
+      "path": "designs/detail/scenario.infrastructure.water-wastewater.renewal-strategy-effect.v1.json",
+      "record_count": 1
+    },
+    {
+      "byte_count": 11159,
+      "content_hash": "sha256:9c0c4eb0718c3e3b25b12fa3df3dbf7f513014fde9efea252439885bc0b66985",
+      "media_type": "application/json",
+      "path": "designs/detail/scenario.infrastructure.water-wastewater.utility-continuity.v1.json",
+      "record_count": 1
+    },
+    {
+      "byte_count": 11011,
+      "content_hash": "sha256:b1e50ec8b4548b92cb6645f097edf90a8053b536fce38fcdb8dbe285b52bbb65",
+      "media_type": "application/json",
+      "path": "designs/detail/scenario.infrastructure.water-wastewater.utility-demand-failures.v1.json",
+      "record_count": 1
+    },
+    {
+      "byte_count": 11059,
+      "content_hash": "sha256:3ed20ae922a8a35aec055258f41c643b148cba7bf8e4360d5e8db143b66049d6",
+      "media_type": "application/json",
+      "path": "designs/detail/scenario.infrastructure.water-wastewater.utility-facilities.v1.json",
+      "record_count": 1
+    },
+    {
+      "byte_count": 10927,
+      "content_hash": "sha256:0190e6e86fa66194c33a5055868758311345c5eb4ea778ae18c634c4c9856366",
+      "media_type": "application/json",
+      "path": "designs/detail/scenario.infrastructure.water-wastewater.utility-failure-patterns.v1.json",
+      "record_count": 1
+    },
+    {
+      "byte_count": 10994,
+      "content_hash": "sha256:2f95a71dc0676c53450ee9268e8f803e0b5827e6b69d8084213d2f079adcf6e2",
+      "media_type": "application/json",
+      "path": "designs/detail/scenario.infrastructure.water-wastewater.utility-maintenance.v1.json",
+      "record_count": 1
+    },
+    {
+      "byte_count": 10897,
+      "content_hash": "sha256:c9d2a03ad29b153af3394f4f5ac3f30e4ca83b275cf2df20b023e5f745d65137",
+      "media_type": "application/json",
+      "path": "designs/detail/scenario.infrastructure.water-wastewater.utility-renewal.v1.json",
+      "record_count": 1
+    },
+    {
+      "byte_count": 11110,
+      "content_hash": "sha256:79dc75606b7c878b92737ae61a21171c180f6695c350f054ad5f0f280423a936",
+      "media_type": "application/json",
+      "path": "designs/detail/scenario.infrastructure.water-wastewater.utility-repair-capacity.v1.json",
+      "record_count": 1
+    },
+    {
+      "byte_count": 11051,
+      "content_hash": "sha256:9c1b0abb56131a83f6f153afb27e85faa7ea20301be76f7008be867d10cd4cf5",
+      "media_type": "application/json",
+      "path": "designs/detail/scenario.mobility.active-mobility.active-network-continuity.v1.json",
+      "record_count": 1
+    },
+    {
+      "byte_count": 10826,
+      "content_hash": "sha256:32830c79b3fff29e87eafdc23b8ca20291bc10fcc2142427e7e06d79f902242e",
+      "media_type": "application/json",
+      "path": "designs/detail/scenario.mobility.active-mobility.active-network-projects.v1.json",
+      "record_count": 1
+    },
+    {
+      "byte_count": 10614,
+      "content_hash": "sha256:0d1b03fbb60f48febf1c9c25d61002a585d2932af59fcc824819023cf7ac4c0a",
+      "media_type": "application/json",
+      "path": "designs/detail/scenario.mobility.active-mobility.active-trip-demand.v1.json",
+      "record_count": 1
+    },
+    {
+      "byte_count": 10774,
+      "content_hash": "sha256:dd4c227f555990d4af5917d823b6da4fec035002863a24ecde83794eb58f1933",
+      "media_type": "application/json",
+      "path": "designs/detail/scenario.mobility.active-mobility.fleet-rebalancing.v1.json",
+      "record_count": 1
+    },
+    {
+      "byte_count": 10825,
+      "content_hash": "sha256:01973482799968335970e5cac30bc97df9edc53712f9a84345f46d4f6c022d5b",
+      "media_type": "application/json",
+      "path": "designs/detail/scenario.mobility.active-mobility.low-stress-network-gaps.v1.json",
+      "record_count": 1
+    },
+    {
+      "byte_count": 11141,
+      "content_hash": "sha256:20cc462e78a88ca02b783ba1a97847f7e8861d58a4ef50d8ede7e25fb604eb4b",
+      "media_type": "application/json",
+      "path": "designs/detail/scenario.mobility.active-mobility.protected-network-effect.v1.json",
+      "record_count": 1
+    },
+    {
+      "byte_count": 10749,
+      "content_hash": "sha256:ace35fd6b8b1bed0c210cf4f8cfe1ddeab10a1698e163a0bcf9d246e462f3c1a",
+      "media_type": "application/json",
+      "path": "designs/detail/scenario.mobility.active-mobility.shared-fleet.v1.json",
+      "record_count": 1
+    },
+    {
+      "byte_count": 10905,
+      "content_hash": "sha256:f4566c892aba000c2aa79ac8304e06219662aa07c8b18be2ea041e636533b00f",
+      "media_type": "application/json",
+      "path": "designs/detail/scenario.mobility.active-mobility.shared-mobility-stations.v1.json",
+      "record_count": 1
+    },
+    {
+      "byte_count": 10909,
+      "content_hash": "sha256:9f3fd539b0bc589c6ec650d4e2a99f09bead51515dced9e468fecf718bf87431",
+      "media_type": "application/json",
+      "path": "designs/detail/scenario.mobility.emergency-mobility.assisted-transport.v1.json",
+      "record_count": 1
+    },
+    {
+      "byte_count": 10795,
+      "content_hash": "sha256:fa37042855c6f5d9378a9ab763f1180ace545f8686adc03e44b743c3b3f66131",
+      "media_type": "application/json",
+      "path": "designs/detail/scenario.mobility.emergency-mobility.clearance-demand.v1.json",
+      "record_count": 1
+    },
+    {
+      "byte_count": 10742,
+      "content_hash": "sha256:55877defe83533061665db63cc12b3f47a7d443fa0eb8e2a51d3ce1db74efb3b",
+      "media_type": "application/json",
+      "path": "designs/detail/scenario.mobility.emergency-mobility.evacuation-access-gaps.v1.json",
+      "record_count": 1
+    },
+    {
+      "byte_count": 11164,
+      "content_hash": "sha256:8b9dd28e14b51934c3f4c4d5176472f8a141d366918c4f5ce472d7e5cae4180b",
+      "media_type": "application/json",
+      "path": "designs/detail/scenario.mobility.emergency-mobility.evacuation-exercise-effect.v1.json",
+      "record_count": 1
+    },
+    {
+      "byte_count": 11039,
+      "content_hash": "sha256:18f0f904148102c68e6c8b7cac7aa3394ff46342d5f8b40c8eba957688da1c63",
+      "media_type": "application/json",
+      "path": "designs/detail/scenario.mobility.emergency-mobility.evacuation-network-failure.v1.json",
+      "record_count": 1
+    },
+    {
+      "byte_count": 10846,
+      "content_hash": "sha256:357fe17aab26524295ec18042a21dc91d4f03556afca0c691934ae4835d5eb43",
+      "media_type": "application/json",
+      "path": "designs/detail/scenario.mobility.emergency-mobility.evacuation-readiness.v1.json",
+      "record_count": 1
+    },
+    {
+      "byte_count": 11292,
+      "content_hash": "sha256:54d1fb46d3123bf4e8423cdf8ce0daa109618a6f4e4ecbc549a11c40695543d8",
+      "media_type": "application/json",
+      "path": "designs/detail/scenario.mobility.emergency-mobility.phased-evacuation.v1.json",
+      "record_count": 1
+    },
+    {
+      "byte_count": 10981,
+      "content_hash": "sha256:1f2bd1545daf0187fb514ebf74924bd2ab16d77bfcbb1d503c1199a6d33736f5",
+      "media_type": "application/json",
+      "path": "designs/detail/scenario.mobility.emergency-mobility.pickup-transfer-points.v1.json",
+      "record_count": 1
+    },
+    {
+      "byte_count": 10715,
+      "content_hash": "sha256:9d8c6e9b03f9a9aa13fd48fa821775d5e04b6002615cf0e971f02966023f6784",
+      "media_type": "application/json",
+      "path": "designs/detail/scenario.mobility.freight-curb.curb-conversion-portfolio.v1.json",
+      "record_count": 1
+    },
+    {
+      "byte_count": 10525,
+      "content_hash": "sha256:55ac904d9e83d9f25567109a4255921efefbd0d4a33050e8eea43ec7c17ae5a4",
+      "media_type": "application/json",
+      "path": "designs/detail/scenario.mobility.freight-curb.curb-friction.v1.json",
+      "record_count": 1
+    },
+    {
+      "byte_count": 10564,
+      "content_hash": "sha256:ab4e9b3896c5ad0e8ee423e816c23420a6f574cd0a9f124c643f3c58b0777b95",
+      "media_type": "application/json",
+      "path": "designs/detail/scenario.mobility.freight-curb.curb-space.v1.json",
+      "record_count": 1
+    },
+    {
+      "byte_count": 10905,
+      "content_hash": "sha256:c8ab9def9cdf96c0d1c2d04208a813e2056b0dca46de35fdf4641cc81e400c45",
+      "media_type": "application/json",
+      "path": "designs/detail/scenario.mobility.freight-curb.dynamic-curb-effect.v1.json",
+      "record_count": 1
+    },
+    {
+      "byte_count": 10818,
+      "content_hash": "sha256:0a00372cdfe730f381cc4534e8045a97a422c1407772adcacd53ddeb7273ffbc",
+      "media_type": "application/json",
+      "path": "designs/detail/scenario.mobility.freight-curb.freight-disruption.v1.json",
+      "record_count": 1
+    },
+    {
+      "byte_count": 10575,
+      "content_hash": "sha256:6ad2c4d47e8082d07fcf926374f5e5f7dd9c74829ede123e40bc7f9154a3a748",
+      "media_type": "application/json",
+      "path": "designs/detail/scenario.mobility.freight-curb.loading-demand.v1.json",
+      "record_count": 1
+    },
+    {
+      "byte_count": 10628,
+      "content_hash": "sha256:873143aa76c4ad4daa8c504fe12c93ca203f87d8f728439a57eaa22fe01779f9",
+      "media_type": "application/json",
+      "path": "designs/detail/scenario.mobility.freight-curb.loading-reservations.v1.json",
+      "record_count": 1
+    },
+    {
+      "byte_count": 10814,
+      "content_hash": "sha256:7e5de0425a6d6a95fda7e9c263ee70283a193116350110595d88c34e99f8fe5a",
+      "media_type": "application/json",
+      "path": "designs/detail/scenario.mobility.freight-curb.microhubs-loading-zones.v1.json",
+      "record_count": 1
+    },
+    {
+      "byte_count": 11003,
+      "content_hash": "sha256:b4272d6900d3a8df3f58c36e46103801ac6baf74d43fa49ba7ef8e97862b0870",
+      "media_type": "application/json",
+      "path": "designs/detail/scenario.mobility.pedestrian-safety.accessible-detours.v1.json",
+      "record_count": 1
+    },
+    {
+      "byte_count": 11330,
+      "content_hash": "sha256:9986382bae517b19099b1c4baf49df8d1de15f08978fd57595d7aa8e09d98a61",
+      "media_type": "application/json",
+      "path": "designs/detail/scenario.mobility.pedestrian-safety.accessible-route-breaks.v1.json",
+      "record_count": 1
+    },
+    {
+      "byte_count": 10998,
+      "content_hash": "sha256:798a42c69f5620cc3b752cc392b3fec729d83bf982f6006e4699037450ba58bc",
+      "media_type": "application/json",
+      "path": "designs/detail/scenario.mobility.pedestrian-safety.inspection-quick-build.v1.json",
+      "record_count": 1
+    },
+    {
+      "byte_count": 10923,
+      "content_hash": "sha256:1d0f6b9f964e8552e59e8623863001adc9709b0e2dcbb967179d8fa388b7266c",
+      "media_type": "application/json",
+      "path": "designs/detail/scenario.mobility.pedestrian-safety.pedestrian-conflict-risk.v1.json",
+      "record_count": 1
+    },
+    {
+      "byte_count": 11207,
+      "content_hash": "sha256:c05a07925bcfcce2d3e35a8c5610d136b9d7232101bb347bd348c231ae0be387",
+      "media_type": "application/json",
+      "path": "designs/detail/scenario.mobility.pedestrian-safety.quick-build-safety-effect.v1.json",
+      "record_count": 1
+    },
+    {
+      "byte_count": 10873,
+      "content_hash": "sha256:297d807df759100bde1a8994fbb9b8d78675bea0a6d7cdb0100e1d940c46d372",
+      "media_type": "application/json",
+      "path": "designs/detail/scenario.mobility.pedestrian-safety.right-of-way-work.v1.json",
+      "record_count": 1
+    },
+    {
+      "byte_count": 10935,
+      "content_hash": "sha256:c674282d5e2794ef5db59c181cc0e2e34b78be79bd9a6b456c992e7fb3c62350",
+      "media_type": "application/json",
+      "path": "designs/detail/scenario.mobility.pedestrian-safety.safe-crossings.v1.json",
+      "record_count": 1
+    },
+    {
+      "byte_count": 11052,
+      "content_hash": "sha256:590065ed660000b7e2f8294e2ea919a1fdb1fdca9d203ea4dbb43d094b1a3eb3",
+      "media_type": "application/json",
+      "path": "designs/detail/scenario.mobility.pedestrian-safety.safety-accessibility-treatments.v1.json",
+      "record_count": 1
+    },
+    {
+      "byte_count": 10736,
+      "content_hash": "sha256:15cf6c4962a626df831b025e81707e21f81282d5845c60ba770272403670d951",
+      "media_type": "application/json",
+      "path": "designs/detail/scenario.mobility.transit-reliability.crowding-delay-load.v1.json",
+      "record_count": 1
+    },
+    {
+      "byte_count": 10743,
+      "content_hash": "sha256:f326c174daffb41422a810e0ec7922f2c159aee957553b635c77f8a5126bd2cd",
+      "media_type": "application/json",
+      "path": "designs/detail/scenario.mobility.transit-reliability.delay-propagation.v1.json",
+      "record_count": 1
+    },
+    {
+      "byte_count": 10871,
+      "content_hash": "sha256:e022c9f3c10e7832fbb0e9f4c5d85257b48036dd2647f831400f93a76d8983dc",
+      "media_type": "application/json",
+      "path": "designs/detail/scenario.mobility.transit-reliability.fleet-spares.v1.json",
+      "record_count": 1
+    },
+    {
+      "byte_count": 11037,
+      "content_hash": "sha256:e74ba9535ff40daa57ce8a8d8891b0d1372be94381030e515045ca1ac3f6c933",
+      "media_type": "application/json",
+      "path": "designs/detail/scenario.mobility.transit-reliability.network-disruption.v1.json",
+      "record_count": 1
+    },
+    {
+      "byte_count": 11142,
+      "content_hash": "sha256:9edfba4004c35c601d34c828b32faf1b08db4636f89edef2be770c43e9ff5b35",
+      "media_type": "application/json",
+      "path": "designs/detail/scenario.mobility.transit-reliability.priority-lane-effect.v1.json",
+      "record_count": 1
+    },
+    {
+      "byte_count": 10924,
+      "content_hash": "sha256:0013fd8ba768e30e5e9d7573095253e8730cc2b3296b06dfe9c727b6d95e2b96",
+      "media_type": "application/json",
+      "path": "designs/detail/scenario.mobility.transit-reliability.reliability-investments.v1.json",
+      "record_count": 1
+    },
+    {
+      "byte_count": 10981,
+      "content_hash": "sha256:5c823d866fedfbc379e952660ffe78817145fb003eb23c00898917a8a6e57dcc",
+      "media_type": "application/json",
+      "path": "designs/detail/scenario.mobility.transit-reliability.timetable-connections.v1.json",
+      "record_count": 1
+    },
+    {
+      "byte_count": 10946,
+      "content_hash": "sha256:78654b593033fc7841054e346b0f704c937db03bb2031b01e14f631effdbab6b",
+      "media_type": "application/json",
+      "path": "designs/detail/scenario.mobility.transit-reliability.transfer-hubs.v1.json",
+      "record_count": 1
+    },
+    {
+      "byte_count": 10833,
+      "content_hash": "sha256:fc42b83da89f252b618658145c0790a37ab9585c4898377fd22eda28312ed8a6",
+      "media_type": "application/json",
+      "path": "designs/detail/scenario.public-service.demand.case-routing-capacity.v1.json",
+      "record_count": 1
+    },
+    {
+      "byte_count": 11184,
+      "content_hash": "sha256:a2dab460aa23cb01e27a889e736b431ba4384d1114eea4e8b76f37ffb0018e2a",
+      "media_type": "application/json",
+      "path": "designs/detail/scenario.public-service.demand.channel-redesign-effect.v1.json",
+      "record_count": 1
+    },
+    {
+      "byte_count": 10681,
+      "content_hash": "sha256:9e8e82d77fd611f605cd634847ff7416aef9213ddb16d4814941fa56c414574f",
+      "media_type": "application/json",
+      "path": "designs/detail/scenario.public-service.demand.request-workload.v1.json",
+      "record_count": 1
+    },
+    {
+      "byte_count": 11209,
+      "content_hash": "sha256:7a09ee242f7ce46334d230fd61b85221644e6979e41b3807cce7625f67c85a05",
+      "media_type": "application/json",
+      "path": "designs/detail/scenario.public-service.demand.seasonal-service-staffing.v1.json",
+      "record_count": 1
+    },
+    {
+      "byte_count": 10842,
+      "content_hash": "sha256:38b529b3fae5c0cc18611f8c3560ddaa00b8a735c0969956d78d257f2a6e7b1e",
+      "media_type": "application/json",
+      "path": "designs/detail/scenario.public-service.demand.service-access-points.v1.json",
+      "record_count": 1
+    },
+    {
+      "byte_count": 10993,
+      "content_hash": "sha256:8af83b06166e8c026d7374c8d0e4f38f99553974ea432e215af6ad25f49ebd1d",
+      "media_type": "application/json",
+      "path": "designs/detail/scenario.public-service.demand.service-demand-surge.v1.json",
+      "record_count": 1
+    },
+    {
+      "byte_count": 11230,
+      "content_hash": "sha256:390771b21fef2d7773bbbd72bf622d9f9bc29be2c8f769d65f1a4ba9324c4bb5",
+      "media_type": "application/json",
+      "path": "designs/detail/scenario.public-service.demand.service-improvement-portfolio.v1.json",
+      "record_count": 1
+    },
+    {
+      "byte_count": 10529,
+      "content_hash": "sha256:67f95780662d40f4a517bd5b7e0c257e36188c2f088c47bd6a4450bad2a00f7d",
+      "media_type": "application/json",
+      "path": "designs/detail/scenario.public-service.demand.service-workload.v1.json",
+      "record_count": 1
+    },
+    {
+      "byte_count": 11070,
+      "content_hash": "sha256:9dee596198d752e5f31626b41eaea5a7a0f5cc1c347dfaed4637f7d8310d80ea",
+      "media_type": "application/json",
+      "path": "designs/detail/scenario.public-service.digital-access.appointments-support.v1.json",
+      "record_count": 1
+    },
+    {
+      "byte_count": 11229,
+      "content_hash": "sha256:a2c4fe63e103814178b8e343fdd938f2de11996d5161c63eb4aa2f5b1ae007d4",
+      "media_type": "application/json",
+      "path": "designs/detail/scenario.public-service.digital-access.assisted-digital-access.v1.json",
+      "record_count": 1
+    },
+    {
+      "byte_count": 11471,
+      "content_hash": "sha256:d0ab5f575058ed2987b63375c07c8eee3be3fb69c70a1fd66327c664defc0dc7",
+      "media_type": "application/json",
+      "path": "designs/detail/scenario.public-service.digital-access.assisted-service-effect.v1.json",
+      "record_count": 1
+    },
+    {
+      "byte_count": 11109,
+      "content_hash": "sha256:bcd158400d2f94a912f1e405bb03ebb33b6dbbf3b7e218ddb1b82c42db9eb00b",
+      "media_type": "application/json",
+      "path": "designs/detail/scenario.public-service.digital-access.channel-support-demand.v1.json",
+      "record_count": 1
+    },
+    {
+      "byte_count": 11467,
+      "content_hash": "sha256:beb101dafac46c7e1171c7cee3a46b6cba5d6febfce596dd4da991127351fa05",
+      "media_type": "application/json",
+      "path": "designs/detail/scenario.public-service.digital-access.digital-service-continuity.v1.json",
+      "record_count": 1
+    },
+    {
+      "byte_count": 11171,
+      "content_hash": "sha256:6809494ea3778e051f7995f544278fe6a06192713d50a1ef9d6496934ccb7ce3",
+      "media_type": "application/json",
+      "path": "designs/detail/scenario.public-service.digital-access.navigation-support.v1.json",
+      "record_count": 1
+    },
+    {
+      "byte_count": 11066,
+      "content_hash": "sha256:bd1b845176b372fa2146efac3119818c2f1ff2f1ccc41b8a3b1d31da9c11ca19",
+      "media_type": "application/json",
+      "path": "designs/detail/scenario.public-service.digital-access.service-journey-friction.v1.json",
+      "record_count": 1
+    },
+    {
+      "byte_count": 11152,
+      "content_hash": "sha256:248b1041d3d74b448e98250ed7361dad1fae82a0b00f60bb7e4d404e31e93cb9",
+      "media_type": "application/json",
+      "path": "designs/detail/scenario.public-service.digital-access.service-redesign-portfolio.v1.json",
+      "record_count": 1
+    },
+    {
+      "byte_count": 11476,
+      "content_hash": "sha256:4931800989c39b7e0bbf9c72e520c351bd3dfb0e570cd502a81981397aa71eee",
+      "media_type": "application/json",
+      "path": "designs/detail/scenario.public-service.emergency-response.dispatch-process-effect.v1.json",
+      "record_count": 1
+    },
+    {
+      "byte_count": 10848,
+      "content_hash": "sha256:6199b2be341710e10eee74a157b354ac62c0df6b6a2529488f785f00fbc38bc2",
+      "media_type": "application/json",
+      "path": "designs/detail/scenario.public-service.emergency-response.incident-unit-demand.v1.json",
+      "record_count": 1
+    },
+    {
+      "byte_count": 11349,
+      "content_hash": "sha256:e6b394491e51525322b005aaa53ed301b75086c01ecc29cf2e4b20e70a46dc8d",
+      "media_type": "application/json",
+      "path": "designs/detail/scenario.public-service.emergency-response.multi-incident-surge.v1.json",
+      "record_count": 1
+    },
+    {
+      "byte_count": 11059,
+      "content_hash": "sha256:809bcf5e58249817cf396505ce2408b3470155280fecd3314770c3ae3aabd74b",
+      "media_type": "application/json",
+      "path": "designs/detail/scenario.public-service.emergency-response.readiness-coverage.v1.json",
+      "record_count": 1
+    },
+    {
+      "byte_count": 11027,
+      "content_hash": "sha256:55898b385dc9d855bfd685a515669eade71969f8dd75291bb2f3f9e627085114",
+      "media_type": "application/json",
+      "path": "designs/detail/scenario.public-service.emergency-response.response-bases.v1.json",
+      "record_count": 1
+    },
+    {
+      "byte_count": 10958,
+      "content_hash": "sha256:516650c24c438441e837c043583edca747929408b7aa324db986f47330c805cf",
+      "media_type": "application/json",
+      "path": "designs/detail/scenario.public-service.emergency-response.response-coverage-gaps.v1.json",
+      "record_count": 1
+    },
+    {
+      "byte_count": 11101,
+      "content_hash": "sha256:25720cf78bda190d8da86a44b85d6664c0d4939c17ca29dc40d714586296b90d",
+      "media_type": "application/json",
+      "path": "designs/detail/scenario.public-service.emergency-response.response-readiness-portfolio.v1.json",
+      "record_count": 1
+    },
+    {
+      "byte_count": 11040,
+      "content_hash": "sha256:4e964a9fed03936ee09e4f3c3ec9affe125ce2c1ab6e620a2a2361a44e9ffa25",
+      "media_type": "application/json",
+      "path": "designs/detail/scenario.public-service.emergency-response.response-units.v1.json",
+      "record_count": 1
+    },
+    {
+      "byte_count": 11003,
+      "content_hash": "sha256:77ec33364bdfd2cdc224c47842500acf9f193f8271d4e60a21df5ea29ed5aa99",
+      "media_type": "application/json",
+      "path": "designs/detail/scenario.public-service.sanitation.collection-cleaning-routes.v1.json",
+      "record_count": 1
+    },
+    {
+      "byte_count": 10992,
+      "content_hash": "sha256:fd02a1b1758d4be2d8fdcf0d28e73e02f66be3c2a59a1f777920aad44b878f35",
+      "media_type": "application/json",
+      "path": "designs/detail/scenario.public-service.sanitation.sanitation-crews-fleet.v1.json",
+      "record_count": 1
+    },
+    {
+      "byte_count": 11061,
+      "content_hash": "sha256:9ab0e5d480e87ceb8de5d9a8d308421b9b1d1d822a9bc5558b37769d71e563a9",
+      "media_type": "application/json",
+      "path": "designs/detail/scenario.public-service.sanitation.sanitation-facilities.v1.json",
+      "record_count": 1
+    },
+    {
+      "byte_count": 11312,
+      "content_hash": "sha256:0ec2f9bd454d7e22e48110679f0700058987293ed3f12bf83425aa6fd326a2a6",
+      "media_type": "application/json",
+      "path": "designs/detail/scenario.public-service.sanitation.sanitation-improvements.v1.json",
+      "record_count": 1
+    },
+    {
+      "byte_count": 10798,
+      "content_hash": "sha256:4b8b7007208a69f5483ac6059153d200694d8c7dd5c94d00b6c0472e391c1dac",
+      "media_type": "application/json",
+      "path": "designs/detail/scenario.public-service.sanitation.sanitation-workload.v1.json",
+      "record_count": 1
+    },
+    {
+      "byte_count": 11033,
+      "content_hash": "sha256:bac71b29381c393a4657f68496b28be1ea604ed459a2dd2217291d071b06d577",
+      "media_type": "application/json",
+      "path": "designs/detail/scenario.public-service.sanitation.waste-continuity.v1.json",
+      "record_count": 1
+    },
+    {
+      "byte_count": 11324,
+      "content_hash": "sha256:c9e2cfcd8e7362f809d6d48c172a6b85f3fb0a0f1f2bf1c9cde77bfb1cfa1f94",
+      "media_type": "application/json",
+      "path": "designs/detail/scenario.public-service.sanitation.waste-prevention-effect.v1.json",
+      "record_count": 1
+    },
+    {
+      "byte_count": 10788,
+      "content_hash": "sha256:f465fbb8b4970f1a8d7dea3ea1d01d32532d6f5c6e7d3c4c68175cae3eb88f36",
+      "media_type": "application/json",
+      "path": "designs/detail/scenario.public-service.sanitation.waste-service-demand.v1.json",
+      "record_count": 1
+    },
+    {
+      "byte_count": 419784,
+      "content_hash": "sha256:64539eace09cf5b59a7d18765a410ba4b3ffb5b9ec59877cfd7a25f4023767e2",
+      "media_type": "application/json",
+      "path": "designs/index.json",
+      "record_count": 240
+    },
+    {
+      "byte_count": 22137,
+      "content_hash": "sha256:a1b329991849b5cdd77a7a371ad0c0f83d445c5792b240a3b92911fc5d104986",
+      "media_type": "application/json",
+      "path": "designs/reference-implemented.json",
+      "record_count": 12
+    },
+    {
+      "byte_count": 57154,
+      "content_hash": "sha256:0c32a9f1a10526232407f9c96273eeefc2fd27dd791917867897a417363fc64a",
+      "media_type": "application/json",
+      "path": "designs/suite/behavioral-policy-equity.json",
+      "record_count": 32
+    },
+    {
+      "byte_count": 67867,
+      "content_hash": "sha256:374bf7884c80f930857549e46b87ab1ffb4182809094cd3ddf74d419a2b4c0d5",
+      "media_type": "application/json",
+      "path": "designs/suite/climate-disaster-resilience.json",
+      "record_count": 40
+    },
+    {
+      "byte_count": 56964,
+      "content_hash": "sha256:e70d5579e4dccbb20e663c43eba97269ecb2acf451b84380727e37bb46d757be",
+      "media_type": "application/json",
+      "path": "designs/suite/housing-land-use-regeneration.json",
+      "record_count": 32
+    },
+    {
+      "byte_count": 56584,
+      "content_hash": "sha256:6dd50f6c7706db62d87531c1af86e00d77cf823f3019b23413f7f07a89c9beba",
+      "media_type": "application/json",
+      "path": "designs/suite/infrastructure-finance-asset-risk.json",
+      "record_count": 32
+    },
+    {
+      "byte_count": 69636,
+      "content_hash": "sha256:70531a3f61ee598e17a8f928d23f180ce2b4e67ac1cac4101e18aeadc7287de6",
+      "media_type": "application/json",
+      "path": "designs/suite/mobility-accessibility-operations.json",
+      "record_count": 40
+    },
+    {
+      "byte_count": 56377,
+      "content_hash": "sha256:030a7fb6b09b5a7ab9ec0dfc597dd2c22669bc0b6e0223a15eb6a83c06a0c2a0",
+      "media_type": "application/json",
+      "path": "designs/suite/population-health-environmental-exposure.json",
+      "record_count": 32
+    },
+    {
+      "byte_count": 56655,
+      "content_hash": "sha256:404cbb93e5e180134ccdcb1e91ee63cd2a4cd19b555782ed76e54fa0f99aaec2",
+      "media_type": "application/json",
+      "path": "designs/suite/public-service-operations.json",
+      "record_count": 32
+    },
+    {
+      "byte_count": 4944,
+      "content_hash": "sha256:53c1668cdf85e513533050a8871d8923f42dc3a0a9eabce4ee728fca7d0e7cec",
+      "media_type": "application/json",
+      "path": "evidence/scenario-library-audit.json",
+      "record_count": 240
+    },
+    {
+      "byte_count": 189155,
+      "content_hash": "sha256:5a56053306620886ff01d85f9bb9a3e4833845e2241cecf3a05ad780dd47fee6",
+      "media_type": "application/json",
+      "path": "evidence/scenario-library-registry.json",
+      "record_count": 270
+    },
+    {
+      "byte_count": 2438,
+      "content_hash": "sha256:fcb799fbd9e7ec70ce70288cebf0606e494e4aacf05bc12fe41193e6108a9777",
+      "media_type": "application/json",
+      "path": "evidence/scenario-library-summary.json",
+      "record_count": 240
+    },
+    {
       "byte_count": 141276,
       "content_hash": "sha256:485ee6ea4451b16d1b535dc5ff216e4629debd2595510825d408aa6489173d27",
       "media_type": "application/json",
@@ -49,8 +2093,8 @@
       "record_count": 96
     },
     {
-      "byte_count": 77462,
-      "content_hash": "sha256:158a582b30ba0f11167dc5e33ab1d9c84536db36862ea82c093ebfbcf2617d43",
+      "byte_count": 120703,
+      "content_hash": "sha256:575eb23fe521354a6098d394157b7f980bc2cbf1b7eb16d5d9f904da3b05aed5",
       "media_type": "application/json",
       "path": "openapi-v1.json"
     },
@@ -96,8 +2140,8 @@
       "path": "schemas/benchmark-overview.schema.json"
     },
     {
-      "byte_count": 3606,
-      "content_hash": "sha256:76757b19a524b0abfdbc3b92fa5531e1bafad834445de3ae21f5d7ee0a08c33f",
+      "byte_count": 4984,
+      "content_hash": "sha256:7a65cda2d45f120adf8581446f8de65d005105e90cf000aef8620db49b673439",
       "media_type": "application/schema+json",
       "path": "schemas/catalog-summary.schema.json"
     },
@@ -156,10 +2200,76 @@
       "path": "schemas/product-health.schema.json"
     },
     {
+      "byte_count": 18301,
+      "content_hash": "sha256:a88d4926a65518517ca2f91df8744f384d1cecb377d42d5d2f5c665c76139409",
+      "media_type": "application/schema+json",
+      "path": "schemas/scenario-design-detail.schema.json"
+    },
+    {
+      "byte_count": 6686,
+      "content_hash": "sha256:a44bcc057862d5724bba450f8d19ca8c281999866e48b377a361f557e72dcf7a",
+      "media_type": "application/schema+json",
+      "path": "schemas/scenario-design-page.schema.json"
+    },
+    {
+      "byte_count": 4766,
+      "content_hash": "sha256:d054b8c5be33a2a5cd412b1bee1a8d42ceeabe91545186921a4e485ae55f535c",
+      "media_type": "application/schema+json",
+      "path": "schemas/scenario-design-summary.schema.json"
+    },
+    {
+      "byte_count": 13979,
+      "content_hash": "sha256:5b74dfd275a56775466ed53e80e1838762ec6f06b036bb2b9165c01cda5e51e1",
+      "media_type": "application/schema+json",
+      "path": "schemas/scenario-design.schema.json"
+    },
+    {
       "byte_count": 5105,
       "content_hash": "sha256:962887bc7d2ae57cfb6e8035e177964cc61a3604717841a03eb89e28204e46d9",
       "media_type": "application/schema+json",
       "path": "schemas/scenario-detail.schema.json"
+    },
+    {
+      "byte_count": 9627,
+      "content_hash": "sha256:9912da0ad858fc89fcebbab7766ff71eb92077d130b4df005338dbd80d6b67df",
+      "media_type": "application/schema+json",
+      "path": "schemas/scenario-family-detail.schema.json"
+    },
+    {
+      "byte_count": 3779,
+      "content_hash": "sha256:f4fd61ba9363cc1787b1d2a2c3fb69a5152f9f2553c54671244edd1260801a09",
+      "media_type": "application/schema+json",
+      "path": "schemas/scenario-family-page.schema.json"
+    },
+    {
+      "byte_count": 2055,
+      "content_hash": "sha256:8eb52c5fb2be1ac02de22a43c05d1a2ff6d9007dc2bdd53745bea9def8da1a45",
+      "media_type": "application/schema+json",
+      "path": "schemas/scenario-family-summary.schema.json"
+    },
+    {
+      "byte_count": 3537,
+      "content_hash": "sha256:e464131b0061bef88e52675936c3c029649ec44fd6199d1fcc1f23829eb6a39c",
+      "media_type": "application/schema+json",
+      "path": "schemas/scenario-family.schema.json"
+    },
+    {
+      "byte_count": 10499,
+      "content_hash": "sha256:450b9ee4fbdd5a74bb47e27893d3e317d40743531a6bfdab4c883523a1458cfc",
+      "media_type": "application/schema+json",
+      "path": "schemas/scenario-library-audit.schema.json"
+    },
+    {
+      "byte_count": 3144,
+      "content_hash": "sha256:7ffd9b050dec6225d036b7a646dd7ea447214325a4164ed77efd2a3329c72d1f",
+      "media_type": "application/schema+json",
+      "path": "schemas/scenario-library-evidence.schema.json"
+    },
+    {
+      "byte_count": 7399,
+      "content_hash": "sha256:c14c3a6a509855bb6c77f79ecdbf9357c054035943ae0d638cef2d696580a855",
+      "media_type": "application/schema+json",
+      "path": "schemas/scenario-library-registry.schema.json"
     },
     {
       "byte_count": 5546,
@@ -186,8 +2296,8 @@
       "path": "schemas/source-summary.schema.json"
     },
     {
-      "byte_count": 993,
-      "content_hash": "sha256:570066020a3f65112f9c302dfef8e7b95949f72f5a955eb98e1f9a4e2afbf2ca",
+      "byte_count": 1588,
+      "content_hash": "sha256:3f35637667b82593c0190b32c1e7c7c297cb3e1a94303166b1a7a597483ec3fa",
       "media_type": "application/schema+json",
       "path": "schemas/suite-overview.schema.json"
     },
@@ -199,25 +2309,26 @@
       "record_count": 90
     },
     {
-      "byte_count": 2627,
-      "content_hash": "sha256:49f366addbd0c24e78ce0306553669aca0b1a68401939880bf131f396a26b0e1",
+      "byte_count": 3572,
+      "content_hash": "sha256:8a17d4d8128ac5f4d3d6aca7e7c3483e5a1216e4eecfaa8f9d4cc807ded4d66b",
       "media_type": "application/json",
       "path": "suites/index.json",
       "record_count": 7
     },
     {
       "byte_count": 863,
-      "content_hash": "sha256:30cbd4ed3548376d8fb72d00d8e6d0da870f21d75cc6977f29f0e67e3ed13b72",
+      "content_hash": "sha256:9a6354552a00c889f0402ffa22a6bf03f15079a25e65b6cfe07982646f75738f",
       "media_type": "application/json",
       "path": "web-assets.json",
       "record_count": 4
     }
   ],
-  "catalog_fingerprint": "sha256:c44212b9fa9f2f7796a9e209a7fe20826aaa3dcdcef682ad58d4e32209a8aa68",
+  "catalog_fingerprint": "sha256:cebf4dc6f8a1735905d1583a66b97f274ce488e5e8fcc7841cd11fdb4fc83890",
   "claim_boundary": [
     "Public data and deterministic software runs are not client work or field deployment.",
     "Simulation and optimization are not observed impact or institutional adoption.",
     "Repeated city bindings are not counted as independent scenario designs.",
+    "The 240-record scenario library counts designs, including 228 design-only records; it is not a count of city executions or delivered projects.",
     "Negative and insufficient-evidence releases remain visible and selectable."
   ],
   "schema_version": "1.0.0",

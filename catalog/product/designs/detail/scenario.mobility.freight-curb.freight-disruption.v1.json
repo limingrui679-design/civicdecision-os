@@ -1,0 +1,226 @@
+{
+  "audit_maximum_pairwise_similarity": 0.646154,
+  "design": {
+    "affected_system": "commercial curb, loading, delivery, and urban freight network",
+    "alternatives": [
+      "add targeted redundancy around the largest failure modes in essential urban freight continuity under disruption",
+      "select an adaptive robust portfolio across severe scenarios for essential urban freight continuity under disruption",
+      "pair delivery network, curb, and depot failure simulation with an explicit stop, review, and escalation rule"
+    ],
+    "analysis_modes": [
+      "forecast",
+      "simulation",
+      "optimization"
+    ],
+    "assumptions": [
+      "Curb regulations, occupancy, deliveries, violations, and travel effects have consistent timestamps and locations.",
+      "Observed platform or sensor activity represents only its measured market and street coverage.",
+      "All alternatives, capacities, costs, effects, thresholds, and failure scenarios are proposed until bound to evidence."
+    ],
+    "baseline": "apply current continuity provisions to essential urban freight continuity under disruption.",
+    "city_bindings": [],
+    "constraints": [
+      {
+        "binding": true,
+        "constraint_id": "scenario.mobility.freight-curb.freight-disruption.v1.constraint.binding",
+        "description": "The urban freight and curb operations stress test must respect declared minimum continuity and safety thresholds across severe scenarios.",
+        "hard": true,
+        "kind": "risk",
+        "required_source_roles": [
+          "climate-hazard",
+          "facility-inventory",
+          "geographic-identity",
+          "operating-capacity",
+          "real-time-state",
+          "transport-network"
+        ]
+      },
+      {
+        "binding": false,
+        "constraint_id": "scenario.mobility.freight-curb.freight-disruption.v1.constraint.evidence-scope",
+        "description": "Every released metric must retain evidence type, source lineage, geography, time, assumptions, and uncertainty.",
+        "hard": true,
+        "kind": "technical",
+        "required_source_roles": [
+          "climate-hazard"
+        ]
+      },
+      {
+        "binding": false,
+        "constraint_id": "scenario.mobility.freight-curb.freight-disruption.v1.constraint.decision-authority",
+        "description": "No analytical output may bypass lawful authority, accountable human review, or an applicable appeal process.",
+        "hard": true,
+        "kind": "regulatory",
+        "required_source_roles": [
+          "climate-hazard"
+        ]
+      }
+    ],
+    "current_readiness": "blocked-missing-source",
+    "decision_cadence": "recompiled at each planning cycle and after material evidence change",
+    "decision_owner": "curb-management director and city freight coordinator",
+    "decision_question": "Which curb and consolidation strategy sustains essential deliveries during closures, surges, and fleet constraints?",
+    "decision_type": "stress-test",
+    "design_id": "scenario.mobility.freight-curb.freight-disruption.v1",
+    "design_order": 63,
+    "design_signature": "sha256:fc00ddc4385b7883c266633ff60f14831ae638f3e85b26f897c754bba764ce21",
+    "evidence_requirements": [
+      "estimated",
+      "observed",
+      "optimized",
+      "proposed",
+      "simulated"
+    ],
+    "family_id": "mobility.freight-curb",
+    "family_title": "Urban freight and curb operations",
+    "horizon": "seasonal",
+    "implementation_status": "design-only",
+    "independence_key": {
+      "binding_constraint": "The urban freight and curb operations stress test must respect declared minimum continuity and safety thresholds across severe scenarios.",
+      "decision_object": "essential urban freight continuity under disruption",
+      "evidence_gate": "Evidence for essential urban freight continuity under disruption passes documented checks for scenario ranges, dependence, failure rates, recovery, intervention performance, and sensitivity.",
+      "horizon": "seasonal",
+      "intervention_mechanism": "delivery network, curb, and depot failure simulation",
+      "primary_outcome": "essential deliveries outside feasible time windows",
+      "spatial_unit": "network"
+    },
+    "intended_claim": "A versioned stress-test design for comparing declared alternatives affecting essential urban freight continuity under disruption, conditional on its evidence gate.",
+    "limitations": [
+      "This library record has no city binding and therefore reports no local input, output, or recommendation.",
+      "Readiness describes explicit source and method gates; it does not certify implementation feasibility.",
+      "External domain, legal, community, security, and operational review remains outside this design artifact."
+    ],
+    "method_claimed": false,
+    "objectives": [
+      {
+        "evidence_type": "estimated",
+        "metric": "essential deliveries outside feasible time windows",
+        "objective_id": "scenario.mobility.freight-curb.freight-disruption.v1.objective.primary",
+        "primary": true,
+        "sense": "minimize",
+        "unit": "deliveries"
+      },
+      {
+        "evidence_type": "estimated",
+        "metric": "distributional gap in essential deliveries outside feasible time windows",
+        "objective_id": "scenario.mobility.freight-curb.freight-disruption.v1.objective.equity",
+        "primary": false,
+        "sense": "minimize",
+        "unit": "deliveries"
+      },
+      {
+        "evidence_type": "observed",
+        "metric": "decision claims with complete evidence lineage",
+        "objective_id": "scenario.mobility.freight-curb.freight-disruption.v1.objective.traceability",
+        "primary": false,
+        "sense": "maximize",
+        "unit": "percent"
+      }
+    ],
+    "prohibited_claims": [
+      "Do not present synthetic delivery failures as forecasts or modeled completion as observed service.",
+      "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+      "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+      "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+    ],
+    "release_gate": {
+      "failure_release": "Release an explicit insufficient-evidence record naming missing sources, failed diagnostics, prohibited claims, and the next validation action.",
+      "failure_status": "insufficient-evidence",
+      "gate_id": "scenario.mobility.freight-curb.freight-disruption.v1.gate.release",
+      "gate_type": "external-validation",
+      "pass_condition": "Evidence for essential urban freight continuity under disruption passes documented checks for scenario ranges, dependence, failure rates, recovery, intervention performance, and sensitivity.",
+      "required_evidence_types": [
+        "estimated",
+        "observed"
+      ],
+      "required_source_roles": [
+        "climate-hazard",
+        "facility-inventory",
+        "geographic-identity",
+        "operating-capacity",
+        "real-time-state",
+        "transport-network"
+      ]
+    },
+    "required_source_roles": [
+      "climate-hazard",
+      "facility-inventory",
+      "geographic-identity",
+      "operating-capacity",
+      "real-time-state",
+      "transport-network"
+    ],
+    "schema_version": "1.0.0",
+    "spatial_unit": "network",
+    "suite": "mobility-accessibility-operations",
+    "tags": [
+      "design-only",
+      "mobility-accessibility-operations",
+      "mobility.freight-curb",
+      "scenario-library",
+      "stress-test"
+    ],
+    "title": "Stress-test urban freight under curb and network disruption",
+    "transportability_risks": [
+      "Delivery markets, curb law, enforcement, land use, vehicle mix, and sensor coverage differ.",
+      "Platform data may omit independent carriers and informal loading behavior."
+    ]
+  },
+  "family": {
+    "affected_system": "commercial curb, loading, delivery, and urban freight network",
+    "claim_boundary": [
+      "Network, request, and schedule records do not establish individual travel behavior or harm.",
+      "Optimized routes and allocations are planning outputs, not dispatched or completed trips.",
+      "Design-only records do not claim current city data, implementation, compliance, or impact."
+    ],
+    "common_source_roles": [
+      "geographic-identity",
+      "real-time-state",
+      "transport-network"
+    ],
+    "decision_owner": "curb-management director and city freight coordinator",
+    "decision_types": [
+      "diagnose",
+      "forecast",
+      "prioritize",
+      "site",
+      "allocate",
+      "schedule",
+      "stress-test",
+      "evaluate"
+    ],
+    "description": "Eight decisions for curb diagnosis, demand forecasting, loading investment, hub siting, space allocation, reservation schedules, disruption stress, and policy evaluation.",
+    "design_refs": [
+      "scenario.mobility.freight-curb.curb-friction.v1",
+      "scenario.mobility.freight-curb.loading-demand.v1",
+      "scenario.mobility.freight-curb.curb-conversion-portfolio.v1",
+      "scenario.mobility.freight-curb.microhubs-loading-zones.v1",
+      "scenario.mobility.freight-curb.curb-space.v1",
+      "scenario.mobility.freight-curb.loading-reservations.v1",
+      "scenario.mobility.freight-curb.freight-disruption.v1",
+      "scenario.mobility.freight-curb.dynamic-curb-effect.v1"
+    ],
+    "design_signatures": [
+      "sha256:d1d58d751fc03d08d47edfdc2f9db9ef6260ba3f4a41d1b5622554250ef9fe93",
+      "sha256:19981a3aa0b82411b6b2d50b8efef822cd1e29c0df66ac7f97c76de0dbac9cce",
+      "sha256:c40df66a77917ead708010f7816014c2c76be43d1ab7610a88baeed42649aecc",
+      "sha256:442aa62b750cc67ec801e69c4aec34b3944eedc86d7270462527ea65ca42be50",
+      "sha256:c6611bc444c60f7fb3d8e08db98e96041bce118cf08c91b60bbee6c998f43d44",
+      "sha256:dbc51c2841400dfb01fce7187723003e6bad2edf9068ca00f7a8b91f1221ecdd",
+      "sha256:fc00ddc4385b7883c266633ff60f14831ae638f3e85b26f897c754bba764ce21",
+      "sha256:f926023a6bbd41afc6f7220190747f639b2b83cdab92a97ef23a96e5adaddf0c"
+    ],
+    "family_id": "mobility.freight-curb",
+    "family_order": 8,
+    "schema_version": "1.0.0",
+    "suite": "mobility-accessibility-operations",
+    "title": "Urban freight and curb operations"
+  },
+  "library_claim_boundary": [
+    "The catalog contains 240 decision designs, not 240 city executions.",
+    "Exactly twelve designs map to existing Tier-D reference templates; 228 remain design-only.",
+    "A reference implementation can be an explicit negative release and does not imply impact.",
+    "No record claims a city binding, new method, deployment, adoption, or real-user outcome.",
+    "Future execution requires source binding, gate passage, and domain, legal, community, and operational review."
+  ]
+}

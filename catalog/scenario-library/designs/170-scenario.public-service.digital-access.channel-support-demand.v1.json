@@ -1,0 +1,162 @@
+{
+  "affected_system": "public digital services, identity, applications, appointments, and assisted access",
+  "alternatives": [
+    "activate a bounded reserve from forecast risk bands for multichannel administrative service and support demand",
+    "use rolling forecasts and conservative capacity triggers for multichannel administrative service and support demand",
+    "pair service-event and journey-stage workload forecasting with an explicit stop, review, and escalation rule"
+  ],
+  "analysis_modes": [
+    "forecast"
+  ],
+  "assumptions": [
+    "Page events, applications, errors, appointments, contacts, decisions, and outcomes remain distinct.",
+    "No automated score determines eligibility, enforcement, or denial without lawful human review.",
+    "All alternatives, capacities, costs, effects, thresholds, and failure scenarios are proposed until bound to evidence."
+  ],
+  "baseline": "continue ordinary capacity planning for multichannel administrative service and support demand.",
+  "city_bindings": [],
+  "constraints": [
+    {
+      "binding": true,
+      "constraint_id": "scenario.public-service.digital-access.channel-support-demand.v1.constraint.binding",
+      "description": "The digital public access and administrative service delivery forecast must respect declared validated operational capacity and forecast uncertainty.",
+      "hard": true,
+      "kind": "capacity",
+      "required_source_roles": [
+        "demographic-context",
+        "equity-attribute",
+        "municipal-demand",
+        "operating-capacity",
+        "real-time-state",
+        "service-schedule"
+      ]
+    },
+    {
+      "binding": false,
+      "constraint_id": "scenario.public-service.digital-access.channel-support-demand.v1.constraint.evidence-scope",
+      "description": "Every released metric must retain evidence type, source lineage, geography, time, assumptions, and uncertainty.",
+      "hard": true,
+      "kind": "technical",
+      "required_source_roles": [
+        "demographic-context"
+      ]
+    },
+    {
+      "binding": false,
+      "constraint_id": "scenario.public-service.digital-access.channel-support-demand.v1.constraint.decision-authority",
+      "description": "No analytical output may bypass lawful authority, accountable human review, or an applicable appeal process.",
+      "hard": true,
+      "kind": "regulatory",
+      "required_source_roles": [
+        "demographic-context"
+      ]
+    }
+  ],
+  "current_readiness": "blocked-missing-source",
+  "decision_cadence": "recompiled at each planning cycle and after material evidence change",
+  "decision_owner": "chief digital officer and administrative service delivery director",
+  "decision_question": "What service, language, channel, device, and time-specific demand should support operations prepare for?",
+  "decision_type": "forecast",
+  "design_id": "scenario.public-service.digital-access.channel-support-demand.v1",
+  "design_order": 170,
+  "design_signature": "sha256:44c387d44c5e64b626d9615f48849e3eee4176e598ca49a77ddfe8daaae7c4a0",
+  "evidence_requirements": [
+    "estimated",
+    "observed",
+    "proposed"
+  ],
+  "family_id": "public-service.digital-access",
+  "family_title": "Digital public access and administrative service delivery",
+  "horizon": "weeks",
+  "implementation_status": "design-only",
+  "independence_key": {
+    "binding_constraint": "The digital public access and administrative service delivery forecast must respect declared validated operational capacity and forecast uncertainty.",
+    "decision_object": "multichannel administrative service and support demand",
+    "evidence_gate": "Evidence for multichannel administrative service and support demand passes documented checks for held-out error, interval coverage, event detection, drift, and baseline comparison.",
+    "horizon": "weeks",
+    "intervention_mechanism": "service-event and journey-stage workload forecasting",
+    "primary_outcome": "eligible journey demand above qualified channel capacity",
+    "spatial_unit": "service-area"
+  },
+  "intended_claim": "A versioned forecast design for comparing declared alternatives affecting multichannel administrative service and support demand, conditional on its evidence gate.",
+  "limitations": [
+    "This library record has no city binding and therefore reports no local input, output, or recommendation.",
+    "Readiness describes explicit source and method gates; it does not certify implementation feasibility.",
+    "External domain, legal, community, security, and operational review remains outside this design artifact."
+  ],
+  "method_claimed": false,
+  "objectives": [
+    {
+      "evidence_type": "estimated",
+      "metric": "eligible journey demand above qualified channel capacity",
+      "objective_id": "scenario.public-service.digital-access.channel-support-demand.v1.objective.primary",
+      "primary": true,
+      "sense": "minimize",
+      "unit": "journeys per day"
+    },
+    {
+      "evidence_type": "estimated",
+      "metric": "distributional gap in eligible journey demand above qualified channel capacity",
+      "objective_id": "scenario.public-service.digital-access.channel-support-demand.v1.objective.equity",
+      "primary": false,
+      "sense": "minimize",
+      "unit": "journeys per day"
+    },
+    {
+      "evidence_type": "observed",
+      "metric": "decision claims with complete evidence lineage",
+      "objective_id": "scenario.public-service.digital-access.channel-support-demand.v1.objective.traceability",
+      "primary": false,
+      "sense": "maximize",
+      "unit": "percent"
+    }
+  ],
+  "prohibited_claims": [
+    "Do not call forecast contacts eligible applicants, completed services, or verified unmet need.",
+    "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+    "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+    "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+  ],
+  "release_gate": {
+    "failure_release": "Release an explicit insufficient-evidence record naming missing sources, failed diagnostics, prohibited claims, and the next validation action.",
+    "failure_status": "insufficient-evidence",
+    "gate_id": "scenario.public-service.digital-access.channel-support-demand.v1.gate.release",
+    "gate_type": "model-calibration",
+    "pass_condition": "Evidence for multichannel administrative service and support demand passes documented checks for held-out error, interval coverage, event detection, drift, and baseline comparison.",
+    "required_evidence_types": [
+      "estimated",
+      "observed"
+    ],
+    "required_source_roles": [
+      "demographic-context",
+      "equity-attribute",
+      "municipal-demand",
+      "operating-capacity",
+      "real-time-state",
+      "service-schedule"
+    ]
+  },
+  "required_source_roles": [
+    "demographic-context",
+    "equity-attribute",
+    "municipal-demand",
+    "operating-capacity",
+    "real-time-state",
+    "service-schedule"
+  ],
+  "schema_version": "1.0.0",
+  "spatial_unit": "service-area",
+  "suite": "public-service-operations",
+  "tags": [
+    "design-only",
+    "forecast",
+    "public-service-operations",
+    "public-service.digital-access",
+    "scenario-library"
+  ],
+  "title": "Forecast digital, phone, and in-person support demand",
+  "transportability_risks": [
+    "Eligibility, identity, language, disability access, connectivity, trust, and service design differ.",
+    "Digital telemetry omits non-users and can encode device or tracking coverage."
+  ]
+}

@@ -1,0 +1,165 @@
+{
+  "affected_system": "food access, environmental health inspection, and community protection",
+  "alternatives": [
+    "protect minimum coverage before needs-based allocation of environmental-health inspection and food-support resources",
+    "adapt allocations using observed demand, uptake, and capacity for environmental-health inspection and food-support resources",
+    "pair risk-tiered minimum-access resource allocation with an explicit stop, review, and escalation rule"
+  ],
+  "analysis_modes": [
+    "simulation",
+    "optimization"
+  ],
+  "assumptions": [
+    "Food outlets, inspections, assistance, prices, access, and environmental complaints have separate semantics.",
+    "Area food access is not treated as individual diet, food security, or health outcome.",
+    "All alternatives, capacities, costs, effects, thresholds, and failure scenarios are proposed until bound to evidence."
+  ],
+  "baseline": "retain the current distribution rule for environmental-health inspection and food-support resources.",
+  "city_bindings": [],
+  "constraints": [
+    {
+      "binding": true,
+      "constraint_id": "scenario.health.food-environment.inspection-assistance-resources.v1.constraint.binding",
+      "description": "The food access and environmental health allocate must respect declared minimum service, eligibility, capacity, and distributional safeguards.",
+      "hard": true,
+      "kind": "equity",
+      "required_source_roles": [
+        "demographic-context",
+        "equity-attribute",
+        "facility-inventory",
+        "geographic-identity",
+        "municipal-demand",
+        "operating-capacity"
+      ]
+    },
+    {
+      "binding": false,
+      "constraint_id": "scenario.health.food-environment.inspection-assistance-resources.v1.constraint.evidence-scope",
+      "description": "Every released metric must retain evidence type, source lineage, geography, time, assumptions, and uncertainty.",
+      "hard": true,
+      "kind": "technical",
+      "required_source_roles": [
+        "demographic-context"
+      ]
+    },
+    {
+      "binding": false,
+      "constraint_id": "scenario.health.food-environment.inspection-assistance-resources.v1.constraint.decision-authority",
+      "description": "No analytical output may bypass lawful authority, accountable human review, or an applicable appeal process.",
+      "hard": true,
+      "kind": "regulatory",
+      "required_source_roles": [
+        "demographic-context"
+      ]
+    }
+  ],
+  "current_readiness": "blocked-missing-source",
+  "decision_cadence": "recompiled at each planning cycle and after material evidence change",
+  "decision_owner": "environmental health commissioner and food-access program director",
+  "decision_question": "How should inspectors, sampling, emergency food, refrigeration, and navigation capacity be distributed?",
+  "decision_type": "allocate",
+  "design_id": "scenario.health.food-environment.inspection-assistance-resources.v1",
+  "design_order": 109,
+  "design_signature": "sha256:458f7a60217f3dc23680c587b74f10cd1a60f0e286631351ecebb92efd35c3e1",
+  "evidence_requirements": [
+    "estimated",
+    "observed",
+    "optimized",
+    "proposed",
+    "simulated"
+  ],
+  "family_id": "health.food-environment",
+  "family_title": "Food access and environmental health",
+  "horizon": "weeks",
+  "implementation_status": "design-only",
+  "independence_key": {
+    "binding_constraint": "The food access and environmental health allocate must respect declared minimum service, eligibility, capacity, and distributional safeguards.",
+    "decision_object": "environmental-health inspection and food-support resources",
+    "evidence_gate": "Evidence for environmental-health inspection and food-support resources passes documented checks for eligible denominators, group attributes, inventory, minimum-service rules, and allocation records.",
+    "horizon": "weeks",
+    "intervention_mechanism": "risk-tiered minimum-access resource allocation",
+    "primary_outcome": "priority cases and eligible demand without assigned capacity",
+    "spatial_unit": "service-area"
+  },
+  "intended_claim": "A versioned allocate design for comparing declared alternatives affecting environmental-health inspection and food-support resources, conditional on its evidence gate.",
+  "limitations": [
+    "This library record has no city binding and therefore reports no local input, output, or recommendation.",
+    "Readiness describes explicit source and method gates; it does not certify implementation feasibility.",
+    "External domain, legal, community, security, and operational review remains outside this design artifact."
+  ],
+  "method_claimed": false,
+  "objectives": [
+    {
+      "evidence_type": "estimated",
+      "metric": "priority cases and eligible demand without assigned capacity",
+      "objective_id": "scenario.health.food-environment.inspection-assistance-resources.v1.objective.primary",
+      "primary": true,
+      "sense": "minimize",
+      "unit": "cases"
+    },
+    {
+      "evidence_type": "estimated",
+      "metric": "distributional gap in priority cases and eligible demand without assigned capacity",
+      "objective_id": "scenario.health.food-environment.inspection-assistance-resources.v1.objective.equity",
+      "primary": false,
+      "sense": "minimize",
+      "unit": "cases"
+    },
+    {
+      "evidence_type": "observed",
+      "metric": "decision claims with complete evidence lineage",
+      "objective_id": "scenario.health.food-environment.inspection-assistance-resources.v1.objective.traceability",
+      "primary": false,
+      "sense": "maximize",
+      "unit": "percent"
+    }
+  ],
+  "prohibited_claims": [
+    "Do not report assigned inspections, benefits, or food supplies as completed or received.",
+    "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+    "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+    "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+  ],
+  "release_gate": {
+    "failure_release": "Release an explicit insufficient-evidence record naming missing sources, failed diagnostics, prohibited claims, and the next validation action.",
+    "failure_status": "insufficient-evidence",
+    "gate_id": "scenario.health.food-environment.inspection-assistance-resources.v1.gate.release",
+    "gate_type": "equity-measurement",
+    "pass_condition": "Evidence for environmental-health inspection and food-support resources passes documented checks for eligible denominators, group attributes, inventory, minimum-service rules, and allocation records.",
+    "required_evidence_types": [
+      "observed",
+      "proposed"
+    ],
+    "required_source_roles": [
+      "demographic-context",
+      "equity-attribute",
+      "facility-inventory",
+      "geographic-identity",
+      "municipal-demand",
+      "operating-capacity"
+    ]
+  },
+  "required_source_roles": [
+    "demographic-context",
+    "equity-attribute",
+    "facility-inventory",
+    "geographic-identity",
+    "municipal-demand",
+    "operating-capacity"
+  ],
+  "schema_version": "1.0.0",
+  "spatial_unit": "service-area",
+  "suite": "population-health-environmental-exposure",
+  "tags": [
+    "allocate",
+    "design-only",
+    "health.food-environment",
+    "population-health-environmental-exposure",
+    "scenario-library"
+  ],
+  "title": "Allocate inspectors, food support, and field resources",
+  "transportability_risks": [
+    "Retail markets, informal food systems, inspection law, mobility, prices, and eligibility vary.",
+    "Administrative participation can understate eligible need."
+  ]
+}

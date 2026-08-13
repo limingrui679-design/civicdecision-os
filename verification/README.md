@@ -1,77 +1,79 @@
 # Verification evidence
 
-The current product-surface milestone report is produced by:
+The current repository-wide Milestone-7 report is produced by:
 
 ```bash
-python scripts/verify_repository.py --report verification/milestone-6-product-surfaces.json
+python scripts/verify_repository.py \
+  --report verification/milestone-7-scenario-library-and-product.json
 ```
 
-The verifier checks the committed connector catalog against the loadable code registry, uses a
-temporary directory, regenerates all 22 public JSON Schemas, validates every committed
-protocol document, verifies each source artifact against its manifest, checks
-portable SHA256SUMS files, rebuilds the completed and infeasible reference workflows, and requires
-byte-for-byte equality with the committed JSON and Markdown outputs. It also validates the
-250-city catalog, semantic bundle, seed graph, and coverage matrix; rebuilds all four global-city
-artifacts from the committed GeoNames source; and requires exact bytes and checksums.
+The verifier checks the committed connector catalog against the loadable code registry, uses
+isolated temporary directories, regenerates all 22 core JSON Schemas, validates every committed
+protocol document, verifies every source artifact against its manifest, checks portable
+`SHA256SUMS` inventories, rebuilds the completed and infeasible reference workflows, and requires
+byte-for-byte equality with their committed JSON and Markdown outputs.
+
+For Tier G, it validates the 250-city catalog, semantic bundle, seed graph, coverage matrix, and
+selection invariants. It rebuilds all four global-city artifacts from the committed GeoNames
+source and requires identical bytes and checksums.
 
 For Tier S, it verifies all 41 source artifacts, embedded source-manifest equality, safe recursive
 paths, 30 bundle hashes, 90 independent run hashes, 30 coverage rows, 30 comparison rows, zero
-issued recommendations, and the recursive checksum inventory. It then recompiles the registry,
-bundles, runs, coverage matrix, cross-city reports, and checksums in a fresh temporary directory
-and requires the entire file tree to match byte-for-byte.
+issued recommendations, and the complete checksum inventory. It then recompiles the registry,
+bundles, runs, coverage matrix, cross-city reports, and checksums and compares the full tree.
 
-For milestone 4, it validates the 145 complete benchmark run files against registry file hashes,
-validates the evidence summary against its row-to-artifact bindings and artifact-set hash, and
-checks the recursive 152-entry checksum inventory. It loads all 40 historical replay and 100
-portfolio optimization contracts, then rebuilds the replay, solver-task, qualification, ledger,
-CSV, report, registry, and checksum tree from committed Tier-S and NASA POWER inputs in a fresh
-temporary directory. Every path and byte must match.
+For the analytical benchmark layer, it validates 145 complete run files against registry hashes,
+reconciles typed evidence rows and the artifact-set hash, and checks 152 checksum entries. It loads
+all 40 historical replay and 100 portfolio-optimization contracts, then exactly rebuilds the
+replay, solver-task, qualification, ledger, CSV, report, registry, and checksum tree.
 
-For milestone 5, it verifies all 49 deduplicated Tier-D source artifacts and their attribution,
-eight embedded City Adapters, eight bundle hashes, 96 embedded/independent scenario-pack hashes,
-every referenced scenario, forecast, simulation, optimization, uncertainty, DecisionPack, and
-brief file, the 49-row source ledger, 96-row scenario ledger, 144-row metric ledger, 706-entry
-checksum inventory, and workload reconciliation. It then recompiles all 707 files from the
-committed public source layer in a fresh temporary directory and requires the complete tree to
-match byte-for-byte.
+For Tier D, it verifies all 49 deduplicated source artifacts and their attribution, eight City
+Adapters, eight bundle hashes, 96 embedded and independent scenario-pack hashes, every referenced
+scenario, forecast, simulation, optimization, uncertainty, DecisionPack, and brief file, all four
+ledgers, the 706-entry checksum inventory, and workload reconciliation. It recompiles the complete
+707-file tree from the committed public source layer and requires identical paths and bytes.
 
-For milestone 6, it validates the product artifact manifest, every indexed byte count and SHA-256
-digest, the portable 34-entry checksum inventory, deterministic OpenAPI document, 17
-product/plugin JSON Schemas, and four packaged web-asset hashes. It independently constructs the
-same fail-closed catalog store, confirms the 14 OpenAPI paths, then rebuilds all 35 product files
-in a fresh temporary directory and requires identical paths and bytes.
+For the scenario library, it validates 240 full design contracts and 30 family contracts, the
+complete 30-by-8 matrix, substantive signatures, normalized title/question uniqueness, all 28,680
+pairwise similarity comparisons, twelve one-to-one reference mappings, zero city bindings, zero
+claimed methods, five Schemas, the 280-entry artifact manifest, 281 checksum targets, and all 282
+files. A fresh build must reproduce the entire tree exactly.
 
-The companion coverage report is generated by:
+For the product projection, it independently constructs the fail-closed catalog store and verifies
+336 manifest entries, 337 checksum targets, 28 product/plugin/library Schemas, a deterministic
+19-path OpenAPI document, four packaged web-asset hashes, 240 design details, 30 family details,
+all collection indexes, and the scenario-library evidence views. It then rebuilds all 338 files
+and requires path-for-path, byte-for-byte equality.
+
+The companion branch-coverage report is generated by:
 
 ```bash
-pytest --cov=civicdecision --cov-branch \
-  --cov-report=json:verification/milestone-6-coverage.json
+pytest -q --cov=civicdecision --cov-branch \
+  --cov-report=term-missing \
+  --cov-report=json:verification/milestone-7-coverage.json
 ```
 
-The final collection contains exactly 800 tests. The report records 96.798% statement coverage,
-89.401% branch coverage, and 95.369% coverage.py combined line-and-branch coverage.
-
-The local Python 3.12 wheel build, fresh dependency installation, ZIP integrity, import origin,
-CLI, REST API, local SDK, data-only plugin, packaged web assets, negative release, and exact
-35-file product rebuild are recorded in
-[`milestone-6-wheel-smoke.json`](milestone-6-wheel-smoke.json). The final wheel is 229,951 bytes
-with SHA-256 `879e974d12e65380cb1d1e5c60161d6323ef4c3071e6fbba9ec335dd546c5843`.
-This is current-worktree packaging evidence; it does not satisfy the separate tagged-release,
-signature, or remote-CI gates.
+The final collection contains exactly 800 tests. The current report records 96.989% statement
+coverage, 90.250% branch coverage, and 95.696% under coverage.py's combined line-and-branch
+measure. Scenario-library integrity models are fully branch-covered; the enlarged collection also
+exercises cross-resource and query-scoped ETag behavior so an unrelated validator cannot cause a
+false `304` response.
 
 Desktop and 390×844 mobile interaction evidence is recorded in
-[`milestone-6-browser-qa.json`](milestone-6-browser-qa.json). It covers the catalog headline,
-Tier-D city detail, a selected negative DecisionPack with no recommendation, responsive
-navigation, horizontal overflow, and browser runtime logs. It is a local functional inspection,
-not public-availability evidence or an external accessibility/security certification.
+[`milestone-7-browser-qa.json`](milestone-7-browser-qa.json). It covers the 240/30 library headline,
+30-family navigation, exactly eight designs in a selected family, compound filters, punctuation-
+normalized search, full design and anti-duplication drawers, mobile navigation, horizontal
+overflow, and browser runtime logs. This is local functional inspection, not public-availability,
+formal accessibility, cross-browser, performance, or penetration-test evidence.
 
-Milestone 4 remains historical evidence for the analytical-engine baseline, and milestone 5 for
-the completed Tier-D layer. The milestone 6 reports supersede both for the current product
-worktree while retaining their narrower historical evidence.
+[`milestone-6-wheel-smoke.json`](milestone-6-wheel-smoke.json) remains historical evidence for the
+pre-library product wheel. It is deliberately not reused as Milestone-7 packaging evidence. A
+fresh wheel/sdist build and isolated install are tracked as a separate current release gate.
 
-The current report establishes repository integrity for this bounded milestone. It does not establish
-policy correctness, causal validity, production deployment, external review, real users, or
-real-world impact.
+Milestone 0 through Milestone 6 reports remain immutable historical snapshots. The Milestone-7
+verifier, coverage, and browser reports supersede them for current source, artifact, and local UI
+claims while retaining the narrower earlier evidence.
 
-`milestone-0.json` through the milestone-5 reports are retained as historical snapshots. They are
-not the current milestone status.
+These reports establish bounded repository integrity and local reproducibility. They do not
+establish external domain correctness, academic novelty, causal validity, production deployment,
+public availability, external review, municipal adoption, real users, or real-world impact.

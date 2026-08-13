@@ -124,6 +124,29 @@ The evidence summary separately reconciles public source units, deduplicated und
 forecast inputs, simulation iterations, optimizer search/evaluation counts, uncertainty draws,
 and file hashes.
 
+### 3c. Scenario-design library layer
+
+The library sits between reusable decision intent and city-bound execution. Thirty authored
+families cover seven application suites. Each family contains exactly one diagnose, forecast,
+prioritize, site, allocate, schedule, stress-test, and evaluate design, producing a complete
+30×8 matrix without copying a design across cities.
+
+Every strict design contract includes decision context, baseline, alternatives, objectives,
+constraints, analysis modes, evidence types, source roles, a negative release gate, assumptions,
+limitations, prohibited claims, and transfer risks. A seven-field independence key excludes title,
+family, suite, and city labels; exact collisions and all 28,680 pairwise lexical similarities are
+audited during the build. The maximum current pairwise token Jaccard is 0.646154 against a fixed
+0.90 failure threshold.
+
+Exactly twelve designs point to existing Tier-D templates as bounded reference implementations;
+228 remain design-only. `city_bindings` is schema-constrained to an empty list and
+`method_claimed` to false. A city execution therefore requires a separate artifact and cannot be
+created by relabeling the design record.
+
+The deterministic tree has 282 files and a 280-entry manifest. Registry/model/file hashes,
+portable checksums, exact counts, safe paths, stale files, and isolated byte-for-byte rebuilds are
+all checked independently.
+
 ### 4. Decision diagnostics
 
 Completed DecisionPacks require at least one controlled reversal test and one ranked
@@ -134,15 +157,16 @@ expected value of perfect information.
 ### 5. Product surfaces
 
 `ArtifactStore` is the single product read model. At construction it validates the Tier-G,
-Tier-S, Tier-D, reference-workflow, source-manifest, and benchmark registries; reconciles identities,
-hashes, counts, scenario kinds, negative statuses, and DecisionPack eligibility; and computes one
-catalog fingerprint and strong ETag. API parameters are never interpreted as filesystem paths.
+Tier-S, Tier-D, scenario-library, reference-workflow, source-manifest, and benchmark registries;
+reconciles identities, hashes, manifests, checksums, counts, family/design references, scenario
+kinds, negative statuses, and DecisionPack eligibility; and computes one catalog fingerprint and
+strong ETag. API parameters are never interpreted as filesystem paths.
 
 Five product surfaces project from that store:
 
-- the CLI offers typed catalog browsing, OpenAPI export, exact product rebuild, guarded local
-  serving, and plugin validation;
-- the REST API offers 14 versioned read-only paths with bounded pagination, closed filters,
+- the CLI offers typed city, execution, design, family, source, and benchmark browsing, library
+  and product rebuilds, OpenAPI export, guarded local serving, and plugin validation;
+- the REST API offers 19 versioned read-only paths with bounded pagination, closed filters,
   problem details, request IDs, conditional caching, compression, and browser security headers;
 - the Python SDK offers local, synchronous HTTP, and asynchronous HTTP clients that validate the
   same Pydantic response models;
@@ -155,11 +179,13 @@ No surface may invent a stronger claim than the underlying pack. A Tier-S screen
 DecisionPack, and a negative DecisionPack remains retrievable with no selected option. Human
 briefs are generated from validated JSON and verified against deterministic golden artifacts.
 
-The committed product projection is a separate immutable review surface: 33 manifest-indexed
-JSON artifacts, one artifact manifest, and one portable checksum inventory. Its 35 files include
-17 product/plugin Schemas, the deterministic OpenAPI document, web-asset hashes, and complete
-collection indexes. The plugin registry remains separate from the live catalog: validating a
-package never installs, enables, or merges it automatically.
+The committed product projection is a separate immutable review surface: 336 manifest-indexed
+artifacts, one artifact manifest, and one portable checksum inventory. Its 338 files include 28
+product/plugin/library Schemas, a 19-path deterministic OpenAPI document, 240 API-shaped design
+details, 30 family details, segmented indexes, evidence records, and web-asset hashes. Static
+views duplicate access shapes but never increase the authoritative design count. The plugin
+registry remains separate from the live catalog: validating a package never installs, enables, or
+merges it automatically.
 
 ## Scale architecture
 
@@ -180,17 +206,18 @@ and copied rows do not inflate the non-raster record target.
 Protocol serialization is canonical UTF-8 JSON with sorted keys and no NaN values. Every source,
 run artifact, evidence summary, and DecisionPack has a SHA-256 content hash. Reference workflows
 use fixed inputs, explicit parameters, and fixed seeds. `scripts/verify_repository.py` rebuilds
-Schemas, DecisionPacks, the Tier-G and Tier-S layers, all 145 analytical benchmark artifacts, and
-the complete 707-file Tier-D tree plus evidence ledgers in a temporary directory and requires
-byte-for-byte equality. It also rebuilds the 35-file product projection and compares every path
-and byte, including its 17 Schemas, 14-path OpenAPI document, manifest, and checksums.
+Schemas, DecisionPacks, the Tier-G and Tier-S layers, all 145 analytical benchmark artifacts, the
+complete 707-file Tier-D tree, and the 282-file scenario library in temporary directories and
+requires byte-for-byte equality. It also rebuilds the 338-file product projection and compares
+every path and byte, including its 28 Schemas, 19-path OpenAPI document, manifest, and checksums.
 
 ## Current limits
 
 The current milestone implements a 250-point global catalog, a small semantic seed graph, 30
 standardized descriptive bundles, five analytical engine families, 40 public-data forecast
-replays, 100 synthetic optimization tasks, five synthetic engine qualifications, and eight
-deep-city reference bundles with legal geometries and local public request evidence. Tier-D action
+replays, 100 synthetic optimization tasks, five synthetic engine qualifications, eight deep-city
+reference bundles with legal geometries and local public request evidence, and 240 audited scenario
+designs. Of those designs, 228 are design-only. Tier-D action
 parameters are still hypothetical, and its climate input remains a point rather than an exposure
 surface. The local API, SDK, CLI, web explorer, and data-only plugin validator are implemented and
 packaging-tested, but they are not a public deployment. Production network routing, externally

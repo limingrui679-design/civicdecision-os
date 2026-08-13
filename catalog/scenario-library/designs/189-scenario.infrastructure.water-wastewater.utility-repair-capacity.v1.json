@@ -1,0 +1,165 @@
+{
+  "affected_system": "drinking-water distribution, sewer collection, pumping, and treatment assets",
+  "alternatives": [
+    "protect minimum coverage before needs-based allocation of water and wastewater repair and emergency resources",
+    "adapt allocations using observed demand, uptake, and capacity for water and wastewater repair and emergency resources",
+    "pair consequence-, skill-, time-, and minimum-service allocation with an explicit stop, review, and escalation rule"
+  ],
+  "analysis_modes": [
+    "simulation",
+    "optimization"
+  ],
+  "assumptions": [
+    "Assets, inspections, breaks, overflows, pressure, flow, quality, work, and complaints remain distinct.",
+    "Hydraulic, process, condition, and consequence models receive utility engineering review.",
+    "All alternatives, capacities, costs, effects, thresholds, and failure scenarios are proposed until bound to evidence."
+  ],
+  "baseline": "retain the current distribution rule for water and wastewater repair and emergency resources.",
+  "city_bindings": [],
+  "constraints": [
+    {
+      "binding": true,
+      "constraint_id": "scenario.infrastructure.water-wastewater.utility-repair-capacity.v1.constraint.binding",
+      "description": "The water and wastewater infrastructure allocate must respect declared minimum service, eligibility, capacity, and distributional safeguards.",
+      "hard": true,
+      "kind": "equity",
+      "required_source_roles": [
+        "asset-condition",
+        "asset-inventory",
+        "environmental-exposure",
+        "geographic-identity",
+        "operating-capacity",
+        "real-time-state"
+      ]
+    },
+    {
+      "binding": false,
+      "constraint_id": "scenario.infrastructure.water-wastewater.utility-repair-capacity.v1.constraint.evidence-scope",
+      "description": "Every released metric must retain evidence type, source lineage, geography, time, assumptions, and uncertainty.",
+      "hard": true,
+      "kind": "technical",
+      "required_source_roles": [
+        "asset-condition"
+      ]
+    },
+    {
+      "binding": false,
+      "constraint_id": "scenario.infrastructure.water-wastewater.utility-repair-capacity.v1.constraint.decision-authority",
+      "description": "No analytical output may bypass lawful authority, accountable human review, or an applicable appeal process.",
+      "hard": true,
+      "kind": "regulatory",
+      "required_source_roles": [
+        "asset-condition"
+      ]
+    }
+  ],
+  "current_readiness": "blocked-missing-source",
+  "decision_cadence": "recompiled at each planning cycle and after material evidence change",
+  "decision_owner": "water and wastewater utility asset director",
+  "decision_question": "How should qualified crews, laboratory capacity, bypass equipment, parts, and inspectors be assigned?",
+  "decision_type": "allocate",
+  "design_id": "scenario.infrastructure.water-wastewater.utility-repair-capacity.v1",
+  "design_order": 189,
+  "design_signature": "sha256:95ea89e0fd567ee1d775b0818313c74b8b611c3fe989b08251b5acc693e24f2c",
+  "evidence_requirements": [
+    "estimated",
+    "observed",
+    "optimized",
+    "proposed",
+    "simulated"
+  ],
+  "family_id": "infrastructure.water-wastewater",
+  "family_title": "Water and wastewater infrastructure",
+  "horizon": "weeks",
+  "implementation_status": "design-only",
+  "independence_key": {
+    "binding_constraint": "The water and wastewater infrastructure allocate must respect declared minimum service, eligibility, capacity, and distributional safeguards.",
+    "decision_object": "water and wastewater repair and emergency resources",
+    "evidence_gate": "Evidence for water and wastewater repair and emergency resources passes documented checks for eligible denominators, group attributes, inventory, minimum-service rules, and allocation records.",
+    "horizon": "weeks",
+    "intervention_mechanism": "consequence-, skill-, time-, and minimum-service allocation",
+    "primary_outcome": "critical utility work without assigned qualified capacity",
+    "spatial_unit": "network"
+  },
+  "intended_claim": "A versioned allocate design for comparing declared alternatives affecting water and wastewater repair and emergency resources, conditional on its evidence gate.",
+  "limitations": [
+    "This library record has no city binding and therefore reports no local input, output, or recommendation.",
+    "Readiness describes explicit source and method gates; it does not certify implementation feasibility.",
+    "External domain, legal, community, security, and operational review remains outside this design artifact."
+  ],
+  "method_claimed": false,
+  "objectives": [
+    {
+      "evidence_type": "estimated",
+      "metric": "critical utility work without assigned qualified capacity",
+      "objective_id": "scenario.infrastructure.water-wastewater.utility-repair-capacity.v1.objective.primary",
+      "primary": true,
+      "sense": "minimize",
+      "unit": "work orders"
+    },
+    {
+      "evidence_type": "estimated",
+      "metric": "distributional gap in critical utility work without assigned qualified capacity",
+      "objective_id": "scenario.infrastructure.water-wastewater.utility-repair-capacity.v1.objective.equity",
+      "primary": false,
+      "sense": "minimize",
+      "unit": "work orders"
+    },
+    {
+      "evidence_type": "observed",
+      "metric": "decision claims with complete evidence lineage",
+      "objective_id": "scenario.infrastructure.water-wastewater.utility-repair-capacity.v1.objective.traceability",
+      "primary": false,
+      "sense": "maximize",
+      "unit": "percent"
+    }
+  ],
+  "prohibited_claims": [
+    "Do not report an assignment as repair, sampling, restored service, or compliance.",
+    "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+    "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+    "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+  ],
+  "release_gate": {
+    "failure_release": "Release an explicit insufficient-evidence record naming missing sources, failed diagnostics, prohibited claims, and the next validation action.",
+    "failure_status": "insufficient-evidence",
+    "gate_id": "scenario.infrastructure.water-wastewater.utility-repair-capacity.v1.gate.release",
+    "gate_type": "equity-measurement",
+    "pass_condition": "Evidence for water and wastewater repair and emergency resources passes documented checks for eligible denominators, group attributes, inventory, minimum-service rules, and allocation records.",
+    "required_evidence_types": [
+      "observed",
+      "proposed"
+    ],
+    "required_source_roles": [
+      "asset-condition",
+      "asset-inventory",
+      "environmental-exposure",
+      "geographic-identity",
+      "operating-capacity",
+      "real-time-state"
+    ]
+  },
+  "required_source_roles": [
+    "asset-condition",
+    "asset-inventory",
+    "environmental-exposure",
+    "geographic-identity",
+    "operating-capacity",
+    "real-time-state"
+  ],
+  "schema_version": "1.0.0",
+  "spatial_unit": "network",
+  "suite": "infrastructure-finance-asset-risk",
+  "tags": [
+    "allocate",
+    "design-only",
+    "infrastructure-finance-asset-risk",
+    "infrastructure.water-wastewater",
+    "scenario-library"
+  ],
+  "title": "Allocate utility repair, inspection, and emergency capacity",
+  "transportability_risks": [
+    "Network age, materials, soils, climate, regulation, treatment, hydraulics, and costs differ.",
+    "Published incidents and complaints can omit failures or lack asset-level linkage."
+  ]
+}

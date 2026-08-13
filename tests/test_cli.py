@@ -440,9 +440,36 @@ def test_cli_product_scenario_browsing_and_detail(
         ],
     )
     detail = runner.invoke(app, ["catalog", "scenario", "tierd.us.tx.austin.11"])
-    assert listing.exit_code == detail.exit_code == 0
+    designs = runner.invoke(
+        app,
+        [
+            "catalog",
+            "designs",
+            "--decision-type",
+            "evaluate",
+            "--limit",
+            "1",
+            "--json",
+        ],
+    )
+    design = runner.invoke(
+        app,
+        ["catalog", "design", "scenario.climate.extreme-heat.heat-access-gaps.v1"],
+    )
+    families = runner.invoke(app, ["catalog", "design-families", "--limit", "1", "--json"])
+    family = runner.invoke(app, ["catalog", "design-family", "climate.extreme-heat"])
+    evidence = runner.invoke(app, ["catalog", "scenario-library-evidence"])
+    assert all(
+        result.exit_code == 0
+        for result in (listing, detail, designs, design, families, family, evidence)
+    )
     assert json.loads(listing.output)["pagination"]["total"] == 20
     assert json.loads(detail.output)["scenario"]["recommendation_issued"] is False
+    assert json.loads(designs.output)["pagination"]["total"] == 30
+    assert json.loads(design.output)["design"]["method_claimed"] is False
+    assert json.loads(families.output)["pagination"]["total"] == 30
+    assert len(json.loads(family.output)["designs"]) == 8
+    assert json.loads(evidence.output)["design_only_scenarios"] == 228
 
 
 def test_cli_product_sources_and_benchmarks(
@@ -480,7 +507,7 @@ def test_cli_exports_deterministic_openapi(tmp_path: Path) -> None:
         ],
     )
     assert product.exit_code == 0
-    assert "35 product files" in product.output
+    assert "338 product files" in product.output
     assert {
         path.relative_to(product_output): path.read_bytes()
         for path in product_output.rglob("*")
@@ -727,11 +754,23 @@ def test_cli_product_collection_alternate_output_branches(
     )
     sources = runner.invoke(app, ["catalog", "sources", "--query", "Austin", "--json"])
     missing = runner.invoke(app, ["catalog", "scenario", "unknown.scenario"])
-    assert cities.exit_code == scenarios.exit_code == sources.exit_code == 0
+    design_table = runner.invoke(
+        app,
+        ["catalog", "designs", "--implementation-status", "reference-implemented", "--limit", "2"],
+    )
+    family_table = runner.invoke(app, ["catalog", "design-families", "--limit", "2"])
+    missing_design = runner.invoke(app, ["catalog", "design", "unknown.design"])
+    missing_family = runner.invoke(app, ["catalog", "design-family", "unknown.family"])
+    assert all(
+        result.exit_code == 0 for result in (cities, scenarios, sources, design_table, family_table)
+    )
     assert json.loads(cities.output)["pagination"]["total"] == 8
     assert "Scenario executions: 2" in scenarios.output
     assert json.loads(sources.output)["pagination"]["total"] == 5
     assert missing.exit_code == 2 and "lookup failed" in missing.output
+    assert "Scenario designs: 12" in design_table.output
+    assert "Scenario-design families: 30" in family_table.output
+    assert missing_design.exit_code == missing_family.exit_code == 2
 
 
 def test_cli_catalog_integrity_and_openapi_failures_are_nonzero(

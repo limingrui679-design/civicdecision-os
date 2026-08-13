@@ -1,0 +1,1099 @@
+{
+  "claim_boundary": "Design records are not city executions, deployments, adoptions, or impacts.",
+  "items": [
+    {
+      "analysis_modes": [
+        "descriptive"
+      ],
+      "binding_constraint": "The 311 and public-service demand operations diagnose must respect declared measurement resolution and classification uncertainty.",
+      "content_hash": "sha256:e1e0033d585327fefc7760cf24f544276884faa9711364354bdb3f19686a7367",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Which categories, channels, places, and handoffs produce persistent demand, duplication, delay, or rework?",
+      "decision_type": "diagnose",
+      "design_id": "scenario.public-service.demand.request-workload.v1",
+      "design_order": 145,
+      "evidence_gate": "geographic-alignment",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "proposed"
+      ],
+      "family_id": "public-service.demand",
+      "family_title": "311 and public-service demand operations",
+      "horizon": "annual",
+      "implementation_status": "design-only",
+      "primary_outcome": "requests with unresolved routing or repeated workflow transitions",
+      "prohibited_claims": [
+        "Do not call requests verified incidents, unresolved harms, or failed service delivery.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "service-area",
+      "suite": "public-service-operations",
+      "title": "Diagnose public-service request workload and workflow friction"
+    },
+    {
+      "analysis_modes": [
+        "forecast"
+      ],
+      "binding_constraint": "The 311 and public-service demand operations forecast must respect declared validated operational capacity and forecast uncertainty.",
+      "content_hash": "sha256:27e9df2aea3d91a86fe68b3a4346e9a50ea51772c661f5822e61b78eec23b553",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "What category, channel, area, and time-specific demand range should service operations prepare for?",
+      "decision_type": "forecast",
+      "design_id": "scenario.public-service.demand.service-workload.v1",
+      "design_order": 146,
+      "evidence_gate": "model-calibration",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "proposed"
+      ],
+      "family_id": "public-service.demand",
+      "family_title": "311 and public-service demand operations",
+      "horizon": "weeks",
+      "implementation_status": "design-only",
+      "primary_outcome": "request workload above verified handling capacity",
+      "prohibited_claims": [
+        "Do not present forecast requests as incidents, verified need, or service failures.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "service-area",
+      "suite": "public-service-operations",
+      "title": "Forecast multichannel public-service workload"
+    },
+    {
+      "analysis_modes": [
+        "descriptive",
+        "optimization"
+      ],
+      "binding_constraint": "The 311 and public-service demand operations prioritize must respect declared capital, operating, maintenance, and delivery budgets.",
+      "content_hash": "sha256:d0442f9578fd6c926c7393de00bc6bcf5ff82a9eeacf47c611bf374ed145f95d",
+      "current_readiness": "reference-implemented",
+      "decision_question": "Which intake, routing, self-service, field, translation, and quality improvements should be funded?",
+      "decision_type": "prioritize",
+      "design_id": "scenario.public-service.demand.service-improvement-portfolio.v1",
+      "design_order": 147,
+      "evidence_gate": "cost-capacity",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed"
+      ],
+      "existing_template_ref": "deep.public-service.total-demand.v1",
+      "family_id": "public-service.demand",
+      "family_title": "311 and public-service demand operations",
+      "horizon": "multi-year",
+      "implementation_status": "reference-implemented",
+      "primary_outcome": "expected avoidable request handling and resident effort",
+      "prohibited_claims": [
+        "Do not report modeled handling savings as realized productivity or resident satisfaction.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "asset",
+      "suite": "public-service-operations",
+      "title": "Prioritize public-service workflow improvements"
+    },
+    {
+      "analysis_modes": [
+        "simulation",
+        "optimization"
+      ],
+      "binding_constraint": "The 311 and public-service demand operations site must respect declared land control, accessibility, permitting, safety, and operating feasibility.",
+      "content_hash": "sha256:d69b1ed6f964c962ec016e72d05ef1a9220e972c73e76b1e1ad67201de07c850",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Where should in-person, mobile, kiosk, and partner-assisted access fill verified channel gaps?",
+      "decision_type": "site",
+      "design_id": "scenario.public-service.demand.service-access-points.v1",
+      "design_order": 148,
+      "evidence_gate": "legal-authority",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "family_id": "public-service.demand",
+      "family_title": "311 and public-service demand operations",
+      "horizon": "multi-year",
+      "implementation_status": "design-only",
+      "primary_outcome": "residents beyond usable public-service access",
+      "prohibited_claims": [
+        "Do not call a candidate access point usable, trusted, staffed, or accessible without user evidence.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "facility",
+      "suite": "public-service-operations",
+      "title": "Site multilingual public-service access points"
+    },
+    {
+      "analysis_modes": [
+        "simulation",
+        "optimization"
+      ],
+      "binding_constraint": "The 311 and public-service demand operations allocate must respect declared minimum service, eligibility, capacity, and distributional safeguards.",
+      "content_hash": "sha256:c8150dda0dc01bfc783b8ab75fc5fc75089ca5edd2da8ff9fcb926a4a71a46cd",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "How should cases, language support, supervisors, and field capacity be assigned across queues?",
+      "decision_type": "allocate",
+      "design_id": "scenario.public-service.demand.case-routing-capacity.v1",
+      "design_order": 149,
+      "evidence_gate": "equity-measurement",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "family_id": "public-service.demand",
+      "family_title": "311 and public-service demand operations",
+      "horizon": "weeks",
+      "implementation_status": "design-only",
+      "primary_outcome": "priority requests without assigned qualified capacity",
+      "prohibited_claims": [
+        "Do not report routed cases as contacted residents, completed work, or resolved outcomes.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "service-area",
+      "suite": "public-service-operations",
+      "title": "Allocate service cases and response capacity"
+    },
+    {
+      "analysis_modes": [
+        "forecast",
+        "optimization"
+      ],
+      "binding_constraint": "The 311 and public-service demand operations schedule must respect declared labor, access, sequencing, notice, and completion windows.",
+      "content_hash": "sha256:57c241c3aafb2dc622c24b41da4cf040c5ac6d23d4d996179ba8f9f18a18a78f",
+      "current_readiness": "reference-implemented",
+      "decision_question": "When should channel, supervisor, specialist, and field capacity expand or shift with demand?",
+      "decision_type": "schedule",
+      "design_id": "scenario.public-service.demand.seasonal-service-staffing.v1",
+      "design_order": 150,
+      "evidence_gate": "temporal-alignment",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed"
+      ],
+      "existing_template_ref": "deep.public-service.seasonal-staffing.v1",
+      "family_id": "public-service.demand",
+      "family_title": "311 and public-service demand operations",
+      "horizon": "weeks",
+      "implementation_status": "reference-implemented",
+      "primary_outcome": "request-hours above qualified handling capacity",
+      "prohibited_claims": [
+        "Do not call a proposed staffing roster adopted, worked, productive, or sufficient.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "citywide",
+      "suite": "public-service-operations",
+      "title": "Schedule seasonal public-service staffing"
+    },
+    {
+      "analysis_modes": [
+        "forecast",
+        "simulation",
+        "optimization"
+      ],
+      "binding_constraint": "The 311 and public-service demand operations stress test must respect declared minimum continuity and safety thresholds across severe scenarios.",
+      "content_hash": "sha256:e865a57b41f2b2086930fec6a6ed5c2fe159c164c9cf9375de8496e43d72ca4e",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Which intake and field-response plan sustains priority services during event, outage, absence, and channel surges?",
+      "decision_type": "stress-test",
+      "design_id": "scenario.public-service.demand.service-demand-surge.v1",
+      "design_order": 151,
+      "evidence_gate": "external-validation",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "family_id": "public-service.demand",
+      "family_title": "311 and public-service demand operations",
+      "horizon": "seasonal",
+      "implementation_status": "design-only",
+      "primary_outcome": "scenario-weighted priority requests beyond response targets",
+      "prohibited_claims": [
+        "Do not present synthetic requests, failures, or response times as observed service performance.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "network",
+      "suite": "public-service-operations",
+      "title": "Stress-test public-service continuity under demand surge"
+    },
+    {
+      "analysis_modes": [
+        "descriptive",
+        "causal"
+      ],
+      "binding_constraint": "The 311 and public-service demand operations evaluate must respect declared pre-specified assignment, comparison, outcome, spillover, and subgroup rules.",
+      "content_hash": "sha256:b54f48d389d4a64f2451b755a921c4abcfdfd5a5a4df7a61a3290b2f1be60a58",
+      "current_readiness": "blocked-multiple-gates",
+      "decision_question": "Did phased channel and routing changes reduce verified resident effort and workflow delay without exclusion?",
+      "decision_type": "evaluate",
+      "design_id": "scenario.public-service.demand.channel-redesign-effect.v1",
+      "design_order": 152,
+      "evidence_gate": "causal-identification",
+      "evidence_types": [
+        "causal",
+        "estimated",
+        "observed",
+        "proposed"
+      ],
+      "family_id": "public-service.demand",
+      "family_title": "311 and public-service demand operations",
+      "horizon": "multi-year",
+      "implementation_status": "design-only",
+      "primary_outcome": "change in verified end-to-end handling time and repeat contact",
+      "prohibited_claims": [
+        "Do not infer resident welfare, satisfaction, or causal resolution from closure codes alone.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "service-area",
+      "suite": "public-service-operations",
+      "title": "Evaluate service intake and routing redesign"
+    },
+    {
+      "analysis_modes": [
+        "descriptive"
+      ],
+      "binding_constraint": "The sanitation, waste, and street cleanliness diagnose must respect declared measurement resolution and classification uncertainty.",
+      "content_hash": "sha256:48871d5dee686560db4058bc2314f096d8015745f1ed1c0b48058c91dd085445",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Which routes, assets, categories, places, and handoffs show persistent sanitation workload or verified failure?",
+      "decision_type": "diagnose",
+      "design_id": "scenario.public-service.sanitation.sanitation-workload.v1",
+      "design_order": 153,
+      "evidence_gate": "geographic-alignment",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "proposed"
+      ],
+      "family_id": "public-service.sanitation",
+      "family_title": "Sanitation, waste, and street cleanliness",
+      "horizon": "annual",
+      "implementation_status": "design-only",
+      "primary_outcome": "verified recurring sanitation tasks without durable resolution",
+      "prohibited_claims": [
+        "Do not convert sanitation-related request keywords into verified waste conditions.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "service-area",
+      "suite": "public-service-operations",
+      "title": "Diagnose sanitation workload and recurring failure patterns"
+    },
+    {
+      "analysis_modes": [
+        "forecast"
+      ],
+      "binding_constraint": "The sanitation, waste, and street cleanliness forecast must respect declared validated operational capacity and forecast uncertainty.",
+      "content_hash": "sha256:da12a4f4761cb4917c9cdc32623b5684641111e4f84952e70961444d7459d99e",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "What route-time volume, contamination, cleaning, and exception workload should operations prepare for?",
+      "decision_type": "forecast",
+      "design_id": "scenario.public-service.sanitation.waste-service-demand.v1",
+      "design_order": 154,
+      "evidence_gate": "model-calibration",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "proposed"
+      ],
+      "family_id": "public-service.sanitation",
+      "family_title": "Sanitation, waste, and street cleanliness",
+      "horizon": "weeks",
+      "implementation_status": "design-only",
+      "primary_outcome": "service workload above route and facility capacity",
+      "prohibited_claims": [
+        "Do not present forecast workload as observed tonnage, dumping, contamination, or missed service.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "network",
+      "suite": "public-service-operations",
+      "title": "Forecast waste, recycling, and cleaning workload"
+    },
+    {
+      "analysis_modes": [
+        "descriptive",
+        "optimization"
+      ],
+      "binding_constraint": "The sanitation, waste, and street cleanliness prioritize must respect declared capital, operating, maintenance, and delivery budgets.",
+      "content_hash": "sha256:03ec772b9b5ce9667fd5c102c61c34851e14916e65fbe1e0888fad7647661f1a",
+      "current_readiness": "reference-implemented",
+      "decision_question": "Which vehicles, containers, depots, public bins, route tools, and prevention measures should be funded?",
+      "decision_type": "prioritize",
+      "design_id": "scenario.public-service.sanitation.sanitation-improvements.v1",
+      "design_order": 155,
+      "evidence_gate": "cost-capacity",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed"
+      ],
+      "existing_template_ref": "deep.public-service.sanitation-workload.v1",
+      "family_id": "public-service.sanitation",
+      "family_title": "Sanitation, waste, and street cleanliness",
+      "horizon": "multi-year",
+      "implementation_status": "reference-implemented",
+      "primary_outcome": "expected sanitation service failure and overflow burden",
+      "prohibited_claims": [
+        "Do not report modeled cleanliness or service gains as observed outcomes.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "asset",
+      "suite": "public-service-operations",
+      "title": "Prioritize sanitation assets and service improvements"
+    },
+    {
+      "analysis_modes": [
+        "simulation",
+        "optimization"
+      ],
+      "binding_constraint": "The sanitation, waste, and street cleanliness site must respect declared land control, accessibility, permitting, safety, and operating feasibility.",
+      "content_hash": "sha256:a90cbc36a244666a3162e7a35728181781a28010bea9cfc0baa38eebd4cbaacb",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Where should operations and public facilities improve access while limiting traffic and environmental burdens?",
+      "decision_type": "site",
+      "design_id": "scenario.public-service.sanitation.sanitation-facilities.v1",
+      "design_order": 156,
+      "evidence_gate": "legal-authority",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "family_id": "public-service.sanitation",
+      "family_title": "Sanitation, waste, and street cleanliness",
+      "horizon": "multi-year",
+      "implementation_status": "design-only",
+      "primary_outcome": "service demand beyond feasible sanitation facility coverage",
+      "prohibited_claims": [
+        "Do not call a screened sanitation site permitted, safe, accepted, or built.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "facility",
+      "suite": "public-service-operations",
+      "title": "Site sanitation depots, public bins, and drop-off facilities"
+    },
+    {
+      "analysis_modes": [
+        "simulation",
+        "optimization"
+      ],
+      "binding_constraint": "The sanitation, waste, and street cleanliness allocate must respect declared minimum service, eligibility, capacity, and distributional safeguards.",
+      "content_hash": "sha256:835a1afecd986e7dd3c93d3aaaad084b48ff3e3e289ad62929dabc6a7ce3afb6",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "How should crews, vehicles, inspectors, containers, and outreach be distributed across service areas?",
+      "decision_type": "allocate",
+      "design_id": "scenario.public-service.sanitation.sanitation-crews-fleet.v1",
+      "design_order": 157,
+      "evidence_gate": "equity-measurement",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "family_id": "public-service.sanitation",
+      "family_title": "Sanitation, waste, and street cleanliness",
+      "horizon": "weeks",
+      "implementation_status": "design-only",
+      "primary_outcome": "priority sanitation workload without assigned capacity",
+      "prohibited_claims": [
+        "Do not report assigned crews or vehicles as completed collection, cleaning, or prevention.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "network",
+      "suite": "public-service-operations",
+      "title": "Allocate sanitation crews, fleet, and prevention capacity"
+    },
+    {
+      "analysis_modes": [
+        "forecast",
+        "optimization"
+      ],
+      "binding_constraint": "The sanitation, waste, and street cleanliness schedule must respect declared labor, access, sequencing, notice, and completion windows.",
+      "content_hash": "sha256:1e1ddf13328bb3f0aac2278e8b0d7c54fbb554f51ce516b340a6cfd86ce16bce",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "When should routes, inspections, container service, and fleet maintenance occur?",
+      "decision_type": "schedule",
+      "design_id": "scenario.public-service.sanitation.collection-cleaning-routes.v1",
+      "design_order": 158,
+      "evidence_gate": "temporal-alignment",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed"
+      ],
+      "family_id": "public-service.sanitation",
+      "family_title": "Sanitation, waste, and street cleanliness",
+      "horizon": "weeks",
+      "implementation_status": "design-only",
+      "primary_outcome": "priority service-hours outside collection and cleaning targets",
+      "prohibited_claims": [
+        "Do not call a generated route driven or a scheduled task verified complete.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "network",
+      "suite": "public-service-operations",
+      "title": "Schedule collection, cleaning, inspection, and maintenance routes"
+    },
+    {
+      "analysis_modes": [
+        "forecast",
+        "simulation",
+        "optimization"
+      ],
+      "binding_constraint": "The sanitation, waste, and street cleanliness stress test must respect declared minimum continuity and safety thresholds across severe scenarios.",
+      "content_hash": "sha256:883ab87d2544acd20fe57096eb0e7fbd9f5e277f5d579470bd754039080a8230",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Which operating plan sustains essential collection during weather, fleet, facility, workforce, and market failures?",
+      "decision_type": "stress-test",
+      "design_id": "scenario.public-service.sanitation.waste-continuity.v1",
+      "design_order": 159,
+      "evidence_gate": "external-validation",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "family_id": "public-service.sanitation",
+      "family_title": "Sanitation, waste, and street cleanliness",
+      "horizon": "seasonal",
+      "implementation_status": "design-only",
+      "primary_outcome": "scenario-weighted essential collection left unserved",
+      "prohibited_claims": [
+        "Do not present synthetic waste, outages, or unserved routes as observed events.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "network",
+      "suite": "public-service-operations",
+      "title": "Stress-test sanitation continuity under compound disruption"
+    },
+    {
+      "analysis_modes": [
+        "descriptive",
+        "causal"
+      ],
+      "binding_constraint": "The sanitation, waste, and street cleanliness evaluate must respect declared pre-specified assignment, comparison, outcome, spillover, and subgroup rules.",
+      "content_hash": "sha256:89e991b828281d4b857322642a60f83a03d0724cf9ed139d3cd54771bd215377",
+      "current_readiness": "blocked-multiple-gates",
+      "decision_question": "Did phased route, container, enforcement, or outreach changes reduce verified overflow and contamination?",
+      "decision_type": "evaluate",
+      "design_id": "scenario.public-service.sanitation.waste-prevention-effect.v1",
+      "design_order": 160,
+      "evidence_gate": "causal-identification",
+      "evidence_types": [
+        "causal",
+        "estimated",
+        "observed",
+        "proposed"
+      ],
+      "family_id": "public-service.sanitation",
+      "family_title": "Sanitation, waste, and street cleanliness",
+      "horizon": "multi-year",
+      "implementation_status": "design-only",
+      "primary_outcome": "change in verified overflow, contamination, and missed collection",
+      "prohibited_claims": [
+        "Do not infer causal cleanliness, behavior, or environmental benefits from requests alone.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "service-area",
+      "suite": "public-service-operations",
+      "title": "Evaluate waste prevention and collection redesign"
+    },
+    {
+      "analysis_modes": [
+        "descriptive"
+      ],
+      "binding_constraint": "The emergency response readiness and allocation diagnose must respect declared measurement resolution and classification uncertainty.",
+      "content_hash": "sha256:769fcdd7a0c405c6cdf329465140c10254fa2c41e3d87d78a0bfb8534a3045b1",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Which call-processing, dispatch, travel, handoff, and availability stages drive verified coverage gaps?",
+      "decision_type": "diagnose",
+      "design_id": "scenario.public-service.emergency-response.response-coverage-gaps.v1",
+      "design_order": 161,
+      "evidence_gate": "geographic-alignment",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "proposed"
+      ],
+      "family_id": "public-service.emergency-response",
+      "family_title": "Emergency response readiness and allocation",
+      "horizon": "annual",
+      "implementation_status": "design-only",
+      "primary_outcome": "priority incidents outside verified response targets",
+      "prohibited_claims": [
+        "Do not infer incident severity, fault, survival, or service quality from response time alone.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "service-area",
+      "suite": "public-service-operations",
+      "title": "Diagnose emergency response coverage and workflow gaps"
+    },
+    {
+      "analysis_modes": [
+        "forecast"
+      ],
+      "binding_constraint": "The emergency response readiness and allocation forecast must respect declared validated operational capacity and forecast uncertainty.",
+      "content_hash": "sha256:e5c37a43d0de20c5ea9470e6309a6de9fce755109446b539cc2e11f07efb554c",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "What place-time priority call, unit-hour, and mutual-aid demand range should readiness planning use?",
+      "decision_type": "forecast",
+      "design_id": "scenario.public-service.emergency-response.incident-unit-demand.v1",
+      "design_order": 162,
+      "evidence_gate": "model-calibration",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "proposed"
+      ],
+      "family_id": "public-service.emergency-response",
+      "family_title": "Emergency response readiness and allocation",
+      "horizon": "weeks",
+      "implementation_status": "design-only",
+      "primary_outcome": "priority unit-hours above deployable capacity",
+      "prohibited_claims": [
+        "Do not present forecast calls as incidents, casualties, or verified emergency need.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "service-area",
+      "suite": "public-service-operations",
+      "title": "Forecast emergency call and unit demand"
+    },
+    {
+      "analysis_modes": [
+        "descriptive",
+        "optimization"
+      ],
+      "binding_constraint": "The emergency response readiness and allocation prioritize must respect declared capital, operating, maintenance, and delivery budgets.",
+      "content_hash": "sha256:0488c8b91c870837d72c0683315ea1d4be5306aa97b1b18260204f67f90cd4eb",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Which communications, fleet, station, training, accessibility, and mutual-aid investments should be funded?",
+      "decision_type": "prioritize",
+      "design_id": "scenario.public-service.emergency-response.response-readiness-portfolio.v1",
+      "design_order": 163,
+      "evidence_gate": "cost-capacity",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed"
+      ],
+      "family_id": "public-service.emergency-response",
+      "family_title": "Emergency response readiness and allocation",
+      "horizon": "multi-year",
+      "implementation_status": "design-only",
+      "primary_outcome": "expected priority response-capacity shortfall",
+      "prohibited_claims": [
+        "Do not report modeled response improvements as lives saved or delivered readiness.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "asset",
+      "suite": "public-service-operations",
+      "title": "Prioritize emergency response readiness investments"
+    },
+    {
+      "analysis_modes": [
+        "simulation",
+        "optimization"
+      ],
+      "binding_constraint": "The emergency response readiness and allocation site must respect declared land control, accessibility, permitting, safety, and operating feasibility.",
+      "content_hash": "sha256:3f908446461001bef243238c5c7bcbe5e72e0503679ee0d68d97270bffe9629e",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Where should fixed and temporary bases improve resilient time-dependent coverage?",
+      "decision_type": "site",
+      "design_id": "scenario.public-service.emergency-response.response-bases.v1",
+      "design_order": 164,
+      "evidence_gate": "legal-authority",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "family_id": "public-service.emergency-response",
+      "family_title": "Emergency response readiness and allocation",
+      "horizon": "multi-year",
+      "implementation_status": "design-only",
+      "primary_outcome": "priority demand beyond resilient response coverage",
+      "prohibited_claims": [
+        "Do not call a screened base operational, safe, staffed, or guaranteed to meet response targets.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "facility",
+      "suite": "public-service-operations",
+      "title": "Site emergency response and standby bases"
+    },
+    {
+      "analysis_modes": [
+        "simulation",
+        "optimization"
+      ],
+      "binding_constraint": "The emergency response readiness and allocation allocate must respect declared minimum service, eligibility, capacity, and distributional safeguards.",
+      "content_hash": "sha256:677b8d9e44c6cbfe56edebcf9443728603e49ec930d471438793719d58268286",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "How should deployable units, specialist teams, supervisors, and mutual-aid reserves be positioned?",
+      "decision_type": "allocate",
+      "design_id": "scenario.public-service.emergency-response.response-units.v1",
+      "design_order": 165,
+      "evidence_gate": "equity-measurement",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "family_id": "public-service.emergency-response",
+      "family_title": "Emergency response readiness and allocation",
+      "horizon": "weeks",
+      "implementation_status": "design-only",
+      "primary_outcome": "priority demand without resilient unit coverage",
+      "prohibited_claims": [
+        "Do not present a planning allocation as an automated dispatch or completed response.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "network",
+      "suite": "public-service-operations",
+      "title": "Allocate emergency response units and standby capacity"
+    },
+    {
+      "analysis_modes": [
+        "forecast",
+        "optimization"
+      ],
+      "binding_constraint": "The emergency response readiness and allocation schedule must respect declared labor, access, sequencing, notice, and completion windows.",
+      "content_hash": "sha256:a66d889dfe5ebb9613d869d6ccb136bcaf2a2b228918dd5775b15aa376322c65",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "When should shifts, standby posts, maintenance, training, and mutual-aid coverage operate?",
+      "decision_type": "schedule",
+      "design_id": "scenario.public-service.emergency-response.readiness-coverage.v1",
+      "design_order": 166,
+      "evidence_gate": "temporal-alignment",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed"
+      ],
+      "family_id": "public-service.emergency-response",
+      "family_title": "Emergency response readiness and allocation",
+      "horizon": "weeks",
+      "implementation_status": "design-only",
+      "primary_outcome": "priority demand-hours below minimum deployable coverage",
+      "prohibited_claims": [
+        "Do not call a proposed readiness roster staffed, safe, negotiated, or operated.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "network",
+      "suite": "public-service-operations",
+      "title": "Schedule emergency readiness and coverage"
+    },
+    {
+      "analysis_modes": [
+        "forecast",
+        "simulation",
+        "optimization"
+      ],
+      "binding_constraint": "The emergency response readiness and allocation stress test must respect declared minimum continuity and safety thresholds across severe scenarios.",
+      "content_hash": "sha256:265069abf8f80e351795f491b5f49ec822399146cb2316011bc24ab0a2da8459",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Which readiness strategy preserves priority coverage during concurrent incidents, outages, access loss, and staff absence?",
+      "decision_type": "stress-test",
+      "design_id": "scenario.public-service.emergency-response.multi-incident-surge.v1",
+      "design_order": 167,
+      "evidence_gate": "external-validation",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "family_id": "public-service.emergency-response",
+      "family_title": "Emergency response readiness and allocation",
+      "horizon": "seasonal",
+      "implementation_status": "design-only",
+      "primary_outcome": "scenario-weighted priority incidents without timely unit coverage",
+      "prohibited_claims": [
+        "Do not present synthetic incidents, response times, or outcomes as forecasts or observed performance.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "network",
+      "suite": "public-service-operations",
+      "title": "Stress-test emergency response under correlated surge"
+    },
+    {
+      "analysis_modes": [
+        "descriptive",
+        "causal"
+      ],
+      "binding_constraint": "The emergency response readiness and allocation evaluate must respect declared pre-specified assignment, comparison, outcome, spillover, and subgroup rules.",
+      "content_hash": "sha256:a2474791811b83ed22e07447099ca3ecd9d22f86d2270d4d94718a912e53dfac",
+      "current_readiness": "blocked-multiple-gates",
+      "decision_question": "Did phased call-processing or unit-positioning changes improve verified coverage without unequal service?",
+      "decision_type": "evaluate",
+      "design_id": "scenario.public-service.emergency-response.dispatch-process-effect.v1",
+      "design_order": 168,
+      "evidence_gate": "causal-identification",
+      "evidence_types": [
+        "causal",
+        "estimated",
+        "observed",
+        "proposed"
+      ],
+      "family_id": "public-service.emergency-response",
+      "family_title": "Emergency response readiness and allocation",
+      "horizon": "multi-year",
+      "implementation_status": "design-only",
+      "primary_outcome": "change in stage-resolved priority response time and coverage",
+      "prohibited_claims": [
+        "Do not infer clinical, safety, or survival effects from response-time changes alone.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "service-area",
+      "suite": "public-service-operations",
+      "title": "Evaluate emergency communications and deployment redesign"
+    },
+    {
+      "analysis_modes": [
+        "descriptive"
+      ],
+      "binding_constraint": "The digital public access and administrative service delivery diagnose must respect declared measurement resolution and classification uncertainty.",
+      "content_hash": "sha256:1d941b0acff84ea9d05b11092219d3a342d7e6aa470974f5d990a27ff10fa37a",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Where do users encounter verified error, abandonment, repeat contact, language, access, or handoff friction?",
+      "decision_type": "diagnose",
+      "design_id": "scenario.public-service.digital-access.service-journey-friction.v1",
+      "design_order": 169,
+      "evidence_gate": "geographic-alignment",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "proposed"
+      ],
+      "family_id": "public-service.digital-access",
+      "family_title": "Digital public access and administrative service delivery",
+      "horizon": "annual",
+      "implementation_status": "design-only",
+      "primary_outcome": "eligible service journeys with unresolved verified friction",
+      "prohibited_claims": [
+        "Do not interpret non-completion as ineligibility, user error, disinterest, or lack of need.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "population-group",
+      "suite": "public-service-operations",
+      "title": "Diagnose digital and assisted-service journey friction"
+    },
+    {
+      "analysis_modes": [
+        "forecast"
+      ],
+      "binding_constraint": "The digital public access and administrative service delivery forecast must respect declared validated operational capacity and forecast uncertainty.",
+      "content_hash": "sha256:dafdca1813b467fb178aec9d74e1bb4f506f41e918783feb0c60499789d87d1a",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "What service, language, channel, device, and time-specific demand should support operations prepare for?",
+      "decision_type": "forecast",
+      "design_id": "scenario.public-service.digital-access.channel-support-demand.v1",
+      "design_order": 170,
+      "evidence_gate": "model-calibration",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "proposed"
+      ],
+      "family_id": "public-service.digital-access",
+      "family_title": "Digital public access and administrative service delivery",
+      "horizon": "weeks",
+      "implementation_status": "design-only",
+      "primary_outcome": "eligible journey demand above qualified channel capacity",
+      "prohibited_claims": [
+        "Do not call forecast contacts eligible applicants, completed services, or verified unmet need.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "service-area",
+      "suite": "public-service-operations",
+      "title": "Forecast digital, phone, and in-person support demand"
+    },
+    {
+      "analysis_modes": [
+        "descriptive",
+        "optimization"
+      ],
+      "binding_constraint": "The digital public access and administrative service delivery prioritize must respect declared capital, operating, maintenance, and delivery budgets.",
+      "content_hash": "sha256:7cc50780cb90696a1ecbe9420f5dc9ddfeada9dc9eb3b7d5940e3c9a3043823a",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Which identity, form, language, accessibility, integration, support, and privacy improvements should be funded?",
+      "decision_type": "prioritize",
+      "design_id": "scenario.public-service.digital-access.service-redesign-portfolio.v1",
+      "design_order": 171,
+      "evidence_gate": "cost-capacity",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed"
+      ],
+      "family_id": "public-service.digital-access",
+      "family_title": "Digital public access and administrative service delivery",
+      "horizon": "multi-year",
+      "implementation_status": "design-only",
+      "primary_outcome": "verified user effort and preventable service failure",
+      "prohibited_claims": [
+        "Do not report modeled time savings as realized uptake, eligibility, or resident welfare.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "asset",
+      "suite": "public-service-operations",
+      "title": "Prioritize accessible public-service redesign"
+    },
+    {
+      "analysis_modes": [
+        "simulation",
+        "optimization"
+      ],
+      "binding_constraint": "The digital public access and administrative service delivery site must respect declared land control, accessibility, permitting, safety, and operating feasibility.",
+      "content_hash": "sha256:c952cadcefeb21f329e1e40c33163aa4b4e13a1a8a2ce6e6004fc15e3d2671d7",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Where should private, accessible, multilingual assisted-service points close verified access gaps?",
+      "decision_type": "site",
+      "design_id": "scenario.public-service.digital-access.assisted-digital-access.v1",
+      "design_order": 172,
+      "evidence_gate": "legal-authority",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "family_id": "public-service.digital-access",
+      "family_title": "Digital public access and administrative service delivery",
+      "horizon": "multi-year",
+      "implementation_status": "design-only",
+      "primary_outcome": "eligible residents beyond usable assisted service access",
+      "prohibited_claims": [
+        "Do not call a candidate site usable, private, accessible, trusted, connected, or staffed.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "facility",
+      "suite": "public-service-operations",
+      "title": "Site assisted digital and administrative access"
+    },
+    {
+      "analysis_modes": [
+        "simulation",
+        "optimization"
+      ],
+      "binding_constraint": "The digital public access and administrative service delivery allocate must respect declared minimum service, eligibility, capacity, and distributional safeguards.",
+      "content_hash": "sha256:63658c502d04919d2de5db5ef4f4d5e5e97c0263e5856dd383c70c77cd4b6c18",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "How should navigators, interpreters, accessibility specialists, devices, and appointment capacity be assigned?",
+      "decision_type": "allocate",
+      "design_id": "scenario.public-service.digital-access.navigation-support.v1",
+      "design_order": 173,
+      "evidence_gate": "equity-measurement",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "family_id": "public-service.digital-access",
+      "family_title": "Digital public access and administrative service delivery",
+      "horizon": "weeks",
+      "implementation_status": "design-only",
+      "primary_outcome": "eligible complex journeys without qualified support",
+      "prohibited_claims": [
+        "Do not report assigned support as contact, completed application, eligibility, or benefit receipt.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "population-group",
+      "suite": "public-service-operations",
+      "title": "Allocate navigation, language, and accessibility support"
+    },
+    {
+      "analysis_modes": [
+        "forecast",
+        "optimization"
+      ],
+      "binding_constraint": "The digital public access and administrative service delivery schedule must respect declared labor, access, sequencing, notice, and completion windows.",
+      "content_hash": "sha256:091b71de68dc36dea39d7a00370761f76d5f8ebeba40934ae3ce97851d37f347",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "When should appointments, callbacks, interpreters, specialists, and assisted access operate?",
+      "decision_type": "schedule",
+      "design_id": "scenario.public-service.digital-access.appointments-support.v1",
+      "design_order": 174,
+      "evidence_gate": "temporal-alignment",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed"
+      ],
+      "family_id": "public-service.digital-access",
+      "family_title": "Digital public access and administrative service delivery",
+      "horizon": "weeks",
+      "implementation_status": "design-only",
+      "primary_outcome": "eligible journey-hours outside service targets",
+      "prohibited_claims": [
+        "Do not call a scheduled appointment attended, completed, eligible, or successful.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "service-area",
+      "suite": "public-service-operations",
+      "title": "Schedule appointments and multichannel support"
+    },
+    {
+      "analysis_modes": [
+        "forecast",
+        "simulation",
+        "optimization"
+      ],
+      "binding_constraint": "The digital public access and administrative service delivery stress test must respect declared minimum continuity and safety thresholds across severe scenarios.",
+      "content_hash": "sha256:c1daac7efd433ac0cf0dfb2fad82f9aca5358119d015d8472b5a144949b9d61a",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Which fallback strategy preserves lawful accessible service during identity, platform, network, vendor, and staffing failures?",
+      "decision_type": "stress-test",
+      "design_id": "scenario.public-service.digital-access.digital-service-continuity.v1",
+      "design_order": 175,
+      "evidence_gate": "external-validation",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "family_id": "public-service.digital-access",
+      "family_title": "Digital public access and administrative service delivery",
+      "horizon": "seasonal",
+      "implementation_status": "design-only",
+      "primary_outcome": "scenario-weighted eligible journeys without lawful service path",
+      "prohibited_claims": [
+        "Do not present synthetic outages or modeled fallback completions as observed incidents.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "network",
+      "suite": "public-service-operations",
+      "title": "Stress-test public-service continuity during digital outage"
+    },
+    {
+      "analysis_modes": [
+        "descriptive",
+        "causal"
+      ],
+      "binding_constraint": "The digital public access and administrative service delivery evaluate must respect declared pre-specified assignment, comparison, outcome, spillover, and subgroup rules.",
+      "content_hash": "sha256:d09ffbda636019323c578b6a1e3e516cdd91380a2ea7b901abbb5cd5a7b32f30",
+      "current_readiness": "blocked-multiple-gates",
+      "decision_question": "Did phased redesign reduce verified completion friction without excluding non-digital users?",
+      "decision_type": "evaluate",
+      "design_id": "scenario.public-service.digital-access.assisted-service-effect.v1",
+      "design_order": 176,
+      "evidence_gate": "causal-identification",
+      "evidence_types": [
+        "causal",
+        "estimated",
+        "observed",
+        "proposed"
+      ],
+      "family_id": "public-service.digital-access",
+      "family_title": "Digital public access and administrative service delivery",
+      "horizon": "multi-year",
+      "implementation_status": "design-only",
+      "primary_outcome": "change in verified eligible journey completion and user effort",
+      "prohibited_claims": [
+        "Do not infer benefit receipt, well-being, or causal inclusion from page completion alone.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "population-group",
+      "suite": "public-service-operations",
+      "title": "Evaluate assisted digital service redesign"
+    }
+  ],
+  "kind": "scenario-designs.suite.public-service-operations",
+  "record_count": 32,
+  "schema_version": "1.0.0"
+}

@@ -1,0 +1,162 @@
+{
+  "affected_system": "roadway, bridge, sidewalk, signal, and public right-of-way asset network",
+  "alternatives": [
+    "verify the highest-consequence signals before acting on road and bridge condition and failure patterns",
+    "combine targeted inspection, monitoring, and data-quality repair for road and bridge condition and failure patterns",
+    "pair inspection, sensor, work-order, request, and dependency reconciliation with an explicit stop, review, and escalation rule"
+  ],
+  "analysis_modes": [
+    "descriptive"
+  ],
+  "assumptions": [
+    "Assets, inspections, defects, work orders, costs, traffic, restrictions, and completion are reconciled.",
+    "Engineering thresholds and deterioration models are locally reviewed and versioned.",
+    "All alternatives, capacities, costs, effects, thresholds, and failure scenarios are proposed until bound to evidence."
+  ],
+  "baseline": "continue current inspection and reporting practice for road and bridge condition and failure patterns.",
+  "city_bindings": [],
+  "constraints": [
+    {
+      "binding": true,
+      "constraint_id": "scenario.infrastructure.roads-bridges.asset-condition-failure.v1.constraint.binding",
+      "description": "The road and bridge asset management diagnose must respect declared measurement resolution and classification uncertainty.",
+      "hard": true,
+      "kind": "technical",
+      "required_source_roles": [
+        "asset-condition",
+        "asset-inventory",
+        "geographic-identity",
+        "municipal-demand",
+        "real-time-state",
+        "transport-network"
+      ]
+    },
+    {
+      "binding": false,
+      "constraint_id": "scenario.infrastructure.roads-bridges.asset-condition-failure.v1.constraint.evidence-scope",
+      "description": "Every released metric must retain evidence type, source lineage, geography, time, assumptions, and uncertainty.",
+      "hard": true,
+      "kind": "technical",
+      "required_source_roles": [
+        "asset-condition"
+      ]
+    },
+    {
+      "binding": false,
+      "constraint_id": "scenario.infrastructure.roads-bridges.asset-condition-failure.v1.constraint.decision-authority",
+      "description": "No analytical output may bypass lawful authority, accountable human review, or an applicable appeal process.",
+      "hard": true,
+      "kind": "regulatory",
+      "required_source_roles": [
+        "asset-condition"
+      ]
+    }
+  ],
+  "current_readiness": "blocked-missing-source",
+  "decision_cadence": "recompiled at each planning cycle and after material evidence change",
+  "decision_owner": "public works asset manager and chief infrastructure engineer",
+  "decision_question": "Which inspected assets show verified deterioration, repeated defects, dependency risk, or data inconsistency?",
+  "decision_type": "diagnose",
+  "design_id": "scenario.infrastructure.roads-bridges.asset-condition-failure.v1",
+  "design_order": 177,
+  "design_signature": "sha256:a5c660144ab5e285d9ec2a3415aa7deb68f5bc95501ef1c7c7cab1a3b939038a",
+  "evidence_requirements": [
+    "estimated",
+    "observed",
+    "proposed"
+  ],
+  "family_id": "infrastructure.roads-bridges",
+  "family_title": "Road and bridge asset management",
+  "horizon": "annual",
+  "implementation_status": "design-only",
+  "independence_key": {
+    "binding_constraint": "The road and bridge asset management diagnose must respect declared measurement resolution and classification uncertainty.",
+    "decision_object": "road and bridge condition and failure patterns",
+    "evidence_gate": "Evidence for road and bridge condition and failure patterns passes documented checks for coverage, semantics, geography, timestamps, and uncertainty.",
+    "horizon": "annual",
+    "intervention_mechanism": "inspection, sensor, work-order, request, and dependency reconciliation",
+    "primary_outcome": "high-consequence assets with unresolved verified defects",
+    "spatial_unit": "asset"
+  },
+  "intended_claim": "A versioned diagnose design for comparing declared alternatives affecting road and bridge condition and failure patterns, conditional on its evidence gate.",
+  "limitations": [
+    "This library record has no city binding and therefore reports no local input, output, or recommendation.",
+    "Readiness describes explicit source and method gates; it does not certify implementation feasibility.",
+    "External domain, legal, community, security, and operational review remains outside this design artifact."
+  ],
+  "method_claimed": false,
+  "objectives": [
+    {
+      "evidence_type": "estimated",
+      "metric": "high-consequence assets with unresolved verified defects",
+      "objective_id": "scenario.infrastructure.roads-bridges.asset-condition-failure.v1.objective.primary",
+      "primary": true,
+      "sense": "minimize",
+      "unit": "assets"
+    },
+    {
+      "evidence_type": "estimated",
+      "metric": "distributional gap in high-consequence assets with unresolved verified defects",
+      "objective_id": "scenario.infrastructure.roads-bridges.asset-condition-failure.v1.objective.equity",
+      "primary": false,
+      "sense": "minimize",
+      "unit": "assets"
+    },
+    {
+      "evidence_type": "observed",
+      "metric": "decision claims with complete evidence lineage",
+      "objective_id": "scenario.infrastructure.roads-bridges.asset-condition-failure.v1.objective.traceability",
+      "primary": false,
+      "sense": "maximize",
+      "unit": "percent"
+    }
+  ],
+  "prohibited_claims": [
+    "Do not convert infrastructure request labels into engineering condition or safety findings.",
+    "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+    "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+    "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+  ],
+  "release_gate": {
+    "failure_release": "Release an explicit insufficient-evidence record naming missing sources, failed diagnostics, prohibited claims, and the next validation action.",
+    "failure_status": "insufficient-evidence",
+    "gate_id": "scenario.infrastructure.roads-bridges.asset-condition-failure.v1.gate.release",
+    "gate_type": "geographic-alignment",
+    "pass_condition": "Evidence for road and bridge condition and failure patterns passes documented checks for coverage, semantics, geography, timestamps, and uncertainty.",
+    "required_evidence_types": [
+      "observed",
+      "proposed"
+    ],
+    "required_source_roles": [
+      "asset-condition",
+      "asset-inventory",
+      "geographic-identity",
+      "municipal-demand",
+      "real-time-state",
+      "transport-network"
+    ]
+  },
+  "required_source_roles": [
+    "asset-condition",
+    "asset-inventory",
+    "geographic-identity",
+    "municipal-demand",
+    "real-time-state",
+    "transport-network"
+  ],
+  "schema_version": "1.0.0",
+  "spatial_unit": "asset",
+  "suite": "infrastructure-finance-asset-risk",
+  "tags": [
+    "design-only",
+    "diagnose",
+    "infrastructure-finance-asset-risk",
+    "infrastructure.roads-bridges",
+    "scenario-library"
+  ],
+  "title": "Diagnose roadway and bridge condition and failure patterns",
+  "transportability_risks": [
+    "Materials, climate, loading, standards, inspection, procurement, and unit costs differ.",
+    "Service requests can reveal workload but not structural condition or safety."
+  ]
+}

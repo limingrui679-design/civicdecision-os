@@ -1,0 +1,164 @@
+{
+  "affected_system": "walking, cycling, and shared micromobility network",
+  "alternatives": [
+    "rank verified high-consequence candidates for active-mobility network project portfolio",
+    "select a risk-, equity-, and lifecycle-balanced portfolio for active-mobility network project portfolio",
+    "pair connectivity, safety, equity, and lifecycle project optimization with an explicit stop, review, and escalation rule"
+  ],
+  "analysis_modes": [
+    "descriptive",
+    "optimization"
+  ],
+  "assumptions": [
+    "Trips, counts, facilities, stress levels, barriers, and shared-vehicle states use documented coverage.",
+    "Observed shared-system trips do not represent all walking and cycling demand.",
+    "All alternatives, capacities, costs, effects, thresholds, and failure scenarios are proposed until bound to evidence."
+  ],
+  "baseline": "fund only already-committed work for active-mobility network project portfolio.",
+  "city_bindings": [],
+  "constraints": [
+    {
+      "binding": true,
+      "constraint_id": "scenario.mobility.active-mobility.active-network-projects.v1.constraint.binding",
+      "description": "The active mobility network and micromobility prioritize must respect declared capital, operating, maintenance, and delivery budgets.",
+      "hard": true,
+      "kind": "budget",
+      "required_source_roles": [
+        "asset-condition",
+        "asset-inventory",
+        "equity-attribute",
+        "financial-cost",
+        "geographic-identity",
+        "transport-network"
+      ]
+    },
+    {
+      "binding": false,
+      "constraint_id": "scenario.mobility.active-mobility.active-network-projects.v1.constraint.evidence-scope",
+      "description": "Every released metric must retain evidence type, source lineage, geography, time, assumptions, and uncertainty.",
+      "hard": true,
+      "kind": "technical",
+      "required_source_roles": [
+        "asset-condition"
+      ]
+    },
+    {
+      "binding": false,
+      "constraint_id": "scenario.mobility.active-mobility.active-network-projects.v1.constraint.decision-authority",
+      "description": "No analytical output may bypass lawful authority, accountable human review, or an applicable appeal process.",
+      "hard": true,
+      "kind": "regulatory",
+      "required_source_roles": [
+        "asset-condition"
+      ]
+    }
+  ],
+  "current_readiness": "blocked-missing-source",
+  "decision_cadence": "recompiled at each planning cycle and after material evidence change",
+  "decision_owner": "active transportation director and shared-mobility program manager",
+  "decision_question": "Which protected links, crossings, greenways, and accessibility repairs close the most consequential gaps?",
+  "decision_type": "prioritize",
+  "design_id": "scenario.mobility.active-mobility.active-network-projects.v1",
+  "design_order": 75,
+  "design_signature": "sha256:1cdbc5be28d47395ef25bf4293720bc2b93a6f10575aabbf618f8aaaff6b4a8a",
+  "evidence_requirements": [
+    "estimated",
+    "observed",
+    "optimized",
+    "proposed"
+  ],
+  "family_id": "mobility.active-mobility",
+  "family_title": "Active mobility network and micromobility",
+  "horizon": "multi-year",
+  "implementation_status": "design-only",
+  "independence_key": {
+    "binding_constraint": "The active mobility network and micromobility prioritize must respect declared capital, operating, maintenance, and delivery budgets.",
+    "decision_object": "active-mobility network project portfolio",
+    "evidence_gate": "Evidence for active-mobility network project portfolio passes documented checks for cost, benefit, service life, dependencies, deliverability, and maintenance burden.",
+    "horizon": "multi-year",
+    "intervention_mechanism": "connectivity, safety, equity, and lifecycle project optimization",
+    "primary_outcome": "essential trips remaining outside a low-stress accessible network",
+    "spatial_unit": "asset"
+  },
+  "intended_claim": "A versioned prioritize design for comparing declared alternatives affecting active-mobility network project portfolio, conditional on its evidence gate.",
+  "limitations": [
+    "This library record has no city binding and therefore reports no local input, output, or recommendation.",
+    "Readiness describes explicit source and method gates; it does not certify implementation feasibility.",
+    "External domain, legal, community, security, and operational review remains outside this design artifact."
+  ],
+  "method_claimed": false,
+  "objectives": [
+    {
+      "evidence_type": "estimated",
+      "metric": "essential trips remaining outside a low-stress accessible network",
+      "objective_id": "scenario.mobility.active-mobility.active-network-projects.v1.objective.primary",
+      "primary": true,
+      "sense": "minimize",
+      "unit": "origin-destination pairs"
+    },
+    {
+      "evidence_type": "estimated",
+      "metric": "distributional gap in essential trips remaining outside a low-stress accessible network",
+      "objective_id": "scenario.mobility.active-mobility.active-network-projects.v1.objective.equity",
+      "primary": false,
+      "sense": "minimize",
+      "unit": "origin-destination pairs"
+    },
+    {
+      "evidence_type": "observed",
+      "metric": "decision claims with complete evidence lineage",
+      "objective_id": "scenario.mobility.active-mobility.active-network-projects.v1.objective.traceability",
+      "primary": false,
+      "sense": "maximize",
+      "unit": "percent"
+    }
+  ],
+  "prohibited_claims": [
+    "Do not report modeled connectivity or safety gains as completed trips or prevented crashes.",
+    "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+    "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+    "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+  ],
+  "release_gate": {
+    "failure_release": "Release an explicit insufficient-evidence record naming missing sources, failed diagnostics, prohibited claims, and the next validation action.",
+    "failure_status": "insufficient-evidence",
+    "gate_id": "scenario.mobility.active-mobility.active-network-projects.v1.gate.release",
+    "gate_type": "cost-capacity",
+    "pass_condition": "Evidence for active-mobility network project portfolio passes documented checks for cost, benefit, service life, dependencies, deliverability, and maintenance burden.",
+    "required_evidence_types": [
+      "observed",
+      "proposed"
+    ],
+    "required_source_roles": [
+      "asset-condition",
+      "asset-inventory",
+      "equity-attribute",
+      "financial-cost",
+      "geographic-identity",
+      "transport-network"
+    ]
+  },
+  "required_source_roles": [
+    "asset-condition",
+    "asset-inventory",
+    "equity-attribute",
+    "financial-cost",
+    "geographic-identity",
+    "transport-network"
+  ],
+  "schema_version": "1.0.0",
+  "spatial_unit": "asset",
+  "suite": "mobility-accessibility-operations",
+  "tags": [
+    "design-only",
+    "mobility-accessibility-operations",
+    "mobility.active-mobility",
+    "prioritize",
+    "scenario-library"
+  ],
+  "title": "Prioritize active-mobility network projects",
+  "transportability_risks": [
+    "Topography, climate, street stress, vehicle access, pricing, and safety perceptions vary.",
+    "Platform data can exclude private bicycles, pedestrians, and non-users."
+  ]
+}

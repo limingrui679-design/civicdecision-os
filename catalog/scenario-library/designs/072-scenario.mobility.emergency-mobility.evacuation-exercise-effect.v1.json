@@ -1,0 +1,167 @@
+{
+  "affected_system": "multimodal evacuation, assisted transport, and emergency access network",
+  "alternatives": [
+    "compare eligible treated and credible untreated units for phased evacuation exercise and preparedness outreach",
+    "estimate pre-specified overall and distributional effects of phased evacuation exercise and preparedness outreach",
+    "pair randomized encouragement and staggered exercise evaluation with an explicit stop, review, and escalation rule"
+  ],
+  "analysis_modes": [
+    "descriptive",
+    "causal"
+  ],
+  "assumptions": [
+    "Evacuation demand, assistance eligibility, vehicle capacity, route state, and hazard timing are versioned.",
+    "Compliance, household departure, and network degradation remain observed inputs or bounded scenarios.",
+    "All alternatives, capacities, costs, effects, thresholds, and failure scenarios are proposed until bound to evidence."
+  ],
+  "baseline": "retain pre-intervention conditions for phased evacuation exercise and preparedness outreach.",
+  "city_bindings": [],
+  "constraints": [
+    {
+      "binding": true,
+      "constraint_id": "scenario.mobility.emergency-mobility.evacuation-exercise-effect.v1.constraint.binding",
+      "description": "The evacuation and emergency mobility evaluate must respect declared pre-specified assignment, comparison, outcome, spillover, and subgroup rules.",
+      "hard": true,
+      "kind": "equity",
+      "required_source_roles": [
+        "community-input",
+        "equity-attribute",
+        "geographic-identity",
+        "intervention-assignment",
+        "operating-capacity",
+        "outcome-panel",
+        "transport-network"
+      ]
+    },
+    {
+      "binding": false,
+      "constraint_id": "scenario.mobility.emergency-mobility.evacuation-exercise-effect.v1.constraint.evidence-scope",
+      "description": "Every released metric must retain evidence type, source lineage, geography, time, assumptions, and uncertainty.",
+      "hard": true,
+      "kind": "technical",
+      "required_source_roles": [
+        "community-input"
+      ]
+    },
+    {
+      "binding": false,
+      "constraint_id": "scenario.mobility.emergency-mobility.evacuation-exercise-effect.v1.constraint.decision-authority",
+      "description": "No analytical output may bypass lawful authority, accountable human review, or an applicable appeal process.",
+      "hard": true,
+      "kind": "regulatory",
+      "required_source_roles": [
+        "community-input"
+      ]
+    }
+  ],
+  "current_readiness": "blocked-multiple-gates",
+  "decision_cadence": "recompiled at each planning cycle and after material evidence change",
+  "decision_owner": "emergency transportation coordinator and incident commander",
+  "decision_question": "Did phased exercises and targeted outreach improve verified readiness and assisted-transport completion?",
+  "decision_type": "evaluate",
+  "design_id": "scenario.mobility.emergency-mobility.evacuation-exercise-effect.v1",
+  "design_order": 72,
+  "design_signature": "sha256:3cf956c70ec03918e5ee6a16988c784068eaa596662facb219ca4955b3a88046",
+  "evidence_requirements": [
+    "causal",
+    "estimated",
+    "observed",
+    "proposed"
+  ],
+  "family_id": "mobility.emergency-mobility",
+  "family_title": "Evacuation and emergency mobility",
+  "horizon": "multi-year",
+  "implementation_status": "design-only",
+  "independence_key": {
+    "binding_constraint": "The evacuation and emergency mobility evaluate must respect declared pre-specified assignment, comparison, outcome, spillover, and subgroup rules.",
+    "decision_object": "phased evacuation exercise and preparedness outreach",
+    "evidence_gate": "Evidence for phased evacuation exercise and preparedness outreach passes documented checks for dated assignment, comparison validity, pre-trends, outcome panels, attrition, spillovers, and falsification tests.",
+    "horizon": "multi-year",
+    "intervention_mechanism": "randomized encouragement and staggered exercise evaluation",
+    "primary_outcome": "change in verified preparedness task completion",
+    "spatial_unit": "population-group"
+  },
+  "intended_claim": "A versioned evaluate design for comparing declared alternatives affecting phased evacuation exercise and preparedness outreach, conditional on its evidence gate.",
+  "limitations": [
+    "This library record has no city binding and therefore reports no local input, output, or recommendation.",
+    "Readiness describes explicit source and method gates; it does not certify implementation feasibility.",
+    "External domain, legal, community, security, and operational review remains outside this design artifact."
+  ],
+  "method_claimed": false,
+  "objectives": [
+    {
+      "evidence_type": "estimated",
+      "metric": "change in verified preparedness task completion",
+      "objective_id": "scenario.mobility.emergency-mobility.evacuation-exercise-effect.v1.objective.primary",
+      "primary": true,
+      "sense": "minimize",
+      "unit": "percentage points"
+    },
+    {
+      "evidence_type": "estimated",
+      "metric": "distributional gap in change in verified preparedness task completion",
+      "objective_id": "scenario.mobility.emergency-mobility.evacuation-exercise-effect.v1.objective.equity",
+      "primary": false,
+      "sense": "minimize",
+      "unit": "percentage points"
+    },
+    {
+      "evidence_type": "observed",
+      "metric": "decision claims with complete evidence lineage",
+      "objective_id": "scenario.mobility.emergency-mobility.evacuation-exercise-effect.v1.objective.traceability",
+      "primary": false,
+      "sense": "maximize",
+      "unit": "percent"
+    }
+  ],
+  "prohibited_claims": [
+    "Do not infer real-disaster evacuation or survival effects from an exercise outcome.",
+    "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+    "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+    "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+  ],
+  "release_gate": {
+    "failure_release": "Release an explicit insufficient-evidence record naming missing sources, failed diagnostics, prohibited claims, and the next validation action.",
+    "failure_status": "insufficient-evidence",
+    "gate_id": "scenario.mobility.emergency-mobility.evacuation-exercise-effect.v1.gate.release",
+    "gate_type": "causal-identification",
+    "pass_condition": "Evidence for phased evacuation exercise and preparedness outreach passes documented checks for dated assignment, comparison validity, pre-trends, outcome panels, attrition, spillovers, and falsification tests.",
+    "required_evidence_types": [
+      "causal",
+      "observed"
+    ],
+    "required_source_roles": [
+      "community-input",
+      "equity-attribute",
+      "geographic-identity",
+      "intervention-assignment",
+      "operating-capacity",
+      "outcome-panel",
+      "transport-network"
+    ]
+  },
+  "required_source_roles": [
+    "community-input",
+    "equity-attribute",
+    "geographic-identity",
+    "intervention-assignment",
+    "operating-capacity",
+    "outcome-panel",
+    "transport-network"
+  ],
+  "schema_version": "1.0.0",
+  "spatial_unit": "population-group",
+  "suite": "mobility-accessibility-operations",
+  "tags": [
+    "design-only",
+    "evaluate",
+    "mobility-accessibility-operations",
+    "mobility.emergency-mobility",
+    "scenario-library"
+  ],
+  "title": "Evaluate emergency mobility exercises and outreach",
+  "transportability_risks": [
+    "Hazards, vehicle ownership, disability access, road topology, trust, and compliance differ.",
+    "Registration systems may undercount people needing assistance."
+  ]
+}

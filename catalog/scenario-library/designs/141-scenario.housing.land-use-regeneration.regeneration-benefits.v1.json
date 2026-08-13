@@ -1,0 +1,168 @@
+{
+  "affected_system": "land-use planning, public investment, regeneration, and community-benefit system",
+  "alternatives": [
+    "protect minimum coverage before needs-based allocation of regeneration funding and enforceable community benefits",
+    "adapt allocations using observed demand, uptake, and capacity for regeneration funding and enforceable community benefits",
+    "pair minimum-benefit, need, deliverability, and displacement-risk allocation with an explicit stop, review, and escalation rule"
+  ],
+  "analysis_modes": [
+    "simulation",
+    "optimization"
+  ],
+  "assumptions": [
+    "Parcels, zoning, ownership, development, business, housing, public assets, and population use dated versions.",
+    "Scenario capacity and market response are not treated as approved projects or inevitable change.",
+    "All alternatives, capacities, costs, effects, thresholds, and failure scenarios are proposed until bound to evidence."
+  ],
+  "baseline": "retain the current distribution rule for regeneration funding and enforceable community benefits.",
+  "city_bindings": [],
+  "constraints": [
+    {
+      "binding": true,
+      "constraint_id": "scenario.housing.land-use-regeneration.regeneration-benefits.v1.constraint.binding",
+      "description": "The land use, regeneration, and neighborhood change allocate must respect declared minimum service, eligibility, capacity, and distributional safeguards.",
+      "hard": true,
+      "kind": "equity",
+      "required_source_roles": [
+        "community-input",
+        "equity-attribute",
+        "financial-cost",
+        "geographic-identity",
+        "housing-market",
+        "land-parcel",
+        "legal-regulatory"
+      ]
+    },
+    {
+      "binding": false,
+      "constraint_id": "scenario.housing.land-use-regeneration.regeneration-benefits.v1.constraint.evidence-scope",
+      "description": "Every released metric must retain evidence type, source lineage, geography, time, assumptions, and uncertainty.",
+      "hard": true,
+      "kind": "technical",
+      "required_source_roles": [
+        "community-input"
+      ]
+    },
+    {
+      "binding": false,
+      "constraint_id": "scenario.housing.land-use-regeneration.regeneration-benefits.v1.constraint.decision-authority",
+      "description": "No analytical output may bypass lawful authority, accountable human review, or an applicable appeal process.",
+      "hard": true,
+      "kind": "regulatory",
+      "required_source_roles": [
+        "community-input"
+      ]
+    }
+  ],
+  "current_readiness": "blocked-missing-source",
+  "decision_cadence": "recompiled at each planning cycle and after material evidence change",
+  "decision_owner": "planning director and neighborhood regeneration commissioner",
+  "decision_question": "How should capital, land value, grants, affordable space, jobs, and public benefits be distributed?",
+  "decision_type": "allocate",
+  "design_id": "scenario.housing.land-use-regeneration.regeneration-benefits.v1",
+  "design_order": 141,
+  "design_signature": "sha256:d883f7c7fff0362d39022ee388fab7f374b4430c8f4d8faa5b984ca411c64b27",
+  "evidence_requirements": [
+    "estimated",
+    "observed",
+    "optimized",
+    "proposed",
+    "simulated"
+  ],
+  "family_id": "housing.land-use-regeneration",
+  "family_title": "Land use, regeneration, and neighborhood change",
+  "horizon": "weeks",
+  "implementation_status": "design-only",
+  "independence_key": {
+    "binding_constraint": "The land use, regeneration, and neighborhood change allocate must respect declared minimum service, eligibility, capacity, and distributional safeguards.",
+    "decision_object": "regeneration funding and enforceable community benefits",
+    "evidence_gate": "Evidence for regeneration funding and enforceable community benefits passes documented checks for eligible denominators, group attributes, inventory, minimum-service rules, and allocation records.",
+    "horizon": "weeks",
+    "intervention_mechanism": "minimum-benefit, need, deliverability, and displacement-risk allocation",
+    "primary_outcome": "verified community priorities without funded enforceable benefit",
+    "spatial_unit": "neighborhood"
+  },
+  "intended_claim": "A versioned allocate design for comparing declared alternatives affecting regeneration funding and enforceable community benefits, conditional on its evidence gate.",
+  "limitations": [
+    "This library record has no city binding and therefore reports no local input, output, or recommendation.",
+    "Readiness describes explicit source and method gates; it does not certify implementation feasibility.",
+    "External domain, legal, community, security, and operational review remains outside this design artifact."
+  ],
+  "method_claimed": false,
+  "objectives": [
+    {
+      "evidence_type": "estimated",
+      "metric": "verified community priorities without funded enforceable benefit",
+      "objective_id": "scenario.housing.land-use-regeneration.regeneration-benefits.v1.objective.primary",
+      "primary": true,
+      "sense": "minimize",
+      "unit": "priority units"
+    },
+    {
+      "evidence_type": "estimated",
+      "metric": "distributional gap in verified community priorities without funded enforceable benefit",
+      "objective_id": "scenario.housing.land-use-regeneration.regeneration-benefits.v1.objective.equity",
+      "primary": false,
+      "sense": "minimize",
+      "unit": "priority units"
+    },
+    {
+      "evidence_type": "observed",
+      "metric": "decision claims with complete evidence lineage",
+      "objective_id": "scenario.housing.land-use-regeneration.regeneration-benefits.v1.objective.traceability",
+      "primary": false,
+      "sense": "maximize",
+      "unit": "percent"
+    }
+  ],
+  "prohibited_claims": [
+    "Do not present modeled allocations as negotiated, legally secured, funded, or delivered benefits.",
+    "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+    "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+    "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+  ],
+  "release_gate": {
+    "failure_release": "Release an explicit insufficient-evidence record naming missing sources, failed diagnostics, prohibited claims, and the next validation action.",
+    "failure_status": "insufficient-evidence",
+    "gate_id": "scenario.housing.land-use-regeneration.regeneration-benefits.v1.gate.release",
+    "gate_type": "equity-measurement",
+    "pass_condition": "Evidence for regeneration funding and enforceable community benefits passes documented checks for eligible denominators, group attributes, inventory, minimum-service rules, and allocation records.",
+    "required_evidence_types": [
+      "observed",
+      "proposed"
+    ],
+    "required_source_roles": [
+      "community-input",
+      "equity-attribute",
+      "financial-cost",
+      "geographic-identity",
+      "housing-market",
+      "land-parcel",
+      "legal-regulatory"
+    ]
+  },
+  "required_source_roles": [
+    "community-input",
+    "equity-attribute",
+    "financial-cost",
+    "geographic-identity",
+    "housing-market",
+    "land-parcel",
+    "legal-regulatory"
+  ],
+  "schema_version": "1.0.0",
+  "spatial_unit": "neighborhood",
+  "suite": "housing-land-use-regeneration",
+  "tags": [
+    "allocate",
+    "design-only",
+    "housing-land-use-regeneration",
+    "housing.land-use-regeneration",
+    "scenario-library"
+  ],
+  "title": "Allocate regeneration funds and community benefits",
+  "transportability_risks": [
+    "Planning law, property rights, finance, markets, institutions, and community priorities differ.",
+    "Parcel and transaction data may miss informal tenure, businesses, and cultural assets."
+  ]
+}

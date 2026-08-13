@@ -1,0 +1,165 @@
+{
+  "affected_system": "air-quality surveillance, exposure reduction, and respiratory-health response",
+  "alternatives": [
+    "protect minimum coverage before needs-based allocation of air-pollution respiratory protection resources",
+    "adapt allocations using observed demand, uptake, and capacity for air-pollution respiratory protection resources",
+    "pair exposure-, vulnerability-, and access-constrained allocation with an explicit stop, review, and escalation rule"
+  ],
+  "analysis_modes": [
+    "simulation",
+    "optimization"
+  ],
+  "assumptions": [
+    "Monitor data retain calibration, siting, uptime, and spatial-representativeness metadata.",
+    "Exposure, diagnosis, care use, and service complaints are not interchangeable outcomes.",
+    "All alternatives, capacities, costs, effects, thresholds, and failure scenarios are proposed until bound to evidence."
+  ],
+  "baseline": "retain the current distribution rule for air-pollution respiratory protection resources.",
+  "city_bindings": [],
+  "constraints": [
+    {
+      "binding": true,
+      "constraint_id": "scenario.health.air-quality.respiratory-protection.v1.constraint.binding",
+      "description": "The air-quality exposure and respiratory health allocate must respect declared minimum service, eligibility, capacity, and distributional safeguards.",
+      "hard": true,
+      "kind": "equity",
+      "required_source_roles": [
+        "community-input",
+        "environmental-exposure",
+        "equity-attribute",
+        "geographic-identity",
+        "health-outcome",
+        "operating-capacity"
+      ]
+    },
+    {
+      "binding": false,
+      "constraint_id": "scenario.health.air-quality.respiratory-protection.v1.constraint.evidence-scope",
+      "description": "Every released metric must retain evidence type, source lineage, geography, time, assumptions, and uncertainty.",
+      "hard": true,
+      "kind": "technical",
+      "required_source_roles": [
+        "community-input"
+      ]
+    },
+    {
+      "binding": false,
+      "constraint_id": "scenario.health.air-quality.respiratory-protection.v1.constraint.decision-authority",
+      "description": "No analytical output may bypass lawful authority, accountable human review, or an applicable appeal process.",
+      "hard": true,
+      "kind": "regulatory",
+      "required_source_roles": [
+        "community-input"
+      ]
+    }
+  ],
+  "current_readiness": "blocked-missing-source",
+  "decision_cadence": "recompiled at each planning cycle and after material evidence change",
+  "decision_owner": "environmental health director and air-quality program lead",
+  "decision_question": "How should filters, masks, clinical navigation, and outreach be distributed during pollution episodes?",
+  "decision_type": "allocate",
+  "design_id": "scenario.health.air-quality.respiratory-protection.v1",
+  "design_order": 93,
+  "design_signature": "sha256:f424fab809d1666e9d1f97051af93a4ea822957fcfedf6115f4b369480641c16",
+  "evidence_requirements": [
+    "estimated",
+    "observed",
+    "optimized",
+    "proposed",
+    "simulated"
+  ],
+  "family_id": "health.air-quality",
+  "family_title": "Air-quality exposure and respiratory health",
+  "horizon": "weeks",
+  "implementation_status": "design-only",
+  "independence_key": {
+    "binding_constraint": "The air-quality exposure and respiratory health allocate must respect declared minimum service, eligibility, capacity, and distributional safeguards.",
+    "decision_object": "air-pollution respiratory protection resources",
+    "evidence_gate": "Evidence for air-pollution respiratory protection resources passes documented checks for eligible denominators, group attributes, inventory, minimum-service rules, and allocation records.",
+    "horizon": "weeks",
+    "intervention_mechanism": "exposure-, vulnerability-, and access-constrained allocation",
+    "primary_outcome": "high-risk people without assigned protection support",
+    "spatial_unit": "population-group"
+  },
+  "intended_claim": "A versioned allocate design for comparing declared alternatives affecting air-pollution respiratory protection resources, conditional on its evidence gate.",
+  "limitations": [
+    "This library record has no city binding and therefore reports no local input, output, or recommendation.",
+    "Readiness describes explicit source and method gates; it does not certify implementation feasibility.",
+    "External domain, legal, community, security, and operational review remains outside this design artifact."
+  ],
+  "method_claimed": false,
+  "objectives": [
+    {
+      "evidence_type": "estimated",
+      "metric": "high-risk people without assigned protection support",
+      "objective_id": "scenario.health.air-quality.respiratory-protection.v1.objective.primary",
+      "primary": true,
+      "sense": "minimize",
+      "unit": "people"
+    },
+    {
+      "evidence_type": "estimated",
+      "metric": "distributional gap in high-risk people without assigned protection support",
+      "objective_id": "scenario.health.air-quality.respiratory-protection.v1.objective.equity",
+      "primary": false,
+      "sense": "minimize",
+      "unit": "people"
+    },
+    {
+      "evidence_type": "observed",
+      "metric": "decision claims with complete evidence lineage",
+      "objective_id": "scenario.health.air-quality.respiratory-protection.v1.objective.traceability",
+      "primary": false,
+      "sense": "maximize",
+      "unit": "percent"
+    }
+  ],
+  "prohibited_claims": [
+    "Do not report distributed supplies as used correctly or clinically effective.",
+    "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+    "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+    "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+  ],
+  "release_gate": {
+    "failure_release": "Release an explicit insufficient-evidence record naming missing sources, failed diagnostics, prohibited claims, and the next validation action.",
+    "failure_status": "insufficient-evidence",
+    "gate_id": "scenario.health.air-quality.respiratory-protection.v1.gate.release",
+    "gate_type": "equity-measurement",
+    "pass_condition": "Evidence for air-pollution respiratory protection resources passes documented checks for eligible denominators, group attributes, inventory, minimum-service rules, and allocation records.",
+    "required_evidence_types": [
+      "observed",
+      "proposed"
+    ],
+    "required_source_roles": [
+      "community-input",
+      "environmental-exposure",
+      "equity-attribute",
+      "geographic-identity",
+      "health-outcome",
+      "operating-capacity"
+    ]
+  },
+  "required_source_roles": [
+    "community-input",
+    "environmental-exposure",
+    "equity-attribute",
+    "geographic-identity",
+    "health-outcome",
+    "operating-capacity"
+  ],
+  "schema_version": "1.0.0",
+  "spatial_unit": "population-group",
+  "suite": "population-health-environmental-exposure",
+  "tags": [
+    "allocate",
+    "design-only",
+    "health.air-quality",
+    "population-health-environmental-exposure",
+    "scenario-library"
+  ],
+  "title": "Allocate respiratory protection and outreach resources",
+  "transportability_risks": [
+    "Pollutant mixtures, indoor infiltration, source profiles, coding, and monitor coverage differ.",
+    "Modeled concentration may not represent personal exposure."
+  ]
+}

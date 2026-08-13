@@ -1,0 +1,167 @@
+{
+  "affected_system": "urban smoke exposure and clean-air protection system",
+  "alternatives": [
+    "retrofit highest vulnerable-occupancy facilities",
+    "fund lower-cost portable filtration across more sites",
+    "balance permanent HVAC upgrades with deployable clean-air kits"
+  ],
+  "analysis_modes": [
+    "descriptive",
+    "optimization"
+  ],
+  "assumptions": [
+    "Air-quality observations carry calibration, siting, and temporal metadata.",
+    "Indoor infiltration and filtration effects are measured locally or labeled assumptions.",
+    "All alternatives, capacities, costs, effects, thresholds, and failure scenarios are proposed until bound to evidence."
+  ],
+  "baseline": "Buildings retain current filtration and envelope performance.",
+  "city_bindings": [],
+  "constraints": [
+    {
+      "binding": true,
+      "constraint_id": "scenario.climate.wildfire-smoke.filtration-retrofits.v1.constraint.binding",
+      "description": "Retrofit selection must fit capital, filter-replacement, energy, and maintenance budgets.",
+      "hard": true,
+      "kind": "budget",
+      "required_source_roles": [
+        "asset-condition",
+        "asset-inventory",
+        "climate-hazard",
+        "environmental-exposure",
+        "financial-cost",
+        "geographic-identity",
+        "operating-capacity"
+      ]
+    },
+    {
+      "binding": false,
+      "constraint_id": "scenario.climate.wildfire-smoke.filtration-retrofits.v1.constraint.evidence-scope",
+      "description": "Every released metric must retain evidence type, source lineage, geography, time, assumptions, and uncertainty.",
+      "hard": true,
+      "kind": "technical",
+      "required_source_roles": [
+        "asset-condition"
+      ]
+    },
+    {
+      "binding": false,
+      "constraint_id": "scenario.climate.wildfire-smoke.filtration-retrofits.v1.constraint.decision-authority",
+      "description": "No analytical output may bypass lawful authority, accountable human review, or an applicable appeal process.",
+      "hard": true,
+      "kind": "regulatory",
+      "required_source_roles": [
+        "asset-condition"
+      ]
+    }
+  ],
+  "current_readiness": "blocked-missing-source",
+  "decision_cadence": "recompiled at each planning cycle and after material evidence change",
+  "decision_owner": "air-quality response coordinator and public-health director",
+  "decision_question": "Which public buildings should receive filtration and envelope upgrades first under limited capital?",
+  "decision_type": "prioritize",
+  "design_id": "scenario.climate.wildfire-smoke.filtration-retrofits.v1",
+  "design_order": 19,
+  "design_signature": "sha256:9b0fac6d04502130d4a95d134e0f950b97610ab7dd74c88aaf1580576357bf92",
+  "evidence_requirements": [
+    "estimated",
+    "observed",
+    "optimized",
+    "proposed"
+  ],
+  "family_id": "climate.wildfire-smoke",
+  "family_title": "Wildfire smoke and air-quality resilience",
+  "horizon": "multi-year",
+  "implementation_status": "design-only",
+  "independence_key": {
+    "binding_constraint": "Retrofit selection must fit capital, filter-replacement, energy, and maintenance budgets.",
+    "decision_object": "public-building smoke-protection retrofit portfolio",
+    "evidence_gate": "Each building has verified occupancy, envelope, HVAC, retrofit cost, maintenance, and performance evidence.",
+    "horizon": "multi-year",
+    "intervention_mechanism": "risk- and occupancy-weighted retrofit prioritization",
+    "primary_outcome": "vulnerable occupant-hours above indoor particulate thresholds",
+    "spatial_unit": "facility"
+  },
+  "intended_claim": "A versioned prioritize design for comparing declared alternatives affecting public-building smoke-protection retrofit portfolio, conditional on its evidence gate.",
+  "limitations": [
+    "This library record has no city binding and therefore reports no local input, output, or recommendation.",
+    "Readiness describes explicit source and method gates; it does not certify implementation feasibility.",
+    "External domain, legal, community, security, and operational review remains outside this design artifact."
+  ],
+  "method_claimed": false,
+  "objectives": [
+    {
+      "evidence_type": "estimated",
+      "metric": "vulnerable occupant-hours above indoor particulate thresholds",
+      "objective_id": "scenario.climate.wildfire-smoke.filtration-retrofits.v1.objective.primary",
+      "primary": true,
+      "sense": "minimize",
+      "unit": "occupant-hours"
+    },
+    {
+      "evidence_type": "estimated",
+      "metric": "distributional gap in vulnerable occupant-hours above indoor particulate thresholds",
+      "objective_id": "scenario.climate.wildfire-smoke.filtration-retrofits.v1.objective.equity",
+      "primary": false,
+      "sense": "minimize",
+      "unit": "occupant-hours"
+    },
+    {
+      "evidence_type": "observed",
+      "metric": "decision claims with complete evidence lineage",
+      "objective_id": "scenario.climate.wildfire-smoke.filtration-retrofits.v1.objective.traceability",
+      "primary": false,
+      "sense": "maximize",
+      "unit": "percent"
+    }
+  ],
+  "prohibited_claims": [
+    "Do not call engineering performance assumptions measured indoor exposure reduction.",
+    "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+    "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+    "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+  ],
+  "release_gate": {
+    "failure_release": "Release an explicit insufficient-evidence record naming missing sources, failed diagnostics, prohibited claims, and the next validation action.",
+    "failure_status": "insufficient-evidence",
+    "gate_id": "scenario.climate.wildfire-smoke.filtration-retrofits.v1.gate.release",
+    "gate_type": "cost-capacity",
+    "pass_condition": "Each building has verified occupancy, envelope, HVAC, retrofit cost, maintenance, and performance evidence.",
+    "required_evidence_types": [
+      "observed",
+      "proposed"
+    ],
+    "required_source_roles": [
+      "asset-condition",
+      "asset-inventory",
+      "climate-hazard",
+      "environmental-exposure",
+      "financial-cost",
+      "geographic-identity",
+      "operating-capacity"
+    ]
+  },
+  "required_source_roles": [
+    "asset-condition",
+    "asset-inventory",
+    "climate-hazard",
+    "environmental-exposure",
+    "financial-cost",
+    "geographic-identity",
+    "operating-capacity"
+  ],
+  "schema_version": "1.0.0",
+  "spatial_unit": "facility",
+  "suite": "climate-disaster-resilience",
+  "tags": [
+    "climate-disaster-resilience",
+    "climate.wildfire-smoke",
+    "design-only",
+    "prioritize",
+    "scenario-library"
+  ],
+  "title": "Prioritize public-building filtration retrofits",
+  "transportability_risks": [
+    "Smoke chemistry, building leakage, monitor density, and household behavior differ.",
+    "Regional forecasts and satellite products may have city-specific resolution limits."
+  ]
+}

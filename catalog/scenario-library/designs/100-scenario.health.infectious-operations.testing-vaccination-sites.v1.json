@@ -1,0 +1,165 @@
+{
+  "affected_system": "privacy-preserving infectious-disease surveillance and response operations",
+  "alternatives": [
+    "screen feasible locations against the largest access gaps for temporary infectious-disease service locations",
+    "co-optimize distributed and high-capacity locations for temporary infectious-disease service locations",
+    "pair capacitated access and infection-control facility siting with an explicit stop, review, and escalation rule"
+  ],
+  "analysis_modes": [
+    "simulation",
+    "optimization"
+  ],
+  "assumptions": [
+    "Case, syndrome, testing, wastewater, vaccination, and care records have explicit definitions and delays.",
+    "No individual identity or protected health information enters public release artifacts.",
+    "All alternatives, capacities, costs, effects, thresholds, and failure scenarios are proposed until bound to evidence."
+  ],
+  "baseline": "retain only existing approved locations for temporary infectious-disease service locations.",
+  "city_bindings": [],
+  "constraints": [
+    {
+      "binding": true,
+      "constraint_id": "scenario.health.infectious-operations.testing-vaccination-sites.v1.constraint.binding",
+      "description": "The infectious-disease public-health operations site must respect declared land control, accessibility, permitting, safety, and operating feasibility.",
+      "hard": true,
+      "kind": "regulatory",
+      "required_source_roles": [
+        "equity-attribute",
+        "facility-inventory",
+        "geographic-identity",
+        "health-outcome",
+        "operating-capacity",
+        "transport-network"
+      ]
+    },
+    {
+      "binding": false,
+      "constraint_id": "scenario.health.infectious-operations.testing-vaccination-sites.v1.constraint.evidence-scope",
+      "description": "Every released metric must retain evidence type, source lineage, geography, time, assumptions, and uncertainty.",
+      "hard": true,
+      "kind": "technical",
+      "required_source_roles": [
+        "equity-attribute"
+      ]
+    },
+    {
+      "binding": false,
+      "constraint_id": "scenario.health.infectious-operations.testing-vaccination-sites.v1.constraint.decision-authority",
+      "description": "No analytical output may bypass lawful authority, accountable human review, or an applicable appeal process.",
+      "hard": true,
+      "kind": "regulatory",
+      "required_source_roles": [
+        "equity-attribute"
+      ]
+    }
+  ],
+  "current_readiness": "blocked-missing-source",
+  "decision_cadence": "recompiled at each planning cycle and after material evidence change",
+  "decision_owner": "communicable-disease director and public-health operations chief",
+  "decision_question": "Where should temporary health access points operate under demand, equity, cold-chain, and infection-control constraints?",
+  "decision_type": "site",
+  "design_id": "scenario.health.infectious-operations.testing-vaccination-sites.v1",
+  "design_order": 100,
+  "design_signature": "sha256:a7e6acd6efe63b4193a03dd2b7cf2876582921b810c4d82c158359a22a226798",
+  "evidence_requirements": [
+    "estimated",
+    "observed",
+    "optimized",
+    "proposed",
+    "simulated"
+  ],
+  "family_id": "health.infectious-operations",
+  "family_title": "Infectious-disease public-health operations",
+  "horizon": "multi-year",
+  "implementation_status": "design-only",
+  "independence_key": {
+    "binding_constraint": "The infectious-disease public-health operations site must respect declared land control, accessibility, permitting, safety, and operating feasibility.",
+    "decision_object": "temporary infectious-disease service locations",
+    "evidence_gate": "Evidence for temporary infectious-disease service locations passes documented checks for parcel control, legal authority, environmental review, access, capacity, and operator responsibility.",
+    "horizon": "multi-year",
+    "intervention_mechanism": "capacitated access and infection-control facility siting",
+    "primary_outcome": "eligible population beyond timely qualified service access",
+    "spatial_unit": "facility"
+  },
+  "intended_claim": "A versioned site design for comparing declared alternatives affecting temporary infectious-disease service locations, conditional on its evidence gate.",
+  "limitations": [
+    "This library record has no city binding and therefore reports no local input, output, or recommendation.",
+    "Readiness describes explicit source and method gates; it does not certify implementation feasibility.",
+    "External domain, legal, community, security, and operational review remains outside this design artifact."
+  ],
+  "method_claimed": false,
+  "objectives": [
+    {
+      "evidence_type": "estimated",
+      "metric": "eligible population beyond timely qualified service access",
+      "objective_id": "scenario.health.infectious-operations.testing-vaccination-sites.v1.objective.primary",
+      "primary": true,
+      "sense": "minimize",
+      "unit": "people"
+    },
+    {
+      "evidence_type": "estimated",
+      "metric": "distributional gap in eligible population beyond timely qualified service access",
+      "objective_id": "scenario.health.infectious-operations.testing-vaccination-sites.v1.objective.equity",
+      "primary": false,
+      "sense": "minimize",
+      "unit": "people"
+    },
+    {
+      "evidence_type": "observed",
+      "metric": "decision claims with complete evidence lineage",
+      "objective_id": "scenario.health.infectious-operations.testing-vaccination-sites.v1.objective.traceability",
+      "primary": false,
+      "sense": "maximize",
+      "unit": "percent"
+    }
+  ],
+  "prohibited_claims": [
+    "Do not call a candidate site clinically qualified, staffed, supplied, or publicly accepted.",
+    "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+    "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+    "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+  ],
+  "release_gate": {
+    "failure_release": "Release an explicit insufficient-evidence record naming missing sources, failed diagnostics, prohibited claims, and the next validation action.",
+    "failure_status": "insufficient-evidence",
+    "gate_id": "scenario.health.infectious-operations.testing-vaccination-sites.v1.gate.release",
+    "gate_type": "legal-authority",
+    "pass_condition": "Evidence for temporary infectious-disease service locations passes documented checks for parcel control, legal authority, environmental review, access, capacity, and operator responsibility.",
+    "required_evidence_types": [
+      "observed",
+      "proposed"
+    ],
+    "required_source_roles": [
+      "equity-attribute",
+      "facility-inventory",
+      "geographic-identity",
+      "health-outcome",
+      "operating-capacity",
+      "transport-network"
+    ]
+  },
+  "required_source_roles": [
+    "equity-attribute",
+    "facility-inventory",
+    "geographic-identity",
+    "health-outcome",
+    "operating-capacity",
+    "transport-network"
+  ],
+  "schema_version": "1.0.0",
+  "spatial_unit": "facility",
+  "suite": "population-health-environmental-exposure",
+  "tags": [
+    "design-only",
+    "health.infectious-operations",
+    "population-health-environmental-exposure",
+    "scenario-library",
+    "site"
+  ],
+  "title": "Site accessible testing, vaccination, and treatment access points",
+  "transportability_risks": [
+    "Pathogens, immunity, clinical practice, reporting, testing, and public behavior differ.",
+    "Surveillance changes can mimic epidemiological changes."
+  ]
+}

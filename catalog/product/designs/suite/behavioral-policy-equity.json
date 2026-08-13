@@ -1,0 +1,1098 @@
+{
+  "claim_boundary": "Design records are not city executions, deployments, adoptions, or impacts.",
+  "items": [
+    {
+      "analysis_modes": [
+        "descriptive"
+      ],
+      "binding_constraint": "The distributional public-service equity diagnose must respect declared measurement resolution and classification uncertainty.",
+      "content_hash": "sha256:841d8e481a5e563ba9db4a4e8f292068198bacba9eec646907ff2a2ca9e21975",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Which groups and areas show persistent differences after need, eligibility, access, reporting, and case mix are separated?",
+      "decision_type": "diagnose",
+      "design_id": "scenario.equity.distributional-service.service-disparities.v1",
+      "design_order": 209,
+      "evidence_gate": "geographic-alignment",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "proposed"
+      ],
+      "family_id": "equity.distributional-service",
+      "family_title": "Distributional public-service equity",
+      "horizon": "annual",
+      "implementation_status": "design-only",
+      "primary_outcome": "unexplained service-access and quality gap",
+      "prohibited_claims": [
+        "Do not label an adjusted area difference discrimination, individual treatment, or causal inequity.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "population-group",
+      "suite": "behavioral-policy-equity",
+      "title": "Diagnose distributional service-access and quality disparities"
+    },
+    {
+      "analysis_modes": [
+        "forecast"
+      ],
+      "binding_constraint": "The distributional public-service equity forecast must respect declared validated operational capacity and forecast uncertainty.",
+      "content_hash": "sha256:ad45414fa3a92e924b7f79301d63d3d1a163581427af155eefa8fa2c44486a1f",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "What group- and area-specific eligible need and service-capacity range should planning prepare for?",
+      "decision_type": "forecast",
+      "design_id": "scenario.equity.distributional-service.equitable-service-need.v1",
+      "design_order": 210,
+      "evidence_gate": "model-calibration",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "proposed"
+      ],
+      "family_id": "equity.distributional-service",
+      "family_title": "Distributional public-service equity",
+      "horizon": "weeks",
+      "implementation_status": "design-only",
+      "primary_outcome": "eligible need above minimum service capacity",
+      "prohibited_claims": [
+        "Do not call forecast eligible need individual demand, behavior, entitlement, or verified unmet service.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "population-group",
+      "suite": "behavioral-policy-equity",
+      "title": "Forecast service need and capacity by population group"
+    },
+    {
+      "analysis_modes": [
+        "descriptive",
+        "optimization"
+      ],
+      "binding_constraint": "The distributional public-service equity prioritize must respect declared capital, operating, maintenance, and delivery budgets.",
+      "content_hash": "sha256:8ba4394e7bb47a6deac104a2b7b08971f4a0147f561957290c15f7b0194b666e",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Which access, language, staffing, process, facility, and accountability investments should be funded?",
+      "decision_type": "prioritize",
+      "design_id": "scenario.equity.distributional-service.equity-improvement-portfolio.v1",
+      "design_order": 211,
+      "evidence_gate": "cost-capacity",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed"
+      ],
+      "family_id": "equity.distributional-service",
+      "family_title": "Distributional public-service equity",
+      "horizon": "multi-year",
+      "implementation_status": "design-only",
+      "primary_outcome": "population-weighted verified minimum-service gap",
+      "prohibited_claims": [
+        "Do not report modeled gap reduction as delivered equity, legal compliance, or resident welfare.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "service-area",
+      "suite": "behavioral-policy-equity",
+      "title": "Prioritize cross-agency equity improvements"
+    },
+    {
+      "analysis_modes": [
+        "simulation",
+        "optimization"
+      ],
+      "binding_constraint": "The distributional public-service equity site must respect declared land control, accessibility, permitting, safety, and operating feasibility.",
+      "content_hash": "sha256:0a4d38202d95c5e3304fe7d76e37ea48a400daa69aa0ea82edd65ef771fbc2f6",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Where should multilingual, accessible, trusted service points close verified need-adjusted access gaps?",
+      "decision_type": "site",
+      "design_id": "scenario.equity.distributional-service.equitable-service-network.v1",
+      "design_order": 212,
+      "evidence_gate": "legal-authority",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "family_id": "equity.distributional-service",
+      "family_title": "Distributional public-service equity",
+      "horizon": "multi-year",
+      "implementation_status": "design-only",
+      "primary_outcome": "eligible people beyond usable qualified service access",
+      "prohibited_claims": [
+        "Do not call a candidate site equitable, trusted, accessible, lawful, or used.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "facility",
+      "suite": "behavioral-policy-equity",
+      "title": "Site an equitable network of public-service access points"
+    },
+    {
+      "analysis_modes": [
+        "simulation",
+        "optimization"
+      ],
+      "binding_constraint": "The distributional public-service equity allocate must respect declared minimum service, eligibility, capacity, and distributional safeguards.",
+      "content_hash": "sha256:cd683b13933e790c14cf1ceab2ffaf677de38bbd0b6ac83159f7194829e1d613",
+      "current_readiness": "reference-implemented",
+      "decision_question": "How should staff, funds, appointments, language, and field capacity be distributed across groups and areas?",
+      "decision_type": "allocate",
+      "design_id": "scenario.equity.distributional-service.minimum-service-capacity.v1",
+      "design_order": 213,
+      "evidence_gate": "equity-measurement",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "existing_template_ref": "deep.equity.area-balance.v1",
+      "family_id": "equity.distributional-service",
+      "family_title": "Distributional public-service equity",
+      "horizon": "weeks",
+      "implementation_status": "reference-implemented",
+      "primary_outcome": "eligible population below minimum service coverage",
+      "prohibited_claims": [
+        "Do not call area-balanced request capacity demographic equity, delivered service, or improved outcomes.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "population-group",
+      "suite": "behavioral-policy-equity",
+      "title": "Allocate capacity under minimum equitable service guarantees"
+    },
+    {
+      "analysis_modes": [
+        "forecast",
+        "optimization"
+      ],
+      "binding_constraint": "The distributional public-service equity schedule must respect declared labor, access, sequencing, notice, and completion windows.",
+      "content_hash": "sha256:b9ca7873d3c718e475b018112b4919840f21f57cee8c8b14f4c04bcd0907ac74",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "When should access repairs, outreach, translation, staffing, audits, and follow-up milestones occur?",
+      "decision_type": "schedule",
+      "design_id": "scenario.equity.distributional-service.equity-remediation.v1",
+      "design_order": 214,
+      "evidence_gate": "temporal-alignment",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed"
+      ],
+      "family_id": "equity.distributional-service",
+      "family_title": "Distributional public-service equity",
+      "horizon": "weeks",
+      "implementation_status": "design-only",
+      "primary_outcome": "person-days below verified minimum service standards",
+      "prohibited_claims": [
+        "Do not call scheduled remediation implemented, compliant, accepted, or effective.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "service-area",
+      "suite": "behavioral-policy-equity",
+      "title": "Schedule equity remediation and service reviews"
+    },
+    {
+      "analysis_modes": [
+        "forecast",
+        "simulation",
+        "optimization"
+      ],
+      "binding_constraint": "The distributional public-service equity stress test must respect declared minimum continuity and safety thresholds across severe scenarios.",
+      "content_hash": "sha256:7f46eba5545f9b7aaf9aa0084af9bab0ca0a34cb3be4ee8f1c07f541049871b1",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Which continuity plan preserves minimum access across outages, hazards, demand surges, and staff losses?",
+      "decision_type": "stress-test",
+      "design_id": "scenario.equity.distributional-service.equity-under-disruption.v1",
+      "design_order": 215,
+      "evidence_gate": "external-validation",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "family_id": "equity.distributional-service",
+      "family_title": "Distributional public-service equity",
+      "horizon": "seasonal",
+      "implementation_status": "design-only",
+      "primary_outcome": "scenario-weighted people below minimum service guarantees",
+      "prohibited_claims": [
+        "Do not present synthetic group outcomes, service failures, or disparities as observed.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "network",
+      "suite": "behavioral-policy-equity",
+      "title": "Stress-test equitable service under disruption"
+    },
+    {
+      "analysis_modes": [
+        "descriptive",
+        "causal"
+      ],
+      "binding_constraint": "The distributional public-service equity evaluate must respect declared pre-specified assignment, comparison, outcome, spillover, and subgroup rules.",
+      "content_hash": "sha256:4e279e85b97bfaf4c5cba43dc6b3c754ea74560433c2eb932e13da1e7aa1298b",
+      "current_readiness": "blocked-multiple-gates",
+      "decision_question": "Did phased access and capacity interventions reduce verified need-adjusted disparities without displacement?",
+      "decision_type": "evaluate",
+      "design_id": "scenario.equity.distributional-service.equity-policy-effect.v1",
+      "design_order": 216,
+      "evidence_gate": "causal-identification",
+      "evidence_types": [
+        "causal",
+        "estimated",
+        "observed",
+        "proposed"
+      ],
+      "family_id": "equity.distributional-service",
+      "family_title": "Distributional public-service equity",
+      "horizon": "multi-year",
+      "implementation_status": "design-only",
+      "primary_outcome": "change in need-adjusted service access and outcome gaps",
+      "prohibited_claims": [
+        "Do not infer discrimination reduction, welfare, or causal equity from area-level requests alone.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "population-group",
+      "suite": "behavioral-policy-equity",
+      "title": "Evaluate service-equity interventions"
+    },
+    {
+      "analysis_modes": [
+        "descriptive"
+      ],
+      "binding_constraint": "The public participation and risk communication diagnose must respect declared measurement resolution and classification uncertainty.",
+      "content_hash": "sha256:f761e2aa079b49ab71109729e1bbb862eef8070c9583ec4684dbcb57c811025c",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Which affected groups and issues are missing across invitation, access, participation, response, and closure stages?",
+      "decision_type": "diagnose",
+      "design_id": "scenario.equity.participation-communication.participation-gaps.v1",
+      "design_order": 217,
+      "evidence_gate": "geographic-alignment",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "proposed"
+      ],
+      "family_id": "equity.participation-communication",
+      "family_title": "Public participation and risk communication",
+      "horizon": "annual",
+      "implementation_status": "design-only",
+      "primary_outcome": "affected people without usable participation and feedback access",
+      "prohibited_claims": [
+        "Do not label nonparticipation apathy, opposition, consent, satisfaction, or lack of concern.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "population-group",
+      "suite": "behavioral-policy-equity",
+      "title": "Diagnose participation, representation, and feedback gaps"
+    },
+    {
+      "analysis_modes": [
+        "forecast"
+      ],
+      "binding_constraint": "The public participation and risk communication forecast must respect declared validated operational capacity and forecast uncertainty.",
+      "content_hash": "sha256:29314d589f08fc6a06a5eddab88023b893c04878fe06472aecb6f3e05a82078f",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "What issue, language, channel, time, and accessibility demand should engagement operations prepare for?",
+      "decision_type": "forecast",
+      "design_id": "scenario.equity.participation-communication.engagement-demand.v1",
+      "design_order": 218,
+      "evidence_gate": "model-calibration",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "proposed"
+      ],
+      "family_id": "equity.participation-communication",
+      "family_title": "Public participation and risk communication",
+      "horizon": "weeks",
+      "implementation_status": "design-only",
+      "primary_outcome": "affected participation demand above usable channel capacity",
+      "prohibited_claims": [
+        "Do not call forecast engagement actual participation, agreement, trust, or public sentiment.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "population-group",
+      "suite": "behavioral-policy-equity",
+      "title": "Forecast participation and communication demand"
+    },
+    {
+      "analysis_modes": [
+        "descriptive",
+        "optimization"
+      ],
+      "binding_constraint": "The public participation and risk communication prioritize must respect declared capital, operating, maintenance, and delivery budgets.",
+      "content_hash": "sha256:c2e139aee90cc2cdeecea064c994f33e161a466eaf186f85009a16abd46bcd71",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Which language, accessibility, facilitation, compensation, channel, and feedback reforms should be funded?",
+      "decision_type": "prioritize",
+      "design_id": "scenario.equity.participation-communication.inclusive-engagement-portfolio.v1",
+      "design_order": 219,
+      "evidence_gate": "cost-capacity",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed"
+      ],
+      "family_id": "equity.participation-communication",
+      "family_title": "Public participation and risk communication",
+      "horizon": "multi-year",
+      "implementation_status": "design-only",
+      "primary_outcome": "affected-population participation and feedback access gap",
+      "prohibited_claims": [
+        "Do not report modeled inclusion as representative participation, consent, trust, or influence.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "service-area",
+      "suite": "behavioral-policy-equity",
+      "title": "Prioritize inclusive participation and communication improvements"
+    },
+    {
+      "analysis_modes": [
+        "simulation",
+        "optimization"
+      ],
+      "binding_constraint": "The public participation and risk communication site must respect declared land control, accessibility, permitting, safety, and operating feasibility.",
+      "content_hash": "sha256:1ee4296fb7137ac80bd9567d6fcea8d15f28cbab5be6e6e6aa368b8f9bfbc919",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Where should in-person, mobile, partner, and digital access support close verified engagement barriers?",
+      "decision_type": "site",
+      "design_id": "scenario.equity.participation-communication.engagement-venues.v1",
+      "design_order": 220,
+      "evidence_gate": "legal-authority",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "family_id": "equity.participation-communication",
+      "family_title": "Public participation and risk communication",
+      "horizon": "multi-year",
+      "implementation_status": "design-only",
+      "primary_outcome": "affected people beyond usable participation access",
+      "prohibited_claims": [
+        "Do not call a candidate venue accessible, neutral, trusted, safe, or representative.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "facility",
+      "suite": "behavioral-policy-equity",
+      "title": "Site accessible participation and communication venues"
+    },
+    {
+      "analysis_modes": [
+        "simulation",
+        "optimization"
+      ],
+      "binding_constraint": "The public participation and risk communication allocate must respect declared minimum service, eligibility, capacity, and distributional safeguards.",
+      "content_hash": "sha256:55e621e3e783112eeafd05da74325997f92c6f2d5f792d4c85750b3f89eaaec0",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "How should outreach, interpreters, accessibility support, stipends, facilitation, and response capacity be assigned?",
+      "decision_type": "allocate",
+      "design_id": "scenario.equity.participation-communication.engagement-support.v1",
+      "design_order": 221,
+      "evidence_gate": "equity-measurement",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "family_id": "equity.participation-communication",
+      "family_title": "Public participation and risk communication",
+      "horizon": "weeks",
+      "implementation_status": "design-only",
+      "primary_outcome": "affected engagement needs without assigned usable support",
+      "prohibited_claims": [
+        "Do not report allocated support as participation, representation, agreement, or influence.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "population-group",
+      "suite": "behavioral-policy-equity",
+      "title": "Allocate engagement, translation, and participation support"
+    },
+    {
+      "analysis_modes": [
+        "forecast",
+        "optimization"
+      ],
+      "binding_constraint": "The public participation and risk communication schedule must respect declared labor, access, sequencing, notice, and completion windows.",
+      "content_hash": "sha256:9f2d3441212ed9d9b9ed9f33b00a464029bf17b70721314edfbd4dfe0a800ef2",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "When should notice, translation, deliberation, response, revision, decision, and follow-up occur?",
+      "decision_type": "schedule",
+      "design_id": "scenario.equity.participation-communication.engagement-feedback-cycle.v1",
+      "design_order": 222,
+      "evidence_gate": "temporal-alignment",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed"
+      ],
+      "family_id": "equity.participation-communication",
+      "family_title": "Public participation and risk communication",
+      "horizon": "weeks",
+      "implementation_status": "design-only",
+      "primary_outcome": "affected person-days without timely participation or response",
+      "prohibited_claims": [
+        "Do not call a scheduled consultation conducted, representative, considered, or closed.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "citywide",
+      "suite": "behavioral-policy-equity",
+      "title": "Schedule participation, communication, and feedback closure"
+    },
+    {
+      "analysis_modes": [
+        "forecast",
+        "simulation",
+        "optimization"
+      ],
+      "binding_constraint": "The public participation and risk communication stress test must respect declared minimum continuity and safety thresholds across severe scenarios.",
+      "content_hash": "sha256:6e619930571f49866a964704bfeb3782af5a1f77e91a45e32fca0bc3da4f2e3e",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Which multilingual strategy preserves accurate usable communication under uncertainty, outage, rumor, and capacity loss?",
+      "decision_type": "stress-test",
+      "design_id": "scenario.equity.participation-communication.communication-failure.v1",
+      "design_order": 223,
+      "evidence_gate": "external-validation",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "family_id": "equity.participation-communication",
+      "family_title": "Public participation and risk communication",
+      "horizon": "seasonal",
+      "implementation_status": "design-only",
+      "primary_outcome": "scenario-weighted affected people without timely usable information",
+      "prohibited_claims": [
+        "Do not present simulated message reach, understanding, trust, or behavior as observed.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "network",
+      "suite": "behavioral-policy-equity",
+      "title": "Stress-test public communication under crisis and channel failure"
+    },
+    {
+      "analysis_modes": [
+        "descriptive",
+        "causal"
+      ],
+      "binding_constraint": "The public participation and risk communication evaluate must respect declared pre-specified assignment, comparison, outcome, spillover, and subgroup rules.",
+      "content_hash": "sha256:341d5a51b32ac4b08e92fc01cd0b00111fa498f6138d8283d15ccf0a9fd4161e",
+      "current_readiness": "blocked-multiple-gates",
+      "decision_question": "Did phased language, access, deliberation, or feedback changes improve verified participation and understanding?",
+      "decision_type": "evaluate",
+      "design_id": "scenario.equity.participation-communication.engagement-design-effect.v1",
+      "design_order": 224,
+      "evidence_gate": "causal-identification",
+      "evidence_types": [
+        "causal",
+        "estimated",
+        "observed",
+        "proposed"
+      ],
+      "family_id": "equity.participation-communication",
+      "family_title": "Public participation and risk communication",
+      "horizon": "multi-year",
+      "implementation_status": "design-only",
+      "primary_outcome": "change in verified usable participation and comprehension",
+      "prohibited_claims": [
+        "Do not infer trust, consent, legitimacy, behavior, or policy influence from attendance alone.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "population-group",
+      "suite": "behavioral-policy-equity",
+      "title": "Evaluate inclusive engagement and risk communication"
+    },
+    {
+      "analysis_modes": [
+        "descriptive"
+      ],
+      "binding_constraint": "The compliance, incentives, and behavioral policy diagnose must respect declared measurement resolution and classification uncertainty.",
+      "content_hash": "sha256:c5bd8115a4a5db2a2e1b82f66d14ad08c6e22b94dd3a470833208ab47d051b7a",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Which notice, eligibility, capability, process, inspection, and enforcement stages create verified friction or unequal burden?",
+      "decision_type": "diagnose",
+      "design_id": "scenario.equity.compliance-incentives.compliance-process-friction.v1",
+      "design_order": 225,
+      "evidence_gate": "geographic-alignment",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "proposed"
+      ],
+      "family_id": "equity.compliance-incentives",
+      "family_title": "Compliance, incentives, and behavioral policy",
+      "horizon": "annual",
+      "implementation_status": "design-only",
+      "primary_outcome": "eligible or regulated cases with unresolved process barriers",
+      "prohibited_claims": [
+        "Do not label non-completion intentional noncompliance, irresponsibility, risk, or guilt.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "population-group",
+      "suite": "behavioral-policy-equity",
+      "title": "Diagnose compliance and administrative-burden pathways"
+    },
+    {
+      "analysis_modes": [
+        "forecast"
+      ],
+      "binding_constraint": "The compliance, incentives, and behavioral policy forecast must respect declared validated operational capacity and forecast uncertainty.",
+      "content_hash": "sha256:6a0b4071cec1b0938ed373b160d5a307b475e098a8b2587d35e97e4d6c73e01a",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "What rule, group, channel, season, and deadline-specific workload should operations prepare for?",
+      "decision_type": "forecast",
+      "design_id": "scenario.equity.compliance-incentives.assistance-inspection-demand.v1",
+      "design_order": 226,
+      "evidence_gate": "model-calibration",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "proposed"
+      ],
+      "family_id": "equity.compliance-incentives",
+      "family_title": "Compliance, incentives, and behavioral policy",
+      "horizon": "weeks",
+      "implementation_status": "design-only",
+      "primary_outcome": "priority assistance and inspection demand above capacity",
+      "prohibited_claims": [
+        "Do not call forecast cases violations, intentional behavior, or enforcement outcomes.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "service-area",
+      "suite": "behavioral-policy-equity",
+      "title": "Forecast compliance assistance and inspection demand"
+    },
+    {
+      "analysis_modes": [
+        "descriptive",
+        "optimization"
+      ],
+      "binding_constraint": "The compliance, incentives, and behavioral policy prioritize must respect declared capital, operating, maintenance, and delivery budgets.",
+      "content_hash": "sha256:0cf77ff25f8928bad6324d66a1f419d366e1818226d68b40e6ce168001b58fe4",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Which simplification, reminder, incentive, technical support, inspection, and accountability measures should be funded?",
+      "decision_type": "prioritize",
+      "design_id": "scenario.equity.compliance-incentives.compliance-policy-portfolio.v1",
+      "design_order": 227,
+      "evidence_gate": "cost-capacity",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed"
+      ],
+      "family_id": "equity.compliance-incentives",
+      "family_title": "Compliance, incentives, and behavioral policy",
+      "horizon": "multi-year",
+      "implementation_status": "design-only",
+      "primary_outcome": "verified unresolved compliance burden and harm risk",
+      "prohibited_claims": [
+        "Do not report modeled compliance change as lawful behavior, public benefit, or welfare improvement.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "service-area",
+      "suite": "behavioral-policy-equity",
+      "title": "Prioritize compliance assistance and policy redesign"
+    },
+    {
+      "analysis_modes": [
+        "simulation",
+        "optimization"
+      ],
+      "binding_constraint": "The compliance, incentives, and behavioral policy site must respect declared land control, accessibility, permitting, safety, and operating feasibility.",
+      "content_hash": "sha256:20aebf6c7f1618ee6fe893bc24139a4d16d0b1772f57df615d1eb78a2bf6a708",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Where should non-enforcement assistance, document, inspection, and technical services reduce verified barriers?",
+      "decision_type": "site",
+      "design_id": "scenario.equity.compliance-incentives.compliance-assistance-access.v1",
+      "design_order": 228,
+      "evidence_gate": "legal-authority",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "family_id": "equity.compliance-incentives",
+      "family_title": "Compliance, incentives, and behavioral policy",
+      "horizon": "multi-year",
+      "implementation_status": "design-only",
+      "primary_outcome": "eligible cases beyond usable qualified assistance",
+      "prohibited_claims": [
+        "Do not call a candidate assistance site trusted, neutral, accessible, qualified, or used.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "facility",
+      "suite": "behavioral-policy-equity",
+      "title": "Site compliance assistance and technical-support access"
+    },
+    {
+      "analysis_modes": [
+        "simulation",
+        "optimization"
+      ],
+      "binding_constraint": "The compliance, incentives, and behavioral policy allocate must respect declared minimum service, eligibility, capacity, and distributional safeguards.",
+      "content_hash": "sha256:c78321aa452d6c8f59f8eae9f3e04a551dc8af03c1ef70c181417bd6723d3770",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "How should navigators, technical aid, incentives, inspectors, language, and appeal support be assigned?",
+      "decision_type": "allocate",
+      "design_id": "scenario.equity.compliance-incentives.assistance-enforcement-capacity.v1",
+      "design_order": 229,
+      "evidence_gate": "equity-measurement",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "family_id": "equity.compliance-incentives",
+      "family_title": "Compliance, incentives, and behavioral policy",
+      "horizon": "weeks",
+      "implementation_status": "design-only",
+      "primary_outcome": "priority cases without qualified assistance or review capacity",
+      "prohibited_claims": [
+        "Do not report assigned assistance or inspection as contact, compliance, violation, sanction, or resolution.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "population-group",
+      "suite": "behavioral-policy-equity",
+      "title": "Allocate compliance assistance and inspection capacity"
+    },
+    {
+      "analysis_modes": [
+        "forecast",
+        "optimization"
+      ],
+      "binding_constraint": "The compliance, incentives, and behavioral policy schedule must respect declared labor, access, sequencing, notice, and completion windows.",
+      "content_hash": "sha256:0fa695875a333d25662c95db41e7cefe4e0305451a7b1314028453b9d0468839",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "When should notice, support, cure periods, inspection, decision, appeal, and follow-up occur?",
+      "decision_type": "schedule",
+      "design_id": "scenario.equity.compliance-incentives.notice-assistance-inspection.v1",
+      "design_order": 230,
+      "evidence_gate": "temporal-alignment",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed"
+      ],
+      "family_id": "equity.compliance-incentives",
+      "family_title": "Compliance, incentives, and behavioral policy",
+      "horizon": "weeks",
+      "implementation_status": "design-only",
+      "primary_outcome": "case-days outside lawful notice, assistance, and review windows",
+      "prohibited_claims": [
+        "Do not call scheduled notice delivered, understood, lawful, cured, inspected, or adjudicated.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "service-area",
+      "suite": "behavioral-policy-equity",
+      "title": "Schedule notices, assistance, inspections, and appeals"
+    },
+    {
+      "analysis_modes": [
+        "forecast",
+        "simulation",
+        "optimization"
+      ],
+      "binding_constraint": "The compliance, incentives, and behavioral policy stress test must respect declared minimum continuity and safety thresholds across severe scenarios.",
+      "content_hash": "sha256:4f538030c0c823bd51c35ad14e9022ed5f0ad4cc1f545624c01eebe46f4276ed",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Which assistance and incentive strategy remains rights-preserving across uptake, substitution, burden, and enforcement scenarios?",
+      "decision_type": "stress-test",
+      "design_id": "scenario.equity.compliance-incentives.policy-response-uncertainty.v1",
+      "design_order": 231,
+      "evidence_gate": "external-validation",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "family_id": "equity.compliance-incentives",
+      "family_title": "Compliance, incentives, and behavioral policy",
+      "horizon": "seasonal",
+      "implementation_status": "design-only",
+      "primary_outcome": "scenario-weighted unresolved harm and administrative burden",
+      "prohibited_claims": [
+        "Do not present simulated preferences, responses, compliance, or welfare as observed behavior.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "population-group",
+      "suite": "behavioral-policy-equity",
+      "title": "Stress-test behavioral policy under heterogeneous response"
+    },
+    {
+      "analysis_modes": [
+        "descriptive",
+        "causal"
+      ],
+      "binding_constraint": "The compliance, incentives, and behavioral policy evaluate must respect declared pre-specified assignment, comparison, outcome, spillover, and subgroup rules.",
+      "content_hash": "sha256:410a78e8ca07194b6dbdd252243e807bf4113590f36e8350f5344101b3e34a88",
+      "current_readiness": "blocked-multiple-gates",
+      "decision_question": "Did randomized or phased assistance improve verified lawful completion without burden or coercion?",
+      "decision_type": "evaluate",
+      "design_id": "scenario.equity.compliance-incentives.assistance-incentive-effect.v1",
+      "design_order": 232,
+      "evidence_gate": "causal-identification",
+      "evidence_types": [
+        "causal",
+        "estimated",
+        "observed",
+        "proposed"
+      ],
+      "family_id": "equity.compliance-incentives",
+      "family_title": "Compliance, incentives, and behavioral policy",
+      "horizon": "multi-year",
+      "implementation_status": "design-only",
+      "primary_outcome": "change in verified timely lawful completion and administrative burden",
+      "prohibited_claims": [
+        "Do not infer intent, welfare, deterrence, or durable behavior from one administrative completion outcome.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "population-group",
+      "suite": "behavioral-policy-equity",
+      "title": "Evaluate compliance assistance and incentives"
+    },
+    {
+      "analysis_modes": [
+        "descriptive"
+      ],
+      "binding_constraint": "The algorithmic decision support and governance diagnose must respect declared measurement resolution and classification uncertainty.",
+      "content_hash": "sha256:d6416ae6b979cb4a33d1cd64b75a8a8bd4d2d2eccff990fb22ebc9ccc5904a71",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Which data, model, interface, human, action, appeal, and outcome stages have unresolved evidence or governance gaps?",
+      "decision_type": "diagnose",
+      "design_id": "scenario.equity.algorithmic-governance.decision-system-risks.v1",
+      "design_order": 233,
+      "evidence_gate": "geographic-alignment",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "proposed"
+      ],
+      "family_id": "equity.algorithmic-governance",
+      "family_title": "Algorithmic decision support and governance",
+      "horizon": "annual",
+      "implementation_status": "design-only",
+      "primary_outcome": "high-impact decision pathways with unresolved controls",
+      "prohibited_claims": [
+        "Do not label a metric gap unlawful discrimination or a documented control effective without evidence.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "network",
+      "suite": "behavioral-policy-equity",
+      "title": "Diagnose algorithmic decision-system risks and control gaps"
+    },
+    {
+      "analysis_modes": [
+        "forecast"
+      ],
+      "binding_constraint": "The algorithmic decision support and governance forecast must respect declared validated operational capacity and forecast uncertainty.",
+      "content_hash": "sha256:1ac79dcf47a87f2e57b51556be581fd1489eada34d4ea1db2603f5d43ff05e83",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "What decision, override, appeal, incident, drift, and audit workload should governance capacity prepare for?",
+      "decision_type": "forecast",
+      "design_id": "scenario.equity.algorithmic-governance.review-appeal-demand.v1",
+      "design_order": 234,
+      "evidence_gate": "model-calibration",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "proposed"
+      ],
+      "family_id": "equity.algorithmic-governance",
+      "family_title": "Algorithmic decision support and governance",
+      "horizon": "weeks",
+      "implementation_status": "design-only",
+      "primary_outcome": "high-impact decisions above qualified review capacity",
+      "prohibited_claims": [
+        "Do not call forecast reviews errors, violations, harms, discrimination, or appeals filed.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "service-area",
+      "suite": "behavioral-policy-equity",
+      "title": "Forecast human review, recourse, and audit demand"
+    },
+    {
+      "analysis_modes": [
+        "descriptive",
+        "optimization"
+      ],
+      "binding_constraint": "The algorithmic decision support and governance prioritize must respect declared capital, operating, maintenance, and delivery budgets.",
+      "content_hash": "sha256:3e5192cafe9ed543b7788982468802820408b8a6d89d5c27f24dc414ee048cce",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Which documentation, data, evaluation, interface, human review, recourse, monitoring, and sunset controls should be funded?",
+      "decision_type": "prioritize",
+      "design_id": "scenario.equity.algorithmic-governance.governance-controls.v1",
+      "design_order": 235,
+      "evidence_gate": "cost-capacity",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed"
+      ],
+      "family_id": "equity.algorithmic-governance",
+      "family_title": "Algorithmic decision support and governance",
+      "horizon": "multi-year",
+      "implementation_status": "design-only",
+      "primary_outcome": "high-impact decision volume without verified controls",
+      "prohibited_claims": [
+        "Do not report a planned control as implemented, effective, lawful, certified, or independently audited.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "asset",
+      "suite": "behavioral-policy-equity",
+      "title": "Prioritize algorithmic governance controls"
+    },
+    {
+      "analysis_modes": [
+        "simulation",
+        "optimization"
+      ],
+      "binding_constraint": "The algorithmic decision support and governance site must respect declared land control, accessibility, permitting, safety, and operating feasibility.",
+      "content_hash": "sha256:aa35e1d9d5c48673a5706ff52688de4794154aacea50b4461792159faf57a629",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Where should accessible human review, appeal assistance, and independent oversight be available?",
+      "decision_type": "site",
+      "design_id": "scenario.equity.algorithmic-governance.human-review-access.v1",
+      "design_order": 236,
+      "evidence_gate": "legal-authority",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "family_id": "equity.algorithmic-governance",
+      "family_title": "Algorithmic decision support and governance",
+      "horizon": "multi-year",
+      "implementation_status": "design-only",
+      "primary_outcome": "affected people beyond usable independent review access",
+      "prohibited_claims": [
+        "Do not call a candidate review channel independent, accessible, confidential, lawful, or used.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "facility",
+      "suite": "behavioral-policy-equity",
+      "title": "Site independent review and recourse access"
+    },
+    {
+      "analysis_modes": [
+        "simulation",
+        "optimization"
+      ],
+      "binding_constraint": "The algorithmic decision support and governance allocate must respect declared minimum service, eligibility, capacity, and distributional safeguards.",
+      "content_hash": "sha256:79151e6cbc395474d96114bdc7914709d8ba7d386dc69e6c4a7bd345efd8bb76",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "How should reviewers, auditors, advocates, incident responders, and domain experts be assigned?",
+      "decision_type": "allocate",
+      "design_id": "scenario.equity.algorithmic-governance.oversight-capacity.v1",
+      "design_order": 237,
+      "evidence_gate": "equity-measurement",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "family_id": "equity.algorithmic-governance",
+      "family_title": "Algorithmic decision support and governance",
+      "horizon": "weeks",
+      "implementation_status": "design-only",
+      "primary_outcome": "high-impact decisions without qualified independent review capacity",
+      "prohibited_claims": [
+        "Do not report assigned review as completed, independent, correct, accepted, or remedied.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "service-area",
+      "suite": "behavioral-policy-equity",
+      "title": "Allocate human review and oversight capacity"
+    },
+    {
+      "analysis_modes": [
+        "forecast",
+        "optimization"
+      ],
+      "binding_constraint": "The algorithmic decision support and governance schedule must respect declared labor, access, sequencing, notice, and completion windows.",
+      "content_hash": "sha256:bf9a862d2ef185fd79c9ed798badd00d01d6c19c2eb2db5c42175848f25af3a5",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "When should pre-deployment review, monitoring, drift checks, incident response, recertification, and sunset occur?",
+      "decision_type": "schedule",
+      "design_id": "scenario.equity.algorithmic-governance.audit-monitoring-cycle.v1",
+      "design_order": 238,
+      "evidence_gate": "temporal-alignment",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed"
+      ],
+      "family_id": "equity.algorithmic-governance",
+      "family_title": "Algorithmic decision support and governance",
+      "horizon": "weeks",
+      "implementation_status": "design-only",
+      "primary_outcome": "high-impact system-days outside verified governance controls",
+      "prohibited_claims": [
+        "Do not call a scheduled audit performed, independent, passed, certified, or remediated.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "asset",
+      "suite": "behavioral-policy-equity",
+      "title": "Schedule algorithmic audit, monitoring, review, and sunset"
+    },
+    {
+      "analysis_modes": [
+        "forecast",
+        "simulation",
+        "optimization"
+      ],
+      "binding_constraint": "The algorithmic decision support and governance stress test must respect declared minimum continuity and safety thresholds across severe scenarios.",
+      "content_hash": "sha256:1dc142a28a267efaa23ac073fbe2313e77dabd3dc0e94280a65e3d04c07b0af8",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Which controls preserve lawful service under drift, missingness, manipulation, outage, override, and demand surge?",
+      "decision_type": "stress-test",
+      "design_id": "scenario.equity.algorithmic-governance.algorithmic-failure.v1",
+      "design_order": 239,
+      "evidence_gate": "external-validation",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "family_id": "equity.algorithmic-governance",
+      "family_title": "Algorithmic decision support and governance",
+      "horizon": "seasonal",
+      "implementation_status": "design-only",
+      "primary_outcome": "scenario-weighted high-impact decisions outside safe fallback",
+      "prohibited_claims": [
+        "Do not present synthetic failures, decisions, affected people, or harms as observed incidents.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "network",
+      "suite": "behavioral-policy-equity",
+      "title": "Stress-test algorithmic systems and human fallback"
+    },
+    {
+      "analysis_modes": [
+        "descriptive",
+        "causal"
+      ],
+      "binding_constraint": "The algorithmic decision support and governance evaluate must respect declared pre-specified assignment, comparison, outcome, spillover, and subgroup rules.",
+      "content_hash": "sha256:652ce438169c833d886ccb5eaebe3bc4d2066381c2611c6dc5c98c5e3d956eaa",
+      "current_readiness": "reference-implemented",
+      "decision_question": "Did phased decision support improve verified service outcomes without unequal error, automation bias, or reduced recourse?",
+      "decision_type": "evaluate",
+      "design_id": "scenario.equity.algorithmic-governance.decision-support-effect.v1",
+      "design_order": 240,
+      "evidence_gate": "causal-identification",
+      "evidence_types": [
+        "causal",
+        "estimated",
+        "observed",
+        "proposed"
+      ],
+      "existing_template_ref": "deep.equity.causal-service-effectiveness.v1",
+      "family_id": "equity.algorithmic-governance",
+      "family_title": "Algorithmic decision support and governance",
+      "horizon": "multi-year",
+      "implementation_status": "reference-implemented",
+      "primary_outcome": "change in verified service outcome, error, override, and recourse gaps",
+      "prohibited_claims": [
+        "Do not infer causal service effectiveness from aggregate before-after counts without assignment and counterfactual evidence.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "population-group",
+      "suite": "behavioral-policy-equity",
+      "title": "Evaluate algorithmic decision support and human review"
+    }
+  ],
+  "kind": "scenario-designs.suite.behavioral-policy-equity",
+  "record_count": 32,
+  "schema_version": "1.0.0"
+}

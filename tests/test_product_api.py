@@ -66,6 +66,8 @@ def test_health_and_readiness_expose_live_catalog_identity(
     assert health.headers["cache-control"] == "no-store"
     app_from_string = create_app(str(product_store.repository_root), verify_sources=False)
     assert app_from_string.state.store.repository_root == product_store.repository_root
+    with pytest.raises(ValueError, match="either repository_root or store"):
+        create_app(product_store.repository_root, store=product_store)
 
 
 def test_meta_is_typed_cacheable_and_request_correlated(api_client: httpx.Client) -> None:
@@ -73,8 +75,8 @@ def test_meta_is_typed_cacheable_and_request_correlated(api_client: httpx.Client
     assert response.status_code == 200
     assert response.json()["exposed_city_records"] == 258
     assert response.headers["x-request-id"] == "review-12345678"
-    assert response.headers["etag"].startswith('"')
-    assert len(response.headers["etag"]) == 66
+    assert response.headers["etag"].startswith('W/"')
+    assert len(response.headers["etag"]) == 68
     assert response.headers["cache-control"] == "public, max-age=60, must-revalidate"
 
 
@@ -83,10 +85,36 @@ def test_conditional_get_returns_304_only_after_valid_route_resolution(
 ) -> None:
     etag = api_client.get("/api/v1/meta").headers["etag"]
     cached = api_client.get("/api/v1/meta", headers={"if-none-match": etag})
-    missing = api_client.get("/api/v1/not-a-route", headers={"if-none-match": etag})
-    assert cached.status_code == 304
-    assert cached.content == b""
-    assert cached.headers["etag"] == etag
+    cached_multi = api_client.get("/api/v1/meta", headers={"if-none-match": f'"obsolete", {etag}'})
+    cached_strong_equivalent = api_client.get(
+        "/api/v1/meta", headers={"if-none-match": etag.removeprefix("W/")}
+    )
+    cached_wildcard = api_client.get("/api/v1/meta", headers={"if-none-match": "*"})
+    malformed_validator = api_client.get(
+        "/api/v1/meta", headers={"if-none-match": "unquoted-validator"}
+    )
+    cross_resource = api_client.get(
+        "/api/v1/designs", params={"limit": 1}, headers={"if-none-match": etag}
+    )
+    first_query = api_client.get("/api/v1/designs", params=[("q", "cool roof"), ("limit", "1")])
+    reordered_query = api_client.get("/api/v1/designs", params=[("limit", "1"), ("q", "cool roof")])
+    changed_query = api_client.get(
+        "/api/v1/designs",
+        params={"q": "cooling center", "limit": 1},
+        headers={"if-none-match": first_query.headers["etag"]},
+    )
+    missing = api_client.get("/api/v1/not-a-route", headers={"if-none-match": "*"})
+    cached_responses = [cached, cached_multi, cached_strong_equivalent, cached_wildcard]
+    assert all(item.status_code == 304 and item.content == b"" for item in cached_responses)
+    assert all(item.headers["etag"] == etag for item in cached_responses)
+    assert malformed_validator.status_code == 200
+    assert cross_resource.status_code == 200
+    assert cross_resource.headers["etag"] != etag
+    assert (
+        first_query.status_code == reordered_query.status_code == changed_query.status_code == 200
+    )
+    assert first_query.headers["etag"] == reordered_query.headers["etag"]
+    assert changed_query.headers["etag"] != first_query.headers["etag"]
     assert missing.status_code == 404
     assert missing.headers["content-type"].startswith("application/problem+json")
 
@@ -127,6 +155,18 @@ def test_scenario_collection_exposes_exact_filter_counts(api_client: httpx.Clien
     ]
     for params, expected in cases:
         response = api_client.get("/api/v1/scenarios", params={**params, "limit": 1})
+        assert response.status_code == 200
+        assert response.json()["pagination"]["total"] == expected
+    design_cases = [
+        ({}, 240),
+        ({"decision_type": "evaluate"}, 30),
+        ({"implementation_status": "reference-implemented"}, 12),
+        ({"implementation_status": "design-only"}, 228),
+        ({"suite": "climate-disaster-resilience"}, 40),
+        ({"family_id": "climate.extreme-heat"}, 8),
+    ]
+    for params, expected in design_cases:
+        response = api_client.get("/api/v1/designs", params={**params, "limit": 1})
         assert response.status_code == 200
         assert response.json()["pagination"]["total"] == expected
 
@@ -178,12 +218,37 @@ def test_sources_suites_benchmarks_and_deep_evidence_are_consistent(
     suites = api_client.get("/api/v1/suites")
     benchmark = api_client.get("/api/v1/benchmarks")
     deep = api_client.get("/api/v1/evidence/deep")
+    designs = api_client.get(
+        "/api/v1/designs",
+        params={
+            "family_id": "climate.extreme-heat",
+            "decision_type": "site",
+            "q": "cooling center",
+        },
+    )
+    design = api_client.get(
+        "/api/v1/designs/scenario.climate.extreme-heat.cooling-center-network.v1"
+    )
+    families = api_client.get(
+        "/api/v1/design-families", params={"suite": "climate-disaster-resilience"}
+    )
+    family = api_client.get("/api/v1/design-families/climate.extreme-heat")
+    library = api_client.get("/api/v1/evidence/scenario-library")
     assert sources.json()["pagination"]["total"] == 4
     assert len(suites.json()) == 7
     assert sum(item["execution_count"] for item in suites.json()) == 96
     assert benchmark.json()["run_artifacts"] == 145
     assert deep.json()["city_bound_scenario_executions"] == 96
     assert deep.json()["total_simulation_iterations"] == 190_000
+    assert designs.json()["pagination"]["total"] == 1
+    assert design.json()["design"]["city_bindings"] == []
+    assert design.json()["design"]["method_claimed"] is False
+    assert families.json()["pagination"]["total"] == 5
+    assert len(family.json()["designs"]) == 8
+    assert library.json()["design_count"] == 240
+    assert library.json()["audit_passed"] is True
+    assert library.json()["city_bound_executions_counted"] == 0
+    assert library.json()["methods_claimed"] == 0
 
 
 def test_openapi_is_versioned_and_documents_all_product_resources(
@@ -194,8 +259,11 @@ def test_openapi_is_versioned_and_documents_all_product_resources(
     assert response.status_code == 200
     assert document["info"]["title"] == "CivicDecision OS API"
     assert document["openapi"].startswith("3.")
-    assert len(document["paths"]) == 14
+    assert len(document["paths"]) == 19
     assert "/api/v1/decision-packs/{execution_id}/brief" in document["paths"]
+    assert "/api/v1/designs/{design_id}" in document["paths"]
+    assert "/api/v1/design-families/{family_id}" in document["paths"]
+    assert "/api/v1/evidence/scenario-library" in document["paths"]
     assert "/docs" not in document["paths"]
 
 
@@ -210,12 +278,16 @@ def test_web_explorer_and_assets_are_packaged_without_external_runtime_dependenc
         page.status_code == css.status_code == javascript.status_code == favicon.status_code == 200
     )
     assert "Urban decisions" in page.text
+    assert "Thirty families" in page.text
+    assert "data-design-list" in page.text
     assert '<script src="/assets/app.js" defer></script>' in page.text
     assert "https://" not in page.text and "http://" not in page.text
     assert "Content-Security-Policy" in page.headers
     assert page.headers["x-frame-options"] == "DENY"
     assert css.headers["cache-control"] == "public, max-age=3600"
     assert "fetch(" in javascript.text
+    assert 'api("/designs"' in javascript.text
+    assert 'api("/evidence/scenario-library"' in javascript.text
 
 
 def test_method_not_allowed_and_missing_routes_use_problem_details(

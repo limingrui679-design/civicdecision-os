@@ -1,0 +1,164 @@
+{
+  "affected_system": "municipal buildings, distributed energy, electrification, and emissions management",
+  "alternatives": [
+    "advance high-risk work within verified feasible windows for municipal building decarbonization project schedule",
+    "use rolling risk and capacity updates to reschedule municipal building decarbonization project schedule",
+    "pair dependency, occupancy, procurement, season, and workforce scheduling with an explicit stop, review, and escalation rule"
+  ],
+  "analysis_modes": [
+    "forecast",
+    "optimization"
+  ],
+  "assumptions": [
+    "Meters, fuels, tariffs, weather, occupancy, equipment, projects, and emissions factors are versioned.",
+    "Modeled energy and carbon savings remain distinct from measured post-project performance.",
+    "All alternatives, capacities, costs, effects, thresholds, and failure scenarios are proposed until bound to evidence."
+  ],
+  "baseline": "continue the fixed operating calendar for municipal building decarbonization project schedule.",
+  "city_bindings": [],
+  "constraints": [
+    {
+      "binding": true,
+      "constraint_id": "scenario.infrastructure.energy-buildings.decarbonization-projects.v1.constraint.binding",
+      "description": "The municipal energy and building decarbonization schedule must respect declared labor, access, sequencing, notice, and completion windows.",
+      "hard": true,
+      "kind": "time",
+      "required_source_roles": [
+        "asset-inventory",
+        "environmental-exposure",
+        "financial-cost",
+        "legal-regulatory",
+        "operating-capacity",
+        "service-schedule"
+      ]
+    },
+    {
+      "binding": false,
+      "constraint_id": "scenario.infrastructure.energy-buildings.decarbonization-projects.v1.constraint.evidence-scope",
+      "description": "Every released metric must retain evidence type, source lineage, geography, time, assumptions, and uncertainty.",
+      "hard": true,
+      "kind": "technical",
+      "required_source_roles": [
+        "asset-inventory"
+      ]
+    },
+    {
+      "binding": false,
+      "constraint_id": "scenario.infrastructure.energy-buildings.decarbonization-projects.v1.constraint.decision-authority",
+      "description": "No analytical output may bypass lawful authority, accountable human review, or an applicable appeal process.",
+      "hard": true,
+      "kind": "regulatory",
+      "required_source_roles": [
+        "asset-inventory"
+      ]
+    }
+  ],
+  "current_readiness": "blocked-missing-source",
+  "decision_cadence": "recompiled at each planning cycle and after material evidence change",
+  "decision_owner": "municipal energy director and public-building portfolio manager",
+  "decision_question": "When should audits, design, procurement, shutdowns, installation, commissioning, and measurement occur?",
+  "decision_type": "schedule",
+  "design_id": "scenario.infrastructure.energy-buildings.decarbonization-projects.v1",
+  "design_order": 198,
+  "design_signature": "sha256:26f0205c92f13637defd54f5558901cf07334f0d99ccb21f028503e3f2daaf47",
+  "evidence_requirements": [
+    "estimated",
+    "observed",
+    "optimized",
+    "proposed"
+  ],
+  "family_id": "infrastructure.energy-buildings",
+  "family_title": "Municipal energy and building decarbonization",
+  "horizon": "weeks",
+  "implementation_status": "design-only",
+  "independence_key": {
+    "binding_constraint": "The municipal energy and building decarbonization schedule must respect declared labor, access, sequencing, notice, and completion windows.",
+    "decision_object": "municipal building decarbonization project schedule",
+    "evidence_gate": "Evidence for municipal building decarbonization project schedule passes documented checks for effective dates, time zones, calendars, lead times, completion semantics, and update cadence.",
+    "horizon": "weeks",
+    "intervention_mechanism": "dependency, occupancy, procurement, season, and workforce scheduling",
+    "primary_outcome": "project-days beyond feasible emissions-reduction milestones",
+    "spatial_unit": "asset"
+  },
+  "intended_claim": "A versioned schedule design for comparing declared alternatives affecting municipal building decarbonization project schedule, conditional on its evidence gate.",
+  "limitations": [
+    "This library record has no city binding and therefore reports no local input, output, or recommendation.",
+    "Readiness describes explicit source and method gates; it does not certify implementation feasibility.",
+    "External domain, legal, community, security, and operational review remains outside this design artifact."
+  ],
+  "method_claimed": false,
+  "objectives": [
+    {
+      "evidence_type": "estimated",
+      "metric": "project-days beyond feasible emissions-reduction milestones",
+      "objective_id": "scenario.infrastructure.energy-buildings.decarbonization-projects.v1.objective.primary",
+      "primary": true,
+      "sense": "minimize",
+      "unit": "project-days"
+    },
+    {
+      "evidence_type": "estimated",
+      "metric": "distributional gap in project-days beyond feasible emissions-reduction milestones",
+      "objective_id": "scenario.infrastructure.energy-buildings.decarbonization-projects.v1.objective.equity",
+      "primary": false,
+      "sense": "minimize",
+      "unit": "project-days"
+    },
+    {
+      "evidence_type": "observed",
+      "metric": "decision claims with complete evidence lineage",
+      "objective_id": "scenario.infrastructure.energy-buildings.decarbonization-projects.v1.objective.traceability",
+      "primary": false,
+      "sense": "maximize",
+      "unit": "percent"
+    }
+  ],
+  "prohibited_claims": [
+    "Do not call a scheduled project procured, installed, commissioned, or operational.",
+    "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+    "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+    "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+  ],
+  "release_gate": {
+    "failure_release": "Release an explicit insufficient-evidence record naming missing sources, failed diagnostics, prohibited claims, and the next validation action.",
+    "failure_status": "insufficient-evidence",
+    "gate_id": "scenario.infrastructure.energy-buildings.decarbonization-projects.v1.gate.release",
+    "gate_type": "temporal-alignment",
+    "pass_condition": "Evidence for municipal building decarbonization project schedule passes documented checks for effective dates, time zones, calendars, lead times, completion semantics, and update cadence.",
+    "required_evidence_types": [
+      "observed",
+      "proposed"
+    ],
+    "required_source_roles": [
+      "asset-inventory",
+      "environmental-exposure",
+      "financial-cost",
+      "legal-regulatory",
+      "operating-capacity",
+      "service-schedule"
+    ]
+  },
+  "required_source_roles": [
+    "asset-inventory",
+    "environmental-exposure",
+    "financial-cost",
+    "legal-regulatory",
+    "operating-capacity",
+    "service-schedule"
+  ],
+  "schema_version": "1.0.0",
+  "spatial_unit": "asset",
+  "suite": "infrastructure-finance-asset-risk",
+  "tags": [
+    "design-only",
+    "infrastructure-finance-asset-risk",
+    "infrastructure.energy-buildings",
+    "scenario-library",
+    "schedule"
+  ],
+  "title": "Schedule building decarbonization and commissioning",
+  "transportability_risks": [
+    "Climate, grids, tariffs, fuels, building codes, stock, occupancy, and finance differ.",
+    "Operational changes can confound retrofit performance comparisons."
+  ]
+}

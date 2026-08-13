@@ -1,0 +1,225 @@
+{
+  "audit_maximum_pairwise_similarity": 0.646154,
+  "design": {
+    "affected_system": "affordable housing production, preservation, subsidy, and compliance system",
+    "alternatives": [
+      "protect minimum coverage before needs-based allocation of affordable-housing subsidy and delivery capacity",
+      "adapt allocations using observed demand, uptake, and capacity for affordable-housing subsidy and delivery capacity",
+      "pair affordability-duration, need, leverage, and equity allocation with an explicit stop, review, and escalation rule"
+    ],
+    "analysis_modes": [
+      "simulation",
+      "optimization"
+    ],
+    "assumptions": [
+      "Units, affordability restrictions, occupancy, financing, condition, pipeline, and parcel feasibility are reconciled.",
+      "Modeled development feasibility is not treated as entitlement, financing close, or completed housing.",
+      "All alternatives, capacities, costs, effects, thresholds, and failure scenarios are proposed until bound to evidence."
+    ],
+    "baseline": "retain the current distribution rule for affordable-housing subsidy and delivery capacity.",
+    "city_bindings": [],
+    "constraints": [
+      {
+        "binding": true,
+        "constraint_id": "scenario.housing.affordable-supply.housing-subsidy.v1.constraint.binding",
+        "description": "The affordable housing siting and preservation allocate must respect declared minimum service, eligibility, capacity, and distributional safeguards.",
+        "hard": true,
+        "kind": "equity",
+        "required_source_roles": [
+          "equity-attribute",
+          "financial-cost",
+          "geographic-identity",
+          "housing-market",
+          "land-parcel",
+          "operating-capacity"
+        ]
+      },
+      {
+        "binding": false,
+        "constraint_id": "scenario.housing.affordable-supply.housing-subsidy.v1.constraint.evidence-scope",
+        "description": "Every released metric must retain evidence type, source lineage, geography, time, assumptions, and uncertainty.",
+        "hard": true,
+        "kind": "technical",
+        "required_source_roles": [
+          "equity-attribute"
+        ]
+      },
+      {
+        "binding": false,
+        "constraint_id": "scenario.housing.affordable-supply.housing-subsidy.v1.constraint.decision-authority",
+        "description": "No analytical output may bypass lawful authority, accountable human review, or an applicable appeal process.",
+        "hard": true,
+        "kind": "regulatory",
+        "required_source_roles": [
+          "equity-attribute"
+        ]
+      }
+    ],
+    "current_readiness": "blocked-missing-source",
+    "decision_cadence": "recompiled at each planning cycle and after material evidence change",
+    "decision_owner": "housing development commissioner and affordable-housing finance director",
+    "decision_question": "How should tax credits, loans, grants, vouchers, and technical capacity be allocated?",
+    "decision_type": "allocate",
+    "design_id": "scenario.housing.affordable-supply.housing-subsidy.v1",
+    "design_order": 133,
+    "design_signature": "sha256:777d03b2ad4feaeee413826ac0405d84dc74c80919475cb14914f7124280af10",
+    "evidence_requirements": [
+      "estimated",
+      "observed",
+      "optimized",
+      "proposed",
+      "simulated"
+    ],
+    "family_id": "housing.affordable-supply",
+    "family_title": "Affordable housing siting and preservation",
+    "horizon": "weeks",
+    "implementation_status": "design-only",
+    "independence_key": {
+      "binding_constraint": "The affordable housing siting and preservation allocate must respect declared minimum service, eligibility, capacity, and distributional safeguards.",
+      "decision_object": "affordable-housing subsidy and delivery capacity",
+      "evidence_gate": "Evidence for affordable-housing subsidy and delivery capacity passes documented checks for eligible denominators, group attributes, inventory, minimum-service rules, and allocation records.",
+      "horizon": "weeks",
+      "intervention_mechanism": "affordability-duration, need, leverage, and equity allocation",
+      "primary_outcome": "eligible affordable home-years without assigned subsidy",
+      "spatial_unit": "parcel"
+    },
+    "intended_claim": "A versioned allocate design for comparing declared alternatives affecting affordable-housing subsidy and delivery capacity, conditional on its evidence gate.",
+    "limitations": [
+      "This library record has no city binding and therefore reports no local input, output, or recommendation.",
+      "Readiness describes explicit source and method gates; it does not certify implementation feasibility.",
+      "External domain, legal, community, security, and operational review remains outside this design artifact."
+    ],
+    "method_claimed": false,
+    "objectives": [
+      {
+        "evidence_type": "estimated",
+        "metric": "eligible affordable home-years without assigned subsidy",
+        "objective_id": "scenario.housing.affordable-supply.housing-subsidy.v1.objective.primary",
+        "primary": true,
+        "sense": "minimize",
+        "unit": "home-years"
+      },
+      {
+        "evidence_type": "estimated",
+        "metric": "distributional gap in eligible affordable home-years without assigned subsidy",
+        "objective_id": "scenario.housing.affordable-supply.housing-subsidy.v1.objective.equity",
+        "primary": false,
+        "sense": "minimize",
+        "unit": "home-years"
+      },
+      {
+        "evidence_type": "observed",
+        "metric": "decision claims with complete evidence lineage",
+        "objective_id": "scenario.housing.affordable-supply.housing-subsidy.v1.objective.traceability",
+        "primary": false,
+        "sense": "maximize",
+        "unit": "percent"
+      }
+    ],
+    "prohibited_claims": [
+      "Do not report a modeled subsidy allocation as an award, closing, or completed home.",
+      "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+      "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+      "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+    ],
+    "release_gate": {
+      "failure_release": "Release an explicit insufficient-evidence record naming missing sources, failed diagnostics, prohibited claims, and the next validation action.",
+      "failure_status": "insufficient-evidence",
+      "gate_id": "scenario.housing.affordable-supply.housing-subsidy.v1.gate.release",
+      "gate_type": "equity-measurement",
+      "pass_condition": "Evidence for affordable-housing subsidy and delivery capacity passes documented checks for eligible denominators, group attributes, inventory, minimum-service rules, and allocation records.",
+      "required_evidence_types": [
+        "observed",
+        "proposed"
+      ],
+      "required_source_roles": [
+        "equity-attribute",
+        "financial-cost",
+        "geographic-identity",
+        "housing-market",
+        "land-parcel",
+        "operating-capacity"
+      ]
+    },
+    "required_source_roles": [
+      "equity-attribute",
+      "financial-cost",
+      "geographic-identity",
+      "housing-market",
+      "land-parcel",
+      "operating-capacity"
+    ],
+    "schema_version": "1.0.0",
+    "spatial_unit": "parcel",
+    "suite": "housing-land-use-regeneration",
+    "tags": [
+      "allocate",
+      "design-only",
+      "housing-land-use-regeneration",
+      "housing.affordable-supply",
+      "scenario-library"
+    ],
+    "title": "Allocate housing subsidy and preservation capacity",
+    "transportability_risks": [
+      "Land law, subsidy programs, construction costs, finance, tenant protections, and markets differ.",
+      "Observed transactions may omit informal displacement and off-market preservation risks."
+    ]
+  },
+  "family": {
+    "affected_system": "affordable housing production, preservation, subsidy, and compliance system",
+    "claim_boundary": [
+      "Requests, listings, parcels, and administrative records do not alone verify conditions or need.",
+      "Screened sites and portfolios are not permits, acquisitions, adopted plans, or completed housing.",
+      "Displacement, affordability, habitability, and program effects require direct outcomes and identification."
+    ],
+    "common_source_roles": [
+      "geographic-identity",
+      "housing-market",
+      "land-parcel"
+    ],
+    "decision_owner": "housing development commissioner and affordable-housing finance director",
+    "decision_types": [
+      "diagnose",
+      "forecast",
+      "prioritize",
+      "site",
+      "allocate",
+      "schedule",
+      "stress-test",
+      "evaluate"
+    ],
+    "description": "Eight decisions for supply-risk diagnosis, pipeline forecasting, preservation portfolios, new site selection, subsidy allocation, development scheduling, financing stress, and evaluation.",
+    "design_refs": [
+      "scenario.housing.affordable-supply.affordability-loss-risk.v1",
+      "scenario.housing.affordable-supply.affordable-pipeline.v1",
+      "scenario.housing.affordable-supply.preservation-development-portfolio.v1",
+      "scenario.housing.affordable-supply.affordable-housing-sites.v1",
+      "scenario.housing.affordable-supply.housing-subsidy.v1",
+      "scenario.housing.affordable-supply.housing-pipeline-sequence.v1",
+      "scenario.housing.affordable-supply.housing-finance-shock.v1",
+      "scenario.housing.affordable-supply.preservation-program-effect.v1"
+    ],
+    "design_signatures": [
+      "sha256:760df56edf6b758b4dde2fa47bf3de3295054382d3758b598d9bc00c04a5136c",
+      "sha256:a3c3c890f0bea2183712848a6415f119472b5a3458838acb8b73a17679e50f19",
+      "sha256:c270647f563e8682ffabb52c1ffbae18473b964935a30110d224c277b6f4014a",
+      "sha256:2abdd3400e71da58a66c9b9a8e365b7010a43995afc7310480261f0c8321c322",
+      "sha256:777d03b2ad4feaeee413826ac0405d84dc74c80919475cb14914f7124280af10",
+      "sha256:51f9a90fafe725060b793acc7628eda614052e458bbe3f63e125b307a9d85a6e",
+      "sha256:9b5e49f039ec4a2f6e8cb1c4fdce922f2dceff0872ec90894a81bf4b10730477",
+      "sha256:bfec72e4199c873f19cbcd39a88a4626775ff7bc7be7ea624a7f4ec096ed86f6"
+    ],
+    "family_id": "housing.affordable-supply",
+    "family_order": 17,
+    "schema_version": "1.0.0",
+    "suite": "housing-land-use-regeneration",
+    "title": "Affordable housing siting and preservation"
+  },
+  "library_claim_boundary": [
+    "The catalog contains 240 decision designs, not 240 city executions.",
+    "Exactly twelve designs map to existing Tier-D reference templates; 228 remain design-only.",
+    "A reference implementation can be an explicit negative release and does not imply impact.",
+    "No record claims a city binding, new method, deployment, adoption, or real-user outcome.",
+    "Future execution requires source binding, gate passage, and domain, legal, community, and operational review."
+  ]
+}

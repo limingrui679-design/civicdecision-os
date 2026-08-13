@@ -1,0 +1,166 @@
+{
+  "affected_system": "rights-preserving compliance assistance, incentives, inspections, and enforcement",
+  "alternatives": [
+    "add targeted redundancy around the largest failure modes in behavioral compliance policy under heterogeneous response",
+    "select an adaptive robust portfolio across severe scenarios for behavioral compliance policy under heterogeneous response",
+    "pair agent, administrative burden, uptake, substitution, and capacity simulation with an explicit stop, review, and escalation rule"
+  ],
+  "analysis_modes": [
+    "forecast",
+    "simulation",
+    "optimization"
+  ],
+  "assumptions": [
+    "Eligibility, notice, awareness, capability, action, inspection, violation, sanction, and outcome remain distinct.",
+    "No behavioral score automatically triggers enforcement, benefit denial, or coercive action.",
+    "All alternatives, capacities, costs, effects, thresholds, and failure scenarios are proposed until bound to evidence."
+  ],
+  "baseline": "apply current continuity provisions to behavioral compliance policy under heterogeneous response.",
+  "city_bindings": [],
+  "constraints": [
+    {
+      "binding": true,
+      "constraint_id": "scenario.equity.compliance-incentives.policy-response-uncertainty.v1.constraint.binding",
+      "description": "The compliance, incentives, and behavioral policy stress test must respect declared minimum continuity and safety thresholds across severe scenarios.",
+      "hard": true,
+      "kind": "risk",
+      "required_source_roles": [
+        "community-input",
+        "demographic-context",
+        "equity-attribute",
+        "legal-regulatory",
+        "municipal-demand",
+        "operating-capacity"
+      ]
+    },
+    {
+      "binding": false,
+      "constraint_id": "scenario.equity.compliance-incentives.policy-response-uncertainty.v1.constraint.evidence-scope",
+      "description": "Every released metric must retain evidence type, source lineage, geography, time, assumptions, and uncertainty.",
+      "hard": true,
+      "kind": "technical",
+      "required_source_roles": [
+        "community-input"
+      ]
+    },
+    {
+      "binding": false,
+      "constraint_id": "scenario.equity.compliance-incentives.policy-response-uncertainty.v1.constraint.decision-authority",
+      "description": "No analytical output may bypass lawful authority, accountable human review, or an applicable appeal process.",
+      "hard": true,
+      "kind": "regulatory",
+      "required_source_roles": [
+        "community-input"
+      ]
+    }
+  ],
+  "current_readiness": "blocked-missing-source",
+  "decision_cadence": "recompiled at each planning cycle and after material evidence change",
+  "decision_owner": "regulatory operations director and behavioral insights lead",
+  "decision_question": "Which assistance and incentive strategy remains rights-preserving across uptake, substitution, burden, and enforcement scenarios?",
+  "decision_type": "stress-test",
+  "design_id": "scenario.equity.compliance-incentives.policy-response-uncertainty.v1",
+  "design_order": 231,
+  "design_signature": "sha256:0bedb113f76c72445c01cd0f985a2cb1e718462fba53b574f379296a48e0f192",
+  "evidence_requirements": [
+    "estimated",
+    "observed",
+    "optimized",
+    "proposed",
+    "simulated"
+  ],
+  "family_id": "equity.compliance-incentives",
+  "family_title": "Compliance, incentives, and behavioral policy",
+  "horizon": "seasonal",
+  "implementation_status": "design-only",
+  "independence_key": {
+    "binding_constraint": "The compliance, incentives, and behavioral policy stress test must respect declared minimum continuity and safety thresholds across severe scenarios.",
+    "decision_object": "behavioral compliance policy under heterogeneous response",
+    "evidence_gate": "Evidence for behavioral compliance policy under heterogeneous response passes documented checks for scenario ranges, dependence, failure rates, recovery, intervention performance, and sensitivity.",
+    "horizon": "seasonal",
+    "intervention_mechanism": "agent, administrative burden, uptake, substitution, and capacity simulation",
+    "primary_outcome": "scenario-weighted unresolved harm and administrative burden",
+    "spatial_unit": "population-group"
+  },
+  "intended_claim": "A versioned stress-test design for comparing declared alternatives affecting behavioral compliance policy under heterogeneous response, conditional on its evidence gate.",
+  "limitations": [
+    "This library record has no city binding and therefore reports no local input, output, or recommendation.",
+    "Readiness describes explicit source and method gates; it does not certify implementation feasibility.",
+    "External domain, legal, community, security, and operational review remains outside this design artifact."
+  ],
+  "method_claimed": false,
+  "objectives": [
+    {
+      "evidence_type": "estimated",
+      "metric": "scenario-weighted unresolved harm and administrative burden",
+      "objective_id": "scenario.equity.compliance-incentives.policy-response-uncertainty.v1.objective.primary",
+      "primary": true,
+      "sense": "minimize",
+      "unit": "case-days"
+    },
+    {
+      "evidence_type": "estimated",
+      "metric": "distributional gap in scenario-weighted unresolved harm and administrative burden",
+      "objective_id": "scenario.equity.compliance-incentives.policy-response-uncertainty.v1.objective.equity",
+      "primary": false,
+      "sense": "minimize",
+      "unit": "case-days"
+    },
+    {
+      "evidence_type": "observed",
+      "metric": "decision claims with complete evidence lineage",
+      "objective_id": "scenario.equity.compliance-incentives.policy-response-uncertainty.v1.objective.traceability",
+      "primary": false,
+      "sense": "maximize",
+      "unit": "percent"
+    }
+  ],
+  "prohibited_claims": [
+    "Do not present simulated preferences, responses, compliance, or welfare as observed behavior.",
+    "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+    "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+    "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+  ],
+  "release_gate": {
+    "failure_release": "Release an explicit insufficient-evidence record naming missing sources, failed diagnostics, prohibited claims, and the next validation action.",
+    "failure_status": "insufficient-evidence",
+    "gate_id": "scenario.equity.compliance-incentives.policy-response-uncertainty.v1.gate.release",
+    "gate_type": "external-validation",
+    "pass_condition": "Evidence for behavioral compliance policy under heterogeneous response passes documented checks for scenario ranges, dependence, failure rates, recovery, intervention performance, and sensitivity.",
+    "required_evidence_types": [
+      "estimated",
+      "observed"
+    ],
+    "required_source_roles": [
+      "community-input",
+      "demographic-context",
+      "equity-attribute",
+      "legal-regulatory",
+      "municipal-demand",
+      "operating-capacity"
+    ]
+  },
+  "required_source_roles": [
+    "community-input",
+    "demographic-context",
+    "equity-attribute",
+    "legal-regulatory",
+    "municipal-demand",
+    "operating-capacity"
+  ],
+  "schema_version": "1.0.0",
+  "spatial_unit": "population-group",
+  "suite": "behavioral-policy-equity",
+  "tags": [
+    "behavioral-policy-equity",
+    "design-only",
+    "equity.compliance-incentives",
+    "scenario-library",
+    "stress-test"
+  ],
+  "title": "Stress-test behavioral policy under heterogeneous response",
+  "transportability_risks": [
+    "Law, administrative burden, trust, incentives, capability, enforcement, and baseline behavior differ.",
+    "Observed compliance may reflect detection and documentation rather than underlying behavior."
+  ]
+}

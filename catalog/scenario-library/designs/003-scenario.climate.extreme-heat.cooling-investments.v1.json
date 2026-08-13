@@ -1,0 +1,164 @@
+{
+  "affected_system": "urban heat-health and cooling-response system",
+  "alternatives": [
+    "fund the highest exposure-reduction projects per dollar",
+    "reserve funding for high-vulnerability neighborhoods",
+    "balance near-term shade with longer-lived building retrofits"
+  ],
+  "analysis_modes": [
+    "descriptive",
+    "optimization"
+  ],
+  "assumptions": [
+    "Heat indicators are aligned to a declared local time zone and spatial support.",
+    "Cooling capacity, costs, and response effects remain explicit planning inputs.",
+    "All alternatives, capacities, costs, effects, thresholds, and failure scenarios are proposed until bound to evidence."
+  ],
+  "baseline": "No additional heat-mitigation capital projects are funded beyond the current program.",
+  "city_bindings": [],
+  "constraints": [
+    {
+      "binding": true,
+      "constraint_id": "scenario.climate.extreme-heat.cooling-investments.v1.constraint.binding",
+      "description": "Selected heat-mitigation projects must fit the adopted capital and maintenance budget envelope.",
+      "hard": true,
+      "kind": "budget",
+      "required_source_roles": [
+        "asset-condition",
+        "asset-inventory",
+        "climate-hazard",
+        "demographic-context",
+        "financial-cost",
+        "geographic-identity"
+      ]
+    },
+    {
+      "binding": false,
+      "constraint_id": "scenario.climate.extreme-heat.cooling-investments.v1.constraint.evidence-scope",
+      "description": "Every released metric must retain evidence type, source lineage, geography, time, assumptions, and uncertainty.",
+      "hard": true,
+      "kind": "technical",
+      "required_source_roles": [
+        "asset-condition"
+      ]
+    },
+    {
+      "binding": false,
+      "constraint_id": "scenario.climate.extreme-heat.cooling-investments.v1.constraint.decision-authority",
+      "description": "No analytical output may bypass lawful authority, accountable human review, or an applicable appeal process.",
+      "hard": true,
+      "kind": "regulatory",
+      "required_source_roles": [
+        "asset-condition"
+      ]
+    }
+  ],
+  "current_readiness": "blocked-missing-source",
+  "decision_cadence": "recompiled at each planning cycle and after material evidence change",
+  "decision_owner": "chief resilience officer and public-health incident lead",
+  "decision_question": "Which heat-mitigation projects should enter the funded portfolio under cost, exposure, and equity constraints?",
+  "decision_type": "prioritize",
+  "design_id": "scenario.climate.extreme-heat.cooling-investments.v1",
+  "design_order": 3,
+  "design_signature": "sha256:e823416460130b3bfde10ee275413738aeaf561402c67eca043f6b6a53f4b31e",
+  "evidence_requirements": [
+    "estimated",
+    "observed",
+    "optimized",
+    "proposed"
+  ],
+  "family_id": "climate.extreme-heat",
+  "family_title": "Extreme heat exposure and response",
+  "horizon": "multi-year",
+  "implementation_status": "design-only",
+  "independence_key": {
+    "binding_constraint": "Selected heat-mitigation projects must fit the adopted capital and maintenance budget envelope.",
+    "decision_object": "heat-mitigation capital project portfolio",
+    "evidence_gate": "Every candidate has a dated cost, service life, deliverability estimate, and exposure-reduction basis.",
+    "horizon": "multi-year",
+    "intervention_mechanism": "multi-criteria ranking of shade, cool-roof, and retrofit projects",
+    "primary_outcome": "residual person-days of extreme heat exposure",
+    "spatial_unit": "asset"
+  },
+  "intended_claim": "A versioned prioritize design for comparing declared alternatives affecting heat-mitigation capital project portfolio, conditional on its evidence gate.",
+  "limitations": [
+    "This library record has no city binding and therefore reports no local input, output, or recommendation.",
+    "Readiness describes explicit source and method gates; it does not certify implementation feasibility.",
+    "External domain, legal, community, security, and operational review remains outside this design artifact."
+  ],
+  "method_claimed": false,
+  "objectives": [
+    {
+      "evidence_type": "estimated",
+      "metric": "residual person-days of extreme heat exposure",
+      "objective_id": "scenario.climate.extreme-heat.cooling-investments.v1.objective.primary",
+      "primary": true,
+      "sense": "minimize",
+      "unit": "person-days"
+    },
+    {
+      "evidence_type": "estimated",
+      "metric": "distributional gap in residual person-days of extreme heat exposure",
+      "objective_id": "scenario.climate.extreme-heat.cooling-investments.v1.objective.equity",
+      "primary": false,
+      "sense": "minimize",
+      "unit": "person-days"
+    },
+    {
+      "evidence_type": "observed",
+      "metric": "decision claims with complete evidence lineage",
+      "objective_id": "scenario.climate.extreme-heat.cooling-investments.v1.objective.traceability",
+      "primary": false,
+      "sense": "maximize",
+      "unit": "percent"
+    }
+  ],
+  "prohibited_claims": [
+    "Do not call modeled exposure reduction a measured temperature or health outcome.",
+    "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+    "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+    "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+  ],
+  "release_gate": {
+    "failure_release": "Release an explicit insufficient-evidence record naming missing sources, failed diagnostics, prohibited claims, and the next validation action.",
+    "failure_status": "insufficient-evidence",
+    "gate_id": "scenario.climate.extreme-heat.cooling-investments.v1.gate.release",
+    "gate_type": "cost-capacity",
+    "pass_condition": "Every candidate has a dated cost, service life, deliverability estimate, and exposure-reduction basis.",
+    "required_evidence_types": [
+      "observed",
+      "proposed"
+    ],
+    "required_source_roles": [
+      "asset-condition",
+      "asset-inventory",
+      "climate-hazard",
+      "demographic-context",
+      "financial-cost",
+      "geographic-identity"
+    ]
+  },
+  "required_source_roles": [
+    "asset-condition",
+    "asset-inventory",
+    "climate-hazard",
+    "demographic-context",
+    "financial-cost",
+    "geographic-identity"
+  ],
+  "schema_version": "1.0.0",
+  "spatial_unit": "asset",
+  "suite": "climate-disaster-resilience",
+  "tags": [
+    "climate-disaster-resilience",
+    "climate.extreme-heat",
+    "design-only",
+    "prioritize",
+    "scenario-library"
+  ],
+  "title": "Prioritize shade, cool-roof, and cooling retrofit investments",
+  "transportability_risks": [
+    "Building stock, acclimatization, canopy, humidity, and reporting behavior vary by city.",
+    "Thresholds calibrated in one climate zone may not transfer to another."
+  ]
+}

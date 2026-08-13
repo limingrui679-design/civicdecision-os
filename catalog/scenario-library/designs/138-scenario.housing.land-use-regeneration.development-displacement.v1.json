@@ -1,0 +1,162 @@
+{
+  "affected_system": "land-use planning, public investment, regeneration, and community-benefit system",
+  "alternatives": [
+    "activate a bounded reserve from forecast risk bands for neighborhood development and displacement pressure",
+    "use rolling forecasts and conservative capacity triggers for neighborhood development and displacement pressure",
+    "pair scenario-conditioned parcel and housing-market forecasting with an explicit stop, review, and escalation rule"
+  ],
+  "analysis_modes": [
+    "forecast"
+  ],
+  "assumptions": [
+    "Parcels, zoning, ownership, development, business, housing, public assets, and population use dated versions.",
+    "Scenario capacity and market response are not treated as approved projects or inevitable change.",
+    "All alternatives, capacities, costs, effects, thresholds, and failure scenarios are proposed until bound to evidence."
+  ],
+  "baseline": "continue ordinary capacity planning for neighborhood development and displacement pressure.",
+  "city_bindings": [],
+  "constraints": [
+    {
+      "binding": true,
+      "constraint_id": "scenario.housing.land-use-regeneration.development-displacement.v1.constraint.binding",
+      "description": "The land use, regeneration, and neighborhood change forecast must respect declared validated operational capacity and forecast uncertainty.",
+      "hard": true,
+      "kind": "capacity",
+      "required_source_roles": [
+        "equity-attribute",
+        "financial-cost",
+        "geographic-identity",
+        "housing-market",
+        "land-parcel",
+        "outcome-panel"
+      ]
+    },
+    {
+      "binding": false,
+      "constraint_id": "scenario.housing.land-use-regeneration.development-displacement.v1.constraint.evidence-scope",
+      "description": "Every released metric must retain evidence type, source lineage, geography, time, assumptions, and uncertainty.",
+      "hard": true,
+      "kind": "technical",
+      "required_source_roles": [
+        "equity-attribute"
+      ]
+    },
+    {
+      "binding": false,
+      "constraint_id": "scenario.housing.land-use-regeneration.development-displacement.v1.constraint.decision-authority",
+      "description": "No analytical output may bypass lawful authority, accountable human review, or an applicable appeal process.",
+      "hard": true,
+      "kind": "regulatory",
+      "required_source_roles": [
+        "equity-attribute"
+      ]
+    }
+  ],
+  "current_readiness": "blocked-missing-source",
+  "decision_cadence": "recompiled at each planning cycle and after material evidence change",
+  "decision_owner": "planning director and neighborhood regeneration commissioner",
+  "decision_question": "What range of land use, prices, development, tenure, and business change follows each policy scenario?",
+  "decision_type": "forecast",
+  "design_id": "scenario.housing.land-use-regeneration.development-displacement.v1",
+  "design_order": 138,
+  "design_signature": "sha256:cff86999028ffea930c5a92b5aa7483efececf3d0ffc44f457d37a089d10e1b3",
+  "evidence_requirements": [
+    "estimated",
+    "observed",
+    "proposed"
+  ],
+  "family_id": "housing.land-use-regeneration",
+  "family_title": "Land use, regeneration, and neighborhood change",
+  "horizon": "weeks",
+  "implementation_status": "design-only",
+  "independence_key": {
+    "binding_constraint": "The land use, regeneration, and neighborhood change forecast must respect declared validated operational capacity and forecast uncertainty.",
+    "decision_object": "neighborhood development and displacement pressure",
+    "evidence_gate": "Evidence for neighborhood development and displacement pressure passes documented checks for held-out error, interval coverage, event detection, drift, and baseline comparison.",
+    "horizon": "weeks",
+    "intervention_mechanism": "scenario-conditioned parcel and housing-market forecasting",
+    "primary_outcome": "residents and businesses exposed to modeled involuntary displacement pressure",
+    "spatial_unit": "neighborhood"
+  },
+  "intended_claim": "A versioned forecast design for comparing declared alternatives affecting neighborhood development and displacement pressure, conditional on its evidence gate.",
+  "limitations": [
+    "This library record has no city binding and therefore reports no local input, output, or recommendation.",
+    "Readiness describes explicit source and method gates; it does not certify implementation feasibility.",
+    "External domain, legal, community, security, and operational review remains outside this design artifact."
+  ],
+  "method_claimed": false,
+  "objectives": [
+    {
+      "evidence_type": "estimated",
+      "metric": "residents and businesses exposed to modeled involuntary displacement pressure",
+      "objective_id": "scenario.housing.land-use-regeneration.development-displacement.v1.objective.primary",
+      "primary": true,
+      "sense": "minimize",
+      "unit": "households and establishments"
+    },
+    {
+      "evidence_type": "estimated",
+      "metric": "distributional gap in residents and businesses exposed to modeled involuntary displacement pressure",
+      "objective_id": "scenario.housing.land-use-regeneration.development-displacement.v1.objective.equity",
+      "primary": false,
+      "sense": "minimize",
+      "unit": "households and establishments"
+    },
+    {
+      "evidence_type": "observed",
+      "metric": "decision claims with complete evidence lineage",
+      "objective_id": "scenario.housing.land-use-regeneration.development-displacement.v1.objective.traceability",
+      "primary": false,
+      "sense": "maximize",
+      "unit": "percent"
+    }
+  ],
+  "prohibited_claims": [
+    "Do not present market scenarios as inevitable development or individual displacement predictions.",
+    "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+    "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+    "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+  ],
+  "release_gate": {
+    "failure_release": "Release an explicit insufficient-evidence record naming missing sources, failed diagnostics, prohibited claims, and the next validation action.",
+    "failure_status": "insufficient-evidence",
+    "gate_id": "scenario.housing.land-use-regeneration.development-displacement.v1.gate.release",
+    "gate_type": "model-calibration",
+    "pass_condition": "Evidence for neighborhood development and displacement pressure passes documented checks for held-out error, interval coverage, event detection, drift, and baseline comparison.",
+    "required_evidence_types": [
+      "estimated",
+      "observed"
+    ],
+    "required_source_roles": [
+      "equity-attribute",
+      "financial-cost",
+      "geographic-identity",
+      "housing-market",
+      "land-parcel",
+      "outcome-panel"
+    ]
+  },
+  "required_source_roles": [
+    "equity-attribute",
+    "financial-cost",
+    "geographic-identity",
+    "housing-market",
+    "land-parcel",
+    "outcome-panel"
+  ],
+  "schema_version": "1.0.0",
+  "spatial_unit": "neighborhood",
+  "suite": "housing-land-use-regeneration",
+  "tags": [
+    "design-only",
+    "forecast",
+    "housing-land-use-regeneration",
+    "housing.land-use-regeneration",
+    "scenario-library"
+  ],
+  "title": "Forecast development, affordability, and displacement pressure",
+  "transportability_risks": [
+    "Planning law, property rights, finance, markets, institutions, and community priorities differ.",
+    "Parcel and transaction data may miss informal tenure, businesses, and cultural assets."
+  ]
+}

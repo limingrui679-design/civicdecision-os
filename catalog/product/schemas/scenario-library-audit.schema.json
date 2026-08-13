@@ -1,0 +1,455 @@
+{
+  "$defs": {
+    "AnalysisMode": {
+      "enum": [
+        "descriptive",
+        "forecast",
+        "causal",
+        "simulation",
+        "optimization"
+      ],
+      "title": "AnalysisMode",
+      "type": "string"
+    },
+    "ApplicationSuite": {
+      "enum": [
+        "climate-disaster-resilience",
+        "mobility-accessibility-operations",
+        "population-health-environmental-exposure",
+        "housing-land-use-regeneration",
+        "public-service-operations",
+        "infrastructure-finance-asset-risk",
+        "behavioral-policy-equity"
+      ],
+      "title": "ApplicationSuite",
+      "type": "string"
+    },
+    "CurrentReadiness": {
+      "enum": [
+        "reference-implemented",
+        "uncompiled-current-inputs",
+        "blocked-missing-source",
+        "blocked-method",
+        "blocked-multiple-gates"
+      ],
+      "title": "CurrentReadiness",
+      "type": "string"
+    },
+    "DecisionHorizon": {
+      "enum": [
+        "real-time",
+        "days",
+        "weeks",
+        "seasonal",
+        "annual",
+        "multi-year"
+      ],
+      "title": "DecisionHorizon",
+      "type": "string"
+    },
+    "DecisionType": {
+      "enum": [
+        "diagnose",
+        "forecast",
+        "prioritize",
+        "site",
+        "allocate",
+        "schedule",
+        "stress-test",
+        "evaluate"
+      ],
+      "title": "DecisionType",
+      "type": "string"
+    },
+    "DesignConstraintKind": {
+      "enum": [
+        "budget",
+        "capacity",
+        "equity",
+        "risk",
+        "time",
+        "regulatory",
+        "technical",
+        "environmental"
+      ],
+      "title": "DesignConstraintKind",
+      "type": "string"
+    },
+    "EvidenceGateType": {
+      "enum": [
+        "data-completeness",
+        "source-lineage",
+        "temporal-alignment",
+        "geographic-alignment",
+        "network-readiness",
+        "causal-identification",
+        "model-calibration",
+        "cost-capacity",
+        "legal-authority",
+        "equity-measurement",
+        "external-validation"
+      ],
+      "title": "EvidenceGateType",
+      "type": "string"
+    },
+    "EvidenceType": {
+      "enum": [
+        "observed",
+        "estimated",
+        "causal",
+        "simulated",
+        "optimized",
+        "proposed"
+      ],
+      "title": "EvidenceType",
+      "type": "string"
+    },
+    "ImplementationStatus": {
+      "enum": [
+        "reference-implemented",
+        "design-only"
+      ],
+      "title": "ImplementationStatus",
+      "type": "string"
+    },
+    "LibrarySourceRole": {
+      "enum": [
+        "municipal-demand",
+        "climate-hazard",
+        "geographic-identity",
+        "demographic-context",
+        "transport-network",
+        "service-schedule",
+        "facility-inventory",
+        "asset-inventory",
+        "asset-condition",
+        "land-parcel",
+        "housing-market",
+        "health-outcome",
+        "environmental-exposure",
+        "financial-cost",
+        "operating-capacity",
+        "intervention-assignment",
+        "outcome-panel",
+        "equity-attribute",
+        "legal-regulatory",
+        "real-time-state",
+        "community-input"
+      ],
+      "title": "LibrarySourceRole",
+      "type": "string"
+    },
+    "ScenarioSimilarityPair": {
+      "additionalProperties": false,
+      "properties": {
+        "design_a": {
+          "pattern": "^[a-z0-9]+(?:[._-][a-z0-9]+)*$",
+          "title": "Design A",
+          "type": "string"
+        },
+        "design_b": {
+          "pattern": "^[a-z0-9]+(?:[._-][a-z0-9]+)*$",
+          "title": "Design B",
+          "type": "string"
+        },
+        "shared_terms": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Shared Terms",
+          "type": "array"
+        },
+        "similarity": {
+          "maximum": 1,
+          "minimum": 0,
+          "title": "Similarity",
+          "type": "number"
+        }
+      },
+      "required": [
+        "design_a",
+        "design_b",
+        "similarity",
+        "shared_terms"
+      ],
+      "title": "ScenarioSimilarityPair",
+      "type": "object"
+    },
+    "SpatialUnit": {
+      "enum": [
+        "facility",
+        "asset",
+        "parcel",
+        "corridor",
+        "network",
+        "service-area",
+        "neighborhood",
+        "citywide",
+        "population-group"
+      ],
+      "title": "SpatialUnit",
+      "type": "string"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "analysis_mode_counts": {
+      "additionalProperties": {
+        "type": "integer"
+      },
+      "propertyNames": {
+        "$ref": "#/$defs/AnalysisMode"
+      },
+      "title": "Analysis Mode Counts",
+      "type": "object"
+    },
+    "audit_passed": {
+      "title": "Audit Passed",
+      "type": "boolean"
+    },
+    "city_bound_executions_counted": {
+      "const": 0,
+      "default": 0,
+      "title": "City Bound Executions Counted",
+      "type": "integer"
+    },
+    "completeness_checks": {
+      "additionalProperties": {
+        "type": "integer"
+      },
+      "title": "Completeness Checks",
+      "type": "object"
+    },
+    "constraint_kind_counts": {
+      "additionalProperties": {
+        "type": "integer"
+      },
+      "propertyNames": {
+        "$ref": "#/$defs/DesignConstraintKind"
+      },
+      "title": "Constraint Kind Counts",
+      "type": "object"
+    },
+    "current_readiness_counts": {
+      "additionalProperties": {
+        "type": "integer"
+      },
+      "propertyNames": {
+        "$ref": "#/$defs/CurrentReadiness"
+      },
+      "title": "Current Readiness Counts",
+      "type": "object"
+    },
+    "decision_type_counts": {
+      "additionalProperties": {
+        "type": "integer"
+      },
+      "propertyNames": {
+        "$ref": "#/$defs/DecisionType"
+      },
+      "title": "Decision Type Counts",
+      "type": "object"
+    },
+    "design_count": {
+      "const": 240,
+      "default": 240,
+      "title": "Design Count",
+      "type": "integer"
+    },
+    "duplicate_questions": {
+      "items": {
+        "items": {
+          "type": "string"
+        },
+        "type": "array"
+      },
+      "title": "Duplicate Questions",
+      "type": "array"
+    },
+    "duplicate_titles": {
+      "items": {
+        "items": {
+          "type": "string"
+        },
+        "type": "array"
+      },
+      "title": "Duplicate Titles",
+      "type": "array"
+    },
+    "evidence_type_counts": {
+      "additionalProperties": {
+        "type": "integer"
+      },
+      "propertyNames": {
+        "$ref": "#/$defs/EvidenceType"
+      },
+      "title": "Evidence Type Counts",
+      "type": "object"
+    },
+    "exact_signature_collisions": {
+      "items": {
+        "items": {
+          "type": "string"
+        },
+        "type": "array"
+      },
+      "title": "Exact Signature Collisions",
+      "type": "array"
+    },
+    "existing_template_refs": {
+      "minimum": 0,
+      "title": "Existing Template Refs",
+      "type": "integer"
+    },
+    "family_count": {
+      "const": 30,
+      "default": 30,
+      "title": "Family Count",
+      "type": "integer"
+    },
+    "family_counts": {
+      "additionalProperties": {
+        "type": "integer"
+      },
+      "propertyNames": {
+        "$ref": "#/$defs/ApplicationSuite"
+      },
+      "title": "Family Counts",
+      "type": "object"
+    },
+    "gate_type_counts": {
+      "additionalProperties": {
+        "type": "integer"
+      },
+      "propertyNames": {
+        "$ref": "#/$defs/EvidenceGateType"
+      },
+      "title": "Gate Type Counts",
+      "type": "object"
+    },
+    "high_similarity_pairs": {
+      "items": {
+        "$ref": "#/$defs/ScenarioSimilarityPair"
+      },
+      "title": "High Similarity Pairs",
+      "type": "array"
+    },
+    "high_similarity_threshold": {
+      "exclusiveMinimum": 0,
+      "maximum": 1,
+      "title": "High Similarity Threshold",
+      "type": "number"
+    },
+    "horizon_counts": {
+      "additionalProperties": {
+        "type": "integer"
+      },
+      "propertyNames": {
+        "$ref": "#/$defs/DecisionHorizon"
+      },
+      "title": "Horizon Counts",
+      "type": "object"
+    },
+    "implementation_status_counts": {
+      "additionalProperties": {
+        "type": "integer"
+      },
+      "propertyNames": {
+        "$ref": "#/$defs/ImplementationStatus"
+      },
+      "title": "Implementation Status Counts",
+      "type": "object"
+    },
+    "invariants": {
+      "items": {
+        "type": "string"
+      },
+      "minItems": 8,
+      "title": "Invariants",
+      "type": "array"
+    },
+    "limitations": {
+      "items": {
+        "type": "string"
+      },
+      "minItems": 3,
+      "title": "Limitations",
+      "type": "array"
+    },
+    "maximum_pairwise_similarity": {
+      "maximum": 1,
+      "minimum": 0,
+      "title": "Maximum Pairwise Similarity",
+      "type": "number"
+    },
+    "methods_claimed": {
+      "const": 0,
+      "default": 0,
+      "title": "Methods Claimed",
+      "type": "integer"
+    },
+    "schema_version": {
+      "const": "1.0.0",
+      "default": "1.0.0",
+      "title": "Schema Version",
+      "type": "string"
+    },
+    "source_role_counts": {
+      "additionalProperties": {
+        "type": "integer"
+      },
+      "propertyNames": {
+        "$ref": "#/$defs/LibrarySourceRole"
+      },
+      "title": "Source Role Counts",
+      "type": "object"
+    },
+    "spatial_unit_counts": {
+      "additionalProperties": {
+        "type": "integer"
+      },
+      "propertyNames": {
+        "$ref": "#/$defs/SpatialUnit"
+      },
+      "title": "Spatial Unit Counts",
+      "type": "object"
+    },
+    "suite_counts": {
+      "additionalProperties": {
+        "type": "integer"
+      },
+      "propertyNames": {
+        "$ref": "#/$defs/ApplicationSuite"
+      },
+      "title": "Suite Counts",
+      "type": "object"
+    }
+  },
+  "required": [
+    "audit_passed",
+    "exact_signature_collisions",
+    "duplicate_titles",
+    "duplicate_questions",
+    "high_similarity_threshold",
+    "maximum_pairwise_similarity",
+    "high_similarity_pairs",
+    "suite_counts",
+    "family_counts",
+    "decision_type_counts",
+    "horizon_counts",
+    "spatial_unit_counts",
+    "analysis_mode_counts",
+    "evidence_type_counts",
+    "source_role_counts",
+    "gate_type_counts",
+    "constraint_kind_counts",
+    "implementation_status_counts",
+    "current_readiness_counts",
+    "existing_template_refs",
+    "completeness_checks",
+    "invariants",
+    "limitations"
+  ],
+  "title": "ScenarioLibraryAudit",
+  "type": "object"
+}

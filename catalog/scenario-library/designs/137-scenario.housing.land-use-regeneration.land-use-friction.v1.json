@@ -1,0 +1,162 @@
+{
+  "affected_system": "land-use planning, public investment, regeneration, and community-benefit system",
+  "alternatives": [
+    "verify the highest-consequence signals before acting on parcel-level regeneration opportunities and community risks",
+    "combine targeted inspection, monitoring, and data-quality repair for parcel-level regeneration opportunities and community risks",
+    "pair zoning, parcel, infrastructure, market, and community-asset diagnosis with an explicit stop, review, and escalation rule"
+  ],
+  "analysis_modes": [
+    "descriptive"
+  ],
+  "assumptions": [
+    "Parcels, zoning, ownership, development, business, housing, public assets, and population use dated versions.",
+    "Scenario capacity and market response are not treated as approved projects or inevitable change.",
+    "All alternatives, capacities, costs, effects, thresholds, and failure scenarios are proposed until bound to evidence."
+  ],
+  "baseline": "continue current inspection and reporting practice for parcel-level regeneration opportunities and community risks.",
+  "city_bindings": [],
+  "constraints": [
+    {
+      "binding": true,
+      "constraint_id": "scenario.housing.land-use-regeneration.land-use-friction.v1.constraint.binding",
+      "description": "The land use, regeneration, and neighborhood change diagnose must respect declared measurement resolution and classification uncertainty.",
+      "hard": true,
+      "kind": "technical",
+      "required_source_roles": [
+        "asset-inventory",
+        "climate-hazard",
+        "community-input",
+        "geographic-identity",
+        "housing-market",
+        "land-parcel"
+      ]
+    },
+    {
+      "binding": false,
+      "constraint_id": "scenario.housing.land-use-regeneration.land-use-friction.v1.constraint.evidence-scope",
+      "description": "Every released metric must retain evidence type, source lineage, geography, time, assumptions, and uncertainty.",
+      "hard": true,
+      "kind": "technical",
+      "required_source_roles": [
+        "asset-inventory"
+      ]
+    },
+    {
+      "binding": false,
+      "constraint_id": "scenario.housing.land-use-regeneration.land-use-friction.v1.constraint.decision-authority",
+      "description": "No analytical output may bypass lawful authority, accountable human review, or an applicable appeal process.",
+      "hard": true,
+      "kind": "regulatory",
+      "required_source_roles": [
+        "asset-inventory"
+      ]
+    }
+  ],
+  "current_readiness": "blocked-missing-source",
+  "decision_cadence": "recompiled at each planning cycle and after material evidence change",
+  "decision_owner": "planning director and neighborhood regeneration commissioner",
+  "decision_question": "Where do parcel constraints, vacancy, infrastructure, hazards, market pressure, and valued assets create planning conflicts?",
+  "decision_type": "diagnose",
+  "design_id": "scenario.housing.land-use-regeneration.land-use-friction.v1",
+  "design_order": 137,
+  "design_signature": "sha256:78aae751b665ccea05bd4ea9a2b220bd62d5b85c413ac068085fe4c2ad10fd0e",
+  "evidence_requirements": [
+    "estimated",
+    "observed",
+    "proposed"
+  ],
+  "family_id": "housing.land-use-regeneration",
+  "family_title": "Land use, regeneration, and neighborhood change",
+  "horizon": "annual",
+  "implementation_status": "design-only",
+  "independence_key": {
+    "binding_constraint": "The land use, regeneration, and neighborhood change diagnose must respect declared measurement resolution and classification uncertainty.",
+    "decision_object": "parcel-level regeneration opportunities and community risks",
+    "evidence_gate": "Evidence for parcel-level regeneration opportunities and community risks passes documented checks for coverage, semantics, geography, timestamps, and uncertainty.",
+    "horizon": "annual",
+    "intervention_mechanism": "zoning, parcel, infrastructure, market, and community-asset diagnosis",
+    "primary_outcome": "priority parcels with unresolved feasibility and community-risk conflicts",
+    "spatial_unit": "parcel"
+  },
+  "intended_claim": "A versioned diagnose design for comparing declared alternatives affecting parcel-level regeneration opportunities and community risks, conditional on its evidence gate.",
+  "limitations": [
+    "This library record has no city binding and therefore reports no local input, output, or recommendation.",
+    "Readiness describes explicit source and method gates; it does not certify implementation feasibility.",
+    "External domain, legal, community, security, and operational review remains outside this design artifact."
+  ],
+  "method_claimed": false,
+  "objectives": [
+    {
+      "evidence_type": "estimated",
+      "metric": "priority parcels with unresolved feasibility and community-risk conflicts",
+      "objective_id": "scenario.housing.land-use-regeneration.land-use-friction.v1.objective.primary",
+      "primary": true,
+      "sense": "minimize",
+      "unit": "parcels"
+    },
+    {
+      "evidence_type": "estimated",
+      "metric": "distributional gap in priority parcels with unresolved feasibility and community-risk conflicts",
+      "objective_id": "scenario.housing.land-use-regeneration.land-use-friction.v1.objective.equity",
+      "primary": false,
+      "sense": "minimize",
+      "unit": "parcels"
+    },
+    {
+      "evidence_type": "observed",
+      "metric": "decision claims with complete evidence lineage",
+      "objective_id": "scenario.housing.land-use-regeneration.land-use-friction.v1.objective.traceability",
+      "primary": false,
+      "sense": "maximize",
+      "unit": "percent"
+    }
+  ],
+  "prohibited_claims": [
+    "Do not label vacancy blight, development capacity, consent, or regeneration opportunity without verification.",
+    "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+    "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+    "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+  ],
+  "release_gate": {
+    "failure_release": "Release an explicit insufficient-evidence record naming missing sources, failed diagnostics, prohibited claims, and the next validation action.",
+    "failure_status": "insufficient-evidence",
+    "gate_id": "scenario.housing.land-use-regeneration.land-use-friction.v1.gate.release",
+    "gate_type": "geographic-alignment",
+    "pass_condition": "Evidence for parcel-level regeneration opportunities and community risks passes documented checks for coverage, semantics, geography, timestamps, and uncertainty.",
+    "required_evidence_types": [
+      "observed",
+      "proposed"
+    ],
+    "required_source_roles": [
+      "asset-inventory",
+      "climate-hazard",
+      "community-input",
+      "geographic-identity",
+      "housing-market",
+      "land-parcel"
+    ]
+  },
+  "required_source_roles": [
+    "asset-inventory",
+    "climate-hazard",
+    "community-input",
+    "geographic-identity",
+    "housing-market",
+    "land-parcel"
+  ],
+  "schema_version": "1.0.0",
+  "spatial_unit": "parcel",
+  "suite": "housing-land-use-regeneration",
+  "tags": [
+    "design-only",
+    "diagnose",
+    "housing-land-use-regeneration",
+    "housing.land-use-regeneration",
+    "scenario-library"
+  ],
+  "title": "Diagnose land-use capacity, vacancy, and community-asset friction",
+  "transportability_risks": [
+    "Planning law, property rights, finance, markets, institutions, and community priorities differ.",
+    "Parcel and transaction data may miss informal tenure, businesses, and cultural assets."
+  ]
+}

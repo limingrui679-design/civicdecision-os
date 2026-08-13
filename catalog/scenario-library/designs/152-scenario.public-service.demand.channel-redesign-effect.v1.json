@@ -1,0 +1,170 @@
+{
+  "affected_system": "multichannel public-service intake, triage, dispatch, and resolution workflow",
+  "alternatives": [
+    "compare eligible treated and credible untreated units for phased public-service channel and routing redesign",
+    "estimate pre-specified overall and distributional effects of phased public-service channel and routing redesign",
+    "pair staggered queue or service-area evaluation with outcome panels with an explicit stop, review, and escalation rule"
+  ],
+  "analysis_modes": [
+    "descriptive",
+    "causal"
+  ],
+  "assumptions": [
+    "Requests, contacts, duplicates, service categories, assignments, work orders, and outcomes remain distinct.",
+    "Channel and area comparisons account for taxonomy, access, publication, and reporting differences.",
+    "All alternatives, capacities, costs, effects, thresholds, and failure scenarios are proposed until bound to evidence."
+  ],
+  "baseline": "retain pre-intervention conditions for phased public-service channel and routing redesign.",
+  "city_bindings": [],
+  "constraints": [
+    {
+      "binding": true,
+      "constraint_id": "scenario.public-service.demand.channel-redesign-effect.v1.constraint.binding",
+      "description": "The 311 and public-service demand operations evaluate must respect declared pre-specified assignment, comparison, outcome, spillover, and subgroup rules.",
+      "hard": true,
+      "kind": "equity",
+      "required_source_roles": [
+        "community-input",
+        "equity-attribute",
+        "geographic-identity",
+        "intervention-assignment",
+        "municipal-demand",
+        "operating-capacity",
+        "outcome-panel",
+        "service-schedule"
+      ]
+    },
+    {
+      "binding": false,
+      "constraint_id": "scenario.public-service.demand.channel-redesign-effect.v1.constraint.evidence-scope",
+      "description": "Every released metric must retain evidence type, source lineage, geography, time, assumptions, and uncertainty.",
+      "hard": true,
+      "kind": "technical",
+      "required_source_roles": [
+        "community-input"
+      ]
+    },
+    {
+      "binding": false,
+      "constraint_id": "scenario.public-service.demand.channel-redesign-effect.v1.constraint.decision-authority",
+      "description": "No analytical output may bypass lawful authority, accountable human review, or an applicable appeal process.",
+      "hard": true,
+      "kind": "regulatory",
+      "required_source_roles": [
+        "community-input"
+      ]
+    }
+  ],
+  "current_readiness": "blocked-multiple-gates",
+  "decision_cadence": "recompiled at each planning cycle and after material evidence change",
+  "decision_owner": "chief service officer and 311 operations director",
+  "decision_question": "Did phased channel and routing changes reduce verified resident effort and workflow delay without exclusion?",
+  "decision_type": "evaluate",
+  "design_id": "scenario.public-service.demand.channel-redesign-effect.v1",
+  "design_order": 152,
+  "design_signature": "sha256:edf7a7aa89bdba1b0135e840b4d872887739efca9c91107bd5377393bcdf8bb4",
+  "evidence_requirements": [
+    "causal",
+    "estimated",
+    "observed",
+    "proposed"
+  ],
+  "family_id": "public-service.demand",
+  "family_title": "311 and public-service demand operations",
+  "horizon": "multi-year",
+  "implementation_status": "design-only",
+  "independence_key": {
+    "binding_constraint": "The 311 and public-service demand operations evaluate must respect declared pre-specified assignment, comparison, outcome, spillover, and subgroup rules.",
+    "decision_object": "phased public-service channel and routing redesign",
+    "evidence_gate": "Evidence for phased public-service channel and routing redesign passes documented checks for dated assignment, comparison validity, pre-trends, outcome panels, attrition, spillovers, and falsification tests.",
+    "horizon": "multi-year",
+    "intervention_mechanism": "staggered queue or service-area evaluation with outcome panels",
+    "primary_outcome": "change in verified end-to-end handling time and repeat contact",
+    "spatial_unit": "service-area"
+  },
+  "intended_claim": "A versioned evaluate design for comparing declared alternatives affecting phased public-service channel and routing redesign, conditional on its evidence gate.",
+  "limitations": [
+    "This library record has no city binding and therefore reports no local input, output, or recommendation.",
+    "Readiness describes explicit source and method gates; it does not certify implementation feasibility.",
+    "External domain, legal, community, security, and operational review remains outside this design artifact."
+  ],
+  "method_claimed": false,
+  "objectives": [
+    {
+      "evidence_type": "estimated",
+      "metric": "change in verified end-to-end handling time and repeat contact",
+      "objective_id": "scenario.public-service.demand.channel-redesign-effect.v1.objective.primary",
+      "primary": true,
+      "sense": "minimize",
+      "unit": "hours and percentage points"
+    },
+    {
+      "evidence_type": "estimated",
+      "metric": "distributional gap in change in verified end-to-end handling time and repeat contact",
+      "objective_id": "scenario.public-service.demand.channel-redesign-effect.v1.objective.equity",
+      "primary": false,
+      "sense": "minimize",
+      "unit": "hours and percentage points"
+    },
+    {
+      "evidence_type": "observed",
+      "metric": "decision claims with complete evidence lineage",
+      "objective_id": "scenario.public-service.demand.channel-redesign-effect.v1.objective.traceability",
+      "primary": false,
+      "sense": "maximize",
+      "unit": "percent"
+    }
+  ],
+  "prohibited_claims": [
+    "Do not infer resident welfare, satisfaction, or causal resolution from closure codes alone.",
+    "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+    "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+    "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+  ],
+  "release_gate": {
+    "failure_release": "Release an explicit insufficient-evidence record naming missing sources, failed diagnostics, prohibited claims, and the next validation action.",
+    "failure_status": "insufficient-evidence",
+    "gate_id": "scenario.public-service.demand.channel-redesign-effect.v1.gate.release",
+    "gate_type": "causal-identification",
+    "pass_condition": "Evidence for phased public-service channel and routing redesign passes documented checks for dated assignment, comparison validity, pre-trends, outcome panels, attrition, spillovers, and falsification tests.",
+    "required_evidence_types": [
+      "causal",
+      "observed"
+    ],
+    "required_source_roles": [
+      "community-input",
+      "equity-attribute",
+      "geographic-identity",
+      "intervention-assignment",
+      "municipal-demand",
+      "operating-capacity",
+      "outcome-panel",
+      "service-schedule"
+    ]
+  },
+  "required_source_roles": [
+    "community-input",
+    "equity-attribute",
+    "geographic-identity",
+    "intervention-assignment",
+    "municipal-demand",
+    "operating-capacity",
+    "outcome-panel",
+    "service-schedule"
+  ],
+  "schema_version": "1.0.0",
+  "spatial_unit": "service-area",
+  "suite": "public-service-operations",
+  "tags": [
+    "design-only",
+    "evaluate",
+    "public-service-operations",
+    "public-service.demand",
+    "scenario-library"
+  ],
+  "title": "Evaluate service intake and routing redesign",
+  "transportability_risks": [
+    "Service taxonomies, channels, SLAs, agency ownership, reporting, and publication rules differ.",
+    "Observed demand reflects both conditions and ability or willingness to report."
+  ]
+}

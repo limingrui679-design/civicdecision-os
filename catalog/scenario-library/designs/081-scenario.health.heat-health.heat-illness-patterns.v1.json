@@ -1,0 +1,159 @@
+{
+  "affected_system": "heat-health surveillance, prevention, and care coordination",
+  "alternatives": [
+    "verify the highest-consequence signals before acting on heat-related syndrome and surveillance anomalies",
+    "combine targeted inspection, monitoring, and data-quality repair for heat-related syndrome and surveillance anomalies",
+    "pair exposure-linked spatiotemporal surveillance diagnosis with an explicit stop, review, and escalation rule"
+  ],
+  "analysis_modes": [
+    "descriptive"
+  ],
+  "assumptions": [
+    "Health records are privacy-preserving, population-defined, timely, and separated from service-request proxies.",
+    "Heat exposure, care seeking, reporting, and intervention effects remain distinct constructs.",
+    "All alternatives, capacities, costs, effects, thresholds, and failure scenarios are proposed until bound to evidence."
+  ],
+  "baseline": "continue current inspection and reporting practice for heat-related syndrome and surveillance anomalies.",
+  "city_bindings": [],
+  "constraints": [
+    {
+      "binding": true,
+      "constraint_id": "scenario.health.heat-health.heat-illness-patterns.v1.constraint.binding",
+      "description": "The heat-health surveillance and prevention diagnose must respect declared measurement resolution and classification uncertainty.",
+      "hard": true,
+      "kind": "technical",
+      "required_source_roles": [
+        "climate-hazard",
+        "demographic-context",
+        "environmental-exposure",
+        "equity-attribute",
+        "health-outcome"
+      ]
+    },
+    {
+      "binding": false,
+      "constraint_id": "scenario.health.heat-health.heat-illness-patterns.v1.constraint.evidence-scope",
+      "description": "Every released metric must retain evidence type, source lineage, geography, time, assumptions, and uncertainty.",
+      "hard": true,
+      "kind": "technical",
+      "required_source_roles": [
+        "climate-hazard"
+      ]
+    },
+    {
+      "binding": false,
+      "constraint_id": "scenario.health.heat-health.heat-illness-patterns.v1.constraint.decision-authority",
+      "description": "No analytical output may bypass lawful authority, accountable human review, or an applicable appeal process.",
+      "hard": true,
+      "kind": "regulatory",
+      "required_source_roles": [
+        "climate-hazard"
+      ]
+    }
+  ],
+  "current_readiness": "blocked-missing-source",
+  "decision_cadence": "recompiled at each planning cycle and after material evidence change",
+  "decision_owner": "public-health preparedness director and emergency medical services lead",
+  "decision_question": "Where and when do verified heat-related syndromes diverge from expected seasonal and reporting patterns?",
+  "decision_type": "diagnose",
+  "design_id": "scenario.health.heat-health.heat-illness-patterns.v1",
+  "design_order": 81,
+  "design_signature": "sha256:02c92b6e09d163d7513bc9d9ff672ebe2217671096fe947674e1e66bd4659ce1",
+  "evidence_requirements": [
+    "estimated",
+    "observed",
+    "proposed"
+  ],
+  "family_id": "health.heat-health",
+  "family_title": "Heat-health surveillance and prevention",
+  "horizon": "annual",
+  "implementation_status": "design-only",
+  "independence_key": {
+    "binding_constraint": "The heat-health surveillance and prevention diagnose must respect declared measurement resolution and classification uncertainty.",
+    "decision_object": "heat-related syndrome and surveillance anomalies",
+    "evidence_gate": "Evidence for heat-related syndrome and surveillance anomalies passes documented checks for coverage, semantics, geography, timestamps, and uncertainty.",
+    "horizon": "annual",
+    "intervention_mechanism": "exposure-linked spatiotemporal surveillance diagnosis",
+    "primary_outcome": "unexplained excess heat-related health events",
+    "spatial_unit": "population-group"
+  },
+  "intended_claim": "A versioned diagnose design for comparing declared alternatives affecting heat-related syndrome and surveillance anomalies, conditional on its evidence gate.",
+  "limitations": [
+    "This library record has no city binding and therefore reports no local input, output, or recommendation.",
+    "Readiness describes explicit source and method gates; it does not certify implementation feasibility.",
+    "External domain, legal, community, security, and operational review remains outside this design artifact."
+  ],
+  "method_claimed": false,
+  "objectives": [
+    {
+      "evidence_type": "estimated",
+      "metric": "unexplained excess heat-related health events",
+      "objective_id": "scenario.health.heat-health.heat-illness-patterns.v1.objective.primary",
+      "primary": true,
+      "sense": "minimize",
+      "unit": "events"
+    },
+    {
+      "evidence_type": "estimated",
+      "metric": "distributional gap in unexplained excess heat-related health events",
+      "objective_id": "scenario.health.heat-health.heat-illness-patterns.v1.objective.equity",
+      "primary": false,
+      "sense": "minimize",
+      "unit": "events"
+    },
+    {
+      "evidence_type": "observed",
+      "metric": "decision claims with complete evidence lineage",
+      "objective_id": "scenario.health.heat-health.heat-illness-patterns.v1.objective.traceability",
+      "primary": false,
+      "sense": "maximize",
+      "unit": "percent"
+    }
+  ],
+  "prohibited_claims": [
+    "Do not diagnose individuals or attribute events to heat from aggregate temporal overlap.",
+    "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+    "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+    "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+  ],
+  "release_gate": {
+    "failure_release": "Release an explicit insufficient-evidence record naming missing sources, failed diagnostics, prohibited claims, and the next validation action.",
+    "failure_status": "insufficient-evidence",
+    "gate_id": "scenario.health.heat-health.heat-illness-patterns.v1.gate.release",
+    "gate_type": "geographic-alignment",
+    "pass_condition": "Evidence for heat-related syndrome and surveillance anomalies passes documented checks for coverage, semantics, geography, timestamps, and uncertainty.",
+    "required_evidence_types": [
+      "observed",
+      "proposed"
+    ],
+    "required_source_roles": [
+      "climate-hazard",
+      "demographic-context",
+      "environmental-exposure",
+      "equity-attribute",
+      "health-outcome"
+    ]
+  },
+  "required_source_roles": [
+    "climate-hazard",
+    "demographic-context",
+    "environmental-exposure",
+    "equity-attribute",
+    "health-outcome"
+  ],
+  "schema_version": "1.0.0",
+  "spatial_unit": "population-group",
+  "suite": "population-health-environmental-exposure",
+  "tags": [
+    "design-only",
+    "diagnose",
+    "health.heat-health",
+    "population-health-environmental-exposure",
+    "scenario-library"
+  ],
+  "title": "Diagnose heat-health surveillance patterns",
+  "transportability_risks": [
+    "Clinical coding, surveillance coverage, acclimatization, housing, and care access vary.",
+    "Small-area health estimates may be unstable or disclosure-sensitive."
+  ]
+}

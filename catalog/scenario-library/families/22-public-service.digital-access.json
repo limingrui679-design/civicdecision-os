@@ -1,0 +1,50 @@
+{
+  "affected_system": "public digital services, identity, applications, appointments, and assisted access",
+  "claim_boundary": [
+    "Service requests measure reported workload, not verified incidents, need, harm, or resolution.",
+    "Assignments and schedules are proposed operations, not completed work or public outcomes.",
+    "Design records do not establish agency adoption, deployment, productivity, or resident impact."
+  ],
+  "common_source_roles": [
+    "demographic-context",
+    "municipal-demand",
+    "service-schedule"
+  ],
+  "decision_owner": "chief digital officer and administrative service delivery director",
+  "decision_types": [
+    "diagnose",
+    "forecast",
+    "prioritize",
+    "site",
+    "allocate",
+    "schedule",
+    "stress-test",
+    "evaluate"
+  ],
+  "description": "Eight decisions for journey diagnosis, channel forecasting, service redesign, assisted-access siting, support allocation, appointment scheduling, outage stress, and digital-service evaluation.",
+  "design_refs": [
+    "scenario.public-service.digital-access.service-journey-friction.v1",
+    "scenario.public-service.digital-access.channel-support-demand.v1",
+    "scenario.public-service.digital-access.service-redesign-portfolio.v1",
+    "scenario.public-service.digital-access.assisted-digital-access.v1",
+    "scenario.public-service.digital-access.navigation-support.v1",
+    "scenario.public-service.digital-access.appointments-support.v1",
+    "scenario.public-service.digital-access.digital-service-continuity.v1",
+    "scenario.public-service.digital-access.assisted-service-effect.v1"
+  ],
+  "design_signatures": [
+    "sha256:8ac3bdc9644032b56a5b6340c10a2456b1630d4cb5c38d5a2da74790471e5dce",
+    "sha256:44c387d44c5e64b626d9615f48849e3eee4176e598ca49a77ddfe8daaae7c4a0",
+    "sha256:6d4053f717d9e7e792a671a67d231b3d87dd990ec356a45040eafe12110b6696",
+    "sha256:0a22e2773b5f11e3abd69d86c2ec7e4560c11f749e07ce986e9f096470b62639",
+    "sha256:0f8cda764b18e9a2892625d5fa6e36760dd0ff008b91a92984312dbea9c8724a",
+    "sha256:e7779a0f51951a3b834bb25c8e9e86fb6ee59deedf5ef3611f2272ecf883342f",
+    "sha256:23937f4fa3a049e377b16e43c56f795ee1f02a28dee7deb6e6cb76c601e4dcc1",
+    "sha256:ffacf5b0c8ed1221a8adf135f38fd96cd60bc8625f4a7e682501295452480e09"
+  ],
+  "family_id": "public-service.digital-access",
+  "family_order": 22,
+  "schema_version": "1.0.0",
+  "suite": "public-service-operations",
+  "title": "Digital public access and administrative service delivery"
+}

@@ -1,0 +1,166 @@
+{
+  "affected_system": "public participation, multilingual communication, consultation, and feedback closure",
+  "alternatives": [
+    "add targeted redundancy around the largest failure modes in public risk communication under crisis and channel failure",
+    "select an adaptive robust portfolio across severe scenarios for public risk communication under crisis and channel failure",
+    "pair message, channel, language, trust, misinformation, and capacity simulation with an explicit stop, review, and escalation rule"
+  ],
+  "analysis_modes": [
+    "forecast",
+    "simulation",
+    "optimization"
+  ],
+  "assumptions": [
+    "Invitation, exposure, participation, contribution, response, decision, and trust remain distinct.",
+    "Participation records preserve consent, privacy, language, accessibility, and channel provenance.",
+    "All alternatives, capacities, costs, effects, thresholds, and failure scenarios are proposed until bound to evidence."
+  ],
+  "baseline": "apply current continuity provisions to public risk communication under crisis and channel failure.",
+  "city_bindings": [],
+  "constraints": [
+    {
+      "binding": true,
+      "constraint_id": "scenario.equity.participation-communication.communication-failure.v1.constraint.binding",
+      "description": "The public participation and risk communication stress test must respect declared minimum continuity and safety thresholds across severe scenarios.",
+      "hard": true,
+      "kind": "risk",
+      "required_source_roles": [
+        "community-input",
+        "demographic-context",
+        "facility-inventory",
+        "geographic-identity",
+        "operating-capacity",
+        "real-time-state"
+      ]
+    },
+    {
+      "binding": false,
+      "constraint_id": "scenario.equity.participation-communication.communication-failure.v1.constraint.evidence-scope",
+      "description": "Every released metric must retain evidence type, source lineage, geography, time, assumptions, and uncertainty.",
+      "hard": true,
+      "kind": "technical",
+      "required_source_roles": [
+        "community-input"
+      ]
+    },
+    {
+      "binding": false,
+      "constraint_id": "scenario.equity.participation-communication.communication-failure.v1.constraint.decision-authority",
+      "description": "No analytical output may bypass lawful authority, accountable human review, or an applicable appeal process.",
+      "hard": true,
+      "kind": "regulatory",
+      "required_source_roles": [
+        "community-input"
+      ]
+    }
+  ],
+  "current_readiness": "blocked-missing-source",
+  "decision_cadence": "recompiled at each planning cycle and after material evidence change",
+  "decision_owner": "public engagement director and risk communications lead",
+  "decision_question": "Which multilingual strategy preserves accurate usable communication under uncertainty, outage, rumor, and capacity loss?",
+  "decision_type": "stress-test",
+  "design_id": "scenario.equity.participation-communication.communication-failure.v1",
+  "design_order": 223,
+  "design_signature": "sha256:01737cf89380ebac0ee0c696dd25da28f8815b1d6f5b61016790e44e0b1b164c",
+  "evidence_requirements": [
+    "estimated",
+    "observed",
+    "optimized",
+    "proposed",
+    "simulated"
+  ],
+  "family_id": "equity.participation-communication",
+  "family_title": "Public participation and risk communication",
+  "horizon": "seasonal",
+  "implementation_status": "design-only",
+  "independence_key": {
+    "binding_constraint": "The public participation and risk communication stress test must respect declared minimum continuity and safety thresholds across severe scenarios.",
+    "decision_object": "public risk communication under crisis and channel failure",
+    "evidence_gate": "Evidence for public risk communication under crisis and channel failure passes documented checks for scenario ranges, dependence, failure rates, recovery, intervention performance, and sensitivity.",
+    "horizon": "seasonal",
+    "intervention_mechanism": "message, channel, language, trust, misinformation, and capacity simulation",
+    "primary_outcome": "scenario-weighted affected people without timely usable information",
+    "spatial_unit": "network"
+  },
+  "intended_claim": "A versioned stress-test design for comparing declared alternatives affecting public risk communication under crisis and channel failure, conditional on its evidence gate.",
+  "limitations": [
+    "This library record has no city binding and therefore reports no local input, output, or recommendation.",
+    "Readiness describes explicit source and method gates; it does not certify implementation feasibility.",
+    "External domain, legal, community, security, and operational review remains outside this design artifact."
+  ],
+  "method_claimed": false,
+  "objectives": [
+    {
+      "evidence_type": "estimated",
+      "metric": "scenario-weighted affected people without timely usable information",
+      "objective_id": "scenario.equity.participation-communication.communication-failure.v1.objective.primary",
+      "primary": true,
+      "sense": "minimize",
+      "unit": "people"
+    },
+    {
+      "evidence_type": "estimated",
+      "metric": "distributional gap in scenario-weighted affected people without timely usable information",
+      "objective_id": "scenario.equity.participation-communication.communication-failure.v1.objective.equity",
+      "primary": false,
+      "sense": "minimize",
+      "unit": "people"
+    },
+    {
+      "evidence_type": "observed",
+      "metric": "decision claims with complete evidence lineage",
+      "objective_id": "scenario.equity.participation-communication.communication-failure.v1.objective.traceability",
+      "primary": false,
+      "sense": "maximize",
+      "unit": "percent"
+    }
+  ],
+  "prohibited_claims": [
+    "Do not present simulated message reach, understanding, trust, or behavior as observed.",
+    "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+    "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+    "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+  ],
+  "release_gate": {
+    "failure_release": "Release an explicit insufficient-evidence record naming missing sources, failed diagnostics, prohibited claims, and the next validation action.",
+    "failure_status": "insufficient-evidence",
+    "gate_id": "scenario.equity.participation-communication.communication-failure.v1.gate.release",
+    "gate_type": "external-validation",
+    "pass_condition": "Evidence for public risk communication under crisis and channel failure passes documented checks for scenario ranges, dependence, failure rates, recovery, intervention performance, and sensitivity.",
+    "required_evidence_types": [
+      "estimated",
+      "observed"
+    ],
+    "required_source_roles": [
+      "community-input",
+      "demographic-context",
+      "facility-inventory",
+      "geographic-identity",
+      "operating-capacity",
+      "real-time-state"
+    ]
+  },
+  "required_source_roles": [
+    "community-input",
+    "demographic-context",
+    "facility-inventory",
+    "geographic-identity",
+    "operating-capacity",
+    "real-time-state"
+  ],
+  "schema_version": "1.0.0",
+  "spatial_unit": "network",
+  "suite": "behavioral-policy-equity",
+  "tags": [
+    "behavioral-policy-equity",
+    "design-only",
+    "equity.participation-communication",
+    "scenario-library",
+    "stress-test"
+  ],
+  "title": "Stress-test public communication under crisis and channel failure",
+  "transportability_risks": [
+    "Trust, language, civic institutions, digital access, deliberation norms, and risk salience differ.",
+    "Participants are not automatically representative of affected populations."
+  ]
+}

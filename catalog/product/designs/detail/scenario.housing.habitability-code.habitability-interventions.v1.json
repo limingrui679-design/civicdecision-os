@@ -1,0 +1,226 @@
+{
+  "audit_maximum_pairwise_similarity": 0.646154,
+  "design": {
+    "affected_system": "housing inspection, code enforcement, repair, and tenant-support system",
+    "alternatives": [
+      "rank verified high-consequence candidates for housing habitability intervention portfolio",
+      "select a risk-, equity-, and lifecycle-balanced portfolio for housing habitability intervention portfolio",
+      "pair severity-, vulnerability-, evidence-, and deliverability-weighted prioritization with an explicit stop, review, and escalation rule"
+    ],
+    "analysis_modes": [
+      "descriptive",
+      "optimization"
+    ],
+    "assumptions": [
+      "Complaints, inspections, violations, ownership, repair, and closure records retain distinct semantics.",
+      "Tenant vulnerability and building condition are measured only from authorized, documented sources.",
+      "All alternatives, capacities, costs, effects, thresholds, and failure scenarios are proposed until bound to evidence."
+    ],
+    "baseline": "fund only already-committed work for housing habitability intervention portfolio.",
+    "city_bindings": [],
+    "constraints": [
+      {
+        "binding": true,
+        "constraint_id": "scenario.housing.habitability-code.habitability-interventions.v1.constraint.binding",
+        "description": "The housing habitability and code operations prioritize must respect declared capital, operating, maintenance, and delivery budgets.",
+        "hard": true,
+        "kind": "budget",
+        "required_source_roles": [
+          "asset-condition",
+          "equity-attribute",
+          "financial-cost",
+          "geographic-identity",
+          "housing-market",
+          "municipal-demand"
+        ]
+      },
+      {
+        "binding": false,
+        "constraint_id": "scenario.housing.habitability-code.habitability-interventions.v1.constraint.evidence-scope",
+        "description": "Every released metric must retain evidence type, source lineage, geography, time, assumptions, and uncertainty.",
+        "hard": true,
+        "kind": "technical",
+        "required_source_roles": [
+          "asset-condition"
+        ]
+      },
+      {
+        "binding": false,
+        "constraint_id": "scenario.housing.habitability-code.habitability-interventions.v1.constraint.decision-authority",
+        "description": "No analytical output may bypass lawful authority, accountable human review, or an applicable appeal process.",
+        "hard": true,
+        "kind": "regulatory",
+        "required_source_roles": [
+          "asset-condition"
+        ]
+      }
+    ],
+    "current_readiness": "reference-implemented",
+    "decision_cadence": "recompiled at each planning cycle and after material evidence change",
+    "decision_owner": "housing-code commissioner and tenant-protection director",
+    "decision_question": "Which inspection, legal support, emergency repair, and rehabilitation cases should receive limited resources?",
+    "decision_type": "prioritize",
+    "design_id": "scenario.housing.habitability-code.habitability-interventions.v1",
+    "design_order": 115,
+    "design_signature": "sha256:17b68c23fc7ef6fbf9bbb6a5bfaf63a1232f62c9160d65a0f38561e6a47143e5",
+    "evidence_requirements": [
+      "estimated",
+      "observed",
+      "optimized",
+      "proposed"
+    ],
+    "existing_template_ref": "deep.housing.request-triage.v1",
+    "family_id": "housing.habitability-code",
+    "family_title": "Housing habitability and code operations",
+    "horizon": "multi-year",
+    "implementation_status": "reference-implemented",
+    "independence_key": {
+      "binding_constraint": "The housing habitability and code operations prioritize must respect declared capital, operating, maintenance, and delivery budgets.",
+      "decision_object": "housing habitability intervention portfolio",
+      "evidence_gate": "Evidence for housing habitability intervention portfolio passes documented checks for cost, benefit, service life, dependencies, deliverability, and maintenance burden.",
+      "horizon": "multi-year",
+      "intervention_mechanism": "severity-, vulnerability-, evidence-, and deliverability-weighted prioritization",
+      "primary_outcome": "verified severe condition-days unresolved",
+      "spatial_unit": "asset"
+    },
+    "intended_claim": "A versioned prioritize design for comparing declared alternatives affecting housing habitability intervention portfolio, conditional on its evidence gate.",
+    "limitations": [
+      "This library record has no city binding and therefore reports no local input, output, or recommendation.",
+      "Readiness describes explicit source and method gates; it does not certify implementation feasibility.",
+      "External domain, legal, community, security, and operational review remains outside this design artifact."
+    ],
+    "method_claimed": false,
+    "objectives": [
+      {
+        "evidence_type": "estimated",
+        "metric": "verified severe condition-days unresolved",
+        "objective_id": "scenario.housing.habitability-code.habitability-interventions.v1.objective.primary",
+        "primary": true,
+        "sense": "minimize",
+        "unit": "building-days"
+      },
+      {
+        "evidence_type": "estimated",
+        "metric": "distributional gap in verified severe condition-days unresolved",
+        "objective_id": "scenario.housing.habitability-code.habitability-interventions.v1.objective.equity",
+        "primary": false,
+        "sense": "minimize",
+        "unit": "building-days"
+      },
+      {
+        "evidence_type": "observed",
+        "metric": "decision claims with complete evidence lineage",
+        "objective_id": "scenario.housing.habitability-code.habitability-interventions.v1.objective.traceability",
+        "primary": false,
+        "sense": "maximize",
+        "unit": "percent"
+      }
+    ],
+    "prohibited_claims": [
+      "Do not report ranked complaints as adjudicated violations or modeled repairs as completed.",
+      "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+      "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+      "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+    ],
+    "reference_implementation_note": "Tier-D template deep.housing.request-triage.v1 (Housing-related request triage) supplies a bounded reference workflow for this design axis. The mapping does not establish complete city-specific inputs, external validity, deployment, adoption, or impact.",
+    "release_gate": {
+      "failure_release": "Release an explicit insufficient-evidence record naming missing sources, failed diagnostics, prohibited claims, and the next validation action.",
+      "failure_status": "insufficient-evidence",
+      "gate_id": "scenario.housing.habitability-code.habitability-interventions.v1.gate.release",
+      "gate_type": "cost-capacity",
+      "pass_condition": "Evidence for housing habitability intervention portfolio passes documented checks for cost, benefit, service life, dependencies, deliverability, and maintenance burden.",
+      "required_evidence_types": [
+        "observed",
+        "proposed"
+      ],
+      "required_source_roles": [
+        "asset-condition",
+        "equity-attribute",
+        "financial-cost",
+        "geographic-identity",
+        "housing-market",
+        "municipal-demand"
+      ]
+    },
+    "required_source_roles": [
+      "asset-condition",
+      "equity-attribute",
+      "financial-cost",
+      "geographic-identity",
+      "housing-market",
+      "municipal-demand"
+    ],
+    "schema_version": "1.0.0",
+    "spatial_unit": "asset",
+    "suite": "housing-land-use-regeneration",
+    "tags": [
+      "housing-land-use-regeneration",
+      "housing.habitability-code",
+      "prioritize",
+      "reference-implemented",
+      "scenario-library"
+    ],
+    "title": "Prioritize habitability inspection and repair interventions",
+    "transportability_risks": [
+      "Housing law, tenure, building age, complaint access, inspection practice, and enforcement differ.",
+      "Complaint records may over- or under-represent physical conditions and retaliation risk."
+    ]
+  },
+  "family": {
+    "affected_system": "housing inspection, code enforcement, repair, and tenant-support system",
+    "claim_boundary": [
+      "Requests, listings, parcels, and administrative records do not alone verify conditions or need.",
+      "Screened sites and portfolios are not permits, acquisitions, adopted plans, or completed housing.",
+      "Displacement, affordability, habitability, and program effects require direct outcomes and identification."
+    ],
+    "common_source_roles": [
+      "geographic-identity",
+      "housing-market",
+      "municipal-demand"
+    ],
+    "decision_owner": "housing-code commissioner and tenant-protection director",
+    "decision_types": [
+      "diagnose",
+      "forecast",
+      "prioritize",
+      "site",
+      "allocate",
+      "schedule",
+      "stress-test",
+      "evaluate"
+    ],
+    "description": "Eight decisions for condition-signal diagnosis, inspection forecasting, repair portfolios, service access, inspector allocation, case scheduling, surge stress, and enforcement evaluation.",
+    "design_refs": [
+      "scenario.housing.habitability-code.habitability-signals.v1",
+      "scenario.housing.habitability-code.inspection-repair-demand.v1",
+      "scenario.housing.habitability-code.habitability-interventions.v1",
+      "scenario.housing.habitability-code.tenant-service-access.v1",
+      "scenario.housing.habitability-code.inspectors-repair-support.v1",
+      "scenario.housing.habitability-code.inspection-enforcement-calendar.v1",
+      "scenario.housing.habitability-code.housing-emergency-surge.v1",
+      "scenario.housing.habitability-code.proactive-inspection-effect.v1"
+    ],
+    "design_signatures": [
+      "sha256:43b00935854ee5b0ac3ccdc2c44db8128c53b0f73e7ca57b449d50aa241f91f3",
+      "sha256:18b99a2bed677da3121e73e614317c3ceb1220b54e776bcb40ac658e7ecc8428",
+      "sha256:17b68c23fc7ef6fbf9bbb6a5bfaf63a1232f62c9160d65a0f38561e6a47143e5",
+      "sha256:54d46698a540d3b8fd5a4056c2d7ebcd4737fc7ca60a3fe32e22a50036ba8647",
+      "sha256:d99f9bf91e986c2d9fe972b6956c89dd6b88d6f24b1ff57e6596481a0442e7a2",
+      "sha256:43c17446cd04c07c3c8c5f3197af35a55fe529db27f18e996a1bc72827a89716",
+      "sha256:bb8dfcb8d9757995324b66ba048f0ba5a2dd5cc61c7557962584e3a44181e4c7",
+      "sha256:10e33d5d17b777a89b28b1aad4e40743507c740e80decd7f596aa1ad59fdfb54"
+    ],
+    "family_id": "housing.habitability-code",
+    "family_order": 15,
+    "schema_version": "1.0.0",
+    "suite": "housing-land-use-regeneration",
+    "title": "Housing habitability and code operations"
+  },
+  "library_claim_boundary": [
+    "The catalog contains 240 decision designs, not 240 city executions.",
+    "Exactly twelve designs map to existing Tier-D reference templates; 228 remain design-only.",
+    "A reference implementation can be an explicit negative release and does not imply impact.",
+    "No record claims a city binding, new method, deployment, adoption, or real-user outcome.",
+    "Future execution requires source binding, gate passage, and domain, legal, community, and operational review."
+  ]
+}

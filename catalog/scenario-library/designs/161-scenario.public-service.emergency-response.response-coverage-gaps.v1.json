@@ -1,0 +1,162 @@
+{
+  "affected_system": "non-clinical emergency call handling, unit readiness, and incident support network",
+  "alternatives": [
+    "verify the highest-consequence signals before acting on emergency response workflow and coverage gaps",
+    "combine targeted inspection, monitoring, and data-quality repair for emergency response workflow and coverage gaps",
+    "pair stage-resolved call-to-unit process diagnosis with an explicit stop, review, and escalation rule"
+  ],
+  "analysis_modes": [
+    "descriptive"
+  ],
+  "assumptions": [
+    "Calls, incidents, dispositions, unit states, travel, scene time, and outcomes remain distinct.",
+    "Any operational recommendation requires agency safety review and cannot automate high-stakes dispatch.",
+    "All alternatives, capacities, costs, effects, thresholds, and failure scenarios are proposed until bound to evidence."
+  ],
+  "baseline": "continue current inspection and reporting practice for emergency response workflow and coverage gaps.",
+  "city_bindings": [],
+  "constraints": [
+    {
+      "binding": true,
+      "constraint_id": "scenario.public-service.emergency-response.response-coverage-gaps.v1.constraint.binding",
+      "description": "The emergency response readiness and allocation diagnose must respect declared measurement resolution and classification uncertainty.",
+      "hard": true,
+      "kind": "technical",
+      "required_source_roles": [
+        "equity-attribute",
+        "municipal-demand",
+        "operating-capacity",
+        "real-time-state",
+        "service-schedule",
+        "transport-network"
+      ]
+    },
+    {
+      "binding": false,
+      "constraint_id": "scenario.public-service.emergency-response.response-coverage-gaps.v1.constraint.evidence-scope",
+      "description": "Every released metric must retain evidence type, source lineage, geography, time, assumptions, and uncertainty.",
+      "hard": true,
+      "kind": "technical",
+      "required_source_roles": [
+        "equity-attribute"
+      ]
+    },
+    {
+      "binding": false,
+      "constraint_id": "scenario.public-service.emergency-response.response-coverage-gaps.v1.constraint.decision-authority",
+      "description": "No analytical output may bypass lawful authority, accountable human review, or an applicable appeal process.",
+      "hard": true,
+      "kind": "regulatory",
+      "required_source_roles": [
+        "equity-attribute"
+      ]
+    }
+  ],
+  "current_readiness": "blocked-missing-source",
+  "decision_cadence": "recompiled at each planning cycle and after material evidence change",
+  "decision_owner": "emergency communications director and public-safety operations chief",
+  "decision_question": "Which call-processing, dispatch, travel, handoff, and availability stages drive verified coverage gaps?",
+  "decision_type": "diagnose",
+  "design_id": "scenario.public-service.emergency-response.response-coverage-gaps.v1",
+  "design_order": 161,
+  "design_signature": "sha256:e27b8be2c0814b76fea01cfa8acc10f6fab177356c45baf3c74e9a08f379cbde",
+  "evidence_requirements": [
+    "estimated",
+    "observed",
+    "proposed"
+  ],
+  "family_id": "public-service.emergency-response",
+  "family_title": "Emergency response readiness and allocation",
+  "horizon": "annual",
+  "implementation_status": "design-only",
+  "independence_key": {
+    "binding_constraint": "The emergency response readiness and allocation diagnose must respect declared measurement resolution and classification uncertainty.",
+    "decision_object": "emergency response workflow and coverage gaps",
+    "evidence_gate": "Evidence for emergency response workflow and coverage gaps passes documented checks for coverage, semantics, geography, timestamps, and uncertainty.",
+    "horizon": "annual",
+    "intervention_mechanism": "stage-resolved call-to-unit process diagnosis",
+    "primary_outcome": "priority incidents outside verified response targets",
+    "spatial_unit": "service-area"
+  },
+  "intended_claim": "A versioned diagnose design for comparing declared alternatives affecting emergency response workflow and coverage gaps, conditional on its evidence gate.",
+  "limitations": [
+    "This library record has no city binding and therefore reports no local input, output, or recommendation.",
+    "Readiness describes explicit source and method gates; it does not certify implementation feasibility.",
+    "External domain, legal, community, security, and operational review remains outside this design artifact."
+  ],
+  "method_claimed": false,
+  "objectives": [
+    {
+      "evidence_type": "estimated",
+      "metric": "priority incidents outside verified response targets",
+      "objective_id": "scenario.public-service.emergency-response.response-coverage-gaps.v1.objective.primary",
+      "primary": true,
+      "sense": "minimize",
+      "unit": "incidents"
+    },
+    {
+      "evidence_type": "estimated",
+      "metric": "distributional gap in priority incidents outside verified response targets",
+      "objective_id": "scenario.public-service.emergency-response.response-coverage-gaps.v1.objective.equity",
+      "primary": false,
+      "sense": "minimize",
+      "unit": "incidents"
+    },
+    {
+      "evidence_type": "observed",
+      "metric": "decision claims with complete evidence lineage",
+      "objective_id": "scenario.public-service.emergency-response.response-coverage-gaps.v1.objective.traceability",
+      "primary": false,
+      "sense": "maximize",
+      "unit": "percent"
+    }
+  ],
+  "prohibited_claims": [
+    "Do not infer incident severity, fault, survival, or service quality from response time alone.",
+    "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+    "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+    "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+  ],
+  "release_gate": {
+    "failure_release": "Release an explicit insufficient-evidence record naming missing sources, failed diagnostics, prohibited claims, and the next validation action.",
+    "failure_status": "insufficient-evidence",
+    "gate_id": "scenario.public-service.emergency-response.response-coverage-gaps.v1.gate.release",
+    "gate_type": "geographic-alignment",
+    "pass_condition": "Evidence for emergency response workflow and coverage gaps passes documented checks for coverage, semantics, geography, timestamps, and uncertainty.",
+    "required_evidence_types": [
+      "observed",
+      "proposed"
+    ],
+    "required_source_roles": [
+      "equity-attribute",
+      "municipal-demand",
+      "operating-capacity",
+      "real-time-state",
+      "service-schedule",
+      "transport-network"
+    ]
+  },
+  "required_source_roles": [
+    "equity-attribute",
+    "municipal-demand",
+    "operating-capacity",
+    "real-time-state",
+    "service-schedule",
+    "transport-network"
+  ],
+  "schema_version": "1.0.0",
+  "spatial_unit": "service-area",
+  "suite": "public-service-operations",
+  "tags": [
+    "design-only",
+    "diagnose",
+    "public-service-operations",
+    "public-service.emergency-response",
+    "scenario-library"
+  ],
+  "title": "Diagnose emergency response coverage and workflow gaps",
+  "transportability_risks": [
+    "Call coding, dispatch policy, mutual aid, geography, traffic, staffing, and incident mix differ.",
+    "Recorded response time may omit call processing, staging, or outcome quality."
+  ]
+}

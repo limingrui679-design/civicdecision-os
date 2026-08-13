@@ -1,0 +1,50 @@
+{
+  "affected_system": "multimodal evacuation, assisted transport, and emergency access network",
+  "claim_boundary": [
+    "Network, request, and schedule records do not establish individual travel behavior or harm.",
+    "Optimized routes and allocations are planning outputs, not dispatched or completed trips.",
+    "Design-only records do not claim current city data, implementation, compliance, or impact."
+  ],
+  "common_source_roles": [
+    "geographic-identity",
+    "operating-capacity",
+    "transport-network"
+  ],
+  "decision_owner": "emergency transportation coordinator and incident commander",
+  "decision_types": [
+    "diagnose",
+    "forecast",
+    "prioritize",
+    "site",
+    "allocate",
+    "schedule",
+    "stress-test",
+    "evaluate"
+  ],
+  "description": "Eight decisions for mobility-needs diagnosis, clearance forecasting, network upgrades, pickup siting, vehicle allocation, evacuation schedules, failure stress, and exercise evaluation.",
+  "design_refs": [
+    "scenario.mobility.emergency-mobility.evacuation-access-gaps.v1",
+    "scenario.mobility.emergency-mobility.clearance-demand.v1",
+    "scenario.mobility.emergency-mobility.evacuation-readiness.v1",
+    "scenario.mobility.emergency-mobility.pickup-transfer-points.v1",
+    "scenario.mobility.emergency-mobility.assisted-transport.v1",
+    "scenario.mobility.emergency-mobility.phased-evacuation.v1",
+    "scenario.mobility.emergency-mobility.evacuation-network-failure.v1",
+    "scenario.mobility.emergency-mobility.evacuation-exercise-effect.v1"
+  ],
+  "design_signatures": [
+    "sha256:bd0107a37a85a3d260e7af95aed16dfc590bee0066e6105d3d6f44740844e79c",
+    "sha256:ce42127e1af46ad72ca368855e6bfd49a59915c1b76f49a33f156531d3912128",
+    "sha256:5cac7071082c4f2aa5cdb786915e1934cab53196f73ab90f2f5ad7cb7fff1598",
+    "sha256:8207358a1a03a8be66cb28c9bac622bab1597a0ceafe03f947ceeec01126c043",
+    "sha256:b7988d08647a02dcc8d668ef31b0699218e27fc2aa748ba268eec20d36d546ab",
+    "sha256:d70dcaab56f58605def4bac6f27d87d353799cee6fe9a4fd52a5972e8965f03d",
+    "sha256:f90751b9e5785a69173a2678221875c6a842130a421529752e1cd5c5a293deb8",
+    "sha256:3cf956c70ec03918e5ee6a16988c784068eaa596662facb219ca4955b3a88046"
+  ],
+  "family_id": "mobility.emergency-mobility",
+  "family_order": 9,
+  "schema_version": "1.0.0",
+  "suite": "mobility-accessibility-operations",
+  "title": "Evacuation and emergency mobility"
+}

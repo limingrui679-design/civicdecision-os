@@ -1,0 +1,162 @@
+{
+  "affected_system": "urban heat-health and cooling-response system",
+  "alternatives": [
+    "target mobile cooling support to high-risk low-access neighborhoods",
+    "extend hours at existing cooling facilities near identified gaps",
+    "combine canopy, shade, and household cooling assistance"
+  ],
+  "analysis_modes": [
+    "descriptive"
+  ],
+  "assumptions": [
+    "Heat indicators are aligned to a declared local time zone and spatial support.",
+    "Cooling capacity, costs, and response effects remain explicit planning inputs.",
+    "All alternatives, capacities, costs, effects, thresholds, and failure scenarios are proposed until bound to evidence."
+  ],
+  "baseline": "Current cooling resources and observed heat exposure remain unchanged.",
+  "city_bindings": [],
+  "constraints": [
+    {
+      "binding": true,
+      "constraint_id": "scenario.climate.extreme-heat.heat-access-gaps.v1.constraint.binding",
+      "description": "Risk strata must be comparable across neighborhoods without suppressing small vulnerable groups.",
+      "hard": true,
+      "kind": "equity",
+      "required_source_roles": [
+        "climate-hazard",
+        "demographic-context",
+        "environmental-exposure",
+        "equity-attribute",
+        "facility-inventory",
+        "geographic-identity"
+      ]
+    },
+    {
+      "binding": false,
+      "constraint_id": "scenario.climate.extreme-heat.heat-access-gaps.v1.constraint.evidence-scope",
+      "description": "Every released metric must retain evidence type, source lineage, geography, time, assumptions, and uncertainty.",
+      "hard": true,
+      "kind": "technical",
+      "required_source_roles": [
+        "climate-hazard"
+      ]
+    },
+    {
+      "binding": false,
+      "constraint_id": "scenario.climate.extreme-heat.heat-access-gaps.v1.constraint.decision-authority",
+      "description": "No analytical output may bypass lawful authority, accountable human review, or an applicable appeal process.",
+      "hard": true,
+      "kind": "regulatory",
+      "required_source_roles": [
+        "climate-hazard"
+      ]
+    }
+  ],
+  "current_readiness": "blocked-missing-source",
+  "decision_cadence": "recompiled at each planning cycle and after material evidence change",
+  "decision_owner": "chief resilience officer and public-health incident lead",
+  "decision_question": "Which neighborhoods combine sustained heat exposure, vulnerable populations, and weak cooling access?",
+  "decision_type": "diagnose",
+  "design_id": "scenario.climate.extreme-heat.heat-access-gaps.v1",
+  "design_order": 1,
+  "design_signature": "sha256:5aa9b517f4356eee6de34f345d4f20d0792352a4dae66379f3e72178791d0240",
+  "evidence_requirements": [
+    "estimated",
+    "observed",
+    "proposed"
+  ],
+  "family_id": "climate.extreme-heat",
+  "family_title": "Extreme heat exposure and response",
+  "horizon": "seasonal",
+  "implementation_status": "design-only",
+  "independence_key": {
+    "binding_constraint": "Risk strata must be comparable across neighborhoods without suppressing small vulnerable groups.",
+    "decision_object": "neighborhood heat-exposure and cooling-access gaps",
+    "evidence_gate": "Every hazard, population, canopy, and facility layer resolves to the same dated neighborhood geography.",
+    "horizon": "seasonal",
+    "intervention_mechanism": "spatial overlay of heat, vulnerability, canopy, and cooling access",
+    "primary_outcome": "population in high-heat low-access areas",
+    "spatial_unit": "neighborhood"
+  },
+  "intended_claim": "A versioned diagnose design for comparing declared alternatives affecting neighborhood heat-exposure and cooling-access gaps, conditional on its evidence gate.",
+  "limitations": [
+    "This library record has no city binding and therefore reports no local input, output, or recommendation.",
+    "Readiness describes explicit source and method gates; it does not certify implementation feasibility.",
+    "External domain, legal, community, security, and operational review remains outside this design artifact."
+  ],
+  "method_claimed": false,
+  "objectives": [
+    {
+      "evidence_type": "estimated",
+      "metric": "population in high-heat low-access areas",
+      "objective_id": "scenario.climate.extreme-heat.heat-access-gaps.v1.objective.primary",
+      "primary": true,
+      "sense": "minimize",
+      "unit": "people"
+    },
+    {
+      "evidence_type": "estimated",
+      "metric": "distributional gap in population in high-heat low-access areas",
+      "objective_id": "scenario.climate.extreme-heat.heat-access-gaps.v1.objective.equity",
+      "primary": false,
+      "sense": "minimize",
+      "unit": "people"
+    },
+    {
+      "evidence_type": "observed",
+      "metric": "decision claims with complete evidence lineage",
+      "objective_id": "scenario.climate.extreme-heat.heat-access-gaps.v1.objective.traceability",
+      "primary": false,
+      "sense": "maximize",
+      "unit": "percent"
+    }
+  ],
+  "prohibited_claims": [
+    "Do not label an exposure-access screen as observed illness or a causal vulnerability score.",
+    "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+    "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+    "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+  ],
+  "release_gate": {
+    "failure_release": "Release an explicit insufficient-evidence record naming missing sources, failed diagnostics, prohibited claims, and the next validation action.",
+    "failure_status": "insufficient-evidence",
+    "gate_id": "scenario.climate.extreme-heat.heat-access-gaps.v1.gate.release",
+    "gate_type": "geographic-alignment",
+    "pass_condition": "Every hazard, population, canopy, and facility layer resolves to the same dated neighborhood geography.",
+    "required_evidence_types": [
+      "observed",
+      "proposed"
+    ],
+    "required_source_roles": [
+      "climate-hazard",
+      "demographic-context",
+      "environmental-exposure",
+      "equity-attribute",
+      "facility-inventory",
+      "geographic-identity"
+    ]
+  },
+  "required_source_roles": [
+    "climate-hazard",
+    "demographic-context",
+    "environmental-exposure",
+    "equity-attribute",
+    "facility-inventory",
+    "geographic-identity"
+  ],
+  "schema_version": "1.0.0",
+  "spatial_unit": "neighborhood",
+  "suite": "climate-disaster-resilience",
+  "tags": [
+    "climate-disaster-resilience",
+    "climate.extreme-heat",
+    "design-only",
+    "diagnose",
+    "scenario-library"
+  ],
+  "title": "Diagnose neighborhood heat exposure and cooling-access gaps",
+  "transportability_risks": [
+    "Building stock, acclimatization, canopy, humidity, and reporting behavior vary by city.",
+    "Thresholds calibrated in one climate zone may not transfer to another."
+  ]
+}

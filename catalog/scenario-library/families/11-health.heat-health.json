@@ -1,0 +1,50 @@
+{
+  "affected_system": "heat-health surveillance, prevention, and care coordination",
+  "claim_boundary": [
+    "Area exposure, service, and vulnerability records do not diagnose individuals or prove harm.",
+    "Operational allocations are proposed planning outputs, not delivered clinical or social services.",
+    "Health-effect claims require outcome panels, identification, privacy, and external review."
+  ],
+  "common_source_roles": [
+    "climate-hazard",
+    "demographic-context",
+    "health-outcome"
+  ],
+  "decision_owner": "public-health preparedness director and emergency medical services lead",
+  "decision_types": [
+    "diagnose",
+    "forecast",
+    "prioritize",
+    "site",
+    "allocate",
+    "schedule",
+    "stress-test",
+    "evaluate"
+  ],
+  "description": "Eight health-centered decisions for syndrome diagnosis, demand forecasting, prevention investment, care access, outreach allocation, surveillance timing, surge stress, and evaluation.",
+  "design_refs": [
+    "scenario.health.heat-health.heat-illness-patterns.v1",
+    "scenario.health.heat-health.heat-care-demand.v1",
+    "scenario.health.heat-health.heat-prevention-portfolio.v1",
+    "scenario.health.heat-health.heat-health-access-points.v1",
+    "scenario.health.heat-health.heat-health-outreach.v1",
+    "scenario.health.heat-health.heat-health-surveillance.v1",
+    "scenario.health.heat-health.heat-health-surge.v1",
+    "scenario.health.heat-health.heat-outreach-effect.v1"
+  ],
+  "design_signatures": [
+    "sha256:02c92b6e09d163d7513bc9d9ff672ebe2217671096fe947674e1e66bd4659ce1",
+    "sha256:334fdff29da8e5d0e7c6dbae972baccfea865b2c6e1dcdfb7859ad81940446c7",
+    "sha256:80b5a3d699cd25ef2da1a1c70188fe91dd3225df3ac8f0a525d3875ce39a73c5",
+    "sha256:5fec244d6c7bc006687d0db8f52d3ea440a269b76274c5cc1eb4a186d95b4912",
+    "sha256:57fe8719e6a2e0f50a7267ff6c27bf27bd27261523bca385a803a7feec12c52e",
+    "sha256:a7ee187056b3e0a9d1f511b17f4755f93607e74a3fd22ed7724920d1ae72b36e",
+    "sha256:5b25be1dd9afac13ec771f70313ac463edcc72f263f9f8706f5a882139ab71aa",
+    "sha256:a9e0b268163ef500f3a564a1e624cb2a2726d76d589b61ec480763756305e530"
+  ],
+  "family_id": "health.heat-health",
+  "family_order": 11,
+  "schema_version": "1.0.0",
+  "suite": "population-health-environmental-exposure",
+  "title": "Heat-health surveillance and prevention"
+}

@@ -1,0 +1,164 @@
+{
+  "affected_system": "rights-preserving compliance assistance, incentives, inspections, and enforcement",
+  "alternatives": [
+    "rank verified high-consequence candidates for rights-preserving compliance and assistance portfolio",
+    "select a risk-, equity-, and lifecycle-balanced portfolio for rights-preserving compliance and assistance portfolio",
+    "pair burden, effectiveness evidence, rights, equity, cost, and deliverability prioritization with an explicit stop, review, and escalation rule"
+  ],
+  "analysis_modes": [
+    "descriptive",
+    "optimization"
+  ],
+  "assumptions": [
+    "Eligibility, notice, awareness, capability, action, inspection, violation, sanction, and outcome remain distinct.",
+    "No behavioral score automatically triggers enforcement, benefit denial, or coercive action.",
+    "All alternatives, capacities, costs, effects, thresholds, and failure scenarios are proposed until bound to evidence."
+  ],
+  "baseline": "fund only already-committed work for rights-preserving compliance and assistance portfolio.",
+  "city_bindings": [],
+  "constraints": [
+    {
+      "binding": true,
+      "constraint_id": "scenario.equity.compliance-incentives.compliance-policy-portfolio.v1.constraint.binding",
+      "description": "The compliance, incentives, and behavioral policy prioritize must respect declared capital, operating, maintenance, and delivery budgets.",
+      "hard": true,
+      "kind": "budget",
+      "required_source_roles": [
+        "community-input",
+        "demographic-context",
+        "equity-attribute",
+        "financial-cost",
+        "legal-regulatory",
+        "municipal-demand"
+      ]
+    },
+    {
+      "binding": false,
+      "constraint_id": "scenario.equity.compliance-incentives.compliance-policy-portfolio.v1.constraint.evidence-scope",
+      "description": "Every released metric must retain evidence type, source lineage, geography, time, assumptions, and uncertainty.",
+      "hard": true,
+      "kind": "technical",
+      "required_source_roles": [
+        "community-input"
+      ]
+    },
+    {
+      "binding": false,
+      "constraint_id": "scenario.equity.compliance-incentives.compliance-policy-portfolio.v1.constraint.decision-authority",
+      "description": "No analytical output may bypass lawful authority, accountable human review, or an applicable appeal process.",
+      "hard": true,
+      "kind": "regulatory",
+      "required_source_roles": [
+        "community-input"
+      ]
+    }
+  ],
+  "current_readiness": "blocked-missing-source",
+  "decision_cadence": "recompiled at each planning cycle and after material evidence change",
+  "decision_owner": "regulatory operations director and behavioral insights lead",
+  "decision_question": "Which simplification, reminder, incentive, technical support, inspection, and accountability measures should be funded?",
+  "decision_type": "prioritize",
+  "design_id": "scenario.equity.compliance-incentives.compliance-policy-portfolio.v1",
+  "design_order": 227,
+  "design_signature": "sha256:e56cc51f81b9a9b79cd3abf88e0c655d8d4e2bafe879746057bbeca0ed457a97",
+  "evidence_requirements": [
+    "estimated",
+    "observed",
+    "optimized",
+    "proposed"
+  ],
+  "family_id": "equity.compliance-incentives",
+  "family_title": "Compliance, incentives, and behavioral policy",
+  "horizon": "multi-year",
+  "implementation_status": "design-only",
+  "independence_key": {
+    "binding_constraint": "The compliance, incentives, and behavioral policy prioritize must respect declared capital, operating, maintenance, and delivery budgets.",
+    "decision_object": "rights-preserving compliance and assistance portfolio",
+    "evidence_gate": "Evidence for rights-preserving compliance and assistance portfolio passes documented checks for cost, benefit, service life, dependencies, deliverability, and maintenance burden.",
+    "horizon": "multi-year",
+    "intervention_mechanism": "burden, effectiveness evidence, rights, equity, cost, and deliverability prioritization",
+    "primary_outcome": "verified unresolved compliance burden and harm risk",
+    "spatial_unit": "service-area"
+  },
+  "intended_claim": "A versioned prioritize design for comparing declared alternatives affecting rights-preserving compliance and assistance portfolio, conditional on its evidence gate.",
+  "limitations": [
+    "This library record has no city binding and therefore reports no local input, output, or recommendation.",
+    "Readiness describes explicit source and method gates; it does not certify implementation feasibility.",
+    "External domain, legal, community, security, and operational review remains outside this design artifact."
+  ],
+  "method_claimed": false,
+  "objectives": [
+    {
+      "evidence_type": "estimated",
+      "metric": "verified unresolved compliance burden and harm risk",
+      "objective_id": "scenario.equity.compliance-incentives.compliance-policy-portfolio.v1.objective.primary",
+      "primary": true,
+      "sense": "minimize",
+      "unit": "case-days"
+    },
+    {
+      "evidence_type": "estimated",
+      "metric": "distributional gap in verified unresolved compliance burden and harm risk",
+      "objective_id": "scenario.equity.compliance-incentives.compliance-policy-portfolio.v1.objective.equity",
+      "primary": false,
+      "sense": "minimize",
+      "unit": "case-days"
+    },
+    {
+      "evidence_type": "observed",
+      "metric": "decision claims with complete evidence lineage",
+      "objective_id": "scenario.equity.compliance-incentives.compliance-policy-portfolio.v1.objective.traceability",
+      "primary": false,
+      "sense": "maximize",
+      "unit": "percent"
+    }
+  ],
+  "prohibited_claims": [
+    "Do not report modeled compliance change as lawful behavior, public benefit, or welfare improvement.",
+    "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+    "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+    "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+  ],
+  "release_gate": {
+    "failure_release": "Release an explicit insufficient-evidence record naming missing sources, failed diagnostics, prohibited claims, and the next validation action.",
+    "failure_status": "insufficient-evidence",
+    "gate_id": "scenario.equity.compliance-incentives.compliance-policy-portfolio.v1.gate.release",
+    "gate_type": "cost-capacity",
+    "pass_condition": "Evidence for rights-preserving compliance and assistance portfolio passes documented checks for cost, benefit, service life, dependencies, deliverability, and maintenance burden.",
+    "required_evidence_types": [
+      "observed",
+      "proposed"
+    ],
+    "required_source_roles": [
+      "community-input",
+      "demographic-context",
+      "equity-attribute",
+      "financial-cost",
+      "legal-regulatory",
+      "municipal-demand"
+    ]
+  },
+  "required_source_roles": [
+    "community-input",
+    "demographic-context",
+    "equity-attribute",
+    "financial-cost",
+    "legal-regulatory",
+    "municipal-demand"
+  ],
+  "schema_version": "1.0.0",
+  "spatial_unit": "service-area",
+  "suite": "behavioral-policy-equity",
+  "tags": [
+    "behavioral-policy-equity",
+    "design-only",
+    "equity.compliance-incentives",
+    "prioritize",
+    "scenario-library"
+  ],
+  "title": "Prioritize compliance assistance and policy redesign",
+  "transportability_risks": [
+    "Law, administrative burden, trust, incentives, capability, enforcement, and baseline behavior differ.",
+    "Observed compliance may reflect detection and documentation rather than underlying behavior."
+  ]
+}

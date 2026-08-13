@@ -1,0 +1,170 @@
+{
+  "affected_system": "cross-agency public-service access, workload, quality, and outcome distribution",
+  "alternatives": [
+    "compare eligible treated and credible untreated units for phased cross-agency service-equity intervention",
+    "estimate pre-specified overall and distributional effects of phased cross-agency service-equity intervention",
+    "pair staggered service-area evaluation with need and outcome panels with an explicit stop, review, and escalation rule"
+  ],
+  "analysis_modes": [
+    "descriptive",
+    "causal"
+  ],
+  "assumptions": [
+    "Need, eligibility, access, requests, service, quality, and outcomes remain separate measures.",
+    "Protected and vulnerable group reporting follows privacy, legal, and small-cell safeguards.",
+    "All alternatives, capacities, costs, effects, thresholds, and failure scenarios are proposed until bound to evidence."
+  ],
+  "baseline": "retain pre-intervention conditions for phased cross-agency service-equity intervention.",
+  "city_bindings": [],
+  "constraints": [
+    {
+      "binding": true,
+      "constraint_id": "scenario.equity.distributional-service.equity-policy-effect.v1.constraint.binding",
+      "description": "The distributional public-service equity evaluate must respect declared pre-specified assignment, comparison, outcome, spillover, and subgroup rules.",
+      "hard": true,
+      "kind": "equity",
+      "required_source_roles": [
+        "community-input",
+        "demographic-context",
+        "equity-attribute",
+        "intervention-assignment",
+        "legal-regulatory",
+        "municipal-demand",
+        "outcome-panel",
+        "service-schedule"
+      ]
+    },
+    {
+      "binding": false,
+      "constraint_id": "scenario.equity.distributional-service.equity-policy-effect.v1.constraint.evidence-scope",
+      "description": "Every released metric must retain evidence type, source lineage, geography, time, assumptions, and uncertainty.",
+      "hard": true,
+      "kind": "technical",
+      "required_source_roles": [
+        "community-input"
+      ]
+    },
+    {
+      "binding": false,
+      "constraint_id": "scenario.equity.distributional-service.equity-policy-effect.v1.constraint.decision-authority",
+      "description": "No analytical output may bypass lawful authority, accountable human review, or an applicable appeal process.",
+      "hard": true,
+      "kind": "regulatory",
+      "required_source_roles": [
+        "community-input"
+      ]
+    }
+  ],
+  "current_readiness": "blocked-multiple-gates",
+  "decision_cadence": "recompiled at each planning cycle and after material evidence change",
+  "decision_owner": "chief equity officer and city performance director",
+  "decision_question": "Did phased access and capacity interventions reduce verified need-adjusted disparities without displacement?",
+  "decision_type": "evaluate",
+  "design_id": "scenario.equity.distributional-service.equity-policy-effect.v1",
+  "design_order": 216,
+  "design_signature": "sha256:fd89e399000a5a0e4d86f96292cc07a06e135ac71ae78a72ed9a0475ec78e64b",
+  "evidence_requirements": [
+    "causal",
+    "estimated",
+    "observed",
+    "proposed"
+  ],
+  "family_id": "equity.distributional-service",
+  "family_title": "Distributional public-service equity",
+  "horizon": "multi-year",
+  "implementation_status": "design-only",
+  "independence_key": {
+    "binding_constraint": "The distributional public-service equity evaluate must respect declared pre-specified assignment, comparison, outcome, spillover, and subgroup rules.",
+    "decision_object": "phased cross-agency service-equity intervention",
+    "evidence_gate": "Evidence for phased cross-agency service-equity intervention passes documented checks for dated assignment, comparison validity, pre-trends, outcome panels, attrition, spillovers, and falsification tests.",
+    "horizon": "multi-year",
+    "intervention_mechanism": "staggered service-area evaluation with need and outcome panels",
+    "primary_outcome": "change in need-adjusted service access and outcome gaps",
+    "spatial_unit": "population-group"
+  },
+  "intended_claim": "A versioned evaluate design for comparing declared alternatives affecting phased cross-agency service-equity intervention, conditional on its evidence gate.",
+  "limitations": [
+    "This library record has no city binding and therefore reports no local input, output, or recommendation.",
+    "Readiness describes explicit source and method gates; it does not certify implementation feasibility.",
+    "External domain, legal, community, security, and operational review remains outside this design artifact."
+  ],
+  "method_claimed": false,
+  "objectives": [
+    {
+      "evidence_type": "estimated",
+      "metric": "change in need-adjusted service access and outcome gaps",
+      "objective_id": "scenario.equity.distributional-service.equity-policy-effect.v1.objective.primary",
+      "primary": true,
+      "sense": "minimize",
+      "unit": "percentage points"
+    },
+    {
+      "evidence_type": "estimated",
+      "metric": "distributional gap in change in need-adjusted service access and outcome gaps",
+      "objective_id": "scenario.equity.distributional-service.equity-policy-effect.v1.objective.equity",
+      "primary": false,
+      "sense": "minimize",
+      "unit": "percentage points"
+    },
+    {
+      "evidence_type": "observed",
+      "metric": "decision claims with complete evidence lineage",
+      "objective_id": "scenario.equity.distributional-service.equity-policy-effect.v1.objective.traceability",
+      "primary": false,
+      "sense": "maximize",
+      "unit": "percent"
+    }
+  ],
+  "prohibited_claims": [
+    "Do not infer discrimination reduction, welfare, or causal equity from area-level requests alone.",
+    "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+    "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+    "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+  ],
+  "release_gate": {
+    "failure_release": "Release an explicit insufficient-evidence record naming missing sources, failed diagnostics, prohibited claims, and the next validation action.",
+    "failure_status": "insufficient-evidence",
+    "gate_id": "scenario.equity.distributional-service.equity-policy-effect.v1.gate.release",
+    "gate_type": "causal-identification",
+    "pass_condition": "Evidence for phased cross-agency service-equity intervention passes documented checks for dated assignment, comparison validity, pre-trends, outcome panels, attrition, spillovers, and falsification tests.",
+    "required_evidence_types": [
+      "causal",
+      "observed"
+    ],
+    "required_source_roles": [
+      "community-input",
+      "demographic-context",
+      "equity-attribute",
+      "intervention-assignment",
+      "legal-regulatory",
+      "municipal-demand",
+      "outcome-panel",
+      "service-schedule"
+    ]
+  },
+  "required_source_roles": [
+    "community-input",
+    "demographic-context",
+    "equity-attribute",
+    "intervention-assignment",
+    "legal-regulatory",
+    "municipal-demand",
+    "outcome-panel",
+    "service-schedule"
+  ],
+  "schema_version": "1.0.0",
+  "spatial_unit": "population-group",
+  "suite": "behavioral-policy-equity",
+  "tags": [
+    "behavioral-policy-equity",
+    "design-only",
+    "equity.distributional-service",
+    "evaluate",
+    "scenario-library"
+  ],
+  "title": "Evaluate service-equity interventions",
+  "transportability_risks": [
+    "Rights, demographics, service rules, need measurement, geography, and reporting access differ.",
+    "Administrative denominators may omit eligible or underserved populations."
+  ]
+}

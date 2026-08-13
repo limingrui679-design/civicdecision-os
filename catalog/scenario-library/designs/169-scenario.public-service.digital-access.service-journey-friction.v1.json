@@ -1,0 +1,162 @@
+{
+  "affected_system": "public digital services, identity, applications, appointments, and assisted access",
+  "alternatives": [
+    "verify the highest-consequence signals before acting on end-to-end public-service journey friction",
+    "combine targeted inspection, monitoring, and data-quality repair for end-to-end public-service journey friction",
+    "pair privacy-preserving event, application, appointment, and contact journey diagnosis with an explicit stop, review, and escalation rule"
+  ],
+  "analysis_modes": [
+    "descriptive"
+  ],
+  "assumptions": [
+    "Page events, applications, errors, appointments, contacts, decisions, and outcomes remain distinct.",
+    "No automated score determines eligibility, enforcement, or denial without lawful human review.",
+    "All alternatives, capacities, costs, effects, thresholds, and failure scenarios are proposed until bound to evidence."
+  ],
+  "baseline": "continue current inspection and reporting practice for end-to-end public-service journey friction.",
+  "city_bindings": [],
+  "constraints": [
+    {
+      "binding": true,
+      "constraint_id": "scenario.public-service.digital-access.service-journey-friction.v1.constraint.binding",
+      "description": "The digital public access and administrative service delivery diagnose must respect declared measurement resolution and classification uncertainty.",
+      "hard": true,
+      "kind": "technical",
+      "required_source_roles": [
+        "community-input",
+        "demographic-context",
+        "equity-attribute",
+        "municipal-demand",
+        "real-time-state",
+        "service-schedule"
+      ]
+    },
+    {
+      "binding": false,
+      "constraint_id": "scenario.public-service.digital-access.service-journey-friction.v1.constraint.evidence-scope",
+      "description": "Every released metric must retain evidence type, source lineage, geography, time, assumptions, and uncertainty.",
+      "hard": true,
+      "kind": "technical",
+      "required_source_roles": [
+        "community-input"
+      ]
+    },
+    {
+      "binding": false,
+      "constraint_id": "scenario.public-service.digital-access.service-journey-friction.v1.constraint.decision-authority",
+      "description": "No analytical output may bypass lawful authority, accountable human review, or an applicable appeal process.",
+      "hard": true,
+      "kind": "regulatory",
+      "required_source_roles": [
+        "community-input"
+      ]
+    }
+  ],
+  "current_readiness": "blocked-missing-source",
+  "decision_cadence": "recompiled at each planning cycle and after material evidence change",
+  "decision_owner": "chief digital officer and administrative service delivery director",
+  "decision_question": "Where do users encounter verified error, abandonment, repeat contact, language, access, or handoff friction?",
+  "decision_type": "diagnose",
+  "design_id": "scenario.public-service.digital-access.service-journey-friction.v1",
+  "design_order": 169,
+  "design_signature": "sha256:8ac3bdc9644032b56a5b6340c10a2456b1630d4cb5c38d5a2da74790471e5dce",
+  "evidence_requirements": [
+    "estimated",
+    "observed",
+    "proposed"
+  ],
+  "family_id": "public-service.digital-access",
+  "family_title": "Digital public access and administrative service delivery",
+  "horizon": "annual",
+  "implementation_status": "design-only",
+  "independence_key": {
+    "binding_constraint": "The digital public access and administrative service delivery diagnose must respect declared measurement resolution and classification uncertainty.",
+    "decision_object": "end-to-end public-service journey friction",
+    "evidence_gate": "Evidence for end-to-end public-service journey friction passes documented checks for coverage, semantics, geography, timestamps, and uncertainty.",
+    "horizon": "annual",
+    "intervention_mechanism": "privacy-preserving event, application, appointment, and contact journey diagnosis",
+    "primary_outcome": "eligible service journeys with unresolved verified friction",
+    "spatial_unit": "population-group"
+  },
+  "intended_claim": "A versioned diagnose design for comparing declared alternatives affecting end-to-end public-service journey friction, conditional on its evidence gate.",
+  "limitations": [
+    "This library record has no city binding and therefore reports no local input, output, or recommendation.",
+    "Readiness describes explicit source and method gates; it does not certify implementation feasibility.",
+    "External domain, legal, community, security, and operational review remains outside this design artifact."
+  ],
+  "method_claimed": false,
+  "objectives": [
+    {
+      "evidence_type": "estimated",
+      "metric": "eligible service journeys with unresolved verified friction",
+      "objective_id": "scenario.public-service.digital-access.service-journey-friction.v1.objective.primary",
+      "primary": true,
+      "sense": "minimize",
+      "unit": "journeys"
+    },
+    {
+      "evidence_type": "estimated",
+      "metric": "distributional gap in eligible service journeys with unresolved verified friction",
+      "objective_id": "scenario.public-service.digital-access.service-journey-friction.v1.objective.equity",
+      "primary": false,
+      "sense": "minimize",
+      "unit": "journeys"
+    },
+    {
+      "evidence_type": "observed",
+      "metric": "decision claims with complete evidence lineage",
+      "objective_id": "scenario.public-service.digital-access.service-journey-friction.v1.objective.traceability",
+      "primary": false,
+      "sense": "maximize",
+      "unit": "percent"
+    }
+  ],
+  "prohibited_claims": [
+    "Do not interpret non-completion as ineligibility, user error, disinterest, or lack of need.",
+    "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+    "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+    "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+  ],
+  "release_gate": {
+    "failure_release": "Release an explicit insufficient-evidence record naming missing sources, failed diagnostics, prohibited claims, and the next validation action.",
+    "failure_status": "insufficient-evidence",
+    "gate_id": "scenario.public-service.digital-access.service-journey-friction.v1.gate.release",
+    "gate_type": "geographic-alignment",
+    "pass_condition": "Evidence for end-to-end public-service journey friction passes documented checks for coverage, semantics, geography, timestamps, and uncertainty.",
+    "required_evidence_types": [
+      "observed",
+      "proposed"
+    ],
+    "required_source_roles": [
+      "community-input",
+      "demographic-context",
+      "equity-attribute",
+      "municipal-demand",
+      "real-time-state",
+      "service-schedule"
+    ]
+  },
+  "required_source_roles": [
+    "community-input",
+    "demographic-context",
+    "equity-attribute",
+    "municipal-demand",
+    "real-time-state",
+    "service-schedule"
+  ],
+  "schema_version": "1.0.0",
+  "spatial_unit": "population-group",
+  "suite": "public-service-operations",
+  "tags": [
+    "design-only",
+    "diagnose",
+    "public-service-operations",
+    "public-service.digital-access",
+    "scenario-library"
+  ],
+  "title": "Diagnose digital and assisted-service journey friction",
+  "transportability_risks": [
+    "Eligibility, identity, language, disability access, connectivity, trust, and service design differ.",
+    "Digital telemetry omits non-users and can encode device or tracking coverage."
+  ]
+}

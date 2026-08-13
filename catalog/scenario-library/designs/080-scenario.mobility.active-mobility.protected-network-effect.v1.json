@@ -1,0 +1,167 @@
+{
+  "affected_system": "walking, cycling, and shared micromobility network",
+  "alternatives": [
+    "compare eligible treated and credible untreated units for phased protected walking and cycling network expansion",
+    "estimate pre-specified overall and distributional effects of phased protected walking and cycling network expansion",
+    "pair corridor event-study with count and conflict panels with an explicit stop, review, and escalation rule"
+  ],
+  "analysis_modes": [
+    "descriptive",
+    "causal"
+  ],
+  "assumptions": [
+    "Trips, counts, facilities, stress levels, barriers, and shared-vehicle states use documented coverage.",
+    "Observed shared-system trips do not represent all walking and cycling demand.",
+    "All alternatives, capacities, costs, effects, thresholds, and failure scenarios are proposed until bound to evidence."
+  ],
+  "baseline": "retain pre-intervention conditions for phased protected walking and cycling network expansion.",
+  "city_bindings": [],
+  "constraints": [
+    {
+      "binding": true,
+      "constraint_id": "scenario.mobility.active-mobility.protected-network-effect.v1.constraint.binding",
+      "description": "The active mobility network and micromobility evaluate must respect declared pre-specified assignment, comparison, outcome, spillover, and subgroup rules.",
+      "hard": true,
+      "kind": "equity",
+      "required_source_roles": [
+        "asset-inventory",
+        "environmental-exposure",
+        "equity-attribute",
+        "geographic-identity",
+        "intervention-assignment",
+        "outcome-panel",
+        "transport-network"
+      ]
+    },
+    {
+      "binding": false,
+      "constraint_id": "scenario.mobility.active-mobility.protected-network-effect.v1.constraint.evidence-scope",
+      "description": "Every released metric must retain evidence type, source lineage, geography, time, assumptions, and uncertainty.",
+      "hard": true,
+      "kind": "technical",
+      "required_source_roles": [
+        "asset-inventory"
+      ]
+    },
+    {
+      "binding": false,
+      "constraint_id": "scenario.mobility.active-mobility.protected-network-effect.v1.constraint.decision-authority",
+      "description": "No analytical output may bypass lawful authority, accountable human review, or an applicable appeal process.",
+      "hard": true,
+      "kind": "regulatory",
+      "required_source_roles": [
+        "asset-inventory"
+      ]
+    }
+  ],
+  "current_readiness": "blocked-multiple-gates",
+  "decision_cadence": "recompiled at each planning cycle and after material evidence change",
+  "decision_owner": "active transportation director and shared-mobility program manager",
+  "decision_question": "Did phased protected links change exposure-normalized use, conflicts, and access across groups?",
+  "decision_type": "evaluate",
+  "design_id": "scenario.mobility.active-mobility.protected-network-effect.v1",
+  "design_order": 80,
+  "design_signature": "sha256:51607909ed55f628835927a9bea52d419a8b4cf899b1315be0467c58bdf0e580",
+  "evidence_requirements": [
+    "causal",
+    "estimated",
+    "observed",
+    "proposed"
+  ],
+  "family_id": "mobility.active-mobility",
+  "family_title": "Active mobility network and micromobility",
+  "horizon": "multi-year",
+  "implementation_status": "design-only",
+  "independence_key": {
+    "binding_constraint": "The active mobility network and micromobility evaluate must respect declared pre-specified assignment, comparison, outcome, spillover, and subgroup rules.",
+    "decision_object": "phased protected walking and cycling network expansion",
+    "evidence_gate": "Evidence for phased protected walking and cycling network expansion passes documented checks for dated assignment, comparison validity, pre-trends, outcome panels, attrition, spillovers, and falsification tests.",
+    "horizon": "multi-year",
+    "intervention_mechanism": "corridor event-study with count and conflict panels",
+    "primary_outcome": "change in low-stress trips and exposure-normalized conflicts",
+    "spatial_unit": "corridor"
+  },
+  "intended_claim": "A versioned evaluate design for comparing declared alternatives affecting phased protected walking and cycling network expansion, conditional on its evidence gate.",
+  "limitations": [
+    "This library record has no city binding and therefore reports no local input, output, or recommendation.",
+    "Readiness describes explicit source and method gates; it does not certify implementation feasibility.",
+    "External domain, legal, community, security, and operational review remains outside this design artifact."
+  ],
+  "method_claimed": false,
+  "objectives": [
+    {
+      "evidence_type": "estimated",
+      "metric": "change in low-stress trips and exposure-normalized conflicts",
+      "objective_id": "scenario.mobility.active-mobility.protected-network-effect.v1.objective.primary",
+      "primary": true,
+      "sense": "minimize",
+      "unit": "trips and conflicts per day"
+    },
+    {
+      "evidence_type": "estimated",
+      "metric": "distributional gap in change in low-stress trips and exposure-normalized conflicts",
+      "objective_id": "scenario.mobility.active-mobility.protected-network-effect.v1.objective.equity",
+      "primary": false,
+      "sense": "minimize",
+      "unit": "trips and conflicts per day"
+    },
+    {
+      "evidence_type": "observed",
+      "metric": "decision claims with complete evidence lineage",
+      "objective_id": "scenario.mobility.active-mobility.protected-network-effect.v1.objective.traceability",
+      "primary": false,
+      "sense": "maximize",
+      "unit": "percent"
+    }
+  ],
+  "prohibited_claims": [
+    "Do not infer causal mode shift or injury reduction from selected counters or simple before-after totals.",
+    "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+    "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+    "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+  ],
+  "release_gate": {
+    "failure_release": "Release an explicit insufficient-evidence record naming missing sources, failed diagnostics, prohibited claims, and the next validation action.",
+    "failure_status": "insufficient-evidence",
+    "gate_id": "scenario.mobility.active-mobility.protected-network-effect.v1.gate.release",
+    "gate_type": "causal-identification",
+    "pass_condition": "Evidence for phased protected walking and cycling network expansion passes documented checks for dated assignment, comparison validity, pre-trends, outcome panels, attrition, spillovers, and falsification tests.",
+    "required_evidence_types": [
+      "causal",
+      "observed"
+    ],
+    "required_source_roles": [
+      "asset-inventory",
+      "environmental-exposure",
+      "equity-attribute",
+      "geographic-identity",
+      "intervention-assignment",
+      "outcome-panel",
+      "transport-network"
+    ]
+  },
+  "required_source_roles": [
+    "asset-inventory",
+    "environmental-exposure",
+    "equity-attribute",
+    "geographic-identity",
+    "intervention-assignment",
+    "outcome-panel",
+    "transport-network"
+  ],
+  "schema_version": "1.0.0",
+  "spatial_unit": "corridor",
+  "suite": "mobility-accessibility-operations",
+  "tags": [
+    "design-only",
+    "evaluate",
+    "mobility-accessibility-operations",
+    "mobility.active-mobility",
+    "scenario-library"
+  ],
+  "title": "Evaluate protected active-mobility network expansion",
+  "transportability_risks": [
+    "Topography, climate, street stress, vehicle access, pricing, and safety perceptions vary.",
+    "Platform data can exclude private bicycles, pedestrians, and non-users."
+  ]
+}

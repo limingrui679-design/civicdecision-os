@@ -1,0 +1,333 @@
+{
+  "designs": [
+    {
+      "analysis_modes": [
+        "descriptive"
+      ],
+      "binding_constraint": "The food access and environmental health diagnose must respect declared measurement resolution and classification uncertainty.",
+      "content_hash": "sha256:d5560f54ad3b84b2df3cd46997021de51e53d502b6fb79ab0e753affff33785c",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Where do outlet access, affordability, verified hazards, inspection coverage, and assistance gaps coincide?",
+      "decision_type": "diagnose",
+      "design_id": "scenario.health.food-environment.food-environment-gaps.v1",
+      "design_order": 105,
+      "evidence_gate": "geographic-alignment",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "proposed"
+      ],
+      "family_id": "health.food-environment",
+      "family_title": "Food access and environmental health",
+      "horizon": "annual",
+      "implementation_status": "design-only",
+      "primary_outcome": "people in high-need low-service conditions",
+      "prohibited_claims": [
+        "Do not convert request labels, outlet distance, or program nonparticipation into verified hazard or hunger.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "neighborhood",
+      "suite": "population-health-environmental-exposure",
+      "title": "Diagnose food-access and environmental-health service gaps"
+    },
+    {
+      "analysis_modes": [
+        "forecast"
+      ],
+      "binding_constraint": "The food access and environmental health forecast must respect declared validated operational capacity and forecast uncertainty.",
+      "content_hash": "sha256:98b5d7bd25db1c5aad9acbb0727cfdba72b28dd858cd92f33399c1808c6c17c0",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "What seasonal inspection, complaint, market-disruption, and assistance workload should operations prepare for?",
+      "decision_type": "forecast",
+      "design_id": "scenario.health.food-environment.inspection-assistance-demand.v1",
+      "design_order": 106,
+      "evidence_gate": "model-calibration",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "proposed"
+      ],
+      "family_id": "health.food-environment",
+      "family_title": "Food access and environmental health",
+      "horizon": "weeks",
+      "implementation_status": "design-only",
+      "primary_outcome": "priority service demand above staffed capacity",
+      "prohibited_claims": [
+        "Do not call forecast cases verified violations, illness, or food insecurity.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "service-area",
+      "suite": "population-health-environmental-exposure",
+      "title": "Forecast inspection and food-assistance service demand"
+    },
+    {
+      "analysis_modes": [
+        "descriptive",
+        "optimization"
+      ],
+      "binding_constraint": "The food access and environmental health prioritize must respect declared capital, operating, maintenance, and delivery budgets.",
+      "content_hash": "sha256:2162ea75f9be6f937dd65b5edc473b242d61450fd8960ec29d5746047c1419e5",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Which inspection, cold-chain, market, transportation, and assistance investments should be funded?",
+      "decision_type": "prioritize",
+      "design_id": "scenario.health.food-environment.food-health-portfolio.v1",
+      "design_order": 107,
+      "evidence_gate": "cost-capacity",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed"
+      ],
+      "family_id": "health.food-environment",
+      "family_title": "Food access and environmental health",
+      "horizon": "multi-year",
+      "implementation_status": "design-only",
+      "primary_outcome": "population-weighted food and environmental service gap",
+      "prohibited_claims": [
+        "Do not report modeled access improvement as better diet, health, or verified hazard reduction.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "asset",
+      "suite": "population-health-environmental-exposure",
+      "title": "Prioritize food-access and environmental-health investments"
+    },
+    {
+      "analysis_modes": [
+        "simulation",
+        "optimization"
+      ],
+      "binding_constraint": "The food access and environmental health site must respect declared land control, accessibility, permitting, safety, and operating feasibility.",
+      "content_hash": "sha256:8cf95520b77a3c1d0bb3a937b6d7109fc3659f6fd0cbee0ae414eaff7acbe794",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Where should mobile markets, benefit navigation, cooling, and field-service access points operate?",
+      "decision_type": "site",
+      "design_id": "scenario.health.food-environment.food-access-services.v1",
+      "design_order": 108,
+      "evidence_gate": "legal-authority",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "family_id": "health.food-environment",
+      "family_title": "Food access and environmental health",
+      "horizon": "multi-year",
+      "implementation_status": "design-only",
+      "primary_outcome": "eligible people beyond affordable timely service access",
+      "prohibited_claims": [
+        "Do not label a site affordable, culturally appropriate, permitted, or used without evidence.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "facility",
+      "suite": "population-health-environmental-exposure",
+      "title": "Site food-access and environmental-health service points"
+    },
+    {
+      "analysis_modes": [
+        "simulation",
+        "optimization"
+      ],
+      "binding_constraint": "The food access and environmental health allocate must respect declared minimum service, eligibility, capacity, and distributional safeguards.",
+      "content_hash": "sha256:10039af612ee0bfdaa5f6535cbc243356be17e7bed1f4d336f44aff935b840c3",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "How should inspectors, sampling, emergency food, refrigeration, and navigation capacity be distributed?",
+      "decision_type": "allocate",
+      "design_id": "scenario.health.food-environment.inspection-assistance-resources.v1",
+      "design_order": 109,
+      "evidence_gate": "equity-measurement",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "family_id": "health.food-environment",
+      "family_title": "Food access and environmental health",
+      "horizon": "weeks",
+      "implementation_status": "design-only",
+      "primary_outcome": "priority cases and eligible demand without assigned capacity",
+      "prohibited_claims": [
+        "Do not report assigned inspections, benefits, or food supplies as completed or received.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "service-area",
+      "suite": "population-health-environmental-exposure",
+      "title": "Allocate inspectors, food support, and field resources"
+    },
+    {
+      "analysis_modes": [
+        "forecast",
+        "optimization"
+      ],
+      "binding_constraint": "The food access and environmental health schedule must respect declared labor, access, sequencing, notice, and completion windows.",
+      "content_hash": "sha256:c04c8654520d3bb2ce418a87fe720e062c08856f164033fad4427c3c4f997794",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "When should risk-based inspections, follow-ups, mobile markets, and benefit navigation operate?",
+      "decision_type": "schedule",
+      "design_id": "scenario.health.food-environment.inspection-mobile-service.v1",
+      "design_order": 110,
+      "evidence_gate": "temporal-alignment",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed"
+      ],
+      "family_id": "health.food-environment",
+      "family_title": "Food access and environmental health",
+      "horizon": "weeks",
+      "implementation_status": "design-only",
+      "primary_outcome": "priority case-days outside response targets",
+      "prohibited_claims": [
+        "Do not call a scheduled visit completed, a violation confirmed, or assistance received.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "network",
+      "suite": "population-health-environmental-exposure",
+      "title": "Schedule inspections and mobile food services"
+    },
+    {
+      "analysis_modes": [
+        "forecast",
+        "simulation",
+        "optimization"
+      ],
+      "binding_constraint": "The food access and environmental health stress test must respect declared minimum continuity and safety thresholds across severe scenarios.",
+      "content_hash": "sha256:516db67611b4f7003f7e9fdb597118aaeb6cfa2f0d6890a1f4bc909476fcebf4",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Which response portfolio preserves safe food access during power, supply, climate, and facility disruptions?",
+      "decision_type": "stress-test",
+      "design_id": "scenario.health.food-environment.food-system-disruption.v1",
+      "design_order": 111,
+      "evidence_gate": "external-validation",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "family_id": "health.food-environment",
+      "family_title": "Food access and environmental health",
+      "horizon": "seasonal",
+      "implementation_status": "design-only",
+      "primary_outcome": "scenario-weighted people below minimum safe food access",
+      "prohibited_claims": [
+        "Do not present synthetic shortages, contamination, or facility failures as observed events.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "network",
+      "suite": "population-health-environmental-exposure",
+      "title": "Stress-test food and environmental-health continuity"
+    },
+    {
+      "analysis_modes": [
+        "descriptive",
+        "causal"
+      ],
+      "binding_constraint": "The food access and environmental health evaluate must respect declared pre-specified assignment, comparison, outcome, spillover, and subgroup rules.",
+      "content_hash": "sha256:ca424ef8050c6b2b2b37a09c89bb5d659d656e3fd0e4b7f64b5e88396e43addf",
+      "current_readiness": "blocked-multiple-gates",
+      "decision_question": "Did phased mobile services improve verified access and benefit completion among eligible groups?",
+      "decision_type": "evaluate",
+      "design_id": "scenario.health.food-environment.mobile-food-access-effect.v1",
+      "design_order": 112,
+      "evidence_gate": "causal-identification",
+      "evidence_types": [
+        "causal",
+        "estimated",
+        "observed",
+        "proposed"
+      ],
+      "family_id": "health.food-environment",
+      "family_title": "Food access and environmental health",
+      "horizon": "multi-year",
+      "implementation_status": "design-only",
+      "primary_outcome": "change in verified affordable food-service completion",
+      "prohibited_claims": [
+        "Do not infer food security, diet quality, or health impact from program use alone.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "population-group",
+      "suite": "population-health-environmental-exposure",
+      "title": "Evaluate mobile food-access and benefit-navigation programs"
+    }
+  ],
+  "family": {
+    "affected_system": "food access, environmental health inspection, and community protection",
+    "claim_boundary": [
+      "Area exposure, service, and vulnerability records do not diagnose individuals or prove harm.",
+      "Operational allocations are proposed planning outputs, not delivered clinical or social services.",
+      "Health-effect claims require outcome panels, identification, privacy, and external review."
+    ],
+    "common_source_roles": [
+      "demographic-context",
+      "facility-inventory",
+      "geographic-identity"
+    ],
+    "decision_owner": "environmental health commissioner and food-access program director",
+    "decision_types": [
+      "diagnose",
+      "forecast",
+      "prioritize",
+      "site",
+      "allocate",
+      "schedule",
+      "stress-test",
+      "evaluate"
+    ],
+    "description": "Eight decisions for service-gap diagnosis, inspection and assistance forecasting, prevention portfolios, access siting, inspection allocation, field schedules, disruption stress, and evaluation.",
+    "design_refs": [
+      "scenario.health.food-environment.food-environment-gaps.v1",
+      "scenario.health.food-environment.inspection-assistance-demand.v1",
+      "scenario.health.food-environment.food-health-portfolio.v1",
+      "scenario.health.food-environment.food-access-services.v1",
+      "scenario.health.food-environment.inspection-assistance-resources.v1",
+      "scenario.health.food-environment.inspection-mobile-service.v1",
+      "scenario.health.food-environment.food-system-disruption.v1",
+      "scenario.health.food-environment.mobile-food-access-effect.v1"
+    ],
+    "design_signatures": [
+      "sha256:6c506b3a1989b9f53931a1e6f8599fbfd24cc434cba96488bb4205a398018b84",
+      "sha256:9fbb1d6e726bec5476d63988ed3d88b5ded3d4bfb9e84ce61f51d73497611a61",
+      "sha256:7924ce2a469d6d37bbc402cc16083ac06d771b94385b9ccdf1a6e5cf7d90597f",
+      "sha256:6e736562003ad5397b5b986855fd077e1a10fbc7a804bf4a255a3f981a874705",
+      "sha256:458f7a60217f3dc23680c587b74f10cd1a60f0e286631351ecebb92efd35c3e1",
+      "sha256:db2b524f0e0d2c5f1ffedbd815a39a35a273be5111ce335f13e22383075378fe",
+      "sha256:7a25dc4bbcdc43784b243baa14b91aaa29d6f3940e8329d2bd2a6bf79f8c5079",
+      "sha256:734e36bf62ef1aabda5f549acbb39a4a40b546a5f61a29761321bd249fdc6730"
+    ],
+    "family_id": "health.food-environment",
+    "family_order": 14,
+    "schema_version": "1.0.0",
+    "suite": "population-health-environmental-exposure",
+    "title": "Food access and environmental health"
+  },
+  "library_claim_boundary": [
+    "The catalog contains 240 decision designs, not 240 city executions.",
+    "Exactly twelve designs map to existing Tier-D reference templates; 228 remain design-only.",
+    "A reference implementation can be an explicit negative release and does not imply impact.",
+    "No record claims a city binding, new method, deployment, adoption, or real-user outcome.",
+    "Future execution requires source binding, gate passage, and domain, legal, community, and operational review."
+  ]
+}

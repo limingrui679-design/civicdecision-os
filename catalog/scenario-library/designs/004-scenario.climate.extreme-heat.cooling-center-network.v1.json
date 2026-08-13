@@ -1,0 +1,164 @@
+{
+  "affected_system": "urban heat-health and cooling-response system",
+  "alternatives": [
+    "open high-capacity public facilities in the largest access gaps",
+    "deploy smaller pop-up sites near transit-poor high-risk areas",
+    "combine fixed centers with accessible transport assistance"
+  ],
+  "analysis_modes": [
+    "descriptive",
+    "optimization"
+  ],
+  "assumptions": [
+    "Heat indicators are aligned to a declared local time zone and spatial support.",
+    "Cooling capacity, costs, and response effects remain explicit planning inputs.",
+    "All alternatives, capacities, costs, effects, thresholds, and failure scenarios are proposed until bound to evidence."
+  ],
+  "baseline": "Only currently designated cooling sites operate with their published capacities.",
+  "city_bindings": [],
+  "constraints": [
+    {
+      "binding": true,
+      "constraint_id": "scenario.climate.extreme-heat.cooling-center-network.v1.constraint.binding",
+      "description": "Each selected facility must satisfy occupancy, backup-power, staffing, and accessible-entry capacity.",
+      "hard": true,
+      "kind": "capacity",
+      "required_source_roles": [
+        "climate-hazard",
+        "demographic-context",
+        "facility-inventory",
+        "geographic-identity",
+        "operating-capacity",
+        "transport-network"
+      ]
+    },
+    {
+      "binding": false,
+      "constraint_id": "scenario.climate.extreme-heat.cooling-center-network.v1.constraint.evidence-scope",
+      "description": "Every released metric must retain evidence type, source lineage, geography, time, assumptions, and uncertainty.",
+      "hard": true,
+      "kind": "technical",
+      "required_source_roles": [
+        "climate-hazard"
+      ]
+    },
+    {
+      "binding": false,
+      "constraint_id": "scenario.climate.extreme-heat.cooling-center-network.v1.constraint.decision-authority",
+      "description": "No analytical output may bypass lawful authority, accountable human review, or an applicable appeal process.",
+      "hard": true,
+      "kind": "regulatory",
+      "required_source_roles": [
+        "climate-hazard"
+      ]
+    }
+  ],
+  "current_readiness": "blocked-missing-source",
+  "decision_cadence": "recompiled at each planning cycle and after material evidence change",
+  "decision_owner": "chief resilience officer and public-health incident lead",
+  "decision_question": "Where should seasonal cooling centers open to reduce travel barriers while respecting facility capacity?",
+  "decision_type": "site",
+  "design_id": "scenario.climate.extreme-heat.cooling-center-network.v1",
+  "design_order": 4,
+  "design_signature": "sha256:c67ba5740277612411f42824dac7fbecc60d23b72db149b76cb2276073ee5582",
+  "evidence_requirements": [
+    "estimated",
+    "observed",
+    "optimized",
+    "proposed"
+  ],
+  "family_id": "climate.extreme-heat",
+  "family_title": "Extreme heat exposure and response",
+  "horizon": "seasonal",
+  "implementation_status": "design-only",
+  "independence_key": {
+    "binding_constraint": "Each selected facility must satisfy occupancy, backup-power, staffing, and accessible-entry capacity.",
+    "decision_object": "seasonal cooling-center locations",
+    "evidence_gate": "Versioned pedestrian and transit networks pass topology, impedance, schedule, and accessibility checks.",
+    "horizon": "seasonal",
+    "intervention_mechanism": "capacitated facility-location optimization with walking and transit impedance",
+    "primary_outcome": "high-risk residents beyond the cooling-access threshold",
+    "spatial_unit": "facility"
+  },
+  "intended_claim": "A versioned site design for comparing declared alternatives affecting seasonal cooling-center locations, conditional on its evidence gate.",
+  "limitations": [
+    "This library record has no city binding and therefore reports no local input, output, or recommendation.",
+    "Readiness describes explicit source and method gates; it does not certify implementation feasibility.",
+    "External domain, legal, community, security, and operational review remains outside this design artifact."
+  ],
+  "method_claimed": false,
+  "objectives": [
+    {
+      "evidence_type": "estimated",
+      "metric": "high-risk residents beyond the cooling-access threshold",
+      "objective_id": "scenario.climate.extreme-heat.cooling-center-network.v1.objective.primary",
+      "primary": true,
+      "sense": "minimize",
+      "unit": "people"
+    },
+    {
+      "evidence_type": "estimated",
+      "metric": "distributional gap in high-risk residents beyond the cooling-access threshold",
+      "objective_id": "scenario.climate.extreme-heat.cooling-center-network.v1.objective.equity",
+      "primary": false,
+      "sense": "minimize",
+      "unit": "people"
+    },
+    {
+      "evidence_type": "observed",
+      "metric": "decision claims with complete evidence lineage",
+      "objective_id": "scenario.climate.extreme-heat.cooling-center-network.v1.objective.traceability",
+      "primary": false,
+      "sense": "maximize",
+      "unit": "percent"
+    }
+  ],
+  "prohibited_claims": [
+    "Do not infer accessible cooling from straight-line distance or an unvalidated network.",
+    "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+    "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+    "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+  ],
+  "release_gate": {
+    "failure_release": "Release an explicit insufficient-evidence record naming missing sources, failed diagnostics, prohibited claims, and the next validation action.",
+    "failure_status": "insufficient-evidence",
+    "gate_id": "scenario.climate.extreme-heat.cooling-center-network.v1.gate.release",
+    "gate_type": "network-readiness",
+    "pass_condition": "Versioned pedestrian and transit networks pass topology, impedance, schedule, and accessibility checks.",
+    "required_evidence_types": [
+      "observed",
+      "proposed"
+    ],
+    "required_source_roles": [
+      "climate-hazard",
+      "demographic-context",
+      "facility-inventory",
+      "geographic-identity",
+      "operating-capacity",
+      "transport-network"
+    ]
+  },
+  "required_source_roles": [
+    "climate-hazard",
+    "demographic-context",
+    "facility-inventory",
+    "geographic-identity",
+    "operating-capacity",
+    "transport-network"
+  ],
+  "schema_version": "1.0.0",
+  "spatial_unit": "facility",
+  "suite": "climate-disaster-resilience",
+  "tags": [
+    "climate-disaster-resilience",
+    "climate.extreme-heat",
+    "design-only",
+    "scenario-library",
+    "site"
+  ],
+  "title": "Site an accessible cooling-center network",
+  "transportability_risks": [
+    "Building stock, acclimatization, canopy, humidity, and reporting behavior vary by city.",
+    "Thresholds calibrated in one climate zone may not transfer to another."
+  ]
+}

@@ -1,0 +1,225 @@
+{
+  "audit_maximum_pairwise_similarity": 0.646154,
+  "design": {
+    "affected_system": "public digital services, identity, applications, appointments, and assisted access",
+    "alternatives": [
+      "screen feasible locations against the largest access gaps for assisted digital and administrative service locations",
+      "co-optimize distributed and high-capacity locations for assisted digital and administrative service locations",
+      "pair access, privacy, language, connectivity, and capacity-aware siting with an explicit stop, review, and escalation rule"
+    ],
+    "analysis_modes": [
+      "simulation",
+      "optimization"
+    ],
+    "assumptions": [
+      "Page events, applications, errors, appointments, contacts, decisions, and outcomes remain distinct.",
+      "No automated score determines eligibility, enforcement, or denial without lawful human review.",
+      "All alternatives, capacities, costs, effects, thresholds, and failure scenarios are proposed until bound to evidence."
+    ],
+    "baseline": "retain only existing approved locations for assisted digital and administrative service locations.",
+    "city_bindings": [],
+    "constraints": [
+      {
+        "binding": true,
+        "constraint_id": "scenario.public-service.digital-access.assisted-digital-access.v1.constraint.binding",
+        "description": "The digital public access and administrative service delivery site must respect declared land control, accessibility, permitting, safety, and operating feasibility.",
+        "hard": true,
+        "kind": "regulatory",
+        "required_source_roles": [
+          "demographic-context",
+          "equity-attribute",
+          "facility-inventory",
+          "municipal-demand",
+          "service-schedule",
+          "transport-network"
+        ]
+      },
+      {
+        "binding": false,
+        "constraint_id": "scenario.public-service.digital-access.assisted-digital-access.v1.constraint.evidence-scope",
+        "description": "Every released metric must retain evidence type, source lineage, geography, time, assumptions, and uncertainty.",
+        "hard": true,
+        "kind": "technical",
+        "required_source_roles": [
+          "demographic-context"
+        ]
+      },
+      {
+        "binding": false,
+        "constraint_id": "scenario.public-service.digital-access.assisted-digital-access.v1.constraint.decision-authority",
+        "description": "No analytical output may bypass lawful authority, accountable human review, or an applicable appeal process.",
+        "hard": true,
+        "kind": "regulatory",
+        "required_source_roles": [
+          "demographic-context"
+        ]
+      }
+    ],
+    "current_readiness": "blocked-missing-source",
+    "decision_cadence": "recompiled at each planning cycle and after material evidence change",
+    "decision_owner": "chief digital officer and administrative service delivery director",
+    "decision_question": "Where should private, accessible, multilingual assisted-service points close verified access gaps?",
+    "decision_type": "site",
+    "design_id": "scenario.public-service.digital-access.assisted-digital-access.v1",
+    "design_order": 172,
+    "design_signature": "sha256:0a22e2773b5f11e3abd69d86c2ec7e4560c11f749e07ce986e9f096470b62639",
+    "evidence_requirements": [
+      "estimated",
+      "observed",
+      "optimized",
+      "proposed",
+      "simulated"
+    ],
+    "family_id": "public-service.digital-access",
+    "family_title": "Digital public access and administrative service delivery",
+    "horizon": "multi-year",
+    "implementation_status": "design-only",
+    "independence_key": {
+      "binding_constraint": "The digital public access and administrative service delivery site must respect declared land control, accessibility, permitting, safety, and operating feasibility.",
+      "decision_object": "assisted digital and administrative service locations",
+      "evidence_gate": "Evidence for assisted digital and administrative service locations passes documented checks for parcel control, legal authority, environmental review, access, capacity, and operator responsibility.",
+      "horizon": "multi-year",
+      "intervention_mechanism": "access, privacy, language, connectivity, and capacity-aware siting",
+      "primary_outcome": "eligible residents beyond usable assisted service access",
+      "spatial_unit": "facility"
+    },
+    "intended_claim": "A versioned site design for comparing declared alternatives affecting assisted digital and administrative service locations, conditional on its evidence gate.",
+    "limitations": [
+      "This library record has no city binding and therefore reports no local input, output, or recommendation.",
+      "Readiness describes explicit source and method gates; it does not certify implementation feasibility.",
+      "External domain, legal, community, security, and operational review remains outside this design artifact."
+    ],
+    "method_claimed": false,
+    "objectives": [
+      {
+        "evidence_type": "estimated",
+        "metric": "eligible residents beyond usable assisted service access",
+        "objective_id": "scenario.public-service.digital-access.assisted-digital-access.v1.objective.primary",
+        "primary": true,
+        "sense": "minimize",
+        "unit": "people"
+      },
+      {
+        "evidence_type": "estimated",
+        "metric": "distributional gap in eligible residents beyond usable assisted service access",
+        "objective_id": "scenario.public-service.digital-access.assisted-digital-access.v1.objective.equity",
+        "primary": false,
+        "sense": "minimize",
+        "unit": "people"
+      },
+      {
+        "evidence_type": "observed",
+        "metric": "decision claims with complete evidence lineage",
+        "objective_id": "scenario.public-service.digital-access.assisted-digital-access.v1.objective.traceability",
+        "primary": false,
+        "sense": "maximize",
+        "unit": "percent"
+      }
+    ],
+    "prohibited_claims": [
+      "Do not call a candidate site usable, private, accessible, trusted, connected, or staffed.",
+      "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+      "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+      "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+    ],
+    "release_gate": {
+      "failure_release": "Release an explicit insufficient-evidence record naming missing sources, failed diagnostics, prohibited claims, and the next validation action.",
+      "failure_status": "insufficient-evidence",
+      "gate_id": "scenario.public-service.digital-access.assisted-digital-access.v1.gate.release",
+      "gate_type": "legal-authority",
+      "pass_condition": "Evidence for assisted digital and administrative service locations passes documented checks for parcel control, legal authority, environmental review, access, capacity, and operator responsibility.",
+      "required_evidence_types": [
+        "observed",
+        "proposed"
+      ],
+      "required_source_roles": [
+        "demographic-context",
+        "equity-attribute",
+        "facility-inventory",
+        "municipal-demand",
+        "service-schedule",
+        "transport-network"
+      ]
+    },
+    "required_source_roles": [
+      "demographic-context",
+      "equity-attribute",
+      "facility-inventory",
+      "municipal-demand",
+      "service-schedule",
+      "transport-network"
+    ],
+    "schema_version": "1.0.0",
+    "spatial_unit": "facility",
+    "suite": "public-service-operations",
+    "tags": [
+      "design-only",
+      "public-service-operations",
+      "public-service.digital-access",
+      "scenario-library",
+      "site"
+    ],
+    "title": "Site assisted digital and administrative access",
+    "transportability_risks": [
+      "Eligibility, identity, language, disability access, connectivity, trust, and service design differ.",
+      "Digital telemetry omits non-users and can encode device or tracking coverage."
+    ]
+  },
+  "family": {
+    "affected_system": "public digital services, identity, applications, appointments, and assisted access",
+    "claim_boundary": [
+      "Service requests measure reported workload, not verified incidents, need, harm, or resolution.",
+      "Assignments and schedules are proposed operations, not completed work or public outcomes.",
+      "Design records do not establish agency adoption, deployment, productivity, or resident impact."
+    ],
+    "common_source_roles": [
+      "demographic-context",
+      "municipal-demand",
+      "service-schedule"
+    ],
+    "decision_owner": "chief digital officer and administrative service delivery director",
+    "decision_types": [
+      "diagnose",
+      "forecast",
+      "prioritize",
+      "site",
+      "allocate",
+      "schedule",
+      "stress-test",
+      "evaluate"
+    ],
+    "description": "Eight decisions for journey diagnosis, channel forecasting, service redesign, assisted-access siting, support allocation, appointment scheduling, outage stress, and digital-service evaluation.",
+    "design_refs": [
+      "scenario.public-service.digital-access.service-journey-friction.v1",
+      "scenario.public-service.digital-access.channel-support-demand.v1",
+      "scenario.public-service.digital-access.service-redesign-portfolio.v1",
+      "scenario.public-service.digital-access.assisted-digital-access.v1",
+      "scenario.public-service.digital-access.navigation-support.v1",
+      "scenario.public-service.digital-access.appointments-support.v1",
+      "scenario.public-service.digital-access.digital-service-continuity.v1",
+      "scenario.public-service.digital-access.assisted-service-effect.v1"
+    ],
+    "design_signatures": [
+      "sha256:8ac3bdc9644032b56a5b6340c10a2456b1630d4cb5c38d5a2da74790471e5dce",
+      "sha256:44c387d44c5e64b626d9615f48849e3eee4176e598ca49a77ddfe8daaae7c4a0",
+      "sha256:6d4053f717d9e7e792a671a67d231b3d87dd990ec356a45040eafe12110b6696",
+      "sha256:0a22e2773b5f11e3abd69d86c2ec7e4560c11f749e07ce986e9f096470b62639",
+      "sha256:0f8cda764b18e9a2892625d5fa6e36760dd0ff008b91a92984312dbea9c8724a",
+      "sha256:e7779a0f51951a3b834bb25c8e9e86fb6ee59deedf5ef3611f2272ecf883342f",
+      "sha256:23937f4fa3a049e377b16e43c56f795ee1f02a28dee7deb6e6cb76c601e4dcc1",
+      "sha256:ffacf5b0c8ed1221a8adf135f38fd96cd60bc8625f4a7e682501295452480e09"
+    ],
+    "family_id": "public-service.digital-access",
+    "family_order": 22,
+    "schema_version": "1.0.0",
+    "suite": "public-service-operations",
+    "title": "Digital public access and administrative service delivery"
+  },
+  "library_claim_boundary": [
+    "The catalog contains 240 decision designs, not 240 city executions.",
+    "Exactly twelve designs map to existing Tier-D reference templates; 228 remain design-only.",
+    "A reference implementation can be an explicit negative release and does not imply impact.",
+    "No record claims a city binding, new method, deployment, adoption, or real-user outcome.",
+    "Future execution requires source binding, gate passage, and domain, legal, community, and operational review."
+  ]
+}

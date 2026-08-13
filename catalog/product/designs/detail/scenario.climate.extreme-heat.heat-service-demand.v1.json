@@ -1,0 +1,219 @@
+{
+  "audit_maximum_pairwise_similarity": 0.646154,
+  "design": {
+    "affected_system": "urban heat-health and cooling-response system",
+    "alternatives": [
+      "activate a moderate heat-response staffing reserve",
+      "pre-position rotating welfare-check and cooling teams",
+      "use forecast intervals to trigger staged surge capacity"
+    ],
+    "analysis_modes": [
+      "forecast"
+    ],
+    "assumptions": [
+      "Heat indicators are aligned to a declared local time zone and spatial support.",
+      "Cooling capacity, costs, and response effects remain explicit planning inputs.",
+      "All alternatives, capacities, costs, effects, thresholds, and failure scenarios are proposed until bound to evidence."
+    ],
+    "baseline": "Staffing follows the ordinary-season roster and facilities keep standard hours.",
+    "city_bindings": [],
+    "constraints": [
+      {
+        "binding": true,
+        "constraint_id": "scenario.climate.extreme-heat.heat-service-demand.v1.constraint.binding",
+        "description": "Forecast workload cannot exceed the declared staffing and cooling-support service envelope without escalation.",
+        "hard": true,
+        "kind": "capacity",
+        "required_source_roles": [
+          "climate-hazard",
+          "demographic-context",
+          "geographic-identity",
+          "municipal-demand",
+          "operating-capacity"
+        ]
+      },
+      {
+        "binding": false,
+        "constraint_id": "scenario.climate.extreme-heat.heat-service-demand.v1.constraint.evidence-scope",
+        "description": "Every released metric must retain evidence type, source lineage, geography, time, assumptions, and uncertainty.",
+        "hard": true,
+        "kind": "technical",
+        "required_source_roles": [
+          "climate-hazard"
+        ]
+      },
+      {
+        "binding": false,
+        "constraint_id": "scenario.climate.extreme-heat.heat-service-demand.v1.constraint.decision-authority",
+        "description": "No analytical output may bypass lawful authority, accountable human review, or an applicable appeal process.",
+        "hard": true,
+        "kind": "regulatory",
+        "required_source_roles": [
+          "climate-hazard"
+        ]
+      }
+    ],
+    "current_readiness": "blocked-missing-source",
+    "decision_cadence": "event-triggered and reviewed at the stated decision horizon",
+    "decision_owner": "chief resilience officer and public-health incident lead",
+    "decision_question": "What daily cooling, welfare-check, and service workload range should operations prepare for during forecast heat?",
+    "decision_type": "forecast",
+    "design_id": "scenario.climate.extreme-heat.heat-service-demand.v1",
+    "design_order": 2,
+    "design_signature": "sha256:2a887f2efce290b0dac81c2204ccb431e1d904a018583490deb81ca5f4a0e342",
+    "evidence_requirements": [
+      "estimated",
+      "observed",
+      "proposed"
+    ],
+    "family_id": "climate.extreme-heat",
+    "family_title": "Extreme heat exposure and response",
+    "horizon": "days",
+    "implementation_status": "design-only",
+    "independence_key": {
+      "binding_constraint": "Forecast workload cannot exceed the declared staffing and cooling-support service envelope without escalation.",
+      "decision_object": "daily heat-response service demand",
+      "evidence_gate": "Backtests meet declared interval coverage and error thresholds across both ordinary and extreme-heat days.",
+      "horizon": "days",
+      "intervention_mechanism": "weather-conditioned hierarchical demand forecasting",
+      "primary_outcome": "unserved heat-response requests",
+      "spatial_unit": "service-area"
+    },
+    "intended_claim": "A versioned forecast design for comparing declared alternatives affecting daily heat-response service demand, conditional on its evidence gate.",
+    "limitations": [
+      "This library record has no city binding and therefore reports no local input, output, or recommendation.",
+      "Readiness describes explicit source and method gates; it does not certify implementation feasibility.",
+      "External domain, legal, community, security, and operational review remains outside this design artifact."
+    ],
+    "method_claimed": false,
+    "objectives": [
+      {
+        "evidence_type": "estimated",
+        "metric": "unserved heat-response requests",
+        "objective_id": "scenario.climate.extreme-heat.heat-service-demand.v1.objective.primary",
+        "primary": true,
+        "sense": "minimize",
+        "unit": "requests per day"
+      },
+      {
+        "evidence_type": "estimated",
+        "metric": "distributional gap in unserved heat-response requests",
+        "objective_id": "scenario.climate.extreme-heat.heat-service-demand.v1.objective.equity",
+        "primary": false,
+        "sense": "minimize",
+        "unit": "requests per day"
+      },
+      {
+        "evidence_type": "observed",
+        "metric": "decision claims with complete evidence lineage",
+        "objective_id": "scenario.climate.extreme-heat.heat-service-demand.v1.objective.traceability",
+        "primary": false,
+        "sense": "maximize",
+        "unit": "percent"
+      }
+    ],
+    "prohibited_claims": [
+      "Do not report forecast requests as emergency visits, deaths, or verified unmet need.",
+      "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+      "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+      "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+    ],
+    "release_gate": {
+      "failure_release": "Release an explicit insufficient-evidence record naming missing sources, failed diagnostics, prohibited claims, and the next validation action.",
+      "failure_status": "insufficient-evidence",
+      "gate_id": "scenario.climate.extreme-heat.heat-service-demand.v1.gate.release",
+      "gate_type": "model-calibration",
+      "pass_condition": "Backtests meet declared interval coverage and error thresholds across both ordinary and extreme-heat days.",
+      "required_evidence_types": [
+        "estimated",
+        "observed"
+      ],
+      "required_source_roles": [
+        "climate-hazard",
+        "demographic-context",
+        "geographic-identity",
+        "municipal-demand",
+        "operating-capacity"
+      ]
+    },
+    "required_source_roles": [
+      "climate-hazard",
+      "demographic-context",
+      "geographic-identity",
+      "municipal-demand",
+      "operating-capacity"
+    ],
+    "schema_version": "1.0.0",
+    "spatial_unit": "service-area",
+    "suite": "climate-disaster-resilience",
+    "tags": [
+      "climate-disaster-resilience",
+      "climate.extreme-heat",
+      "design-only",
+      "forecast",
+      "scenario-library"
+    ],
+    "title": "Forecast heat-triggered public-service demand",
+    "transportability_risks": [
+      "Building stock, acclimatization, canopy, humidity, and reporting behavior vary by city.",
+      "Thresholds calibrated in one climate zone may not transfer to another."
+    ]
+  },
+  "family": {
+    "affected_system": "urban heat-health and cooling-response system",
+    "claim_boundary": [
+      "Hazard observations and modeled exposure do not establish individual harm or causation.",
+      "Proposed adaptations are planning alternatives, not adopted policy or engineered designs.",
+      "A design-only record is not a city execution, validated forecast, or impact result."
+    ],
+    "common_source_roles": [
+      "climate-hazard",
+      "demographic-context",
+      "geographic-identity"
+    ],
+    "decision_owner": "chief resilience officer and public-health incident lead",
+    "decision_types": [
+      "diagnose",
+      "forecast",
+      "prioritize",
+      "site",
+      "allocate",
+      "schedule",
+      "stress-test",
+      "evaluate"
+    ],
+    "description": "Decision designs spanning heat-risk diagnosis, cooling access, operational response, adaptation investment, compound stress, and intervention evaluation.",
+    "design_refs": [
+      "scenario.climate.extreme-heat.heat-access-gaps.v1",
+      "scenario.climate.extreme-heat.heat-service-demand.v1",
+      "scenario.climate.extreme-heat.cooling-investments.v1",
+      "scenario.climate.extreme-heat.cooling-center-network.v1",
+      "scenario.climate.extreme-heat.heat-response-resources.v1",
+      "scenario.climate.extreme-heat.heat-operations-calendar.v1",
+      "scenario.climate.extreme-heat.compound-heat-continuity.v1",
+      "scenario.climate.extreme-heat.cool-roof-impact.v1"
+    ],
+    "design_signatures": [
+      "sha256:5aa9b517f4356eee6de34f345d4f20d0792352a4dae66379f3e72178791d0240",
+      "sha256:2a887f2efce290b0dac81c2204ccb431e1d904a018583490deb81ca5f4a0e342",
+      "sha256:e823416460130b3bfde10ee275413738aeaf561402c67eca043f6b6a53f4b31e",
+      "sha256:c67ba5740277612411f42824dac7fbecc60d23b72db149b76cb2276073ee5582",
+      "sha256:ab095537c3089d7cac11eaea322467b2ffdc090563993d33678f73cb5089260e",
+      "sha256:23fd784d81b2f7f4f1b5a64cc19a597c9c439c91e9ff5d7466674728d3f9721e",
+      "sha256:bce74fc2d2251aa5404702222246b8c71044f56ceddb4f8ee73529e1e19b3833",
+      "sha256:f8706f9c4c1295314043c519fad476aeb738acd468b67b9b6545fd5fc569c510"
+    ],
+    "family_id": "climate.extreme-heat",
+    "family_order": 1,
+    "schema_version": "1.0.0",
+    "suite": "climate-disaster-resilience",
+    "title": "Extreme heat exposure and response"
+  },
+  "library_claim_boundary": [
+    "The catalog contains 240 decision designs, not 240 city executions.",
+    "Exactly twelve designs map to existing Tier-D reference templates; 228 remain design-only.",
+    "A reference implementation can be an explicit negative release and does not imply impact.",
+    "No record claims a city binding, new method, deployment, adoption, or real-user outcome.",
+    "Future execution requires source binding, gate passage, and domain, legal, community, and operational review."
+  ]
+}

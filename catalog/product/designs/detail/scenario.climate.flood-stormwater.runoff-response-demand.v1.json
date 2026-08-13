@@ -1,0 +1,222 @@
+{
+  "audit_maximum_pairwise_similarity": 0.646154,
+  "design": {
+    "affected_system": "urban drainage, stormwater, and flood-response system",
+    "alternatives": [
+      "activate crews from rainfall thresholds",
+      "stage pumps from forecast catchment loads",
+      "use rolling event forecasts with conservative capacity reserves"
+    ],
+    "analysis_modes": [
+      "forecast"
+    ],
+    "assumptions": [
+      "Rainfall, terrain, drainage, and complaint records use explicit spatial and temporal supports.",
+      "Hydraulic capacities and intervention effects remain measured inputs or labeled assumptions.",
+      "All alternatives, capacities, costs, effects, thresholds, and failure scenarios are proposed until bound to evidence."
+    ],
+    "baseline": "Crews and pumps follow ordinary wet-weather activation levels.",
+    "city_bindings": [],
+    "constraints": [
+      {
+        "binding": true,
+        "constraint_id": "scenario.climate.flood-stormwater.runoff-response-demand.v1.constraint.binding",
+        "description": "The forecast must distinguish routine service calls from verified emergency response tasks.",
+        "hard": true,
+        "kind": "capacity",
+        "required_source_roles": [
+          "asset-inventory",
+          "climate-hazard",
+          "geographic-identity",
+          "municipal-demand",
+          "operating-capacity",
+          "real-time-state"
+        ]
+      },
+      {
+        "binding": false,
+        "constraint_id": "scenario.climate.flood-stormwater.runoff-response-demand.v1.constraint.evidence-scope",
+        "description": "Every released metric must retain evidence type, source lineage, geography, time, assumptions, and uncertainty.",
+        "hard": true,
+        "kind": "technical",
+        "required_source_roles": [
+          "asset-inventory"
+        ]
+      },
+      {
+        "binding": false,
+        "constraint_id": "scenario.climate.flood-stormwater.runoff-response-demand.v1.constraint.decision-authority",
+        "description": "No analytical output may bypass lawful authority, accountable human review, or an applicable appeal process.",
+        "hard": true,
+        "kind": "regulatory",
+        "required_source_roles": [
+          "asset-inventory"
+        ]
+      }
+    ],
+    "current_readiness": "blocked-missing-source",
+    "decision_cadence": "event-triggered and reviewed at the stated decision horizon",
+    "decision_owner": "stormwater utility director and emergency-management lead",
+    "decision_question": "What range of pumping, road-closure, and resident-assistance demand follows the forecast rainfall envelope?",
+    "decision_type": "forecast",
+    "design_id": "scenario.climate.flood-stormwater.runoff-response-demand.v1",
+    "design_order": 10,
+    "design_signature": "sha256:b432a1d79a55b59e2a09d71b8a4150a46f50f73fb0250fce2d5ef158573ff597",
+    "evidence_requirements": [
+      "estimated",
+      "observed",
+      "proposed"
+    ],
+    "family_id": "climate.flood-stormwater",
+    "family_title": "Flood and stormwater resilience",
+    "horizon": "days",
+    "implementation_status": "design-only",
+    "independence_key": {
+      "binding_constraint": "The forecast must distinguish routine service calls from verified emergency response tasks.",
+      "decision_object": "event-level stormwater response demand",
+      "evidence_gate": "Held-out storms meet declared event-total, peak-timing, and interval-coverage diagnostics.",
+      "horizon": "days",
+      "intervention_mechanism": "rainfall-conditioned probabilistic operations forecasting",
+      "primary_outcome": "response tasks above available event capacity",
+      "spatial_unit": "service-area"
+    },
+    "intended_claim": "A versioned forecast design for comparing declared alternatives affecting event-level stormwater response demand, conditional on its evidence gate.",
+    "limitations": [
+      "This library record has no city binding and therefore reports no local input, output, or recommendation.",
+      "Readiness describes explicit source and method gates; it does not certify implementation feasibility.",
+      "External domain, legal, community, security, and operational review remains outside this design artifact."
+    ],
+    "method_claimed": false,
+    "objectives": [
+      {
+        "evidence_type": "estimated",
+        "metric": "response tasks above available event capacity",
+        "objective_id": "scenario.climate.flood-stormwater.runoff-response-demand.v1.objective.primary",
+        "primary": true,
+        "sense": "minimize",
+        "unit": "tasks per event"
+      },
+      {
+        "evidence_type": "estimated",
+        "metric": "distributional gap in response tasks above available event capacity",
+        "objective_id": "scenario.climate.flood-stormwater.runoff-response-demand.v1.objective.equity",
+        "primary": false,
+        "sense": "minimize",
+        "unit": "tasks per event"
+      },
+      {
+        "evidence_type": "observed",
+        "metric": "decision claims with complete evidence lineage",
+        "objective_id": "scenario.climate.flood-stormwater.runoff-response-demand.v1.objective.traceability",
+        "primary": false,
+        "sense": "maximize",
+        "unit": "percent"
+      }
+    ],
+    "prohibited_claims": [
+      "Do not present forecast operational demand as predicted flood depth or property damage.",
+      "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+      "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+      "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+    ],
+    "release_gate": {
+      "failure_release": "Release an explicit insufficient-evidence record naming missing sources, failed diagnostics, prohibited claims, and the next validation action.",
+      "failure_status": "insufficient-evidence",
+      "gate_id": "scenario.climate.flood-stormwater.runoff-response-demand.v1.gate.release",
+      "gate_type": "model-calibration",
+      "pass_condition": "Held-out storms meet declared event-total, peak-timing, and interval-coverage diagnostics.",
+      "required_evidence_types": [
+        "estimated",
+        "observed"
+      ],
+      "required_source_roles": [
+        "asset-inventory",
+        "climate-hazard",
+        "geographic-identity",
+        "municipal-demand",
+        "operating-capacity",
+        "real-time-state"
+      ]
+    },
+    "required_source_roles": [
+      "asset-inventory",
+      "climate-hazard",
+      "geographic-identity",
+      "municipal-demand",
+      "operating-capacity",
+      "real-time-state"
+    ],
+    "schema_version": "1.0.0",
+    "spatial_unit": "service-area",
+    "suite": "climate-disaster-resilience",
+    "tags": [
+      "climate-disaster-resilience",
+      "climate.flood-stormwater",
+      "design-only",
+      "forecast",
+      "scenario-library"
+    ],
+    "title": "Forecast rainfall-runoff response demand",
+    "transportability_risks": [
+      "Drainage standards, imperviousness, topography, tides, and maintenance regimes differ.",
+      "Complaint density may reflect reporting access rather than flood incidence."
+    ]
+  },
+  "family": {
+    "affected_system": "urban drainage, stormwater, and flood-response system",
+    "claim_boundary": [
+      "Hazard observations and modeled exposure do not establish individual harm or causation.",
+      "Proposed adaptations are planning alternatives, not adopted policy or engineered designs.",
+      "A design-only record is not a city execution, validated forecast, or impact result."
+    ],
+    "common_source_roles": [
+      "asset-inventory",
+      "climate-hazard",
+      "geographic-identity"
+    ],
+    "decision_owner": "stormwater utility director and emergency-management lead",
+    "decision_types": [
+      "diagnose",
+      "forecast",
+      "prioritize",
+      "site",
+      "allocate",
+      "schedule",
+      "stress-test",
+      "evaluate"
+    ],
+    "description": "Decision designs for drainage diagnosis, rainfall-runoff workload, green infrastructure, response deployment, maintenance timing, compound flooding, and causal evaluation.",
+    "design_refs": [
+      "scenario.climate.flood-stormwater.drainage-failure-patterns.v1",
+      "scenario.climate.flood-stormwater.runoff-response-demand.v1",
+      "scenario.climate.flood-stormwater.drainage-renewal.v1",
+      "scenario.climate.flood-stormwater.retention-storage-sites.v1",
+      "scenario.climate.flood-stormwater.flood-response-assets.v1",
+      "scenario.climate.flood-stormwater.drainage-maintenance-window.v1",
+      "scenario.climate.flood-stormwater.compound-rainfall-continuity.v1",
+      "scenario.climate.flood-stormwater.green-infrastructure-effect.v1"
+    ],
+    "design_signatures": [
+      "sha256:3e690451937d44944964788821dd81db5c76564cae502625d6564fe54df56c03",
+      "sha256:b432a1d79a55b59e2a09d71b8a4150a46f50f73fb0250fce2d5ef158573ff597",
+      "sha256:b47d97eba11c2c9cf654c592bc46b5c4755a2787128dd2302604a591bc8069dc",
+      "sha256:8947e8a1525c35a4f5a6f7174b9c6a9508cf58ed52fbc320cceef56e0851daa1",
+      "sha256:94c04ca69e3bbec0b3158d8eb70f1b64d797171f68e95244098e1c2980468ca2",
+      "sha256:22e1cb8b28c3c0a1a14a9ec9ec66eb1642b5c81cc278362b57b863683caedc30",
+      "sha256:6a5a10a362e35491600e55adee92f8796afaf7efeaaad074cc99e288a65e161f",
+      "sha256:d6c9efb68622fdeb67d1c63083c2b0e25dbfdb9515c128a25ab466f6e0ea8f28"
+    ],
+    "family_id": "climate.flood-stormwater",
+    "family_order": 2,
+    "schema_version": "1.0.0",
+    "suite": "climate-disaster-resilience",
+    "title": "Flood and stormwater resilience"
+  },
+  "library_claim_boundary": [
+    "The catalog contains 240 decision designs, not 240 city executions.",
+    "Exactly twelve designs map to existing Tier-D reference templates; 228 remain design-only.",
+    "A reference implementation can be an explicit negative release and does not imply impact.",
+    "No record claims a city binding, new method, deployment, adoption, or real-user outcome.",
+    "Future execution requires source binding, gate passage, and domain, legal, community, and operational review."
+  ]
+}

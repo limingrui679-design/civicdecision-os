@@ -1,0 +1,333 @@
+{
+  "designs": [
+    {
+      "analysis_modes": [
+        "descriptive"
+      ],
+      "binding_constraint": "The municipal energy and building decarbonization diagnose must respect declared measurement resolution and classification uncertainty.",
+      "content_hash": "sha256:ddb02e3970fa167a4d77faf440e6506c3f1c54398700aff38a4ed39f2110f8f3",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Which buildings show weather- and occupancy-adjusted energy, comfort, equipment, or emissions anomalies?",
+      "decision_type": "diagnose",
+      "design_id": "scenario.infrastructure.energy-buildings.building-energy-performance.v1",
+      "design_order": 193,
+      "evidence_gate": "geographic-alignment",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "proposed"
+      ],
+      "family_id": "infrastructure.energy-buildings",
+      "family_title": "Municipal energy and building decarbonization",
+      "horizon": "annual",
+      "implementation_status": "design-only",
+      "primary_outcome": "verified excess energy and emissions above building baselines",
+      "prohibited_claims": [
+        "Do not label benchmark deviation waste, malfunction, discomfort, or avoidable emissions without verification.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "asset",
+      "suite": "infrastructure-finance-asset-risk",
+      "title": "Diagnose municipal building energy and emissions performance"
+    },
+    {
+      "analysis_modes": [
+        "forecast"
+      ],
+      "binding_constraint": "The municipal energy and building decarbonization forecast must respect declared validated operational capacity and forecast uncertainty.",
+      "content_hash": "sha256:758d5593df2d20c5b4511a93cd33cd5ec73f5b19aa35691ca63afc9015e95357",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "What interval of electric, thermal, peak, cost, and emissions load should portfolio operations prepare for?",
+      "decision_type": "forecast",
+      "design_id": "scenario.infrastructure.energy-buildings.building-load-emissions.v1",
+      "design_order": 194,
+      "evidence_gate": "model-calibration",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "proposed"
+      ],
+      "family_id": "infrastructure.energy-buildings",
+      "family_title": "Municipal energy and building decarbonization",
+      "horizon": "weeks",
+      "implementation_status": "design-only",
+      "primary_outcome": "energy demand above contracted and resilient capacity",
+      "prohibited_claims": [
+        "Do not present forecast energy, cost, or emissions as metered performance.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "asset",
+      "suite": "infrastructure-finance-asset-risk",
+      "title": "Forecast municipal building load, cost, and emissions"
+    },
+    {
+      "analysis_modes": [
+        "descriptive",
+        "optimization"
+      ],
+      "binding_constraint": "The municipal energy and building decarbonization prioritize must respect declared capital, operating, maintenance, and delivery budgets.",
+      "content_hash": "sha256:8606c8ca9781348c408a49587cd694f80eabe84a26c9e2b183add41e7a6b361a",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Which envelope, controls, heat-pump, solar, storage, and commissioning projects should be funded?",
+      "decision_type": "prioritize",
+      "design_id": "scenario.infrastructure.energy-buildings.decarbonization-portfolio.v1",
+      "design_order": 195,
+      "evidence_gate": "cost-capacity",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed"
+      ],
+      "family_id": "infrastructure.energy-buildings",
+      "family_title": "Municipal energy and building decarbonization",
+      "horizon": "multi-year",
+      "implementation_status": "design-only",
+      "primary_outcome": "remaining lifecycle greenhouse-gas emissions",
+      "prohibited_claims": [
+        "Do not report modeled energy, carbon, comfort, or cost savings as realized.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "asset",
+      "suite": "infrastructure-finance-asset-risk",
+      "title": "Prioritize municipal building decarbonization"
+    },
+    {
+      "analysis_modes": [
+        "simulation",
+        "optimization"
+      ],
+      "binding_constraint": "The municipal energy and building decarbonization site must respect declared land control, accessibility, permitting, safety, and operating feasibility.",
+      "content_hash": "sha256:baeec0338364d18f61ebe6a3db666ec1a0ff1b399137d72220a4406b12d50c14",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Where should distributed clean-energy assets improve emissions, resilience, and service value?",
+      "decision_type": "site",
+      "design_id": "scenario.infrastructure.energy-buildings.distributed-clean-energy.v1",
+      "design_order": 196,
+      "evidence_gate": "legal-authority",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "family_id": "infrastructure.energy-buildings",
+      "family_title": "Municipal energy and building decarbonization",
+      "horizon": "multi-year",
+      "implementation_status": "design-only",
+      "primary_outcome": "critical load without feasible clean-energy resilience coverage",
+      "prohibited_claims": [
+        "Do not call a screened site interconnected, structurally feasible, permitted, financed, or built.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "facility",
+      "suite": "infrastructure-finance-asset-risk",
+      "title": "Site solar, storage, charging, and thermal assets"
+    },
+    {
+      "analysis_modes": [
+        "simulation",
+        "optimization"
+      ],
+      "binding_constraint": "The municipal energy and building decarbonization allocate must respect declared minimum service, eligibility, capacity, and distributional safeguards.",
+      "content_hash": "sha256:45b78005b235d6238a043e4b8e50b23f074b37c33604e5bb2e4ac1a2c60a0b3e",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "How should capital, incentives, engineering, procurement, and commissioning capacity be distributed?",
+      "decision_type": "allocate",
+      "design_id": "scenario.infrastructure.energy-buildings.energy-capital-capacity.v1",
+      "design_order": 197,
+      "evidence_gate": "equity-measurement",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "family_id": "infrastructure.energy-buildings",
+      "family_title": "Municipal energy and building decarbonization",
+      "horizon": "weeks",
+      "implementation_status": "design-only",
+      "primary_outcome": "qualified emissions-reduction projects without assigned capacity",
+      "prohibited_claims": [
+        "Do not report allocated capital or staff as a contract, installation, commissioning, or saving.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "asset",
+      "suite": "infrastructure-finance-asset-risk",
+      "title": "Allocate energy capital, incentives, and delivery capacity"
+    },
+    {
+      "analysis_modes": [
+        "forecast",
+        "optimization"
+      ],
+      "binding_constraint": "The municipal energy and building decarbonization schedule must respect declared labor, access, sequencing, notice, and completion windows.",
+      "content_hash": "sha256:81848ed7f779eabf3c3168799644afdf67da238090feff08c982ac589dd6db9e",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "When should audits, design, procurement, shutdowns, installation, commissioning, and measurement occur?",
+      "decision_type": "schedule",
+      "design_id": "scenario.infrastructure.energy-buildings.decarbonization-projects.v1",
+      "design_order": 198,
+      "evidence_gate": "temporal-alignment",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed"
+      ],
+      "family_id": "infrastructure.energy-buildings",
+      "family_title": "Municipal energy and building decarbonization",
+      "horizon": "weeks",
+      "implementation_status": "design-only",
+      "primary_outcome": "project-days beyond feasible emissions-reduction milestones",
+      "prohibited_claims": [
+        "Do not call a scheduled project procured, installed, commissioned, or operational.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "asset",
+      "suite": "infrastructure-finance-asset-risk",
+      "title": "Schedule building decarbonization and commissioning"
+    },
+    {
+      "analysis_modes": [
+        "forecast",
+        "simulation",
+        "optimization"
+      ],
+      "binding_constraint": "The municipal energy and building decarbonization stress test must respect declared minimum continuity and safety thresholds across severe scenarios.",
+      "content_hash": "sha256:0a1156f20895693116875c3883d3b0c4500a2d88de3434764a94eadc4e11141b",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Which electrification and resilience strategy preserves critical services under peak, outage, weather, and equipment failures?",
+      "decision_type": "stress-test",
+      "design_id": "scenario.infrastructure.energy-buildings.building-grid-stress.v1",
+      "design_order": 199,
+      "evidence_gate": "external-validation",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "family_id": "infrastructure.energy-buildings",
+      "family_title": "Municipal energy and building decarbonization",
+      "horizon": "seasonal",
+      "implementation_status": "design-only",
+      "primary_outcome": "scenario-weighted critical-load service interruption",
+      "prohibited_claims": [
+        "Do not present synthetic load, outage, or backup performance as observed events.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "network",
+      "suite": "infrastructure-finance-asset-risk",
+      "title": "Stress-test municipal buildings under grid and climate stress"
+    },
+    {
+      "analysis_modes": [
+        "descriptive",
+        "causal"
+      ],
+      "binding_constraint": "The municipal energy and building decarbonization evaluate must respect declared pre-specified assignment, comparison, outcome, spillover, and subgroup rules.",
+      "content_hash": "sha256:c147ff3e5e041553bfbe635ce068caa1cbf83027b7b273bb09d4ee0009528efc",
+      "current_readiness": "blocked-multiple-gates",
+      "decision_question": "Did phased retrofits reduce weather-normalized energy and emissions while preserving comfort and service?",
+      "decision_type": "evaluate",
+      "design_id": "scenario.infrastructure.energy-buildings.retrofit-performance.v1",
+      "design_order": 200,
+      "evidence_gate": "causal-identification",
+      "evidence_types": [
+        "causal",
+        "estimated",
+        "observed",
+        "proposed"
+      ],
+      "family_id": "infrastructure.energy-buildings",
+      "family_title": "Municipal energy and building decarbonization",
+      "horizon": "multi-year",
+      "implementation_status": "design-only",
+      "primary_outcome": "change in weather- and occupancy-normalized energy use",
+      "prohibited_claims": [
+        "Do not infer causal carbon, cost, or comfort effects without stable meters, factors, occupancy, and comparisons.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "asset",
+      "suite": "infrastructure-finance-asset-risk",
+      "title": "Evaluate municipal building retrofit performance"
+    }
+  ],
+  "family": {
+    "affected_system": "municipal buildings, distributed energy, electrification, and emissions management",
+    "claim_boundary": [
+      "Requests and proxy indicators do not replace engineering inspection, accounting, or legal review.",
+      "Selected projects and schedules are planning outputs, not appropriations, designs, contracts, or construction.",
+      "Modeled lifecycle, emissions, reliability, and fiscal effects are not realized outcomes."
+    ],
+    "common_source_roles": [
+      "asset-inventory",
+      "environmental-exposure",
+      "financial-cost"
+    ],
+    "decision_owner": "municipal energy director and public-building portfolio manager",
+    "decision_types": [
+      "diagnose",
+      "forecast",
+      "prioritize",
+      "site",
+      "allocate",
+      "schedule",
+      "stress-test",
+      "evaluate"
+    ],
+    "description": "Eight decisions for energy diagnosis, load forecasting, retrofit portfolios, clean-energy siting, capital allocation, project scheduling, grid stress, and retrofit evaluation.",
+    "design_refs": [
+      "scenario.infrastructure.energy-buildings.building-energy-performance.v1",
+      "scenario.infrastructure.energy-buildings.building-load-emissions.v1",
+      "scenario.infrastructure.energy-buildings.decarbonization-portfolio.v1",
+      "scenario.infrastructure.energy-buildings.distributed-clean-energy.v1",
+      "scenario.infrastructure.energy-buildings.energy-capital-capacity.v1",
+      "scenario.infrastructure.energy-buildings.decarbonization-projects.v1",
+      "scenario.infrastructure.energy-buildings.building-grid-stress.v1",
+      "scenario.infrastructure.energy-buildings.retrofit-performance.v1"
+    ],
+    "design_signatures": [
+      "sha256:6de976c970a2370ce565eeb9998d188a48648ad5e07a024810abbc48e4393b6a",
+      "sha256:c55b9161e0e571cd459c7416a615b4da1df1f1ba0343f9c8bcff89556c019ae8",
+      "sha256:034491823294dd24ca5643990215ae5a827239cba928ed03aba188bc93e4bc38",
+      "sha256:1ba1768d165ca42c6d0debd9d0474ce1f13c60035e7c51c29463b5f9d96cb896",
+      "sha256:e294a9ef142364512e96d429e2ce59f987cb1d98d6a67fd9d5b5ef52a184f124",
+      "sha256:26f0205c92f13637defd54f5558901cf07334f0d99ccb21f028503e3f2daaf47",
+      "sha256:5449461d52d6c37862db488871e4d6444f03b2c85fd90625055e32c9e8049bc8",
+      "sha256:bd41de21c60e7022c6099c5d5d6d4f19d857c1ba468143fe9a329f045fa67327"
+    ],
+    "family_id": "infrastructure.energy-buildings",
+    "family_order": 25,
+    "schema_version": "1.0.0",
+    "suite": "infrastructure-finance-asset-risk",
+    "title": "Municipal energy and building decarbonization"
+  },
+  "library_claim_boundary": [
+    "The catalog contains 240 decision designs, not 240 city executions.",
+    "Exactly twelve designs map to existing Tier-D reference templates; 228 remain design-only.",
+    "A reference implementation can be an explicit negative release and does not imply impact.",
+    "No record claims a city binding, new method, deployment, adoption, or real-user outcome.",
+    "Future execution requires source binding, gate passage, and domain, legal, community, and operational review."
+  ]
+}

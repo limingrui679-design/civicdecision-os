@@ -1,0 +1,160 @@
+{
+  "$defs": {
+    "ApplicationSuite": {
+      "enum": [
+        "climate-disaster-resilience",
+        "mobility-accessibility-operations",
+        "population-health-environmental-exposure",
+        "housing-land-use-regeneration",
+        "public-service-operations",
+        "infrastructure-finance-asset-risk",
+        "behavioral-policy-equity"
+      ],
+      "title": "ApplicationSuite",
+      "type": "string"
+    },
+    "DecisionType": {
+      "enum": [
+        "diagnose",
+        "forecast",
+        "prioritize",
+        "site",
+        "allocate",
+        "schedule",
+        "stress-test",
+        "evaluate"
+      ],
+      "title": "DecisionType",
+      "type": "string"
+    },
+    "LibrarySourceRole": {
+      "enum": [
+        "municipal-demand",
+        "climate-hazard",
+        "geographic-identity",
+        "demographic-context",
+        "transport-network",
+        "service-schedule",
+        "facility-inventory",
+        "asset-inventory",
+        "asset-condition",
+        "land-parcel",
+        "housing-market",
+        "health-outcome",
+        "environmental-exposure",
+        "financial-cost",
+        "operating-capacity",
+        "intervention-assignment",
+        "outcome-panel",
+        "equity-attribute",
+        "legal-regulatory",
+        "real-time-state",
+        "community-input"
+      ],
+      "title": "LibrarySourceRole",
+      "type": "string"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "affected_system": {
+      "minLength": 5,
+      "title": "Affected System",
+      "type": "string"
+    },
+    "claim_boundary": {
+      "items": {
+        "type": "string"
+      },
+      "minItems": 2,
+      "title": "Claim Boundary",
+      "type": "array"
+    },
+    "common_source_roles": {
+      "items": {
+        "$ref": "#/$defs/LibrarySourceRole"
+      },
+      "minItems": 1,
+      "title": "Common Source Roles",
+      "type": "array"
+    },
+    "decision_owner": {
+      "minLength": 3,
+      "title": "Decision Owner",
+      "type": "string"
+    },
+    "decision_types": {
+      "items": {
+        "$ref": "#/$defs/DecisionType"
+      },
+      "maxItems": 8,
+      "minItems": 8,
+      "title": "Decision Types",
+      "type": "array"
+    },
+    "description": {
+      "minLength": 12,
+      "title": "Description",
+      "type": "string"
+    },
+    "design_refs": {
+      "items": {
+        "type": "string"
+      },
+      "maxItems": 8,
+      "minItems": 8,
+      "title": "Design Refs",
+      "type": "array"
+    },
+    "design_signatures": {
+      "items": {
+        "type": "string"
+      },
+      "maxItems": 8,
+      "minItems": 8,
+      "title": "Design Signatures",
+      "type": "array"
+    },
+    "family_id": {
+      "pattern": "^[a-z0-9]+(?:[._-][a-z0-9]+)*$",
+      "title": "Family Id",
+      "type": "string"
+    },
+    "family_order": {
+      "maximum": 30,
+      "minimum": 1,
+      "title": "Family Order",
+      "type": "integer"
+    },
+    "schema_version": {
+      "const": "1.0.0",
+      "default": "1.0.0",
+      "title": "Schema Version",
+      "type": "string"
+    },
+    "suite": {
+      "$ref": "#/$defs/ApplicationSuite"
+    },
+    "title": {
+      "minLength": 3,
+      "title": "Title",
+      "type": "string"
+    }
+  },
+  "required": [
+    "family_order",
+    "family_id",
+    "suite",
+    "title",
+    "description",
+    "affected_system",
+    "decision_owner",
+    "design_refs",
+    "decision_types",
+    "design_signatures",
+    "common_source_roles",
+    "claim_boundary"
+  ],
+  "title": "ScenarioFamily",
+  "type": "object"
+}

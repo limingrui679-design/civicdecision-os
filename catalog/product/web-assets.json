@@ -2,8 +2,8 @@
   "asset_count": 4,
   "assets": [
     {
-      "byte_count": 21007,
-      "content_hash": "sha256:cbcfe0243c334049e1ea9ccce604d738b840d336a337c9045ccbe74115474f5e",
+      "byte_count": 27118,
+      "content_hash": "sha256:25501f29320b209604a1e6381fdcf9883ecc0c954aa6d66583bdf17b1d56fc1a",
       "path": "index.html"
     },
     {
@@ -12,13 +12,13 @@
       "path": "favicon.svg"
     },
     {
-      "byte_count": 44785,
-      "content_hash": "sha256:cb8d6ebf199d257aae650a79b19ebd910444a00c3a2b0294d7ca3885a4353896",
+      "byte_count": 55420,
+      "content_hash": "sha256:9276e901b1d2d12d1fdc69f1c3fd66018c93c19ab53442de8965f2fb6c499a1d",
       "path": "assets/app.css"
     },
     {
-      "byte_count": 34644,
-      "content_hash": "sha256:d63928ef524626bd055eb02385439c4c3685fe5797b1c0c41e6ed7da24ee5712",
+      "byte_count": 51993,
+      "content_hash": "sha256:f9da12490e382ceb21e1597928c809ebb62feb906ea9afb84cd2edb473b517b0",
       "path": "assets/app.js"
     }
   ],

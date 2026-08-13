@@ -1,0 +1,167 @@
+{
+  "affected_system": "air-quality surveillance, exposure reduction, and respiratory-health response",
+  "alternatives": [
+    "compare eligible treated and credible untreated units for phased clean-air protection and source-control intervention",
+    "estimate pre-specified overall and distributional effects of phased clean-air protection and source-control intervention",
+    "pair staggered adoption evaluation with exposure and health panels with an explicit stop, review, and escalation rule"
+  ],
+  "analysis_modes": [
+    "descriptive",
+    "causal"
+  ],
+  "assumptions": [
+    "Monitor data retain calibration, siting, uptime, and spatial-representativeness metadata.",
+    "Exposure, diagnosis, care use, and service complaints are not interchangeable outcomes.",
+    "All alternatives, capacities, costs, effects, thresholds, and failure scenarios are proposed until bound to evidence."
+  ],
+  "baseline": "retain pre-intervention conditions for phased clean-air protection and source-control intervention.",
+  "city_bindings": [],
+  "constraints": [
+    {
+      "binding": true,
+      "constraint_id": "scenario.health.air-quality.clean-air-program-effect.v1.constraint.binding",
+      "description": "The air-quality exposure and respiratory health evaluate must respect declared pre-specified assignment, comparison, outcome, spillover, and subgroup rules.",
+      "hard": true,
+      "kind": "equity",
+      "required_source_roles": [
+        "environmental-exposure",
+        "equity-attribute",
+        "geographic-identity",
+        "health-outcome",
+        "intervention-assignment",
+        "legal-regulatory",
+        "outcome-panel"
+      ]
+    },
+    {
+      "binding": false,
+      "constraint_id": "scenario.health.air-quality.clean-air-program-effect.v1.constraint.evidence-scope",
+      "description": "Every released metric must retain evidence type, source lineage, geography, time, assumptions, and uncertainty.",
+      "hard": true,
+      "kind": "technical",
+      "required_source_roles": [
+        "environmental-exposure"
+      ]
+    },
+    {
+      "binding": false,
+      "constraint_id": "scenario.health.air-quality.clean-air-program-effect.v1.constraint.decision-authority",
+      "description": "No analytical output may bypass lawful authority, accountable human review, or an applicable appeal process.",
+      "hard": true,
+      "kind": "regulatory",
+      "required_source_roles": [
+        "environmental-exposure"
+      ]
+    }
+  ],
+  "current_readiness": "blocked-multiple-gates",
+  "decision_cadence": "recompiled at each planning cycle and after material evidence change",
+  "decision_owner": "environmental health director and air-quality program lead",
+  "decision_question": "Did phased protection or source-control measures reduce measured exposure and verified respiratory events?",
+  "decision_type": "evaluate",
+  "design_id": "scenario.health.air-quality.clean-air-program-effect.v1",
+  "design_order": 96,
+  "design_signature": "sha256:921fd951a8f5d81d807dbfced3210c0fab7f2a5e5aa0f818e914ad57daae3d0f",
+  "evidence_requirements": [
+    "causal",
+    "estimated",
+    "observed",
+    "proposed"
+  ],
+  "family_id": "health.air-quality",
+  "family_title": "Air-quality exposure and respiratory health",
+  "horizon": "multi-year",
+  "implementation_status": "design-only",
+  "independence_key": {
+    "binding_constraint": "The air-quality exposure and respiratory health evaluate must respect declared pre-specified assignment, comparison, outcome, spillover, and subgroup rules.",
+    "decision_object": "phased clean-air protection and source-control intervention",
+    "evidence_gate": "Evidence for phased clean-air protection and source-control intervention passes documented checks for dated assignment, comparison validity, pre-trends, outcome panels, attrition, spillovers, and falsification tests.",
+    "horizon": "multi-year",
+    "intervention_mechanism": "staggered adoption evaluation with exposure and health panels",
+    "primary_outcome": "change in measured exposure and respiratory-event rate",
+    "spatial_unit": "population-group"
+  },
+  "intended_claim": "A versioned evaluate design for comparing declared alternatives affecting phased clean-air protection and source-control intervention, conditional on its evidence gate.",
+  "limitations": [
+    "This library record has no city binding and therefore reports no local input, output, or recommendation.",
+    "Readiness describes explicit source and method gates; it does not certify implementation feasibility.",
+    "External domain, legal, community, security, and operational review remains outside this design artifact."
+  ],
+  "method_claimed": false,
+  "objectives": [
+    {
+      "evidence_type": "estimated",
+      "metric": "change in measured exposure and respiratory-event rate",
+      "objective_id": "scenario.health.air-quality.clean-air-program-effect.v1.objective.primary",
+      "primary": true,
+      "sense": "minimize",
+      "unit": "concentration and events per population"
+    },
+    {
+      "evidence_type": "estimated",
+      "metric": "distributional gap in change in measured exposure and respiratory-event rate",
+      "objective_id": "scenario.health.air-quality.clean-air-program-effect.v1.objective.equity",
+      "primary": false,
+      "sense": "minimize",
+      "unit": "concentration and events per population"
+    },
+    {
+      "evidence_type": "observed",
+      "metric": "decision claims with complete evidence lineage",
+      "objective_id": "scenario.health.air-quality.clean-air-program-effect.v1.objective.traceability",
+      "primary": false,
+      "sense": "maximize",
+      "unit": "percent"
+    }
+  ],
+  "prohibited_claims": [
+    "Do not infer causal health benefits without assignment, exposure, outcome, and spillover validity.",
+    "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+    "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+    "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+  ],
+  "release_gate": {
+    "failure_release": "Release an explicit insufficient-evidence record naming missing sources, failed diagnostics, prohibited claims, and the next validation action.",
+    "failure_status": "insufficient-evidence",
+    "gate_id": "scenario.health.air-quality.clean-air-program-effect.v1.gate.release",
+    "gate_type": "causal-identification",
+    "pass_condition": "Evidence for phased clean-air protection and source-control intervention passes documented checks for dated assignment, comparison validity, pre-trends, outcome panels, attrition, spillovers, and falsification tests.",
+    "required_evidence_types": [
+      "causal",
+      "observed"
+    ],
+    "required_source_roles": [
+      "environmental-exposure",
+      "equity-attribute",
+      "geographic-identity",
+      "health-outcome",
+      "intervention-assignment",
+      "legal-regulatory",
+      "outcome-panel"
+    ]
+  },
+  "required_source_roles": [
+    "environmental-exposure",
+    "equity-attribute",
+    "geographic-identity",
+    "health-outcome",
+    "intervention-assignment",
+    "legal-regulatory",
+    "outcome-panel"
+  ],
+  "schema_version": "1.0.0",
+  "spatial_unit": "population-group",
+  "suite": "population-health-environmental-exposure",
+  "tags": [
+    "design-only",
+    "evaluate",
+    "health.air-quality",
+    "population-health-environmental-exposure",
+    "scenario-library"
+  ],
+  "title": "Evaluate clean-air protection and source-control effects",
+  "transportability_risks": [
+    "Pollutant mixtures, indoor infiltration, source profiles, coding, and monitor coverage differ.",
+    "Modeled concentration may not represent personal exposure."
+  ]
+}

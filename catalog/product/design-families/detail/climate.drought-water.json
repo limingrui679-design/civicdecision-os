@@ -1,0 +1,336 @@
+{
+  "designs": [
+    {
+      "analysis_modes": [
+        "descriptive"
+      ],
+      "binding_constraint": "An anomaly must exceed combined production, customer-meter, and boundary-flow uncertainty.",
+      "content_hash": "sha256:f6338bbf87fdc175c9c7ed176359833585afc831ac9fe4968ef536ae83182577",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Which zones show persistent production-consumption imbalance after meter uncertainty and authorized uses are reconciled?",
+      "decision_type": "diagnose",
+      "design_id": "scenario.climate.drought-water.water-loss-balance.v1",
+      "design_order": 25,
+      "evidence_gate": "data-completeness",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "proposed"
+      ],
+      "family_id": "climate.drought-water",
+      "family_title": "Drought and urban water security",
+      "horizon": "annual",
+      "implementation_status": "design-only",
+      "primary_outcome": "unexplained distribution water volume",
+      "prohibited_claims": [
+        "Do not label balance residuals as confirmed leaks or unauthorized consumption.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "service-area",
+      "suite": "climate-disaster-resilience",
+      "title": "Diagnose non-revenue water and demand anomalies"
+    },
+    {
+      "analysis_modes": [
+        "forecast",
+        "simulation"
+      ],
+      "binding_constraint": "Forecast operations must preserve the adopted emergency storage and environmental-flow reserve.",
+      "content_hash": "sha256:d0a3154a41d75c27296163024b24430e750111feb174ea49373c97f0527bee2f",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "What seasonal probability distribution of storage and shortage follows climate, demand, and operating assumptions?",
+      "decision_type": "forecast",
+      "design_id": "scenario.climate.drought-water.drought-supply-demand.v1",
+      "design_order": 26,
+      "evidence_gate": "model-calibration",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "proposed",
+        "simulated"
+      ],
+      "family_id": "climate.drought-water",
+      "family_title": "Drought and urban water security",
+      "horizon": "seasonal",
+      "implementation_status": "design-only",
+      "primary_outcome": "expected potable-water shortage volume",
+      "prohibited_claims": [
+        "Do not call a climate-conditioned water balance a deterministic shortage prediction.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "citywide",
+      "suite": "climate-disaster-resilience",
+      "title": "Forecast drought supply-demand balance"
+    },
+    {
+      "analysis_modes": [
+        "simulation",
+        "optimization"
+      ],
+      "binding_constraint": "Selected projects must fit capital, energy, treatment, maintenance, and delivery-capacity limits.",
+      "content_hash": "sha256:0cb0e771e37e0c80d111fc225ea1c05fd2b059c3b902740707064cc422cecfa2",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Which investments best reduce shortage and failure risk within capital and operating limits?",
+      "decision_type": "prioritize",
+      "design_id": "scenario.climate.drought-water.water-security-portfolio.v1",
+      "design_order": 27,
+      "evidence_gate": "cost-capacity",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "family_id": "climate.drought-water",
+      "family_title": "Drought and urban water security",
+      "horizon": "multi-year",
+      "implementation_status": "design-only",
+      "primary_outcome": "expected annual shortage and leakage volume",
+      "prohibited_claims": [
+        "Do not report modeled yield or avoided shortage as delivered water.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "asset",
+      "suite": "climate-disaster-resilience",
+      "title": "Prioritize leakage, reuse, and supply-reliability investments"
+    },
+    {
+      "analysis_modes": [
+        "simulation",
+        "optimization"
+      ],
+      "binding_constraint": "Sites must meet water-quality, discharge, land, energy, permitting, and community-burden constraints.",
+      "content_hash": "sha256:e3fcfd9faecd2a7bdb5822314e54305895d3cf8371d565219ddc7e3e5f0ab847",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Where can reuse treatment or storage connect feasible supply to demand with acceptable environmental and community burdens?",
+      "decision_type": "site",
+      "design_id": "scenario.climate.drought-water.reuse-storage-facilities.v1",
+      "design_order": 28,
+      "evidence_gate": "legal-authority",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "family_id": "climate.drought-water",
+      "family_title": "Drought and urban water security",
+      "horizon": "multi-year",
+      "implementation_status": "design-only",
+      "primary_outcome": "unserved reliable non-potable water demand",
+      "prohibited_claims": [
+        "Do not describe a screened location as permitted, engineered, or publicly accepted.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "facility",
+      "suite": "climate-disaster-resilience",
+      "title": "Site water reuse and distributed storage facilities"
+    },
+    {
+      "analysis_modes": [
+        "simulation",
+        "optimization"
+      ],
+      "binding_constraint": "Allocation must honor water rights, public-health minimums, environmental flows, and adopted drought rules.",
+      "content_hash": "sha256:f0989d4744da33baf448b0ce6227a3bf9e12506562f781af3c288d71bae5ef8d",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "How should constrained supply be allocated while protecting essential, environmental, and equity requirements?",
+      "decision_type": "allocate",
+      "design_id": "scenario.climate.drought-water.scarce-water-allocation.v1",
+      "design_order": 29,
+      "evidence_gate": "legal-authority",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "family_id": "climate.drought-water",
+      "family_title": "Drought and urban water security",
+      "horizon": "weeks",
+      "implementation_status": "design-only",
+      "primary_outcome": "essential demand left unmet",
+      "prohibited_claims": [
+        "Do not present a modeled scarcity allocation as a lawful order or delivered volume.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "service-area",
+      "suite": "climate-disaster-resilience",
+      "title": "Allocate scarce water across essential uses"
+    },
+    {
+      "analysis_modes": [
+        "forecast",
+        "optimization"
+      ],
+      "binding_constraint": "Treatment, conveyance, maintenance, notice, and restriction lead times must be respected.",
+      "content_hash": "sha256:9971f99e71a3b46b51549a8582360ab4838201288faf1128984ce8664991c2b1",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "When should source switching, maintenance, irrigation limits, and restriction stages occur?",
+      "decision_type": "schedule",
+      "design_id": "scenario.climate.drought-water.drought-operations.v1",
+      "design_order": 30,
+      "evidence_gate": "temporal-alignment",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed"
+      ],
+      "family_id": "climate.drought-water",
+      "family_title": "Drought and urban water security",
+      "horizon": "seasonal",
+      "implementation_status": "design-only",
+      "primary_outcome": "days below emergency storage reserve",
+      "prohibited_claims": [
+        "Do not call an optimized calendar an adopted restriction or completed maintenance plan.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "citywide",
+      "suite": "climate-disaster-resilience",
+      "title": "Schedule drought operations, maintenance, and restrictions"
+    },
+    {
+      "analysis_modes": [
+        "forecast",
+        "simulation",
+        "optimization"
+      ],
+      "binding_constraint": "Essential-service reliability must exceed the declared threshold across severe climate and asset-failure scenarios.",
+      "content_hash": "sha256:d2929161406d7f42dd93b55908281b58b7767ace0ee4e4c1acc5dfaf00a6e861",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Which portfolio sustains essential supply across prolonged drought, infrastructure failure, and demand uncertainty?",
+      "decision_type": "stress-test",
+      "design_id": "scenario.climate.drought-water.multi-year-water-security.v1",
+      "design_order": 31,
+      "evidence_gate": "external-validation",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "family_id": "climate.drought-water",
+      "family_title": "Drought and urban water security",
+      "horizon": "multi-year",
+      "implementation_status": "design-only",
+      "primary_outcome": "scenario-weighted essential shortage volume",
+      "prohibited_claims": [
+        "Do not present synthetic drought sequences as forecasts or assumed project yield as observed supply.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "citywide",
+      "suite": "climate-disaster-resilience",
+      "title": "Stress-test multi-year urban water security"
+    },
+    {
+      "analysis_modes": [
+        "descriptive",
+        "causal"
+      ],
+      "binding_constraint": "Essential-use floors, affordability, treatment timing, and heterogeneous effects must be pre-specified.",
+      "content_hash": "sha256:06382fb026b98d4c7552bfbb159d77de850fe2fb8ae007fd790d0b85b5a61b23",
+      "current_readiness": "blocked-multiple-gates",
+      "decision_question": "Did a phased conservation incentive reduce discretionary demand without burdening essential use?",
+      "decision_type": "evaluate",
+      "design_id": "scenario.climate.drought-water.conservation-incentive-effect.v1",
+      "design_order": 32,
+      "evidence_gate": "causal-identification",
+      "evidence_types": [
+        "causal",
+        "estimated",
+        "observed",
+        "proposed"
+      ],
+      "family_id": "climate.drought-water",
+      "family_title": "Drought and urban water security",
+      "horizon": "annual",
+      "implementation_status": "design-only",
+      "primary_outcome": "change in weather-normalized discretionary water demand",
+      "prohibited_claims": [
+        "Do not infer welfare gains from lower consumption or causal effects from simple before-after billing totals.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "population-group",
+      "suite": "climate-disaster-resilience",
+      "title": "Evaluate conservation pricing and assistance effects"
+    }
+  ],
+  "family": {
+    "affected_system": "urban water supply, distribution, and conservation system",
+    "claim_boundary": [
+      "Hazard observations and modeled exposure do not establish individual harm or causation.",
+      "Proposed adaptations are planning alternatives, not adopted policy or engineered designs.",
+      "A design-only record is not a city execution, validated forecast, or impact result."
+    ],
+    "common_source_roles": [
+      "asset-inventory",
+      "climate-hazard",
+      "operating-capacity"
+    ],
+    "decision_owner": "water utility general manager and drought-response lead",
+    "decision_types": [
+      "diagnose",
+      "forecast",
+      "prioritize",
+      "site",
+      "allocate",
+      "schedule",
+      "stress-test",
+      "evaluate"
+    ],
+    "description": "Decision designs for water loss diagnosis, demand and supply forecasting, renewal and reuse investment, distribution, scheduling, multi-year stress, and conservation evaluation.",
+    "design_refs": [
+      "scenario.climate.drought-water.water-loss-balance.v1",
+      "scenario.climate.drought-water.drought-supply-demand.v1",
+      "scenario.climate.drought-water.water-security-portfolio.v1",
+      "scenario.climate.drought-water.reuse-storage-facilities.v1",
+      "scenario.climate.drought-water.scarce-water-allocation.v1",
+      "scenario.climate.drought-water.drought-operations.v1",
+      "scenario.climate.drought-water.multi-year-water-security.v1",
+      "scenario.climate.drought-water.conservation-incentive-effect.v1"
+    ],
+    "design_signatures": [
+      "sha256:274661ad42cd719fff91903c41a5fc5de38c41625251eb5496393c8733bbefe8",
+      "sha256:92b4877b1b2b04dfc3d3e1081424393e5fa7219d70a945d3675fc294c7077b76",
+      "sha256:ad3a2d4bb5a289c1822828cc40023db1ef667a7f4b5fbb250e2d5842deb10dc0",
+      "sha256:f3a8bda57b5562167861cdcf9ae08299f48df63a76581200183b31f89aace17b",
+      "sha256:5a76735690066a1a9a88866996f3afe837e5713eff72b8cca31fc246a69fc904",
+      "sha256:d2530bc18af28eb610f7b80fb1f1543aeb535fc7ea4141b08ccb1ccace45b8b5",
+      "sha256:af9db0182aa83a7b3d504410f06d7d2aaa61c56c118e9b2b0b6ab29d5897e36c",
+      "sha256:3e2bf11381862a5fe59e42c07610614395f32639b35bdce6cee5694eebd11134"
+    ],
+    "family_id": "climate.drought-water",
+    "family_order": 4,
+    "schema_version": "1.0.0",
+    "suite": "climate-disaster-resilience",
+    "title": "Drought and urban water security"
+  },
+  "library_claim_boundary": [
+    "The catalog contains 240 decision designs, not 240 city executions.",
+    "Exactly twelve designs map to existing Tier-D reference templates; 228 remain design-only.",
+    "A reference implementation can be an explicit negative release and does not imply impact.",
+    "No record claims a city binding, new method, deployment, adoption, or real-user outcome.",
+    "Future execution requires source binding, gate passage, and domain, legal, community, and operational review."
+  ]
+}

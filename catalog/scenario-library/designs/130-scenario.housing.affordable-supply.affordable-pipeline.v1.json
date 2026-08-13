@@ -1,0 +1,162 @@
+{
+  "affected_system": "affordable housing production, preservation, subsidy, and compliance system",
+  "alternatives": [
+    "activate a bounded reserve from forecast risk bands for affordable-housing pipeline and preservation demand",
+    "use rolling forecasts and conservative capacity triggers for affordable-housing pipeline and preservation demand",
+    "pair project-stage survival and restriction-expiry forecasting with an explicit stop, review, and escalation rule"
+  ],
+  "analysis_modes": [
+    "forecast"
+  ],
+  "assumptions": [
+    "Units, affordability restrictions, occupancy, financing, condition, pipeline, and parcel feasibility are reconciled.",
+    "Modeled development feasibility is not treated as entitlement, financing close, or completed housing.",
+    "All alternatives, capacities, costs, effects, thresholds, and failure scenarios are proposed until bound to evidence."
+  ],
+  "baseline": "continue ordinary capacity planning for affordable-housing pipeline and preservation demand.",
+  "city_bindings": [],
+  "constraints": [
+    {
+      "binding": true,
+      "constraint_id": "scenario.housing.affordable-supply.affordable-pipeline.v1.constraint.binding",
+      "description": "The affordable housing siting and preservation forecast must respect declared validated operational capacity and forecast uncertainty.",
+      "hard": true,
+      "kind": "capacity",
+      "required_source_roles": [
+        "financial-cost",
+        "geographic-identity",
+        "housing-market",
+        "land-parcel",
+        "legal-regulatory",
+        "real-time-state"
+      ]
+    },
+    {
+      "binding": false,
+      "constraint_id": "scenario.housing.affordable-supply.affordable-pipeline.v1.constraint.evidence-scope",
+      "description": "Every released metric must retain evidence type, source lineage, geography, time, assumptions, and uncertainty.",
+      "hard": true,
+      "kind": "technical",
+      "required_source_roles": [
+        "financial-cost"
+      ]
+    },
+    {
+      "binding": false,
+      "constraint_id": "scenario.housing.affordable-supply.affordable-pipeline.v1.constraint.decision-authority",
+      "description": "No analytical output may bypass lawful authority, accountable human review, or an applicable appeal process.",
+      "hard": true,
+      "kind": "regulatory",
+      "required_source_roles": [
+        "financial-cost"
+      ]
+    }
+  ],
+  "current_readiness": "blocked-missing-source",
+  "decision_cadence": "recompiled at each planning cycle and after material evidence change",
+  "decision_owner": "housing development commissioner and affordable-housing finance director",
+  "decision_question": "What probabilistic completion, expiry, cost, and unit-loss range should housing operations plan around?",
+  "decision_type": "forecast",
+  "design_id": "scenario.housing.affordable-supply.affordable-pipeline.v1",
+  "design_order": 130,
+  "design_signature": "sha256:a3c3c890f0bea2183712848a6415f119472b5a3458838acb8b73a17679e50f19",
+  "evidence_requirements": [
+    "estimated",
+    "observed",
+    "proposed"
+  ],
+  "family_id": "housing.affordable-supply",
+  "family_title": "Affordable housing siting and preservation",
+  "horizon": "weeks",
+  "implementation_status": "design-only",
+  "independence_key": {
+    "binding_constraint": "The affordable housing siting and preservation forecast must respect declared validated operational capacity and forecast uncertainty.",
+    "decision_object": "affordable-housing pipeline and preservation demand",
+    "evidence_gate": "Evidence for affordable-housing pipeline and preservation demand passes documented checks for held-out error, interval coverage, event detection, drift, and baseline comparison.",
+    "horizon": "weeks",
+    "intervention_mechanism": "project-stage survival and restriction-expiry forecasting",
+    "primary_outcome": "net affordable homes below adopted supply targets",
+    "spatial_unit": "citywide"
+  },
+  "intended_claim": "A versioned forecast design for comparing declared alternatives affecting affordable-housing pipeline and preservation demand, conditional on its evidence gate.",
+  "limitations": [
+    "This library record has no city binding and therefore reports no local input, output, or recommendation.",
+    "Readiness describes explicit source and method gates; it does not certify implementation feasibility.",
+    "External domain, legal, community, security, and operational review remains outside this design artifact."
+  ],
+  "method_claimed": false,
+  "objectives": [
+    {
+      "evidence_type": "estimated",
+      "metric": "net affordable homes below adopted supply targets",
+      "objective_id": "scenario.housing.affordable-supply.affordable-pipeline.v1.objective.primary",
+      "primary": true,
+      "sense": "minimize",
+      "unit": "homes"
+    },
+    {
+      "evidence_type": "estimated",
+      "metric": "distributional gap in net affordable homes below adopted supply targets",
+      "objective_id": "scenario.housing.affordable-supply.affordable-pipeline.v1.objective.equity",
+      "primary": false,
+      "sense": "minimize",
+      "unit": "homes"
+    },
+    {
+      "evidence_type": "observed",
+      "metric": "decision claims with complete evidence lineage",
+      "objective_id": "scenario.housing.affordable-supply.affordable-pipeline.v1.objective.traceability",
+      "primary": false,
+      "sense": "maximize",
+      "unit": "percent"
+    }
+  ],
+  "prohibited_claims": [
+    "Do not count proposed, permitted, or financed units as completed occupied homes.",
+    "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+    "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+    "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+  ],
+  "release_gate": {
+    "failure_release": "Release an explicit insufficient-evidence record naming missing sources, failed diagnostics, prohibited claims, and the next validation action.",
+    "failure_status": "insufficient-evidence",
+    "gate_id": "scenario.housing.affordable-supply.affordable-pipeline.v1.gate.release",
+    "gate_type": "model-calibration",
+    "pass_condition": "Evidence for affordable-housing pipeline and preservation demand passes documented checks for held-out error, interval coverage, event detection, drift, and baseline comparison.",
+    "required_evidence_types": [
+      "estimated",
+      "observed"
+    ],
+    "required_source_roles": [
+      "financial-cost",
+      "geographic-identity",
+      "housing-market",
+      "land-parcel",
+      "legal-regulatory",
+      "real-time-state"
+    ]
+  },
+  "required_source_roles": [
+    "financial-cost",
+    "geographic-identity",
+    "housing-market",
+    "land-parcel",
+    "legal-regulatory",
+    "real-time-state"
+  ],
+  "schema_version": "1.0.0",
+  "spatial_unit": "citywide",
+  "suite": "housing-land-use-regeneration",
+  "tags": [
+    "design-only",
+    "forecast",
+    "housing-land-use-regeneration",
+    "housing.affordable-supply",
+    "scenario-library"
+  ],
+  "title": "Forecast affordable-housing pipeline and preservation need",
+  "transportability_risks": [
+    "Land law, subsidy programs, construction costs, finance, tenant protections, and markets differ.",
+    "Observed transactions may omit informal displacement and off-market preservation risks."
+  ]
+}

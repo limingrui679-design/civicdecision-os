@@ -1,0 +1,226 @@
+{
+  "audit_maximum_pairwise_similarity": 0.646154,
+  "design": {
+    "affected_system": "municipal capital planning, debt, grants, reserves, procurement, and asset delivery",
+    "alternatives": [
+      "add targeted redundancy around the largest failure modes in municipal capital plan under fiscal and delivery stress",
+      "select an adaptive robust portfolio across severe scenarios for municipal capital plan under fiscal and delivery stress",
+      "pair correlated fiscal, cost, schedule, asset, and hazard simulation with an explicit stop, review, and escalation rule"
+    ],
+    "analysis_modes": [
+      "forecast",
+      "simulation",
+      "optimization"
+    ],
+    "assumptions": [
+      "Budgets, obligations, appropriations, encumbrances, expenditures, schedules, and assets are reconciled.",
+      "All fiscal scenarios separate nominal, real, committed, contingent, and modeled amounts.",
+      "All alternatives, capacities, costs, effects, thresholds, and failure scenarios are proposed until bound to evidence."
+    ],
+    "baseline": "apply current continuity provisions to municipal capital plan under fiscal and delivery stress.",
+    "city_bindings": [],
+    "constraints": [
+      {
+        "binding": true,
+        "constraint_id": "scenario.infrastructure.capital-finance.fiscal-capital-shock.v1.constraint.binding",
+        "description": "The capital portfolio and municipal finance stress test must respect declared minimum continuity and safety thresholds across severe scenarios.",
+        "hard": true,
+        "kind": "risk",
+        "required_source_roles": [
+          "asset-condition",
+          "asset-inventory",
+          "climate-hazard",
+          "financial-cost",
+          "legal-regulatory",
+          "operating-capacity"
+        ]
+      },
+      {
+        "binding": false,
+        "constraint_id": "scenario.infrastructure.capital-finance.fiscal-capital-shock.v1.constraint.evidence-scope",
+        "description": "Every released metric must retain evidence type, source lineage, geography, time, assumptions, and uncertainty.",
+        "hard": true,
+        "kind": "technical",
+        "required_source_roles": [
+          "asset-condition"
+        ]
+      },
+      {
+        "binding": false,
+        "constraint_id": "scenario.infrastructure.capital-finance.fiscal-capital-shock.v1.constraint.decision-authority",
+        "description": "No analytical output may bypass lawful authority, accountable human review, or an applicable appeal process.",
+        "hard": true,
+        "kind": "regulatory",
+        "required_source_roles": [
+          "asset-condition"
+        ]
+      }
+    ],
+    "current_readiness": "blocked-missing-source",
+    "decision_cadence": "recompiled at each planning cycle and after material evidence change",
+    "decision_owner": "chief financial officer and capital planning director",
+    "decision_question": "Which portfolio remains affordable and service-protective under revenue, rate, cost, delay, failure, and disaster shocks?",
+    "decision_type": "stress-test",
+    "design_id": "scenario.infrastructure.capital-finance.fiscal-capital-shock.v1",
+    "design_order": 207,
+    "design_signature": "sha256:1052ffda34586418d4958d1f3d6991950ffe7eafffcd7c82f4b89efbc6992b85",
+    "evidence_requirements": [
+      "estimated",
+      "observed",
+      "optimized",
+      "proposed",
+      "simulated"
+    ],
+    "family_id": "infrastructure.capital-finance",
+    "family_title": "Capital portfolio and municipal finance",
+    "horizon": "seasonal",
+    "implementation_status": "design-only",
+    "independence_key": {
+      "binding_constraint": "The capital portfolio and municipal finance stress test must respect declared minimum continuity and safety thresholds across severe scenarios.",
+      "decision_object": "municipal capital plan under fiscal and delivery stress",
+      "evidence_gate": "Evidence for municipal capital plan under fiscal and delivery stress passes documented checks for scenario ranges, dependence, failure rates, recovery, intervention performance, and sensitivity.",
+      "horizon": "seasonal",
+      "intervention_mechanism": "correlated fiscal, cost, schedule, asset, and hazard simulation",
+      "primary_outcome": "scenario-weighted critical service and fiscal threshold breach",
+      "spatial_unit": "citywide"
+    },
+    "intended_claim": "A versioned stress-test design for comparing declared alternatives affecting municipal capital plan under fiscal and delivery stress, conditional on its evidence gate.",
+    "limitations": [
+      "This library record has no city binding and therefore reports no local input, output, or recommendation.",
+      "Readiness describes explicit source and method gates; it does not certify implementation feasibility.",
+      "External domain, legal, community, security, and operational review remains outside this design artifact."
+    ],
+    "method_claimed": false,
+    "objectives": [
+      {
+        "evidence_type": "estimated",
+        "metric": "scenario-weighted critical service and fiscal threshold breach",
+        "objective_id": "scenario.infrastructure.capital-finance.fiscal-capital-shock.v1.objective.primary",
+        "primary": true,
+        "sense": "minimize",
+        "unit": "breach-years"
+      },
+      {
+        "evidence_type": "estimated",
+        "metric": "distributional gap in scenario-weighted critical service and fiscal threshold breach",
+        "objective_id": "scenario.infrastructure.capital-finance.fiscal-capital-shock.v1.objective.equity",
+        "primary": false,
+        "sense": "minimize",
+        "unit": "breach-years"
+      },
+      {
+        "evidence_type": "observed",
+        "metric": "decision claims with complete evidence lineage",
+        "objective_id": "scenario.infrastructure.capital-finance.fiscal-capital-shock.v1.objective.traceability",
+        "primary": false,
+        "sense": "maximize",
+        "unit": "percent"
+      }
+    ],
+    "prohibited_claims": [
+      "Do not present synthetic fiscal paths as audited forecasts, ratings, defaults, or observed losses.",
+      "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+      "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+      "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+    ],
+    "release_gate": {
+      "failure_release": "Release an explicit insufficient-evidence record naming missing sources, failed diagnostics, prohibited claims, and the next validation action.",
+      "failure_status": "insufficient-evidence",
+      "gate_id": "scenario.infrastructure.capital-finance.fiscal-capital-shock.v1.gate.release",
+      "gate_type": "external-validation",
+      "pass_condition": "Evidence for municipal capital plan under fiscal and delivery stress passes documented checks for scenario ranges, dependence, failure rates, recovery, intervention performance, and sensitivity.",
+      "required_evidence_types": [
+        "estimated",
+        "observed"
+      ],
+      "required_source_roles": [
+        "asset-condition",
+        "asset-inventory",
+        "climate-hazard",
+        "financial-cost",
+        "legal-regulatory",
+        "operating-capacity"
+      ]
+    },
+    "required_source_roles": [
+      "asset-condition",
+      "asset-inventory",
+      "climate-hazard",
+      "financial-cost",
+      "legal-regulatory",
+      "operating-capacity"
+    ],
+    "schema_version": "1.0.0",
+    "spatial_unit": "citywide",
+    "suite": "infrastructure-finance-asset-risk",
+    "tags": [
+      "design-only",
+      "infrastructure-finance-asset-risk",
+      "infrastructure.capital-finance",
+      "scenario-library",
+      "stress-test"
+    ],
+    "title": "Stress-test the capital plan under fiscal and delivery shocks",
+    "transportability_risks": [
+      "Accounting, tax authority, debt limits, grants, procurement, labor, and markets differ.",
+      "Historical delivery and cost relationships may shift under inflation or policy change."
+    ]
+  },
+  "family": {
+    "affected_system": "municipal capital planning, debt, grants, reserves, procurement, and asset delivery",
+    "claim_boundary": [
+      "Requests and proxy indicators do not replace engineering inspection, accounting, or legal review.",
+      "Selected projects and schedules are planning outputs, not appropriations, designs, contracts, or construction.",
+      "Modeled lifecycle, emissions, reliability, and fiscal effects are not realized outcomes."
+    ],
+    "common_source_roles": [
+      "asset-inventory",
+      "financial-cost",
+      "operating-capacity"
+    ],
+    "decision_owner": "chief financial officer and capital planning director",
+    "decision_types": [
+      "diagnose",
+      "forecast",
+      "prioritize",
+      "site",
+      "allocate",
+      "schedule",
+      "stress-test",
+      "evaluate"
+    ],
+    "description": "Eight decisions for obligation diagnosis, fiscal forecasting, portfolio selection, reserve siting, funding allocation, delivery scheduling, fiscal stress, and financing evaluation.",
+    "design_refs": [
+      "scenario.infrastructure.capital-finance.capital-obligation-friction.v1",
+      "scenario.infrastructure.capital-finance.capital-fiscal-outlook.v1",
+      "scenario.infrastructure.capital-finance.capital-investment-portfolio.v1",
+      "scenario.infrastructure.capital-finance.capital-reserve-assets.v1",
+      "scenario.infrastructure.capital-finance.capital-funding.v1",
+      "scenario.infrastructure.capital-finance.capital-delivery.v1",
+      "scenario.infrastructure.capital-finance.fiscal-capital-shock.v1",
+      "scenario.infrastructure.capital-finance.delivery-reform-effect.v1"
+    ],
+    "design_signatures": [
+      "sha256:c1fa35ac874c80f312edc0baa61dc774ea886868148d0112efd96d958ed3de7e",
+      "sha256:df8912da2b7c363790ea7263f08e82dfc65fc42a5605ca8c45c830b314a73bbe",
+      "sha256:371ba2bb2077c43ac2e3c2943cdeb378ab0eb63cf1d37ea2082634ecb1be96eb",
+      "sha256:92dc6b3fbf03e32ff42c95f5d8dbdfcae02b40845450834143c12571a4d07946",
+      "sha256:9e87c155a83ba4e74ede6f47f767869ad076dcf121401b417b1467741bd7675e",
+      "sha256:49ffdda0614777e50fd6f9222c6bf4ed77cddb58d265739c0c949f4a757bc8a7",
+      "sha256:1052ffda34586418d4958d1f3d6991950ffe7eafffcd7c82f4b89efbc6992b85",
+      "sha256:46f48a8a654b7e65c4f72b8b12b65dc2360e6089e0d8d95075c90dae88212c1c"
+    ],
+    "family_id": "infrastructure.capital-finance",
+    "family_order": 26,
+    "schema_version": "1.0.0",
+    "suite": "infrastructure-finance-asset-risk",
+    "title": "Capital portfolio and municipal finance"
+  },
+  "library_claim_boundary": [
+    "The catalog contains 240 decision designs, not 240 city executions.",
+    "Exactly twelve designs map to existing Tier-D reference templates; 228 remain design-only.",
+    "A reference implementation can be an explicit negative release and does not imply impact.",
+    "No record claims a city binding, new method, deployment, adoption, or real-user outcome.",
+    "Future execution requires source binding, gate passage, and domain, legal, community, and operational review."
+  ]
+}

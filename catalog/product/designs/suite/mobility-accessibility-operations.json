@@ -1,0 +1,1370 @@
+{
+  "claim_boundary": "Design records are not city executions, deployments, adoptions, or impacts.",
+  "items": [
+    {
+      "analysis_modes": [
+        "descriptive"
+      ],
+      "binding_constraint": "The transit reliability and passenger continuity diagnose must respect declared measurement resolution and classification uncertainty.",
+      "content_hash": "sha256:2fddb23d90507f595f15cb538014cb60501f5cd53131cfbb86539f04a6b79344",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Which route segments and transfer nodes repeatedly propagate delay into passenger connection failures?",
+      "decision_type": "diagnose",
+      "design_id": "scenario.mobility.transit-reliability.delay-propagation.v1",
+      "design_order": 41,
+      "evidence_gate": "geographic-alignment",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "proposed"
+      ],
+      "family_id": "mobility.transit-reliability",
+      "family_title": "Transit reliability and passenger continuity",
+      "horizon": "annual",
+      "implementation_status": "design-only",
+      "primary_outcome": "passenger-weighted missed connections",
+      "prohibited_claims": [
+        "Do not infer passenger experience from vehicle delay without validated load and transfer evidence.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "network",
+      "suite": "mobility-accessibility-operations",
+      "title": "Diagnose transit delay propagation and missed connections"
+    },
+    {
+      "analysis_modes": [
+        "forecast"
+      ],
+      "binding_constraint": "The transit reliability and passenger continuity forecast must respect declared validated operational capacity and forecast uncertainty.",
+      "content_hash": "sha256:75e5797f2686b49463b2c5e1f2308168171b3a3971eb733767cf220013c4d1eb",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "What route- and time-specific crowding and delay envelope should dispatch prepare for?",
+      "decision_type": "forecast",
+      "design_id": "scenario.mobility.transit-reliability.crowding-delay-load.v1",
+      "design_order": 42,
+      "evidence_gate": "model-calibration",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "proposed"
+      ],
+      "family_id": "mobility.transit-reliability",
+      "family_title": "Transit reliability and passenger continuity",
+      "horizon": "weeks",
+      "implementation_status": "design-only",
+      "primary_outcome": "passenger-minutes above crowding and delay thresholds",
+      "prohibited_claims": [
+        "Do not present forecast passenger loads or delays as observed service outcomes.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "corridor",
+      "suite": "mobility-accessibility-operations",
+      "title": "Forecast transit crowding and delay load"
+    },
+    {
+      "analysis_modes": [
+        "descriptive",
+        "optimization"
+      ],
+      "binding_constraint": "The transit reliability and passenger continuity prioritize must respect declared capital, operating, maintenance, and delivery budgets.",
+      "content_hash": "sha256:df8f3e81b9b5f330114ecb8c3f26008a387aa7f7d1ec428eebfbc049714a4871",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Which signal, lane, stop, fleet, and operations projects best reduce passenger delay within lifecycle budgets?",
+      "decision_type": "prioritize",
+      "design_id": "scenario.mobility.transit-reliability.reliability-investments.v1",
+      "design_order": 43,
+      "evidence_gate": "cost-capacity",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed"
+      ],
+      "family_id": "mobility.transit-reliability",
+      "family_title": "Transit reliability and passenger continuity",
+      "horizon": "multi-year",
+      "implementation_status": "design-only",
+      "primary_outcome": "expected passenger-hours of unreliable service",
+      "prohibited_claims": [
+        "Do not report modeled passenger delay reduction as a realized project benefit.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "asset",
+      "suite": "mobility-accessibility-operations",
+      "title": "Prioritize transit reliability investments"
+    },
+    {
+      "analysis_modes": [
+        "simulation",
+        "optimization"
+      ],
+      "binding_constraint": "The transit reliability and passenger continuity site must respect declared land control, accessibility, permitting, safety, and operating feasibility.",
+      "content_hash": "sha256:cbd420196326beaf86c8c0fa4d7065d7845344c93679ebe0dc2607d1fd2a547f",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Where should timed-transfer, layover, charging, and passenger-recovery capacity be located?",
+      "decision_type": "site",
+      "design_id": "scenario.mobility.transit-reliability.transfer-hubs.v1",
+      "design_order": 44,
+      "evidence_gate": "legal-authority",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "family_id": "mobility.transit-reliability",
+      "family_title": "Transit reliability and passenger continuity",
+      "horizon": "multi-year",
+      "implementation_status": "design-only",
+      "primary_outcome": "passengers beyond a reliable accessible transfer",
+      "prohibited_claims": [
+        "Do not call a candidate hub accessible, permitted, or operationally feasible without verification.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "facility",
+      "suite": "mobility-accessibility-operations",
+      "title": "Site accessible transfer and recovery hubs"
+    },
+    {
+      "analysis_modes": [
+        "simulation",
+        "optimization"
+      ],
+      "binding_constraint": "The transit reliability and passenger continuity allocate must respect declared minimum service, eligibility, capacity, and distributional safeguards.",
+      "content_hash": "sha256:e45400ecba3f9aaa620908d13b4e2d0cb654bd65b9121dc6920e285404650612",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "How should vehicles, operators, and spare capacity be assigned across routes and depots?",
+      "decision_type": "allocate",
+      "design_id": "scenario.mobility.transit-reliability.fleet-spares.v1",
+      "design_order": 45,
+      "evidence_gate": "equity-measurement",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "family_id": "mobility.transit-reliability",
+      "family_title": "Transit reliability and passenger continuity",
+      "horizon": "weeks",
+      "implementation_status": "design-only",
+      "primary_outcome": "passenger demand without scheduled reliable capacity",
+      "prohibited_claims": [
+        "Do not describe a vehicle and operator assignment as delivered service.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "network",
+      "suite": "mobility-accessibility-operations",
+      "title": "Allocate fleet, operators, and recovery capacity"
+    },
+    {
+      "analysis_modes": [
+        "forecast",
+        "optimization"
+      ],
+      "binding_constraint": "The transit reliability and passenger continuity schedule must respect declared labor, access, sequencing, notice, and completion windows.",
+      "content_hash": "sha256:333b4ad7e23ed6806e1366986fd44ede916bf10a05a841474681edf30557a0ac",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "How should trips and recovery time be scheduled to balance reliability, transfers, and operator rules?",
+      "decision_type": "schedule",
+      "design_id": "scenario.mobility.transit-reliability.timetable-connections.v1",
+      "design_order": 46,
+      "evidence_gate": "temporal-alignment",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed"
+      ],
+      "family_id": "mobility.transit-reliability",
+      "family_title": "Transit reliability and passenger continuity",
+      "horizon": "weeks",
+      "implementation_status": "design-only",
+      "primary_outcome": "passenger-weighted excess wait and missed-connection time",
+      "prohibited_claims": [
+        "Do not call an optimized timetable published, staffed, or operated.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "network",
+      "suite": "mobility-accessibility-operations",
+      "title": "Schedule headways, recovery time, and timed connections"
+    },
+    {
+      "analysis_modes": [
+        "forecast",
+        "simulation",
+        "optimization"
+      ],
+      "binding_constraint": "The transit reliability and passenger continuity stress test must respect declared minimum continuity and safety thresholds across severe scenarios.",
+      "content_hash": "sha256:e36a2cf7d656573958c8d2d4d4d8f5e273f75faffa417f7e589be7668143d248",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Which operating plan preserves essential access under vehicle, infrastructure, weather, and staffing failures?",
+      "decision_type": "stress-test",
+      "design_id": "scenario.mobility.transit-reliability.network-disruption.v1",
+      "design_order": 47,
+      "evidence_gate": "external-validation",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "family_id": "mobility.transit-reliability",
+      "family_title": "Transit reliability and passenger continuity",
+      "horizon": "seasonal",
+      "implementation_status": "design-only",
+      "primary_outcome": "essential passenger-trips left without viable service",
+      "prohibited_claims": [
+        "Do not present synthetic failures as predicted disruptions or simulated access as completed trips.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "network",
+      "suite": "mobility-accessibility-operations",
+      "title": "Stress-test transit continuity under network disruption"
+    },
+    {
+      "analysis_modes": [
+        "descriptive",
+        "causal"
+      ],
+      "binding_constraint": "The transit reliability and passenger continuity evaluate must respect declared pre-specified assignment, comparison, outcome, spillover, and subgroup rules.",
+      "content_hash": "sha256:b6007173c84598f4aa412ce2ab59d3820d44a3466716254daeddb9e1fe8af843",
+      "current_readiness": "blocked-multiple-gates",
+      "decision_question": "Did phased transit-priority and timetable changes improve reliable passenger travel without displacement?",
+      "decision_type": "evaluate",
+      "design_id": "scenario.mobility.transit-reliability.priority-lane-effect.v1",
+      "design_order": 48,
+      "evidence_gate": "causal-identification",
+      "evidence_types": [
+        "causal",
+        "estimated",
+        "observed",
+        "proposed"
+      ],
+      "family_id": "mobility.transit-reliability",
+      "family_title": "Transit reliability and passenger continuity",
+      "horizon": "multi-year",
+      "implementation_status": "design-only",
+      "primary_outcome": "change in passenger-weighted reliable travel time",
+      "prohibited_claims": [
+        "Do not infer causal passenger benefits from simple before-after vehicle speed.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "corridor",
+      "suite": "mobility-accessibility-operations",
+      "title": "Evaluate transit priority and schedule redesign"
+    },
+    {
+      "analysis_modes": [
+        "descriptive"
+      ],
+      "binding_constraint": "The pedestrian safety and universal accessibility diagnose must respect declared measurement resolution and classification uncertainty.",
+      "content_hash": "sha256:496e0e0ddd7f8c5fb2f52916b168542ef6bf7d737dadf6dbc80bddb2faa0791a",
+      "current_readiness": "reference-implemented",
+      "decision_question": "Where do verified barriers, crossings, conflicts, speeds, and destinations break continuous safe access?",
+      "decision_type": "diagnose",
+      "design_id": "scenario.mobility.pedestrian-safety.accessible-route-breaks.v1",
+      "design_order": 49,
+      "evidence_gate": "geographic-alignment",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "proposed"
+      ],
+      "existing_template_ref": "deep.mobility.accessibility-request.v1",
+      "family_id": "mobility.pedestrian-safety",
+      "family_title": "Pedestrian safety and universal accessibility",
+      "horizon": "annual",
+      "implementation_status": "reference-implemented",
+      "primary_outcome": "essential destinations without a continuous safe accessible route",
+      "prohibited_claims": [
+        "Do not equate request keywords or mapped sidewalks with verified accessible routes.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "network",
+      "suite": "mobility-accessibility-operations",
+      "title": "Diagnose pedestrian safety and accessible-route breaks"
+    },
+    {
+      "analysis_modes": [
+        "forecast"
+      ],
+      "binding_constraint": "The pedestrian safety and universal accessibility forecast must respect declared validated operational capacity and forecast uncertainty.",
+      "content_hash": "sha256:e54a8696e30cd0971ba59ec79db92714c5149f2edce178a8c5d8da1f44a21a72",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "What corridor-time risk envelope should guide temporary safety and inspection readiness?",
+      "decision_type": "forecast",
+      "design_id": "scenario.mobility.pedestrian-safety.pedestrian-conflict-risk.v1",
+      "design_order": 50,
+      "evidence_gate": "model-calibration",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "proposed"
+      ],
+      "family_id": "mobility.pedestrian-safety",
+      "family_title": "Pedestrian safety and universal accessibility",
+      "horizon": "weeks",
+      "implementation_status": "design-only",
+      "primary_outcome": "high-risk pedestrian-hours without preventive coverage",
+      "prohibited_claims": [
+        "Do not call predicted conflicts crashes or infer exposure from population alone.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "corridor",
+      "suite": "mobility-accessibility-operations",
+      "title": "Forecast pedestrian conflict and barrier demand"
+    },
+    {
+      "analysis_modes": [
+        "descriptive",
+        "optimization"
+      ],
+      "binding_constraint": "The pedestrian safety and universal accessibility prioritize must respect declared capital, operating, maintenance, and delivery budgets.",
+      "content_hash": "sha256:d814b47fe4f80f6f9480b0be428adb268ef3f71360fe0dfa6c6cbcb4956c23be",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Which crossing, signal, curb-ramp, sidewalk, lighting, and speed treatments should be funded first?",
+      "decision_type": "prioritize",
+      "design_id": "scenario.mobility.pedestrian-safety.safety-accessibility-treatments.v1",
+      "design_order": 51,
+      "evidence_gate": "cost-capacity",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed"
+      ],
+      "family_id": "mobility.pedestrian-safety",
+      "family_title": "Pedestrian safety and universal accessibility",
+      "horizon": "multi-year",
+      "implementation_status": "design-only",
+      "primary_outcome": "expected severe conflict and inaccessible-route burden",
+      "prohibited_claims": [
+        "Do not present modeled risk reduction as prevented injuries.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "asset",
+      "suite": "mobility-accessibility-operations",
+      "title": "Prioritize pedestrian safety and accessibility treatments"
+    },
+    {
+      "analysis_modes": [
+        "simulation",
+        "optimization"
+      ],
+      "binding_constraint": "The pedestrian safety and universal accessibility site must respect declared land control, accessibility, permitting, safety, and operating feasibility.",
+      "content_hash": "sha256:4e24256ea1f887e6bc6d9115e73301151b53e7073538d2cde8cf179572bfeee6",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Where should new crossings and route connections close verified network gaps?",
+      "decision_type": "site",
+      "design_id": "scenario.mobility.pedestrian-safety.safe-crossings.v1",
+      "design_order": 52,
+      "evidence_gate": "legal-authority",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "family_id": "mobility.pedestrian-safety",
+      "family_title": "Pedestrian safety and universal accessibility",
+      "horizon": "multi-year",
+      "implementation_status": "design-only",
+      "primary_outcome": "high-demand crossings without a safe accessible connection",
+      "prohibited_claims": [
+        "Do not call a screened crossing compliant or safe without engineering review.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "corridor",
+      "suite": "mobility-accessibility-operations",
+      "title": "Site safe crossings and accessible route connections"
+    },
+    {
+      "analysis_modes": [
+        "simulation",
+        "optimization"
+      ],
+      "binding_constraint": "The pedestrian safety and universal accessibility allocate must respect declared minimum service, eligibility, capacity, and distributional safeguards.",
+      "content_hash": "sha256:d041b7a23fdbb6d3bff0959f02fe8df219b38ab7b53f3fab54113f66aa1d58b4",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "How should inspectors, temporary barriers, signal crews, and accessibility repairs be distributed?",
+      "decision_type": "allocate",
+      "design_id": "scenario.mobility.pedestrian-safety.inspection-quick-build.v1",
+      "design_order": 53,
+      "evidence_gate": "equity-measurement",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "family_id": "mobility.pedestrian-safety",
+      "family_title": "Pedestrian safety and universal accessibility",
+      "horizon": "weeks",
+      "implementation_status": "design-only",
+      "primary_outcome": "verified high-consequence barriers without assigned response",
+      "prohibited_claims": [
+        "Do not report assigned crews as completed repairs or verified compliance.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "service-area",
+      "suite": "mobility-accessibility-operations",
+      "title": "Allocate inspections and quick-build safety resources"
+    },
+    {
+      "analysis_modes": [
+        "forecast",
+        "optimization"
+      ],
+      "binding_constraint": "The pedestrian safety and universal accessibility schedule must respect declared labor, access, sequencing, notice, and completion windows.",
+      "content_hash": "sha256:58e54b6e6eeb8cf7463036162d87100639f19481d7a6270a4b70c5cf490fa0ee",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "When should inspections and repairs occur to minimize access disruption and coordinate dependencies?",
+      "decision_type": "schedule",
+      "design_id": "scenario.mobility.pedestrian-safety.right-of-way-work.v1",
+      "design_order": 54,
+      "evidence_gate": "temporal-alignment",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed"
+      ],
+      "family_id": "mobility.pedestrian-safety",
+      "family_title": "Pedestrian safety and universal accessibility",
+      "horizon": "weeks",
+      "implementation_status": "design-only",
+      "primary_outcome": "high-consequence barrier-days awaiting verified completion",
+      "prohibited_claims": [
+        "Do not infer repair completion from work-order closure alone.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "asset",
+      "suite": "mobility-accessibility-operations",
+      "title": "Schedule sidewalk, crossing, and signal work"
+    },
+    {
+      "analysis_modes": [
+        "forecast",
+        "simulation",
+        "optimization"
+      ],
+      "binding_constraint": "The pedestrian safety and universal accessibility stress test must respect declared minimum continuity and safety thresholds across severe scenarios.",
+      "content_hash": "sha256:bff4c61046267e5240079d2b5356246f1a7de717d45f610f9e0b5d75ebd6bcc6",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Which detour and continuity plan preserves accessible essential trips during street, weather, or facility closures?",
+      "decision_type": "stress-test",
+      "design_id": "scenario.mobility.pedestrian-safety.accessible-detours.v1",
+      "design_order": 55,
+      "evidence_gate": "external-validation",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "family_id": "mobility.pedestrian-safety",
+      "family_title": "Pedestrian safety and universal accessibility",
+      "horizon": "seasonal",
+      "implementation_status": "design-only",
+      "primary_outcome": "essential destinations unreachable by an accessible detour",
+      "prohibited_claims": [
+        "Do not describe simulated accessible detours as field-verified or universally usable.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "network",
+      "suite": "mobility-accessibility-operations",
+      "title": "Stress-test accessible routes during closures and hazards"
+    },
+    {
+      "analysis_modes": [
+        "descriptive",
+        "causal"
+      ],
+      "binding_constraint": "The pedestrian safety and universal accessibility evaluate must respect declared pre-specified assignment, comparison, outcome, spillover, and subgroup rules.",
+      "content_hash": "sha256:1abe6c9486cd690155c143ea8abbe992f8f4acdf3bb2ded68c4b8b742080a857",
+      "current_readiness": "blocked-multiple-gates",
+      "decision_question": "Did phased quick-build treatments reduce measured conflicts and improve accessible crossing performance?",
+      "decision_type": "evaluate",
+      "design_id": "scenario.mobility.pedestrian-safety.quick-build-safety-effect.v1",
+      "design_order": 56,
+      "evidence_gate": "causal-identification",
+      "evidence_types": [
+        "causal",
+        "estimated",
+        "observed",
+        "proposed"
+      ],
+      "family_id": "mobility.pedestrian-safety",
+      "family_title": "Pedestrian safety and universal accessibility",
+      "horizon": "multi-year",
+      "implementation_status": "design-only",
+      "primary_outcome": "change in exposure-normalized severe pedestrian conflicts",
+      "prohibited_claims": [
+        "Do not infer injury prevention from unvalidated conflict detection or uncontrolled before-after counts.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "corridor",
+      "suite": "mobility-accessibility-operations",
+      "title": "Evaluate quick-build pedestrian safety treatments"
+    },
+    {
+      "analysis_modes": [
+        "descriptive"
+      ],
+      "binding_constraint": "The urban freight and curb operations diagnose must respect declared measurement resolution and classification uncertainty.",
+      "content_hash": "sha256:2740606786f1da7e3cbfc001383766285d79959efb30eba5cc1af8341f59933e",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Where do regulations, occupancy, deliveries, double parking, safety, and access needs conflict?",
+      "decision_type": "diagnose",
+      "design_id": "scenario.mobility.freight-curb.curb-friction.v1",
+      "design_order": 57,
+      "evidence_gate": "geographic-alignment",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "proposed"
+      ],
+      "family_id": "mobility.freight-curb",
+      "family_title": "Urban freight and curb operations",
+      "horizon": "annual",
+      "implementation_status": "design-only",
+      "primary_outcome": "commercial stops without legal usable curb access",
+      "prohibited_claims": [
+        "Do not infer all delivery behavior from citations, sensors, or one platform feed.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "corridor",
+      "suite": "mobility-accessibility-operations",
+      "title": "Diagnose curb conflict and freight-access friction"
+    },
+    {
+      "analysis_modes": [
+        "forecast"
+      ],
+      "binding_constraint": "The urban freight and curb operations forecast must respect declared validated operational capacity and forecast uncertainty.",
+      "content_hash": "sha256:61f680f2d708846fccd19b23042a499c4a80cb9ece30f2aa5037618254def24b",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "What block-time loading and occupancy range should dynamic curb operations prepare for?",
+      "decision_type": "forecast",
+      "design_id": "scenario.mobility.freight-curb.loading-demand.v1",
+      "design_order": 58,
+      "evidence_gate": "model-calibration",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "proposed"
+      ],
+      "family_id": "mobility.freight-curb",
+      "family_title": "Urban freight and curb operations",
+      "horizon": "weeks",
+      "implementation_status": "design-only",
+      "primary_outcome": "delivery-minutes without legal loading capacity",
+      "prohibited_claims": [
+        "Do not call forecast occupancy observed obstruction or illegal behavior.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "corridor",
+      "suite": "mobility-accessibility-operations",
+      "title": "Forecast loading demand and curb occupancy"
+    },
+    {
+      "analysis_modes": [
+        "descriptive",
+        "optimization"
+      ],
+      "binding_constraint": "The urban freight and curb operations prioritize must respect declared capital, operating, maintenance, and delivery budgets.",
+      "content_hash": "sha256:def3a7848db401dab995a5f6518afc3d5220b09a8899dec08f1a35f7de338ca4",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Which curb segments, loading technologies, and enforcement support should receive investment?",
+      "decision_type": "prioritize",
+      "design_id": "scenario.mobility.freight-curb.curb-conversion-portfolio.v1",
+      "design_order": 59,
+      "evidence_gate": "cost-capacity",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed"
+      ],
+      "family_id": "mobility.freight-curb",
+      "family_title": "Urban freight and curb operations",
+      "horizon": "multi-year",
+      "implementation_status": "design-only",
+      "primary_outcome": "freight delay and safety conflict burden",
+      "prohibited_claims": [
+        "Do not describe modeled delay or conflict reductions as realized business benefits.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "asset",
+      "suite": "mobility-accessibility-operations",
+      "title": "Prioritize curb conversion and loading investments"
+    },
+    {
+      "analysis_modes": [
+        "simulation",
+        "optimization"
+      ],
+      "binding_constraint": "The urban freight and curb operations site must respect declared land control, accessibility, permitting, safety, and operating feasibility.",
+      "content_hash": "sha256:27f2bcfbf56784ff1e00f8bb9e1f613333d0482724406f84dbfbf8bd3a103667",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Where should consolidation hubs and loading zones intercept demand without shifting burdens?",
+      "decision_type": "site",
+      "design_id": "scenario.mobility.freight-curb.microhubs-loading-zones.v1",
+      "design_order": 60,
+      "evidence_gate": "legal-authority",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "family_id": "mobility.freight-curb",
+      "family_title": "Urban freight and curb operations",
+      "horizon": "multi-year",
+      "implementation_status": "design-only",
+      "primary_outcome": "freight demand beyond compliant loading or consolidation access",
+      "prohibited_claims": [
+        "Do not label a screened microhub site viable without carrier, parcel, permitting, and community evidence.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "parcel",
+      "suite": "mobility-accessibility-operations",
+      "title": "Site freight microhubs and loading zones"
+    },
+    {
+      "analysis_modes": [
+        "simulation",
+        "optimization"
+      ],
+      "binding_constraint": "The urban freight and curb operations allocate must respect declared minimum service, eligibility, capacity, and distributional safeguards.",
+      "content_hash": "sha256:425ae895a02e72c2bfbfd76e8825b1d39f30eee3b76a7806b7e62dbda03ea9d8",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "How should finite curb frontage be divided among loading, access, transit, parking, and public space?",
+      "decision_type": "allocate",
+      "design_id": "scenario.mobility.freight-curb.curb-space.v1",
+      "design_order": 61,
+      "evidence_gate": "equity-measurement",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "family_id": "mobility.freight-curb",
+      "family_title": "Urban freight and curb operations",
+      "horizon": "weeks",
+      "implementation_status": "design-only",
+      "primary_outcome": "priority curb demand left unserved",
+      "prohibited_claims": [
+        "Do not call an optimized curb allocation enacted regulation or public consensus.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "corridor",
+      "suite": "mobility-accessibility-operations",
+      "title": "Allocate curb space across freight and public uses"
+    },
+    {
+      "analysis_modes": [
+        "forecast",
+        "optimization"
+      ],
+      "binding_constraint": "The urban freight and curb operations schedule must respect declared labor, access, sequencing, notice, and completion windows.",
+      "content_hash": "sha256:881b750019d6dbd871c4e934364c3f0f2e00fb69c9792bcfcb5a36284115903f",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "When should curb segments switch uses and reserve loading windows across the day?",
+      "decision_type": "schedule",
+      "design_id": "scenario.mobility.freight-curb.loading-reservations.v1",
+      "design_order": 62,
+      "evidence_gate": "temporal-alignment",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed"
+      ],
+      "family_id": "mobility.freight-curb",
+      "family_title": "Urban freight and curb operations",
+      "horizon": "weeks",
+      "implementation_status": "design-only",
+      "primary_outcome": "unserved priority loading and access time",
+      "prohibited_claims": [
+        "Do not describe a generated reservation schedule as adopted, enforced, or used.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "corridor",
+      "suite": "mobility-accessibility-operations",
+      "title": "Schedule loading reservations and curb regimes"
+    },
+    {
+      "analysis_modes": [
+        "forecast",
+        "simulation",
+        "optimization"
+      ],
+      "binding_constraint": "The urban freight and curb operations stress test must respect declared minimum continuity and safety thresholds across severe scenarios.",
+      "content_hash": "sha256:e7488e7fad3c3df41bd5e39546fa908fde965e695c1c70c5ac8224251d250279",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Which curb and consolidation strategy sustains essential deliveries during closures, surges, and fleet constraints?",
+      "decision_type": "stress-test",
+      "design_id": "scenario.mobility.freight-curb.freight-disruption.v1",
+      "design_order": 63,
+      "evidence_gate": "external-validation",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "family_id": "mobility.freight-curb",
+      "family_title": "Urban freight and curb operations",
+      "horizon": "seasonal",
+      "implementation_status": "design-only",
+      "primary_outcome": "essential deliveries outside feasible time windows",
+      "prohibited_claims": [
+        "Do not present synthetic delivery failures as forecasts or modeled completion as observed service.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "network",
+      "suite": "mobility-accessibility-operations",
+      "title": "Stress-test urban freight under curb and network disruption"
+    },
+    {
+      "analysis_modes": [
+        "descriptive",
+        "causal"
+      ],
+      "binding_constraint": "The urban freight and curb operations evaluate must respect declared pre-specified assignment, comparison, outcome, spillover, and subgroup rules.",
+      "content_hash": "sha256:bbe63961a9a60acb07db7ed068477c4d1f8e9c9c8e6c14f4a5033254160f4424",
+      "current_readiness": "blocked-multiple-gates",
+      "decision_question": "Did phased reservations or dynamic curb rules reduce verified conflict and delay without shifting harm?",
+      "decision_type": "evaluate",
+      "design_id": "scenario.mobility.freight-curb.dynamic-curb-effect.v1",
+      "design_order": 64,
+      "evidence_gate": "causal-identification",
+      "evidence_types": [
+        "causal",
+        "estimated",
+        "observed",
+        "proposed"
+      ],
+      "family_id": "mobility.freight-curb",
+      "family_title": "Urban freight and curb operations",
+      "horizon": "multi-year",
+      "implementation_status": "design-only",
+      "primary_outcome": "change in legal loading success and conflict time",
+      "prohibited_claims": [
+        "Do not infer causal freight or safety effects without measuring enforcement, substitution, and spillovers.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "corridor",
+      "suite": "mobility-accessibility-operations",
+      "title": "Evaluate dynamic curb management"
+    },
+    {
+      "analysis_modes": [
+        "descriptive"
+      ],
+      "binding_constraint": "The evacuation and emergency mobility diagnose must respect declared measurement resolution and classification uncertainty.",
+      "content_hash": "sha256:a831a893c394f670ff78d969c9005e53858e4a088563fb3e32f01c4f8ac12335",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Which populations and critical facilities lack a verified feasible evacuation or responder-access path?",
+      "decision_type": "diagnose",
+      "design_id": "scenario.mobility.emergency-mobility.evacuation-access-gaps.v1",
+      "design_order": 65,
+      "evidence_gate": "geographic-alignment",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "proposed"
+      ],
+      "family_id": "mobility.emergency-mobility",
+      "family_title": "Evacuation and emergency mobility",
+      "horizon": "annual",
+      "implementation_status": "design-only",
+      "primary_outcome": "at-risk people without a verified feasible mobility plan",
+      "prohibited_claims": [
+        "Do not infer individual evacuation need or willingness from area demographics.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "network",
+      "suite": "mobility-accessibility-operations",
+      "title": "Diagnose evacuation and assisted-mobility gaps"
+    },
+    {
+      "analysis_modes": [
+        "forecast"
+      ],
+      "binding_constraint": "The evacuation and emergency mobility forecast must respect declared validated operational capacity and forecast uncertainty.",
+      "content_hash": "sha256:273223a6fde1d0106cf5efc70c8069c165254b560840b1ce3579aa979d422d89",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "What departure, assisted-transport, congestion, and clearance-time range follows the hazard envelope?",
+      "decision_type": "forecast",
+      "design_id": "scenario.mobility.emergency-mobility.clearance-demand.v1",
+      "design_order": 66,
+      "evidence_gate": "model-calibration",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "proposed"
+      ],
+      "family_id": "mobility.emergency-mobility",
+      "family_title": "Evacuation and emergency mobility",
+      "horizon": "weeks",
+      "implementation_status": "design-only",
+      "primary_outcome": "people remaining in hazard areas after safe clearance time",
+      "prohibited_claims": [
+        "Do not present behavioral assumptions or simulated clearance as actual evacuation.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "network",
+      "suite": "mobility-accessibility-operations",
+      "title": "Forecast evacuation demand and clearance time"
+    },
+    {
+      "analysis_modes": [
+        "descriptive",
+        "optimization"
+      ],
+      "binding_constraint": "The evacuation and emergency mobility prioritize must respect declared capital, operating, maintenance, and delivery budgets.",
+      "content_hash": "sha256:80c1f8a6a96e3fe58b54c0843a920ecac1a8ecdcdd0f93d8a1149b3243d3ceb5",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Which route, fleet, communication, power, and accessibility upgrades most improve safe clearance?",
+      "decision_type": "prioritize",
+      "design_id": "scenario.mobility.emergency-mobility.evacuation-readiness.v1",
+      "design_order": 67,
+      "evidence_gate": "cost-capacity",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed"
+      ],
+      "family_id": "mobility.emergency-mobility",
+      "family_title": "Evacuation and emergency mobility",
+      "horizon": "multi-year",
+      "implementation_status": "design-only",
+      "primary_outcome": "expected people beyond safe clearance capacity",
+      "prohibited_claims": [
+        "Do not call modeled clearance improvements saved lives or completed readiness work.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "asset",
+      "suite": "mobility-accessibility-operations",
+      "title": "Prioritize emergency mobility readiness investments"
+    },
+    {
+      "analysis_modes": [
+        "simulation",
+        "optimization"
+      ],
+      "binding_constraint": "The evacuation and emergency mobility site must respect declared land control, accessibility, permitting, safety, and operating feasibility.",
+      "content_hash": "sha256:ea16d2fae897cced5add1b1b0e0cecb106bc42bea7ed256857fb591c9b399e45",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Where should pickup, medical transfer, and staging points operate outside hazard and access failures?",
+      "decision_type": "site",
+      "design_id": "scenario.mobility.emergency-mobility.pickup-transfer-points.v1",
+      "design_order": 68,
+      "evidence_gate": "legal-authority",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "family_id": "mobility.emergency-mobility",
+      "family_title": "Evacuation and emergency mobility",
+      "horizon": "multi-year",
+      "implementation_status": "design-only",
+      "primary_outcome": "assistance-eligible people beyond safe pickup access",
+      "prohibited_claims": [
+        "Do not label a candidate point safe or accessible without field and operations validation.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "facility",
+      "suite": "mobility-accessibility-operations",
+      "title": "Site accessible evacuation pickup and transfer points"
+    },
+    {
+      "analysis_modes": [
+        "simulation",
+        "optimization"
+      ],
+      "binding_constraint": "The evacuation and emergency mobility allocate must respect declared minimum service, eligibility, capacity, and distributional safeguards.",
+      "content_hash": "sha256:bc1fe71578c7ec2ab246840181ad1df4abe86063d432f55916b459e9cb6e4833",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "How should accessible vehicles, drivers, escorts, and medical transport slots be assigned?",
+      "decision_type": "allocate",
+      "design_id": "scenario.mobility.emergency-mobility.assisted-transport.v1",
+      "design_order": 69,
+      "evidence_gate": "equity-measurement",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "family_id": "mobility.emergency-mobility",
+      "family_title": "Evacuation and emergency mobility",
+      "horizon": "weeks",
+      "implementation_status": "design-only",
+      "primary_outcome": "eligible evacuation needs without assigned transport",
+      "prohibited_claims": [
+        "Do not report assigned transport as passenger contact, pickup, or safe arrival.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "network",
+      "suite": "mobility-accessibility-operations",
+      "title": "Allocate accessible vehicles and emergency mobility teams"
+    },
+    {
+      "analysis_modes": [
+        "forecast",
+        "optimization"
+      ],
+      "binding_constraint": "The evacuation and emergency mobility schedule must respect declared labor, access, sequencing, notice, and completion windows.",
+      "content_hash": "sha256:b78921e1ed4a51e29624ff131bbf966e43adaf9d958ee987d60a39aed96d267b",
+      "current_readiness": "reference-implemented",
+      "decision_question": "When should zones, transit, assisted transport, control points, and responder routes activate?",
+      "decision_type": "schedule",
+      "design_id": "scenario.mobility.emergency-mobility.phased-evacuation.v1",
+      "design_order": 70,
+      "evidence_gate": "temporal-alignment",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed"
+      ],
+      "existing_template_ref": "deep.mobility.real-time-reroute.v1",
+      "family_id": "mobility.emergency-mobility",
+      "family_title": "Evacuation and emergency mobility",
+      "horizon": "weeks",
+      "implementation_status": "reference-implemented",
+      "primary_outcome": "people uncleared when route safety thresholds are crossed",
+      "prohibited_claims": [
+        "Do not call an optimized evacuation timetable an issued order or completed movement.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "network",
+      "suite": "mobility-accessibility-operations",
+      "title": "Schedule phased multimodal evacuation"
+    },
+    {
+      "analysis_modes": [
+        "forecast",
+        "simulation",
+        "optimization"
+      ],
+      "binding_constraint": "The evacuation and emergency mobility stress test must respect declared minimum continuity and safety thresholds across severe scenarios.",
+      "content_hash": "sha256:61566b2563a7bc12cd26e4153027a9022dee7c89387b089a976a149a19d71362",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Which plan preserves clearance and responder access under blocked links, outages, fleet loss, and demand surge?",
+      "decision_type": "stress-test",
+      "design_id": "scenario.mobility.emergency-mobility.evacuation-network-failure.v1",
+      "design_order": 71,
+      "evidence_gate": "external-validation",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "family_id": "mobility.emergency-mobility",
+      "family_title": "Evacuation and emergency mobility",
+      "horizon": "seasonal",
+      "implementation_status": "design-only",
+      "primary_outcome": "scenario-weighted people beyond safe clearance",
+      "prohibited_claims": [
+        "Do not treat synthetic network failures or compliance assumptions as predicted events.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "network",
+      "suite": "mobility-accessibility-operations",
+      "title": "Stress-test evacuation under correlated network failure"
+    },
+    {
+      "analysis_modes": [
+        "descriptive",
+        "causal"
+      ],
+      "binding_constraint": "The evacuation and emergency mobility evaluate must respect declared pre-specified assignment, comparison, outcome, spillover, and subgroup rules.",
+      "content_hash": "sha256:9c553bac3e7fc0aaab163e60f2c92b9a7a7b8b61a1c7de4931838aec305cbb5a",
+      "current_readiness": "blocked-multiple-gates",
+      "decision_question": "Did phased exercises and targeted outreach improve verified readiness and assisted-transport completion?",
+      "decision_type": "evaluate",
+      "design_id": "scenario.mobility.emergency-mobility.evacuation-exercise-effect.v1",
+      "design_order": 72,
+      "evidence_gate": "causal-identification",
+      "evidence_types": [
+        "causal",
+        "estimated",
+        "observed",
+        "proposed"
+      ],
+      "family_id": "mobility.emergency-mobility",
+      "family_title": "Evacuation and emergency mobility",
+      "horizon": "multi-year",
+      "implementation_status": "design-only",
+      "primary_outcome": "change in verified preparedness task completion",
+      "prohibited_claims": [
+        "Do not infer real-disaster evacuation or survival effects from an exercise outcome.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "population-group",
+      "suite": "mobility-accessibility-operations",
+      "title": "Evaluate emergency mobility exercises and outreach"
+    },
+    {
+      "analysis_modes": [
+        "descriptive"
+      ],
+      "binding_constraint": "The active mobility network and micromobility diagnose must respect declared measurement resolution and classification uncertainty.",
+      "content_hash": "sha256:873d94353b7c7aaa9373714be8108d28a765006263e36e4aba7fa4e7ad8f0c09",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Which missing links prevent continuous low-stress access between neighborhoods and essential destinations?",
+      "decision_type": "diagnose",
+      "design_id": "scenario.mobility.active-mobility.low-stress-network-gaps.v1",
+      "design_order": 73,
+      "evidence_gate": "geographic-alignment",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "proposed"
+      ],
+      "family_id": "mobility.active-mobility",
+      "family_title": "Active mobility network and micromobility",
+      "horizon": "annual",
+      "implementation_status": "design-only",
+      "primary_outcome": "essential trips disconnected from a low-stress network",
+      "prohibited_claims": [
+        "Do not infer route accessibility or demand from request labels or mapped segments alone.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "network",
+      "suite": "mobility-accessibility-operations",
+      "title": "Diagnose low-stress active-mobility network gaps"
+    },
+    {
+      "analysis_modes": [
+        "forecast"
+      ],
+      "binding_constraint": "The active mobility network and micromobility forecast must respect declared validated operational capacity and forecast uncertainty.",
+      "content_hash": "sha256:f4b000b1275a42a4e497d81c743309c68848c9257551c3be9ab45b7a9558f896",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "What station, corridor, and time-specific trip and vehicle-availability range should operations prepare for?",
+      "decision_type": "forecast",
+      "design_id": "scenario.mobility.active-mobility.active-trip-demand.v1",
+      "design_order": 74,
+      "evidence_gate": "model-calibration",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "proposed"
+      ],
+      "family_id": "mobility.active-mobility",
+      "family_title": "Active mobility network and micromobility",
+      "horizon": "weeks",
+      "implementation_status": "design-only",
+      "primary_outcome": "trip requests without feasible vehicle or route capacity",
+      "prohibited_claims": [
+        "Do not treat shared-platform demand as total walking or cycling demand.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "network",
+      "suite": "mobility-accessibility-operations",
+      "title": "Forecast active and shared-mobility demand"
+    },
+    {
+      "analysis_modes": [
+        "descriptive",
+        "optimization"
+      ],
+      "binding_constraint": "The active mobility network and micromobility prioritize must respect declared capital, operating, maintenance, and delivery budgets.",
+      "content_hash": "sha256:5a15f5879e476711c1aada33768658870994ff8e009f85788966d6561e605a58",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Which protected links, crossings, greenways, and accessibility repairs close the most consequential gaps?",
+      "decision_type": "prioritize",
+      "design_id": "scenario.mobility.active-mobility.active-network-projects.v1",
+      "design_order": 75,
+      "evidence_gate": "cost-capacity",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed"
+      ],
+      "family_id": "mobility.active-mobility",
+      "family_title": "Active mobility network and micromobility",
+      "horizon": "multi-year",
+      "implementation_status": "design-only",
+      "primary_outcome": "essential trips remaining outside a low-stress accessible network",
+      "prohibited_claims": [
+        "Do not report modeled connectivity or safety gains as completed trips or prevented crashes.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "asset",
+      "suite": "mobility-accessibility-operations",
+      "title": "Prioritize active-mobility network projects"
+    },
+    {
+      "analysis_modes": [
+        "simulation",
+        "optimization"
+      ],
+      "binding_constraint": "The active mobility network and micromobility site must respect declared land control, accessibility, permitting, safety, and operating feasibility.",
+      "content_hash": "sha256:64a40def4298f85495b7882b7275fc710c5ca0d0730e70652dc5aacc24fa6fe2",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Where should stations and secure parking expand access without obstructing pedestrian use?",
+      "decision_type": "site",
+      "design_id": "scenario.mobility.active-mobility.shared-mobility-stations.v1",
+      "design_order": 76,
+      "evidence_gate": "legal-authority",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "family_id": "mobility.active-mobility",
+      "family_title": "Active mobility network and micromobility",
+      "horizon": "multi-year",
+      "implementation_status": "design-only",
+      "primary_outcome": "residents beyond reliable shared-mobility access",
+      "prohibited_claims": [
+        "Do not label a candidate station feasible, accessible, or publicly accepted without validation.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "facility",
+      "suite": "mobility-accessibility-operations",
+      "title": "Site shared-mobility stations and secure parking"
+    },
+    {
+      "analysis_modes": [
+        "simulation",
+        "optimization"
+      ],
+      "binding_constraint": "The active mobility network and micromobility allocate must respect declared minimum service, eligibility, capacity, and distributional safeguards.",
+      "content_hash": "sha256:95a3e46988632d5fff57bded1cca054a24800b83d89530949a38fbc46c897e9b",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "How should vehicles, adaptive devices, docks, and charging capacity be distributed?",
+      "decision_type": "allocate",
+      "design_id": "scenario.mobility.active-mobility.shared-fleet.v1",
+      "design_order": 77,
+      "evidence_gate": "equity-measurement",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "family_id": "mobility.active-mobility",
+      "family_title": "Active mobility network and micromobility",
+      "horizon": "weeks",
+      "implementation_status": "design-only",
+      "primary_outcome": "forecast trips without an available suitable vehicle",
+      "prohibited_claims": [
+        "Do not report vehicle allocation as availability at use time or completed equitable access.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "facility",
+      "suite": "mobility-accessibility-operations",
+      "title": "Allocate shared bicycles, devices, and charging capacity"
+    },
+    {
+      "analysis_modes": [
+        "forecast",
+        "optimization"
+      ],
+      "binding_constraint": "The active mobility network and micromobility schedule must respect declared labor, access, sequencing, notice, and completion windows.",
+      "content_hash": "sha256:2ef24b3a1075886605c188ac65f04e749e220d8360b3e362f79b0883bd1f57a6",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "When should vehicles be rebalanced, charged, inspected, and returned to service?",
+      "decision_type": "schedule",
+      "design_id": "scenario.mobility.active-mobility.fleet-rebalancing.v1",
+      "design_order": 78,
+      "evidence_gate": "temporal-alignment",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed"
+      ],
+      "family_id": "mobility.active-mobility",
+      "family_title": "Active mobility network and micromobility",
+      "horizon": "weeks",
+      "implementation_status": "design-only",
+      "primary_outcome": "station-hours outside vehicle availability targets",
+      "prohibited_claims": [
+        "Do not call an optimized rebalancing route executed or a work order verified complete.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "network",
+      "suite": "mobility-accessibility-operations",
+      "title": "Schedule shared-mobility rebalancing and maintenance"
+    },
+    {
+      "analysis_modes": [
+        "forecast",
+        "simulation",
+        "optimization"
+      ],
+      "binding_constraint": "The active mobility network and micromobility stress test must respect declared minimum continuity and safety thresholds across severe scenarios.",
+      "content_hash": "sha256:188cf7e30b8b594c85c167fd46d21341973b1484e2c4427581415aad347a4302",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Which detours and operating plan preserve low-stress access during closures, weather, and fleet outages?",
+      "decision_type": "stress-test",
+      "design_id": "scenario.mobility.active-mobility.active-network-continuity.v1",
+      "design_order": 79,
+      "evidence_gate": "external-validation",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "family_id": "mobility.active-mobility",
+      "family_title": "Active mobility network and micromobility",
+      "horizon": "seasonal",
+      "implementation_status": "design-only",
+      "primary_outcome": "essential trips without a low-stress feasible alternative",
+      "prohibited_claims": [
+        "Do not describe a modeled detour as field-verified safe or an assumed trip as observed.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "network",
+      "suite": "mobility-accessibility-operations",
+      "title": "Stress-test active-mobility network continuity"
+    },
+    {
+      "analysis_modes": [
+        "descriptive",
+        "causal"
+      ],
+      "binding_constraint": "The active mobility network and micromobility evaluate must respect declared pre-specified assignment, comparison, outcome, spillover, and subgroup rules.",
+      "content_hash": "sha256:70afff7f03eb2228b896af6a4638e97e7cd90780622946dd7511ce9efaf532fe",
+      "current_readiness": "blocked-multiple-gates",
+      "decision_question": "Did phased protected links change exposure-normalized use, conflicts, and access across groups?",
+      "decision_type": "evaluate",
+      "design_id": "scenario.mobility.active-mobility.protected-network-effect.v1",
+      "design_order": 80,
+      "evidence_gate": "causal-identification",
+      "evidence_types": [
+        "causal",
+        "estimated",
+        "observed",
+        "proposed"
+      ],
+      "family_id": "mobility.active-mobility",
+      "family_title": "Active mobility network and micromobility",
+      "horizon": "multi-year",
+      "implementation_status": "design-only",
+      "primary_outcome": "change in low-stress trips and exposure-normalized conflicts",
+      "prohibited_claims": [
+        "Do not infer causal mode shift or injury reduction from selected counters or simple before-after totals.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "corridor",
+      "suite": "mobility-accessibility-operations",
+      "title": "Evaluate protected active-mobility network expansion"
+    }
+  ],
+  "kind": "scenario-designs.suite.mobility-accessibility-operations",
+  "record_count": 40,
+  "schema_version": "1.0.0"
+}

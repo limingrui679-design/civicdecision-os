@@ -1,0 +1,165 @@
+{
+  "affected_system": "housing inspection, code enforcement, repair, and tenant-support system",
+  "alternatives": [
+    "protect minimum coverage before needs-based allocation of housing inspection, repair, and tenant-protection resources",
+    "adapt allocations using observed demand, uptake, and capacity for housing inspection, repair, and tenant-protection resources",
+    "pair severity and minimum-service constrained case allocation with an explicit stop, review, and escalation rule"
+  ],
+  "analysis_modes": [
+    "simulation",
+    "optimization"
+  ],
+  "assumptions": [
+    "Complaints, inspections, violations, ownership, repair, and closure records retain distinct semantics.",
+    "Tenant vulnerability and building condition are measured only from authorized, documented sources.",
+    "All alternatives, capacities, costs, effects, thresholds, and failure scenarios are proposed until bound to evidence."
+  ],
+  "baseline": "retain the current distribution rule for housing inspection, repair, and tenant-protection resources.",
+  "city_bindings": [],
+  "constraints": [
+    {
+      "binding": true,
+      "constraint_id": "scenario.housing.habitability-code.inspectors-repair-support.v1.constraint.binding",
+      "description": "The housing habitability and code operations allocate must respect declared minimum service, eligibility, capacity, and distributional safeguards.",
+      "hard": true,
+      "kind": "equity",
+      "required_source_roles": [
+        "equity-attribute",
+        "geographic-identity",
+        "housing-market",
+        "legal-regulatory",
+        "municipal-demand",
+        "operating-capacity"
+      ]
+    },
+    {
+      "binding": false,
+      "constraint_id": "scenario.housing.habitability-code.inspectors-repair-support.v1.constraint.evidence-scope",
+      "description": "Every released metric must retain evidence type, source lineage, geography, time, assumptions, and uncertainty.",
+      "hard": true,
+      "kind": "technical",
+      "required_source_roles": [
+        "equity-attribute"
+      ]
+    },
+    {
+      "binding": false,
+      "constraint_id": "scenario.housing.habitability-code.inspectors-repair-support.v1.constraint.decision-authority",
+      "description": "No analytical output may bypass lawful authority, accountable human review, or an applicable appeal process.",
+      "hard": true,
+      "kind": "regulatory",
+      "required_source_roles": [
+        "equity-attribute"
+      ]
+    }
+  ],
+  "current_readiness": "blocked-missing-source",
+  "decision_cadence": "recompiled at each planning cycle and after material evidence change",
+  "decision_owner": "housing-code commissioner and tenant-protection director",
+  "decision_question": "How should inspectors, language access, legal navigation, repair grants, and relocation capacity be assigned?",
+  "decision_type": "allocate",
+  "design_id": "scenario.housing.habitability-code.inspectors-repair-support.v1",
+  "design_order": 117,
+  "design_signature": "sha256:d99f9bf91e986c2d9fe972b6956c89dd6b88d6f24b1ff57e6596481a0442e7a2",
+  "evidence_requirements": [
+    "estimated",
+    "observed",
+    "optimized",
+    "proposed",
+    "simulated"
+  ],
+  "family_id": "housing.habitability-code",
+  "family_title": "Housing habitability and code operations",
+  "horizon": "weeks",
+  "implementation_status": "design-only",
+  "independence_key": {
+    "binding_constraint": "The housing habitability and code operations allocate must respect declared minimum service, eligibility, capacity, and distributional safeguards.",
+    "decision_object": "housing inspection, repair, and tenant-protection resources",
+    "evidence_gate": "Evidence for housing inspection, repair, and tenant-protection resources passes documented checks for eligible denominators, group attributes, inventory, minimum-service rules, and allocation records.",
+    "horizon": "weeks",
+    "intervention_mechanism": "severity and minimum-service constrained case allocation",
+    "primary_outcome": "verified priority households without assigned response capacity",
+    "spatial_unit": "service-area"
+  },
+  "intended_claim": "A versioned allocate design for comparing declared alternatives affecting housing inspection, repair, and tenant-protection resources, conditional on its evidence gate.",
+  "limitations": [
+    "This library record has no city binding and therefore reports no local input, output, or recommendation.",
+    "Readiness describes explicit source and method gates; it does not certify implementation feasibility.",
+    "External domain, legal, community, security, and operational review remains outside this design artifact."
+  ],
+  "method_claimed": false,
+  "objectives": [
+    {
+      "evidence_type": "estimated",
+      "metric": "verified priority households without assigned response capacity",
+      "objective_id": "scenario.housing.habitability-code.inspectors-repair-support.v1.objective.primary",
+      "primary": true,
+      "sense": "minimize",
+      "unit": "households"
+    },
+    {
+      "evidence_type": "estimated",
+      "metric": "distributional gap in verified priority households without assigned response capacity",
+      "objective_id": "scenario.housing.habitability-code.inspectors-repair-support.v1.objective.equity",
+      "primary": false,
+      "sense": "minimize",
+      "unit": "households"
+    },
+    {
+      "evidence_type": "observed",
+      "metric": "decision claims with complete evidence lineage",
+      "objective_id": "scenario.housing.habitability-code.inspectors-repair-support.v1.objective.traceability",
+      "primary": false,
+      "sense": "maximize",
+      "unit": "percent"
+    }
+  ],
+  "prohibited_claims": [
+    "Do not report an assignment as inspection, repair, legal resolution, or safe relocation.",
+    "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+    "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+    "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+  ],
+  "release_gate": {
+    "failure_release": "Release an explicit insufficient-evidence record naming missing sources, failed diagnostics, prohibited claims, and the next validation action.",
+    "failure_status": "insufficient-evidence",
+    "gate_id": "scenario.housing.habitability-code.inspectors-repair-support.v1.gate.release",
+    "gate_type": "equity-measurement",
+    "pass_condition": "Evidence for housing inspection, repair, and tenant-protection resources passes documented checks for eligible denominators, group attributes, inventory, minimum-service rules, and allocation records.",
+    "required_evidence_types": [
+      "observed",
+      "proposed"
+    ],
+    "required_source_roles": [
+      "equity-attribute",
+      "geographic-identity",
+      "housing-market",
+      "legal-regulatory",
+      "municipal-demand",
+      "operating-capacity"
+    ]
+  },
+  "required_source_roles": [
+    "equity-attribute",
+    "geographic-identity",
+    "housing-market",
+    "legal-regulatory",
+    "municipal-demand",
+    "operating-capacity"
+  ],
+  "schema_version": "1.0.0",
+  "spatial_unit": "service-area",
+  "suite": "housing-land-use-regeneration",
+  "tags": [
+    "allocate",
+    "design-only",
+    "housing-land-use-regeneration",
+    "housing.habitability-code",
+    "scenario-library"
+  ],
+  "title": "Allocate housing inspectors and emergency repair support",
+  "transportability_risks": [
+    "Housing law, tenure, building age, complaint access, inspection practice, and enforcement differ.",
+    "Complaint records may over- or under-represent physical conditions and retaliation risk."
+  ]
+}

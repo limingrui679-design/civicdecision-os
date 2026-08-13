@@ -1,0 +1,162 @@
+{
+  "affected_system": "municipal capital planning, debt, grants, reserves, procurement, and asset delivery",
+  "alternatives": [
+    "activate a bounded reserve from forecast risk bands for multi-year municipal capital and fiscal outlook",
+    "use rolling forecasts and conservative capacity triggers for multi-year municipal capital and fiscal outlook",
+    "pair scenario-based revenue, cost, cash-flow, and project-stage forecasting with an explicit stop, review, and escalation rule"
+  ],
+  "analysis_modes": [
+    "forecast"
+  ],
+  "assumptions": [
+    "Budgets, obligations, appropriations, encumbrances, expenditures, schedules, and assets are reconciled.",
+    "All fiscal scenarios separate nominal, real, committed, contingent, and modeled amounts.",
+    "All alternatives, capacities, costs, effects, thresholds, and failure scenarios are proposed until bound to evidence."
+  ],
+  "baseline": "continue ordinary capacity planning for multi-year municipal capital and fiscal outlook.",
+  "city_bindings": [],
+  "constraints": [
+    {
+      "binding": true,
+      "constraint_id": "scenario.infrastructure.capital-finance.capital-fiscal-outlook.v1.constraint.binding",
+      "description": "The capital portfolio and municipal finance forecast must respect declared validated operational capacity and forecast uncertainty.",
+      "hard": true,
+      "kind": "capacity",
+      "required_source_roles": [
+        "asset-condition",
+        "asset-inventory",
+        "financial-cost",
+        "legal-regulatory",
+        "operating-capacity",
+        "real-time-state"
+      ]
+    },
+    {
+      "binding": false,
+      "constraint_id": "scenario.infrastructure.capital-finance.capital-fiscal-outlook.v1.constraint.evidence-scope",
+      "description": "Every released metric must retain evidence type, source lineage, geography, time, assumptions, and uncertainty.",
+      "hard": true,
+      "kind": "technical",
+      "required_source_roles": [
+        "asset-condition"
+      ]
+    },
+    {
+      "binding": false,
+      "constraint_id": "scenario.infrastructure.capital-finance.capital-fiscal-outlook.v1.constraint.decision-authority",
+      "description": "No analytical output may bypass lawful authority, accountable human review, or an applicable appeal process.",
+      "hard": true,
+      "kind": "regulatory",
+      "required_source_roles": [
+        "asset-condition"
+      ]
+    }
+  ],
+  "current_readiness": "blocked-missing-source",
+  "decision_cadence": "recompiled at each planning cycle and after material evidence change",
+  "decision_owner": "chief financial officer and capital planning director",
+  "decision_question": "What range of costs, revenues, grants, debt service, cash flow, and completion should planning use?",
+  "decision_type": "forecast",
+  "design_id": "scenario.infrastructure.capital-finance.capital-fiscal-outlook.v1",
+  "design_order": 202,
+  "design_signature": "sha256:df8912da2b7c363790ea7263f08e82dfc65fc42a5605ca8c45c830b314a73bbe",
+  "evidence_requirements": [
+    "estimated",
+    "observed",
+    "proposed"
+  ],
+  "family_id": "infrastructure.capital-finance",
+  "family_title": "Capital portfolio and municipal finance",
+  "horizon": "weeks",
+  "implementation_status": "design-only",
+  "independence_key": {
+    "binding_constraint": "The capital portfolio and municipal finance forecast must respect declared validated operational capacity and forecast uncertainty.",
+    "decision_object": "multi-year municipal capital and fiscal outlook",
+    "evidence_gate": "Evidence for multi-year municipal capital and fiscal outlook passes documented checks for held-out error, interval coverage, event detection, drift, and baseline comparison.",
+    "horizon": "weeks",
+    "intervention_mechanism": "scenario-based revenue, cost, cash-flow, and project-stage forecasting",
+    "primary_outcome": "capital obligation above affordable deliverable capacity",
+    "spatial_unit": "citywide"
+  },
+  "intended_claim": "A versioned forecast design for comparing declared alternatives affecting multi-year municipal capital and fiscal outlook, conditional on its evidence gate.",
+  "limitations": [
+    "This library record has no city binding and therefore reports no local input, output, or recommendation.",
+    "Readiness describes explicit source and method gates; it does not certify implementation feasibility.",
+    "External domain, legal, community, security, and operational review remains outside this design artifact."
+  ],
+  "method_claimed": false,
+  "objectives": [
+    {
+      "evidence_type": "estimated",
+      "metric": "capital obligation above affordable deliverable capacity",
+      "objective_id": "scenario.infrastructure.capital-finance.capital-fiscal-outlook.v1.objective.primary",
+      "primary": true,
+      "sense": "minimize",
+      "unit": "currency"
+    },
+    {
+      "evidence_type": "estimated",
+      "metric": "distributional gap in capital obligation above affordable deliverable capacity",
+      "objective_id": "scenario.infrastructure.capital-finance.capital-fiscal-outlook.v1.objective.equity",
+      "primary": false,
+      "sense": "minimize",
+      "unit": "currency"
+    },
+    {
+      "evidence_type": "observed",
+      "metric": "decision claims with complete evidence lineage",
+      "objective_id": "scenario.infrastructure.capital-finance.capital-fiscal-outlook.v1.objective.traceability",
+      "primary": false,
+      "sense": "maximize",
+      "unit": "percent"
+    }
+  ],
+  "prohibited_claims": [
+    "Do not present a fiscal scenario as an audited forecast, rating opinion, or promised project completion.",
+    "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+    "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+    "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+  ],
+  "release_gate": {
+    "failure_release": "Release an explicit insufficient-evidence record naming missing sources, failed diagnostics, prohibited claims, and the next validation action.",
+    "failure_status": "insufficient-evidence",
+    "gate_id": "scenario.infrastructure.capital-finance.capital-fiscal-outlook.v1.gate.release",
+    "gate_type": "model-calibration",
+    "pass_condition": "Evidence for multi-year municipal capital and fiscal outlook passes documented checks for held-out error, interval coverage, event detection, drift, and baseline comparison.",
+    "required_evidence_types": [
+      "estimated",
+      "observed"
+    ],
+    "required_source_roles": [
+      "asset-condition",
+      "asset-inventory",
+      "financial-cost",
+      "legal-regulatory",
+      "operating-capacity",
+      "real-time-state"
+    ]
+  },
+  "required_source_roles": [
+    "asset-condition",
+    "asset-inventory",
+    "financial-cost",
+    "legal-regulatory",
+    "operating-capacity",
+    "real-time-state"
+  ],
+  "schema_version": "1.0.0",
+  "spatial_unit": "citywide",
+  "suite": "infrastructure-finance-asset-risk",
+  "tags": [
+    "design-only",
+    "forecast",
+    "infrastructure-finance-asset-risk",
+    "infrastructure.capital-finance",
+    "scenario-library"
+  ],
+  "title": "Forecast capital cost, revenue, debt, and delivery capacity",
+  "transportability_risks": [
+    "Accounting, tax authority, debt limits, grants, procurement, labor, and markets differ.",
+    "Historical delivery and cost relationships may shift under inflation or policy change."
+  ]
+}

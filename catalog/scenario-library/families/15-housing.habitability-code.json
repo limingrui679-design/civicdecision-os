@@ -1,0 +1,50 @@
+{
+  "affected_system": "housing inspection, code enforcement, repair, and tenant-support system",
+  "claim_boundary": [
+    "Requests, listings, parcels, and administrative records do not alone verify conditions or need.",
+    "Screened sites and portfolios are not permits, acquisitions, adopted plans, or completed housing.",
+    "Displacement, affordability, habitability, and program effects require direct outcomes and identification."
+  ],
+  "common_source_roles": [
+    "geographic-identity",
+    "housing-market",
+    "municipal-demand"
+  ],
+  "decision_owner": "housing-code commissioner and tenant-protection director",
+  "decision_types": [
+    "diagnose",
+    "forecast",
+    "prioritize",
+    "site",
+    "allocate",
+    "schedule",
+    "stress-test",
+    "evaluate"
+  ],
+  "description": "Eight decisions for condition-signal diagnosis, inspection forecasting, repair portfolios, service access, inspector allocation, case scheduling, surge stress, and enforcement evaluation.",
+  "design_refs": [
+    "scenario.housing.habitability-code.habitability-signals.v1",
+    "scenario.housing.habitability-code.inspection-repair-demand.v1",
+    "scenario.housing.habitability-code.habitability-interventions.v1",
+    "scenario.housing.habitability-code.tenant-service-access.v1",
+    "scenario.housing.habitability-code.inspectors-repair-support.v1",
+    "scenario.housing.habitability-code.inspection-enforcement-calendar.v1",
+    "scenario.housing.habitability-code.housing-emergency-surge.v1",
+    "scenario.housing.habitability-code.proactive-inspection-effect.v1"
+  ],
+  "design_signatures": [
+    "sha256:43b00935854ee5b0ac3ccdc2c44db8128c53b0f73e7ca57b449d50aa241f91f3",
+    "sha256:18b99a2bed677da3121e73e614317c3ceb1220b54e776bcb40ac658e7ecc8428",
+    "sha256:17b68c23fc7ef6fbf9bbb6a5bfaf63a1232f62c9160d65a0f38561e6a47143e5",
+    "sha256:54d46698a540d3b8fd5a4056c2d7ebcd4737fc7ca60a3fe32e22a50036ba8647",
+    "sha256:d99f9bf91e986c2d9fe972b6956c89dd6b88d6f24b1ff57e6596481a0442e7a2",
+    "sha256:43c17446cd04c07c3c8c5f3197af35a55fe529db27f18e996a1bc72827a89716",
+    "sha256:bb8dfcb8d9757995324b66ba048f0ba5a2dd5cc61c7557962584e3a44181e4c7",
+    "sha256:10e33d5d17b777a89b28b1aad4e40743507c740e80decd7f596aa1ad59fdfb54"
+  ],
+  "family_id": "housing.habitability-code",
+  "family_order": 15,
+  "schema_version": "1.0.0",
+  "suite": "housing-land-use-regeneration",
+  "title": "Housing habitability and code operations"
+}

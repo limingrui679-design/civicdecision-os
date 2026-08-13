@@ -1,0 +1,334 @@
+{
+  "designs": [
+    {
+      "analysis_modes": [
+        "descriptive"
+      ],
+      "binding_constraint": "The distributional public-service equity diagnose must respect declared measurement resolution and classification uncertainty.",
+      "content_hash": "sha256:841d8e481a5e563ba9db4a4e8f292068198bacba9eec646907ff2a2ca9e21975",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Which groups and areas show persistent differences after need, eligibility, access, reporting, and case mix are separated?",
+      "decision_type": "diagnose",
+      "design_id": "scenario.equity.distributional-service.service-disparities.v1",
+      "design_order": 209,
+      "evidence_gate": "geographic-alignment",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "proposed"
+      ],
+      "family_id": "equity.distributional-service",
+      "family_title": "Distributional public-service equity",
+      "horizon": "annual",
+      "implementation_status": "design-only",
+      "primary_outcome": "unexplained service-access and quality gap",
+      "prohibited_claims": [
+        "Do not label an adjusted area difference discrimination, individual treatment, or causal inequity.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "population-group",
+      "suite": "behavioral-policy-equity",
+      "title": "Diagnose distributional service-access and quality disparities"
+    },
+    {
+      "analysis_modes": [
+        "forecast"
+      ],
+      "binding_constraint": "The distributional public-service equity forecast must respect declared validated operational capacity and forecast uncertainty.",
+      "content_hash": "sha256:ad45414fa3a92e924b7f79301d63d3d1a163581427af155eefa8fa2c44486a1f",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "What group- and area-specific eligible need and service-capacity range should planning prepare for?",
+      "decision_type": "forecast",
+      "design_id": "scenario.equity.distributional-service.equitable-service-need.v1",
+      "design_order": 210,
+      "evidence_gate": "model-calibration",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "proposed"
+      ],
+      "family_id": "equity.distributional-service",
+      "family_title": "Distributional public-service equity",
+      "horizon": "weeks",
+      "implementation_status": "design-only",
+      "primary_outcome": "eligible need above minimum service capacity",
+      "prohibited_claims": [
+        "Do not call forecast eligible need individual demand, behavior, entitlement, or verified unmet service.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "population-group",
+      "suite": "behavioral-policy-equity",
+      "title": "Forecast service need and capacity by population group"
+    },
+    {
+      "analysis_modes": [
+        "descriptive",
+        "optimization"
+      ],
+      "binding_constraint": "The distributional public-service equity prioritize must respect declared capital, operating, maintenance, and delivery budgets.",
+      "content_hash": "sha256:8ba4394e7bb47a6deac104a2b7b08971f4a0147f561957290c15f7b0194b666e",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Which access, language, staffing, process, facility, and accountability investments should be funded?",
+      "decision_type": "prioritize",
+      "design_id": "scenario.equity.distributional-service.equity-improvement-portfolio.v1",
+      "design_order": 211,
+      "evidence_gate": "cost-capacity",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed"
+      ],
+      "family_id": "equity.distributional-service",
+      "family_title": "Distributional public-service equity",
+      "horizon": "multi-year",
+      "implementation_status": "design-only",
+      "primary_outcome": "population-weighted verified minimum-service gap",
+      "prohibited_claims": [
+        "Do not report modeled gap reduction as delivered equity, legal compliance, or resident welfare.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "service-area",
+      "suite": "behavioral-policy-equity",
+      "title": "Prioritize cross-agency equity improvements"
+    },
+    {
+      "analysis_modes": [
+        "simulation",
+        "optimization"
+      ],
+      "binding_constraint": "The distributional public-service equity site must respect declared land control, accessibility, permitting, safety, and operating feasibility.",
+      "content_hash": "sha256:0a4d38202d95c5e3304fe7d76e37ea48a400daa69aa0ea82edd65ef771fbc2f6",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Where should multilingual, accessible, trusted service points close verified need-adjusted access gaps?",
+      "decision_type": "site",
+      "design_id": "scenario.equity.distributional-service.equitable-service-network.v1",
+      "design_order": 212,
+      "evidence_gate": "legal-authority",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "family_id": "equity.distributional-service",
+      "family_title": "Distributional public-service equity",
+      "horizon": "multi-year",
+      "implementation_status": "design-only",
+      "primary_outcome": "eligible people beyond usable qualified service access",
+      "prohibited_claims": [
+        "Do not call a candidate site equitable, trusted, accessible, lawful, or used.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "facility",
+      "suite": "behavioral-policy-equity",
+      "title": "Site an equitable network of public-service access points"
+    },
+    {
+      "analysis_modes": [
+        "simulation",
+        "optimization"
+      ],
+      "binding_constraint": "The distributional public-service equity allocate must respect declared minimum service, eligibility, capacity, and distributional safeguards.",
+      "content_hash": "sha256:cd683b13933e790c14cf1ceab2ffaf677de38bbd0b6ac83159f7194829e1d613",
+      "current_readiness": "reference-implemented",
+      "decision_question": "How should staff, funds, appointments, language, and field capacity be distributed across groups and areas?",
+      "decision_type": "allocate",
+      "design_id": "scenario.equity.distributional-service.minimum-service-capacity.v1",
+      "design_order": 213,
+      "evidence_gate": "equity-measurement",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "existing_template_ref": "deep.equity.area-balance.v1",
+      "family_id": "equity.distributional-service",
+      "family_title": "Distributional public-service equity",
+      "horizon": "weeks",
+      "implementation_status": "reference-implemented",
+      "primary_outcome": "eligible population below minimum service coverage",
+      "prohibited_claims": [
+        "Do not call area-balanced request capacity demographic equity, delivered service, or improved outcomes.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "population-group",
+      "suite": "behavioral-policy-equity",
+      "title": "Allocate capacity under minimum equitable service guarantees"
+    },
+    {
+      "analysis_modes": [
+        "forecast",
+        "optimization"
+      ],
+      "binding_constraint": "The distributional public-service equity schedule must respect declared labor, access, sequencing, notice, and completion windows.",
+      "content_hash": "sha256:b9ca7873d3c718e475b018112b4919840f21f57cee8c8b14f4c04bcd0907ac74",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "When should access repairs, outreach, translation, staffing, audits, and follow-up milestones occur?",
+      "decision_type": "schedule",
+      "design_id": "scenario.equity.distributional-service.equity-remediation.v1",
+      "design_order": 214,
+      "evidence_gate": "temporal-alignment",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed"
+      ],
+      "family_id": "equity.distributional-service",
+      "family_title": "Distributional public-service equity",
+      "horizon": "weeks",
+      "implementation_status": "design-only",
+      "primary_outcome": "person-days below verified minimum service standards",
+      "prohibited_claims": [
+        "Do not call scheduled remediation implemented, compliant, accepted, or effective.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "service-area",
+      "suite": "behavioral-policy-equity",
+      "title": "Schedule equity remediation and service reviews"
+    },
+    {
+      "analysis_modes": [
+        "forecast",
+        "simulation",
+        "optimization"
+      ],
+      "binding_constraint": "The distributional public-service equity stress test must respect declared minimum continuity and safety thresholds across severe scenarios.",
+      "content_hash": "sha256:7f46eba5545f9b7aaf9aa0084af9bab0ca0a34cb3be4ee8f1c07f541049871b1",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Which continuity plan preserves minimum access across outages, hazards, demand surges, and staff losses?",
+      "decision_type": "stress-test",
+      "design_id": "scenario.equity.distributional-service.equity-under-disruption.v1",
+      "design_order": 215,
+      "evidence_gate": "external-validation",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "family_id": "equity.distributional-service",
+      "family_title": "Distributional public-service equity",
+      "horizon": "seasonal",
+      "implementation_status": "design-only",
+      "primary_outcome": "scenario-weighted people below minimum service guarantees",
+      "prohibited_claims": [
+        "Do not present synthetic group outcomes, service failures, or disparities as observed.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "network",
+      "suite": "behavioral-policy-equity",
+      "title": "Stress-test equitable service under disruption"
+    },
+    {
+      "analysis_modes": [
+        "descriptive",
+        "causal"
+      ],
+      "binding_constraint": "The distributional public-service equity evaluate must respect declared pre-specified assignment, comparison, outcome, spillover, and subgroup rules.",
+      "content_hash": "sha256:4e279e85b97bfaf4c5cba43dc6b3c754ea74560433c2eb932e13da1e7aa1298b",
+      "current_readiness": "blocked-multiple-gates",
+      "decision_question": "Did phased access and capacity interventions reduce verified need-adjusted disparities without displacement?",
+      "decision_type": "evaluate",
+      "design_id": "scenario.equity.distributional-service.equity-policy-effect.v1",
+      "design_order": 216,
+      "evidence_gate": "causal-identification",
+      "evidence_types": [
+        "causal",
+        "estimated",
+        "observed",
+        "proposed"
+      ],
+      "family_id": "equity.distributional-service",
+      "family_title": "Distributional public-service equity",
+      "horizon": "multi-year",
+      "implementation_status": "design-only",
+      "primary_outcome": "change in need-adjusted service access and outcome gaps",
+      "prohibited_claims": [
+        "Do not infer discrimination reduction, welfare, or causal equity from area-level requests alone.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "population-group",
+      "suite": "behavioral-policy-equity",
+      "title": "Evaluate service-equity interventions"
+    }
+  ],
+  "family": {
+    "affected_system": "cross-agency public-service access, workload, quality, and outcome distribution",
+    "claim_boundary": [
+      "Area and administrative differences do not establish discrimination, preferences, or individual behavior.",
+      "Behavioral and allocation designs require rights, accessibility, privacy, and non-coercion review.",
+      "Causal, fairness, adoption, and welfare claims require direct outcomes and independent governance evidence."
+    ],
+    "common_source_roles": [
+      "demographic-context",
+      "equity-attribute",
+      "municipal-demand"
+    ],
+    "decision_owner": "chief equity officer and city performance director",
+    "decision_types": [
+      "diagnose",
+      "forecast",
+      "prioritize",
+      "site",
+      "allocate",
+      "schedule",
+      "stress-test",
+      "evaluate"
+    ],
+    "description": "Eight decisions for disparity diagnosis, need forecasting, equity portfolios, service siting, resource allocation, corrective scheduling, disruption stress, and equity evaluation.",
+    "design_refs": [
+      "scenario.equity.distributional-service.service-disparities.v1",
+      "scenario.equity.distributional-service.equitable-service-need.v1",
+      "scenario.equity.distributional-service.equity-improvement-portfolio.v1",
+      "scenario.equity.distributional-service.equitable-service-network.v1",
+      "scenario.equity.distributional-service.minimum-service-capacity.v1",
+      "scenario.equity.distributional-service.equity-remediation.v1",
+      "scenario.equity.distributional-service.equity-under-disruption.v1",
+      "scenario.equity.distributional-service.equity-policy-effect.v1"
+    ],
+    "design_signatures": [
+      "sha256:1bab8aa5532fa6456923e0c22dc78b9cb3d6b9f524eb41c0f1fc6be24adcf76d",
+      "sha256:485d66db16f85e06ce8d772beb29716546ca76f4c11377d2c5d4e3f9086000dc",
+      "sha256:8a947f5af67c2183af01352650751209f5534bce98b8bee684895284c06d318c",
+      "sha256:b8dfd7cdf2863b9f7d7b551b587d197695b6b0cad9cd1cbf2bc8392197ce005d",
+      "sha256:3209ab84e56aaba8cee044bd86677efd2feb366ad6f9c43c4383d7e68bafd6ac",
+      "sha256:97a4f74b2b91013cc2886c378a99521a3571b330e8f0c984596951d449c2dd3a",
+      "sha256:db2267addaff1192dc67d562fa7a71e06974a9fd2c6c678fe343736af07f3e18",
+      "sha256:fd89e399000a5a0e4d86f96292cc07a06e135ac71ae78a72ed9a0475ec78e64b"
+    ],
+    "family_id": "equity.distributional-service",
+    "family_order": 27,
+    "schema_version": "1.0.0",
+    "suite": "behavioral-policy-equity",
+    "title": "Distributional public-service equity"
+  },
+  "library_claim_boundary": [
+    "The catalog contains 240 decision designs, not 240 city executions.",
+    "Exactly twelve designs map to existing Tier-D reference templates; 228 remain design-only.",
+    "A reference implementation can be an explicit negative release and does not imply impact.",
+    "No record claims a city binding, new method, deployment, adoption, or real-user outcome.",
+    "Future execution requires source binding, gate passage, and domain, legal, community, and operational review."
+  ]
+}

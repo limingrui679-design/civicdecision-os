@@ -1,0 +1,164 @@
+{
+  "affected_system": "fixed-route public transit service and passenger connections",
+  "alternatives": [
+    "rank verified high-consequence candidates for transit reliability capital and operations portfolio",
+    "select a risk-, equity-, and lifecycle-balanced portfolio for transit reliability capital and operations portfolio",
+    "pair passenger-weighted lifecycle project optimization with an explicit stop, review, and escalation rule"
+  ],
+  "analysis_modes": [
+    "descriptive",
+    "optimization"
+  ],
+  "assumptions": [
+    "Trips, stops, vehicle observations, disruptions, and calendars share a versioned service day.",
+    "Passenger loads and transfer behavior are measured or represented as bounded assumptions.",
+    "All alternatives, capacities, costs, effects, thresholds, and failure scenarios are proposed until bound to evidence."
+  ],
+  "baseline": "fund only already-committed work for transit reliability capital and operations portfolio.",
+  "city_bindings": [],
+  "constraints": [
+    {
+      "binding": true,
+      "constraint_id": "scenario.mobility.transit-reliability.reliability-investments.v1.constraint.binding",
+      "description": "The transit reliability and passenger continuity prioritize must respect declared capital, operating, maintenance, and delivery budgets.",
+      "hard": true,
+      "kind": "budget",
+      "required_source_roles": [
+        "asset-condition",
+        "asset-inventory",
+        "financial-cost",
+        "geographic-identity",
+        "service-schedule",
+        "transport-network"
+      ]
+    },
+    {
+      "binding": false,
+      "constraint_id": "scenario.mobility.transit-reliability.reliability-investments.v1.constraint.evidence-scope",
+      "description": "Every released metric must retain evidence type, source lineage, geography, time, assumptions, and uncertainty.",
+      "hard": true,
+      "kind": "technical",
+      "required_source_roles": [
+        "asset-condition"
+      ]
+    },
+    {
+      "binding": false,
+      "constraint_id": "scenario.mobility.transit-reliability.reliability-investments.v1.constraint.decision-authority",
+      "description": "No analytical output may bypass lawful authority, accountable human review, or an applicable appeal process.",
+      "hard": true,
+      "kind": "regulatory",
+      "required_source_roles": [
+        "asset-condition"
+      ]
+    }
+  ],
+  "current_readiness": "blocked-missing-source",
+  "decision_cadence": "recompiled at each planning cycle and after material evidence change",
+  "decision_owner": "transit chief operating officer and service-planning director",
+  "decision_question": "Which signal, lane, stop, fleet, and operations projects best reduce passenger delay within lifecycle budgets?",
+  "decision_type": "prioritize",
+  "design_id": "scenario.mobility.transit-reliability.reliability-investments.v1",
+  "design_order": 43,
+  "design_signature": "sha256:ce04d2a3520ed1aae204d06ef3898963274f90b4b81f567f22a534a5a50a4f50",
+  "evidence_requirements": [
+    "estimated",
+    "observed",
+    "optimized",
+    "proposed"
+  ],
+  "family_id": "mobility.transit-reliability",
+  "family_title": "Transit reliability and passenger continuity",
+  "horizon": "multi-year",
+  "implementation_status": "design-only",
+  "independence_key": {
+    "binding_constraint": "The transit reliability and passenger continuity prioritize must respect declared capital, operating, maintenance, and delivery budgets.",
+    "decision_object": "transit reliability capital and operations portfolio",
+    "evidence_gate": "Evidence for transit reliability capital and operations portfolio passes documented checks for cost, benefit, service life, dependencies, deliverability, and maintenance burden.",
+    "horizon": "multi-year",
+    "intervention_mechanism": "passenger-weighted lifecycle project optimization",
+    "primary_outcome": "expected passenger-hours of unreliable service",
+    "spatial_unit": "asset"
+  },
+  "intended_claim": "A versioned prioritize design for comparing declared alternatives affecting transit reliability capital and operations portfolio, conditional on its evidence gate.",
+  "limitations": [
+    "This library record has no city binding and therefore reports no local input, output, or recommendation.",
+    "Readiness describes explicit source and method gates; it does not certify implementation feasibility.",
+    "External domain, legal, community, security, and operational review remains outside this design artifact."
+  ],
+  "method_claimed": false,
+  "objectives": [
+    {
+      "evidence_type": "estimated",
+      "metric": "expected passenger-hours of unreliable service",
+      "objective_id": "scenario.mobility.transit-reliability.reliability-investments.v1.objective.primary",
+      "primary": true,
+      "sense": "minimize",
+      "unit": "passenger-hours per year"
+    },
+    {
+      "evidence_type": "estimated",
+      "metric": "distributional gap in expected passenger-hours of unreliable service",
+      "objective_id": "scenario.mobility.transit-reliability.reliability-investments.v1.objective.equity",
+      "primary": false,
+      "sense": "minimize",
+      "unit": "passenger-hours per year"
+    },
+    {
+      "evidence_type": "observed",
+      "metric": "decision claims with complete evidence lineage",
+      "objective_id": "scenario.mobility.transit-reliability.reliability-investments.v1.objective.traceability",
+      "primary": false,
+      "sense": "maximize",
+      "unit": "percent"
+    }
+  ],
+  "prohibited_claims": [
+    "Do not report modeled passenger delay reduction as a realized project benefit.",
+    "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+    "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+    "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+  ],
+  "release_gate": {
+    "failure_release": "Release an explicit insufficient-evidence record naming missing sources, failed diagnostics, prohibited claims, and the next validation action.",
+    "failure_status": "insufficient-evidence",
+    "gate_id": "scenario.mobility.transit-reliability.reliability-investments.v1.gate.release",
+    "gate_type": "cost-capacity",
+    "pass_condition": "Evidence for transit reliability capital and operations portfolio passes documented checks for cost, benefit, service life, dependencies, deliverability, and maintenance burden.",
+    "required_evidence_types": [
+      "observed",
+      "proposed"
+    ],
+    "required_source_roles": [
+      "asset-condition",
+      "asset-inventory",
+      "financial-cost",
+      "geographic-identity",
+      "service-schedule",
+      "transport-network"
+    ]
+  },
+  "required_source_roles": [
+    "asset-condition",
+    "asset-inventory",
+    "financial-cost",
+    "geographic-identity",
+    "service-schedule",
+    "transport-network"
+  ],
+  "schema_version": "1.0.0",
+  "spatial_unit": "asset",
+  "suite": "mobility-accessibility-operations",
+  "tags": [
+    "design-only",
+    "mobility-accessibility-operations",
+    "mobility.transit-reliability",
+    "prioritize",
+    "scenario-library"
+  ],
+  "title": "Prioritize transit reliability investments",
+  "transportability_risks": [
+    "Fare policy, headways, fleet, labor rules, topology, and passenger behavior vary by operator.",
+    "Reliability metrics may not transfer between schedule-based and frequency-based service."
+  ]
+}

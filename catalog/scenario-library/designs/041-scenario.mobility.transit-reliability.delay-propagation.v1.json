@@ -1,0 +1,159 @@
+{
+  "affected_system": "fixed-route public transit service and passenger connections",
+  "alternatives": [
+    "verify the highest-consequence signals before acting on route-segment delay propagation and transfer failure",
+    "combine targeted inspection, monitoring, and data-quality repair for route-segment delay propagation and transfer failure",
+    "pair vehicle-trajectory and timetable dependency diagnosis with an explicit stop, review, and escalation rule"
+  ],
+  "analysis_modes": [
+    "descriptive"
+  ],
+  "assumptions": [
+    "Trips, stops, vehicle observations, disruptions, and calendars share a versioned service day.",
+    "Passenger loads and transfer behavior are measured or represented as bounded assumptions.",
+    "All alternatives, capacities, costs, effects, thresholds, and failure scenarios are proposed until bound to evidence."
+  ],
+  "baseline": "continue current inspection and reporting practice for route-segment delay propagation and transfer failure.",
+  "city_bindings": [],
+  "constraints": [
+    {
+      "binding": true,
+      "constraint_id": "scenario.mobility.transit-reliability.delay-propagation.v1.constraint.binding",
+      "description": "The transit reliability and passenger continuity diagnose must respect declared measurement resolution and classification uncertainty.",
+      "hard": true,
+      "kind": "technical",
+      "required_source_roles": [
+        "geographic-identity",
+        "operating-capacity",
+        "real-time-state",
+        "service-schedule",
+        "transport-network"
+      ]
+    },
+    {
+      "binding": false,
+      "constraint_id": "scenario.mobility.transit-reliability.delay-propagation.v1.constraint.evidence-scope",
+      "description": "Every released metric must retain evidence type, source lineage, geography, time, assumptions, and uncertainty.",
+      "hard": true,
+      "kind": "technical",
+      "required_source_roles": [
+        "geographic-identity"
+      ]
+    },
+    {
+      "binding": false,
+      "constraint_id": "scenario.mobility.transit-reliability.delay-propagation.v1.constraint.decision-authority",
+      "description": "No analytical output may bypass lawful authority, accountable human review, or an applicable appeal process.",
+      "hard": true,
+      "kind": "regulatory",
+      "required_source_roles": [
+        "geographic-identity"
+      ]
+    }
+  ],
+  "current_readiness": "blocked-missing-source",
+  "decision_cadence": "recompiled at each planning cycle and after material evidence change",
+  "decision_owner": "transit chief operating officer and service-planning director",
+  "decision_question": "Which route segments and transfer nodes repeatedly propagate delay into passenger connection failures?",
+  "decision_type": "diagnose",
+  "design_id": "scenario.mobility.transit-reliability.delay-propagation.v1",
+  "design_order": 41,
+  "design_signature": "sha256:e450dd04e00b629646de410c76417da8b7f06ac85b6e5b50c4f5f55fbded654f",
+  "evidence_requirements": [
+    "estimated",
+    "observed",
+    "proposed"
+  ],
+  "family_id": "mobility.transit-reliability",
+  "family_title": "Transit reliability and passenger continuity",
+  "horizon": "annual",
+  "implementation_status": "design-only",
+  "independence_key": {
+    "binding_constraint": "The transit reliability and passenger continuity diagnose must respect declared measurement resolution and classification uncertainty.",
+    "decision_object": "route-segment delay propagation and transfer failure",
+    "evidence_gate": "Evidence for route-segment delay propagation and transfer failure passes documented checks for coverage, semantics, geography, timestamps, and uncertainty.",
+    "horizon": "annual",
+    "intervention_mechanism": "vehicle-trajectory and timetable dependency diagnosis",
+    "primary_outcome": "passenger-weighted missed connections",
+    "spatial_unit": "network"
+  },
+  "intended_claim": "A versioned diagnose design for comparing declared alternatives affecting route-segment delay propagation and transfer failure, conditional on its evidence gate.",
+  "limitations": [
+    "This library record has no city binding and therefore reports no local input, output, or recommendation.",
+    "Readiness describes explicit source and method gates; it does not certify implementation feasibility.",
+    "External domain, legal, community, security, and operational review remains outside this design artifact."
+  ],
+  "method_claimed": false,
+  "objectives": [
+    {
+      "evidence_type": "estimated",
+      "metric": "passenger-weighted missed connections",
+      "objective_id": "scenario.mobility.transit-reliability.delay-propagation.v1.objective.primary",
+      "primary": true,
+      "sense": "minimize",
+      "unit": "connections"
+    },
+    {
+      "evidence_type": "estimated",
+      "metric": "distributional gap in passenger-weighted missed connections",
+      "objective_id": "scenario.mobility.transit-reliability.delay-propagation.v1.objective.equity",
+      "primary": false,
+      "sense": "minimize",
+      "unit": "connections"
+    },
+    {
+      "evidence_type": "observed",
+      "metric": "decision claims with complete evidence lineage",
+      "objective_id": "scenario.mobility.transit-reliability.delay-propagation.v1.objective.traceability",
+      "primary": false,
+      "sense": "maximize",
+      "unit": "percent"
+    }
+  ],
+  "prohibited_claims": [
+    "Do not infer passenger experience from vehicle delay without validated load and transfer evidence.",
+    "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+    "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+    "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+  ],
+  "release_gate": {
+    "failure_release": "Release an explicit insufficient-evidence record naming missing sources, failed diagnostics, prohibited claims, and the next validation action.",
+    "failure_status": "insufficient-evidence",
+    "gate_id": "scenario.mobility.transit-reliability.delay-propagation.v1.gate.release",
+    "gate_type": "geographic-alignment",
+    "pass_condition": "Evidence for route-segment delay propagation and transfer failure passes documented checks for coverage, semantics, geography, timestamps, and uncertainty.",
+    "required_evidence_types": [
+      "observed",
+      "proposed"
+    ],
+    "required_source_roles": [
+      "geographic-identity",
+      "operating-capacity",
+      "real-time-state",
+      "service-schedule",
+      "transport-network"
+    ]
+  },
+  "required_source_roles": [
+    "geographic-identity",
+    "operating-capacity",
+    "real-time-state",
+    "service-schedule",
+    "transport-network"
+  ],
+  "schema_version": "1.0.0",
+  "spatial_unit": "network",
+  "suite": "mobility-accessibility-operations",
+  "tags": [
+    "design-only",
+    "diagnose",
+    "mobility-accessibility-operations",
+    "mobility.transit-reliability",
+    "scenario-library"
+  ],
+  "title": "Diagnose transit delay propagation and missed connections",
+  "transportability_risks": [
+    "Fare policy, headways, fleet, labor rules, topology, and passenger behavior vary by operator.",
+    "Reliability metrics may not transfer between schedule-based and frequency-based service."
+  ]
+}

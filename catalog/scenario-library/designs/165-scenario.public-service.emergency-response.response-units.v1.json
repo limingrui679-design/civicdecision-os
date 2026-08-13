@@ -1,0 +1,165 @@
+{
+  "affected_system": "non-clinical emergency call handling, unit readiness, and incident support network",
+  "alternatives": [
+    "protect minimum coverage before needs-based allocation of emergency response units and standby capacity",
+    "adapt allocations using observed demand, uptake, and capacity for emergency response units and standby capacity",
+    "pair minimum-coverage and workload-balanced unit allocation with an explicit stop, review, and escalation rule"
+  ],
+  "analysis_modes": [
+    "simulation",
+    "optimization"
+  ],
+  "assumptions": [
+    "Calls, incidents, dispositions, unit states, travel, scene time, and outcomes remain distinct.",
+    "Any operational recommendation requires agency safety review and cannot automate high-stakes dispatch.",
+    "All alternatives, capacities, costs, effects, thresholds, and failure scenarios are proposed until bound to evidence."
+  ],
+  "baseline": "retain the current distribution rule for emergency response units and standby capacity.",
+  "city_bindings": [],
+  "constraints": [
+    {
+      "binding": true,
+      "constraint_id": "scenario.public-service.emergency-response.response-units.v1.constraint.binding",
+      "description": "The emergency response readiness and allocation allocate must respect declared minimum service, eligibility, capacity, and distributional safeguards.",
+      "hard": true,
+      "kind": "equity",
+      "required_source_roles": [
+        "equity-attribute",
+        "municipal-demand",
+        "operating-capacity",
+        "real-time-state",
+        "service-schedule",
+        "transport-network"
+      ]
+    },
+    {
+      "binding": false,
+      "constraint_id": "scenario.public-service.emergency-response.response-units.v1.constraint.evidence-scope",
+      "description": "Every released metric must retain evidence type, source lineage, geography, time, assumptions, and uncertainty.",
+      "hard": true,
+      "kind": "technical",
+      "required_source_roles": [
+        "equity-attribute"
+      ]
+    },
+    {
+      "binding": false,
+      "constraint_id": "scenario.public-service.emergency-response.response-units.v1.constraint.decision-authority",
+      "description": "No analytical output may bypass lawful authority, accountable human review, or an applicable appeal process.",
+      "hard": true,
+      "kind": "regulatory",
+      "required_source_roles": [
+        "equity-attribute"
+      ]
+    }
+  ],
+  "current_readiness": "blocked-missing-source",
+  "decision_cadence": "recompiled at each planning cycle and after material evidence change",
+  "decision_owner": "emergency communications director and public-safety operations chief",
+  "decision_question": "How should deployable units, specialist teams, supervisors, and mutual-aid reserves be positioned?",
+  "decision_type": "allocate",
+  "design_id": "scenario.public-service.emergency-response.response-units.v1",
+  "design_order": 165,
+  "design_signature": "sha256:96700c558c258f69d4c1e660989603c80c1ca8e0052a91fcafd730daf4f652c9",
+  "evidence_requirements": [
+    "estimated",
+    "observed",
+    "optimized",
+    "proposed",
+    "simulated"
+  ],
+  "family_id": "public-service.emergency-response",
+  "family_title": "Emergency response readiness and allocation",
+  "horizon": "weeks",
+  "implementation_status": "design-only",
+  "independence_key": {
+    "binding_constraint": "The emergency response readiness and allocation allocate must respect declared minimum service, eligibility, capacity, and distributional safeguards.",
+    "decision_object": "emergency response units and standby capacity",
+    "evidence_gate": "Evidence for emergency response units and standby capacity passes documented checks for eligible denominators, group attributes, inventory, minimum-service rules, and allocation records.",
+    "horizon": "weeks",
+    "intervention_mechanism": "minimum-coverage and workload-balanced unit allocation",
+    "primary_outcome": "priority demand without resilient unit coverage",
+    "spatial_unit": "network"
+  },
+  "intended_claim": "A versioned allocate design for comparing declared alternatives affecting emergency response units and standby capacity, conditional on its evidence gate.",
+  "limitations": [
+    "This library record has no city binding and therefore reports no local input, output, or recommendation.",
+    "Readiness describes explicit source and method gates; it does not certify implementation feasibility.",
+    "External domain, legal, community, security, and operational review remains outside this design artifact."
+  ],
+  "method_claimed": false,
+  "objectives": [
+    {
+      "evidence_type": "estimated",
+      "metric": "priority demand without resilient unit coverage",
+      "objective_id": "scenario.public-service.emergency-response.response-units.v1.objective.primary",
+      "primary": true,
+      "sense": "minimize",
+      "unit": "incident-equivalents"
+    },
+    {
+      "evidence_type": "estimated",
+      "metric": "distributional gap in priority demand without resilient unit coverage",
+      "objective_id": "scenario.public-service.emergency-response.response-units.v1.objective.equity",
+      "primary": false,
+      "sense": "minimize",
+      "unit": "incident-equivalents"
+    },
+    {
+      "evidence_type": "observed",
+      "metric": "decision claims with complete evidence lineage",
+      "objective_id": "scenario.public-service.emergency-response.response-units.v1.objective.traceability",
+      "primary": false,
+      "sense": "maximize",
+      "unit": "percent"
+    }
+  ],
+  "prohibited_claims": [
+    "Do not present a planning allocation as an automated dispatch or completed response.",
+    "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+    "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+    "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+  ],
+  "release_gate": {
+    "failure_release": "Release an explicit insufficient-evidence record naming missing sources, failed diagnostics, prohibited claims, and the next validation action.",
+    "failure_status": "insufficient-evidence",
+    "gate_id": "scenario.public-service.emergency-response.response-units.v1.gate.release",
+    "gate_type": "equity-measurement",
+    "pass_condition": "Evidence for emergency response units and standby capacity passes documented checks for eligible denominators, group attributes, inventory, minimum-service rules, and allocation records.",
+    "required_evidence_types": [
+      "observed",
+      "proposed"
+    ],
+    "required_source_roles": [
+      "equity-attribute",
+      "municipal-demand",
+      "operating-capacity",
+      "real-time-state",
+      "service-schedule",
+      "transport-network"
+    ]
+  },
+  "required_source_roles": [
+    "equity-attribute",
+    "municipal-demand",
+    "operating-capacity",
+    "real-time-state",
+    "service-schedule",
+    "transport-network"
+  ],
+  "schema_version": "1.0.0",
+  "spatial_unit": "network",
+  "suite": "public-service-operations",
+  "tags": [
+    "allocate",
+    "design-only",
+    "public-service-operations",
+    "public-service.emergency-response",
+    "scenario-library"
+  ],
+  "title": "Allocate emergency response units and standby capacity",
+  "transportability_risks": [
+    "Call coding, dispatch policy, mutual aid, geography, traffic, staffing, and incident mix differ.",
+    "Recorded response time may omit call processing, staging, or outcome quality."
+  ]
+}

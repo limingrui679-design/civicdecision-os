@@ -1,0 +1,165 @@
+{
+  "affected_system": "fixed-route public transit service and passenger connections",
+  "alternatives": [
+    "protect minimum coverage before needs-based allocation of transit fleet, operator, and recovery capacity",
+    "adapt allocations using observed demand, uptake, and capacity for transit fleet, operator, and recovery capacity",
+    "pair equity-constrained block and spare allocation with an explicit stop, review, and escalation rule"
+  ],
+  "analysis_modes": [
+    "simulation",
+    "optimization"
+  ],
+  "assumptions": [
+    "Trips, stops, vehicle observations, disruptions, and calendars share a versioned service day.",
+    "Passenger loads and transfer behavior are measured or represented as bounded assumptions.",
+    "All alternatives, capacities, costs, effects, thresholds, and failure scenarios are proposed until bound to evidence."
+  ],
+  "baseline": "retain the current distribution rule for transit fleet, operator, and recovery capacity.",
+  "city_bindings": [],
+  "constraints": [
+    {
+      "binding": true,
+      "constraint_id": "scenario.mobility.transit-reliability.fleet-spares.v1.constraint.binding",
+      "description": "The transit reliability and passenger continuity allocate must respect declared minimum service, eligibility, capacity, and distributional safeguards.",
+      "hard": true,
+      "kind": "equity",
+      "required_source_roles": [
+        "equity-attribute",
+        "geographic-identity",
+        "operating-capacity",
+        "real-time-state",
+        "service-schedule",
+        "transport-network"
+      ]
+    },
+    {
+      "binding": false,
+      "constraint_id": "scenario.mobility.transit-reliability.fleet-spares.v1.constraint.evidence-scope",
+      "description": "Every released metric must retain evidence type, source lineage, geography, time, assumptions, and uncertainty.",
+      "hard": true,
+      "kind": "technical",
+      "required_source_roles": [
+        "equity-attribute"
+      ]
+    },
+    {
+      "binding": false,
+      "constraint_id": "scenario.mobility.transit-reliability.fleet-spares.v1.constraint.decision-authority",
+      "description": "No analytical output may bypass lawful authority, accountable human review, or an applicable appeal process.",
+      "hard": true,
+      "kind": "regulatory",
+      "required_source_roles": [
+        "equity-attribute"
+      ]
+    }
+  ],
+  "current_readiness": "blocked-missing-source",
+  "decision_cadence": "recompiled at each planning cycle and after material evidence change",
+  "decision_owner": "transit chief operating officer and service-planning director",
+  "decision_question": "How should vehicles, operators, and spare capacity be assigned across routes and depots?",
+  "decision_type": "allocate",
+  "design_id": "scenario.mobility.transit-reliability.fleet-spares.v1",
+  "design_order": 45,
+  "design_signature": "sha256:0c47243dfa9458660e917b7748dd7805e1ee9d7a701ef21fb275399f3d798438",
+  "evidence_requirements": [
+    "estimated",
+    "observed",
+    "optimized",
+    "proposed",
+    "simulated"
+  ],
+  "family_id": "mobility.transit-reliability",
+  "family_title": "Transit reliability and passenger continuity",
+  "horizon": "weeks",
+  "implementation_status": "design-only",
+  "independence_key": {
+    "binding_constraint": "The transit reliability and passenger continuity allocate must respect declared minimum service, eligibility, capacity, and distributional safeguards.",
+    "decision_object": "transit fleet, operator, and recovery capacity",
+    "evidence_gate": "Evidence for transit fleet, operator, and recovery capacity passes documented checks for eligible denominators, group attributes, inventory, minimum-service rules, and allocation records.",
+    "horizon": "weeks",
+    "intervention_mechanism": "equity-constrained block and spare allocation",
+    "primary_outcome": "passenger demand without scheduled reliable capacity",
+    "spatial_unit": "network"
+  },
+  "intended_claim": "A versioned allocate design for comparing declared alternatives affecting transit fleet, operator, and recovery capacity, conditional on its evidence gate.",
+  "limitations": [
+    "This library record has no city binding and therefore reports no local input, output, or recommendation.",
+    "Readiness describes explicit source and method gates; it does not certify implementation feasibility.",
+    "External domain, legal, community, security, and operational review remains outside this design artifact."
+  ],
+  "method_claimed": false,
+  "objectives": [
+    {
+      "evidence_type": "estimated",
+      "metric": "passenger demand without scheduled reliable capacity",
+      "objective_id": "scenario.mobility.transit-reliability.fleet-spares.v1.objective.primary",
+      "primary": true,
+      "sense": "minimize",
+      "unit": "passenger-trips"
+    },
+    {
+      "evidence_type": "estimated",
+      "metric": "distributional gap in passenger demand without scheduled reliable capacity",
+      "objective_id": "scenario.mobility.transit-reliability.fleet-spares.v1.objective.equity",
+      "primary": false,
+      "sense": "minimize",
+      "unit": "passenger-trips"
+    },
+    {
+      "evidence_type": "observed",
+      "metric": "decision claims with complete evidence lineage",
+      "objective_id": "scenario.mobility.transit-reliability.fleet-spares.v1.objective.traceability",
+      "primary": false,
+      "sense": "maximize",
+      "unit": "percent"
+    }
+  ],
+  "prohibited_claims": [
+    "Do not describe a vehicle and operator assignment as delivered service.",
+    "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+    "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+    "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+  ],
+  "release_gate": {
+    "failure_release": "Release an explicit insufficient-evidence record naming missing sources, failed diagnostics, prohibited claims, and the next validation action.",
+    "failure_status": "insufficient-evidence",
+    "gate_id": "scenario.mobility.transit-reliability.fleet-spares.v1.gate.release",
+    "gate_type": "equity-measurement",
+    "pass_condition": "Evidence for transit fleet, operator, and recovery capacity passes documented checks for eligible denominators, group attributes, inventory, minimum-service rules, and allocation records.",
+    "required_evidence_types": [
+      "observed",
+      "proposed"
+    ],
+    "required_source_roles": [
+      "equity-attribute",
+      "geographic-identity",
+      "operating-capacity",
+      "real-time-state",
+      "service-schedule",
+      "transport-network"
+    ]
+  },
+  "required_source_roles": [
+    "equity-attribute",
+    "geographic-identity",
+    "operating-capacity",
+    "real-time-state",
+    "service-schedule",
+    "transport-network"
+  ],
+  "schema_version": "1.0.0",
+  "spatial_unit": "network",
+  "suite": "mobility-accessibility-operations",
+  "tags": [
+    "allocate",
+    "design-only",
+    "mobility-accessibility-operations",
+    "mobility.transit-reliability",
+    "scenario-library"
+  ],
+  "title": "Allocate fleet, operators, and recovery capacity",
+  "transportability_risks": [
+    "Fare policy, headways, fleet, labor rules, topology, and passenger behavior vary by operator.",
+    "Reliability metrics may not transfer between schedule-based and frequency-based service."
+  ]
+}

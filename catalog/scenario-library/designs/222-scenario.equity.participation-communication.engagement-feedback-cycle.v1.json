@@ -1,0 +1,164 @@
+{
+  "affected_system": "public participation, multilingual communication, consultation, and feedback closure",
+  "alternatives": [
+    "advance high-risk work within verified feasible windows for public participation and feedback-closure schedule",
+    "use rolling risk and capacity updates to reschedule public participation and feedback-closure schedule",
+    "pair notice, accessibility, dependency, deliberation, and accountability scheduling with an explicit stop, review, and escalation rule"
+  ],
+  "analysis_modes": [
+    "forecast",
+    "optimization"
+  ],
+  "assumptions": [
+    "Invitation, exposure, participation, contribution, response, decision, and trust remain distinct.",
+    "Participation records preserve consent, privacy, language, accessibility, and channel provenance.",
+    "All alternatives, capacities, costs, effects, thresholds, and failure scenarios are proposed until bound to evidence."
+  ],
+  "baseline": "continue the fixed operating calendar for public participation and feedback-closure schedule.",
+  "city_bindings": [],
+  "constraints": [
+    {
+      "binding": true,
+      "constraint_id": "scenario.equity.participation-communication.engagement-feedback-cycle.v1.constraint.binding",
+      "description": "The public participation and risk communication schedule must respect declared labor, access, sequencing, notice, and completion windows.",
+      "hard": true,
+      "kind": "time",
+      "required_source_roles": [
+        "community-input",
+        "demographic-context",
+        "geographic-identity",
+        "legal-regulatory",
+        "operating-capacity",
+        "service-schedule"
+      ]
+    },
+    {
+      "binding": false,
+      "constraint_id": "scenario.equity.participation-communication.engagement-feedback-cycle.v1.constraint.evidence-scope",
+      "description": "Every released metric must retain evidence type, source lineage, geography, time, assumptions, and uncertainty.",
+      "hard": true,
+      "kind": "technical",
+      "required_source_roles": [
+        "community-input"
+      ]
+    },
+    {
+      "binding": false,
+      "constraint_id": "scenario.equity.participation-communication.engagement-feedback-cycle.v1.constraint.decision-authority",
+      "description": "No analytical output may bypass lawful authority, accountable human review, or an applicable appeal process.",
+      "hard": true,
+      "kind": "regulatory",
+      "required_source_roles": [
+        "community-input"
+      ]
+    }
+  ],
+  "current_readiness": "blocked-missing-source",
+  "decision_cadence": "recompiled at each planning cycle and after material evidence change",
+  "decision_owner": "public engagement director and risk communications lead",
+  "decision_question": "When should notice, translation, deliberation, response, revision, decision, and follow-up occur?",
+  "decision_type": "schedule",
+  "design_id": "scenario.equity.participation-communication.engagement-feedback-cycle.v1",
+  "design_order": 222,
+  "design_signature": "sha256:311ba3b78c817461894ab41fd18223203cea725961a61a224f2520e224874143",
+  "evidence_requirements": [
+    "estimated",
+    "observed",
+    "optimized",
+    "proposed"
+  ],
+  "family_id": "equity.participation-communication",
+  "family_title": "Public participation and risk communication",
+  "horizon": "weeks",
+  "implementation_status": "design-only",
+  "independence_key": {
+    "binding_constraint": "The public participation and risk communication schedule must respect declared labor, access, sequencing, notice, and completion windows.",
+    "decision_object": "public participation and feedback-closure schedule",
+    "evidence_gate": "Evidence for public participation and feedback-closure schedule passes documented checks for effective dates, time zones, calendars, lead times, completion semantics, and update cadence.",
+    "horizon": "weeks",
+    "intervention_mechanism": "notice, accessibility, dependency, deliberation, and accountability scheduling",
+    "primary_outcome": "affected person-days without timely participation or response",
+    "spatial_unit": "citywide"
+  },
+  "intended_claim": "A versioned schedule design for comparing declared alternatives affecting public participation and feedback-closure schedule, conditional on its evidence gate.",
+  "limitations": [
+    "This library record has no city binding and therefore reports no local input, output, or recommendation.",
+    "Readiness describes explicit source and method gates; it does not certify implementation feasibility.",
+    "External domain, legal, community, security, and operational review remains outside this design artifact."
+  ],
+  "method_claimed": false,
+  "objectives": [
+    {
+      "evidence_type": "estimated",
+      "metric": "affected person-days without timely participation or response",
+      "objective_id": "scenario.equity.participation-communication.engagement-feedback-cycle.v1.objective.primary",
+      "primary": true,
+      "sense": "minimize",
+      "unit": "person-days"
+    },
+    {
+      "evidence_type": "estimated",
+      "metric": "distributional gap in affected person-days without timely participation or response",
+      "objective_id": "scenario.equity.participation-communication.engagement-feedback-cycle.v1.objective.equity",
+      "primary": false,
+      "sense": "minimize",
+      "unit": "person-days"
+    },
+    {
+      "evidence_type": "observed",
+      "metric": "decision claims with complete evidence lineage",
+      "objective_id": "scenario.equity.participation-communication.engagement-feedback-cycle.v1.objective.traceability",
+      "primary": false,
+      "sense": "maximize",
+      "unit": "percent"
+    }
+  ],
+  "prohibited_claims": [
+    "Do not call a scheduled consultation conducted, representative, considered, or closed.",
+    "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+    "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+    "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+  ],
+  "release_gate": {
+    "failure_release": "Release an explicit insufficient-evidence record naming missing sources, failed diagnostics, prohibited claims, and the next validation action.",
+    "failure_status": "insufficient-evidence",
+    "gate_id": "scenario.equity.participation-communication.engagement-feedback-cycle.v1.gate.release",
+    "gate_type": "temporal-alignment",
+    "pass_condition": "Evidence for public participation and feedback-closure schedule passes documented checks for effective dates, time zones, calendars, lead times, completion semantics, and update cadence.",
+    "required_evidence_types": [
+      "observed",
+      "proposed"
+    ],
+    "required_source_roles": [
+      "community-input",
+      "demographic-context",
+      "geographic-identity",
+      "legal-regulatory",
+      "operating-capacity",
+      "service-schedule"
+    ]
+  },
+  "required_source_roles": [
+    "community-input",
+    "demographic-context",
+    "geographic-identity",
+    "legal-regulatory",
+    "operating-capacity",
+    "service-schedule"
+  ],
+  "schema_version": "1.0.0",
+  "spatial_unit": "citywide",
+  "suite": "behavioral-policy-equity",
+  "tags": [
+    "behavioral-policy-equity",
+    "design-only",
+    "equity.participation-communication",
+    "scenario-library",
+    "schedule"
+  ],
+  "title": "Schedule participation, communication, and feedback closure",
+  "transportability_risks": [
+    "Trust, language, civic institutions, digital access, deliberation norms, and risk salience differ.",
+    "Participants are not automatically representative of affected populations."
+  ]
+}

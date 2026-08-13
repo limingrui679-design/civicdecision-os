@@ -1,0 +1,225 @@
+{
+  "audit_maximum_pairwise_similarity": 0.646154,
+  "design": {
+    "affected_system": "pedestrian right-of-way, crossings, sidewalks, and accessible routes",
+    "alternatives": [
+      "screen feasible locations against the largest access gaps for safe crossing and accessible-route connection locations",
+      "co-optimize distributed and high-capacity locations for safe crossing and accessible-route connection locations",
+      "pair pedestrian network gap location-allocation analysis with an explicit stop, review, and escalation rule"
+    ],
+    "analysis_modes": [
+      "simulation",
+      "optimization"
+    ],
+    "assumptions": [
+      "Crash, conflict, barrier, sidewalk, crossing, and demand data have explicit observation processes.",
+      "Accessibility is evaluated across route continuity, slope, surface, crossing, and obstruction dimensions.",
+      "All alternatives, capacities, costs, effects, thresholds, and failure scenarios are proposed until bound to evidence."
+    ],
+    "baseline": "retain only existing approved locations for safe crossing and accessible-route connection locations.",
+    "city_bindings": [],
+    "constraints": [
+      {
+        "binding": true,
+        "constraint_id": "scenario.mobility.pedestrian-safety.safe-crossings.v1.constraint.binding",
+        "description": "The pedestrian safety and universal accessibility site must respect declared land control, accessibility, permitting, safety, and operating feasibility.",
+        "hard": true,
+        "kind": "regulatory",
+        "required_source_roles": [
+          "asset-inventory",
+          "equity-attribute",
+          "geographic-identity",
+          "land-parcel",
+          "legal-regulatory",
+          "transport-network"
+        ]
+      },
+      {
+        "binding": false,
+        "constraint_id": "scenario.mobility.pedestrian-safety.safe-crossings.v1.constraint.evidence-scope",
+        "description": "Every released metric must retain evidence type, source lineage, geography, time, assumptions, and uncertainty.",
+        "hard": true,
+        "kind": "technical",
+        "required_source_roles": [
+          "asset-inventory"
+        ]
+      },
+      {
+        "binding": false,
+        "constraint_id": "scenario.mobility.pedestrian-safety.safe-crossings.v1.constraint.decision-authority",
+        "description": "No analytical output may bypass lawful authority, accountable human review, or an applicable appeal process.",
+        "hard": true,
+        "kind": "regulatory",
+        "required_source_roles": [
+          "asset-inventory"
+        ]
+      }
+    ],
+    "current_readiness": "blocked-missing-source",
+    "decision_cadence": "recompiled at each planning cycle and after material evidence change",
+    "decision_owner": "vision-zero director and accessibility compliance officer",
+    "decision_question": "Where should new crossings and route connections close verified network gaps?",
+    "decision_type": "site",
+    "design_id": "scenario.mobility.pedestrian-safety.safe-crossings.v1",
+    "design_order": 52,
+    "design_signature": "sha256:7945e8610e9cc8595911204489e02fe8676ee8bfb3fe7cd0f8ad85abef4c015a",
+    "evidence_requirements": [
+      "estimated",
+      "observed",
+      "optimized",
+      "proposed",
+      "simulated"
+    ],
+    "family_id": "mobility.pedestrian-safety",
+    "family_title": "Pedestrian safety and universal accessibility",
+    "horizon": "multi-year",
+    "implementation_status": "design-only",
+    "independence_key": {
+      "binding_constraint": "The pedestrian safety and universal accessibility site must respect declared land control, accessibility, permitting, safety, and operating feasibility.",
+      "decision_object": "safe crossing and accessible-route connection locations",
+      "evidence_gate": "Evidence for safe crossing and accessible-route connection locations passes documented checks for parcel control, legal authority, environmental review, access, capacity, and operator responsibility.",
+      "horizon": "multi-year",
+      "intervention_mechanism": "pedestrian network gap location-allocation analysis",
+      "primary_outcome": "high-demand crossings without a safe accessible connection",
+      "spatial_unit": "corridor"
+    },
+    "intended_claim": "A versioned site design for comparing declared alternatives affecting safe crossing and accessible-route connection locations, conditional on its evidence gate.",
+    "limitations": [
+      "This library record has no city binding and therefore reports no local input, output, or recommendation.",
+      "Readiness describes explicit source and method gates; it does not certify implementation feasibility.",
+      "External domain, legal, community, security, and operational review remains outside this design artifact."
+    ],
+    "method_claimed": false,
+    "objectives": [
+      {
+        "evidence_type": "estimated",
+        "metric": "high-demand crossings without a safe accessible connection",
+        "objective_id": "scenario.mobility.pedestrian-safety.safe-crossings.v1.objective.primary",
+        "primary": true,
+        "sense": "minimize",
+        "unit": "crossings"
+      },
+      {
+        "evidence_type": "estimated",
+        "metric": "distributional gap in high-demand crossings without a safe accessible connection",
+        "objective_id": "scenario.mobility.pedestrian-safety.safe-crossings.v1.objective.equity",
+        "primary": false,
+        "sense": "minimize",
+        "unit": "crossings"
+      },
+      {
+        "evidence_type": "observed",
+        "metric": "decision claims with complete evidence lineage",
+        "objective_id": "scenario.mobility.pedestrian-safety.safe-crossings.v1.objective.traceability",
+        "primary": false,
+        "sense": "maximize",
+        "unit": "percent"
+      }
+    ],
+    "prohibited_claims": [
+      "Do not call a screened crossing compliant or safe without engineering review.",
+      "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+      "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+      "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+    ],
+    "release_gate": {
+      "failure_release": "Release an explicit insufficient-evidence record naming missing sources, failed diagnostics, prohibited claims, and the next validation action.",
+      "failure_status": "insufficient-evidence",
+      "gate_id": "scenario.mobility.pedestrian-safety.safe-crossings.v1.gate.release",
+      "gate_type": "legal-authority",
+      "pass_condition": "Evidence for safe crossing and accessible-route connection locations passes documented checks for parcel control, legal authority, environmental review, access, capacity, and operator responsibility.",
+      "required_evidence_types": [
+        "observed",
+        "proposed"
+      ],
+      "required_source_roles": [
+        "asset-inventory",
+        "equity-attribute",
+        "geographic-identity",
+        "land-parcel",
+        "legal-regulatory",
+        "transport-network"
+      ]
+    },
+    "required_source_roles": [
+      "asset-inventory",
+      "equity-attribute",
+      "geographic-identity",
+      "land-parcel",
+      "legal-regulatory",
+      "transport-network"
+    ],
+    "schema_version": "1.0.0",
+    "spatial_unit": "corridor",
+    "suite": "mobility-accessibility-operations",
+    "tags": [
+      "design-only",
+      "mobility-accessibility-operations",
+      "mobility.pedestrian-safety",
+      "scenario-library",
+      "site"
+    ],
+    "title": "Site safe crossings and accessible route connections",
+    "transportability_risks": [
+      "Street design, enforcement, mobility-device needs, exposure, and reporting vary by place.",
+      "Crash-only models underrepresent near misses and unreported accessibility barriers."
+    ]
+  },
+  "family": {
+    "affected_system": "pedestrian right-of-way, crossings, sidewalks, and accessible routes",
+    "claim_boundary": [
+      "Network, request, and schedule records do not establish individual travel behavior or harm.",
+      "Optimized routes and allocations are planning outputs, not dispatched or completed trips.",
+      "Design-only records do not claim current city data, implementation, compliance, or impact."
+    ],
+    "common_source_roles": [
+      "asset-inventory",
+      "geographic-identity",
+      "transport-network"
+    ],
+    "decision_owner": "vision-zero director and accessibility compliance officer",
+    "decision_types": [
+      "diagnose",
+      "forecast",
+      "prioritize",
+      "site",
+      "allocate",
+      "schedule",
+      "stress-test",
+      "evaluate"
+    ],
+    "description": "Eight decisions spanning barrier diagnosis, risk forecasting, treatment portfolios, crossing siting, inspection allocation, work scheduling, closure stress, and evaluation.",
+    "design_refs": [
+      "scenario.mobility.pedestrian-safety.accessible-route-breaks.v1",
+      "scenario.mobility.pedestrian-safety.pedestrian-conflict-risk.v1",
+      "scenario.mobility.pedestrian-safety.safety-accessibility-treatments.v1",
+      "scenario.mobility.pedestrian-safety.safe-crossings.v1",
+      "scenario.mobility.pedestrian-safety.inspection-quick-build.v1",
+      "scenario.mobility.pedestrian-safety.right-of-way-work.v1",
+      "scenario.mobility.pedestrian-safety.accessible-detours.v1",
+      "scenario.mobility.pedestrian-safety.quick-build-safety-effect.v1"
+    ],
+    "design_signatures": [
+      "sha256:91e6adc8fd7662d1cd9c51da94e51bd88e9c05f5307d33404993a83f4d1b9151",
+      "sha256:ebff7d55f6cf7d09b45c831bfc135b618aadc63e7e0e48ab289736ffeb69af1f",
+      "sha256:5880945af8bf186f803fe54229eeedae1ce94f0f1c5a23ad1a6353fc28ceadd2",
+      "sha256:7945e8610e9cc8595911204489e02fe8676ee8bfb3fe7cd0f8ad85abef4c015a",
+      "sha256:cdaa7a19032fd3b386282cffff84154f86a326d0903afe2d9b58cc521e8d2df9",
+      "sha256:e4a5062b83dc51a27b9279ba45a97f7d19c8a1d915ef00ac4d18a93331155746",
+      "sha256:0ccef0fa2c71952b1d9c9eefb78362832c20ca75efa933574812860d2489469e",
+      "sha256:4b908d30edc8319223e493f9a932e42549668281d985178a910b4dcdec575c0f"
+    ],
+    "family_id": "mobility.pedestrian-safety",
+    "family_order": 7,
+    "schema_version": "1.0.0",
+    "suite": "mobility-accessibility-operations",
+    "title": "Pedestrian safety and universal accessibility"
+  },
+  "library_claim_boundary": [
+    "The catalog contains 240 decision designs, not 240 city executions.",
+    "Exactly twelve designs map to existing Tier-D reference templates; 228 remain design-only.",
+    "A reference implementation can be an explicit negative release and does not imply impact.",
+    "No record claims a city binding, new method, deployment, adoption, or real-user outcome.",
+    "Future execution requires source binding, gate passage, and domain, legal, community, and operational review."
+  ]
+}

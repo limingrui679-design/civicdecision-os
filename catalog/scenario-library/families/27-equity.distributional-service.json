@@ -1,0 +1,50 @@
+{
+  "affected_system": "cross-agency public-service access, workload, quality, and outcome distribution",
+  "claim_boundary": [
+    "Area and administrative differences do not establish discrimination, preferences, or individual behavior.",
+    "Behavioral and allocation designs require rights, accessibility, privacy, and non-coercion review.",
+    "Causal, fairness, adoption, and welfare claims require direct outcomes and independent governance evidence."
+  ],
+  "common_source_roles": [
+    "demographic-context",
+    "equity-attribute",
+    "municipal-demand"
+  ],
+  "decision_owner": "chief equity officer and city performance director",
+  "decision_types": [
+    "diagnose",
+    "forecast",
+    "prioritize",
+    "site",
+    "allocate",
+    "schedule",
+    "stress-test",
+    "evaluate"
+  ],
+  "description": "Eight decisions for disparity diagnosis, need forecasting, equity portfolios, service siting, resource allocation, corrective scheduling, disruption stress, and equity evaluation.",
+  "design_refs": [
+    "scenario.equity.distributional-service.service-disparities.v1",
+    "scenario.equity.distributional-service.equitable-service-need.v1",
+    "scenario.equity.distributional-service.equity-improvement-portfolio.v1",
+    "scenario.equity.distributional-service.equitable-service-network.v1",
+    "scenario.equity.distributional-service.minimum-service-capacity.v1",
+    "scenario.equity.distributional-service.equity-remediation.v1",
+    "scenario.equity.distributional-service.equity-under-disruption.v1",
+    "scenario.equity.distributional-service.equity-policy-effect.v1"
+  ],
+  "design_signatures": [
+    "sha256:1bab8aa5532fa6456923e0c22dc78b9cb3d6b9f524eb41c0f1fc6be24adcf76d",
+    "sha256:485d66db16f85e06ce8d772beb29716546ca76f4c11377d2c5d4e3f9086000dc",
+    "sha256:8a947f5af67c2183af01352650751209f5534bce98b8bee684895284c06d318c",
+    "sha256:b8dfd7cdf2863b9f7d7b551b587d197695b6b0cad9cd1cbf2bc8392197ce005d",
+    "sha256:3209ab84e56aaba8cee044bd86677efd2feb366ad6f9c43c4383d7e68bafd6ac",
+    "sha256:97a4f74b2b91013cc2886c378a99521a3571b330e8f0c984596951d449c2dd3a",
+    "sha256:db2267addaff1192dc67d562fa7a71e06974a9fd2c6c678fe343736af07f3e18",
+    "sha256:fd89e399000a5a0e4d86f96292cc07a06e135ac71ae78a72ed9a0475ec78e64b"
+  ],
+  "family_id": "equity.distributional-service",
+  "family_order": 27,
+  "schema_version": "1.0.0",
+  "suite": "behavioral-policy-equity",
+  "title": "Distributional public-service equity"
+}

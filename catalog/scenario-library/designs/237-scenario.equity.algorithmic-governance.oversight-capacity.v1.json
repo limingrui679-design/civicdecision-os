@@ -1,0 +1,165 @@
+{
+  "affected_system": "public-sector analytical, scoring, triage, optimization, and human-review systems",
+  "alternatives": [
+    "protect minimum coverage before needs-based allocation of algorithmic human review and oversight resources",
+    "adapt allocations using observed demand, uptake, and capacity for algorithmic human review and oversight resources",
+    "pair impact, rights, expertise, conflict, and minimum-review allocation with an explicit stop, review, and escalation rule"
+  ],
+  "analysis_modes": [
+    "simulation",
+    "optimization"
+  ],
+  "assumptions": [
+    "Model output, recommendation, human decision, action, appeal, service, and outcome remain distinct.",
+    "High-impact decisions require lawful authority, human responsibility, contestability, and incident response.",
+    "All alternatives, capacities, costs, effects, thresholds, and failure scenarios are proposed until bound to evidence."
+  ],
+  "baseline": "retain the current distribution rule for algorithmic human review and oversight resources.",
+  "city_bindings": [],
+  "constraints": [
+    {
+      "binding": true,
+      "constraint_id": "scenario.equity.algorithmic-governance.oversight-capacity.v1.constraint.binding",
+      "description": "The algorithmic decision support and governance allocate must respect declared minimum service, eligibility, capacity, and distributional safeguards.",
+      "hard": true,
+      "kind": "equity",
+      "required_source_roles": [
+        "community-input",
+        "equity-attribute",
+        "legal-regulatory",
+        "operating-capacity",
+        "outcome-panel",
+        "service-schedule"
+      ]
+    },
+    {
+      "binding": false,
+      "constraint_id": "scenario.equity.algorithmic-governance.oversight-capacity.v1.constraint.evidence-scope",
+      "description": "Every released metric must retain evidence type, source lineage, geography, time, assumptions, and uncertainty.",
+      "hard": true,
+      "kind": "technical",
+      "required_source_roles": [
+        "community-input"
+      ]
+    },
+    {
+      "binding": false,
+      "constraint_id": "scenario.equity.algorithmic-governance.oversight-capacity.v1.constraint.decision-authority",
+      "description": "No analytical output may bypass lawful authority, accountable human review, or an applicable appeal process.",
+      "hard": true,
+      "kind": "regulatory",
+      "required_source_roles": [
+        "community-input"
+      ]
+    }
+  ],
+  "current_readiness": "blocked-missing-source",
+  "decision_cadence": "recompiled at each planning cycle and after material evidence change",
+  "decision_owner": "algorithmic accountability officer and responsible technology review board",
+  "decision_question": "How should reviewers, auditors, advocates, incident responders, and domain experts be assigned?",
+  "decision_type": "allocate",
+  "design_id": "scenario.equity.algorithmic-governance.oversight-capacity.v1",
+  "design_order": 237,
+  "design_signature": "sha256:81358caf7593093e9555db6e39bba178f11816233c912a6c9eb38c64acde4641",
+  "evidence_requirements": [
+    "estimated",
+    "observed",
+    "optimized",
+    "proposed",
+    "simulated"
+  ],
+  "family_id": "equity.algorithmic-governance",
+  "family_title": "Algorithmic decision support and governance",
+  "horizon": "weeks",
+  "implementation_status": "design-only",
+  "independence_key": {
+    "binding_constraint": "The algorithmic decision support and governance allocate must respect declared minimum service, eligibility, capacity, and distributional safeguards.",
+    "decision_object": "algorithmic human review and oversight resources",
+    "evidence_gate": "Evidence for algorithmic human review and oversight resources passes documented checks for eligible denominators, group attributes, inventory, minimum-service rules, and allocation records.",
+    "horizon": "weeks",
+    "intervention_mechanism": "impact, rights, expertise, conflict, and minimum-review allocation",
+    "primary_outcome": "high-impact decisions without qualified independent review capacity",
+    "spatial_unit": "service-area"
+  },
+  "intended_claim": "A versioned allocate design for comparing declared alternatives affecting algorithmic human review and oversight resources, conditional on its evidence gate.",
+  "limitations": [
+    "This library record has no city binding and therefore reports no local input, output, or recommendation.",
+    "Readiness describes explicit source and method gates; it does not certify implementation feasibility.",
+    "External domain, legal, community, security, and operational review remains outside this design artifact."
+  ],
+  "method_claimed": false,
+  "objectives": [
+    {
+      "evidence_type": "estimated",
+      "metric": "high-impact decisions without qualified independent review capacity",
+      "objective_id": "scenario.equity.algorithmic-governance.oversight-capacity.v1.objective.primary",
+      "primary": true,
+      "sense": "minimize",
+      "unit": "decisions"
+    },
+    {
+      "evidence_type": "estimated",
+      "metric": "distributional gap in high-impact decisions without qualified independent review capacity",
+      "objective_id": "scenario.equity.algorithmic-governance.oversight-capacity.v1.objective.equity",
+      "primary": false,
+      "sense": "minimize",
+      "unit": "decisions"
+    },
+    {
+      "evidence_type": "observed",
+      "metric": "decision claims with complete evidence lineage",
+      "objective_id": "scenario.equity.algorithmic-governance.oversight-capacity.v1.objective.traceability",
+      "primary": false,
+      "sense": "maximize",
+      "unit": "percent"
+    }
+  ],
+  "prohibited_claims": [
+    "Do not report assigned review as completed, independent, correct, accepted, or remedied.",
+    "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+    "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+    "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+  ],
+  "release_gate": {
+    "failure_release": "Release an explicit insufficient-evidence record naming missing sources, failed diagnostics, prohibited claims, and the next validation action.",
+    "failure_status": "insufficient-evidence",
+    "gate_id": "scenario.equity.algorithmic-governance.oversight-capacity.v1.gate.release",
+    "gate_type": "equity-measurement",
+    "pass_condition": "Evidence for algorithmic human review and oversight resources passes documented checks for eligible denominators, group attributes, inventory, minimum-service rules, and allocation records.",
+    "required_evidence_types": [
+      "observed",
+      "proposed"
+    ],
+    "required_source_roles": [
+      "community-input",
+      "equity-attribute",
+      "legal-regulatory",
+      "operating-capacity",
+      "outcome-panel",
+      "service-schedule"
+    ]
+  },
+  "required_source_roles": [
+    "community-input",
+    "equity-attribute",
+    "legal-regulatory",
+    "operating-capacity",
+    "outcome-panel",
+    "service-schedule"
+  ],
+  "schema_version": "1.0.0",
+  "spatial_unit": "service-area",
+  "suite": "behavioral-policy-equity",
+  "tags": [
+    "allocate",
+    "behavioral-policy-equity",
+    "design-only",
+    "equity.algorithmic-governance",
+    "scenario-library"
+  ],
+  "title": "Allocate human review and oversight capacity",
+  "transportability_risks": [
+    "Law, institutional process, data-generating systems, populations, incentives, and recourse differ.",
+    "Technical fairness metrics may conflict and cannot establish legal or substantive fairness alone."
+  ]
+}

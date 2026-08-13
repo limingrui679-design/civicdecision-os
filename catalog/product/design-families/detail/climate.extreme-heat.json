@@ -1,0 +1,333 @@
+{
+  "designs": [
+    {
+      "analysis_modes": [
+        "descriptive"
+      ],
+      "binding_constraint": "Risk strata must be comparable across neighborhoods without suppressing small vulnerable groups.",
+      "content_hash": "sha256:1edd9ba1c655b300e653496f4cd133f2ee191e2c0681697574f8b6c1b08144e5",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Which neighborhoods combine sustained heat exposure, vulnerable populations, and weak cooling access?",
+      "decision_type": "diagnose",
+      "design_id": "scenario.climate.extreme-heat.heat-access-gaps.v1",
+      "design_order": 1,
+      "evidence_gate": "geographic-alignment",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "proposed"
+      ],
+      "family_id": "climate.extreme-heat",
+      "family_title": "Extreme heat exposure and response",
+      "horizon": "seasonal",
+      "implementation_status": "design-only",
+      "primary_outcome": "population in high-heat low-access areas",
+      "prohibited_claims": [
+        "Do not label an exposure-access screen as observed illness or a causal vulnerability score.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "neighborhood",
+      "suite": "climate-disaster-resilience",
+      "title": "Diagnose neighborhood heat exposure and cooling-access gaps"
+    },
+    {
+      "analysis_modes": [
+        "forecast"
+      ],
+      "binding_constraint": "Forecast workload cannot exceed the declared staffing and cooling-support service envelope without escalation.",
+      "content_hash": "sha256:e2080a3f1b13be04c358bbc1231b2ada9b0124ecee55bab6761c22062effd1d5",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "What daily cooling, welfare-check, and service workload range should operations prepare for during forecast heat?",
+      "decision_type": "forecast",
+      "design_id": "scenario.climate.extreme-heat.heat-service-demand.v1",
+      "design_order": 2,
+      "evidence_gate": "model-calibration",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "proposed"
+      ],
+      "family_id": "climate.extreme-heat",
+      "family_title": "Extreme heat exposure and response",
+      "horizon": "days",
+      "implementation_status": "design-only",
+      "primary_outcome": "unserved heat-response requests",
+      "prohibited_claims": [
+        "Do not report forecast requests as emergency visits, deaths, or verified unmet need.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "service-area",
+      "suite": "climate-disaster-resilience",
+      "title": "Forecast heat-triggered public-service demand"
+    },
+    {
+      "analysis_modes": [
+        "descriptive",
+        "optimization"
+      ],
+      "binding_constraint": "Selected heat-mitigation projects must fit the adopted capital and maintenance budget envelope.",
+      "content_hash": "sha256:460a615c862b11a6e01ba2d630457e83804871bbc1ddb0e8bd5a0cc619d22955",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Which heat-mitigation projects should enter the funded portfolio under cost, exposure, and equity constraints?",
+      "decision_type": "prioritize",
+      "design_id": "scenario.climate.extreme-heat.cooling-investments.v1",
+      "design_order": 3,
+      "evidence_gate": "cost-capacity",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed"
+      ],
+      "family_id": "climate.extreme-heat",
+      "family_title": "Extreme heat exposure and response",
+      "horizon": "multi-year",
+      "implementation_status": "design-only",
+      "primary_outcome": "residual person-days of extreme heat exposure",
+      "prohibited_claims": [
+        "Do not call modeled exposure reduction a measured temperature or health outcome.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "asset",
+      "suite": "climate-disaster-resilience",
+      "title": "Prioritize shade, cool-roof, and cooling retrofit investments"
+    },
+    {
+      "analysis_modes": [
+        "descriptive",
+        "optimization"
+      ],
+      "binding_constraint": "Each selected facility must satisfy occupancy, backup-power, staffing, and accessible-entry capacity.",
+      "content_hash": "sha256:d504a3dab11cb5a95cc6e16f70b264a6c961b080d76e26bebdb5f2bbf4509c39",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Where should seasonal cooling centers open to reduce travel barriers while respecting facility capacity?",
+      "decision_type": "site",
+      "design_id": "scenario.climate.extreme-heat.cooling-center-network.v1",
+      "design_order": 4,
+      "evidence_gate": "network-readiness",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed"
+      ],
+      "family_id": "climate.extreme-heat",
+      "family_title": "Extreme heat exposure and response",
+      "horizon": "seasonal",
+      "implementation_status": "design-only",
+      "primary_outcome": "high-risk residents beyond the cooling-access threshold",
+      "prohibited_claims": [
+        "Do not infer accessible cooling from straight-line distance or an unvalidated network.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "facility",
+      "suite": "climate-disaster-resilience",
+      "title": "Site an accessible cooling-center network"
+    },
+    {
+      "analysis_modes": [
+        "simulation",
+        "optimization"
+      ],
+      "binding_constraint": "No high-vulnerability service area may fall below the declared minimum response coverage.",
+      "content_hash": "sha256:9e855c482459fe8366c5c65d70a22dc9d3af7c57ddd25d7df64dddfcdce0a77a",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "How should limited outreach teams, transport slots, and cooling supplies be distributed during a heat emergency?",
+      "decision_type": "allocate",
+      "design_id": "scenario.climate.extreme-heat.heat-response-resources.v1",
+      "design_order": 5,
+      "evidence_gate": "equity-measurement",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "family_id": "climate.extreme-heat",
+      "family_title": "Extreme heat exposure and response",
+      "horizon": "days",
+      "implementation_status": "design-only",
+      "primary_outcome": "high-risk residents without assigned heat-response capacity",
+      "prohibited_claims": [
+        "Do not describe an optimized allocation as delivered services or reduced mortality.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "service-area",
+      "suite": "climate-disaster-resilience",
+      "title": "Allocate heat-response teams and cooling supplies"
+    },
+    {
+      "analysis_modes": [
+        "forecast",
+        "optimization"
+      ],
+      "binding_constraint": "Schedules must respect labor rest rules, facility opening constraints, and activation lead times.",
+      "content_hash": "sha256:9a5167e340b6ee34a0cac4c07790b2dd75c5ab03e45ee4d96cc86ea828abfcf9",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "When should staff shifts, cooling-center hours, and welfare checks expand across a multi-day heat event?",
+      "decision_type": "schedule",
+      "design_id": "scenario.climate.extreme-heat.heat-operations-calendar.v1",
+      "design_order": 6,
+      "evidence_gate": "temporal-alignment",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed"
+      ],
+      "family_id": "climate.extreme-heat",
+      "family_title": "Extreme heat exposure and response",
+      "horizon": "days",
+      "implementation_status": "design-only",
+      "primary_outcome": "hours of forecast demand above staffed capacity",
+      "prohibited_claims": [
+        "Do not treat a proposed roster as an implemented labor plan or verified response time.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "citywide",
+      "suite": "climate-disaster-resilience",
+      "title": "Schedule heat-response shifts and facility hours"
+    },
+    {
+      "analysis_modes": [
+        "forecast",
+        "simulation",
+        "optimization"
+      ],
+      "binding_constraint": "Critical cooling and welfare-check functions must remain above the declared minimum continuity level.",
+      "content_hash": "sha256:ab71f9c6b07d04e466da5895d08e6b90c6065eb00fe52e628230435e9caafc33",
+      "current_readiness": "reference-implemented",
+      "decision_question": "Which continuity portfolio remains feasible under prolonged heat, power loss, and service-demand surge assumptions?",
+      "decision_type": "stress-test",
+      "design_id": "scenario.climate.extreme-heat.compound-heat-continuity.v1",
+      "design_order": 7,
+      "evidence_gate": "source-lineage",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "existing_template_ref": "deep.climate.heat-service-surge.v1",
+      "family_id": "climate.extreme-heat",
+      "family_title": "Extreme heat exposure and response",
+      "horizon": "weeks",
+      "implementation_status": "reference-implemented",
+      "primary_outcome": "scenario-weighted hours of critical service interruption",
+      "prohibited_claims": [
+        "Do not claim that simulated outages caused observed requests or that a stress test predicts an actual disaster.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "citywide",
+      "suite": "climate-disaster-resilience",
+      "title": "Stress-test service continuity during compound heat"
+    },
+    {
+      "analysis_modes": [
+        "descriptive",
+        "causal"
+      ],
+      "binding_constraint": "Impact estimates must report heterogeneous effects for pre-specified vulnerability groups without post-treatment selection.",
+      "content_hash": "sha256:1f28edcf13b65dca50bde37e0aa08f32187e707a28f050763e5c0b602cff7066",
+      "current_readiness": "blocked-multiple-gates",
+      "decision_question": "Did the phased heat-adaptation program reduce indoor heat burden without widening service disparities?",
+      "decision_type": "evaluate",
+      "design_id": "scenario.climate.extreme-heat.cool-roof-impact.v1",
+      "design_order": 8,
+      "evidence_gate": "causal-identification",
+      "evidence_types": [
+        "causal",
+        "estimated",
+        "observed",
+        "proposed"
+      ],
+      "family_id": "climate.extreme-heat",
+      "family_title": "Extreme heat exposure and response",
+      "horizon": "multi-year",
+      "implementation_status": "design-only",
+      "primary_outcome": "change in measured indoor overheating hours",
+      "prohibited_claims": [
+        "Do not infer health effects from indoor temperature alone or call association causal without the identification gate.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "population-group",
+      "suite": "climate-disaster-resilience",
+      "title": "Evaluate a cool-roof and household-cooling program"
+    }
+  ],
+  "family": {
+    "affected_system": "urban heat-health and cooling-response system",
+    "claim_boundary": [
+      "Hazard observations and modeled exposure do not establish individual harm or causation.",
+      "Proposed adaptations are planning alternatives, not adopted policy or engineered designs.",
+      "A design-only record is not a city execution, validated forecast, or impact result."
+    ],
+    "common_source_roles": [
+      "climate-hazard",
+      "demographic-context",
+      "geographic-identity"
+    ],
+    "decision_owner": "chief resilience officer and public-health incident lead",
+    "decision_types": [
+      "diagnose",
+      "forecast",
+      "prioritize",
+      "site",
+      "allocate",
+      "schedule",
+      "stress-test",
+      "evaluate"
+    ],
+    "description": "Decision designs spanning heat-risk diagnosis, cooling access, operational response, adaptation investment, compound stress, and intervention evaluation.",
+    "design_refs": [
+      "scenario.climate.extreme-heat.heat-access-gaps.v1",
+      "scenario.climate.extreme-heat.heat-service-demand.v1",
+      "scenario.climate.extreme-heat.cooling-investments.v1",
+      "scenario.climate.extreme-heat.cooling-center-network.v1",
+      "scenario.climate.extreme-heat.heat-response-resources.v1",
+      "scenario.climate.extreme-heat.heat-operations-calendar.v1",
+      "scenario.climate.extreme-heat.compound-heat-continuity.v1",
+      "scenario.climate.extreme-heat.cool-roof-impact.v1"
+    ],
+    "design_signatures": [
+      "sha256:5aa9b517f4356eee6de34f345d4f20d0792352a4dae66379f3e72178791d0240",
+      "sha256:2a887f2efce290b0dac81c2204ccb431e1d904a018583490deb81ca5f4a0e342",
+      "sha256:e823416460130b3bfde10ee275413738aeaf561402c67eca043f6b6a53f4b31e",
+      "sha256:c67ba5740277612411f42824dac7fbecc60d23b72db149b76cb2276073ee5582",
+      "sha256:ab095537c3089d7cac11eaea322467b2ffdc090563993d33678f73cb5089260e",
+      "sha256:23fd784d81b2f7f4f1b5a64cc19a597c9c439c91e9ff5d7466674728d3f9721e",
+      "sha256:bce74fc2d2251aa5404702222246b8c71044f56ceddb4f8ee73529e1e19b3833",
+      "sha256:f8706f9c4c1295314043c519fad476aeb738acd468b67b9b6545fd5fc569c510"
+    ],
+    "family_id": "climate.extreme-heat",
+    "family_order": 1,
+    "schema_version": "1.0.0",
+    "suite": "climate-disaster-resilience",
+    "title": "Extreme heat exposure and response"
+  },
+  "library_claim_boundary": [
+    "The catalog contains 240 decision designs, not 240 city executions.",
+    "Exactly twelve designs map to existing Tier-D reference templates; 228 remain design-only.",
+    "A reference implementation can be an explicit negative release and does not imply impact.",
+    "No record claims a city binding, new method, deployment, adoption, or real-user outcome.",
+    "Future execution requires source binding, gate passage, and domain, legal, community, and operational review."
+  ]
+}

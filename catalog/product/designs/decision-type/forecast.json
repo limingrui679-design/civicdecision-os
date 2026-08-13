@@ -1,0 +1,972 @@
+{
+  "claim_boundary": "Design records are not city executions, deployments, adoptions, or impacts.",
+  "items": [
+    {
+      "analysis_modes": [
+        "forecast"
+      ],
+      "binding_constraint": "Forecast workload cannot exceed the declared staffing and cooling-support service envelope without escalation.",
+      "content_hash": "sha256:e2080a3f1b13be04c358bbc1231b2ada9b0124ecee55bab6761c22062effd1d5",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "What daily cooling, welfare-check, and service workload range should operations prepare for during forecast heat?",
+      "decision_type": "forecast",
+      "design_id": "scenario.climate.extreme-heat.heat-service-demand.v1",
+      "design_order": 2,
+      "evidence_gate": "model-calibration",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "proposed"
+      ],
+      "family_id": "climate.extreme-heat",
+      "family_title": "Extreme heat exposure and response",
+      "horizon": "days",
+      "implementation_status": "design-only",
+      "primary_outcome": "unserved heat-response requests",
+      "prohibited_claims": [
+        "Do not report forecast requests as emergency visits, deaths, or verified unmet need.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "service-area",
+      "suite": "climate-disaster-resilience",
+      "title": "Forecast heat-triggered public-service demand"
+    },
+    {
+      "analysis_modes": [
+        "forecast"
+      ],
+      "binding_constraint": "The forecast must distinguish routine service calls from verified emergency response tasks.",
+      "content_hash": "sha256:06511618790a7150693a59d3da461d155da0556483039f011b8371f1cd2e495e",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "What range of pumping, road-closure, and resident-assistance demand follows the forecast rainfall envelope?",
+      "decision_type": "forecast",
+      "design_id": "scenario.climate.flood-stormwater.runoff-response-demand.v1",
+      "design_order": 10,
+      "evidence_gate": "model-calibration",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "proposed"
+      ],
+      "family_id": "climate.flood-stormwater",
+      "family_title": "Flood and stormwater resilience",
+      "horizon": "days",
+      "implementation_status": "design-only",
+      "primary_outcome": "response tasks above available event capacity",
+      "prohibited_claims": [
+        "Do not present forecast operational demand as predicted flood depth or property damage.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "service-area",
+      "suite": "climate-disaster-resilience",
+      "title": "Forecast rainfall-runoff response demand"
+    },
+    {
+      "analysis_modes": [
+        "forecast"
+      ],
+      "binding_constraint": "Activation forecasts must expose uncertainty and cannot exceed the spatial resolution of validated inputs.",
+      "content_hash": "sha256:bec11155058e57e528b7ee3b2339a45ad0c9850d3557d32297b2a876517cf5c7",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "What probabilistic smoke and assistance-demand envelope should local operations prepare for?",
+      "decision_type": "forecast",
+      "design_id": "scenario.climate.wildfire-smoke.smoke-episode-load.v1",
+      "design_order": 18,
+      "evidence_gate": "model-calibration",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "proposed"
+      ],
+      "family_id": "climate.wildfire-smoke",
+      "family_title": "Wildfire smoke and air-quality resilience",
+      "horizon": "days",
+      "implementation_status": "design-only",
+      "primary_outcome": "service demand above clean-air response capacity",
+      "prohibited_claims": [
+        "Do not present regional smoke forecasts as measured neighborhood exposure.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "citywide",
+      "suite": "climate-disaster-resilience",
+      "title": "Forecast smoke episode intensity and service load"
+    },
+    {
+      "analysis_modes": [
+        "forecast",
+        "simulation"
+      ],
+      "binding_constraint": "Forecast operations must preserve the adopted emergency storage and environmental-flow reserve.",
+      "content_hash": "sha256:d0a3154a41d75c27296163024b24430e750111feb174ea49373c97f0527bee2f",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "What seasonal probability distribution of storage and shortage follows climate, demand, and operating assumptions?",
+      "decision_type": "forecast",
+      "design_id": "scenario.climate.drought-water.drought-supply-demand.v1",
+      "design_order": 26,
+      "evidence_gate": "model-calibration",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "proposed",
+        "simulated"
+      ],
+      "family_id": "climate.drought-water",
+      "family_title": "Drought and urban water security",
+      "horizon": "seasonal",
+      "implementation_status": "design-only",
+      "primary_outcome": "expected potable-water shortage volume",
+      "prohibited_claims": [
+        "Do not call a climate-conditioned water balance a deterministic shortage prediction.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "citywide",
+      "suite": "climate-disaster-resilience",
+      "title": "Forecast drought supply-demand balance"
+    },
+    {
+      "analysis_modes": [
+        "forecast",
+        "simulation"
+      ],
+      "binding_constraint": "Operational forecasts must retain uncertainty from storm track, tide, protection state, and damage translation.",
+      "content_hash": "sha256:d1ba8609e4d4d7f27cd5c33567b8c774d3b2d8e84ef2315c87741592c0786e17",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "What probabilistic surge, access, outage, and response-demand envelope should operations use?",
+      "decision_type": "forecast",
+      "design_id": "scenario.climate.coastal-storms.storm-surge-operations.v1",
+      "design_order": 34,
+      "evidence_gate": "model-calibration",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "proposed",
+        "simulated"
+      ],
+      "family_id": "climate.coastal-storms",
+      "family_title": "Coastal storms and sea-level adaptation",
+      "horizon": "days",
+      "implementation_status": "design-only",
+      "primary_outcome": "critical service demand above operable capacity",
+      "prohibited_claims": [
+        "Do not present forecast inundation or outage as an observed impact.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "citywide",
+      "suite": "climate-disaster-resilience",
+      "title": "Forecast coastal storm operational impacts"
+    },
+    {
+      "analysis_modes": [
+        "forecast"
+      ],
+      "binding_constraint": "The transit reliability and passenger continuity forecast must respect declared validated operational capacity and forecast uncertainty.",
+      "content_hash": "sha256:75e5797f2686b49463b2c5e1f2308168171b3a3971eb733767cf220013c4d1eb",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "What route- and time-specific crowding and delay envelope should dispatch prepare for?",
+      "decision_type": "forecast",
+      "design_id": "scenario.mobility.transit-reliability.crowding-delay-load.v1",
+      "design_order": 42,
+      "evidence_gate": "model-calibration",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "proposed"
+      ],
+      "family_id": "mobility.transit-reliability",
+      "family_title": "Transit reliability and passenger continuity",
+      "horizon": "weeks",
+      "implementation_status": "design-only",
+      "primary_outcome": "passenger-minutes above crowding and delay thresholds",
+      "prohibited_claims": [
+        "Do not present forecast passenger loads or delays as observed service outcomes.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "corridor",
+      "suite": "mobility-accessibility-operations",
+      "title": "Forecast transit crowding and delay load"
+    },
+    {
+      "analysis_modes": [
+        "forecast"
+      ],
+      "binding_constraint": "The pedestrian safety and universal accessibility forecast must respect declared validated operational capacity and forecast uncertainty.",
+      "content_hash": "sha256:e54a8696e30cd0971ba59ec79db92714c5149f2edce178a8c5d8da1f44a21a72",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "What corridor-time risk envelope should guide temporary safety and inspection readiness?",
+      "decision_type": "forecast",
+      "design_id": "scenario.mobility.pedestrian-safety.pedestrian-conflict-risk.v1",
+      "design_order": 50,
+      "evidence_gate": "model-calibration",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "proposed"
+      ],
+      "family_id": "mobility.pedestrian-safety",
+      "family_title": "Pedestrian safety and universal accessibility",
+      "horizon": "weeks",
+      "implementation_status": "design-only",
+      "primary_outcome": "high-risk pedestrian-hours without preventive coverage",
+      "prohibited_claims": [
+        "Do not call predicted conflicts crashes or infer exposure from population alone.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "corridor",
+      "suite": "mobility-accessibility-operations",
+      "title": "Forecast pedestrian conflict and barrier demand"
+    },
+    {
+      "analysis_modes": [
+        "forecast"
+      ],
+      "binding_constraint": "The urban freight and curb operations forecast must respect declared validated operational capacity and forecast uncertainty.",
+      "content_hash": "sha256:61f680f2d708846fccd19b23042a499c4a80cb9ece30f2aa5037618254def24b",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "What block-time loading and occupancy range should dynamic curb operations prepare for?",
+      "decision_type": "forecast",
+      "design_id": "scenario.mobility.freight-curb.loading-demand.v1",
+      "design_order": 58,
+      "evidence_gate": "model-calibration",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "proposed"
+      ],
+      "family_id": "mobility.freight-curb",
+      "family_title": "Urban freight and curb operations",
+      "horizon": "weeks",
+      "implementation_status": "design-only",
+      "primary_outcome": "delivery-minutes without legal loading capacity",
+      "prohibited_claims": [
+        "Do not call forecast occupancy observed obstruction or illegal behavior.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "corridor",
+      "suite": "mobility-accessibility-operations",
+      "title": "Forecast loading demand and curb occupancy"
+    },
+    {
+      "analysis_modes": [
+        "forecast"
+      ],
+      "binding_constraint": "The evacuation and emergency mobility forecast must respect declared validated operational capacity and forecast uncertainty.",
+      "content_hash": "sha256:273223a6fde1d0106cf5efc70c8069c165254b560840b1ce3579aa979d422d89",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "What departure, assisted-transport, congestion, and clearance-time range follows the hazard envelope?",
+      "decision_type": "forecast",
+      "design_id": "scenario.mobility.emergency-mobility.clearance-demand.v1",
+      "design_order": 66,
+      "evidence_gate": "model-calibration",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "proposed"
+      ],
+      "family_id": "mobility.emergency-mobility",
+      "family_title": "Evacuation and emergency mobility",
+      "horizon": "weeks",
+      "implementation_status": "design-only",
+      "primary_outcome": "people remaining in hazard areas after safe clearance time",
+      "prohibited_claims": [
+        "Do not present behavioral assumptions or simulated clearance as actual evacuation.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "network",
+      "suite": "mobility-accessibility-operations",
+      "title": "Forecast evacuation demand and clearance time"
+    },
+    {
+      "analysis_modes": [
+        "forecast"
+      ],
+      "binding_constraint": "The active mobility network and micromobility forecast must respect declared validated operational capacity and forecast uncertainty.",
+      "content_hash": "sha256:f4b000b1275a42a4e497d81c743309c68848c9257551c3be9ab45b7a9558f896",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "What station, corridor, and time-specific trip and vehicle-availability range should operations prepare for?",
+      "decision_type": "forecast",
+      "design_id": "scenario.mobility.active-mobility.active-trip-demand.v1",
+      "design_order": 74,
+      "evidence_gate": "model-calibration",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "proposed"
+      ],
+      "family_id": "mobility.active-mobility",
+      "family_title": "Active mobility network and micromobility",
+      "horizon": "weeks",
+      "implementation_status": "design-only",
+      "primary_outcome": "trip requests without feasible vehicle or route capacity",
+      "prohibited_claims": [
+        "Do not treat shared-platform demand as total walking or cycling demand.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "network",
+      "suite": "mobility-accessibility-operations",
+      "title": "Forecast active and shared-mobility demand"
+    },
+    {
+      "analysis_modes": [
+        "forecast"
+      ],
+      "binding_constraint": "The heat-health surveillance and prevention forecast must respect declared validated operational capacity and forecast uncertainty.",
+      "content_hash": "sha256:85dfd602c32496feb933d05093ac1e14b36079bf23f8b2c659a5448eaa30d937",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "What probabilistic emergency, call-center, and outreach workload should health operations prepare for?",
+      "decision_type": "forecast",
+      "design_id": "scenario.health.heat-health.heat-care-demand.v1",
+      "design_order": 82,
+      "evidence_gate": "model-calibration",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "proposed"
+      ],
+      "family_id": "health.heat-health",
+      "family_title": "Heat-health surveillance and prevention",
+      "horizon": "weeks",
+      "implementation_status": "design-only",
+      "primary_outcome": "health-response demand above staffed capacity",
+      "prohibited_claims": [
+        "Do not present forecast encounters as illnesses, admissions, or deaths.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "service-area",
+      "suite": "population-health-environmental-exposure",
+      "title": "Forecast heat-related care and outreach demand"
+    },
+    {
+      "analysis_modes": [
+        "forecast"
+      ],
+      "binding_constraint": "The air-quality exposure and respiratory health forecast must respect declared validated operational capacity and forecast uncertainty.",
+      "content_hash": "sha256:fdacd5d7b33ba49adad9446f7de0146e2c1471e82a8666ccc2efa1d3cc4183a2",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "What pollutant and respiratory-service workload envelope should public-health operations prepare for?",
+      "decision_type": "forecast",
+      "design_id": "scenario.health.air-quality.respiratory-demand.v1",
+      "design_order": 90,
+      "evidence_gate": "model-calibration",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "proposed"
+      ],
+      "family_id": "health.air-quality",
+      "family_title": "Air-quality exposure and respiratory health",
+      "horizon": "weeks",
+      "implementation_status": "design-only",
+      "primary_outcome": "respiratory response demand above available capacity",
+      "prohibited_claims": [
+        "Do not call forecast service demand diagnosed disease or pollutant-attributable illness.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "service-area",
+      "suite": "population-health-environmental-exposure",
+      "title": "Forecast air-quality alerts and respiratory service demand"
+    },
+    {
+      "analysis_modes": [
+        "forecast"
+      ],
+      "binding_constraint": "The infectious-disease public-health operations forecast must respect declared validated operational capacity and forecast uncertainty.",
+      "content_hash": "sha256:a527928311220c7d60df6085c0cdd1f0bea5fb9d0b7d3bd1cc772dde563a3148",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "What probabilistic clinic, testing, laboratory, hotline, and bed demand should operations prepare for?",
+      "decision_type": "forecast",
+      "design_id": "scenario.health.infectious-operations.care-testing-demand.v1",
+      "design_order": 98,
+      "evidence_gate": "model-calibration",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "proposed"
+      ],
+      "family_id": "health.infectious-operations",
+      "family_title": "Infectious-disease public-health operations",
+      "horizon": "weeks",
+      "implementation_status": "design-only",
+      "primary_outcome": "care and testing demand above staffed capacity",
+      "prohibited_claims": [
+        "Do not call forecast workload infections, admissions, or transmission.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "service-area",
+      "suite": "population-health-environmental-exposure",
+      "title": "Forecast infectious-disease care and testing demand"
+    },
+    {
+      "analysis_modes": [
+        "forecast"
+      ],
+      "binding_constraint": "The food access and environmental health forecast must respect declared validated operational capacity and forecast uncertainty.",
+      "content_hash": "sha256:98b5d7bd25db1c5aad9acbb0727cfdba72b28dd858cd92f33399c1808c6c17c0",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "What seasonal inspection, complaint, market-disruption, and assistance workload should operations prepare for?",
+      "decision_type": "forecast",
+      "design_id": "scenario.health.food-environment.inspection-assistance-demand.v1",
+      "design_order": 106,
+      "evidence_gate": "model-calibration",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "proposed"
+      ],
+      "family_id": "health.food-environment",
+      "family_title": "Food access and environmental health",
+      "horizon": "weeks",
+      "implementation_status": "design-only",
+      "primary_outcome": "priority service demand above staffed capacity",
+      "prohibited_claims": [
+        "Do not call forecast cases verified violations, illness, or food insecurity.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "service-area",
+      "suite": "population-health-environmental-exposure",
+      "title": "Forecast inspection and food-assistance service demand"
+    },
+    {
+      "analysis_modes": [
+        "forecast"
+      ],
+      "binding_constraint": "The housing habitability and code operations forecast must respect declared validated operational capacity and forecast uncertainty.",
+      "content_hash": "sha256:4c3a46dfb8856f62e28d881c9fba8ec03950723adb0c77b0a068a2298f32d186",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "What seasonal inspection, follow-up, relocation, and emergency-repair workload should operations prepare for?",
+      "decision_type": "forecast",
+      "design_id": "scenario.housing.habitability-code.inspection-repair-demand.v1",
+      "design_order": 114,
+      "evidence_gate": "model-calibration",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "proposed"
+      ],
+      "family_id": "housing.habitability-code",
+      "family_title": "Housing habitability and code operations",
+      "horizon": "weeks",
+      "implementation_status": "design-only",
+      "primary_outcome": "priority cases above verified response capacity",
+      "prohibited_claims": [
+        "Do not call forecast cases verified violations, displaced households, or completed repairs.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "service-area",
+      "suite": "housing-land-use-regeneration",
+      "title": "Forecast housing inspection and emergency-repair demand"
+    },
+    {
+      "analysis_modes": [
+        "forecast"
+      ],
+      "binding_constraint": "The homelessness prevention and housing stability forecast must respect declared validated operational capacity and forecast uncertainty.",
+      "content_hash": "sha256:06911aa4b44d6cd0ae627df6bc1336c8bd5fff024b61bdb65aebe10690d651c6",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "What range of legal, rental, diversion, outreach, and shelter demand should the system prepare for?",
+      "decision_type": "forecast",
+      "design_id": "scenario.housing.homelessness-prevention.prevention-service-demand.v1",
+      "design_order": 122,
+      "evidence_gate": "model-calibration",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "proposed"
+      ],
+      "family_id": "housing.homelessness-prevention",
+      "family_title": "Homelessness prevention and housing stability",
+      "horizon": "weeks",
+      "implementation_status": "design-only",
+      "primary_outcome": "priority household demand above prevention capacity",
+      "prohibited_claims": [
+        "Do not call forecast service demand evictions, homelessness entries, or individual risk.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "service-area",
+      "suite": "housing-land-use-regeneration",
+      "title": "Forecast housing-stability service demand"
+    },
+    {
+      "analysis_modes": [
+        "forecast"
+      ],
+      "binding_constraint": "The affordable housing siting and preservation forecast must respect declared validated operational capacity and forecast uncertainty.",
+      "content_hash": "sha256:ddeb87ff6d89320e611f49b9f97501434bc6933c9b4a966f4e514c1884d0acdc",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "What probabilistic completion, expiry, cost, and unit-loss range should housing operations plan around?",
+      "decision_type": "forecast",
+      "design_id": "scenario.housing.affordable-supply.affordable-pipeline.v1",
+      "design_order": 130,
+      "evidence_gate": "model-calibration",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "proposed"
+      ],
+      "family_id": "housing.affordable-supply",
+      "family_title": "Affordable housing siting and preservation",
+      "horizon": "weeks",
+      "implementation_status": "design-only",
+      "primary_outcome": "net affordable homes below adopted supply targets",
+      "prohibited_claims": [
+        "Do not count proposed, permitted, or financed units as completed occupied homes.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "citywide",
+      "suite": "housing-land-use-regeneration",
+      "title": "Forecast affordable-housing pipeline and preservation need"
+    },
+    {
+      "analysis_modes": [
+        "forecast"
+      ],
+      "binding_constraint": "The land use, regeneration, and neighborhood change forecast must respect declared validated operational capacity and forecast uncertainty.",
+      "content_hash": "sha256:59dd88f0152c6bc111f7af271b7b3aebeb5eecfdeb953d1ed028ce294e80d3d8",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "What range of land use, prices, development, tenure, and business change follows each policy scenario?",
+      "decision_type": "forecast",
+      "design_id": "scenario.housing.land-use-regeneration.development-displacement.v1",
+      "design_order": 138,
+      "evidence_gate": "model-calibration",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "proposed"
+      ],
+      "family_id": "housing.land-use-regeneration",
+      "family_title": "Land use, regeneration, and neighborhood change",
+      "horizon": "weeks",
+      "implementation_status": "design-only",
+      "primary_outcome": "residents and businesses exposed to modeled involuntary displacement pressure",
+      "prohibited_claims": [
+        "Do not present market scenarios as inevitable development or individual displacement predictions.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "neighborhood",
+      "suite": "housing-land-use-regeneration",
+      "title": "Forecast development, affordability, and displacement pressure"
+    },
+    {
+      "analysis_modes": [
+        "forecast"
+      ],
+      "binding_constraint": "The 311 and public-service demand operations forecast must respect declared validated operational capacity and forecast uncertainty.",
+      "content_hash": "sha256:27e9df2aea3d91a86fe68b3a4346e9a50ea51772c661f5822e61b78eec23b553",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "What category, channel, area, and time-specific demand range should service operations prepare for?",
+      "decision_type": "forecast",
+      "design_id": "scenario.public-service.demand.service-workload.v1",
+      "design_order": 146,
+      "evidence_gate": "model-calibration",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "proposed"
+      ],
+      "family_id": "public-service.demand",
+      "family_title": "311 and public-service demand operations",
+      "horizon": "weeks",
+      "implementation_status": "design-only",
+      "primary_outcome": "request workload above verified handling capacity",
+      "prohibited_claims": [
+        "Do not present forecast requests as incidents, verified need, or service failures.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "service-area",
+      "suite": "public-service-operations",
+      "title": "Forecast multichannel public-service workload"
+    },
+    {
+      "analysis_modes": [
+        "forecast"
+      ],
+      "binding_constraint": "The sanitation, waste, and street cleanliness forecast must respect declared validated operational capacity and forecast uncertainty.",
+      "content_hash": "sha256:da12a4f4761cb4917c9cdc32623b5684641111e4f84952e70961444d7459d99e",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "What route-time volume, contamination, cleaning, and exception workload should operations prepare for?",
+      "decision_type": "forecast",
+      "design_id": "scenario.public-service.sanitation.waste-service-demand.v1",
+      "design_order": 154,
+      "evidence_gate": "model-calibration",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "proposed"
+      ],
+      "family_id": "public-service.sanitation",
+      "family_title": "Sanitation, waste, and street cleanliness",
+      "horizon": "weeks",
+      "implementation_status": "design-only",
+      "primary_outcome": "service workload above route and facility capacity",
+      "prohibited_claims": [
+        "Do not present forecast workload as observed tonnage, dumping, contamination, or missed service.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "network",
+      "suite": "public-service-operations",
+      "title": "Forecast waste, recycling, and cleaning workload"
+    },
+    {
+      "analysis_modes": [
+        "forecast"
+      ],
+      "binding_constraint": "The emergency response readiness and allocation forecast must respect declared validated operational capacity and forecast uncertainty.",
+      "content_hash": "sha256:e5c37a43d0de20c5ea9470e6309a6de9fce755109446b539cc2e11f07efb554c",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "What place-time priority call, unit-hour, and mutual-aid demand range should readiness planning use?",
+      "decision_type": "forecast",
+      "design_id": "scenario.public-service.emergency-response.incident-unit-demand.v1",
+      "design_order": 162,
+      "evidence_gate": "model-calibration",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "proposed"
+      ],
+      "family_id": "public-service.emergency-response",
+      "family_title": "Emergency response readiness and allocation",
+      "horizon": "weeks",
+      "implementation_status": "design-only",
+      "primary_outcome": "priority unit-hours above deployable capacity",
+      "prohibited_claims": [
+        "Do not present forecast calls as incidents, casualties, or verified emergency need.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "service-area",
+      "suite": "public-service-operations",
+      "title": "Forecast emergency call and unit demand"
+    },
+    {
+      "analysis_modes": [
+        "forecast"
+      ],
+      "binding_constraint": "The digital public access and administrative service delivery forecast must respect declared validated operational capacity and forecast uncertainty.",
+      "content_hash": "sha256:dafdca1813b467fb178aec9d74e1bb4f506f41e918783feb0c60499789d87d1a",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "What service, language, channel, device, and time-specific demand should support operations prepare for?",
+      "decision_type": "forecast",
+      "design_id": "scenario.public-service.digital-access.channel-support-demand.v1",
+      "design_order": 170,
+      "evidence_gate": "model-calibration",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "proposed"
+      ],
+      "family_id": "public-service.digital-access",
+      "family_title": "Digital public access and administrative service delivery",
+      "horizon": "weeks",
+      "implementation_status": "design-only",
+      "primary_outcome": "eligible journey demand above qualified channel capacity",
+      "prohibited_claims": [
+        "Do not call forecast contacts eligible applicants, completed services, or verified unmet need.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "service-area",
+      "suite": "public-service-operations",
+      "title": "Forecast digital, phone, and in-person support demand"
+    },
+    {
+      "analysis_modes": [
+        "forecast"
+      ],
+      "binding_constraint": "The road and bridge asset management forecast must respect declared validated operational capacity and forecast uncertainty.",
+      "content_hash": "sha256:0fef9c0bede2eddddb295fa8292b07e890c56918326eec3e95559f2e51f3c300",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "What probabilistic condition, defect, restriction, and maintenance workload should asset managers prepare for?",
+      "decision_type": "forecast",
+      "design_id": "scenario.infrastructure.roads-bridges.asset-deterioration.v1",
+      "design_order": 178,
+      "evidence_gate": "model-calibration",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "proposed"
+      ],
+      "family_id": "infrastructure.roads-bridges",
+      "family_title": "Road and bridge asset management",
+      "horizon": "weeks",
+      "implementation_status": "design-only",
+      "primary_outcome": "lane- and asset-days below condition targets",
+      "prohibited_claims": [
+        "Do not present modeled deterioration as an inspection, failure, closure, or safety prediction.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "asset",
+      "suite": "infrastructure-finance-asset-risk",
+      "title": "Forecast road and bridge deterioration and work demand"
+    },
+    {
+      "analysis_modes": [
+        "forecast"
+      ],
+      "binding_constraint": "The water and wastewater infrastructure forecast must respect declared validated operational capacity and forecast uncertainty.",
+      "content_hash": "sha256:d4aff501e5af399e89d5cada505b5523ca94b6c7a10c9ba9d310526bf59ce424",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "What probabilistic flow, quality, break, overflow, and treatment-load range should operations prepare for?",
+      "decision_type": "forecast",
+      "design_id": "scenario.infrastructure.water-wastewater.utility-demand-failures.v1",
+      "design_order": 186,
+      "evidence_gate": "model-calibration",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "proposed"
+      ],
+      "family_id": "infrastructure.water-wastewater",
+      "family_title": "Water and wastewater infrastructure",
+      "horizon": "weeks",
+      "implementation_status": "design-only",
+      "primary_outcome": "service demand and failure load above operable capacity",
+      "prohibited_claims": [
+        "Do not present modeled breaks, quality events, or overflows as observed incidents.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "network",
+      "suite": "infrastructure-finance-asset-risk",
+      "title": "Forecast utility demand, failures, and treatment load"
+    },
+    {
+      "analysis_modes": [
+        "forecast"
+      ],
+      "binding_constraint": "The municipal energy and building decarbonization forecast must respect declared validated operational capacity and forecast uncertainty.",
+      "content_hash": "sha256:758d5593df2d20c5b4511a93cd33cd5ec73f5b19aa35691ca63afc9015e95357",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "What interval of electric, thermal, peak, cost, and emissions load should portfolio operations prepare for?",
+      "decision_type": "forecast",
+      "design_id": "scenario.infrastructure.energy-buildings.building-load-emissions.v1",
+      "design_order": 194,
+      "evidence_gate": "model-calibration",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "proposed"
+      ],
+      "family_id": "infrastructure.energy-buildings",
+      "family_title": "Municipal energy and building decarbonization",
+      "horizon": "weeks",
+      "implementation_status": "design-only",
+      "primary_outcome": "energy demand above contracted and resilient capacity",
+      "prohibited_claims": [
+        "Do not present forecast energy, cost, or emissions as metered performance.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "asset",
+      "suite": "infrastructure-finance-asset-risk",
+      "title": "Forecast municipal building load, cost, and emissions"
+    },
+    {
+      "analysis_modes": [
+        "forecast"
+      ],
+      "binding_constraint": "The capital portfolio and municipal finance forecast must respect declared validated operational capacity and forecast uncertainty.",
+      "content_hash": "sha256:c5ca3eee0cccd673067cdaed5fd5e9d136e8790a83f562830dbc8462f6fdf1b0",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "What range of costs, revenues, grants, debt service, cash flow, and completion should planning use?",
+      "decision_type": "forecast",
+      "design_id": "scenario.infrastructure.capital-finance.capital-fiscal-outlook.v1",
+      "design_order": 202,
+      "evidence_gate": "model-calibration",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "proposed"
+      ],
+      "family_id": "infrastructure.capital-finance",
+      "family_title": "Capital portfolio and municipal finance",
+      "horizon": "weeks",
+      "implementation_status": "design-only",
+      "primary_outcome": "capital obligation above affordable deliverable capacity",
+      "prohibited_claims": [
+        "Do not present a fiscal scenario as an audited forecast, rating opinion, or promised project completion.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "citywide",
+      "suite": "infrastructure-finance-asset-risk",
+      "title": "Forecast capital cost, revenue, debt, and delivery capacity"
+    },
+    {
+      "analysis_modes": [
+        "forecast"
+      ],
+      "binding_constraint": "The distributional public-service equity forecast must respect declared validated operational capacity and forecast uncertainty.",
+      "content_hash": "sha256:ad45414fa3a92e924b7f79301d63d3d1a163581427af155eefa8fa2c44486a1f",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "What group- and area-specific eligible need and service-capacity range should planning prepare for?",
+      "decision_type": "forecast",
+      "design_id": "scenario.equity.distributional-service.equitable-service-need.v1",
+      "design_order": 210,
+      "evidence_gate": "model-calibration",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "proposed"
+      ],
+      "family_id": "equity.distributional-service",
+      "family_title": "Distributional public-service equity",
+      "horizon": "weeks",
+      "implementation_status": "design-only",
+      "primary_outcome": "eligible need above minimum service capacity",
+      "prohibited_claims": [
+        "Do not call forecast eligible need individual demand, behavior, entitlement, or verified unmet service.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "population-group",
+      "suite": "behavioral-policy-equity",
+      "title": "Forecast service need and capacity by population group"
+    },
+    {
+      "analysis_modes": [
+        "forecast"
+      ],
+      "binding_constraint": "The public participation and risk communication forecast must respect declared validated operational capacity and forecast uncertainty.",
+      "content_hash": "sha256:29314d589f08fc6a06a5eddab88023b893c04878fe06472aecb6f3e05a82078f",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "What issue, language, channel, time, and accessibility demand should engagement operations prepare for?",
+      "decision_type": "forecast",
+      "design_id": "scenario.equity.participation-communication.engagement-demand.v1",
+      "design_order": 218,
+      "evidence_gate": "model-calibration",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "proposed"
+      ],
+      "family_id": "equity.participation-communication",
+      "family_title": "Public participation and risk communication",
+      "horizon": "weeks",
+      "implementation_status": "design-only",
+      "primary_outcome": "affected participation demand above usable channel capacity",
+      "prohibited_claims": [
+        "Do not call forecast engagement actual participation, agreement, trust, or public sentiment.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "population-group",
+      "suite": "behavioral-policy-equity",
+      "title": "Forecast participation and communication demand"
+    },
+    {
+      "analysis_modes": [
+        "forecast"
+      ],
+      "binding_constraint": "The compliance, incentives, and behavioral policy forecast must respect declared validated operational capacity and forecast uncertainty.",
+      "content_hash": "sha256:6a0b4071cec1b0938ed373b160d5a307b475e098a8b2587d35e97e4d6c73e01a",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "What rule, group, channel, season, and deadline-specific workload should operations prepare for?",
+      "decision_type": "forecast",
+      "design_id": "scenario.equity.compliance-incentives.assistance-inspection-demand.v1",
+      "design_order": 226,
+      "evidence_gate": "model-calibration",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "proposed"
+      ],
+      "family_id": "equity.compliance-incentives",
+      "family_title": "Compliance, incentives, and behavioral policy",
+      "horizon": "weeks",
+      "implementation_status": "design-only",
+      "primary_outcome": "priority assistance and inspection demand above capacity",
+      "prohibited_claims": [
+        "Do not call forecast cases violations, intentional behavior, or enforcement outcomes.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "service-area",
+      "suite": "behavioral-policy-equity",
+      "title": "Forecast compliance assistance and inspection demand"
+    },
+    {
+      "analysis_modes": [
+        "forecast"
+      ],
+      "binding_constraint": "The algorithmic decision support and governance forecast must respect declared validated operational capacity and forecast uncertainty.",
+      "content_hash": "sha256:1ac79dcf47a87f2e57b51556be581fd1489eada34d4ea1db2603f5d43ff05e83",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "What decision, override, appeal, incident, drift, and audit workload should governance capacity prepare for?",
+      "decision_type": "forecast",
+      "design_id": "scenario.equity.algorithmic-governance.review-appeal-demand.v1",
+      "design_order": 234,
+      "evidence_gate": "model-calibration",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "proposed"
+      ],
+      "family_id": "equity.algorithmic-governance",
+      "family_title": "Algorithmic decision support and governance",
+      "horizon": "weeks",
+      "implementation_status": "design-only",
+      "primary_outcome": "high-impact decisions above qualified review capacity",
+      "prohibited_claims": [
+        "Do not call forecast reviews errors, violations, harms, discrimination, or appeals filed.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "service-area",
+      "suite": "behavioral-policy-equity",
+      "title": "Forecast human review, recourse, and audit demand"
+    }
+  ],
+  "kind": "scenario-designs.decision-type.forecast",
+  "record_count": 30,
+  "schema_version": "1.0.0"
+}

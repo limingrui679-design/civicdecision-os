@@ -1,0 +1,165 @@
+{
+  "affected_system": "multimodal evacuation, assisted transport, and emergency access network",
+  "alternatives": [
+    "screen feasible locations against the largest access gaps for accessible evacuation pickup and transfer locations",
+    "co-optimize distributed and high-capacity locations for accessible evacuation pickup and transfer locations",
+    "pair multi-hazard capacitated pickup location-allocation with an explicit stop, review, and escalation rule"
+  ],
+  "analysis_modes": [
+    "simulation",
+    "optimization"
+  ],
+  "assumptions": [
+    "Evacuation demand, assistance eligibility, vehicle capacity, route state, and hazard timing are versioned.",
+    "Compliance, household departure, and network degradation remain observed inputs or bounded scenarios.",
+    "All alternatives, capacities, costs, effects, thresholds, and failure scenarios are proposed until bound to evidence."
+  ],
+  "baseline": "retain only existing approved locations for accessible evacuation pickup and transfer locations.",
+  "city_bindings": [],
+  "constraints": [
+    {
+      "binding": true,
+      "constraint_id": "scenario.mobility.emergency-mobility.pickup-transfer-points.v1.constraint.binding",
+      "description": "The evacuation and emergency mobility site must respect declared land control, accessibility, permitting, safety, and operating feasibility.",
+      "hard": true,
+      "kind": "regulatory",
+      "required_source_roles": [
+        "climate-hazard",
+        "equity-attribute",
+        "facility-inventory",
+        "geographic-identity",
+        "operating-capacity",
+        "transport-network"
+      ]
+    },
+    {
+      "binding": false,
+      "constraint_id": "scenario.mobility.emergency-mobility.pickup-transfer-points.v1.constraint.evidence-scope",
+      "description": "Every released metric must retain evidence type, source lineage, geography, time, assumptions, and uncertainty.",
+      "hard": true,
+      "kind": "technical",
+      "required_source_roles": [
+        "climate-hazard"
+      ]
+    },
+    {
+      "binding": false,
+      "constraint_id": "scenario.mobility.emergency-mobility.pickup-transfer-points.v1.constraint.decision-authority",
+      "description": "No analytical output may bypass lawful authority, accountable human review, or an applicable appeal process.",
+      "hard": true,
+      "kind": "regulatory",
+      "required_source_roles": [
+        "climate-hazard"
+      ]
+    }
+  ],
+  "current_readiness": "blocked-missing-source",
+  "decision_cadence": "recompiled at each planning cycle and after material evidence change",
+  "decision_owner": "emergency transportation coordinator and incident commander",
+  "decision_question": "Where should pickup, medical transfer, and staging points operate outside hazard and access failures?",
+  "decision_type": "site",
+  "design_id": "scenario.mobility.emergency-mobility.pickup-transfer-points.v1",
+  "design_order": 68,
+  "design_signature": "sha256:8207358a1a03a8be66cb28c9bac622bab1597a0ceafe03f947ceeec01126c043",
+  "evidence_requirements": [
+    "estimated",
+    "observed",
+    "optimized",
+    "proposed",
+    "simulated"
+  ],
+  "family_id": "mobility.emergency-mobility",
+  "family_title": "Evacuation and emergency mobility",
+  "horizon": "multi-year",
+  "implementation_status": "design-only",
+  "independence_key": {
+    "binding_constraint": "The evacuation and emergency mobility site must respect declared land control, accessibility, permitting, safety, and operating feasibility.",
+    "decision_object": "accessible evacuation pickup and transfer locations",
+    "evidence_gate": "Evidence for accessible evacuation pickup and transfer locations passes documented checks for parcel control, legal authority, environmental review, access, capacity, and operator responsibility.",
+    "horizon": "multi-year",
+    "intervention_mechanism": "multi-hazard capacitated pickup location-allocation",
+    "primary_outcome": "assistance-eligible people beyond safe pickup access",
+    "spatial_unit": "facility"
+  },
+  "intended_claim": "A versioned site design for comparing declared alternatives affecting accessible evacuation pickup and transfer locations, conditional on its evidence gate.",
+  "limitations": [
+    "This library record has no city binding and therefore reports no local input, output, or recommendation.",
+    "Readiness describes explicit source and method gates; it does not certify implementation feasibility.",
+    "External domain, legal, community, security, and operational review remains outside this design artifact."
+  ],
+  "method_claimed": false,
+  "objectives": [
+    {
+      "evidence_type": "estimated",
+      "metric": "assistance-eligible people beyond safe pickup access",
+      "objective_id": "scenario.mobility.emergency-mobility.pickup-transfer-points.v1.objective.primary",
+      "primary": true,
+      "sense": "minimize",
+      "unit": "people"
+    },
+    {
+      "evidence_type": "estimated",
+      "metric": "distributional gap in assistance-eligible people beyond safe pickup access",
+      "objective_id": "scenario.mobility.emergency-mobility.pickup-transfer-points.v1.objective.equity",
+      "primary": false,
+      "sense": "minimize",
+      "unit": "people"
+    },
+    {
+      "evidence_type": "observed",
+      "metric": "decision claims with complete evidence lineage",
+      "objective_id": "scenario.mobility.emergency-mobility.pickup-transfer-points.v1.objective.traceability",
+      "primary": false,
+      "sense": "maximize",
+      "unit": "percent"
+    }
+  ],
+  "prohibited_claims": [
+    "Do not label a candidate point safe or accessible without field and operations validation.",
+    "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+    "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+    "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+  ],
+  "release_gate": {
+    "failure_release": "Release an explicit insufficient-evidence record naming missing sources, failed diagnostics, prohibited claims, and the next validation action.",
+    "failure_status": "insufficient-evidence",
+    "gate_id": "scenario.mobility.emergency-mobility.pickup-transfer-points.v1.gate.release",
+    "gate_type": "legal-authority",
+    "pass_condition": "Evidence for accessible evacuation pickup and transfer locations passes documented checks for parcel control, legal authority, environmental review, access, capacity, and operator responsibility.",
+    "required_evidence_types": [
+      "observed",
+      "proposed"
+    ],
+    "required_source_roles": [
+      "climate-hazard",
+      "equity-attribute",
+      "facility-inventory",
+      "geographic-identity",
+      "operating-capacity",
+      "transport-network"
+    ]
+  },
+  "required_source_roles": [
+    "climate-hazard",
+    "equity-attribute",
+    "facility-inventory",
+    "geographic-identity",
+    "operating-capacity",
+    "transport-network"
+  ],
+  "schema_version": "1.0.0",
+  "spatial_unit": "facility",
+  "suite": "mobility-accessibility-operations",
+  "tags": [
+    "design-only",
+    "mobility-accessibility-operations",
+    "mobility.emergency-mobility",
+    "scenario-library",
+    "site"
+  ],
+  "title": "Site accessible evacuation pickup and transfer points",
+  "transportability_risks": [
+    "Hazards, vehicle ownership, disability access, road topology, trust, and compliance differ.",
+    "Registration systems may undercount people needing assistance."
+  ]
+}

@@ -1,0 +1,162 @@
+{
+  "affected_system": "drinking-water distribution, sewer collection, pumping, and treatment assets",
+  "alternatives": [
+    "activate a bounded reserve from forecast risk bands for water and wastewater demand, failure, and treatment load",
+    "use rolling forecasts and conservative capacity triggers for water and wastewater demand, failure, and treatment load",
+    "pair weather, condition, hydraulic, and process-load forecasting with an explicit stop, review, and escalation rule"
+  ],
+  "analysis_modes": [
+    "forecast"
+  ],
+  "assumptions": [
+    "Assets, inspections, breaks, overflows, pressure, flow, quality, work, and complaints remain distinct.",
+    "Hydraulic, process, condition, and consequence models receive utility engineering review.",
+    "All alternatives, capacities, costs, effects, thresholds, and failure scenarios are proposed until bound to evidence."
+  ],
+  "baseline": "continue ordinary capacity planning for water and wastewater demand, failure, and treatment load.",
+  "city_bindings": [],
+  "constraints": [
+    {
+      "binding": true,
+      "constraint_id": "scenario.infrastructure.water-wastewater.utility-demand-failures.v1.constraint.binding",
+      "description": "The water and wastewater infrastructure forecast must respect declared validated operational capacity and forecast uncertainty.",
+      "hard": true,
+      "kind": "capacity",
+      "required_source_roles": [
+        "asset-condition",
+        "asset-inventory",
+        "climate-hazard",
+        "geographic-identity",
+        "operating-capacity",
+        "real-time-state"
+      ]
+    },
+    {
+      "binding": false,
+      "constraint_id": "scenario.infrastructure.water-wastewater.utility-demand-failures.v1.constraint.evidence-scope",
+      "description": "Every released metric must retain evidence type, source lineage, geography, time, assumptions, and uncertainty.",
+      "hard": true,
+      "kind": "technical",
+      "required_source_roles": [
+        "asset-condition"
+      ]
+    },
+    {
+      "binding": false,
+      "constraint_id": "scenario.infrastructure.water-wastewater.utility-demand-failures.v1.constraint.decision-authority",
+      "description": "No analytical output may bypass lawful authority, accountable human review, or an applicable appeal process.",
+      "hard": true,
+      "kind": "regulatory",
+      "required_source_roles": [
+        "asset-condition"
+      ]
+    }
+  ],
+  "current_readiness": "blocked-missing-source",
+  "decision_cadence": "recompiled at each planning cycle and after material evidence change",
+  "decision_owner": "water and wastewater utility asset director",
+  "decision_question": "What probabilistic flow, quality, break, overflow, and treatment-load range should operations prepare for?",
+  "decision_type": "forecast",
+  "design_id": "scenario.infrastructure.water-wastewater.utility-demand-failures.v1",
+  "design_order": 186,
+  "design_signature": "sha256:ab4a22e065dd736ef60f3987f77eb63fb7db09790ffbbd749ccc6e4f6059ebf4",
+  "evidence_requirements": [
+    "estimated",
+    "observed",
+    "proposed"
+  ],
+  "family_id": "infrastructure.water-wastewater",
+  "family_title": "Water and wastewater infrastructure",
+  "horizon": "weeks",
+  "implementation_status": "design-only",
+  "independence_key": {
+    "binding_constraint": "The water and wastewater infrastructure forecast must respect declared validated operational capacity and forecast uncertainty.",
+    "decision_object": "water and wastewater demand, failure, and treatment load",
+    "evidence_gate": "Evidence for water and wastewater demand, failure, and treatment load passes documented checks for held-out error, interval coverage, event detection, drift, and baseline comparison.",
+    "horizon": "weeks",
+    "intervention_mechanism": "weather, condition, hydraulic, and process-load forecasting",
+    "primary_outcome": "service demand and failure load above operable capacity",
+    "spatial_unit": "network"
+  },
+  "intended_claim": "A versioned forecast design for comparing declared alternatives affecting water and wastewater demand, failure, and treatment load, conditional on its evidence gate.",
+  "limitations": [
+    "This library record has no city binding and therefore reports no local input, output, or recommendation.",
+    "Readiness describes explicit source and method gates; it does not certify implementation feasibility.",
+    "External domain, legal, community, security, and operational review remains outside this design artifact."
+  ],
+  "method_claimed": false,
+  "objectives": [
+    {
+      "evidence_type": "estimated",
+      "metric": "service demand and failure load above operable capacity",
+      "objective_id": "scenario.infrastructure.water-wastewater.utility-demand-failures.v1.objective.primary",
+      "primary": true,
+      "sense": "minimize",
+      "unit": "service-events per day"
+    },
+    {
+      "evidence_type": "estimated",
+      "metric": "distributional gap in service demand and failure load above operable capacity",
+      "objective_id": "scenario.infrastructure.water-wastewater.utility-demand-failures.v1.objective.equity",
+      "primary": false,
+      "sense": "minimize",
+      "unit": "service-events per day"
+    },
+    {
+      "evidence_type": "observed",
+      "metric": "decision claims with complete evidence lineage",
+      "objective_id": "scenario.infrastructure.water-wastewater.utility-demand-failures.v1.objective.traceability",
+      "primary": false,
+      "sense": "maximize",
+      "unit": "percent"
+    }
+  ],
+  "prohibited_claims": [
+    "Do not present modeled breaks, quality events, or overflows as observed incidents.",
+    "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+    "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+    "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+  ],
+  "release_gate": {
+    "failure_release": "Release an explicit insufficient-evidence record naming missing sources, failed diagnostics, prohibited claims, and the next validation action.",
+    "failure_status": "insufficient-evidence",
+    "gate_id": "scenario.infrastructure.water-wastewater.utility-demand-failures.v1.gate.release",
+    "gate_type": "model-calibration",
+    "pass_condition": "Evidence for water and wastewater demand, failure, and treatment load passes documented checks for held-out error, interval coverage, event detection, drift, and baseline comparison.",
+    "required_evidence_types": [
+      "estimated",
+      "observed"
+    ],
+    "required_source_roles": [
+      "asset-condition",
+      "asset-inventory",
+      "climate-hazard",
+      "geographic-identity",
+      "operating-capacity",
+      "real-time-state"
+    ]
+  },
+  "required_source_roles": [
+    "asset-condition",
+    "asset-inventory",
+    "climate-hazard",
+    "geographic-identity",
+    "operating-capacity",
+    "real-time-state"
+  ],
+  "schema_version": "1.0.0",
+  "spatial_unit": "network",
+  "suite": "infrastructure-finance-asset-risk",
+  "tags": [
+    "design-only",
+    "forecast",
+    "infrastructure-finance-asset-risk",
+    "infrastructure.water-wastewater",
+    "scenario-library"
+  ],
+  "title": "Forecast utility demand, failures, and treatment load",
+  "transportability_risks": [
+    "Network age, materials, soils, climate, regulation, treatment, hydraulics, and costs differ.",
+    "Published incidents and complaints can omit failures or lack asset-level linkage."
+  ]
+}

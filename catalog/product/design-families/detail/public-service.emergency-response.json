@@ -1,0 +1,333 @@
+{
+  "designs": [
+    {
+      "analysis_modes": [
+        "descriptive"
+      ],
+      "binding_constraint": "The emergency response readiness and allocation diagnose must respect declared measurement resolution and classification uncertainty.",
+      "content_hash": "sha256:769fcdd7a0c405c6cdf329465140c10254fa2c41e3d87d78a0bfb8534a3045b1",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Which call-processing, dispatch, travel, handoff, and availability stages drive verified coverage gaps?",
+      "decision_type": "diagnose",
+      "design_id": "scenario.public-service.emergency-response.response-coverage-gaps.v1",
+      "design_order": 161,
+      "evidence_gate": "geographic-alignment",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "proposed"
+      ],
+      "family_id": "public-service.emergency-response",
+      "family_title": "Emergency response readiness and allocation",
+      "horizon": "annual",
+      "implementation_status": "design-only",
+      "primary_outcome": "priority incidents outside verified response targets",
+      "prohibited_claims": [
+        "Do not infer incident severity, fault, survival, or service quality from response time alone.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "service-area",
+      "suite": "public-service-operations",
+      "title": "Diagnose emergency response coverage and workflow gaps"
+    },
+    {
+      "analysis_modes": [
+        "forecast"
+      ],
+      "binding_constraint": "The emergency response readiness and allocation forecast must respect declared validated operational capacity and forecast uncertainty.",
+      "content_hash": "sha256:e5c37a43d0de20c5ea9470e6309a6de9fce755109446b539cc2e11f07efb554c",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "What place-time priority call, unit-hour, and mutual-aid demand range should readiness planning use?",
+      "decision_type": "forecast",
+      "design_id": "scenario.public-service.emergency-response.incident-unit-demand.v1",
+      "design_order": 162,
+      "evidence_gate": "model-calibration",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "proposed"
+      ],
+      "family_id": "public-service.emergency-response",
+      "family_title": "Emergency response readiness and allocation",
+      "horizon": "weeks",
+      "implementation_status": "design-only",
+      "primary_outcome": "priority unit-hours above deployable capacity",
+      "prohibited_claims": [
+        "Do not present forecast calls as incidents, casualties, or verified emergency need.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "service-area",
+      "suite": "public-service-operations",
+      "title": "Forecast emergency call and unit demand"
+    },
+    {
+      "analysis_modes": [
+        "descriptive",
+        "optimization"
+      ],
+      "binding_constraint": "The emergency response readiness and allocation prioritize must respect declared capital, operating, maintenance, and delivery budgets.",
+      "content_hash": "sha256:0488c8b91c870837d72c0683315ea1d4be5306aa97b1b18260204f67f90cd4eb",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Which communications, fleet, station, training, accessibility, and mutual-aid investments should be funded?",
+      "decision_type": "prioritize",
+      "design_id": "scenario.public-service.emergency-response.response-readiness-portfolio.v1",
+      "design_order": 163,
+      "evidence_gate": "cost-capacity",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed"
+      ],
+      "family_id": "public-service.emergency-response",
+      "family_title": "Emergency response readiness and allocation",
+      "horizon": "multi-year",
+      "implementation_status": "design-only",
+      "primary_outcome": "expected priority response-capacity shortfall",
+      "prohibited_claims": [
+        "Do not report modeled response improvements as lives saved or delivered readiness.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "asset",
+      "suite": "public-service-operations",
+      "title": "Prioritize emergency response readiness investments"
+    },
+    {
+      "analysis_modes": [
+        "simulation",
+        "optimization"
+      ],
+      "binding_constraint": "The emergency response readiness and allocation site must respect declared land control, accessibility, permitting, safety, and operating feasibility.",
+      "content_hash": "sha256:3f908446461001bef243238c5c7bcbe5e72e0503679ee0d68d97270bffe9629e",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Where should fixed and temporary bases improve resilient time-dependent coverage?",
+      "decision_type": "site",
+      "design_id": "scenario.public-service.emergency-response.response-bases.v1",
+      "design_order": 164,
+      "evidence_gate": "legal-authority",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "family_id": "public-service.emergency-response",
+      "family_title": "Emergency response readiness and allocation",
+      "horizon": "multi-year",
+      "implementation_status": "design-only",
+      "primary_outcome": "priority demand beyond resilient response coverage",
+      "prohibited_claims": [
+        "Do not call a screened base operational, safe, staffed, or guaranteed to meet response targets.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "facility",
+      "suite": "public-service-operations",
+      "title": "Site emergency response and standby bases"
+    },
+    {
+      "analysis_modes": [
+        "simulation",
+        "optimization"
+      ],
+      "binding_constraint": "The emergency response readiness and allocation allocate must respect declared minimum service, eligibility, capacity, and distributional safeguards.",
+      "content_hash": "sha256:677b8d9e44c6cbfe56edebcf9443728603e49ec930d471438793719d58268286",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "How should deployable units, specialist teams, supervisors, and mutual-aid reserves be positioned?",
+      "decision_type": "allocate",
+      "design_id": "scenario.public-service.emergency-response.response-units.v1",
+      "design_order": 165,
+      "evidence_gate": "equity-measurement",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "family_id": "public-service.emergency-response",
+      "family_title": "Emergency response readiness and allocation",
+      "horizon": "weeks",
+      "implementation_status": "design-only",
+      "primary_outcome": "priority demand without resilient unit coverage",
+      "prohibited_claims": [
+        "Do not present a planning allocation as an automated dispatch or completed response.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "network",
+      "suite": "public-service-operations",
+      "title": "Allocate emergency response units and standby capacity"
+    },
+    {
+      "analysis_modes": [
+        "forecast",
+        "optimization"
+      ],
+      "binding_constraint": "The emergency response readiness and allocation schedule must respect declared labor, access, sequencing, notice, and completion windows.",
+      "content_hash": "sha256:a66d889dfe5ebb9613d869d6ccb136bcaf2a2b228918dd5775b15aa376322c65",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "When should shifts, standby posts, maintenance, training, and mutual-aid coverage operate?",
+      "decision_type": "schedule",
+      "design_id": "scenario.public-service.emergency-response.readiness-coverage.v1",
+      "design_order": 166,
+      "evidence_gate": "temporal-alignment",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed"
+      ],
+      "family_id": "public-service.emergency-response",
+      "family_title": "Emergency response readiness and allocation",
+      "horizon": "weeks",
+      "implementation_status": "design-only",
+      "primary_outcome": "priority demand-hours below minimum deployable coverage",
+      "prohibited_claims": [
+        "Do not call a proposed readiness roster staffed, safe, negotiated, or operated.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "network",
+      "suite": "public-service-operations",
+      "title": "Schedule emergency readiness and coverage"
+    },
+    {
+      "analysis_modes": [
+        "forecast",
+        "simulation",
+        "optimization"
+      ],
+      "binding_constraint": "The emergency response readiness and allocation stress test must respect declared minimum continuity and safety thresholds across severe scenarios.",
+      "content_hash": "sha256:265069abf8f80e351795f491b5f49ec822399146cb2316011bc24ab0a2da8459",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Which readiness strategy preserves priority coverage during concurrent incidents, outages, access loss, and staff absence?",
+      "decision_type": "stress-test",
+      "design_id": "scenario.public-service.emergency-response.multi-incident-surge.v1",
+      "design_order": 167,
+      "evidence_gate": "external-validation",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "family_id": "public-service.emergency-response",
+      "family_title": "Emergency response readiness and allocation",
+      "horizon": "seasonal",
+      "implementation_status": "design-only",
+      "primary_outcome": "scenario-weighted priority incidents without timely unit coverage",
+      "prohibited_claims": [
+        "Do not present synthetic incidents, response times, or outcomes as forecasts or observed performance.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "network",
+      "suite": "public-service-operations",
+      "title": "Stress-test emergency response under correlated surge"
+    },
+    {
+      "analysis_modes": [
+        "descriptive",
+        "causal"
+      ],
+      "binding_constraint": "The emergency response readiness and allocation evaluate must respect declared pre-specified assignment, comparison, outcome, spillover, and subgroup rules.",
+      "content_hash": "sha256:a2474791811b83ed22e07447099ca3ecd9d22f86d2270d4d94718a912e53dfac",
+      "current_readiness": "blocked-multiple-gates",
+      "decision_question": "Did phased call-processing or unit-positioning changes improve verified coverage without unequal service?",
+      "decision_type": "evaluate",
+      "design_id": "scenario.public-service.emergency-response.dispatch-process-effect.v1",
+      "design_order": 168,
+      "evidence_gate": "causal-identification",
+      "evidence_types": [
+        "causal",
+        "estimated",
+        "observed",
+        "proposed"
+      ],
+      "family_id": "public-service.emergency-response",
+      "family_title": "Emergency response readiness and allocation",
+      "horizon": "multi-year",
+      "implementation_status": "design-only",
+      "primary_outcome": "change in stage-resolved priority response time and coverage",
+      "prohibited_claims": [
+        "Do not infer clinical, safety, or survival effects from response-time changes alone.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "service-area",
+      "suite": "public-service-operations",
+      "title": "Evaluate emergency communications and deployment redesign"
+    }
+  ],
+  "family": {
+    "affected_system": "non-clinical emergency call handling, unit readiness, and incident support network",
+    "claim_boundary": [
+      "Service requests measure reported workload, not verified incidents, need, harm, or resolution.",
+      "Assignments and schedules are proposed operations, not completed work or public outcomes.",
+      "Design records do not establish agency adoption, deployment, productivity, or resident impact."
+    ],
+    "common_source_roles": [
+      "municipal-demand",
+      "operating-capacity",
+      "transport-network"
+    ],
+    "decision_owner": "emergency communications director and public-safety operations chief",
+    "decision_types": [
+      "diagnose",
+      "forecast",
+      "prioritize",
+      "site",
+      "allocate",
+      "schedule",
+      "stress-test",
+      "evaluate"
+    ],
+    "description": "Eight decisions for response-gap diagnosis, demand forecasting, readiness portfolios, station siting, unit allocation, coverage schedules, surge stress, and system evaluation.",
+    "design_refs": [
+      "scenario.public-service.emergency-response.response-coverage-gaps.v1",
+      "scenario.public-service.emergency-response.incident-unit-demand.v1",
+      "scenario.public-service.emergency-response.response-readiness-portfolio.v1",
+      "scenario.public-service.emergency-response.response-bases.v1",
+      "scenario.public-service.emergency-response.response-units.v1",
+      "scenario.public-service.emergency-response.readiness-coverage.v1",
+      "scenario.public-service.emergency-response.multi-incident-surge.v1",
+      "scenario.public-service.emergency-response.dispatch-process-effect.v1"
+    ],
+    "design_signatures": [
+      "sha256:e27b8be2c0814b76fea01cfa8acc10f6fab177356c45baf3c74e9a08f379cbde",
+      "sha256:9b586dfebcf6f6cb5e7c10c39e0623de0ee43ee320e2e8a4b19674949ed2aa1f",
+      "sha256:24b63f3a2e582a8c236322231d655c73bcffe602176efb98a0ecd0b4ed953c35",
+      "sha256:a79c1450d74dceb0f735ee3f29d2edf0a49808f8c736f60a60887a073efbcfa8",
+      "sha256:96700c558c258f69d4c1e660989603c80c1ca8e0052a91fcafd730daf4f652c9",
+      "sha256:b98fb2cb8e24fd5523805b9a90da0d6ee4b45f37111faeb9985f691d4202bc15",
+      "sha256:f9c0cd8e327d3c19532350b0d12590eff90581bb17dd995c1d3934f26fe2198b",
+      "sha256:63225657ffafbbb8204234fe556ed9ff5ba7d53ca4e6a40c7a87e410c419bb43"
+    ],
+    "family_id": "public-service.emergency-response",
+    "family_order": 21,
+    "schema_version": "1.0.0",
+    "suite": "public-service-operations",
+    "title": "Emergency response readiness and allocation"
+  },
+  "library_claim_boundary": [
+    "The catalog contains 240 decision designs, not 240 city executions.",
+    "Exactly twelve designs map to existing Tier-D reference templates; 228 remain design-only.",
+    "A reference implementation can be an explicit negative release and does not imply impact.",
+    "No record claims a city binding, new method, deployment, adoption, or real-user outcome.",
+    "Future execution requires source binding, gate passage, and domain, legal, community, and operational review."
+  ]
+}

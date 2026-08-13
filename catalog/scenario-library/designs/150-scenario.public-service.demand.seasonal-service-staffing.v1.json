@@ -1,0 +1,166 @@
+{
+  "affected_system": "multichannel public-service intake, triage, dispatch, and resolution workflow",
+  "alternatives": [
+    "advance high-risk work within verified feasible windows for seasonal public-service staffing and channel schedule",
+    "use rolling risk and capacity updates to reschedule seasonal public-service staffing and channel schedule",
+    "pair forecast-driven skill and shift scheduling with an explicit stop, review, and escalation rule"
+  ],
+  "analysis_modes": [
+    "forecast",
+    "optimization"
+  ],
+  "assumptions": [
+    "Requests, contacts, duplicates, service categories, assignments, work orders, and outcomes remain distinct.",
+    "Channel and area comparisons account for taxonomy, access, publication, and reporting differences.",
+    "All alternatives, capacities, costs, effects, thresholds, and failure scenarios are proposed until bound to evidence."
+  ],
+  "baseline": "continue the fixed operating calendar for seasonal public-service staffing and channel schedule.",
+  "city_bindings": [],
+  "constraints": [
+    {
+      "binding": true,
+      "constraint_id": "scenario.public-service.demand.seasonal-service-staffing.v1.constraint.binding",
+      "description": "The 311 and public-service demand operations schedule must respect declared labor, access, sequencing, notice, and completion windows.",
+      "hard": true,
+      "kind": "time",
+      "required_source_roles": [
+        "geographic-identity",
+        "legal-regulatory",
+        "municipal-demand",
+        "operating-capacity",
+        "real-time-state",
+        "service-schedule"
+      ]
+    },
+    {
+      "binding": false,
+      "constraint_id": "scenario.public-service.demand.seasonal-service-staffing.v1.constraint.evidence-scope",
+      "description": "Every released metric must retain evidence type, source lineage, geography, time, assumptions, and uncertainty.",
+      "hard": true,
+      "kind": "technical",
+      "required_source_roles": [
+        "geographic-identity"
+      ]
+    },
+    {
+      "binding": false,
+      "constraint_id": "scenario.public-service.demand.seasonal-service-staffing.v1.constraint.decision-authority",
+      "description": "No analytical output may bypass lawful authority, accountable human review, or an applicable appeal process.",
+      "hard": true,
+      "kind": "regulatory",
+      "required_source_roles": [
+        "geographic-identity"
+      ]
+    }
+  ],
+  "current_readiness": "reference-implemented",
+  "decision_cadence": "recompiled at each planning cycle and after material evidence change",
+  "decision_owner": "chief service officer and 311 operations director",
+  "decision_question": "When should channel, supervisor, specialist, and field capacity expand or shift with demand?",
+  "decision_type": "schedule",
+  "design_id": "scenario.public-service.demand.seasonal-service-staffing.v1",
+  "design_order": 150,
+  "design_signature": "sha256:da0c166fd88e805d5fb6a4687d4830fa2ee213bd14b31d23c9625cf6a5dcf357",
+  "evidence_requirements": [
+    "estimated",
+    "observed",
+    "optimized",
+    "proposed"
+  ],
+  "existing_template_ref": "deep.public-service.seasonal-staffing.v1",
+  "family_id": "public-service.demand",
+  "family_title": "311 and public-service demand operations",
+  "horizon": "weeks",
+  "implementation_status": "reference-implemented",
+  "independence_key": {
+    "binding_constraint": "The 311 and public-service demand operations schedule must respect declared labor, access, sequencing, notice, and completion windows.",
+    "decision_object": "seasonal public-service staffing and channel schedule",
+    "evidence_gate": "Evidence for seasonal public-service staffing and channel schedule passes documented checks for effective dates, time zones, calendars, lead times, completion semantics, and update cadence.",
+    "horizon": "weeks",
+    "intervention_mechanism": "forecast-driven skill and shift scheduling",
+    "primary_outcome": "request-hours above qualified handling capacity",
+    "spatial_unit": "citywide"
+  },
+  "intended_claim": "A versioned schedule design for comparing declared alternatives affecting seasonal public-service staffing and channel schedule, conditional on its evidence gate.",
+  "limitations": [
+    "This library record has no city binding and therefore reports no local input, output, or recommendation.",
+    "Readiness describes explicit source and method gates; it does not certify implementation feasibility.",
+    "External domain, legal, community, security, and operational review remains outside this design artifact."
+  ],
+  "method_claimed": false,
+  "objectives": [
+    {
+      "evidence_type": "estimated",
+      "metric": "request-hours above qualified handling capacity",
+      "objective_id": "scenario.public-service.demand.seasonal-service-staffing.v1.objective.primary",
+      "primary": true,
+      "sense": "minimize",
+      "unit": "request-hours"
+    },
+    {
+      "evidence_type": "estimated",
+      "metric": "distributional gap in request-hours above qualified handling capacity",
+      "objective_id": "scenario.public-service.demand.seasonal-service-staffing.v1.objective.equity",
+      "primary": false,
+      "sense": "minimize",
+      "unit": "request-hours"
+    },
+    {
+      "evidence_type": "observed",
+      "metric": "decision claims with complete evidence lineage",
+      "objective_id": "scenario.public-service.demand.seasonal-service-staffing.v1.objective.traceability",
+      "primary": false,
+      "sense": "maximize",
+      "unit": "percent"
+    }
+  ],
+  "prohibited_claims": [
+    "Do not call a proposed staffing roster adopted, worked, productive, or sufficient.",
+    "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+    "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+    "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+  ],
+  "reference_implementation_note": "Tier-D template deep.public-service.seasonal-staffing.v1 (Seasonal service-capacity planning) supplies a bounded reference workflow for this design axis. The mapping does not establish complete city-specific inputs, external validity, deployment, adoption, or impact.",
+  "release_gate": {
+    "failure_release": "Release an explicit insufficient-evidence record naming missing sources, failed diagnostics, prohibited claims, and the next validation action.",
+    "failure_status": "insufficient-evidence",
+    "gate_id": "scenario.public-service.demand.seasonal-service-staffing.v1.gate.release",
+    "gate_type": "temporal-alignment",
+    "pass_condition": "Evidence for seasonal public-service staffing and channel schedule passes documented checks for effective dates, time zones, calendars, lead times, completion semantics, and update cadence.",
+    "required_evidence_types": [
+      "observed",
+      "proposed"
+    ],
+    "required_source_roles": [
+      "geographic-identity",
+      "legal-regulatory",
+      "municipal-demand",
+      "operating-capacity",
+      "real-time-state",
+      "service-schedule"
+    ]
+  },
+  "required_source_roles": [
+    "geographic-identity",
+    "legal-regulatory",
+    "municipal-demand",
+    "operating-capacity",
+    "real-time-state",
+    "service-schedule"
+  ],
+  "schema_version": "1.0.0",
+  "spatial_unit": "citywide",
+  "suite": "public-service-operations",
+  "tags": [
+    "public-service-operations",
+    "public-service.demand",
+    "reference-implemented",
+    "scenario-library",
+    "schedule"
+  ],
+  "title": "Schedule seasonal public-service staffing",
+  "transportability_risks": [
+    "Service taxonomies, channels, SLAs, agency ownership, reporting, and publication rules differ.",
+    "Observed demand reflects both conditions and ability or willingness to report."
+  ]
+}

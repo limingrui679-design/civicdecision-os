@@ -1,0 +1,607 @@
+{
+  "$defs": {
+    "AnalysisMode": {
+      "enum": [
+        "descriptive",
+        "forecast",
+        "causal",
+        "simulation",
+        "optimization"
+      ],
+      "title": "AnalysisMode",
+      "type": "string"
+    },
+    "ApplicationSuite": {
+      "enum": [
+        "climate-disaster-resilience",
+        "mobility-accessibility-operations",
+        "population-health-environmental-exposure",
+        "housing-land-use-regeneration",
+        "public-service-operations",
+        "infrastructure-finance-asset-risk",
+        "behavioral-policy-equity"
+      ],
+      "title": "ApplicationSuite",
+      "type": "string"
+    },
+    "CurrentReadiness": {
+      "enum": [
+        "reference-implemented",
+        "uncompiled-current-inputs",
+        "blocked-missing-source",
+        "blocked-method",
+        "blocked-multiple-gates"
+      ],
+      "title": "CurrentReadiness",
+      "type": "string"
+    },
+    "DecisionHorizon": {
+      "enum": [
+        "real-time",
+        "days",
+        "weeks",
+        "seasonal",
+        "annual",
+        "multi-year"
+      ],
+      "title": "DecisionHorizon",
+      "type": "string"
+    },
+    "DecisionType": {
+      "enum": [
+        "diagnose",
+        "forecast",
+        "prioritize",
+        "site",
+        "allocate",
+        "schedule",
+        "stress-test",
+        "evaluate"
+      ],
+      "title": "DecisionType",
+      "type": "string"
+    },
+    "DesignConstraintKind": {
+      "enum": [
+        "budget",
+        "capacity",
+        "equity",
+        "risk",
+        "time",
+        "regulatory",
+        "technical",
+        "environmental"
+      ],
+      "title": "DesignConstraintKind",
+      "type": "string"
+    },
+    "EvidenceGateType": {
+      "enum": [
+        "data-completeness",
+        "source-lineage",
+        "temporal-alignment",
+        "geographic-alignment",
+        "network-readiness",
+        "causal-identification",
+        "model-calibration",
+        "cost-capacity",
+        "legal-authority",
+        "equity-measurement",
+        "external-validation"
+      ],
+      "title": "EvidenceGateType",
+      "type": "string"
+    },
+    "EvidenceType": {
+      "enum": [
+        "observed",
+        "estimated",
+        "causal",
+        "simulated",
+        "optimized",
+        "proposed"
+      ],
+      "title": "EvidenceType",
+      "type": "string"
+    },
+    "ImplementationStatus": {
+      "enum": [
+        "reference-implemented",
+        "design-only"
+      ],
+      "title": "ImplementationStatus",
+      "type": "string"
+    },
+    "LibrarySourceRole": {
+      "enum": [
+        "municipal-demand",
+        "climate-hazard",
+        "geographic-identity",
+        "demographic-context",
+        "transport-network",
+        "service-schedule",
+        "facility-inventory",
+        "asset-inventory",
+        "asset-condition",
+        "land-parcel",
+        "housing-market",
+        "health-outcome",
+        "environmental-exposure",
+        "financial-cost",
+        "operating-capacity",
+        "intervention-assignment",
+        "outcome-panel",
+        "equity-attribute",
+        "legal-regulatory",
+        "real-time-state",
+        "community-input"
+      ],
+      "title": "LibrarySourceRole",
+      "type": "string"
+    },
+    "ScenarioDesignConstraint": {
+      "additionalProperties": false,
+      "properties": {
+        "binding": {
+          "default": false,
+          "title": "Binding",
+          "type": "boolean"
+        },
+        "constraint_id": {
+          "pattern": "^[a-z0-9]+(?:[._-][a-z0-9]+)*$",
+          "title": "Constraint Id",
+          "type": "string"
+        },
+        "description": {
+          "minLength": 8,
+          "title": "Description",
+          "type": "string"
+        },
+        "hard": {
+          "default": true,
+          "title": "Hard",
+          "type": "boolean"
+        },
+        "kind": {
+          "$ref": "#/$defs/DesignConstraintKind"
+        },
+        "required_source_roles": {
+          "items": {
+            "$ref": "#/$defs/LibrarySourceRole"
+          },
+          "title": "Required Source Roles",
+          "type": "array"
+        }
+      },
+      "required": [
+        "constraint_id",
+        "kind",
+        "description",
+        "required_source_roles"
+      ],
+      "title": "ScenarioDesignConstraint",
+      "type": "object"
+    },
+    "ScenarioDesignObjective": {
+      "additionalProperties": false,
+      "properties": {
+        "evidence_type": {
+          "$ref": "#/$defs/EvidenceType"
+        },
+        "metric": {
+          "minLength": 3,
+          "title": "Metric",
+          "type": "string"
+        },
+        "objective_id": {
+          "pattern": "^[a-z0-9]+(?:[._-][a-z0-9]+)*$",
+          "title": "Objective Id",
+          "type": "string"
+        },
+        "primary": {
+          "default": false,
+          "title": "Primary",
+          "type": "boolean"
+        },
+        "sense": {
+          "enum": [
+            "minimize",
+            "maximize"
+          ],
+          "title": "Sense",
+          "type": "string"
+        },
+        "unit": {
+          "minLength": 1,
+          "title": "Unit",
+          "type": "string"
+        }
+      },
+      "required": [
+        "objective_id",
+        "metric",
+        "sense",
+        "unit",
+        "evidence_type"
+      ],
+      "title": "ScenarioDesignObjective",
+      "type": "object"
+    },
+    "ScenarioEvidenceGate": {
+      "additionalProperties": false,
+      "properties": {
+        "failure_release": {
+          "minLength": 12,
+          "title": "Failure Release",
+          "type": "string"
+        },
+        "failure_status": {
+          "const": "insufficient-evidence",
+          "default": "insufficient-evidence",
+          "title": "Failure Status",
+          "type": "string"
+        },
+        "gate_id": {
+          "pattern": "^[a-z0-9]+(?:[._-][a-z0-9]+)*$",
+          "title": "Gate Id",
+          "type": "string"
+        },
+        "gate_type": {
+          "$ref": "#/$defs/EvidenceGateType"
+        },
+        "pass_condition": {
+          "minLength": 12,
+          "title": "Pass Condition",
+          "type": "string"
+        },
+        "required_evidence_types": {
+          "items": {
+            "$ref": "#/$defs/EvidenceType"
+          },
+          "minItems": 1,
+          "title": "Required Evidence Types",
+          "type": "array"
+        },
+        "required_source_roles": {
+          "items": {
+            "$ref": "#/$defs/LibrarySourceRole"
+          },
+          "minItems": 1,
+          "title": "Required Source Roles",
+          "type": "array"
+        }
+      },
+      "required": [
+        "gate_id",
+        "gate_type",
+        "pass_condition",
+        "failure_release",
+        "required_source_roles",
+        "required_evidence_types"
+      ],
+      "title": "ScenarioEvidenceGate",
+      "type": "object"
+    },
+    "ScenarioIndependenceKey": {
+      "additionalProperties": false,
+      "description": "Substantive axes used to detect renamed or city-copied designs.",
+      "properties": {
+        "binding_constraint": {
+          "minLength": 5,
+          "title": "Binding Constraint",
+          "type": "string"
+        },
+        "decision_object": {
+          "minLength": 5,
+          "title": "Decision Object",
+          "type": "string"
+        },
+        "evidence_gate": {
+          "minLength": 5,
+          "title": "Evidence Gate",
+          "type": "string"
+        },
+        "horizon": {
+          "$ref": "#/$defs/DecisionHorizon"
+        },
+        "intervention_mechanism": {
+          "minLength": 5,
+          "title": "Intervention Mechanism",
+          "type": "string"
+        },
+        "primary_outcome": {
+          "minLength": 5,
+          "title": "Primary Outcome",
+          "type": "string"
+        },
+        "spatial_unit": {
+          "$ref": "#/$defs/SpatialUnit"
+        }
+      },
+      "required": [
+        "decision_object",
+        "intervention_mechanism",
+        "primary_outcome",
+        "binding_constraint",
+        "evidence_gate",
+        "horizon",
+        "spatial_unit"
+      ],
+      "title": "ScenarioIndependenceKey",
+      "type": "object"
+    },
+    "SpatialUnit": {
+      "enum": [
+        "facility",
+        "asset",
+        "parcel",
+        "corridor",
+        "network",
+        "service-area",
+        "neighborhood",
+        "citywide",
+        "population-group"
+      ],
+      "title": "SpatialUnit",
+      "type": "string"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "affected_system": {
+      "minLength": 5,
+      "title": "Affected System",
+      "type": "string"
+    },
+    "alternatives": {
+      "items": {
+        "type": "string"
+      },
+      "minItems": 2,
+      "title": "Alternatives",
+      "type": "array"
+    },
+    "analysis_modes": {
+      "items": {
+        "$ref": "#/$defs/AnalysisMode"
+      },
+      "minItems": 1,
+      "title": "Analysis Modes",
+      "type": "array"
+    },
+    "assumptions": {
+      "items": {
+        "type": "string"
+      },
+      "minItems": 1,
+      "title": "Assumptions",
+      "type": "array"
+    },
+    "baseline": {
+      "minLength": 8,
+      "title": "Baseline",
+      "type": "string"
+    },
+    "city_bindings": {
+      "items": {
+        "type": "string"
+      },
+      "maxItems": 0,
+      "title": "City Bindings",
+      "type": "array"
+    },
+    "constraints": {
+      "items": {
+        "$ref": "#/$defs/ScenarioDesignConstraint"
+      },
+      "minItems": 1,
+      "title": "Constraints",
+      "type": "array"
+    },
+    "current_readiness": {
+      "$ref": "#/$defs/CurrentReadiness"
+    },
+    "decision_cadence": {
+      "minLength": 3,
+      "title": "Decision Cadence",
+      "type": "string"
+    },
+    "decision_owner": {
+      "minLength": 3,
+      "title": "Decision Owner",
+      "type": "string"
+    },
+    "decision_question": {
+      "minLength": 12,
+      "title": "Decision Question",
+      "type": "string"
+    },
+    "decision_type": {
+      "$ref": "#/$defs/DecisionType"
+    },
+    "design_id": {
+      "pattern": "^[a-z0-9]+(?:[._-][a-z0-9]+)*$",
+      "title": "Design Id",
+      "type": "string"
+    },
+    "design_order": {
+      "maximum": 240,
+      "minimum": 1,
+      "title": "Design Order",
+      "type": "integer"
+    },
+    "design_signature": {
+      "pattern": "^sha256:[0-9a-f]{64}$",
+      "title": "Design Signature",
+      "type": "string"
+    },
+    "evidence_requirements": {
+      "items": {
+        "$ref": "#/$defs/EvidenceType"
+      },
+      "minItems": 1,
+      "title": "Evidence Requirements",
+      "type": "array"
+    },
+    "existing_template_ref": {
+      "anyOf": [
+        {
+          "pattern": "^[a-z0-9]+(?:[._-][a-z0-9]+)*$",
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Existing Template Ref"
+    },
+    "family_id": {
+      "pattern": "^[a-z0-9]+(?:[._-][a-z0-9]+)*$",
+      "title": "Family Id",
+      "type": "string"
+    },
+    "family_title": {
+      "minLength": 3,
+      "title": "Family Title",
+      "type": "string"
+    },
+    "horizon": {
+      "$ref": "#/$defs/DecisionHorizon"
+    },
+    "implementation_status": {
+      "$ref": "#/$defs/ImplementationStatus"
+    },
+    "independence_key": {
+      "$ref": "#/$defs/ScenarioIndependenceKey"
+    },
+    "intended_claim": {
+      "minLength": 12,
+      "title": "Intended Claim",
+      "type": "string"
+    },
+    "limitations": {
+      "items": {
+        "type": "string"
+      },
+      "minItems": 2,
+      "title": "Limitations",
+      "type": "array"
+    },
+    "method_claimed": {
+      "const": false,
+      "default": false,
+      "title": "Method Claimed",
+      "type": "boolean"
+    },
+    "objectives": {
+      "items": {
+        "$ref": "#/$defs/ScenarioDesignObjective"
+      },
+      "minItems": 1,
+      "title": "Objectives",
+      "type": "array"
+    },
+    "prohibited_claims": {
+      "items": {
+        "type": "string"
+      },
+      "minItems": 2,
+      "title": "Prohibited Claims",
+      "type": "array"
+    },
+    "reference_implementation_note": {
+      "anyOf": [
+        {
+          "minLength": 24,
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Reference Implementation Note"
+    },
+    "release_gate": {
+      "$ref": "#/$defs/ScenarioEvidenceGate"
+    },
+    "required_source_roles": {
+      "items": {
+        "$ref": "#/$defs/LibrarySourceRole"
+      },
+      "minItems": 1,
+      "title": "Required Source Roles",
+      "type": "array"
+    },
+    "schema_version": {
+      "const": "1.0.0",
+      "default": "1.0.0",
+      "title": "Schema Version",
+      "type": "string"
+    },
+    "spatial_unit": {
+      "$ref": "#/$defs/SpatialUnit"
+    },
+    "suite": {
+      "$ref": "#/$defs/ApplicationSuite"
+    },
+    "tags": {
+      "items": {
+        "type": "string"
+      },
+      "minItems": 3,
+      "title": "Tags",
+      "type": "array"
+    },
+    "title": {
+      "maxLength": 180,
+      "minLength": 5,
+      "title": "Title",
+      "type": "string"
+    },
+    "transportability_risks": {
+      "items": {
+        "type": "string"
+      },
+      "minItems": 1,
+      "title": "Transportability Risks",
+      "type": "array"
+    }
+  },
+  "required": [
+    "design_order",
+    "design_id",
+    "family_id",
+    "suite",
+    "family_title",
+    "title",
+    "decision_question",
+    "decision_type",
+    "decision_owner",
+    "affected_system",
+    "horizon",
+    "decision_cadence",
+    "spatial_unit",
+    "baseline",
+    "alternatives",
+    "objectives",
+    "constraints",
+    "analysis_modes",
+    "evidence_requirements",
+    "required_source_roles",
+    "release_gate",
+    "independence_key",
+    "design_signature",
+    "implementation_status",
+    "current_readiness",
+    "intended_claim",
+    "prohibited_claims",
+    "assumptions",
+    "limitations",
+    "transportability_risks",
+    "tags"
+  ],
+  "title": "ScenarioDesign",
+  "type": "object"
+}

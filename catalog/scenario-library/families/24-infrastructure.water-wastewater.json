@@ -1,0 +1,50 @@
+{
+  "affected_system": "drinking-water distribution, sewer collection, pumping, and treatment assets",
+  "claim_boundary": [
+    "Requests and proxy indicators do not replace engineering inspection, accounting, or legal review.",
+    "Selected projects and schedules are planning outputs, not appropriations, designs, contracts, or construction.",
+    "Modeled lifecycle, emissions, reliability, and fiscal effects are not realized outcomes."
+  ],
+  "common_source_roles": [
+    "asset-condition",
+    "asset-inventory",
+    "geographic-identity"
+  ],
+  "decision_owner": "water and wastewater utility asset director",
+  "decision_types": [
+    "diagnose",
+    "forecast",
+    "prioritize",
+    "site",
+    "allocate",
+    "schedule",
+    "stress-test",
+    "evaluate"
+  ],
+  "description": "Eight decisions for failure diagnosis, demand forecasting, renewal portfolios, facility siting, repair allocation, maintenance scheduling, continuity stress, and renewal evaluation.",
+  "design_refs": [
+    "scenario.infrastructure.water-wastewater.utility-failure-patterns.v1",
+    "scenario.infrastructure.water-wastewater.utility-demand-failures.v1",
+    "scenario.infrastructure.water-wastewater.utility-renewal.v1",
+    "scenario.infrastructure.water-wastewater.utility-facilities.v1",
+    "scenario.infrastructure.water-wastewater.utility-repair-capacity.v1",
+    "scenario.infrastructure.water-wastewater.utility-maintenance.v1",
+    "scenario.infrastructure.water-wastewater.utility-continuity.v1",
+    "scenario.infrastructure.water-wastewater.renewal-strategy-effect.v1"
+  ],
+  "design_signatures": [
+    "sha256:ce34f9e265fdeb078de83dd38efffaf6d79addf101914a02b0f1976c6ce04e12",
+    "sha256:ab4a22e065dd736ef60f3987f77eb63fb7db09790ffbbd749ccc6e4f6059ebf4",
+    "sha256:bff9404fd0622144c3be685eef99cb90336ad7216e582bbf891b6f2e7cae74f0",
+    "sha256:9bd84b6e98b5f6cdae37fcce5aa3b620473da28960e4fe44f5a4826cb9842e74",
+    "sha256:95ea89e0fd567ee1d775b0818313c74b8b611c3fe989b08251b5acc693e24f2c",
+    "sha256:628489acea3dfeb7030841a474fcae49ac74295e471601efb42c6da911c5bfd7",
+    "sha256:c220d7a498f2b27f042e91a9cce327ba16b600f9392ac1139cced08ce96d60d2",
+    "sha256:ecfc770030be5a78a888ce33b22a3e1ebbb2c456eb85b1298268262d716fd9dc"
+  ],
+  "family_id": "infrastructure.water-wastewater",
+  "family_order": 24,
+  "schema_version": "1.0.0",
+  "suite": "infrastructure-finance-asset-risk",
+  "title": "Water and wastewater infrastructure"
+}

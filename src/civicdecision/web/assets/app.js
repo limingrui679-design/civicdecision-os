@@ -15,6 +15,18 @@
     scenarioStatus: "",
     scenarioQuery: "",
     scenarioPage: null,
+    designOffset: 0,
+    designLimit: 12,
+    designQuery: "",
+    designSuite: "",
+    designFamily: "",
+    designType: "",
+    designImplementation: "",
+    designReadiness: "",
+    designPage: null,
+    familyQuery: "",
+    familyPage: null,
+    libraryEvidence: null,
     sourceOffset: 0,
     sourceLimit: 8,
     sourceQuery: "",
@@ -134,6 +146,12 @@
     setText("[data-deep-completed-count]", formatNumber.format(summary.completed_deep_executions));
     setText("[data-deep-negative-count]", formatNumber.format(summary.negative_deep_executions));
     setText("[data-decision-packs]", formatNumber.format(summary.decision_packs));
+    setText("[data-design-total]", formatNumber.format(summary.scenario_library_designs));
+    setText("[data-family-total]", formatNumber.format(summary.scenario_library_families));
+    setText("[data-design-reference]", formatNumber.format(summary.reference_implemented_designs));
+    setText("[data-design-only]", formatNumber.format(summary.design_only_scenarios));
+    setText("[data-design-similarity]", Number(summary.scenario_library_maximum_similarity).toFixed(6));
+    setText("[data-design-audit]", summary.scenario_library_audit_passed ? "PASS" : "REVIEW");
     setText("[data-source-total]", formatNumber.format(summary.source_artifacts));
     setText("[data-footer-version]", `Version ${summary.software_version}`);
 
@@ -389,7 +407,7 @@
           <article class="suite-card" title="${escapeHTML(suite.claim_boundary)}">
             <span>${escapeHTML(titleCase(suite.suite))}</span>
             <strong>${formatNumber.format(suite.execution_count)}</strong>
-            <small>${formatNumber.format(suite.template_count)} designs · ${formatNumber.format(suite.cities)} cities</small>
+            <small>${formatNumber.format(suite.design_count)} library designs · ${formatNumber.format(suite.template_count)} templates · ${formatNumber.format(suite.cities)} cities</small>
             <svg class="suite-meter" viewBox="0 0 100 4" preserveAspectRatio="none" aria-label="${complete.toFixed(0)} percent completed, ${negative.toFixed(0)} percent negative">
               <rect class="complete" x="0" y="0" width="${complete}" height="4"></rect>
               <rect class="negative" x="${complete}" y="0" width="${negative}" height="4"></rect>
@@ -405,6 +423,119 @@
     } catch (error) {
       const grid = $("[data-suite-grid]");
       if (grid) grid.innerHTML = `<div class="error-state">Suite evidence unavailable: ${escapeHTML(error.message)}</div>`;
+    }
+  }
+
+  function designParams() {
+    return {
+      suite: state.designSuite,
+      family_id: state.designFamily,
+      decision_type: state.designType,
+      implementation_status: state.designImplementation,
+      current_readiness: state.designReadiness,
+      q: state.designQuery,
+      limit: state.designLimit,
+      offset: state.designOffset,
+    };
+  }
+
+  function renderDesigns(page) {
+    state.designPage = page;
+    const list = $("[data-design-list]");
+    if (!list) return;
+    if (!page.items.length) {
+      list.innerHTML = '<div class="empty-state">No scenario designs match this evidence filter.</div>';
+    } else {
+      list.innerHTML = page.items
+        .map(
+          (design) => `
+            <article class="design-row">
+              <span class="design-order">${String(design.design_order).padStart(3, "0")}</span>
+              <div class="design-identity">
+                <div class="design-badges"><span class="decision-type">${escapeHTML(titleCase(design.decision_type))}</span><span class="implementation-badge ${escapeHTML(design.implementation_status)}">${escapeHTML(titleCase(design.implementation_status))}</span></div>
+                <strong>${escapeHTML(design.title)}</strong>
+                <p>${escapeHTML(design.decision_question)}</p>
+                <small>${escapeHTML(titleCase(design.suite))} · ${escapeHTML(design.family_id)}</small>
+              </div>
+              <div class="design-outcome"><span>Primary outcome</span><strong>${escapeHTML(design.primary_outcome)}</strong><small>${escapeHTML(titleCase(design.current_readiness))}</small></div>
+              <button class="row-open light" type="button" data-design-id="${escapeHTML(design.design_id)}" aria-label="Open ${escapeHTML(design.title)}">→</button>
+            </article>`,
+        )
+        .join("");
+    }
+    const pagination = page.pagination;
+    const first = pagination.total ? pagination.offset + 1 : 0;
+    const last = pagination.offset + pagination.returned;
+    setText("[data-design-page]", `${first}–${last} of ${formatNumber.format(pagination.total)}`);
+    setText(
+      "[data-design-browser-title]",
+      state.designFamily ? `Family: ${state.designFamily}` : "All scenario designs",
+    );
+    $("[data-design-prev]").disabled = pagination.offset === 0;
+    $("[data-design-next]").disabled = pagination.next_offset === null;
+  }
+
+  async function loadDesigns() {
+    const list = $("[data-design-list]");
+    if (list) list.setAttribute("aria-busy", "true");
+    try {
+      renderDesigns(await api("/designs", designParams()));
+    } catch (error) {
+      if (list) list.innerHTML = `<div class="error-state">Unable to load the scenario design index.<br>${escapeHTML(error.message)}</div>`;
+    } finally {
+      if (list) list.removeAttribute("aria-busy");
+    }
+  }
+
+  function renderFamilies(page) {
+    state.familyPage = page;
+    const list = $("[data-family-list]");
+    if (!list) return;
+    if (!page.items.length) {
+      list.innerHTML = '<div class="empty-state">No design families match this search.</div>';
+      return;
+    }
+    list.innerHTML = page.items
+      .map(
+        (family) => `
+          <article class="family-row ${state.designFamily === family.family_id ? "active" : ""}">
+            <button class="family-filter" type="button" data-family-filter="${escapeHTML(family.family_id)}" aria-pressed="${state.designFamily === family.family_id}">
+              <span class="family-order">${String(family.family_order).padStart(2, "0")}</span>
+              <span><strong>${escapeHTML(family.title)}</strong><small>${escapeHTML(titleCase(family.suite))} · ${family.design_count} designs</small></span>
+            </button>
+            <button class="family-open" type="button" data-family-view="${escapeHTML(family.family_id)}" aria-label="Open ${escapeHTML(family.title)} family detail">↗</button>
+          </article>`,
+      )
+      .join("");
+  }
+
+  async function loadFamilies() {
+    const list = $("[data-family-list]");
+    if (list) list.setAttribute("aria-busy", "true");
+    try {
+      renderFamilies(await api("/design-families", { q: state.familyQuery, limit: 100 }));
+    } catch (error) {
+      if (list) list.innerHTML = `<div class="error-state">Unable to load design families.<br>${escapeHTML(error.message)}</div>`;
+    } finally {
+      if (list) list.removeAttribute("aria-busy");
+    }
+  }
+
+  function renderLibraryEvidence(evidence) {
+    state.libraryEvidence = evidence;
+    setText("[data-design-total]", formatNumber.format(evidence.design_count));
+    setText("[data-family-total]", formatNumber.format(evidence.family_count));
+    setText("[data-design-reference]", formatNumber.format(evidence.reference_implemented_designs));
+    setText("[data-design-only]", formatNumber.format(evidence.design_only_scenarios));
+    setText("[data-design-similarity]", Number(evidence.maximum_pairwise_similarity).toFixed(6));
+    setText("[data-design-audit]", evidence.audit_passed ? "PASS" : "REVIEW");
+  }
+
+  async function loadLibraryEvidence() {
+    try {
+      renderLibraryEvidence(await api("/evidence/scenario-library"));
+    } catch (error) {
+      showToast(`Scenario-library evidence could not be loaded: ${error.message}`);
     }
   }
 
@@ -622,6 +753,153 @@
     }
   }
 
+  function renderDesignDetail(detail) {
+    const design = detail.design;
+    const family = detail.family;
+    const objectives = (design.objectives || [])
+      .map(
+        (objective) => `
+          <article class="contract-item ${objective.primary ? "primary" : ""}">
+            <header><strong>${escapeHTML(objective.metric)}</strong><span>${escapeHTML(titleCase(objective.evidence_type))}</span></header>
+            <p>${escapeHTML(titleCase(objective.sense))} · ${escapeHTML(objective.unit)}${objective.primary ? " · primary" : ""}</p>
+          </article>`,
+      )
+      .join("");
+    const constraints = (design.constraints || [])
+      .map(
+        (constraint) => `
+          <article class="contract-item ${constraint.binding ? "binding" : ""}">
+            <header><strong>${escapeHTML(titleCase(constraint.kind))}</strong><span>${constraint.binding ? "Binding" : constraint.hard ? "Hard" : "Soft"}</span></header>
+            <p>${escapeHTML(constraint.description)}</p>
+          </article>`,
+      )
+      .join("");
+    const gate = design.release_gate;
+    const implementationNote = design.reference_implementation_note
+      ? `<section class="drawer-section reference-note"><h3>Reference implementation scope</h3><p>${escapeHTML(design.reference_implementation_note)}</p></section>`
+      : "";
+    return `
+      <p class="drawer-summary">${escapeHTML(design.intended_claim)}</p>
+      <div class="detail-status-row"><span class="kind-badge">${escapeHTML(titleCase(design.decision_type))}</span><span class="status-badge ${escapeHTML(statusClass(design.implementation_status))}">${escapeHTML(titleCase(design.implementation_status))}</span><span class="status-badge">${escapeHTML(titleCase(design.current_readiness))}</span>${evidenceBadges(design.evidence_requirements, 8)}</div>
+      ${detailGrid([
+        ["Design order", design.design_order],
+        ["Design ID", design.design_id],
+        ["Family", `${family.title} (${family.family_id})`],
+        ["Application suite", titleCase(design.suite)],
+        ["Decision owner", design.decision_owner],
+        ["Affected system", design.affected_system],
+        ["Horizon / cadence", `${titleCase(design.horizon)} / ${design.decision_cadence}`],
+        ["Spatial unit", titleCase(design.spatial_unit)],
+        ["Reference template", design.existing_template_ref],
+        ["City bindings", design.city_bindings.length],
+        ["New method claimed", design.method_claimed],
+        ["Similarity audit maximum", detail.audit_maximum_pairwise_similarity],
+      ])}
+      <section class="drawer-section"><h3>Decision question</h3><p>${escapeHTML(design.decision_question)}</p></section>
+      <section class="drawer-section"><h3>Baseline</h3><p>${escapeHTML(design.baseline)}</p></section>
+      ${listSection("Alternatives", design.alternatives)}
+      <section class="drawer-section"><h3>Objectives</h3><div class="contract-list">${objectives}</div></section>
+      <section class="drawer-section"><h3>Constraints</h3><div class="contract-list">${constraints}</div></section>
+      <section class="drawer-section evidence-gate-detail"><h3>Evidence release gate</h3>${detailGrid([
+        ["Gate type", titleCase(gate.gate_type)],
+        ["Pass condition", gate.pass_condition],
+        ["Failure status", titleCase(gate.failure_status)],
+      ])}<p><strong>Required negative release:</strong> ${escapeHTML(gate.failure_release)}</p></section>
+      ${listSection("Required source roles", design.required_source_roles.map(titleCase))}
+      ${listSection("Analysis modes", design.analysis_modes.map(titleCase))}
+      ${implementationNote}
+      ${listSection("Assumptions", design.assumptions)}
+      ${listSection("Limitations", design.limitations)}
+      ${listSection("Prohibited claims", design.prohibited_claims)}
+      ${listSection("Transportability risks", design.transportability_risks)}
+      ${listSection("Library claim boundary", detail.library_claim_boundary)}
+      <div class="drawer-actions"><a href="${API}/designs/${encodeURIComponent(design.design_id)}">View design JSON</a><a href="${API}/design-families/${encodeURIComponent(family.family_id)}">View family JSON</a></div>`;
+  }
+
+  async function openDesign(designId, sourceElement) {
+    drawerLoading("Scenario design", designId, sourceElement);
+    try {
+      const detail = await api(`/designs/${encodeURIComponent(designId)}`);
+      setText("[data-drawer-title]", detail.design.title);
+      $("[data-drawer-body]").innerHTML = renderDesignDetail(detail);
+    } catch (error) {
+      $("[data-drawer-body]").innerHTML = `<div class="error-state">Unable to open scenario design.<br>${escapeHTML(error.message)}</div>`;
+    }
+  }
+
+  function renderFamilyDetail(detail) {
+    const family = detail.family;
+    const designs = detail.designs
+      .map(
+        (design) => `
+          <button class="family-design-link" type="button" data-design-id="${escapeHTML(design.design_id)}">
+            <span>${String(design.design_order).padStart(3, "0")}</span>
+            <strong>${escapeHTML(design.title)}</strong>
+            <small>${escapeHTML(titleCase(design.decision_type))} · ${escapeHTML(titleCase(design.implementation_status))}</small>
+          </button>`,
+      )
+      .join("");
+    return `
+      <p class="drawer-summary">${escapeHTML(family.description)}</p>
+      ${detailGrid([
+        ["Family order", family.family_order],
+        ["Family ID", family.family_id],
+        ["Application suite", titleCase(family.suite)],
+        ["Affected system", family.affected_system],
+        ["Decision owner", family.decision_owner],
+        ["Design contracts", detail.designs.length],
+      ])}
+      <section class="drawer-section"><h3>Eight decision types</h3><div class="family-design-links">${designs}</div></section>
+      ${listSection("Common source roles", family.common_source_roles.map(titleCase))}
+      ${listSection("Family claim boundary", family.claim_boundary)}
+      ${listSection("Library claim boundary", detail.library_claim_boundary)}
+      <div class="drawer-actions"><a href="${API}/design-families/${encodeURIComponent(family.family_id)}">View family JSON</a></div>`;
+  }
+
+  async function openFamily(familyId, sourceElement) {
+    drawerLoading("Scenario family", familyId, sourceElement);
+    try {
+      const detail = await api(`/design-families/${encodeURIComponent(familyId)}`);
+      setText("[data-drawer-title]", detail.family.title);
+      $("[data-drawer-body]").innerHTML = renderFamilyDetail(detail);
+    } catch (error) {
+      $("[data-drawer-body]").innerHTML = `<div class="error-state">Unable to open design family.<br>${escapeHTML(error.message)}</div>`;
+    }
+  }
+
+  function openLibraryEvidence(sourceElement) {
+    const evidence = state.libraryEvidence;
+    if (!evidence) {
+      showToast("Scenario-library evidence is still loading.");
+      return;
+    }
+    openDrawer({
+      kicker: "Anti-duplication evidence",
+      title: "240-design audit",
+      sourceElement,
+      body: `
+        <p class="drawer-summary">The audit establishes structural completeness and transparent lexical separation. It does not establish academic novelty, external domain correctness, deployment, adoption, or impact.</p>
+        ${detailGrid([
+          ["Audit status", evidence.audit_passed ? "PASS" : "REVIEW"],
+          ["Designs / families", `${evidence.design_count} / ${evidence.family_count}`],
+          ["Reference / design-only", `${evidence.reference_implemented_designs} / ${evidence.design_only_scenarios}`],
+          ["City-bound executions counted", evidence.city_bound_executions_counted],
+          ["Methods claimed", evidence.methods_claimed],
+          ["Similarity threshold", evidence.high_similarity_threshold],
+          ["Maximum similarity", evidence.maximum_pairwise_similarity],
+          ["High-similarity pairs", evidence.high_similarity_pair_count],
+          ["Signature collisions", evidence.exact_signature_collision_count],
+          ["Duplicate titles", evidence.duplicate_title_count],
+          ["Duplicate questions", evidence.duplicate_question_count],
+          ["Artifact-set hash", compactHash(evidence.artifact_set_hash)],
+        ])}
+        ${listSection("Verified invariants", evidence.invariants)}
+        ${listSection("Claim boundary", evidence.claim_boundary)}
+        ${listSection("Audit limitations", evidence.limitations)}
+        <div class="drawer-actions"><a href="${API}/evidence/scenario-library">View evidence JSON</a></div>`,
+    });
+  }
+
   function openBenchmark(sourceElement) {
     const benchmark = window.civicDecisionBenchmark;
     const deep = window.civicDecisionDeepEvidence;
@@ -675,6 +953,15 @@
       });
     }
     $("[data-scroll-boundaries]")?.addEventListener("click", () => $("#methods")?.scrollIntoView());
+  }
+
+  function selectDesignFamily(familyId) {
+    state.designFamily = familyId;
+    state.designOffset = 0;
+    const clear = $("[data-clear-family]");
+    if (clear) clear.hidden = !familyId;
+    if (state.familyPage) renderFamilies(state.familyPage);
+    loadDesigns();
   }
 
   function setupInteractions() {
@@ -743,6 +1030,62 @@
       if (button) openScenario(button.dataset.scenarioId, button);
     });
 
+    $("[data-design-search]")?.addEventListener(
+      "input",
+      debounce((event) => {
+        state.designQuery = event.target.value.trim();
+        state.designOffset = 0;
+        loadDesigns();
+      }),
+    );
+    const designSelects = [
+      ["[data-design-suite]", "designSuite"],
+      ["[data-design-type]", "designType"],
+      ["[data-design-implementation]", "designImplementation"],
+      ["[data-design-readiness]", "designReadiness"],
+    ];
+    for (const [selector, key] of designSelects) {
+      $(selector)?.addEventListener("change", (event) => {
+        state[key] = event.target.value;
+        state.designOffset = 0;
+        loadDesigns();
+      });
+    }
+    $("[data-design-prev]")?.addEventListener("click", () => {
+      state.designOffset = Math.max(0, state.designOffset - state.designLimit);
+      loadDesigns();
+    });
+    $("[data-design-next]")?.addEventListener("click", () => {
+      if (state.designPage?.pagination.next_offset !== null) {
+        state.designOffset = state.designPage.pagination.next_offset;
+        loadDesigns();
+      }
+    });
+    $("[data-design-list]")?.addEventListener("click", (event) => {
+      const button = event.target.closest("[data-design-id]");
+      if (button) openDesign(button.dataset.designId, button);
+    });
+    $("[data-family-search]")?.addEventListener(
+      "input",
+      debounce((event) => {
+        state.familyQuery = event.target.value.trim();
+        loadFamilies();
+      }),
+    );
+    $("[data-family-list]")?.addEventListener("click", (event) => {
+      const view = event.target.closest("[data-family-view]");
+      if (view) {
+        openFamily(view.dataset.familyView, view);
+        return;
+      }
+      const filter = event.target.closest("[data-family-filter]");
+      if (filter) selectDesignFamily(filter.dataset.familyFilter);
+    });
+    $("[data-clear-family]")?.addEventListener("click", () => selectDesignFamily(""));
+    $("[data-open-library-evidence]")?.addEventListener("click", (event) =>
+      openLibraryEvidence(event.currentTarget),
+    );
+
     $("[data-source-search]")?.addEventListener(
       "input",
       debounce((event) => {
@@ -763,6 +1106,10 @@
     });
 
     $("[data-open-benchmark]")?.addEventListener("click", (event) => openBenchmark(event.currentTarget));
+    $("[data-drawer-body]")?.addEventListener("click", (event) => {
+      const design = event.target.closest("[data-design-id]");
+      if (design) openDesign(design.dataset.designId, design);
+    });
     $("[data-drawer-close]")?.addEventListener("click", closeDrawer);
     $("[data-drawer-backdrop]")?.addEventListener("click", closeDrawer);
     document.addEventListener("keydown", (event) => {
@@ -808,7 +1155,17 @@
     setupReveal();
     try {
       await loadSystem();
-      await Promise.all([loadCities(), loadMap(), loadScenarios(), loadSuites(), loadSources(), loadBenchmark()]);
+      await Promise.all([
+        loadCities(),
+        loadMap(),
+        loadDesigns(),
+        loadFamilies(),
+        loadLibraryEvidence(),
+        loadScenarios(),
+        loadSuites(),
+        loadSources(),
+        loadBenchmark(),
+      ]);
     } catch {
       // The health state and toast already expose the catalog failure.
     }

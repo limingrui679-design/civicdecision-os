@@ -1,0 +1,162 @@
+{
+  "affected_system": "housing-stability, eviction prevention, shelter diversion, and support coordination",
+  "alternatives": [
+    "verify the highest-consequence signals before acting on housing-instability pathways and prevention-service gaps",
+    "combine targeted inspection, monitoring, and data-quality repair for housing-instability pathways and prevention-service gaps",
+    "pair privacy-preserving longitudinal pathway diagnosis with an explicit stop, review, and escalation rule"
+  ],
+  "analysis_modes": [
+    "descriptive"
+  ],
+  "assumptions": [
+    "Court, assistance, shelter, outreach, housing, and service records use privacy-preserving linkage.",
+    "Risk models support outreach only and never determine legal rights or automatic denial.",
+    "All alternatives, capacities, costs, effects, thresholds, and failure scenarios are proposed until bound to evidence."
+  ],
+  "baseline": "continue current inspection and reporting practice for housing-instability pathways and prevention-service gaps.",
+  "city_bindings": [],
+  "constraints": [
+    {
+      "binding": true,
+      "constraint_id": "scenario.housing.homelessness-prevention.stability-service-gaps.v1.constraint.binding",
+      "description": "The homelessness prevention and housing stability diagnose must respect declared measurement resolution and classification uncertainty.",
+      "hard": true,
+      "kind": "technical",
+      "required_source_roles": [
+        "community-input",
+        "demographic-context",
+        "equity-attribute",
+        "housing-market",
+        "operating-capacity",
+        "outcome-panel"
+      ]
+    },
+    {
+      "binding": false,
+      "constraint_id": "scenario.housing.homelessness-prevention.stability-service-gaps.v1.constraint.evidence-scope",
+      "description": "Every released metric must retain evidence type, source lineage, geography, time, assumptions, and uncertainty.",
+      "hard": true,
+      "kind": "technical",
+      "required_source_roles": [
+        "community-input"
+      ]
+    },
+    {
+      "binding": false,
+      "constraint_id": "scenario.housing.homelessness-prevention.stability-service-gaps.v1.constraint.decision-authority",
+      "description": "No analytical output may bypass lawful authority, accountable human review, or an applicable appeal process.",
+      "hard": true,
+      "kind": "regulatory",
+      "required_source_roles": [
+        "community-input"
+      ]
+    }
+  ],
+  "current_readiness": "blocked-missing-source",
+  "decision_cadence": "recompiled at each planning cycle and after material evidence change",
+  "decision_owner": "homelessness response director and housing-stability administrator",
+  "decision_question": "Where do rent burden, court filings, shelter entry, benefit loss, and service access reveal preventable system gaps?",
+  "decision_type": "diagnose",
+  "design_id": "scenario.housing.homelessness-prevention.stability-service-gaps.v1",
+  "design_order": 121,
+  "design_signature": "sha256:6643213efc97b1501fca35c46adab303242abd3e74a025f9f010bcf784b59cf9",
+  "evidence_requirements": [
+    "estimated",
+    "observed",
+    "proposed"
+  ],
+  "family_id": "housing.homelessness-prevention",
+  "family_title": "Homelessness prevention and housing stability",
+  "horizon": "annual",
+  "implementation_status": "design-only",
+  "independence_key": {
+    "binding_constraint": "The homelessness prevention and housing stability diagnose must respect declared measurement resolution and classification uncertainty.",
+    "decision_object": "housing-instability pathways and prevention-service gaps",
+    "evidence_gate": "Evidence for housing-instability pathways and prevention-service gaps passes documented checks for coverage, semantics, geography, timestamps, and uncertainty.",
+    "horizon": "annual",
+    "intervention_mechanism": "privacy-preserving longitudinal pathway diagnosis",
+    "primary_outcome": "eligible households entering crisis without prior prevention access",
+    "spatial_unit": "population-group"
+  },
+  "intended_claim": "A versioned diagnose design for comparing declared alternatives affecting housing-instability pathways and prevention-service gaps, conditional on its evidence gate.",
+  "limitations": [
+    "This library record has no city binding and therefore reports no local input, output, or recommendation.",
+    "Readiness describes explicit source and method gates; it does not certify implementation feasibility.",
+    "External domain, legal, community, security, and operational review remains outside this design artifact."
+  ],
+  "method_claimed": false,
+  "objectives": [
+    {
+      "evidence_type": "estimated",
+      "metric": "eligible households entering crisis without prior prevention access",
+      "objective_id": "scenario.housing.homelessness-prevention.stability-service-gaps.v1.objective.primary",
+      "primary": true,
+      "sense": "minimize",
+      "unit": "households"
+    },
+    {
+      "evidence_type": "estimated",
+      "metric": "distributional gap in eligible households entering crisis without prior prevention access",
+      "objective_id": "scenario.housing.homelessness-prevention.stability-service-gaps.v1.objective.equity",
+      "primary": false,
+      "sense": "minimize",
+      "unit": "households"
+    },
+    {
+      "evidence_type": "observed",
+      "metric": "decision claims with complete evidence lineage",
+      "objective_id": "scenario.housing.homelessness-prevention.stability-service-gaps.v1.objective.traceability",
+      "primary": false,
+      "sense": "maximize",
+      "unit": "percent"
+    }
+  ],
+  "prohibited_claims": [
+    "Do not label a household homeless, likely to be evicted, or noncompliant from proxy variables.",
+    "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+    "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+    "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+  ],
+  "release_gate": {
+    "failure_release": "Release an explicit insufficient-evidence record naming missing sources, failed diagnostics, prohibited claims, and the next validation action.",
+    "failure_status": "insufficient-evidence",
+    "gate_id": "scenario.housing.homelessness-prevention.stability-service-gaps.v1.gate.release",
+    "gate_type": "geographic-alignment",
+    "pass_condition": "Evidence for housing-instability pathways and prevention-service gaps passes documented checks for coverage, semantics, geography, timestamps, and uncertainty.",
+    "required_evidence_types": [
+      "observed",
+      "proposed"
+    ],
+    "required_source_roles": [
+      "community-input",
+      "demographic-context",
+      "equity-attribute",
+      "housing-market",
+      "operating-capacity",
+      "outcome-panel"
+    ]
+  },
+  "required_source_roles": [
+    "community-input",
+    "demographic-context",
+    "equity-attribute",
+    "housing-market",
+    "operating-capacity",
+    "outcome-panel"
+  ],
+  "schema_version": "1.0.0",
+  "spatial_unit": "population-group",
+  "suite": "housing-land-use-regeneration",
+  "tags": [
+    "design-only",
+    "diagnose",
+    "housing-land-use-regeneration",
+    "housing.homelessness-prevention",
+    "scenario-library"
+  ],
+  "title": "Diagnose housing-instability and prevention-service gaps",
+  "transportability_risks": [
+    "Eviction law, rents, benefits, shelter systems, informal displacement, and data linkage differ.",
+    "Administrative records omit people who do not seek or cannot access services."
+  ]
+}

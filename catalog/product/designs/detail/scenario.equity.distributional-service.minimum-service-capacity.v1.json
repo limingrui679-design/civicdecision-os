@@ -1,0 +1,227 @@
+{
+  "audit_maximum_pairwise_similarity": 0.646154,
+  "design": {
+    "affected_system": "cross-agency public-service access, workload, quality, and outcome distribution",
+    "alternatives": [
+      "protect minimum coverage before needs-based allocation of cross-agency minimum-service capacity",
+      "adapt allocations using observed demand, uptake, and capacity for cross-agency minimum-service capacity",
+      "pair needs-based allocation with explicit equity floors and uncertainty with an explicit stop, review, and escalation rule"
+    ],
+    "analysis_modes": [
+      "simulation",
+      "optimization"
+    ],
+    "assumptions": [
+      "Need, eligibility, access, requests, service, quality, and outcomes remain separate measures.",
+      "Protected and vulnerable group reporting follows privacy, legal, and small-cell safeguards.",
+      "All alternatives, capacities, costs, effects, thresholds, and failure scenarios are proposed until bound to evidence."
+    ],
+    "baseline": "retain the current distribution rule for cross-agency minimum-service capacity.",
+    "city_bindings": [],
+    "constraints": [
+      {
+        "binding": true,
+        "constraint_id": "scenario.equity.distributional-service.minimum-service-capacity.v1.constraint.binding",
+        "description": "The distributional public-service equity allocate must respect declared minimum service, eligibility, capacity, and distributional safeguards.",
+        "hard": true,
+        "kind": "equity",
+        "required_source_roles": [
+          "community-input",
+          "demographic-context",
+          "equity-attribute",
+          "municipal-demand",
+          "operating-capacity",
+          "service-schedule"
+        ]
+      },
+      {
+        "binding": false,
+        "constraint_id": "scenario.equity.distributional-service.minimum-service-capacity.v1.constraint.evidence-scope",
+        "description": "Every released metric must retain evidence type, source lineage, geography, time, assumptions, and uncertainty.",
+        "hard": true,
+        "kind": "technical",
+        "required_source_roles": [
+          "community-input"
+        ]
+      },
+      {
+        "binding": false,
+        "constraint_id": "scenario.equity.distributional-service.minimum-service-capacity.v1.constraint.decision-authority",
+        "description": "No analytical output may bypass lawful authority, accountable human review, or an applicable appeal process.",
+        "hard": true,
+        "kind": "regulatory",
+        "required_source_roles": [
+          "community-input"
+        ]
+      }
+    ],
+    "current_readiness": "reference-implemented",
+    "decision_cadence": "recompiled at each planning cycle and after material evidence change",
+    "decision_owner": "chief equity officer and city performance director",
+    "decision_question": "How should staff, funds, appointments, language, and field capacity be distributed across groups and areas?",
+    "decision_type": "allocate",
+    "design_id": "scenario.equity.distributional-service.minimum-service-capacity.v1",
+    "design_order": 213,
+    "design_signature": "sha256:3209ab84e56aaba8cee044bd86677efd2feb366ad6f9c43c4383d7e68bafd6ac",
+    "evidence_requirements": [
+      "estimated",
+      "observed",
+      "optimized",
+      "proposed",
+      "simulated"
+    ],
+    "existing_template_ref": "deep.equity.area-balance.v1",
+    "family_id": "equity.distributional-service",
+    "family_title": "Distributional public-service equity",
+    "horizon": "weeks",
+    "implementation_status": "reference-implemented",
+    "independence_key": {
+      "binding_constraint": "The distributional public-service equity allocate must respect declared minimum service, eligibility, capacity, and distributional safeguards.",
+      "decision_object": "cross-agency minimum-service capacity",
+      "evidence_gate": "Evidence for cross-agency minimum-service capacity passes documented checks for eligible denominators, group attributes, inventory, minimum-service rules, and allocation records.",
+      "horizon": "weeks",
+      "intervention_mechanism": "needs-based allocation with explicit equity floors and uncertainty",
+      "primary_outcome": "eligible population below minimum service coverage",
+      "spatial_unit": "population-group"
+    },
+    "intended_claim": "A versioned allocate design for comparing declared alternatives affecting cross-agency minimum-service capacity, conditional on its evidence gate.",
+    "limitations": [
+      "This library record has no city binding and therefore reports no local input, output, or recommendation.",
+      "Readiness describes explicit source and method gates; it does not certify implementation feasibility.",
+      "External domain, legal, community, security, and operational review remains outside this design artifact."
+    ],
+    "method_claimed": false,
+    "objectives": [
+      {
+        "evidence_type": "estimated",
+        "metric": "eligible population below minimum service coverage",
+        "objective_id": "scenario.equity.distributional-service.minimum-service-capacity.v1.objective.primary",
+        "primary": true,
+        "sense": "minimize",
+        "unit": "people"
+      },
+      {
+        "evidence_type": "estimated",
+        "metric": "distributional gap in eligible population below minimum service coverage",
+        "objective_id": "scenario.equity.distributional-service.minimum-service-capacity.v1.objective.equity",
+        "primary": false,
+        "sense": "minimize",
+        "unit": "people"
+      },
+      {
+        "evidence_type": "observed",
+        "metric": "decision claims with complete evidence lineage",
+        "objective_id": "scenario.equity.distributional-service.minimum-service-capacity.v1.objective.traceability",
+        "primary": false,
+        "sense": "maximize",
+        "unit": "percent"
+      }
+    ],
+    "prohibited_claims": [
+      "Do not call area-balanced request capacity demographic equity, delivered service, or improved outcomes.",
+      "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+      "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+      "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+    ],
+    "reference_implementation_note": "Tier-D template deep.equity.area-balance.v1 (Area-level request balance) supplies a bounded reference workflow for this design axis. The mapping does not establish complete city-specific inputs, external validity, deployment, adoption, or impact.",
+    "release_gate": {
+      "failure_release": "Release an explicit insufficient-evidence record naming missing sources, failed diagnostics, prohibited claims, and the next validation action.",
+      "failure_status": "insufficient-evidence",
+      "gate_id": "scenario.equity.distributional-service.minimum-service-capacity.v1.gate.release",
+      "gate_type": "equity-measurement",
+      "pass_condition": "Evidence for cross-agency minimum-service capacity passes documented checks for eligible denominators, group attributes, inventory, minimum-service rules, and allocation records.",
+      "required_evidence_types": [
+        "observed",
+        "proposed"
+      ],
+      "required_source_roles": [
+        "community-input",
+        "demographic-context",
+        "equity-attribute",
+        "municipal-demand",
+        "operating-capacity",
+        "service-schedule"
+      ]
+    },
+    "required_source_roles": [
+      "community-input",
+      "demographic-context",
+      "equity-attribute",
+      "municipal-demand",
+      "operating-capacity",
+      "service-schedule"
+    ],
+    "schema_version": "1.0.0",
+    "spatial_unit": "population-group",
+    "suite": "behavioral-policy-equity",
+    "tags": [
+      "allocate",
+      "behavioral-policy-equity",
+      "equity.distributional-service",
+      "reference-implemented",
+      "scenario-library"
+    ],
+    "title": "Allocate capacity under minimum equitable service guarantees",
+    "transportability_risks": [
+      "Rights, demographics, service rules, need measurement, geography, and reporting access differ.",
+      "Administrative denominators may omit eligible or underserved populations."
+    ]
+  },
+  "family": {
+    "affected_system": "cross-agency public-service access, workload, quality, and outcome distribution",
+    "claim_boundary": [
+      "Area and administrative differences do not establish discrimination, preferences, or individual behavior.",
+      "Behavioral and allocation designs require rights, accessibility, privacy, and non-coercion review.",
+      "Causal, fairness, adoption, and welfare claims require direct outcomes and independent governance evidence."
+    ],
+    "common_source_roles": [
+      "demographic-context",
+      "equity-attribute",
+      "municipal-demand"
+    ],
+    "decision_owner": "chief equity officer and city performance director",
+    "decision_types": [
+      "diagnose",
+      "forecast",
+      "prioritize",
+      "site",
+      "allocate",
+      "schedule",
+      "stress-test",
+      "evaluate"
+    ],
+    "description": "Eight decisions for disparity diagnosis, need forecasting, equity portfolios, service siting, resource allocation, corrective scheduling, disruption stress, and equity evaluation.",
+    "design_refs": [
+      "scenario.equity.distributional-service.service-disparities.v1",
+      "scenario.equity.distributional-service.equitable-service-need.v1",
+      "scenario.equity.distributional-service.equity-improvement-portfolio.v1",
+      "scenario.equity.distributional-service.equitable-service-network.v1",
+      "scenario.equity.distributional-service.minimum-service-capacity.v1",
+      "scenario.equity.distributional-service.equity-remediation.v1",
+      "scenario.equity.distributional-service.equity-under-disruption.v1",
+      "scenario.equity.distributional-service.equity-policy-effect.v1"
+    ],
+    "design_signatures": [
+      "sha256:1bab8aa5532fa6456923e0c22dc78b9cb3d6b9f524eb41c0f1fc6be24adcf76d",
+      "sha256:485d66db16f85e06ce8d772beb29716546ca76f4c11377d2c5d4e3f9086000dc",
+      "sha256:8a947f5af67c2183af01352650751209f5534bce98b8bee684895284c06d318c",
+      "sha256:b8dfd7cdf2863b9f7d7b551b587d197695b6b0cad9cd1cbf2bc8392197ce005d",
+      "sha256:3209ab84e56aaba8cee044bd86677efd2feb366ad6f9c43c4383d7e68bafd6ac",
+      "sha256:97a4f74b2b91013cc2886c378a99521a3571b330e8f0c984596951d449c2dd3a",
+      "sha256:db2267addaff1192dc67d562fa7a71e06974a9fd2c6c678fe343736af07f3e18",
+      "sha256:fd89e399000a5a0e4d86f96292cc07a06e135ac71ae78a72ed9a0475ec78e64b"
+    ],
+    "family_id": "equity.distributional-service",
+    "family_order": 27,
+    "schema_version": "1.0.0",
+    "suite": "behavioral-policy-equity",
+    "title": "Distributional public-service equity"
+  },
+  "library_claim_boundary": [
+    "The catalog contains 240 decision designs, not 240 city executions.",
+    "Exactly twelve designs map to existing Tier-D reference templates; 228 remain design-only.",
+    "A reference implementation can be an explicit negative release and does not imply impact.",
+    "No record claims a city binding, new method, deployment, adoption, or real-user outcome.",
+    "Future execution requires source binding, gate passage, and domain, legal, community, and operational review."
+  ]
+}

@@ -11,25 +11,28 @@ CivicDecision exposes the same committed artifact snapshot through five product 
 5. a data-only city-adapter plugin SDK.
 
 These surfaces do not maintain independent copies of the project facts. They all project from
-`ArtifactStore`, which loads the Tier-G, Tier-S, Tier-D, reference-workflow, source-manifest, and
-benchmark registries and validates their internal references before returning a product model.
+`ArtifactStore`, which loads the Tier-G, Tier-S, Tier-D, scenario-library, reference-workflow,
+source-manifest, and benchmark registries and validates their internal references before returning
+a product model.
 The product layer therefore cannot turn a screen into a recommendation, omit a negative release,
 or upgrade a proposed value into an observed result without first violating a typed model or an
 underlying artifact hash.
 
 ## Verified product snapshot
 
-The committed `catalog/product/` tree contains 35 files:
+The committed `catalog/product/` tree contains 338 files:
 
-- 33 manifest-indexed JSON artifacts;
-- one manifest describing all 33 artifacts; and
-- one portable checksum file covering the other 34 files.
+- 336 manifest-indexed artifacts;
+- one manifest describing all 336 artifacts; and
+- one portable checksum file covering the other 337 files.
 
-The projection contains four city indexes, five scenario indexes, the complete source index,
-seven-suite index, analytical benchmark overview, Tier-D evidence summary, deterministic OpenAPI
-document, web-asset manifest, catalog summary, and 17 product/plugin JSON Schemas. The builder
-reconstructs the complete tree in a temporary directory; the repository verifier requires exact
-path and byte equality with the committed tree.
+The projection contains four city indexes, five execution indexes, 18 total/status/suite/type
+design indexes, 240 full design details, one family index, 30 full family details, the complete
+source index, seven-suite index, analytical benchmark overview, Tier-D and scenario-library
+evidence, the scenario-library audit and registry, deterministic OpenAPI document, web-asset
+manifest, catalog summary, and 28 product/plugin/library JSON Schemas. The builder reconstructs
+the complete tree in a temporary directory; the repository verifier requires exact path and byte
+equality with the committed tree.
 
 The snapshot exposes the following current facts without changing their meaning:
 
@@ -40,6 +43,11 @@ The snapshot exposes the following current facts without changing their meaning:
 | Source artifacts | 90 |
 | Declared heterogeneous source units | 258,478 |
 | Standard descriptive/evidence-gate screens | 90 |
+| Audited scenario designs | 240 |
+| Scenario-design families | 30 |
+| Reference-implemented designs | 12 |
+| Design-only records | 228 |
+| Scenario-library city bindings / methods claimed | 0 / 0 |
 | Deep city-bound scenario executions | 96 |
 | Reference workflow executions | 2 |
 | Total scenario executions | 188 |
@@ -59,7 +67,7 @@ infeasible configurations.
 committed source artifacts + manifests
                  |
                  v
-Tier G / Tier S / Tier D / benchmark registries
+Tier G / Tier S / Tier D / scenario library / benchmark registries
                  |
                  v
       fail-closed ArtifactStore
@@ -113,12 +121,17 @@ Every surface must preserve these boundaries:
 - public-data reproducibility is not external review, production deployment, adoption, users, or
   real-world impact;
 - benchmark scale is not municipal outcome evidence; and
+- a scenario-library design is not a city execution, delivered project, deployment, adoption, or
+  impact result;
+- a reference implementation is a bounded template mapping and can still release a negative
+  result; and
 - a plugin package hash proves byte identity, not source truth or local readiness.
 
 ## Verification boundary
 
-Local product tests establish implementation behavior, response/model consistency, negative-path
-handling, deterministic generation, browser rendering, and checksum integrity. They do not
+Local product tests establish implementation behavior, response/model consistency, compound
+design filtering, non-inflation boundaries, negative-path handling, deterministic generation,
+browser rendering, and checksum integrity. They do not
 establish public-host availability, third-party security certification, external method review,
 institutional use, or policy correctness. Those remain separate release and external-evidence
 gates.

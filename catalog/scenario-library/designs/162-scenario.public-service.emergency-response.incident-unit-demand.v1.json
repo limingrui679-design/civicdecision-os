@@ -1,0 +1,162 @@
+{
+  "affected_system": "non-clinical emergency call handling, unit readiness, and incident support network",
+  "alternatives": [
+    "activate a bounded reserve from forecast risk bands for emergency call and unit-hour demand",
+    "use rolling forecasts and conservative capacity triggers for emergency call and unit-hour demand",
+    "pair spatiotemporal incident and service-time forecasting with an explicit stop, review, and escalation rule"
+  ],
+  "analysis_modes": [
+    "forecast"
+  ],
+  "assumptions": [
+    "Calls, incidents, dispositions, unit states, travel, scene time, and outcomes remain distinct.",
+    "Any operational recommendation requires agency safety review and cannot automate high-stakes dispatch.",
+    "All alternatives, capacities, costs, effects, thresholds, and failure scenarios are proposed until bound to evidence."
+  ],
+  "baseline": "continue ordinary capacity planning for emergency call and unit-hour demand.",
+  "city_bindings": [],
+  "constraints": [
+    {
+      "binding": true,
+      "constraint_id": "scenario.public-service.emergency-response.incident-unit-demand.v1.constraint.binding",
+      "description": "The emergency response readiness and allocation forecast must respect declared validated operational capacity and forecast uncertainty.",
+      "hard": true,
+      "kind": "capacity",
+      "required_source_roles": [
+        "climate-hazard",
+        "municipal-demand",
+        "operating-capacity",
+        "real-time-state",
+        "service-schedule",
+        "transport-network"
+      ]
+    },
+    {
+      "binding": false,
+      "constraint_id": "scenario.public-service.emergency-response.incident-unit-demand.v1.constraint.evidence-scope",
+      "description": "Every released metric must retain evidence type, source lineage, geography, time, assumptions, and uncertainty.",
+      "hard": true,
+      "kind": "technical",
+      "required_source_roles": [
+        "climate-hazard"
+      ]
+    },
+    {
+      "binding": false,
+      "constraint_id": "scenario.public-service.emergency-response.incident-unit-demand.v1.constraint.decision-authority",
+      "description": "No analytical output may bypass lawful authority, accountable human review, or an applicable appeal process.",
+      "hard": true,
+      "kind": "regulatory",
+      "required_source_roles": [
+        "climate-hazard"
+      ]
+    }
+  ],
+  "current_readiness": "blocked-missing-source",
+  "decision_cadence": "recompiled at each planning cycle and after material evidence change",
+  "decision_owner": "emergency communications director and public-safety operations chief",
+  "decision_question": "What place-time priority call, unit-hour, and mutual-aid demand range should readiness planning use?",
+  "decision_type": "forecast",
+  "design_id": "scenario.public-service.emergency-response.incident-unit-demand.v1",
+  "design_order": 162,
+  "design_signature": "sha256:9b586dfebcf6f6cb5e7c10c39e0623de0ee43ee320e2e8a4b19674949ed2aa1f",
+  "evidence_requirements": [
+    "estimated",
+    "observed",
+    "proposed"
+  ],
+  "family_id": "public-service.emergency-response",
+  "family_title": "Emergency response readiness and allocation",
+  "horizon": "weeks",
+  "implementation_status": "design-only",
+  "independence_key": {
+    "binding_constraint": "The emergency response readiness and allocation forecast must respect declared validated operational capacity and forecast uncertainty.",
+    "decision_object": "emergency call and unit-hour demand",
+    "evidence_gate": "Evidence for emergency call and unit-hour demand passes documented checks for held-out error, interval coverage, event detection, drift, and baseline comparison.",
+    "horizon": "weeks",
+    "intervention_mechanism": "spatiotemporal incident and service-time forecasting",
+    "primary_outcome": "priority unit-hours above deployable capacity",
+    "spatial_unit": "service-area"
+  },
+  "intended_claim": "A versioned forecast design for comparing declared alternatives affecting emergency call and unit-hour demand, conditional on its evidence gate.",
+  "limitations": [
+    "This library record has no city binding and therefore reports no local input, output, or recommendation.",
+    "Readiness describes explicit source and method gates; it does not certify implementation feasibility.",
+    "External domain, legal, community, security, and operational review remains outside this design artifact."
+  ],
+  "method_claimed": false,
+  "objectives": [
+    {
+      "evidence_type": "estimated",
+      "metric": "priority unit-hours above deployable capacity",
+      "objective_id": "scenario.public-service.emergency-response.incident-unit-demand.v1.objective.primary",
+      "primary": true,
+      "sense": "minimize",
+      "unit": "unit-hours"
+    },
+    {
+      "evidence_type": "estimated",
+      "metric": "distributional gap in priority unit-hours above deployable capacity",
+      "objective_id": "scenario.public-service.emergency-response.incident-unit-demand.v1.objective.equity",
+      "primary": false,
+      "sense": "minimize",
+      "unit": "unit-hours"
+    },
+    {
+      "evidence_type": "observed",
+      "metric": "decision claims with complete evidence lineage",
+      "objective_id": "scenario.public-service.emergency-response.incident-unit-demand.v1.objective.traceability",
+      "primary": false,
+      "sense": "maximize",
+      "unit": "percent"
+    }
+  ],
+  "prohibited_claims": [
+    "Do not present forecast calls as incidents, casualties, or verified emergency need.",
+    "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+    "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+    "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+  ],
+  "release_gate": {
+    "failure_release": "Release an explicit insufficient-evidence record naming missing sources, failed diagnostics, prohibited claims, and the next validation action.",
+    "failure_status": "insufficient-evidence",
+    "gate_id": "scenario.public-service.emergency-response.incident-unit-demand.v1.gate.release",
+    "gate_type": "model-calibration",
+    "pass_condition": "Evidence for emergency call and unit-hour demand passes documented checks for held-out error, interval coverage, event detection, drift, and baseline comparison.",
+    "required_evidence_types": [
+      "estimated",
+      "observed"
+    ],
+    "required_source_roles": [
+      "climate-hazard",
+      "municipal-demand",
+      "operating-capacity",
+      "real-time-state",
+      "service-schedule",
+      "transport-network"
+    ]
+  },
+  "required_source_roles": [
+    "climate-hazard",
+    "municipal-demand",
+    "operating-capacity",
+    "real-time-state",
+    "service-schedule",
+    "transport-network"
+  ],
+  "schema_version": "1.0.0",
+  "spatial_unit": "service-area",
+  "suite": "public-service-operations",
+  "tags": [
+    "design-only",
+    "forecast",
+    "public-service-operations",
+    "public-service.emergency-response",
+    "scenario-library"
+  ],
+  "title": "Forecast emergency call and unit demand",
+  "transportability_risks": [
+    "Call coding, dispatch policy, mutual aid, geography, traffic, staffing, and incident mix differ.",
+    "Recorded response time may omit call processing, staging, or outcome quality."
+  ]
+}

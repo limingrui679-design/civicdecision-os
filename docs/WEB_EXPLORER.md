@@ -9,6 +9,15 @@ separate dashboard database and does not compute new recommendations in JavaScri
 - Tier G, S, D, or highest-available city coverage;
 - searchable city index and coordinate-based world overview;
 - typed city details, metrics, capability assessments, data gaps, source IDs, and provenance;
+- six scenario-library audit indicators, including the separate reference/design-only counts;
+- explicit zero city-binding and zero method-claim indicators;
+- all 30 domain families with family-to-eight-design filtering;
+- 240 scenario designs filterable by suite, family, decision type, implementation status,
+  readiness, and normalized text search;
+- design details containing baseline, alternatives, objectives, constraints, evidence gate, source
+  roles, assumptions, limitations, prohibited claims, and transportability risks;
+- family details containing all eight ordered decision types and shared claim boundaries;
+- anti-duplication evidence for all 28,680 unordered design pairs;
 - deep execution completion/negative-release ratios by application suite;
 - filterable standard, deep, and reference scenario ledger;
 - scenario drawer with recommendation status, claim boundary, limitations, artifact hashes, and
@@ -26,7 +35,9 @@ The interface uses semantic headings, landmarks, tables, native controls, visibl
 skip navigation, labelled map controls, keyboard-operable drawers, focus return, focus trapping,
 Escape-to-close, live loading regions, reduced-motion support, and a print stylesheet. The layout
 was inspected at the default desktop viewport and a 390 × 844 mobile viewport. Mobile inspection
-confirmed a dedicated navigation control and no horizontal document overflow.
+confirmed a dedicated navigation control, family selection, exact eight-design filtering, drawer
+interaction, and zero horizontal scroll. Desktop inspection confirmed compound filters,
+punctuation-normalized search, audit/detail drawers, and zero browser warnings or errors.
 
 ## Runtime boundary
 

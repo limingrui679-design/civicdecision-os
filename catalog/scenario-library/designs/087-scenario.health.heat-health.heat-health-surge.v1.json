@@ -1,0 +1,166 @@
+{
+  "affected_system": "heat-health surveillance, prevention, and care coordination",
+  "alternatives": [
+    "add targeted redundancy around the largest failure modes in heat-health system continuity under compound surge",
+    "select an adaptive robust portfolio across severe scenarios for heat-health system continuity under compound surge",
+    "pair care-demand, power, facility, and staffing failure simulation with an explicit stop, review, and escalation rule"
+  ],
+  "analysis_modes": [
+    "forecast",
+    "simulation",
+    "optimization"
+  ],
+  "assumptions": [
+    "Health records are privacy-preserving, population-defined, timely, and separated from service-request proxies.",
+    "Heat exposure, care seeking, reporting, and intervention effects remain distinct constructs.",
+    "All alternatives, capacities, costs, effects, thresholds, and failure scenarios are proposed until bound to evidence."
+  ],
+  "baseline": "apply current continuity provisions to heat-health system continuity under compound surge.",
+  "city_bindings": [],
+  "constraints": [
+    {
+      "binding": true,
+      "constraint_id": "scenario.health.heat-health.heat-health-surge.v1.constraint.binding",
+      "description": "The heat-health surveillance and prevention stress test must respect declared minimum continuity and safety thresholds across severe scenarios.",
+      "hard": true,
+      "kind": "risk",
+      "required_source_roles": [
+        "asset-condition",
+        "climate-hazard",
+        "demographic-context",
+        "facility-inventory",
+        "health-outcome",
+        "operating-capacity"
+      ]
+    },
+    {
+      "binding": false,
+      "constraint_id": "scenario.health.heat-health.heat-health-surge.v1.constraint.evidence-scope",
+      "description": "Every released metric must retain evidence type, source lineage, geography, time, assumptions, and uncertainty.",
+      "hard": true,
+      "kind": "technical",
+      "required_source_roles": [
+        "asset-condition"
+      ]
+    },
+    {
+      "binding": false,
+      "constraint_id": "scenario.health.heat-health.heat-health-surge.v1.constraint.decision-authority",
+      "description": "No analytical output may bypass lawful authority, accountable human review, or an applicable appeal process.",
+      "hard": true,
+      "kind": "regulatory",
+      "required_source_roles": [
+        "asset-condition"
+      ]
+    }
+  ],
+  "current_readiness": "blocked-missing-source",
+  "decision_cadence": "recompiled at each planning cycle and after material evidence change",
+  "decision_owner": "public-health preparedness director and emergency medical services lead",
+  "decision_question": "Which prevention and care strategy preserves essential capacity during prolonged heat, outages, and staff loss?",
+  "decision_type": "stress-test",
+  "design_id": "scenario.health.heat-health.heat-health-surge.v1",
+  "design_order": 87,
+  "design_signature": "sha256:5b25be1dd9afac13ec771f70313ac463edcc72f263f9f8706f5a882139ab71aa",
+  "evidence_requirements": [
+    "estimated",
+    "observed",
+    "optimized",
+    "proposed",
+    "simulated"
+  ],
+  "family_id": "health.heat-health",
+  "family_title": "Heat-health surveillance and prevention",
+  "horizon": "seasonal",
+  "implementation_status": "design-only",
+  "independence_key": {
+    "binding_constraint": "The heat-health surveillance and prevention stress test must respect declared minimum continuity and safety thresholds across severe scenarios.",
+    "decision_object": "heat-health system continuity under compound surge",
+    "evidence_gate": "Evidence for heat-health system continuity under compound surge passes documented checks for scenario ranges, dependence, failure rates, recovery, intervention performance, and sensitivity.",
+    "horizon": "seasonal",
+    "intervention_mechanism": "care-demand, power, facility, and staffing failure simulation",
+    "primary_outcome": "scenario-weighted unmet critical heat-health demand",
+    "spatial_unit": "network"
+  },
+  "intended_claim": "A versioned stress-test design for comparing declared alternatives affecting heat-health system continuity under compound surge, conditional on its evidence gate.",
+  "limitations": [
+    "This library record has no city binding and therefore reports no local input, output, or recommendation.",
+    "Readiness describes explicit source and method gates; it does not certify implementation feasibility.",
+    "External domain, legal, community, security, and operational review remains outside this design artifact."
+  ],
+  "method_claimed": false,
+  "objectives": [
+    {
+      "evidence_type": "estimated",
+      "metric": "scenario-weighted unmet critical heat-health demand",
+      "objective_id": "scenario.health.heat-health.heat-health-surge.v1.objective.primary",
+      "primary": true,
+      "sense": "minimize",
+      "unit": "encounters"
+    },
+    {
+      "evidence_type": "estimated",
+      "metric": "distributional gap in scenario-weighted unmet critical heat-health demand",
+      "objective_id": "scenario.health.heat-health.heat-health-surge.v1.objective.equity",
+      "primary": false,
+      "sense": "minimize",
+      "unit": "encounters"
+    },
+    {
+      "evidence_type": "observed",
+      "metric": "decision claims with complete evidence lineage",
+      "objective_id": "scenario.health.heat-health.heat-health-surge.v1.objective.traceability",
+      "primary": false,
+      "sense": "maximize",
+      "unit": "percent"
+    }
+  ],
+  "prohibited_claims": [
+    "Do not present simulated patient loads or failures as an epidemic forecast or observed harm.",
+    "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+    "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+    "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+  ],
+  "release_gate": {
+    "failure_release": "Release an explicit insufficient-evidence record naming missing sources, failed diagnostics, prohibited claims, and the next validation action.",
+    "failure_status": "insufficient-evidence",
+    "gate_id": "scenario.health.heat-health.heat-health-surge.v1.gate.release",
+    "gate_type": "external-validation",
+    "pass_condition": "Evidence for heat-health system continuity under compound surge passes documented checks for scenario ranges, dependence, failure rates, recovery, intervention performance, and sensitivity.",
+    "required_evidence_types": [
+      "estimated",
+      "observed"
+    ],
+    "required_source_roles": [
+      "asset-condition",
+      "climate-hazard",
+      "demographic-context",
+      "facility-inventory",
+      "health-outcome",
+      "operating-capacity"
+    ]
+  },
+  "required_source_roles": [
+    "asset-condition",
+    "climate-hazard",
+    "demographic-context",
+    "facility-inventory",
+    "health-outcome",
+    "operating-capacity"
+  ],
+  "schema_version": "1.0.0",
+  "spatial_unit": "network",
+  "suite": "population-health-environmental-exposure",
+  "tags": [
+    "design-only",
+    "health.heat-health",
+    "population-health-environmental-exposure",
+    "scenario-library",
+    "stress-test"
+  ],
+  "title": "Stress-test heat-health surge capacity",
+  "transportability_risks": [
+    "Clinical coding, surveillance coverage, acclimatization, housing, and care access vary.",
+    "Small-area health estimates may be unstable or disclosure-sensitive."
+  ]
+}

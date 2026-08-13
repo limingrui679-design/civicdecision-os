@@ -1,0 +1,165 @@
+{
+  "affected_system": "heat-health surveillance, prevention, and care coordination",
+  "alternatives": [
+    "protect minimum coverage before needs-based allocation of heat-health outreach and surge resources",
+    "adapt allocations using observed demand, uptake, and capacity for heat-health outreach and surge resources",
+    "pair risk-, access-, and minimum-coverage allocation with an explicit stop, review, and escalation rule"
+  ],
+  "analysis_modes": [
+    "simulation",
+    "optimization"
+  ],
+  "assumptions": [
+    "Health records are privacy-preserving, population-defined, timely, and separated from service-request proxies.",
+    "Heat exposure, care seeking, reporting, and intervention effects remain distinct constructs.",
+    "All alternatives, capacities, costs, effects, thresholds, and failure scenarios are proposed until bound to evidence."
+  ],
+  "baseline": "retain the current distribution rule for heat-health outreach and surge resources.",
+  "city_bindings": [],
+  "constraints": [
+    {
+      "binding": true,
+      "constraint_id": "scenario.health.heat-health.heat-health-outreach.v1.constraint.binding",
+      "description": "The heat-health surveillance and prevention allocate must respect declared minimum service, eligibility, capacity, and distributional safeguards.",
+      "hard": true,
+      "kind": "equity",
+      "required_source_roles": [
+        "climate-hazard",
+        "demographic-context",
+        "equity-attribute",
+        "health-outcome",
+        "operating-capacity",
+        "real-time-state"
+      ]
+    },
+    {
+      "binding": false,
+      "constraint_id": "scenario.health.heat-health.heat-health-outreach.v1.constraint.evidence-scope",
+      "description": "Every released metric must retain evidence type, source lineage, geography, time, assumptions, and uncertainty.",
+      "hard": true,
+      "kind": "technical",
+      "required_source_roles": [
+        "climate-hazard"
+      ]
+    },
+    {
+      "binding": false,
+      "constraint_id": "scenario.health.heat-health.heat-health-outreach.v1.constraint.decision-authority",
+      "description": "No analytical output may bypass lawful authority, accountable human review, or an applicable appeal process.",
+      "hard": true,
+      "kind": "regulatory",
+      "required_source_roles": [
+        "climate-hazard"
+      ]
+    }
+  ],
+  "current_readiness": "blocked-missing-source",
+  "decision_cadence": "recompiled at each planning cycle and after material evidence change",
+  "decision_owner": "public-health preparedness director and emergency medical services lead",
+  "decision_question": "How should community health workers, call capacity, transport, and clinical surge slots be distributed?",
+  "decision_type": "allocate",
+  "design_id": "scenario.health.heat-health.heat-health-outreach.v1",
+  "design_order": 85,
+  "design_signature": "sha256:57fe8719e6a2e0f50a7267ff6c27bf27bd27261523bca385a803a7feec12c52e",
+  "evidence_requirements": [
+    "estimated",
+    "observed",
+    "optimized",
+    "proposed",
+    "simulated"
+  ],
+  "family_id": "health.heat-health",
+  "family_title": "Heat-health surveillance and prevention",
+  "horizon": "weeks",
+  "implementation_status": "design-only",
+  "independence_key": {
+    "binding_constraint": "The heat-health surveillance and prevention allocate must respect declared minimum service, eligibility, capacity, and distributional safeguards.",
+    "decision_object": "heat-health outreach and surge resources",
+    "evidence_gate": "Evidence for heat-health outreach and surge resources passes documented checks for eligible denominators, group attributes, inventory, minimum-service rules, and allocation records.",
+    "horizon": "weeks",
+    "intervention_mechanism": "risk-, access-, and minimum-coverage allocation",
+    "primary_outcome": "high-risk people without assigned support capacity",
+    "spatial_unit": "population-group"
+  },
+  "intended_claim": "A versioned allocate design for comparing declared alternatives affecting heat-health outreach and surge resources, conditional on its evidence gate.",
+  "limitations": [
+    "This library record has no city binding and therefore reports no local input, output, or recommendation.",
+    "Readiness describes explicit source and method gates; it does not certify implementation feasibility.",
+    "External domain, legal, community, security, and operational review remains outside this design artifact."
+  ],
+  "method_claimed": false,
+  "objectives": [
+    {
+      "evidence_type": "estimated",
+      "metric": "high-risk people without assigned support capacity",
+      "objective_id": "scenario.health.heat-health.heat-health-outreach.v1.objective.primary",
+      "primary": true,
+      "sense": "minimize",
+      "unit": "people"
+    },
+    {
+      "evidence_type": "estimated",
+      "metric": "distributional gap in high-risk people without assigned support capacity",
+      "objective_id": "scenario.health.heat-health.heat-health-outreach.v1.objective.equity",
+      "primary": false,
+      "sense": "minimize",
+      "unit": "people"
+    },
+    {
+      "evidence_type": "observed",
+      "metric": "decision claims with complete evidence lineage",
+      "objective_id": "scenario.health.heat-health.heat-health-outreach.v1.objective.traceability",
+      "primary": false,
+      "sense": "maximize",
+      "unit": "percent"
+    }
+  ],
+  "prohibited_claims": [
+    "Do not report assigned support as contacted patients, completed visits, or improved health.",
+    "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+    "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+    "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+  ],
+  "release_gate": {
+    "failure_release": "Release an explicit insufficient-evidence record naming missing sources, failed diagnostics, prohibited claims, and the next validation action.",
+    "failure_status": "insufficient-evidence",
+    "gate_id": "scenario.health.heat-health.heat-health-outreach.v1.gate.release",
+    "gate_type": "equity-measurement",
+    "pass_condition": "Evidence for heat-health outreach and surge resources passes documented checks for eligible denominators, group attributes, inventory, minimum-service rules, and allocation records.",
+    "required_evidence_types": [
+      "observed",
+      "proposed"
+    ],
+    "required_source_roles": [
+      "climate-hazard",
+      "demographic-context",
+      "equity-attribute",
+      "health-outcome",
+      "operating-capacity",
+      "real-time-state"
+    ]
+  },
+  "required_source_roles": [
+    "climate-hazard",
+    "demographic-context",
+    "equity-attribute",
+    "health-outcome",
+    "operating-capacity",
+    "real-time-state"
+  ],
+  "schema_version": "1.0.0",
+  "spatial_unit": "population-group",
+  "suite": "population-health-environmental-exposure",
+  "tags": [
+    "allocate",
+    "design-only",
+    "health.heat-health",
+    "population-health-environmental-exposure",
+    "scenario-library"
+  ],
+  "title": "Allocate heat-health outreach and clinical surge support",
+  "transportability_risks": [
+    "Clinical coding, surveillance coverage, acclimatization, housing, and care access vary.",
+    "Small-area health estimates may be unstable or disclosure-sensitive."
+  ]
+}

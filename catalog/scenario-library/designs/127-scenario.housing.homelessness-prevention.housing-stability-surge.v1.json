@@ -1,0 +1,166 @@
+{
+  "affected_system": "housing-stability, eviction prevention, shelter diversion, and support coordination",
+  "alternatives": [
+    "add targeted redundancy around the largest failure modes in housing-stability prevention under compound market shock",
+    "select an adaptive robust portfolio across severe scenarios for housing-stability prevention under compound market shock",
+    "pair household-flow, funding, legal, and shelter-capacity simulation with an explicit stop, review, and escalation rule"
+  ],
+  "analysis_modes": [
+    "forecast",
+    "simulation",
+    "optimization"
+  ],
+  "assumptions": [
+    "Court, assistance, shelter, outreach, housing, and service records use privacy-preserving linkage.",
+    "Risk models support outreach only and never determine legal rights or automatic denial.",
+    "All alternatives, capacities, costs, effects, thresholds, and failure scenarios are proposed until bound to evidence."
+  ],
+  "baseline": "apply current continuity provisions to housing-stability prevention under compound market shock.",
+  "city_bindings": [],
+  "constraints": [
+    {
+      "binding": true,
+      "constraint_id": "scenario.housing.homelessness-prevention.housing-stability-surge.v1.constraint.binding",
+      "description": "The homelessness prevention and housing stability stress test must respect declared minimum continuity and safety thresholds across severe scenarios.",
+      "hard": true,
+      "kind": "risk",
+      "required_source_roles": [
+        "climate-hazard",
+        "demographic-context",
+        "facility-inventory",
+        "financial-cost",
+        "housing-market",
+        "operating-capacity"
+      ]
+    },
+    {
+      "binding": false,
+      "constraint_id": "scenario.housing.homelessness-prevention.housing-stability-surge.v1.constraint.evidence-scope",
+      "description": "Every released metric must retain evidence type, source lineage, geography, time, assumptions, and uncertainty.",
+      "hard": true,
+      "kind": "technical",
+      "required_source_roles": [
+        "climate-hazard"
+      ]
+    },
+    {
+      "binding": false,
+      "constraint_id": "scenario.housing.homelessness-prevention.housing-stability-surge.v1.constraint.decision-authority",
+      "description": "No analytical output may bypass lawful authority, accountable human review, or an applicable appeal process.",
+      "hard": true,
+      "kind": "regulatory",
+      "required_source_roles": [
+        "climate-hazard"
+      ]
+    }
+  ],
+  "current_readiness": "blocked-missing-source",
+  "decision_cadence": "recompiled at each planning cycle and after material evidence change",
+  "decision_owner": "homelessness response director and housing-stability administrator",
+  "decision_question": "Which prevention strategy preserves minimum support during rent, income, disaster, and shelter-capacity shocks?",
+  "decision_type": "stress-test",
+  "design_id": "scenario.housing.homelessness-prevention.housing-stability-surge.v1",
+  "design_order": 127,
+  "design_signature": "sha256:c762f6009ac1fc64348d1371a3d3635b580099c197049853bc8bb18fe6ec1ffe",
+  "evidence_requirements": [
+    "estimated",
+    "observed",
+    "optimized",
+    "proposed",
+    "simulated"
+  ],
+  "family_id": "housing.homelessness-prevention",
+  "family_title": "Homelessness prevention and housing stability",
+  "horizon": "seasonal",
+  "implementation_status": "design-only",
+  "independence_key": {
+    "binding_constraint": "The homelessness prevention and housing stability stress test must respect declared minimum continuity and safety thresholds across severe scenarios.",
+    "decision_object": "housing-stability prevention under compound market shock",
+    "evidence_gate": "Evidence for housing-stability prevention under compound market shock passes documented checks for scenario ranges, dependence, failure rates, recovery, intervention performance, and sensitivity.",
+    "horizon": "seasonal",
+    "intervention_mechanism": "household-flow, funding, legal, and shelter-capacity simulation",
+    "primary_outcome": "scenario-weighted urgent households without timely prevention",
+    "spatial_unit": "network"
+  },
+  "intended_claim": "A versioned stress-test design for comparing declared alternatives affecting housing-stability prevention under compound market shock, conditional on its evidence gate.",
+  "limitations": [
+    "This library record has no city binding and therefore reports no local input, output, or recommendation.",
+    "Readiness describes explicit source and method gates; it does not certify implementation feasibility.",
+    "External domain, legal, community, security, and operational review remains outside this design artifact."
+  ],
+  "method_claimed": false,
+  "objectives": [
+    {
+      "evidence_type": "estimated",
+      "metric": "scenario-weighted urgent households without timely prevention",
+      "objective_id": "scenario.housing.homelessness-prevention.housing-stability-surge.v1.objective.primary",
+      "primary": true,
+      "sense": "minimize",
+      "unit": "households"
+    },
+    {
+      "evidence_type": "estimated",
+      "metric": "distributional gap in scenario-weighted urgent households without timely prevention",
+      "objective_id": "scenario.housing.homelessness-prevention.housing-stability-surge.v1.objective.equity",
+      "primary": false,
+      "sense": "minimize",
+      "unit": "households"
+    },
+    {
+      "evidence_type": "observed",
+      "metric": "decision claims with complete evidence lineage",
+      "objective_id": "scenario.housing.homelessness-prevention.housing-stability-surge.v1.objective.traceability",
+      "primary": false,
+      "sense": "maximize",
+      "unit": "percent"
+    }
+  ],
+  "prohibited_claims": [
+    "Do not present synthetic housing shocks or household pathways as forecasts or observed crises.",
+    "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+    "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+    "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+  ],
+  "release_gate": {
+    "failure_release": "Release an explicit insufficient-evidence record naming missing sources, failed diagnostics, prohibited claims, and the next validation action.",
+    "failure_status": "insufficient-evidence",
+    "gate_id": "scenario.housing.homelessness-prevention.housing-stability-surge.v1.gate.release",
+    "gate_type": "external-validation",
+    "pass_condition": "Evidence for housing-stability prevention under compound market shock passes documented checks for scenario ranges, dependence, failure rates, recovery, intervention performance, and sensitivity.",
+    "required_evidence_types": [
+      "estimated",
+      "observed"
+    ],
+    "required_source_roles": [
+      "climate-hazard",
+      "demographic-context",
+      "facility-inventory",
+      "financial-cost",
+      "housing-market",
+      "operating-capacity"
+    ]
+  },
+  "required_source_roles": [
+    "climate-hazard",
+    "demographic-context",
+    "facility-inventory",
+    "financial-cost",
+    "housing-market",
+    "operating-capacity"
+  ],
+  "schema_version": "1.0.0",
+  "spatial_unit": "network",
+  "suite": "housing-land-use-regeneration",
+  "tags": [
+    "design-only",
+    "housing-land-use-regeneration",
+    "housing.homelessness-prevention",
+    "scenario-library",
+    "stress-test"
+  ],
+  "title": "Stress-test housing-stability capacity under market shock",
+  "transportability_risks": [
+    "Eviction law, rents, benefits, shelter systems, informal displacement, and data linkage differ.",
+    "Administrative records omit people who do not seek or cannot access services."
+  ]
+}

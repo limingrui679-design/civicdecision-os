@@ -1,0 +1,333 @@
+{
+  "designs": [
+    {
+      "analysis_modes": [
+        "descriptive"
+      ],
+      "binding_constraint": "The urban freight and curb operations diagnose must respect declared measurement resolution and classification uncertainty.",
+      "content_hash": "sha256:2740606786f1da7e3cbfc001383766285d79959efb30eba5cc1af8341f59933e",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Where do regulations, occupancy, deliveries, double parking, safety, and access needs conflict?",
+      "decision_type": "diagnose",
+      "design_id": "scenario.mobility.freight-curb.curb-friction.v1",
+      "design_order": 57,
+      "evidence_gate": "geographic-alignment",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "proposed"
+      ],
+      "family_id": "mobility.freight-curb",
+      "family_title": "Urban freight and curb operations",
+      "horizon": "annual",
+      "implementation_status": "design-only",
+      "primary_outcome": "commercial stops without legal usable curb access",
+      "prohibited_claims": [
+        "Do not infer all delivery behavior from citations, sensors, or one platform feed.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "corridor",
+      "suite": "mobility-accessibility-operations",
+      "title": "Diagnose curb conflict and freight-access friction"
+    },
+    {
+      "analysis_modes": [
+        "forecast"
+      ],
+      "binding_constraint": "The urban freight and curb operations forecast must respect declared validated operational capacity and forecast uncertainty.",
+      "content_hash": "sha256:61f680f2d708846fccd19b23042a499c4a80cb9ece30f2aa5037618254def24b",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "What block-time loading and occupancy range should dynamic curb operations prepare for?",
+      "decision_type": "forecast",
+      "design_id": "scenario.mobility.freight-curb.loading-demand.v1",
+      "design_order": 58,
+      "evidence_gate": "model-calibration",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "proposed"
+      ],
+      "family_id": "mobility.freight-curb",
+      "family_title": "Urban freight and curb operations",
+      "horizon": "weeks",
+      "implementation_status": "design-only",
+      "primary_outcome": "delivery-minutes without legal loading capacity",
+      "prohibited_claims": [
+        "Do not call forecast occupancy observed obstruction or illegal behavior.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "corridor",
+      "suite": "mobility-accessibility-operations",
+      "title": "Forecast loading demand and curb occupancy"
+    },
+    {
+      "analysis_modes": [
+        "descriptive",
+        "optimization"
+      ],
+      "binding_constraint": "The urban freight and curb operations prioritize must respect declared capital, operating, maintenance, and delivery budgets.",
+      "content_hash": "sha256:def3a7848db401dab995a5f6518afc3d5220b09a8899dec08f1a35f7de338ca4",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Which curb segments, loading technologies, and enforcement support should receive investment?",
+      "decision_type": "prioritize",
+      "design_id": "scenario.mobility.freight-curb.curb-conversion-portfolio.v1",
+      "design_order": 59,
+      "evidence_gate": "cost-capacity",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed"
+      ],
+      "family_id": "mobility.freight-curb",
+      "family_title": "Urban freight and curb operations",
+      "horizon": "multi-year",
+      "implementation_status": "design-only",
+      "primary_outcome": "freight delay and safety conflict burden",
+      "prohibited_claims": [
+        "Do not describe modeled delay or conflict reductions as realized business benefits.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "asset",
+      "suite": "mobility-accessibility-operations",
+      "title": "Prioritize curb conversion and loading investments"
+    },
+    {
+      "analysis_modes": [
+        "simulation",
+        "optimization"
+      ],
+      "binding_constraint": "The urban freight and curb operations site must respect declared land control, accessibility, permitting, safety, and operating feasibility.",
+      "content_hash": "sha256:27f2bcfbf56784ff1e00f8bb9e1f613333d0482724406f84dbfbf8bd3a103667",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Where should consolidation hubs and loading zones intercept demand without shifting burdens?",
+      "decision_type": "site",
+      "design_id": "scenario.mobility.freight-curb.microhubs-loading-zones.v1",
+      "design_order": 60,
+      "evidence_gate": "legal-authority",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "family_id": "mobility.freight-curb",
+      "family_title": "Urban freight and curb operations",
+      "horizon": "multi-year",
+      "implementation_status": "design-only",
+      "primary_outcome": "freight demand beyond compliant loading or consolidation access",
+      "prohibited_claims": [
+        "Do not label a screened microhub site viable without carrier, parcel, permitting, and community evidence.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "parcel",
+      "suite": "mobility-accessibility-operations",
+      "title": "Site freight microhubs and loading zones"
+    },
+    {
+      "analysis_modes": [
+        "simulation",
+        "optimization"
+      ],
+      "binding_constraint": "The urban freight and curb operations allocate must respect declared minimum service, eligibility, capacity, and distributional safeguards.",
+      "content_hash": "sha256:425ae895a02e72c2bfbfd76e8825b1d39f30eee3b76a7806b7e62dbda03ea9d8",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "How should finite curb frontage be divided among loading, access, transit, parking, and public space?",
+      "decision_type": "allocate",
+      "design_id": "scenario.mobility.freight-curb.curb-space.v1",
+      "design_order": 61,
+      "evidence_gate": "equity-measurement",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "family_id": "mobility.freight-curb",
+      "family_title": "Urban freight and curb operations",
+      "horizon": "weeks",
+      "implementation_status": "design-only",
+      "primary_outcome": "priority curb demand left unserved",
+      "prohibited_claims": [
+        "Do not call an optimized curb allocation enacted regulation or public consensus.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "corridor",
+      "suite": "mobility-accessibility-operations",
+      "title": "Allocate curb space across freight and public uses"
+    },
+    {
+      "analysis_modes": [
+        "forecast",
+        "optimization"
+      ],
+      "binding_constraint": "The urban freight and curb operations schedule must respect declared labor, access, sequencing, notice, and completion windows.",
+      "content_hash": "sha256:881b750019d6dbd871c4e934364c3f0f2e00fb69c9792bcfcb5a36284115903f",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "When should curb segments switch uses and reserve loading windows across the day?",
+      "decision_type": "schedule",
+      "design_id": "scenario.mobility.freight-curb.loading-reservations.v1",
+      "design_order": 62,
+      "evidence_gate": "temporal-alignment",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed"
+      ],
+      "family_id": "mobility.freight-curb",
+      "family_title": "Urban freight and curb operations",
+      "horizon": "weeks",
+      "implementation_status": "design-only",
+      "primary_outcome": "unserved priority loading and access time",
+      "prohibited_claims": [
+        "Do not describe a generated reservation schedule as adopted, enforced, or used.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "corridor",
+      "suite": "mobility-accessibility-operations",
+      "title": "Schedule loading reservations and curb regimes"
+    },
+    {
+      "analysis_modes": [
+        "forecast",
+        "simulation",
+        "optimization"
+      ],
+      "binding_constraint": "The urban freight and curb operations stress test must respect declared minimum continuity and safety thresholds across severe scenarios.",
+      "content_hash": "sha256:e7488e7fad3c3df41bd5e39546fa908fde965e695c1c70c5ac8224251d250279",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Which curb and consolidation strategy sustains essential deliveries during closures, surges, and fleet constraints?",
+      "decision_type": "stress-test",
+      "design_id": "scenario.mobility.freight-curb.freight-disruption.v1",
+      "design_order": 63,
+      "evidence_gate": "external-validation",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "family_id": "mobility.freight-curb",
+      "family_title": "Urban freight and curb operations",
+      "horizon": "seasonal",
+      "implementation_status": "design-only",
+      "primary_outcome": "essential deliveries outside feasible time windows",
+      "prohibited_claims": [
+        "Do not present synthetic delivery failures as forecasts or modeled completion as observed service.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "network",
+      "suite": "mobility-accessibility-operations",
+      "title": "Stress-test urban freight under curb and network disruption"
+    },
+    {
+      "analysis_modes": [
+        "descriptive",
+        "causal"
+      ],
+      "binding_constraint": "The urban freight and curb operations evaluate must respect declared pre-specified assignment, comparison, outcome, spillover, and subgroup rules.",
+      "content_hash": "sha256:bbe63961a9a60acb07db7ed068477c4d1f8e9c9c8e6c14f4a5033254160f4424",
+      "current_readiness": "blocked-multiple-gates",
+      "decision_question": "Did phased reservations or dynamic curb rules reduce verified conflict and delay without shifting harm?",
+      "decision_type": "evaluate",
+      "design_id": "scenario.mobility.freight-curb.dynamic-curb-effect.v1",
+      "design_order": 64,
+      "evidence_gate": "causal-identification",
+      "evidence_types": [
+        "causal",
+        "estimated",
+        "observed",
+        "proposed"
+      ],
+      "family_id": "mobility.freight-curb",
+      "family_title": "Urban freight and curb operations",
+      "horizon": "multi-year",
+      "implementation_status": "design-only",
+      "primary_outcome": "change in legal loading success and conflict time",
+      "prohibited_claims": [
+        "Do not infer causal freight or safety effects without measuring enforcement, substitution, and spillovers.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "corridor",
+      "suite": "mobility-accessibility-operations",
+      "title": "Evaluate dynamic curb management"
+    }
+  ],
+  "family": {
+    "affected_system": "commercial curb, loading, delivery, and urban freight network",
+    "claim_boundary": [
+      "Network, request, and schedule records do not establish individual travel behavior or harm.",
+      "Optimized routes and allocations are planning outputs, not dispatched or completed trips.",
+      "Design-only records do not claim current city data, implementation, compliance, or impact."
+    ],
+    "common_source_roles": [
+      "geographic-identity",
+      "real-time-state",
+      "transport-network"
+    ],
+    "decision_owner": "curb-management director and city freight coordinator",
+    "decision_types": [
+      "diagnose",
+      "forecast",
+      "prioritize",
+      "site",
+      "allocate",
+      "schedule",
+      "stress-test",
+      "evaluate"
+    ],
+    "description": "Eight decisions for curb diagnosis, demand forecasting, loading investment, hub siting, space allocation, reservation schedules, disruption stress, and policy evaluation.",
+    "design_refs": [
+      "scenario.mobility.freight-curb.curb-friction.v1",
+      "scenario.mobility.freight-curb.loading-demand.v1",
+      "scenario.mobility.freight-curb.curb-conversion-portfolio.v1",
+      "scenario.mobility.freight-curb.microhubs-loading-zones.v1",
+      "scenario.mobility.freight-curb.curb-space.v1",
+      "scenario.mobility.freight-curb.loading-reservations.v1",
+      "scenario.mobility.freight-curb.freight-disruption.v1",
+      "scenario.mobility.freight-curb.dynamic-curb-effect.v1"
+    ],
+    "design_signatures": [
+      "sha256:d1d58d751fc03d08d47edfdc2f9db9ef6260ba3f4a41d1b5622554250ef9fe93",
+      "sha256:19981a3aa0b82411b6b2d50b8efef822cd1e29c0df66ac7f97c76de0dbac9cce",
+      "sha256:c40df66a77917ead708010f7816014c2c76be43d1ab7610a88baeed42649aecc",
+      "sha256:442aa62b750cc67ec801e69c4aec34b3944eedc86d7270462527ea65ca42be50",
+      "sha256:c6611bc444c60f7fb3d8e08db98e96041bce118cf08c91b60bbee6c998f43d44",
+      "sha256:dbc51c2841400dfb01fce7187723003e6bad2edf9068ca00f7a8b91f1221ecdd",
+      "sha256:fc00ddc4385b7883c266633ff60f14831ae638f3e85b26f897c754bba764ce21",
+      "sha256:f926023a6bbd41afc6f7220190747f639b2b83cdab92a97ef23a96e5adaddf0c"
+    ],
+    "family_id": "mobility.freight-curb",
+    "family_order": 8,
+    "schema_version": "1.0.0",
+    "suite": "mobility-accessibility-operations",
+    "title": "Urban freight and curb operations"
+  },
+  "library_claim_boundary": [
+    "The catalog contains 240 decision designs, not 240 city executions.",
+    "Exactly twelve designs map to existing Tier-D reference templates; 228 remain design-only.",
+    "A reference implementation can be an explicit negative release and does not imply impact.",
+    "No record claims a city binding, new method, deployment, adoption, or real-user outcome.",
+    "Future execution requires source binding, gate passage, and domain, legal, community, and operational review."
+  ]
+}

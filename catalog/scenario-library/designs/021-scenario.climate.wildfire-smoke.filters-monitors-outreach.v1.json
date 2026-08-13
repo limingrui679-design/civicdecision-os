@@ -1,0 +1,165 @@
+{
+  "affected_system": "urban smoke exposure and clean-air protection system",
+  "alternatives": [
+    "allocate by verified medical and building vulnerability criteria",
+    "reserve monitors for data-sparse high-risk areas",
+    "adapt distribution using uptake and indoor-air follow-up evidence"
+  ],
+  "analysis_modes": [
+    "simulation",
+    "optimization"
+  ],
+  "assumptions": [
+    "Air-quality observations carry calibration, siting, and temporal metadata.",
+    "Indoor infiltration and filtration effects are measured locally or labeled assumptions.",
+    "All alternatives, capacities, costs, effects, thresholds, and failure scenarios are proposed until bound to evidence."
+  ],
+  "baseline": "Available equipment follows the existing first-come distribution process.",
+  "city_bindings": [],
+  "constraints": [
+    {
+      "binding": true,
+      "constraint_id": "scenario.climate.wildfire-smoke.filters-monitors-outreach.v1.constraint.binding",
+      "description": "Minimum protection shares for high-risk groups must be satisfied before residual allocation.",
+      "hard": true,
+      "kind": "equity",
+      "required_source_roles": [
+        "climate-hazard",
+        "community-input",
+        "environmental-exposure",
+        "equity-attribute",
+        "geographic-identity",
+        "operating-capacity"
+      ]
+    },
+    {
+      "binding": false,
+      "constraint_id": "scenario.climate.wildfire-smoke.filters-monitors-outreach.v1.constraint.evidence-scope",
+      "description": "Every released metric must retain evidence type, source lineage, geography, time, assumptions, and uncertainty.",
+      "hard": true,
+      "kind": "technical",
+      "required_source_roles": [
+        "climate-hazard"
+      ]
+    },
+    {
+      "binding": false,
+      "constraint_id": "scenario.climate.wildfire-smoke.filters-monitors-outreach.v1.constraint.decision-authority",
+      "description": "No analytical output may bypass lawful authority, accountable human review, or an applicable appeal process.",
+      "hard": true,
+      "kind": "regulatory",
+      "required_source_roles": [
+        "climate-hazard"
+      ]
+    }
+  ],
+  "current_readiness": "blocked-missing-source",
+  "decision_cadence": "recompiled at each planning cycle and after material evidence change",
+  "decision_owner": "air-quality response coordinator and public-health director",
+  "decision_question": "How should limited filtration units, calibrated monitors, and outreach capacity be distributed?",
+  "decision_type": "allocate",
+  "design_id": "scenario.climate.wildfire-smoke.filters-monitors-outreach.v1",
+  "design_order": 21,
+  "design_signature": "sha256:c77de7425d188a2281093b8979bbf112f422759300fb8a6e4cbdde73bbd400c6",
+  "evidence_requirements": [
+    "estimated",
+    "observed",
+    "optimized",
+    "proposed",
+    "simulated"
+  ],
+  "family_id": "climate.wildfire-smoke",
+  "family_title": "Wildfire smoke and air-quality resilience",
+  "horizon": "weeks",
+  "implementation_status": "design-only",
+  "independence_key": {
+    "binding_constraint": "Minimum protection shares for high-risk groups must be satisfied before residual allocation.",
+    "decision_object": "portable smoke-protection and monitoring resources",
+    "evidence_gate": "Eligibility denominators, exposure uncertainty, equipment inventory, and distribution records are auditable.",
+    "horizon": "weeks",
+    "intervention_mechanism": "needs- and uncertainty-aware allocation",
+    "primary_outcome": "high-risk households without assigned protection capacity",
+    "spatial_unit": "population-group"
+  },
+  "intended_claim": "A versioned allocate design for comparing declared alternatives affecting portable smoke-protection and monitoring resources, conditional on its evidence gate.",
+  "limitations": [
+    "This library record has no city binding and therefore reports no local input, output, or recommendation.",
+    "Readiness describes explicit source and method gates; it does not certify implementation feasibility.",
+    "External domain, legal, community, security, and operational review remains outside this design artifact."
+  ],
+  "method_claimed": false,
+  "objectives": [
+    {
+      "evidence_type": "estimated",
+      "metric": "high-risk households without assigned protection capacity",
+      "objective_id": "scenario.climate.wildfire-smoke.filters-monitors-outreach.v1.objective.primary",
+      "primary": true,
+      "sense": "minimize",
+      "unit": "households"
+    },
+    {
+      "evidence_type": "estimated",
+      "metric": "distributional gap in high-risk households without assigned protection capacity",
+      "objective_id": "scenario.climate.wildfire-smoke.filters-monitors-outreach.v1.objective.equity",
+      "primary": false,
+      "sense": "minimize",
+      "unit": "households"
+    },
+    {
+      "evidence_type": "observed",
+      "metric": "decision claims with complete evidence lineage",
+      "objective_id": "scenario.climate.wildfire-smoke.filters-monitors-outreach.v1.objective.traceability",
+      "primary": false,
+      "sense": "maximize",
+      "unit": "percent"
+    }
+  ],
+  "prohibited_claims": [
+    "Do not report allocated equipment as installed, used correctly, or clinically effective.",
+    "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+    "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+    "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+  ],
+  "release_gate": {
+    "failure_release": "Release an explicit insufficient-evidence record naming missing sources, failed diagnostics, prohibited claims, and the next validation action.",
+    "failure_status": "insufficient-evidence",
+    "gate_id": "scenario.climate.wildfire-smoke.filters-monitors-outreach.v1.gate.release",
+    "gate_type": "equity-measurement",
+    "pass_condition": "Eligibility denominators, exposure uncertainty, equipment inventory, and distribution records are auditable.",
+    "required_evidence_types": [
+      "observed",
+      "proposed"
+    ],
+    "required_source_roles": [
+      "climate-hazard",
+      "community-input",
+      "environmental-exposure",
+      "equity-attribute",
+      "geographic-identity",
+      "operating-capacity"
+    ]
+  },
+  "required_source_roles": [
+    "climate-hazard",
+    "community-input",
+    "environmental-exposure",
+    "equity-attribute",
+    "geographic-identity",
+    "operating-capacity"
+  ],
+  "schema_version": "1.0.0",
+  "spatial_unit": "population-group",
+  "suite": "climate-disaster-resilience",
+  "tags": [
+    "allocate",
+    "climate-disaster-resilience",
+    "climate.wildfire-smoke",
+    "design-only",
+    "scenario-library"
+  ],
+  "title": "Allocate filters, monitors, and smoke outreach",
+  "transportability_risks": [
+    "Smoke chemistry, building leakage, monitor density, and household behavior differ.",
+    "Regional forecasts and satellite products may have city-specific resolution limits."
+  ]
+}

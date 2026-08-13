@@ -45,7 +45,7 @@ from civicdecision.connectors.world_bank import (
 )
 from civicdecision.deep.build import build_tier_d_artifacts
 from civicdecision.deep.fetch import fetch_tier_d_context, fetch_tier_d_sources
-from civicdecision.deep.models import TierDEvidenceSummary, TierDRegistry
+from civicdecision.deep.models import ApplicationSuite, TierDEvidenceSummary, TierDRegistry
 from civicdecision.demos.heat_access import (
     HeatAccessDemoConfig,
     build_heat_access_pack,
@@ -60,6 +60,12 @@ from civicdecision.protocols.decision import DecisionPack
 from civicdecision.protocols.scenario import PolicyScenario
 from civicdecision.protocols.schemas import build_schemas
 from civicdecision.protocols.source import SourceManifest
+from civicdecision.scenario_library import (
+    CurrentReadiness,
+    DecisionType,
+    ImplementationStatus,
+    build_scenario_library,
+)
 from civicdecision.semantic.city_catalog import (
     build_global_city_catalog,
     write_catalog_artifacts,
@@ -739,6 +745,10 @@ def catalog_summary(
         ("tier assignments", f"{summary.tier_assignments:,}"),
         ("source artifacts", f"{summary.source_artifacts:,}"),
         ("declared source units", f"{summary.declared_source_units:,}"),
+        ("scenario designs", f"{summary.scenario_library_designs:,}"),
+        ("design families", f"{summary.scenario_library_families:,}"),
+        ("reference implemented", f"{summary.reference_implemented_designs:,}"),
+        ("design only", f"{summary.design_only_scenarios:,}"),
         ("scenario executions", f"{len(store.all_scenario_summaries):,}"),
         ("DecisionPacks", f"{summary.decision_packs:,}"),
         ("benchmark run artifacts", f"{summary.benchmark_run_artifacts:,}"),
@@ -765,6 +775,24 @@ def catalog_build_product(
     console.print(
         f"[green]created[/green] {len(result.artifact_paths):,} product files in "
         f"{result.output_directory}"
+    )
+
+
+@catalog_app.command("build-scenario-library")
+def catalog_build_scenario_library(
+    root: Annotated[Path, typer.Option("--root")] = Path("."),
+    output: Annotated[Path, typer.Option("--output", "-o")] = Path("catalog/scenario-library"),
+) -> None:
+    """Build the audited 240-design, 30-family scenario library."""
+
+    try:
+        result = build_scenario_library(root, output)
+    except (CivicDecisionError, OSError, ValueError) as exc:
+        console.print(f"[red]scenario library build failed safely[/red] {exc}")
+        raise typer.Exit(code=2) from exc
+    console.print(
+        f"[green]created[/green] {len(result.artifact_paths):,} scenario-library files: "
+        f"{len(result.design_paths):,} designs and {len(result.family_paths):,} families"
     )
 
 
@@ -884,6 +912,133 @@ def catalog_scenario(
         console.print(f"[red]scenario lookup failed[/red] {exc}")
         raise typer.Exit(code=2) from exc
     _print_json_model(detail)
+
+
+@catalog_app.command("designs")
+def catalog_designs(
+    root: Annotated[Path, typer.Option("--root")] = Path("."),
+    suite: Annotated[ApplicationSuite | None, typer.Option("--suite")] = None,
+    family_id: Annotated[str | None, typer.Option("--family-id")] = None,
+    decision_type: Annotated[DecisionType | None, typer.Option("--decision-type")] = None,
+    implementation_status: Annotated[
+        ImplementationStatus | None, typer.Option("--implementation-status")
+    ] = None,
+    current_readiness: Annotated[CurrentReadiness | None, typer.Option("--readiness")] = None,
+    query: Annotated[str | None, typer.Option("--query", "-q")] = None,
+    limit: Annotated[int, typer.Option("--limit", min=1, max=100)] = 50,
+    offset: Annotated[int, typer.Option("--offset", min=0)] = 0,
+    json_output: Annotated[bool, typer.Option("--json")] = False,
+) -> None:
+    """Browse the audited 240-record scenario design library."""
+
+    page = _catalog_store(root, True).list_scenario_designs(
+        suite=suite,
+        family_id=family_id,
+        decision_type=decision_type,
+        implementation_status=implementation_status,
+        current_readiness=current_readiness,
+        query=query,
+        limit=limit,
+        offset=offset,
+    )
+    if json_output:
+        _print_json_model(page)
+        return
+    table = Table(title=f"Scenario designs: {page.pagination.total}")
+    table.add_column("#", justify="right")
+    table.add_column("Design")
+    table.add_column("Suite / family")
+    table.add_column("Decision")
+    table.add_column("Implementation")
+    table.add_column("Readiness")
+    for design in page.items:
+        table.add_row(
+            str(design.design_order),
+            f"{design.title}\n[dim]{design.design_id}[/dim]",
+            f"{design.suite}\n[dim]{design.family_id}[/dim]",
+            design.decision_type.value,
+            design.implementation_status.value,
+            design.current_readiness.value,
+        )
+    console.print(table)
+
+
+@catalog_app.command("design")
+def catalog_design(
+    design_id: Annotated[str, typer.Argument()],
+    root: Annotated[Path, typer.Option("--root")] = Path("."),
+) -> None:
+    """Print one design, its family, evidence gate, and claim boundary."""
+
+    try:
+        detail = _catalog_store(root, True).scenario_design_detail(design_id)
+    except CivicDecisionError as exc:
+        console.print(f"[red]scenario-design lookup failed[/red] {exc}")
+        raise typer.Exit(code=2) from exc
+    _print_json_model(detail)
+
+
+@catalog_app.command("design-families")
+def catalog_design_families(
+    root: Annotated[Path, typer.Option("--root")] = Path("."),
+    suite: Annotated[ApplicationSuite | None, typer.Option("--suite")] = None,
+    query: Annotated[str | None, typer.Option("--query", "-q")] = None,
+    limit: Annotated[int, typer.Option("--limit", min=1, max=100)] = 50,
+    offset: Annotated[int, typer.Option("--offset", min=0)] = 0,
+    json_output: Annotated[bool, typer.Option("--json")] = False,
+) -> None:
+    """Browse 30 domain families, each covering eight decision types."""
+
+    page = _catalog_store(root, True).list_scenario_families(
+        suite=suite,
+        query=query,
+        limit=limit,
+        offset=offset,
+    )
+    if json_output:
+        _print_json_model(page)
+        return
+    table = Table(title=f"Scenario-design families: {page.pagination.total}")
+    table.add_column("#", justify="right")
+    table.add_column("Family")
+    table.add_column("Suite")
+    table.add_column("Owner")
+    table.add_column("Designs", justify="right")
+    table.add_column("Reference", justify="right")
+    for family in page.items:
+        table.add_row(
+            str(family.family_order),
+            f"{family.title}\n[dim]{family.family_id}[/dim]",
+            family.suite,
+            family.decision_owner,
+            str(family.design_count),
+            str(family.reference_implemented_count),
+        )
+    console.print(table)
+
+
+@catalog_app.command("design-family")
+def catalog_design_family(
+    family_id: Annotated[str, typer.Argument()],
+    root: Annotated[Path, typer.Option("--root")] = Path("."),
+) -> None:
+    """Print one family and its eight registered scenario designs."""
+
+    try:
+        detail = _catalog_store(root, True).scenario_family_detail(family_id)
+    except CivicDecisionError as exc:
+        console.print(f"[red]scenario-family lookup failed[/red] {exc}")
+        raise typer.Exit(code=2) from exc
+    _print_json_model(detail)
+
+
+@catalog_app.command("scenario-library-evidence")
+def catalog_scenario_library_evidence(
+    root: Annotated[Path, typer.Option("--root")] = Path("."),
+) -> None:
+    """Print anti-duplication results and non-inflation evidence."""
+
+    _print_json_model(_catalog_store(root, True).scenario_library_evidence())
 
 
 @catalog_app.command("sources")

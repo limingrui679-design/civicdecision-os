@@ -27,6 +27,7 @@
       </button>
       <nav id="site-navigation" class="site-nav" aria-label="Primary navigation" data-nav>
         <a href="#coverage">Coverage</a>
+        <a href="#designs">Design library</a>
         <a href="#scenarios">Scenarios</a>
         <a href="#evidence">Evidence</a>
         <a href="#methods">Boundaries</a>
@@ -45,7 +46,7 @@
           <h1>Urban decisions,<br><em>with an evidence trail.</em></h1>
           <p class="hero-lede">A reproducible operating layer for discovering cities, screening interventions, testing analytical methods, and releasing recommendations only when the evidence gate is satisfied.</p>
           <div class="hero-actions">
-            <a class="button button-primary" href="#scenarios">Inspect decision work</a>
+            <a class="button button-primary" href="#designs">Explore 240 designs</a>
             <a class="button button-quiet" href="#coverage">Explore city coverage <span aria-hidden="true">↘</span></a>
           </div>
           <dl class="catalog-stamp">
@@ -94,6 +95,8 @@
           <article><strong data-kpi="tier_assignments">—</strong><span>tier assignments</span><small>G + S + D coverage</small></article>
           <article><strong data-kpi="source_artifacts">—</strong><span>source artifacts</span><small>hash-verified inputs</small></article>
           <article><strong data-kpi="standard_scenario_screens">—</strong><span>standard screens</span><small>descriptive only</small></article>
+          <article><strong data-kpi="scenario_library_designs">—</strong><span>scenario designs</span><small>30 × 8 audited matrix</small></article>
+          <article><strong data-kpi="scenario_library_families">—</strong><span>design families</span><small>seven application suites</small></article>
           <article><strong data-kpi="deep_scenario_executions">—</strong><span>deep executions</span><small>including negative releases</small></article>
           <article><strong data-kpi="benchmark_run_artifacts">—</strong><span>benchmark artifacts</span><small>reproducible method tests</small></article>
         </div>
@@ -151,10 +154,58 @@
         </div>
       </section>
 
+      <section id="designs" class="design-library-section section-shell section-pad">
+        <div class="section-heading reveal">
+          <div><p class="section-kicker">02 / Decision design library</p><h2>Thirty families.<br><em>Eight ways to decide.</em></h2></div>
+          <p>A non-duplicative matrix of 240 evidence-gated designs: diagnose, forecast, prioritize, site, allocate, schedule, stress-test, and evaluate. Design breadth is shown separately from city execution and impact.</p>
+        </div>
+
+        <div class="design-audit-band reveal" aria-label="Scenario library audit summary">
+          <article><span>Designs</span><strong data-design-total>—</strong><small>registered decision contracts</small></article>
+          <article><span>Families</span><strong data-family-total>—</strong><small>eight types in each</small></article>
+          <article><span>Reference implemented</span><strong data-design-reference>—</strong><small>bounded Tier-D mappings</small></article>
+          <article><span>Design only</span><strong data-design-only>—</strong><small>not city executions</small></article>
+          <article><span>Maximum similarity</span><strong data-design-similarity>—</strong><small>failure threshold 0.90</small></article>
+          <article><span>Audit</span><strong class="audit-result" data-design-audit>—</strong><small>28,680 pairs checked</small></article>
+        </div>
+
+        <div class="design-boundary reveal">
+          <div><span aria-hidden="true">0</span><p><strong>City bindings counted</strong><small>No design is presented as a local execution.</small></p></div>
+          <div><span aria-hidden="true">0</span><p><strong>New methods claimed</strong><small>Methods remain governed by separate implementation evidence.</small></p></div>
+          <button type="button" data-open-library-evidence>Inspect anti-duplication evidence <span aria-hidden="true">→</span></button>
+        </div>
+
+        <div class="design-workspace">
+          <aside class="family-browser panel reveal">
+            <div class="panel-header compact">
+              <div><p class="panel-label">Coverage matrix</p><h3>Thirty domain families</h3></div>
+              <button class="clear-family" type="button" data-clear-family hidden>Clear</button>
+            </div>
+            <label class="search-control"><span class="sr-only">Search scenario families</span><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.8"/><path d="m16 16 5 5"/></svg><input type="search" placeholder="Search family, system, owner…" data-family-search></label>
+            <div class="family-list" data-family-list aria-live="polite"><div class="skeleton-list"><span></span><span></span><span></span><span></span></div></div>
+          </aside>
+
+          <article class="design-browser panel reveal reveal-delay">
+            <div class="design-toolbar">
+              <div><p class="panel-label">Audited design index</p><h3 data-design-browser-title>All scenario designs</h3></div>
+              <label class="search-control"><span class="sr-only">Search scenario designs</span><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.8"/><path d="m16 16 5 5"/></svg><input type="search" placeholder="Search question, outcome, constraint…" data-design-search></label>
+            </div>
+            <div class="design-filters" aria-label="Scenario design filters">
+              <select data-design-suite aria-label="Filter by application suite"><option value="">All suites</option><option value="climate-disaster-resilience">Climate and resilience</option><option value="mobility-accessibility-operations">Mobility and accessibility</option><option value="population-health-environmental-exposure">Public health and exposure</option><option value="housing-land-use-regeneration">Housing and land use</option><option value="public-service-operations">Public-service operations</option><option value="infrastructure-finance-asset-risk">Infrastructure and asset risk</option><option value="behavioral-policy-equity">Behavioral policy and equity</option></select>
+              <select data-design-type aria-label="Filter by decision type"><option value="">All decision types</option><option value="diagnose">Diagnose</option><option value="forecast">Forecast</option><option value="prioritize">Prioritize</option><option value="site">Site</option><option value="allocate">Allocate</option><option value="schedule">Schedule</option><option value="stress-test">Stress-test</option><option value="evaluate">Evaluate</option></select>
+              <select data-design-implementation aria-label="Filter by implementation status"><option value="">All implementations</option><option value="reference-implemented">Reference implemented</option><option value="design-only">Design only</option></select>
+              <select data-design-readiness aria-label="Filter by current readiness"><option value="">All readiness states</option><option value="reference-implemented">Reference implemented</option><option value="blocked-missing-source">Missing source</option><option value="blocked-method">Method gate</option><option value="blocked-multiple-gates">Multiple gates</option><option value="uncompiled-current-inputs">Inputs uncompiled</option></select>
+            </div>
+            <div class="design-list" data-design-list aria-live="polite"><div class="skeleton-list"><span></span><span></span><span></span><span></span></div></div>
+            <div class="pager"><button type="button" data-design-prev disabled>Previous</button><span data-design-page>—</span><button type="button" data-design-next disabled>Next</button></div>
+          </article>
+        </div>
+      </section>
+
       <section id="scenarios" class="scenario-section section-pad">
         <div class="section-shell">
           <div class="section-heading inverse reveal">
-            <div><p class="section-kicker">02 / Decision work</p><h2>Every result includes<br><em>the right to say no.</em></h2></div>
+            <div><p class="section-kicker">03 / Executed decision work</p><h2>Every result includes<br><em>the right to say no.</em></h2></div>
             <p>A negative evidence release is a valid output. When provenance, completeness, support, or decision separation fails, the system preserves diagnostics and withholds a recommendation.</p>
           </div>
           <div class="decision-overview">
@@ -194,7 +245,7 @@
 
       <section id="evidence" class="evidence-section section-shell section-pad">
         <div class="section-heading reveal">
-          <div><p class="section-kicker">03 / Provenance library</p><h2>Inputs you can inspect.<br><em>Runs you can repeat.</em></h2></div>
+          <div><p class="section-kicker">04 / Provenance library</p><h2>Inputs you can inspect.<br><em>Runs you can repeat.</em></h2></div>
           <p>Source manifests record retrieval time, license, record count, geographic and temporal scope, content digest, and explicit limitations. Benchmarks remain separate from municipal outcomes.</p>
         </div>
         <div class="evidence-layout">
@@ -226,7 +277,7 @@
       <section class="surface-section">
         <div class="section-shell section-pad">
           <div class="section-heading compact reveal">
-            <div><p class="section-kicker">04 / One validated core</p><h2>Five ways in.<br><em>One claim boundary.</em></h2></div>
+            <div><p class="section-kicker">05 / One validated core</p><h2>Five ways in.<br><em>One claim boundary.</em></h2></div>
           </div>
           <div class="surface-grid">
             <article><span class="surface-index">01</span><h3>Evidence explorer</h3><p>This responsive interface reads the same typed catalog as every other client.</p><code>GET /</code></article>
@@ -240,7 +291,7 @@
 
       <section id="methods" class="methods-section section-shell section-pad">
         <div class="section-heading reveal">
-          <div><p class="section-kicker">05 / Interpretation contract</p><h2>What this system proves—<br><em>and what it does not.</em></h2></div>
+          <div><p class="section-kicker">06 / Interpretation contract</p><h2>What this system proves—<br><em>and what it does not.</em></h2></div>
           <p>Scale is reported as artifact counts, city assignments, source units, scenario executions, and reproducible runs. Those numbers are meaningful only alongside their scope and limitations.</p>
         </div>
         <div class="boundary-columns">

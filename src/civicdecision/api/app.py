@@ -19,7 +19,7 @@ from starlette.exceptions import HTTPException as StarletteHTTPException
 from starlette.middleware.gzip import GZipMiddleware
 
 from civicdecision import __version__
-from civicdecision.deep.models import TierDEvidenceSummary
+from civicdecision.deep.models import ApplicationSuite, TierDEvidenceSummary
 from civicdecision.errors import IntegrityError
 from civicdecision.product.models import (
     BenchmarkOverview,
@@ -28,8 +28,13 @@ from civicdecision.product.models import (
     CityPage,
     ProductHealth,
     ProductTier,
+    ScenarioDesignDetail,
+    ScenarioDesignPage,
     ScenarioDetail,
+    ScenarioFamilyDetail,
+    ScenarioFamilyPage,
     ScenarioKind,
+    ScenarioLibraryEvidence,
     ScenarioPage,
     ScenarioStatus,
     SourcePage,
@@ -42,6 +47,11 @@ from civicdecision.product.store import (
 )
 from civicdecision.protocols.base import IDENTIFIER_PATTERN, StrictModel
 from civicdecision.protocols.decision import DecisionPack
+from civicdecision.scenario_library.models import (
+    CurrentReadiness,
+    DecisionType,
+    ImplementationStatus,
+)
 
 REQUEST_ID_PATTERN = re.compile(r"^[A-Za-z0-9._-]{8,80}$")
 
@@ -60,6 +70,26 @@ def _request_id(request: Request) -> str:
     if incoming and REQUEST_ID_PATTERN.fullmatch(incoming):
         return incoming
     return secrets.token_hex(12)
+
+
+def _if_none_match_matches(header: str | None, current_etag: str) -> bool:
+    """Apply RFC weak comparison for a conditional GET validator list."""
+
+    if header is None:
+        return False
+    candidates = [item.strip() for item in header.split(",")]
+    if "*" in candidates:
+        return True
+
+    def opaque_value(value: str) -> str | None:
+        if value[:2].casefold() == "w/":
+            value = value[2:].strip()
+        if len(value) < 2 or value[0] != '"' or value[-1] != '"':
+            return None
+        return value[1:-1]
+
+    expected = opaque_value(current_etag)
+    return expected is not None and any(opaque_value(item) == expected for item in candidates)
 
 
 def _problem(
@@ -106,9 +136,10 @@ def create_app(
         title="CivicDecision OS API",
         summary="Evidence-typed urban decision artifacts",
         description=(
-            "Read-only projections of versioned public sources, city bundles, scenario screens, "
-            "evidence-gated DecisionPacks, and analytical benchmarks. The API preserves negative "
-            "releases and never upgrades the claims in an underlying artifact."
+            "Read-only projections of versioned public sources, city bundles, 240 evidence-gated "
+            "scenario designs, scenario screens, DecisionPacks, and analytical benchmarks. "
+            "Designs remain distinct from executions; the API preserves negative releases and "
+            "never upgrades the claims in an underlying artifact."
         ),
         version=__version__,
         docs_url=None,
@@ -127,11 +158,20 @@ def create_app(
     ) -> Response:
         request.state.request_id = _request_id(request)
         is_api_get = request.method == "GET" and request.url.path.startswith("/api/")
+        response_etag = (
+            catalog.etag_for(
+                request.url.path,
+                tuple(sorted(request.query_params.multi_items())),
+            )
+            if is_api_get
+            else None
+        )
         response = await call_next(request)
         if (
             is_api_get
             and response.status_code == 200
-            and request.headers.get("if-none-match") == catalog.etag
+            and response_etag is not None
+            and _if_none_match_matches(request.headers.get("if-none-match"), response_etag)
         ):
             response = Response(status_code=304)
         response.headers["x-request-id"] = request.state.request_id
@@ -147,7 +187,8 @@ def create_app(
             "frame-ancestors 'none'; form-action 'none'"
         )
         if is_api_get and response.status_code in {200, 304}:
-            response.headers["etag"] = catalog.etag
+            assert response_etag is not None
+            response.headers["etag"] = response_etag
             response.headers["cache-control"] = "public, max-age=60, must-revalidate"
         elif request.url.path.startswith("/assets/") and response.status_code == 200:
             response.headers["cache-control"] = "public, max-age=3600"
@@ -279,6 +320,76 @@ def create_app(
         return catalog.scenario_detail(execution_id)
 
     @app.get(
+        "/api/v1/designs",
+        response_model=ScenarioDesignPage,
+        tags=["scenario-designs"],
+    )
+    def scenario_designs(
+        suite: Annotated[ApplicationSuite | None, Query()] = None,
+        family_id: Annotated[str | None, Query(max_length=120)] = None,
+        decision_type: Annotated[DecisionType | None, Query()] = None,
+        implementation_status: Annotated[ImplementationStatus | None, Query()] = None,
+        current_readiness: Annotated[CurrentReadiness | None, Query()] = None,
+        q: Annotated[str | None, Query(min_length=1, max_length=80)] = None,
+        limit: Annotated[int, Query(ge=1, le=100)] = 50,
+        offset: Annotated[int, Query(ge=0)] = 0,
+    ) -> ScenarioDesignPage:
+        return catalog.list_scenario_designs(
+            suite=suite,
+            family_id=family_id,
+            decision_type=decision_type,
+            implementation_status=implementation_status,
+            current_readiness=current_readiness,
+            query=q,
+            limit=limit,
+            offset=offset,
+        )
+
+    @app.get(
+        "/api/v1/designs/{design_id}",
+        response_model=ScenarioDesignDetail,
+        tags=["scenario-designs"],
+    )
+    def scenario_design(
+        design_id: Annotated[
+            str,
+            PathParameter(min_length=1, max_length=160, pattern=IDENTIFIER_PATTERN),
+        ],
+    ) -> ScenarioDesignDetail:
+        return catalog.scenario_design_detail(design_id)
+
+    @app.get(
+        "/api/v1/design-families",
+        response_model=ScenarioFamilyPage,
+        tags=["scenario-designs"],
+    )
+    def scenario_families(
+        suite: Annotated[ApplicationSuite | None, Query()] = None,
+        q: Annotated[str | None, Query(min_length=1, max_length=80)] = None,
+        limit: Annotated[int, Query(ge=1, le=100)] = 50,
+        offset: Annotated[int, Query(ge=0)] = 0,
+    ) -> ScenarioFamilyPage:
+        return catalog.list_scenario_families(
+            suite=suite,
+            query=q,
+            limit=limit,
+            offset=offset,
+        )
+
+    @app.get(
+        "/api/v1/design-families/{family_id}",
+        response_model=ScenarioFamilyDetail,
+        tags=["scenario-designs"],
+    )
+    def scenario_family(
+        family_id: Annotated[
+            str,
+            PathParameter(min_length=1, max_length=160, pattern=IDENTIFIER_PATTERN),
+        ],
+    ) -> ScenarioFamilyDetail:
+        return catalog.scenario_family_detail(family_id)
+
+    @app.get(
         "/api/v1/decision-packs",
         response_model=ScenarioPage,
         tags=["decision-packs"],
@@ -361,6 +472,14 @@ def create_app(
     )
     def deep_evidence() -> TierDEvidenceSummary:
         return catalog.deep_evidence
+
+    @app.get(
+        "/api/v1/evidence/scenario-library",
+        response_model=ScenarioLibraryEvidence,
+        tags=["evidence", "scenario-designs"],
+    )
+    def scenario_library_evidence() -> ScenarioLibraryEvidence:
+        return catalog.scenario_library_evidence()
 
     app.mount("/assets", StaticFiles(directory=web_root / "assets"), name="assets")
 

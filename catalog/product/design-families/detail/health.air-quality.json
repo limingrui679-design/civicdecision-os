@@ -1,0 +1,334 @@
+{
+  "designs": [
+    {
+      "analysis_modes": [
+        "descriptive"
+      ],
+      "binding_constraint": "The air-quality exposure and respiratory health diagnose must respect declared measurement resolution and classification uncertainty.",
+      "content_hash": "sha256:ffedba5c502f87aa73235803cb6887bfc51d474be7eab3c1021c14c9de08ef88",
+      "current_readiness": "reference-implemented",
+      "decision_question": "Which areas show persistent pollutant, respiratory, and service signals after coverage differences are separated?",
+      "decision_type": "diagnose",
+      "design_id": "scenario.health.air-quality.exposure-health-discordance.v1",
+      "design_order": 89,
+      "evidence_gate": "geographic-alignment",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "proposed"
+      ],
+      "existing_template_ref": "deep.health.environmental-request-screen.v1",
+      "family_id": "health.air-quality",
+      "family_title": "Air-quality exposure and respiratory health",
+      "horizon": "annual",
+      "implementation_status": "reference-implemented",
+      "primary_outcome": "unresolved high-exposure high-burden population",
+      "prohibited_claims": [
+        "Do not convert environmental request labels into measured exposure, diagnosis, or causal health risk.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "neighborhood",
+      "suite": "population-health-environmental-exposure",
+      "title": "Diagnose environmental exposure and respiratory-health patterns"
+    },
+    {
+      "analysis_modes": [
+        "forecast"
+      ],
+      "binding_constraint": "The air-quality exposure and respiratory health forecast must respect declared validated operational capacity and forecast uncertainty.",
+      "content_hash": "sha256:fdacd5d7b33ba49adad9446f7de0146e2c1471e82a8666ccc2efa1d3cc4183a2",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "What pollutant and respiratory-service workload envelope should public-health operations prepare for?",
+      "decision_type": "forecast",
+      "design_id": "scenario.health.air-quality.respiratory-demand.v1",
+      "design_order": 90,
+      "evidence_gate": "model-calibration",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "proposed"
+      ],
+      "family_id": "health.air-quality",
+      "family_title": "Air-quality exposure and respiratory health",
+      "horizon": "weeks",
+      "implementation_status": "design-only",
+      "primary_outcome": "respiratory response demand above available capacity",
+      "prohibited_claims": [
+        "Do not call forecast service demand diagnosed disease or pollutant-attributable illness.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "service-area",
+      "suite": "population-health-environmental-exposure",
+      "title": "Forecast air-quality alerts and respiratory service demand"
+    },
+    {
+      "analysis_modes": [
+        "descriptive",
+        "optimization"
+      ],
+      "binding_constraint": "The air-quality exposure and respiratory health prioritize must respect declared capital, operating, maintenance, and delivery budgets.",
+      "content_hash": "sha256:dea2ac696d18be9377a58d2c7d6c065fbf110f24a28d95efb0fc5f834c718e35",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Which source-control, building, monitoring, and health-protection measures should be funded first?",
+      "decision_type": "prioritize",
+      "design_id": "scenario.health.air-quality.exposure-reduction-portfolio.v1",
+      "design_order": 91,
+      "evidence_gate": "cost-capacity",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed"
+      ],
+      "family_id": "health.air-quality",
+      "family_title": "Air-quality exposure and respiratory health",
+      "horizon": "multi-year",
+      "implementation_status": "design-only",
+      "primary_outcome": "population-weighted exposure above health-protection thresholds",
+      "prohibited_claims": [
+        "Do not report modeled exposure reduction as avoided disease or realized emissions compliance.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "asset",
+      "suite": "population-health-environmental-exposure",
+      "title": "Prioritize air-exposure reduction investments"
+    },
+    {
+      "analysis_modes": [
+        "simulation",
+        "optimization"
+      ],
+      "binding_constraint": "The air-quality exposure and respiratory health site must respect declared land control, accessibility, permitting, safety, and operating feasibility.",
+      "content_hash": "sha256:06b04d86a7425d39003ab91923fb701e8133b7c66dab93d650a5b80f1c3624e1",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Where should calibrated monitoring and qualified protection resources fill population and uncertainty gaps?",
+      "decision_type": "site",
+      "design_id": "scenario.health.air-quality.monitor-protection-network.v1",
+      "design_order": 92,
+      "evidence_gate": "legal-authority",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "family_id": "health.air-quality",
+      "family_title": "Air-quality exposure and respiratory health",
+      "horizon": "multi-year",
+      "implementation_status": "design-only",
+      "primary_outcome": "high-risk population without representative monitoring or protection access",
+      "prohibited_claims": [
+        "Do not call a low-cost sensor regulatory-grade or a candidate facility clinically qualified.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "facility",
+      "suite": "population-health-environmental-exposure",
+      "title": "Site monitors and clean-air health resources"
+    },
+    {
+      "analysis_modes": [
+        "simulation",
+        "optimization"
+      ],
+      "binding_constraint": "The air-quality exposure and respiratory health allocate must respect declared minimum service, eligibility, capacity, and distributional safeguards.",
+      "content_hash": "sha256:5d63dda3f899818bf5e9c6d522269f1fc612f3d58ee4ccf6f89ae40a54d48ead",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "How should filters, masks, clinical navigation, and outreach be distributed during pollution episodes?",
+      "decision_type": "allocate",
+      "design_id": "scenario.health.air-quality.respiratory-protection.v1",
+      "design_order": 93,
+      "evidence_gate": "equity-measurement",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "family_id": "health.air-quality",
+      "family_title": "Air-quality exposure and respiratory health",
+      "horizon": "weeks",
+      "implementation_status": "design-only",
+      "primary_outcome": "high-risk people without assigned protection support",
+      "prohibited_claims": [
+        "Do not report distributed supplies as used correctly or clinically effective.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "population-group",
+      "suite": "population-health-environmental-exposure",
+      "title": "Allocate respiratory protection and outreach resources"
+    },
+    {
+      "analysis_modes": [
+        "forecast",
+        "optimization"
+      ],
+      "binding_constraint": "The air-quality exposure and respiratory health schedule must respect declared labor, access, sequencing, notice, and completion windows.",
+      "content_hash": "sha256:663e6cb1a54f8d5cb9e303d3164449f65592fba13ec75c2abc83956bf57407e3",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "When should monitoring review, alerts, outreach, indoor protection, and clinical surge activate?",
+      "decision_type": "schedule",
+      "design_id": "scenario.health.air-quality.air-health-response.v1",
+      "design_order": 94,
+      "evidence_gate": "temporal-alignment",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed"
+      ],
+      "family_id": "health.air-quality",
+      "family_title": "Air-quality exposure and respiratory health",
+      "horizon": "weeks",
+      "implementation_status": "design-only",
+      "primary_outcome": "high-exposure hours without active protection measures",
+      "prohibited_claims": [
+        "Do not call an alert schedule issued, received, understood, or acted upon.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "citywide",
+      "suite": "population-health-environmental-exposure",
+      "title": "Schedule air-quality alerts and health response"
+    },
+    {
+      "analysis_modes": [
+        "forecast",
+        "simulation",
+        "optimization"
+      ],
+      "binding_constraint": "The air-quality exposure and respiratory health stress test must respect declared minimum continuity and safety thresholds across severe scenarios.",
+      "content_hash": "sha256:fc73d5d070d067e6e2f6df6cfb637589b719281b04713e6e6c06bafd0852eda8",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Which response strategy preserves clean-air and care capacity across prolonged pollution and facility failures?",
+      "decision_type": "stress-test",
+      "design_id": "scenario.health.air-quality.pollution-health-continuity.v1",
+      "design_order": 95,
+      "evidence_gate": "external-validation",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "family_id": "health.air-quality",
+      "family_title": "Air-quality exposure and respiratory health",
+      "horizon": "seasonal",
+      "implementation_status": "design-only",
+      "primary_outcome": "scenario-weighted unmet respiratory protection and care demand",
+      "prohibited_claims": [
+        "Do not present synthetic episodes or care demand as forecasts or observed health burden.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "network",
+      "suite": "population-health-environmental-exposure",
+      "title": "Stress-test respiratory-health continuity during pollution episodes"
+    },
+    {
+      "analysis_modes": [
+        "descriptive",
+        "causal"
+      ],
+      "binding_constraint": "The air-quality exposure and respiratory health evaluate must respect declared pre-specified assignment, comparison, outcome, spillover, and subgroup rules.",
+      "content_hash": "sha256:dec24756ee7d5eb30a2e533f65232c316db567754dc3807f22ac14ffb84e24c6",
+      "current_readiness": "blocked-multiple-gates",
+      "decision_question": "Did phased protection or source-control measures reduce measured exposure and verified respiratory events?",
+      "decision_type": "evaluate",
+      "design_id": "scenario.health.air-quality.clean-air-program-effect.v1",
+      "design_order": 96,
+      "evidence_gate": "causal-identification",
+      "evidence_types": [
+        "causal",
+        "estimated",
+        "observed",
+        "proposed"
+      ],
+      "family_id": "health.air-quality",
+      "family_title": "Air-quality exposure and respiratory health",
+      "horizon": "multi-year",
+      "implementation_status": "design-only",
+      "primary_outcome": "change in measured exposure and respiratory-event rate",
+      "prohibited_claims": [
+        "Do not infer causal health benefits without assignment, exposure, outcome, and spillover validity.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "population-group",
+      "suite": "population-health-environmental-exposure",
+      "title": "Evaluate clean-air protection and source-control effects"
+    }
+  ],
+  "family": {
+    "affected_system": "air-quality surveillance, exposure reduction, and respiratory-health response",
+    "claim_boundary": [
+      "Area exposure, service, and vulnerability records do not diagnose individuals or prove harm.",
+      "Operational allocations are proposed planning outputs, not delivered clinical or social services.",
+      "Health-effect claims require outcome panels, identification, privacy, and external review."
+    ],
+    "common_source_roles": [
+      "environmental-exposure",
+      "geographic-identity",
+      "health-outcome"
+    ],
+    "decision_owner": "environmental health director and air-quality program lead",
+    "decision_types": [
+      "diagnose",
+      "forecast",
+      "prioritize",
+      "site",
+      "allocate",
+      "schedule",
+      "stress-test",
+      "evaluate"
+    ],
+    "description": "Eight decisions for exposure-health diagnosis, syndrome forecasting, mitigation portfolios, monitor siting, protection allocation, alert timing, pollution stress, and program evaluation.",
+    "design_refs": [
+      "scenario.health.air-quality.exposure-health-discordance.v1",
+      "scenario.health.air-quality.respiratory-demand.v1",
+      "scenario.health.air-quality.exposure-reduction-portfolio.v1",
+      "scenario.health.air-quality.monitor-protection-network.v1",
+      "scenario.health.air-quality.respiratory-protection.v1",
+      "scenario.health.air-quality.air-health-response.v1",
+      "scenario.health.air-quality.pollution-health-continuity.v1",
+      "scenario.health.air-quality.clean-air-program-effect.v1"
+    ],
+    "design_signatures": [
+      "sha256:6da859a0d3cc29552cebc51e432ee210e63700d6199d8d8244e14d37b57ea5e5",
+      "sha256:007b91f73e42467c300f80699ecbc913719d8deada285e9cbedb86ceb19a6762",
+      "sha256:4bea680bc0b51834556f0dc2571fee32bcde78d8c001b9ec9d1af93eb8d00be5",
+      "sha256:8cb85a3e26ba596df6f2a10671bc966569b6ab6333f2f72830bdead69bc69d7e",
+      "sha256:f424fab809d1666e9d1f97051af93a4ea822957fcfedf6115f4b369480641c16",
+      "sha256:dcf05c4fb93e34d1a0e5468e0f197165bea3353299da657e2e471d0443ee03c1",
+      "sha256:f2ff9dd9890de9a7c4f860845a4b9efbc0ec38fddaf853de51cc87ff0dd0716c",
+      "sha256:921fd951a8f5d81d807dbfced3210c0fab7f2a5e5aa0f818e914ad57daae3d0f"
+    ],
+    "family_id": "health.air-quality",
+    "family_order": 12,
+    "schema_version": "1.0.0",
+    "suite": "population-health-environmental-exposure",
+    "title": "Air-quality exposure and respiratory health"
+  },
+  "library_claim_boundary": [
+    "The catalog contains 240 decision designs, not 240 city executions.",
+    "Exactly twelve designs map to existing Tier-D reference templates; 228 remain design-only.",
+    "A reference implementation can be an explicit negative release and does not imply impact.",
+    "No record claims a city binding, new method, deployment, adoption, or real-user outcome.",
+    "Future execution requires source binding, gate passage, and domain, legal, community, and operational review."
+  ]
+}

@@ -1,0 +1,164 @@
+{
+  "affected_system": "urban heat-health and cooling-response system",
+  "alternatives": [
+    "extend hours only on threshold heat days",
+    "stagger teams to cover overnight heat retention",
+    "use rolling forecasts to adapt shifts and center hours"
+  ],
+  "analysis_modes": [
+    "forecast",
+    "optimization"
+  ],
+  "assumptions": [
+    "Heat indicators are aligned to a declared local time zone and spatial support.",
+    "Cooling capacity, costs, and response effects remain explicit planning inputs.",
+    "All alternatives, capacities, costs, effects, thresholds, and failure scenarios are proposed until bound to evidence."
+  ],
+  "baseline": "Standard summer shifts and facility hours remain in place.",
+  "city_bindings": [],
+  "constraints": [
+    {
+      "binding": true,
+      "constraint_id": "scenario.climate.extreme-heat.heat-operations-calendar.v1.constraint.binding",
+      "description": "Schedules must respect labor rest rules, facility opening constraints, and activation lead times.",
+      "hard": true,
+      "kind": "time",
+      "required_source_roles": [
+        "climate-hazard",
+        "demographic-context",
+        "geographic-identity",
+        "operating-capacity",
+        "real-time-state",
+        "service-schedule"
+      ]
+    },
+    {
+      "binding": false,
+      "constraint_id": "scenario.climate.extreme-heat.heat-operations-calendar.v1.constraint.evidence-scope",
+      "description": "Every released metric must retain evidence type, source lineage, geography, time, assumptions, and uncertainty.",
+      "hard": true,
+      "kind": "technical",
+      "required_source_roles": [
+        "climate-hazard"
+      ]
+    },
+    {
+      "binding": false,
+      "constraint_id": "scenario.climate.extreme-heat.heat-operations-calendar.v1.constraint.decision-authority",
+      "description": "No analytical output may bypass lawful authority, accountable human review, or an applicable appeal process.",
+      "hard": true,
+      "kind": "regulatory",
+      "required_source_roles": [
+        "climate-hazard"
+      ]
+    }
+  ],
+  "current_readiness": "blocked-missing-source",
+  "decision_cadence": "event-triggered and reviewed at the stated decision horizon",
+  "decision_owner": "chief resilience officer and public-health incident lead",
+  "decision_question": "When should staff shifts, cooling-center hours, and welfare checks expand across a multi-day heat event?",
+  "decision_type": "schedule",
+  "design_id": "scenario.climate.extreme-heat.heat-operations-calendar.v1",
+  "design_order": 6,
+  "design_signature": "sha256:23fd784d81b2f7f4f1b5a64cc19a597c9c439c91e9ff5d7466674728d3f9721e",
+  "evidence_requirements": [
+    "estimated",
+    "observed",
+    "optimized",
+    "proposed"
+  ],
+  "family_id": "climate.extreme-heat",
+  "family_title": "Extreme heat exposure and response",
+  "horizon": "days",
+  "implementation_status": "design-only",
+  "independence_key": {
+    "binding_constraint": "Schedules must respect labor rest rules, facility opening constraints, and activation lead times.",
+    "decision_object": "heat-response operating calendar",
+    "evidence_gate": "Forecast issue times, operating calendars, labor rosters, and observations use a common timezone and cutoff.",
+    "horizon": "days",
+    "intervention_mechanism": "forecast-triggered shift and facility-hour scheduling",
+    "primary_outcome": "hours of forecast demand above staffed capacity",
+    "spatial_unit": "citywide"
+  },
+  "intended_claim": "A versioned schedule design for comparing declared alternatives affecting heat-response operating calendar, conditional on its evidence gate.",
+  "limitations": [
+    "This library record has no city binding and therefore reports no local input, output, or recommendation.",
+    "Readiness describes explicit source and method gates; it does not certify implementation feasibility.",
+    "External domain, legal, community, security, and operational review remains outside this design artifact."
+  ],
+  "method_claimed": false,
+  "objectives": [
+    {
+      "evidence_type": "estimated",
+      "metric": "hours of forecast demand above staffed capacity",
+      "objective_id": "scenario.climate.extreme-heat.heat-operations-calendar.v1.objective.primary",
+      "primary": true,
+      "sense": "minimize",
+      "unit": "service-hours"
+    },
+    {
+      "evidence_type": "estimated",
+      "metric": "distributional gap in hours of forecast demand above staffed capacity",
+      "objective_id": "scenario.climate.extreme-heat.heat-operations-calendar.v1.objective.equity",
+      "primary": false,
+      "sense": "minimize",
+      "unit": "service-hours"
+    },
+    {
+      "evidence_type": "observed",
+      "metric": "decision claims with complete evidence lineage",
+      "objective_id": "scenario.climate.extreme-heat.heat-operations-calendar.v1.objective.traceability",
+      "primary": false,
+      "sense": "maximize",
+      "unit": "percent"
+    }
+  ],
+  "prohibited_claims": [
+    "Do not treat a proposed roster as an implemented labor plan or verified response time.",
+    "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+    "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+    "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+  ],
+  "release_gate": {
+    "failure_release": "Release an explicit insufficient-evidence record naming missing sources, failed diagnostics, prohibited claims, and the next validation action.",
+    "failure_status": "insufficient-evidence",
+    "gate_id": "scenario.climate.extreme-heat.heat-operations-calendar.v1.gate.release",
+    "gate_type": "temporal-alignment",
+    "pass_condition": "Forecast issue times, operating calendars, labor rosters, and observations use a common timezone and cutoff.",
+    "required_evidence_types": [
+      "observed",
+      "proposed"
+    ],
+    "required_source_roles": [
+      "climate-hazard",
+      "demographic-context",
+      "geographic-identity",
+      "operating-capacity",
+      "real-time-state",
+      "service-schedule"
+    ]
+  },
+  "required_source_roles": [
+    "climate-hazard",
+    "demographic-context",
+    "geographic-identity",
+    "operating-capacity",
+    "real-time-state",
+    "service-schedule"
+  ],
+  "schema_version": "1.0.0",
+  "spatial_unit": "citywide",
+  "suite": "climate-disaster-resilience",
+  "tags": [
+    "climate-disaster-resilience",
+    "climate.extreme-heat",
+    "design-only",
+    "scenario-library",
+    "schedule"
+  ],
+  "title": "Schedule heat-response shifts and facility hours",
+  "transportability_risks": [
+    "Building stock, acclimatization, canopy, humidity, and reporting behavior vary by city.",
+    "Thresholds calibrated in one climate zone may not transfer to another."
+  ]
+}

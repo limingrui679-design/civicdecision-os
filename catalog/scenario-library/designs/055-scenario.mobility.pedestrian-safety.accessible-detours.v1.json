@@ -1,0 +1,166 @@
+{
+  "affected_system": "pedestrian right-of-way, crossings, sidewalks, and accessible routes",
+  "alternatives": [
+    "add targeted redundancy around the largest failure modes in accessible pedestrian continuity under closures",
+    "select an adaptive robust portfolio across severe scenarios for accessible pedestrian continuity under closures",
+    "pair mobility-profile network failure and detour simulation with an explicit stop, review, and escalation rule"
+  ],
+  "analysis_modes": [
+    "forecast",
+    "simulation",
+    "optimization"
+  ],
+  "assumptions": [
+    "Crash, conflict, barrier, sidewalk, crossing, and demand data have explicit observation processes.",
+    "Accessibility is evaluated across route continuity, slope, surface, crossing, and obstruction dimensions.",
+    "All alternatives, capacities, costs, effects, thresholds, and failure scenarios are proposed until bound to evidence."
+  ],
+  "baseline": "apply current continuity provisions to accessible pedestrian continuity under closures.",
+  "city_bindings": [],
+  "constraints": [
+    {
+      "binding": true,
+      "constraint_id": "scenario.mobility.pedestrian-safety.accessible-detours.v1.constraint.binding",
+      "description": "The pedestrian safety and universal accessibility stress test must respect declared minimum continuity and safety thresholds across severe scenarios.",
+      "hard": true,
+      "kind": "risk",
+      "required_source_roles": [
+        "asset-inventory",
+        "climate-hazard",
+        "facility-inventory",
+        "geographic-identity",
+        "real-time-state",
+        "transport-network"
+      ]
+    },
+    {
+      "binding": false,
+      "constraint_id": "scenario.mobility.pedestrian-safety.accessible-detours.v1.constraint.evidence-scope",
+      "description": "Every released metric must retain evidence type, source lineage, geography, time, assumptions, and uncertainty.",
+      "hard": true,
+      "kind": "technical",
+      "required_source_roles": [
+        "asset-inventory"
+      ]
+    },
+    {
+      "binding": false,
+      "constraint_id": "scenario.mobility.pedestrian-safety.accessible-detours.v1.constraint.decision-authority",
+      "description": "No analytical output may bypass lawful authority, accountable human review, or an applicable appeal process.",
+      "hard": true,
+      "kind": "regulatory",
+      "required_source_roles": [
+        "asset-inventory"
+      ]
+    }
+  ],
+  "current_readiness": "blocked-missing-source",
+  "decision_cadence": "recompiled at each planning cycle and after material evidence change",
+  "decision_owner": "vision-zero director and accessibility compliance officer",
+  "decision_question": "Which detour and continuity plan preserves accessible essential trips during street, weather, or facility closures?",
+  "decision_type": "stress-test",
+  "design_id": "scenario.mobility.pedestrian-safety.accessible-detours.v1",
+  "design_order": 55,
+  "design_signature": "sha256:0ccef0fa2c71952b1d9c9eefb78362832c20ca75efa933574812860d2489469e",
+  "evidence_requirements": [
+    "estimated",
+    "observed",
+    "optimized",
+    "proposed",
+    "simulated"
+  ],
+  "family_id": "mobility.pedestrian-safety",
+  "family_title": "Pedestrian safety and universal accessibility",
+  "horizon": "seasonal",
+  "implementation_status": "design-only",
+  "independence_key": {
+    "binding_constraint": "The pedestrian safety and universal accessibility stress test must respect declared minimum continuity and safety thresholds across severe scenarios.",
+    "decision_object": "accessible pedestrian continuity under closures",
+    "evidence_gate": "Evidence for accessible pedestrian continuity under closures passes documented checks for scenario ranges, dependence, failure rates, recovery, intervention performance, and sensitivity.",
+    "horizon": "seasonal",
+    "intervention_mechanism": "mobility-profile network failure and detour simulation",
+    "primary_outcome": "essential destinations unreachable by an accessible detour",
+    "spatial_unit": "network"
+  },
+  "intended_claim": "A versioned stress-test design for comparing declared alternatives affecting accessible pedestrian continuity under closures, conditional on its evidence gate.",
+  "limitations": [
+    "This library record has no city binding and therefore reports no local input, output, or recommendation.",
+    "Readiness describes explicit source and method gates; it does not certify implementation feasibility.",
+    "External domain, legal, community, security, and operational review remains outside this design artifact."
+  ],
+  "method_claimed": false,
+  "objectives": [
+    {
+      "evidence_type": "estimated",
+      "metric": "essential destinations unreachable by an accessible detour",
+      "objective_id": "scenario.mobility.pedestrian-safety.accessible-detours.v1.objective.primary",
+      "primary": true,
+      "sense": "minimize",
+      "unit": "destinations"
+    },
+    {
+      "evidence_type": "estimated",
+      "metric": "distributional gap in essential destinations unreachable by an accessible detour",
+      "objective_id": "scenario.mobility.pedestrian-safety.accessible-detours.v1.objective.equity",
+      "primary": false,
+      "sense": "minimize",
+      "unit": "destinations"
+    },
+    {
+      "evidence_type": "observed",
+      "metric": "decision claims with complete evidence lineage",
+      "objective_id": "scenario.mobility.pedestrian-safety.accessible-detours.v1.objective.traceability",
+      "primary": false,
+      "sense": "maximize",
+      "unit": "percent"
+    }
+  ],
+  "prohibited_claims": [
+    "Do not describe simulated accessible detours as field-verified or universally usable.",
+    "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+    "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+    "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+  ],
+  "release_gate": {
+    "failure_release": "Release an explicit insufficient-evidence record naming missing sources, failed diagnostics, prohibited claims, and the next validation action.",
+    "failure_status": "insufficient-evidence",
+    "gate_id": "scenario.mobility.pedestrian-safety.accessible-detours.v1.gate.release",
+    "gate_type": "external-validation",
+    "pass_condition": "Evidence for accessible pedestrian continuity under closures passes documented checks for scenario ranges, dependence, failure rates, recovery, intervention performance, and sensitivity.",
+    "required_evidence_types": [
+      "estimated",
+      "observed"
+    ],
+    "required_source_roles": [
+      "asset-inventory",
+      "climate-hazard",
+      "facility-inventory",
+      "geographic-identity",
+      "real-time-state",
+      "transport-network"
+    ]
+  },
+  "required_source_roles": [
+    "asset-inventory",
+    "climate-hazard",
+    "facility-inventory",
+    "geographic-identity",
+    "real-time-state",
+    "transport-network"
+  ],
+  "schema_version": "1.0.0",
+  "spatial_unit": "network",
+  "suite": "mobility-accessibility-operations",
+  "tags": [
+    "design-only",
+    "mobility-accessibility-operations",
+    "mobility.pedestrian-safety",
+    "scenario-library",
+    "stress-test"
+  ],
+  "title": "Stress-test accessible routes during closures and hazards",
+  "transportability_risks": [
+    "Street design, enforcement, mobility-device needs, exposure, and reporting vary by place.",
+    "Crash-only models underrepresent near misses and unreported accessibility barriers."
+  ]
+}

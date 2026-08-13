@@ -1,0 +1,164 @@
+{
+  "affected_system": "fixed-route public transit service and passenger connections",
+  "alternatives": [
+    "advance high-risk work within verified feasible windows for route timetable, recovery, and connection schedule",
+    "use rolling risk and capacity updates to reschedule route timetable, recovery, and connection schedule",
+    "pair multi-route timetable optimization with stochastic travel times with an explicit stop, review, and escalation rule"
+  ],
+  "analysis_modes": [
+    "forecast",
+    "optimization"
+  ],
+  "assumptions": [
+    "Trips, stops, vehicle observations, disruptions, and calendars share a versioned service day.",
+    "Passenger loads and transfer behavior are measured or represented as bounded assumptions.",
+    "All alternatives, capacities, costs, effects, thresholds, and failure scenarios are proposed until bound to evidence."
+  ],
+  "baseline": "continue the fixed operating calendar for route timetable, recovery, and connection schedule.",
+  "city_bindings": [],
+  "constraints": [
+    {
+      "binding": true,
+      "constraint_id": "scenario.mobility.transit-reliability.timetable-connections.v1.constraint.binding",
+      "description": "The transit reliability and passenger continuity schedule must respect declared labor, access, sequencing, notice, and completion windows.",
+      "hard": true,
+      "kind": "time",
+      "required_source_roles": [
+        "geographic-identity",
+        "legal-regulatory",
+        "operating-capacity",
+        "real-time-state",
+        "service-schedule",
+        "transport-network"
+      ]
+    },
+    {
+      "binding": false,
+      "constraint_id": "scenario.mobility.transit-reliability.timetable-connections.v1.constraint.evidence-scope",
+      "description": "Every released metric must retain evidence type, source lineage, geography, time, assumptions, and uncertainty.",
+      "hard": true,
+      "kind": "technical",
+      "required_source_roles": [
+        "geographic-identity"
+      ]
+    },
+    {
+      "binding": false,
+      "constraint_id": "scenario.mobility.transit-reliability.timetable-connections.v1.constraint.decision-authority",
+      "description": "No analytical output may bypass lawful authority, accountable human review, or an applicable appeal process.",
+      "hard": true,
+      "kind": "regulatory",
+      "required_source_roles": [
+        "geographic-identity"
+      ]
+    }
+  ],
+  "current_readiness": "blocked-missing-source",
+  "decision_cadence": "recompiled at each planning cycle and after material evidence change",
+  "decision_owner": "transit chief operating officer and service-planning director",
+  "decision_question": "How should trips and recovery time be scheduled to balance reliability, transfers, and operator rules?",
+  "decision_type": "schedule",
+  "design_id": "scenario.mobility.transit-reliability.timetable-connections.v1",
+  "design_order": 46,
+  "design_signature": "sha256:95b7d1198730788a32e60e4c7ebc7c3106503a74a4c87a75808bf196625261be",
+  "evidence_requirements": [
+    "estimated",
+    "observed",
+    "optimized",
+    "proposed"
+  ],
+  "family_id": "mobility.transit-reliability",
+  "family_title": "Transit reliability and passenger continuity",
+  "horizon": "weeks",
+  "implementation_status": "design-only",
+  "independence_key": {
+    "binding_constraint": "The transit reliability and passenger continuity schedule must respect declared labor, access, sequencing, notice, and completion windows.",
+    "decision_object": "route timetable, recovery, and connection schedule",
+    "evidence_gate": "Evidence for route timetable, recovery, and connection schedule passes documented checks for effective dates, time zones, calendars, lead times, completion semantics, and update cadence.",
+    "horizon": "weeks",
+    "intervention_mechanism": "multi-route timetable optimization with stochastic travel times",
+    "primary_outcome": "passenger-weighted excess wait and missed-connection time",
+    "spatial_unit": "network"
+  },
+  "intended_claim": "A versioned schedule design for comparing declared alternatives affecting route timetable, recovery, and connection schedule, conditional on its evidence gate.",
+  "limitations": [
+    "This library record has no city binding and therefore reports no local input, output, or recommendation.",
+    "Readiness describes explicit source and method gates; it does not certify implementation feasibility.",
+    "External domain, legal, community, security, and operational review remains outside this design artifact."
+  ],
+  "method_claimed": false,
+  "objectives": [
+    {
+      "evidence_type": "estimated",
+      "metric": "passenger-weighted excess wait and missed-connection time",
+      "objective_id": "scenario.mobility.transit-reliability.timetable-connections.v1.objective.primary",
+      "primary": true,
+      "sense": "minimize",
+      "unit": "passenger-minutes"
+    },
+    {
+      "evidence_type": "estimated",
+      "metric": "distributional gap in passenger-weighted excess wait and missed-connection time",
+      "objective_id": "scenario.mobility.transit-reliability.timetable-connections.v1.objective.equity",
+      "primary": false,
+      "sense": "minimize",
+      "unit": "passenger-minutes"
+    },
+    {
+      "evidence_type": "observed",
+      "metric": "decision claims with complete evidence lineage",
+      "objective_id": "scenario.mobility.transit-reliability.timetable-connections.v1.objective.traceability",
+      "primary": false,
+      "sense": "maximize",
+      "unit": "percent"
+    }
+  ],
+  "prohibited_claims": [
+    "Do not call an optimized timetable published, staffed, or operated.",
+    "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+    "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+    "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+  ],
+  "release_gate": {
+    "failure_release": "Release an explicit insufficient-evidence record naming missing sources, failed diagnostics, prohibited claims, and the next validation action.",
+    "failure_status": "insufficient-evidence",
+    "gate_id": "scenario.mobility.transit-reliability.timetable-connections.v1.gate.release",
+    "gate_type": "temporal-alignment",
+    "pass_condition": "Evidence for route timetable, recovery, and connection schedule passes documented checks for effective dates, time zones, calendars, lead times, completion semantics, and update cadence.",
+    "required_evidence_types": [
+      "observed",
+      "proposed"
+    ],
+    "required_source_roles": [
+      "geographic-identity",
+      "legal-regulatory",
+      "operating-capacity",
+      "real-time-state",
+      "service-schedule",
+      "transport-network"
+    ]
+  },
+  "required_source_roles": [
+    "geographic-identity",
+    "legal-regulatory",
+    "operating-capacity",
+    "real-time-state",
+    "service-schedule",
+    "transport-network"
+  ],
+  "schema_version": "1.0.0",
+  "spatial_unit": "network",
+  "suite": "mobility-accessibility-operations",
+  "tags": [
+    "design-only",
+    "mobility-accessibility-operations",
+    "mobility.transit-reliability",
+    "scenario-library",
+    "schedule"
+  ],
+  "title": "Schedule headways, recovery time, and timed connections",
+  "transportability_risks": [
+    "Fare policy, headways, fleet, labor rules, topology, and passenger behavior vary by operator.",
+    "Reliability metrics may not transfer between schedule-based and frequency-based service."
+  ]
+}

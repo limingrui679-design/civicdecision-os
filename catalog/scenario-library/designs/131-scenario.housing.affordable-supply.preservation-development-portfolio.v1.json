@@ -1,0 +1,164 @@
+{
+  "affected_system": "affordable housing production, preservation, subsidy, and compliance system",
+  "alternatives": [
+    "rank verified high-consequence candidates for affordable-housing preservation and development portfolio",
+    "select a risk-, equity-, and lifecycle-balanced portfolio for affordable-housing preservation and development portfolio",
+    "pair unit-year, equity, access, risk, and subsidy portfolio optimization with an explicit stop, review, and escalation rule"
+  ],
+  "analysis_modes": [
+    "descriptive",
+    "optimization"
+  ],
+  "assumptions": [
+    "Units, affordability restrictions, occupancy, financing, condition, pipeline, and parcel feasibility are reconciled.",
+    "Modeled development feasibility is not treated as entitlement, financing close, or completed housing.",
+    "All alternatives, capacities, costs, effects, thresholds, and failure scenarios are proposed until bound to evidence."
+  ],
+  "baseline": "fund only already-committed work for affordable-housing preservation and development portfolio.",
+  "city_bindings": [],
+  "constraints": [
+    {
+      "binding": true,
+      "constraint_id": "scenario.housing.affordable-supply.preservation-development-portfolio.v1.constraint.binding",
+      "description": "The affordable housing siting and preservation prioritize must respect declared capital, operating, maintenance, and delivery budgets.",
+      "hard": true,
+      "kind": "budget",
+      "required_source_roles": [
+        "asset-condition",
+        "equity-attribute",
+        "financial-cost",
+        "geographic-identity",
+        "housing-market",
+        "land-parcel"
+      ]
+    },
+    {
+      "binding": false,
+      "constraint_id": "scenario.housing.affordable-supply.preservation-development-portfolio.v1.constraint.evidence-scope",
+      "description": "Every released metric must retain evidence type, source lineage, geography, time, assumptions, and uncertainty.",
+      "hard": true,
+      "kind": "technical",
+      "required_source_roles": [
+        "asset-condition"
+      ]
+    },
+    {
+      "binding": false,
+      "constraint_id": "scenario.housing.affordable-supply.preservation-development-portfolio.v1.constraint.decision-authority",
+      "description": "No analytical output may bypass lawful authority, accountable human review, or an applicable appeal process.",
+      "hard": true,
+      "kind": "regulatory",
+      "required_source_roles": [
+        "asset-condition"
+      ]
+    }
+  ],
+  "current_readiness": "blocked-missing-source",
+  "decision_cadence": "recompiled at each planning cycle and after material evidence change",
+  "decision_owner": "housing development commissioner and affordable-housing finance director",
+  "decision_question": "Which preservation, acquisition, rehabilitation, and new-development projects should receive funding?",
+  "decision_type": "prioritize",
+  "design_id": "scenario.housing.affordable-supply.preservation-development-portfolio.v1",
+  "design_order": 131,
+  "design_signature": "sha256:c270647f563e8682ffabb52c1ffbae18473b964935a30110d224c277b6f4014a",
+  "evidence_requirements": [
+    "estimated",
+    "observed",
+    "optimized",
+    "proposed"
+  ],
+  "family_id": "housing.affordable-supply",
+  "family_title": "Affordable housing siting and preservation",
+  "horizon": "multi-year",
+  "implementation_status": "design-only",
+  "independence_key": {
+    "binding_constraint": "The affordable housing siting and preservation prioritize must respect declared capital, operating, maintenance, and delivery budgets.",
+    "decision_object": "affordable-housing preservation and development portfolio",
+    "evidence_gate": "Evidence for affordable-housing preservation and development portfolio passes documented checks for cost, benefit, service life, dependencies, deliverability, and maintenance burden.",
+    "horizon": "multi-year",
+    "intervention_mechanism": "unit-year, equity, access, risk, and subsidy portfolio optimization",
+    "primary_outcome": "affordable home-years lost relative to targets",
+    "spatial_unit": "parcel"
+  },
+  "intended_claim": "A versioned prioritize design for comparing declared alternatives affecting affordable-housing preservation and development portfolio, conditional on its evidence gate.",
+  "limitations": [
+    "This library record has no city binding and therefore reports no local input, output, or recommendation.",
+    "Readiness describes explicit source and method gates; it does not certify implementation feasibility.",
+    "External domain, legal, community, security, and operational review remains outside this design artifact."
+  ],
+  "method_claimed": false,
+  "objectives": [
+    {
+      "evidence_type": "estimated",
+      "metric": "affordable home-years lost relative to targets",
+      "objective_id": "scenario.housing.affordable-supply.preservation-development-portfolio.v1.objective.primary",
+      "primary": true,
+      "sense": "minimize",
+      "unit": "home-years"
+    },
+    {
+      "evidence_type": "estimated",
+      "metric": "distributional gap in affordable home-years lost relative to targets",
+      "objective_id": "scenario.housing.affordable-supply.preservation-development-portfolio.v1.objective.equity",
+      "primary": false,
+      "sense": "minimize",
+      "unit": "home-years"
+    },
+    {
+      "evidence_type": "observed",
+      "metric": "decision claims with complete evidence lineage",
+      "objective_id": "scenario.housing.affordable-supply.preservation-development-portfolio.v1.objective.traceability",
+      "primary": false,
+      "sense": "maximize",
+      "unit": "percent"
+    }
+  ],
+  "prohibited_claims": [
+    "Do not report selected projects as financed, constructed, occupied, or preserved.",
+    "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+    "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+    "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+  ],
+  "release_gate": {
+    "failure_release": "Release an explicit insufficient-evidence record naming missing sources, failed diagnostics, prohibited claims, and the next validation action.",
+    "failure_status": "insufficient-evidence",
+    "gate_id": "scenario.housing.affordable-supply.preservation-development-portfolio.v1.gate.release",
+    "gate_type": "cost-capacity",
+    "pass_condition": "Evidence for affordable-housing preservation and development portfolio passes documented checks for cost, benefit, service life, dependencies, deliverability, and maintenance burden.",
+    "required_evidence_types": [
+      "observed",
+      "proposed"
+    ],
+    "required_source_roles": [
+      "asset-condition",
+      "equity-attribute",
+      "financial-cost",
+      "geographic-identity",
+      "housing-market",
+      "land-parcel"
+    ]
+  },
+  "required_source_roles": [
+    "asset-condition",
+    "equity-attribute",
+    "financial-cost",
+    "geographic-identity",
+    "housing-market",
+    "land-parcel"
+  ],
+  "schema_version": "1.0.0",
+  "spatial_unit": "parcel",
+  "suite": "housing-land-use-regeneration",
+  "tags": [
+    "design-only",
+    "housing-land-use-regeneration",
+    "housing.affordable-supply",
+    "prioritize",
+    "scenario-library"
+  ],
+  "title": "Prioritize affordable-housing preservation and development",
+  "transportability_risks": [
+    "Land law, subsidy programs, construction costs, finance, tenant protections, and markets differ.",
+    "Observed transactions may omit informal displacement and off-market preservation risks."
+  ]
+}

@@ -1,0 +1,226 @@
+{
+  "audit_maximum_pairwise_similarity": 0.646154,
+  "design": {
+    "affected_system": "roadway, bridge, sidewalk, signal, and public right-of-way asset network",
+    "alternatives": [
+      "rank verified high-consequence candidates for road and bridge maintenance and renewal portfolio",
+      "select a risk-, equity-, and lifecycle-balanced portfolio for road and bridge maintenance and renewal portfolio",
+      "pair condition, consequence, access, lifecycle cost, and deliverability optimization with an explicit stop, review, and escalation rule"
+    ],
+    "analysis_modes": [
+      "descriptive",
+      "optimization"
+    ],
+    "assumptions": [
+      "Assets, inspections, defects, work orders, costs, traffic, restrictions, and completion are reconciled.",
+      "Engineering thresholds and deterioration models are locally reviewed and versioned.",
+      "All alternatives, capacities, costs, effects, thresholds, and failure scenarios are proposed until bound to evidence."
+    ],
+    "baseline": "fund only already-committed work for road and bridge maintenance and renewal portfolio.",
+    "city_bindings": [],
+    "constraints": [
+      {
+        "binding": true,
+        "constraint_id": "scenario.infrastructure.roads-bridges.maintenance-renewal.v1.constraint.binding",
+        "description": "The road and bridge asset management prioritize must respect declared capital, operating, maintenance, and delivery budgets.",
+        "hard": true,
+        "kind": "budget",
+        "required_source_roles": [
+          "asset-condition",
+          "asset-inventory",
+          "equity-attribute",
+          "financial-cost",
+          "geographic-identity",
+          "transport-network"
+        ]
+      },
+      {
+        "binding": false,
+        "constraint_id": "scenario.infrastructure.roads-bridges.maintenance-renewal.v1.constraint.evidence-scope",
+        "description": "Every released metric must retain evidence type, source lineage, geography, time, assumptions, and uncertainty.",
+        "hard": true,
+        "kind": "technical",
+        "required_source_roles": [
+          "asset-condition"
+        ]
+      },
+      {
+        "binding": false,
+        "constraint_id": "scenario.infrastructure.roads-bridges.maintenance-renewal.v1.constraint.decision-authority",
+        "description": "No analytical output may bypass lawful authority, accountable human review, or an applicable appeal process.",
+        "hard": true,
+        "kind": "regulatory",
+        "required_source_roles": [
+          "asset-condition"
+        ]
+      }
+    ],
+    "current_readiness": "reference-implemented",
+    "decision_cadence": "recompiled at each planning cycle and after material evidence change",
+    "decision_owner": "public works asset manager and chief infrastructure engineer",
+    "decision_question": "Which preventive, rehabilitative, safety, accessibility, and replacement projects should be funded?",
+    "decision_type": "prioritize",
+    "design_id": "scenario.infrastructure.roads-bridges.maintenance-renewal.v1",
+    "design_order": 179,
+    "design_signature": "sha256:d2e07bee1ab0a4f304e0486d722c85e4b3ce6ba2eb2680d7b977d978d1bc750c",
+    "evidence_requirements": [
+      "estimated",
+      "observed",
+      "optimized",
+      "proposed"
+    ],
+    "existing_template_ref": "deep.infrastructure.maintenance-portfolio.v1",
+    "family_id": "infrastructure.roads-bridges",
+    "family_title": "Road and bridge asset management",
+    "horizon": "multi-year",
+    "implementation_status": "reference-implemented",
+    "independence_key": {
+      "binding_constraint": "The road and bridge asset management prioritize must respect declared capital, operating, maintenance, and delivery budgets.",
+      "decision_object": "road and bridge maintenance and renewal portfolio",
+      "evidence_gate": "Evidence for road and bridge maintenance and renewal portfolio passes documented checks for cost, benefit, service life, dependencies, deliverability, and maintenance burden.",
+      "horizon": "multi-year",
+      "intervention_mechanism": "condition, consequence, access, lifecycle cost, and deliverability optimization",
+      "primary_outcome": "expected risk-adjusted deficient asset-years",
+      "spatial_unit": "asset"
+    },
+    "intended_claim": "A versioned prioritize design for comparing declared alternatives affecting road and bridge maintenance and renewal portfolio, conditional on its evidence gate.",
+    "limitations": [
+      "This library record has no city binding and therefore reports no local input, output, or recommendation.",
+      "Readiness describes explicit source and method gates; it does not certify implementation feasibility.",
+      "External domain, legal, community, security, and operational review remains outside this design artifact."
+    ],
+    "method_claimed": false,
+    "objectives": [
+      {
+        "evidence_type": "estimated",
+        "metric": "expected risk-adjusted deficient asset-years",
+        "objective_id": "scenario.infrastructure.roads-bridges.maintenance-renewal.v1.objective.primary",
+        "primary": true,
+        "sense": "minimize",
+        "unit": "asset-years"
+      },
+      {
+        "evidence_type": "estimated",
+        "metric": "distributional gap in expected risk-adjusted deficient asset-years",
+        "objective_id": "scenario.infrastructure.roads-bridges.maintenance-renewal.v1.objective.equity",
+        "primary": false,
+        "sense": "minimize",
+        "unit": "asset-years"
+      },
+      {
+        "evidence_type": "observed",
+        "metric": "decision claims with complete evidence lineage",
+        "objective_id": "scenario.infrastructure.roads-bridges.maintenance-renewal.v1.objective.traceability",
+        "primary": false,
+        "sense": "maximize",
+        "unit": "percent"
+      }
+    ],
+    "prohibited_claims": [
+      "Do not report request-based prioritization as engineering design, capital approval, or completed work.",
+      "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+      "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+      "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+    ],
+    "reference_implementation_note": "Tier-D template deep.infrastructure.maintenance-portfolio.v1 (Infrastructure-maintenance request portfolio) supplies a bounded reference workflow for this design axis. The mapping does not establish complete city-specific inputs, external validity, deployment, adoption, or impact.",
+    "release_gate": {
+      "failure_release": "Release an explicit insufficient-evidence record naming missing sources, failed diagnostics, prohibited claims, and the next validation action.",
+      "failure_status": "insufficient-evidence",
+      "gate_id": "scenario.infrastructure.roads-bridges.maintenance-renewal.v1.gate.release",
+      "gate_type": "cost-capacity",
+      "pass_condition": "Evidence for road and bridge maintenance and renewal portfolio passes documented checks for cost, benefit, service life, dependencies, deliverability, and maintenance burden.",
+      "required_evidence_types": [
+        "observed",
+        "proposed"
+      ],
+      "required_source_roles": [
+        "asset-condition",
+        "asset-inventory",
+        "equity-attribute",
+        "financial-cost",
+        "geographic-identity",
+        "transport-network"
+      ]
+    },
+    "required_source_roles": [
+      "asset-condition",
+      "asset-inventory",
+      "equity-attribute",
+      "financial-cost",
+      "geographic-identity",
+      "transport-network"
+    ],
+    "schema_version": "1.0.0",
+    "spatial_unit": "asset",
+    "suite": "infrastructure-finance-asset-risk",
+    "tags": [
+      "infrastructure-finance-asset-risk",
+      "infrastructure.roads-bridges",
+      "prioritize",
+      "reference-implemented",
+      "scenario-library"
+    ],
+    "title": "Prioritize road and bridge maintenance and renewal",
+    "transportability_risks": [
+      "Materials, climate, loading, standards, inspection, procurement, and unit costs differ.",
+      "Service requests can reveal workload but not structural condition or safety."
+    ]
+  },
+  "family": {
+    "affected_system": "roadway, bridge, sidewalk, signal, and public right-of-way asset network",
+    "claim_boundary": [
+      "Requests and proxy indicators do not replace engineering inspection, accounting, or legal review.",
+      "Selected projects and schedules are planning outputs, not appropriations, designs, contracts, or construction.",
+      "Modeled lifecycle, emissions, reliability, and fiscal effects are not realized outcomes."
+    ],
+    "common_source_roles": [
+      "asset-condition",
+      "asset-inventory",
+      "geographic-identity"
+    ],
+    "decision_owner": "public works asset manager and chief infrastructure engineer",
+    "decision_types": [
+      "diagnose",
+      "forecast",
+      "prioritize",
+      "site",
+      "allocate",
+      "schedule",
+      "stress-test",
+      "evaluate"
+    ],
+    "description": "Eight decisions for condition diagnosis, failure forecasting, maintenance portfolios, depot siting, crew allocation, work scheduling, network stress, and treatment evaluation.",
+    "design_refs": [
+      "scenario.infrastructure.roads-bridges.asset-condition-failure.v1",
+      "scenario.infrastructure.roads-bridges.asset-deterioration.v1",
+      "scenario.infrastructure.roads-bridges.maintenance-renewal.v1",
+      "scenario.infrastructure.roads-bridges.maintenance-depots.v1",
+      "scenario.infrastructure.roads-bridges.maintenance-crews-equipment.v1",
+      "scenario.infrastructure.roads-bridges.maintenance-construction.v1",
+      "scenario.infrastructure.roads-bridges.transport-asset-failure.v1",
+      "scenario.infrastructure.roads-bridges.preventive-maintenance-effect.v1"
+    ],
+    "design_signatures": [
+      "sha256:a5c660144ab5e285d9ec2a3415aa7deb68f5bc95501ef1c7c7cab1a3b939038a",
+      "sha256:def90bcc24f8fd64b2c219ab9aa08a1af3fb39fd6e65f9c86f2e8b8a273ad26f",
+      "sha256:d2e07bee1ab0a4f304e0486d722c85e4b3ce6ba2eb2680d7b977d978d1bc750c",
+      "sha256:c6669b12d428e7bdb7656081882641b771c67e084325243eb8994c09338d9730",
+      "sha256:44c75b2d042e14a62c1452e07b9e153be1f5cf91100544015ca4e72343542b2b",
+      "sha256:b564534d6bf70b70b13b9187c5ebdc4b7fbf56db52789a4e1e102f1cedd36eda",
+      "sha256:f411b99614d6cc6e70621508361b2fe94c6d3db23fb24b8ceb1485533d0e85a1",
+      "sha256:291748e867e2ea1acffbca454fb917e653d583010f8111ae478b92d129aa18c5"
+    ],
+    "family_id": "infrastructure.roads-bridges",
+    "family_order": 23,
+    "schema_version": "1.0.0",
+    "suite": "infrastructure-finance-asset-risk",
+    "title": "Road and bridge asset management"
+  },
+  "library_claim_boundary": [
+    "The catalog contains 240 decision designs, not 240 city executions.",
+    "Exactly twelve designs map to existing Tier-D reference templates; 228 remain design-only.",
+    "A reference implementation can be an explicit negative release and does not imply impact.",
+    "No record claims a city binding, new method, deployment, adoption, or real-user outcome.",
+    "Future execution requires source binding, gate passage, and domain, legal, community, and operational review."
+  ]
+}

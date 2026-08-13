@@ -1,0 +1,333 @@
+{
+  "designs": [
+    {
+      "analysis_modes": [
+        "descriptive"
+      ],
+      "binding_constraint": "The water and wastewater infrastructure diagnose must respect declared measurement resolution and classification uncertainty.",
+      "content_hash": "sha256:f97cbfe30b34b36099e2640d58e9412916475150277bf2e52a3b5650209c3d63",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Which assets show verified break, overflow, pressure, quality, condition, or repeat-repair patterns?",
+      "decision_type": "diagnose",
+      "design_id": "scenario.infrastructure.water-wastewater.utility-failure-patterns.v1",
+      "design_order": 185,
+      "evidence_gate": "geographic-alignment",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "proposed"
+      ],
+      "family_id": "infrastructure.water-wastewater",
+      "family_title": "Water and wastewater infrastructure",
+      "horizon": "annual",
+      "implementation_status": "design-only",
+      "primary_outcome": "high-consequence assets with unresolved failure evidence",
+      "prohibited_claims": [
+        "Do not infer water quality, leakage, overflow, or asset failure from complaints alone.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "network",
+      "suite": "infrastructure-finance-asset-risk",
+      "title": "Diagnose water and wastewater asset failure patterns"
+    },
+    {
+      "analysis_modes": [
+        "forecast"
+      ],
+      "binding_constraint": "The water and wastewater infrastructure forecast must respect declared validated operational capacity and forecast uncertainty.",
+      "content_hash": "sha256:d4aff501e5af399e89d5cada505b5523ca94b6c7a10c9ba9d310526bf59ce424",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "What probabilistic flow, quality, break, overflow, and treatment-load range should operations prepare for?",
+      "decision_type": "forecast",
+      "design_id": "scenario.infrastructure.water-wastewater.utility-demand-failures.v1",
+      "design_order": 186,
+      "evidence_gate": "model-calibration",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "proposed"
+      ],
+      "family_id": "infrastructure.water-wastewater",
+      "family_title": "Water and wastewater infrastructure",
+      "horizon": "weeks",
+      "implementation_status": "design-only",
+      "primary_outcome": "service demand and failure load above operable capacity",
+      "prohibited_claims": [
+        "Do not present modeled breaks, quality events, or overflows as observed incidents.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "network",
+      "suite": "infrastructure-finance-asset-risk",
+      "title": "Forecast utility demand, failures, and treatment load"
+    },
+    {
+      "analysis_modes": [
+        "descriptive",
+        "optimization"
+      ],
+      "binding_constraint": "The water and wastewater infrastructure prioritize must respect declared capital, operating, maintenance, and delivery budgets.",
+      "content_hash": "sha256:874bbe070e36699e91882c9d501f50b4ea73491d5493364e39e573f4a7810c2f",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Which pipes, pumps, plants, storage, sensors, and process upgrades should enter the capital portfolio?",
+      "decision_type": "prioritize",
+      "design_id": "scenario.infrastructure.water-wastewater.utility-renewal.v1",
+      "design_order": 187,
+      "evidence_gate": "cost-capacity",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed"
+      ],
+      "family_id": "infrastructure.water-wastewater",
+      "family_title": "Water and wastewater infrastructure",
+      "horizon": "multi-year",
+      "implementation_status": "design-only",
+      "primary_outcome": "expected risk-adjusted service interruption and compliance burden",
+      "prohibited_claims": [
+        "Do not report modeled risk reduction as completed renewal, compliance, or avoided incidents.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "asset",
+      "suite": "infrastructure-finance-asset-risk",
+      "title": "Prioritize water and wastewater renewal"
+    },
+    {
+      "analysis_modes": [
+        "simulation",
+        "optimization"
+      ],
+      "binding_constraint": "The water and wastewater infrastructure site must respect declared land control, accessibility, permitting, safety, and operating feasibility.",
+      "content_hash": "sha256:52e3579aaefd413e186ab3617f01ab0d6089a21e95eb66645890b168e9927801",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Where should new facilities satisfy hydraulic need while limiting hazard and community burdens?",
+      "decision_type": "site",
+      "design_id": "scenario.infrastructure.water-wastewater.utility-facilities.v1",
+      "design_order": 188,
+      "evidence_gate": "legal-authority",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "family_id": "infrastructure.water-wastewater",
+      "family_title": "Water and wastewater infrastructure",
+      "horizon": "multi-year",
+      "implementation_status": "design-only",
+      "primary_outcome": "critical service demand beyond resilient facility capacity",
+      "prohibited_claims": [
+        "Do not call a screened utility site permitted, engineered, acquired, safe, or accepted.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "facility",
+      "suite": "infrastructure-finance-asset-risk",
+      "title": "Site utility storage, pumping, treatment, and recovery facilities"
+    },
+    {
+      "analysis_modes": [
+        "simulation",
+        "optimization"
+      ],
+      "binding_constraint": "The water and wastewater infrastructure allocate must respect declared minimum service, eligibility, capacity, and distributional safeguards.",
+      "content_hash": "sha256:db9cd60ffe244d2576f98dafbb3344de7b4c0ef3e39287d58af2b45ffa353afb",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "How should qualified crews, laboratory capacity, bypass equipment, parts, and inspectors be assigned?",
+      "decision_type": "allocate",
+      "design_id": "scenario.infrastructure.water-wastewater.utility-repair-capacity.v1",
+      "design_order": 189,
+      "evidence_gate": "equity-measurement",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "family_id": "infrastructure.water-wastewater",
+      "family_title": "Water and wastewater infrastructure",
+      "horizon": "weeks",
+      "implementation_status": "design-only",
+      "primary_outcome": "critical utility work without assigned qualified capacity",
+      "prohibited_claims": [
+        "Do not report an assignment as repair, sampling, restored service, or compliance.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "network",
+      "suite": "infrastructure-finance-asset-risk",
+      "title": "Allocate utility repair, inspection, and emergency capacity"
+    },
+    {
+      "analysis_modes": [
+        "forecast",
+        "optimization"
+      ],
+      "binding_constraint": "The water and wastewater infrastructure schedule must respect declared labor, access, sequencing, notice, and completion windows.",
+      "content_hash": "sha256:6cde2fb7e25945357ce11b99043874d86a8e69cfb49bed348d7da6c4431990c7",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "When should isolation, inspection, cleaning, repair, renewal, sampling, and process work occur?",
+      "decision_type": "schedule",
+      "design_id": "scenario.infrastructure.water-wastewater.utility-maintenance.v1",
+      "design_order": 190,
+      "evidence_gate": "temporal-alignment",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed"
+      ],
+      "family_id": "infrastructure.water-wastewater",
+      "family_title": "Water and wastewater infrastructure",
+      "horizon": "weeks",
+      "implementation_status": "design-only",
+      "primary_outcome": "critical asset-days beyond maintenance and compliance windows",
+      "prohibited_claims": [
+        "Do not call scheduled utility work complete, compliant, or safe.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "network",
+      "suite": "infrastructure-finance-asset-risk",
+      "title": "Schedule utility inspection, maintenance, and renewal"
+    },
+    {
+      "analysis_modes": [
+        "forecast",
+        "simulation",
+        "optimization"
+      ],
+      "binding_constraint": "The water and wastewater infrastructure stress test must respect declared minimum continuity and safety thresholds across severe scenarios.",
+      "content_hash": "sha256:d35d691e8b0adf08cbf6ae04f36b1e28efb903fd96a43af2b6a935d2c0e9884c",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Which renewal and operations strategy preserves essential service under drought, flood, outage, contamination, and asset failure?",
+      "decision_type": "stress-test",
+      "design_id": "scenario.infrastructure.water-wastewater.utility-continuity.v1",
+      "design_order": 191,
+      "evidence_gate": "external-validation",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "family_id": "infrastructure.water-wastewater",
+      "family_title": "Water and wastewater infrastructure",
+      "horizon": "seasonal",
+      "implementation_status": "design-only",
+      "primary_outcome": "scenario-weighted essential service interruption",
+      "prohibited_claims": [
+        "Do not present synthetic contamination, failure, or service interruption as observed.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "network",
+      "suite": "infrastructure-finance-asset-risk",
+      "title": "Stress-test water and wastewater continuity"
+    },
+    {
+      "analysis_modes": [
+        "descriptive",
+        "causal"
+      ],
+      "binding_constraint": "The water and wastewater infrastructure evaluate must respect declared pre-specified assignment, comparison, outcome, spillover, and subgroup rules.",
+      "content_hash": "sha256:6f4cecec041f1bfdbf1dccc99255a1ae73358455ca4a469c1523063b774d9cd0",
+      "current_readiness": "blocked-multiple-gates",
+      "decision_question": "Did phased renewal or pressure management reduce verified failures and service loss?",
+      "decision_type": "evaluate",
+      "design_id": "scenario.infrastructure.water-wastewater.renewal-strategy-effect.v1",
+      "design_order": 192,
+      "evidence_gate": "causal-identification",
+      "evidence_types": [
+        "causal",
+        "estimated",
+        "observed",
+        "proposed"
+      ],
+      "family_id": "infrastructure.water-wastewater",
+      "family_title": "Water and wastewater infrastructure",
+      "horizon": "multi-year",
+      "implementation_status": "design-only",
+      "primary_outcome": "change in verified failures and service interruption",
+      "prohibited_claims": [
+        "Do not infer causal water quality, health, or lifecycle effects from work completion alone.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "asset",
+      "suite": "infrastructure-finance-asset-risk",
+      "title": "Evaluate utility renewal and pressure-management strategies"
+    }
+  ],
+  "family": {
+    "affected_system": "drinking-water distribution, sewer collection, pumping, and treatment assets",
+    "claim_boundary": [
+      "Requests and proxy indicators do not replace engineering inspection, accounting, or legal review.",
+      "Selected projects and schedules are planning outputs, not appropriations, designs, contracts, or construction.",
+      "Modeled lifecycle, emissions, reliability, and fiscal effects are not realized outcomes."
+    ],
+    "common_source_roles": [
+      "asset-condition",
+      "asset-inventory",
+      "geographic-identity"
+    ],
+    "decision_owner": "water and wastewater utility asset director",
+    "decision_types": [
+      "diagnose",
+      "forecast",
+      "prioritize",
+      "site",
+      "allocate",
+      "schedule",
+      "stress-test",
+      "evaluate"
+    ],
+    "description": "Eight decisions for failure diagnosis, demand forecasting, renewal portfolios, facility siting, repair allocation, maintenance scheduling, continuity stress, and renewal evaluation.",
+    "design_refs": [
+      "scenario.infrastructure.water-wastewater.utility-failure-patterns.v1",
+      "scenario.infrastructure.water-wastewater.utility-demand-failures.v1",
+      "scenario.infrastructure.water-wastewater.utility-renewal.v1",
+      "scenario.infrastructure.water-wastewater.utility-facilities.v1",
+      "scenario.infrastructure.water-wastewater.utility-repair-capacity.v1",
+      "scenario.infrastructure.water-wastewater.utility-maintenance.v1",
+      "scenario.infrastructure.water-wastewater.utility-continuity.v1",
+      "scenario.infrastructure.water-wastewater.renewal-strategy-effect.v1"
+    ],
+    "design_signatures": [
+      "sha256:ce34f9e265fdeb078de83dd38efffaf6d79addf101914a02b0f1976c6ce04e12",
+      "sha256:ab4a22e065dd736ef60f3987f77eb63fb7db09790ffbbd749ccc6e4f6059ebf4",
+      "sha256:bff9404fd0622144c3be685eef99cb90336ad7216e582bbf891b6f2e7cae74f0",
+      "sha256:9bd84b6e98b5f6cdae37fcce5aa3b620473da28960e4fe44f5a4826cb9842e74",
+      "sha256:95ea89e0fd567ee1d775b0818313c74b8b611c3fe989b08251b5acc693e24f2c",
+      "sha256:628489acea3dfeb7030841a474fcae49ac74295e471601efb42c6da911c5bfd7",
+      "sha256:c220d7a498f2b27f042e91a9cce327ba16b600f9392ac1139cced08ce96d60d2",
+      "sha256:ecfc770030be5a78a888ce33b22a3e1ebbb2c456eb85b1298268262d716fd9dc"
+    ],
+    "family_id": "infrastructure.water-wastewater",
+    "family_order": 24,
+    "schema_version": "1.0.0",
+    "suite": "infrastructure-finance-asset-risk",
+    "title": "Water and wastewater infrastructure"
+  },
+  "library_claim_boundary": [
+    "The catalog contains 240 decision designs, not 240 city executions.",
+    "Exactly twelve designs map to existing Tier-D reference templates; 228 remain design-only.",
+    "A reference implementation can be an explicit negative release and does not imply impact.",
+    "No record claims a city binding, new method, deployment, adoption, or real-user outcome.",
+    "Future execution requires source binding, gate passage, and domain, legal, community, and operational review."
+  ]
+}

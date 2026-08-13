@@ -1,0 +1,50 @@
+{
+  "affected_system": "public-sector analytical, scoring, triage, optimization, and human-review systems",
+  "claim_boundary": [
+    "Area and administrative differences do not establish discrimination, preferences, or individual behavior.",
+    "Behavioral and allocation designs require rights, accessibility, privacy, and non-coercion review.",
+    "Causal, fairness, adoption, and welfare claims require direct outcomes and independent governance evidence."
+  ],
+  "common_source_roles": [
+    "equity-attribute",
+    "legal-regulatory",
+    "outcome-panel"
+  ],
+  "decision_owner": "algorithmic accountability officer and responsible technology review board",
+  "decision_types": [
+    "diagnose",
+    "forecast",
+    "prioritize",
+    "site",
+    "allocate",
+    "schedule",
+    "stress-test",
+    "evaluate"
+  ],
+  "description": "Eight decisions for system diagnosis, workload forecasting, control portfolios, review siting, oversight allocation, audit scheduling, failure stress, and causal system evaluation.",
+  "design_refs": [
+    "scenario.equity.algorithmic-governance.decision-system-risks.v1",
+    "scenario.equity.algorithmic-governance.review-appeal-demand.v1",
+    "scenario.equity.algorithmic-governance.governance-controls.v1",
+    "scenario.equity.algorithmic-governance.human-review-access.v1",
+    "scenario.equity.algorithmic-governance.oversight-capacity.v1",
+    "scenario.equity.algorithmic-governance.audit-monitoring-cycle.v1",
+    "scenario.equity.algorithmic-governance.algorithmic-failure.v1",
+    "scenario.equity.algorithmic-governance.decision-support-effect.v1"
+  ],
+  "design_signatures": [
+    "sha256:83e2dd2cec675b943beb86499ab67bc3dcb26ccf367c8f1b32cf20ce6f605f59",
+    "sha256:e402b74c93ce1ebbab3a7308213735fc64efb251450b5cd2b34e74d4452ecfba",
+    "sha256:a534214b1efeabb88abd9f9eb6f9dbaa819485cfb3fb31e0fd21473707840912",
+    "sha256:c1d8da27a456fbea779a92ebdcf7e637581c1b6bc00214276f8901cfffd114d7",
+    "sha256:81358caf7593093e9555db6e39bba178f11816233c912a6c9eb38c64acde4641",
+    "sha256:7d67348fa9451fcd77d4895cdb318b65f582f650818779bfde55461b4e3ac977",
+    "sha256:2605e938ce7c3df8744a2e79fc115bfb3763285767a21b324344ea30cfe10269",
+    "sha256:ffe81b2e2f9e11200ec1b4aea127ca1dfd24cde43ab81183a2e06f65e9784f6f"
+  ],
+  "family_id": "equity.algorithmic-governance",
+  "family_order": 30,
+  "schema_version": "1.0.0",
+  "suite": "behavioral-policy-equity",
+  "title": "Algorithmic decision support and governance"
+}

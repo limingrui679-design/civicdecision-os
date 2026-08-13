@@ -1,0 +1,331 @@
+{
+  "designs": [
+    {
+      "analysis_modes": [
+        "descriptive"
+      ],
+      "binding_constraint": "Protection-gap estimates must preserve uncertainty where monitor or building data are sparse.",
+      "content_hash": "sha256:3e43f3d9ff58fe5285c979ee2de5fb1ead6eaed2055af94863165b9a2a73423f",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Which populations experience repeated smoke exposure without reliable indoor clean-air protection?",
+      "decision_type": "diagnose",
+      "design_id": "scenario.climate.wildfire-smoke.smoke-protection-gaps.v1",
+      "design_order": 17,
+      "evidence_gate": "geographic-alignment",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "proposed"
+      ],
+      "family_id": "climate.wildfire-smoke",
+      "family_title": "Wildfire smoke and air-quality resilience",
+      "horizon": "seasonal",
+      "implementation_status": "design-only",
+      "primary_outcome": "people in high-exposure low-protection conditions",
+      "prohibited_claims": [
+        "Do not label modeled particulate exposure as an individual dose or diagnosis.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "neighborhood",
+      "suite": "climate-disaster-resilience",
+      "title": "Diagnose smoke-exposure and clean-air protection gaps"
+    },
+    {
+      "analysis_modes": [
+        "forecast"
+      ],
+      "binding_constraint": "Activation forecasts must expose uncertainty and cannot exceed the spatial resolution of validated inputs.",
+      "content_hash": "sha256:bec11155058e57e528b7ee3b2339a45ad0c9850d3557d32297b2a876517cf5c7",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "What probabilistic smoke and assistance-demand envelope should local operations prepare for?",
+      "decision_type": "forecast",
+      "design_id": "scenario.climate.wildfire-smoke.smoke-episode-load.v1",
+      "design_order": 18,
+      "evidence_gate": "model-calibration",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "proposed"
+      ],
+      "family_id": "climate.wildfire-smoke",
+      "family_title": "Wildfire smoke and air-quality resilience",
+      "horizon": "days",
+      "implementation_status": "design-only",
+      "primary_outcome": "service demand above clean-air response capacity",
+      "prohibited_claims": [
+        "Do not present regional smoke forecasts as measured neighborhood exposure.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "citywide",
+      "suite": "climate-disaster-resilience",
+      "title": "Forecast smoke episode intensity and service load"
+    },
+    {
+      "analysis_modes": [
+        "descriptive",
+        "optimization"
+      ],
+      "binding_constraint": "Retrofit selection must fit capital, filter-replacement, energy, and maintenance budgets.",
+      "content_hash": "sha256:4920e0e06cef35c340f7dd5e897847bdcdc13294b280c2c91abdaa744940f4af",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Which public buildings should receive filtration and envelope upgrades first under limited capital?",
+      "decision_type": "prioritize",
+      "design_id": "scenario.climate.wildfire-smoke.filtration-retrofits.v1",
+      "design_order": 19,
+      "evidence_gate": "cost-capacity",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed"
+      ],
+      "family_id": "climate.wildfire-smoke",
+      "family_title": "Wildfire smoke and air-quality resilience",
+      "horizon": "multi-year",
+      "implementation_status": "design-only",
+      "primary_outcome": "vulnerable occupant-hours above indoor particulate thresholds",
+      "prohibited_claims": [
+        "Do not call engineering performance assumptions measured indoor exposure reduction.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "facility",
+      "suite": "climate-disaster-resilience",
+      "title": "Prioritize public-building filtration retrofits"
+    },
+    {
+      "analysis_modes": [
+        "descriptive",
+        "optimization"
+      ],
+      "binding_constraint": "Every selected center must pass indoor-air, power, accessible-entry, occupancy, and staffing requirements.",
+      "content_hash": "sha256:6e3b568b1baee25bc51ff6e1052886dbe1e22c2ade175ecf410f9b72c63803b4",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Where should verified clean-air spaces operate to maximize safe access during smoke events?",
+      "decision_type": "site",
+      "design_id": "scenario.climate.wildfire-smoke.clean-air-centers.v1",
+      "design_order": 20,
+      "evidence_gate": "network-readiness",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed"
+      ],
+      "family_id": "climate.wildfire-smoke",
+      "family_title": "Wildfire smoke and air-quality resilience",
+      "horizon": "seasonal",
+      "implementation_status": "design-only",
+      "primary_outcome": "high-risk residents beyond a qualified clean-air space",
+      "prohibited_claims": [
+        "Do not call an ordinary public building a clean-air center without indoor-air verification.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "facility",
+      "suite": "climate-disaster-resilience",
+      "title": "Site a network of public clean-air centers"
+    },
+    {
+      "analysis_modes": [
+        "simulation",
+        "optimization"
+      ],
+      "binding_constraint": "Minimum protection shares for high-risk groups must be satisfied before residual allocation.",
+      "content_hash": "sha256:63be4d8da45e7fd5dd780ef8c6f3226fb46e519893262801f6333899dbd2c56c",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "How should limited filtration units, calibrated monitors, and outreach capacity be distributed?",
+      "decision_type": "allocate",
+      "design_id": "scenario.climate.wildfire-smoke.filters-monitors-outreach.v1",
+      "design_order": 21,
+      "evidence_gate": "equity-measurement",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "family_id": "climate.wildfire-smoke",
+      "family_title": "Wildfire smoke and air-quality resilience",
+      "horizon": "weeks",
+      "implementation_status": "design-only",
+      "primary_outcome": "high-risk households without assigned protection capacity",
+      "prohibited_claims": [
+        "Do not report allocated equipment as installed, used correctly, or clinically effective.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "population-group",
+      "suite": "climate-disaster-resilience",
+      "title": "Allocate filters, monitors, and smoke outreach"
+    },
+    {
+      "analysis_modes": [
+        "forecast",
+        "optimization"
+      ],
+      "binding_constraint": "Schedules must comply with occupational, school, accessibility, and emergency communication rules.",
+      "content_hash": "sha256:ce0af3cad9ae12e05b3a01c0db51b788c118c31b93b3aa3d2ad794b304b7e68e",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "When should outdoor activities shift, shorten, move indoors, or resume as air quality changes?",
+      "decision_type": "schedule",
+      "design_id": "scenario.climate.wildfire-smoke.smoke-safe-activities.v1",
+      "design_order": 22,
+      "evidence_gate": "temporal-alignment",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed"
+      ],
+      "family_id": "climate.wildfire-smoke",
+      "family_title": "Wildfire smoke and air-quality resilience",
+      "horizon": "days",
+      "implementation_status": "design-only",
+      "primary_outcome": "scheduled participant-hours above exposure limits",
+      "prohibited_claims": [
+        "Do not treat a schedule rule as proof of participant exposure or compliance.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "facility",
+      "suite": "climate-disaster-resilience",
+      "title": "Schedule outdoor work, school, and public activities during smoke"
+    },
+    {
+      "analysis_modes": [
+        "simulation",
+        "optimization"
+      ],
+      "binding_constraint": "Minimum clean-air coverage for high-risk populations must hold under supply and facility failure scenarios.",
+      "content_hash": "sha256:7d5691c58e5217d6802854e7cf92675dbb9d4945e96d189c8163ddc7b8e754fc",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Can clean-air facilities, filters, staff, and communications sustain a multi-week smoke episode?",
+      "decision_type": "stress-test",
+      "design_id": "scenario.climate.wildfire-smoke.prolonged-smoke-continuity.v1",
+      "design_order": 23,
+      "evidence_gate": "external-validation",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "family_id": "climate.wildfire-smoke",
+      "family_title": "Wildfire smoke and air-quality resilience",
+      "horizon": "weeks",
+      "implementation_status": "design-only",
+      "primary_outcome": "scenario-weighted days below minimum clean-air coverage",
+      "prohibited_claims": [
+        "Do not present assumed smoke duration or equipment failure as a forecast event.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "citywide",
+      "suite": "climate-disaster-resilience",
+      "title": "Stress-test prolonged smoke-response continuity"
+    },
+    {
+      "analysis_modes": [
+        "descriptive",
+        "causal"
+      ],
+      "binding_constraint": "Attrition, device use, housing leakage, and subgroup effects must follow the pre-analysis plan.",
+      "content_hash": "sha256:54842bdb01abf95b807f7b1166bb5f58184224766c5aad3466a971ba9fdda2c6",
+      "current_readiness": "blocked-multiple-gates",
+      "decision_question": "Did phased filtration support reduce measured indoor particulate exposure and unequal protection?",
+      "decision_type": "evaluate",
+      "design_id": "scenario.climate.wildfire-smoke.filtration-program-effect.v1",
+      "design_order": 24,
+      "evidence_gate": "causal-identification",
+      "evidence_types": [
+        "causal",
+        "estimated",
+        "observed",
+        "proposed"
+      ],
+      "family_id": "climate.wildfire-smoke",
+      "family_title": "Wildfire smoke and air-quality resilience",
+      "horizon": "seasonal",
+      "implementation_status": "design-only",
+      "primary_outcome": "change in indoor fine-particulate concentration",
+      "prohibited_claims": [
+        "Do not interpret device receipt as use or indoor particulate change as a clinical outcome.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "population-group",
+      "suite": "climate-disaster-resilience",
+      "title": "Evaluate household filtration and outreach effects"
+    }
+  ],
+  "family": {
+    "affected_system": "urban smoke exposure and clean-air protection system",
+    "claim_boundary": [
+      "Hazard observations and modeled exposure do not establish individual harm or causation.",
+      "Proposed adaptations are planning alternatives, not adopted policy or engineered designs.",
+      "A design-only record is not a city execution, validated forecast, or impact result."
+    ],
+    "common_source_roles": [
+      "climate-hazard",
+      "environmental-exposure",
+      "geographic-identity"
+    ],
+    "decision_owner": "air-quality response coordinator and public-health director",
+    "decision_types": [
+      "diagnose",
+      "forecast",
+      "prioritize",
+      "site",
+      "allocate",
+      "schedule",
+      "stress-test",
+      "evaluate"
+    ],
+    "description": "Decision designs for smoke exposure, episode forecasting, building filtration, clean-air siting, supply allocation, activity scheduling, prolonged-event continuity, and evaluation.",
+    "design_refs": [
+      "scenario.climate.wildfire-smoke.smoke-protection-gaps.v1",
+      "scenario.climate.wildfire-smoke.smoke-episode-load.v1",
+      "scenario.climate.wildfire-smoke.filtration-retrofits.v1",
+      "scenario.climate.wildfire-smoke.clean-air-centers.v1",
+      "scenario.climate.wildfire-smoke.filters-monitors-outreach.v1",
+      "scenario.climate.wildfire-smoke.smoke-safe-activities.v1",
+      "scenario.climate.wildfire-smoke.prolonged-smoke-continuity.v1",
+      "scenario.climate.wildfire-smoke.filtration-program-effect.v1"
+    ],
+    "design_signatures": [
+      "sha256:b9a20a7135047103ff30443efe2f51f14344e685a2ab2c0f90a4b7133b8f7b72",
+      "sha256:c977d3abc70e7ed5932cb09a1302af06aa45393605345674d770863ac1226363",
+      "sha256:9b0fac6d04502130d4a95d134e0f950b97610ab7dd74c88aaf1580576357bf92",
+      "sha256:39d12b6a6616be6d89d5f2a336796cd02dc86b89023c393861f205f12da51dbb",
+      "sha256:c77de7425d188a2281093b8979bbf112f422759300fb8a6e4cbdde73bbd400c6",
+      "sha256:207a87e723b37e30b7fcec140ffb3ba7ba2ed75db87768fc37e9122cbb92268e",
+      "sha256:04b74ad1c158568af7768fd3e9f0913d6e63149d97777d6a02b1bce21056e904",
+      "sha256:01d14455494a1f800d2845cbbfee0f109993b86d8f7747bbe53b4bf50b65a167"
+    ],
+    "family_id": "climate.wildfire-smoke",
+    "family_order": 3,
+    "schema_version": "1.0.0",
+    "suite": "climate-disaster-resilience",
+    "title": "Wildfire smoke and air-quality resilience"
+  },
+  "library_claim_boundary": [
+    "The catalog contains 240 decision designs, not 240 city executions.",
+    "Exactly twelve designs map to existing Tier-D reference templates; 228 remain design-only.",
+    "A reference implementation can be an explicit negative release and does not imply impact.",
+    "No record claims a city binding, new method, deployment, adoption, or real-user outcome.",
+    "Future execution requires source binding, gate passage, and domain, legal, community, and operational review."
+  ]
+}

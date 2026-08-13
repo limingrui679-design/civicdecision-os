@@ -1,0 +1,164 @@
+{
+  "affected_system": "air-quality surveillance, exposure reduction, and respiratory-health response",
+  "alternatives": [
+    "advance high-risk work within verified feasible windows for air-quality health alert and response schedule",
+    "use rolling risk and capacity updates to reschedule air-quality health alert and response schedule",
+    "pair forecast-monitor-syndrome trigger scheduling with an explicit stop, review, and escalation rule"
+  ],
+  "analysis_modes": [
+    "forecast",
+    "optimization"
+  ],
+  "assumptions": [
+    "Monitor data retain calibration, siting, uptime, and spatial-representativeness metadata.",
+    "Exposure, diagnosis, care use, and service complaints are not interchangeable outcomes.",
+    "All alternatives, capacities, costs, effects, thresholds, and failure scenarios are proposed until bound to evidence."
+  ],
+  "baseline": "continue the fixed operating calendar for air-quality health alert and response schedule.",
+  "city_bindings": [],
+  "constraints": [
+    {
+      "binding": true,
+      "constraint_id": "scenario.health.air-quality.air-health-response.v1.constraint.binding",
+      "description": "The air-quality exposure and respiratory health schedule must respect declared labor, access, sequencing, notice, and completion windows.",
+      "hard": true,
+      "kind": "time",
+      "required_source_roles": [
+        "environmental-exposure",
+        "geographic-identity",
+        "health-outcome",
+        "operating-capacity",
+        "real-time-state",
+        "service-schedule"
+      ]
+    },
+    {
+      "binding": false,
+      "constraint_id": "scenario.health.air-quality.air-health-response.v1.constraint.evidence-scope",
+      "description": "Every released metric must retain evidence type, source lineage, geography, time, assumptions, and uncertainty.",
+      "hard": true,
+      "kind": "technical",
+      "required_source_roles": [
+        "environmental-exposure"
+      ]
+    },
+    {
+      "binding": false,
+      "constraint_id": "scenario.health.air-quality.air-health-response.v1.constraint.decision-authority",
+      "description": "No analytical output may bypass lawful authority, accountable human review, or an applicable appeal process.",
+      "hard": true,
+      "kind": "regulatory",
+      "required_source_roles": [
+        "environmental-exposure"
+      ]
+    }
+  ],
+  "current_readiness": "blocked-missing-source",
+  "decision_cadence": "recompiled at each planning cycle and after material evidence change",
+  "decision_owner": "environmental health director and air-quality program lead",
+  "decision_question": "When should monitoring review, alerts, outreach, indoor protection, and clinical surge activate?",
+  "decision_type": "schedule",
+  "design_id": "scenario.health.air-quality.air-health-response.v1",
+  "design_order": 94,
+  "design_signature": "sha256:dcf05c4fb93e34d1a0e5468e0f197165bea3353299da657e2e471d0443ee03c1",
+  "evidence_requirements": [
+    "estimated",
+    "observed",
+    "optimized",
+    "proposed"
+  ],
+  "family_id": "health.air-quality",
+  "family_title": "Air-quality exposure and respiratory health",
+  "horizon": "weeks",
+  "implementation_status": "design-only",
+  "independence_key": {
+    "binding_constraint": "The air-quality exposure and respiratory health schedule must respect declared labor, access, sequencing, notice, and completion windows.",
+    "decision_object": "air-quality health alert and response schedule",
+    "evidence_gate": "Evidence for air-quality health alert and response schedule passes documented checks for effective dates, time zones, calendars, lead times, completion semantics, and update cadence.",
+    "horizon": "weeks",
+    "intervention_mechanism": "forecast-monitor-syndrome trigger scheduling",
+    "primary_outcome": "high-exposure hours without active protection measures",
+    "spatial_unit": "citywide"
+  },
+  "intended_claim": "A versioned schedule design for comparing declared alternatives affecting air-quality health alert and response schedule, conditional on its evidence gate.",
+  "limitations": [
+    "This library record has no city binding and therefore reports no local input, output, or recommendation.",
+    "Readiness describes explicit source and method gates; it does not certify implementation feasibility.",
+    "External domain, legal, community, security, and operational review remains outside this design artifact."
+  ],
+  "method_claimed": false,
+  "objectives": [
+    {
+      "evidence_type": "estimated",
+      "metric": "high-exposure hours without active protection measures",
+      "objective_id": "scenario.health.air-quality.air-health-response.v1.objective.primary",
+      "primary": true,
+      "sense": "minimize",
+      "unit": "hours"
+    },
+    {
+      "evidence_type": "estimated",
+      "metric": "distributional gap in high-exposure hours without active protection measures",
+      "objective_id": "scenario.health.air-quality.air-health-response.v1.objective.equity",
+      "primary": false,
+      "sense": "minimize",
+      "unit": "hours"
+    },
+    {
+      "evidence_type": "observed",
+      "metric": "decision claims with complete evidence lineage",
+      "objective_id": "scenario.health.air-quality.air-health-response.v1.objective.traceability",
+      "primary": false,
+      "sense": "maximize",
+      "unit": "percent"
+    }
+  ],
+  "prohibited_claims": [
+    "Do not call an alert schedule issued, received, understood, or acted upon.",
+    "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+    "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+    "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+  ],
+  "release_gate": {
+    "failure_release": "Release an explicit insufficient-evidence record naming missing sources, failed diagnostics, prohibited claims, and the next validation action.",
+    "failure_status": "insufficient-evidence",
+    "gate_id": "scenario.health.air-quality.air-health-response.v1.gate.release",
+    "gate_type": "temporal-alignment",
+    "pass_condition": "Evidence for air-quality health alert and response schedule passes documented checks for effective dates, time zones, calendars, lead times, completion semantics, and update cadence.",
+    "required_evidence_types": [
+      "observed",
+      "proposed"
+    ],
+    "required_source_roles": [
+      "environmental-exposure",
+      "geographic-identity",
+      "health-outcome",
+      "operating-capacity",
+      "real-time-state",
+      "service-schedule"
+    ]
+  },
+  "required_source_roles": [
+    "environmental-exposure",
+    "geographic-identity",
+    "health-outcome",
+    "operating-capacity",
+    "real-time-state",
+    "service-schedule"
+  ],
+  "schema_version": "1.0.0",
+  "spatial_unit": "citywide",
+  "suite": "population-health-environmental-exposure",
+  "tags": [
+    "design-only",
+    "health.air-quality",
+    "population-health-environmental-exposure",
+    "scenario-library",
+    "schedule"
+  ],
+  "title": "Schedule air-quality alerts and health response",
+  "transportability_risks": [
+    "Pollutant mixtures, indoor infiltration, source profiles, coding, and monitor coverage differ.",
+    "Modeled concentration may not represent personal exposure."
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "affected_system": "commercial curb, loading, delivery, and urban freight network",
+  "claim_boundary": [
+    "Network, request, and schedule records do not establish individual travel behavior or harm.",
+    "Optimized routes and allocations are planning outputs, not dispatched or completed trips.",
+    "Design-only records do not claim current city data, implementation, compliance, or impact."
+  ],
+  "common_source_roles": [
+    "geographic-identity",
+    "real-time-state",
+    "transport-network"
+  ],
+  "decision_owner": "curb-management director and city freight coordinator",
+  "decision_types": [
+    "diagnose",
+    "forecast",
+    "prioritize",
+    "site",
+    "allocate",
+    "schedule",
+    "stress-test",
+    "evaluate"
+  ],
+  "description": "Eight decisions for curb diagnosis, demand forecasting, loading investment, hub siting, space allocation, reservation schedules, disruption stress, and policy evaluation.",
+  "design_refs": [
+    "scenario.mobility.freight-curb.curb-friction.v1",
+    "scenario.mobility.freight-curb.loading-demand.v1",
+    "scenario.mobility.freight-curb.curb-conversion-portfolio.v1",
+    "scenario.mobility.freight-curb.microhubs-loading-zones.v1",
+    "scenario.mobility.freight-curb.curb-space.v1",
+    "scenario.mobility.freight-curb.loading-reservations.v1",
+    "scenario.mobility.freight-curb.freight-disruption.v1",
+    "scenario.mobility.freight-curb.dynamic-curb-effect.v1"
+  ],
+  "design_signatures": [
+    "sha256:d1d58d751fc03d08d47edfdc2f9db9ef6260ba3f4a41d1b5622554250ef9fe93",
+    "sha256:19981a3aa0b82411b6b2d50b8efef822cd1e29c0df66ac7f97c76de0dbac9cce",
+    "sha256:c40df66a77917ead708010f7816014c2c76be43d1ab7610a88baeed42649aecc",
+    "sha256:442aa62b750cc67ec801e69c4aec34b3944eedc86d7270462527ea65ca42be50",
+    "sha256:c6611bc444c60f7fb3d8e08db98e96041bce118cf08c91b60bbee6c998f43d44",
+    "sha256:dbc51c2841400dfb01fce7187723003e6bad2edf9068ca00f7a8b91f1221ecdd",
+    "sha256:fc00ddc4385b7883c266633ff60f14831ae638f3e85b26f897c754bba764ce21",
+    "sha256:f926023a6bbd41afc6f7220190747f639b2b83cdab92a97ef23a96e5adaddf0c"
+  ],
+  "family_id": "mobility.freight-curb",
+  "family_order": 8,
+  "schema_version": "1.0.0",
+  "suite": "mobility-accessibility-operations",
+  "title": "Urban freight and curb operations"
+}

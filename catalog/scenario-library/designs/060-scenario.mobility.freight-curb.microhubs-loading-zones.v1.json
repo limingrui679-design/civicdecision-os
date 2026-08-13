@@ -1,0 +1,165 @@
+{
+  "affected_system": "commercial curb, loading, delivery, and urban freight network",
+  "alternatives": [
+    "screen feasible locations against the largest access gaps for urban freight microhub and loading-zone locations",
+    "co-optimize distributed and high-capacity locations for urban freight microhub and loading-zone locations",
+    "pair network and parcel-constrained consolidation siting with an explicit stop, review, and escalation rule"
+  ],
+  "analysis_modes": [
+    "simulation",
+    "optimization"
+  ],
+  "assumptions": [
+    "Curb regulations, occupancy, deliveries, violations, and travel effects have consistent timestamps and locations.",
+    "Observed platform or sensor activity represents only its measured market and street coverage.",
+    "All alternatives, capacities, costs, effects, thresholds, and failure scenarios are proposed until bound to evidence."
+  ],
+  "baseline": "retain only existing approved locations for urban freight microhub and loading-zone locations.",
+  "city_bindings": [],
+  "constraints": [
+    {
+      "binding": true,
+      "constraint_id": "scenario.mobility.freight-curb.microhubs-loading-zones.v1.constraint.binding",
+      "description": "The urban freight and curb operations site must respect declared land control, accessibility, permitting, safety, and operating feasibility.",
+      "hard": true,
+      "kind": "regulatory",
+      "required_source_roles": [
+        "financial-cost",
+        "geographic-identity",
+        "land-parcel",
+        "legal-regulatory",
+        "real-time-state",
+        "transport-network"
+      ]
+    },
+    {
+      "binding": false,
+      "constraint_id": "scenario.mobility.freight-curb.microhubs-loading-zones.v1.constraint.evidence-scope",
+      "description": "Every released metric must retain evidence type, source lineage, geography, time, assumptions, and uncertainty.",
+      "hard": true,
+      "kind": "technical",
+      "required_source_roles": [
+        "financial-cost"
+      ]
+    },
+    {
+      "binding": false,
+      "constraint_id": "scenario.mobility.freight-curb.microhubs-loading-zones.v1.constraint.decision-authority",
+      "description": "No analytical output may bypass lawful authority, accountable human review, or an applicable appeal process.",
+      "hard": true,
+      "kind": "regulatory",
+      "required_source_roles": [
+        "financial-cost"
+      ]
+    }
+  ],
+  "current_readiness": "blocked-missing-source",
+  "decision_cadence": "recompiled at each planning cycle and after material evidence change",
+  "decision_owner": "curb-management director and city freight coordinator",
+  "decision_question": "Where should consolidation hubs and loading zones intercept demand without shifting burdens?",
+  "decision_type": "site",
+  "design_id": "scenario.mobility.freight-curb.microhubs-loading-zones.v1",
+  "design_order": 60,
+  "design_signature": "sha256:442aa62b750cc67ec801e69c4aec34b3944eedc86d7270462527ea65ca42be50",
+  "evidence_requirements": [
+    "estimated",
+    "observed",
+    "optimized",
+    "proposed",
+    "simulated"
+  ],
+  "family_id": "mobility.freight-curb",
+  "family_title": "Urban freight and curb operations",
+  "horizon": "multi-year",
+  "implementation_status": "design-only",
+  "independence_key": {
+    "binding_constraint": "The urban freight and curb operations site must respect declared land control, accessibility, permitting, safety, and operating feasibility.",
+    "decision_object": "urban freight microhub and loading-zone locations",
+    "evidence_gate": "Evidence for urban freight microhub and loading-zone locations passes documented checks for parcel control, legal authority, environmental review, access, capacity, and operator responsibility.",
+    "horizon": "multi-year",
+    "intervention_mechanism": "network and parcel-constrained consolidation siting",
+    "primary_outcome": "freight demand beyond compliant loading or consolidation access",
+    "spatial_unit": "parcel"
+  },
+  "intended_claim": "A versioned site design for comparing declared alternatives affecting urban freight microhub and loading-zone locations, conditional on its evidence gate.",
+  "limitations": [
+    "This library record has no city binding and therefore reports no local input, output, or recommendation.",
+    "Readiness describes explicit source and method gates; it does not certify implementation feasibility.",
+    "External domain, legal, community, security, and operational review remains outside this design artifact."
+  ],
+  "method_claimed": false,
+  "objectives": [
+    {
+      "evidence_type": "estimated",
+      "metric": "freight demand beyond compliant loading or consolidation access",
+      "objective_id": "scenario.mobility.freight-curb.microhubs-loading-zones.v1.objective.primary",
+      "primary": true,
+      "sense": "minimize",
+      "unit": "deliveries per day"
+    },
+    {
+      "evidence_type": "estimated",
+      "metric": "distributional gap in freight demand beyond compliant loading or consolidation access",
+      "objective_id": "scenario.mobility.freight-curb.microhubs-loading-zones.v1.objective.equity",
+      "primary": false,
+      "sense": "minimize",
+      "unit": "deliveries per day"
+    },
+    {
+      "evidence_type": "observed",
+      "metric": "decision claims with complete evidence lineage",
+      "objective_id": "scenario.mobility.freight-curb.microhubs-loading-zones.v1.objective.traceability",
+      "primary": false,
+      "sense": "maximize",
+      "unit": "percent"
+    }
+  ],
+  "prohibited_claims": [
+    "Do not label a screened microhub site viable without carrier, parcel, permitting, and community evidence.",
+    "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+    "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+    "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+  ],
+  "release_gate": {
+    "failure_release": "Release an explicit insufficient-evidence record naming missing sources, failed diagnostics, prohibited claims, and the next validation action.",
+    "failure_status": "insufficient-evidence",
+    "gate_id": "scenario.mobility.freight-curb.microhubs-loading-zones.v1.gate.release",
+    "gate_type": "legal-authority",
+    "pass_condition": "Evidence for urban freight microhub and loading-zone locations passes documented checks for parcel control, legal authority, environmental review, access, capacity, and operator responsibility.",
+    "required_evidence_types": [
+      "observed",
+      "proposed"
+    ],
+    "required_source_roles": [
+      "financial-cost",
+      "geographic-identity",
+      "land-parcel",
+      "legal-regulatory",
+      "real-time-state",
+      "transport-network"
+    ]
+  },
+  "required_source_roles": [
+    "financial-cost",
+    "geographic-identity",
+    "land-parcel",
+    "legal-regulatory",
+    "real-time-state",
+    "transport-network"
+  ],
+  "schema_version": "1.0.0",
+  "spatial_unit": "parcel",
+  "suite": "mobility-accessibility-operations",
+  "tags": [
+    "design-only",
+    "mobility-accessibility-operations",
+    "mobility.freight-curb",
+    "scenario-library",
+    "site"
+  ],
+  "title": "Site freight microhubs and loading zones",
+  "transportability_risks": [
+    "Delivery markets, curb law, enforcement, land use, vehicle mix, and sensor coverage differ.",
+    "Platform data may omit independent carriers and informal loading behavior."
+  ]
+}

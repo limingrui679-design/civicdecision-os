@@ -1,0 +1,50 @@
+{
+  "affected_system": "affordable housing production, preservation, subsidy, and compliance system",
+  "claim_boundary": [
+    "Requests, listings, parcels, and administrative records do not alone verify conditions or need.",
+    "Screened sites and portfolios are not permits, acquisitions, adopted plans, or completed housing.",
+    "Displacement, affordability, habitability, and program effects require direct outcomes and identification."
+  ],
+  "common_source_roles": [
+    "geographic-identity",
+    "housing-market",
+    "land-parcel"
+  ],
+  "decision_owner": "housing development commissioner and affordable-housing finance director",
+  "decision_types": [
+    "diagnose",
+    "forecast",
+    "prioritize",
+    "site",
+    "allocate",
+    "schedule",
+    "stress-test",
+    "evaluate"
+  ],
+  "description": "Eight decisions for supply-risk diagnosis, pipeline forecasting, preservation portfolios, new site selection, subsidy allocation, development scheduling, financing stress, and evaluation.",
+  "design_refs": [
+    "scenario.housing.affordable-supply.affordability-loss-risk.v1",
+    "scenario.housing.affordable-supply.affordable-pipeline.v1",
+    "scenario.housing.affordable-supply.preservation-development-portfolio.v1",
+    "scenario.housing.affordable-supply.affordable-housing-sites.v1",
+    "scenario.housing.affordable-supply.housing-subsidy.v1",
+    "scenario.housing.affordable-supply.housing-pipeline-sequence.v1",
+    "scenario.housing.affordable-supply.housing-finance-shock.v1",
+    "scenario.housing.affordable-supply.preservation-program-effect.v1"
+  ],
+  "design_signatures": [
+    "sha256:760df56edf6b758b4dde2fa47bf3de3295054382d3758b598d9bc00c04a5136c",
+    "sha256:a3c3c890f0bea2183712848a6415f119472b5a3458838acb8b73a17679e50f19",
+    "sha256:c270647f563e8682ffabb52c1ffbae18473b964935a30110d224c277b6f4014a",
+    "sha256:2abdd3400e71da58a66c9b9a8e365b7010a43995afc7310480261f0c8321c322",
+    "sha256:777d03b2ad4feaeee413826ac0405d84dc74c80919475cb14914f7124280af10",
+    "sha256:51f9a90fafe725060b793acc7628eda614052e458bbe3f63e125b307a9d85a6e",
+    "sha256:9b5e49f039ec4a2f6e8cb1c4fdce922f2dceff0872ec90894a81bf4b10730477",
+    "sha256:bfec72e4199c873f19cbcd39a88a4626775ff7bc7be7ea624a7f4ec096ed86f6"
+  ],
+  "family_id": "housing.affordable-supply",
+  "family_order": 17,
+  "schema_version": "1.0.0",
+  "suite": "housing-land-use-regeneration",
+  "title": "Affordable housing siting and preservation"
+}

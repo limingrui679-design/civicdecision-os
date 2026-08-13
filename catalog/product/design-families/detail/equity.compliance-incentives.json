@@ -1,0 +1,333 @@
+{
+  "designs": [
+    {
+      "analysis_modes": [
+        "descriptive"
+      ],
+      "binding_constraint": "The compliance, incentives, and behavioral policy diagnose must respect declared measurement resolution and classification uncertainty.",
+      "content_hash": "sha256:c5bd8115a4a5db2a2e1b82f66d14ad08c6e22b94dd3a470833208ab47d051b7a",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Which notice, eligibility, capability, process, inspection, and enforcement stages create verified friction or unequal burden?",
+      "decision_type": "diagnose",
+      "design_id": "scenario.equity.compliance-incentives.compliance-process-friction.v1",
+      "design_order": 225,
+      "evidence_gate": "geographic-alignment",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "proposed"
+      ],
+      "family_id": "equity.compliance-incentives",
+      "family_title": "Compliance, incentives, and behavioral policy",
+      "horizon": "annual",
+      "implementation_status": "design-only",
+      "primary_outcome": "eligible or regulated cases with unresolved process barriers",
+      "prohibited_claims": [
+        "Do not label non-completion intentional noncompliance, irresponsibility, risk, or guilt.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "population-group",
+      "suite": "behavioral-policy-equity",
+      "title": "Diagnose compliance and administrative-burden pathways"
+    },
+    {
+      "analysis_modes": [
+        "forecast"
+      ],
+      "binding_constraint": "The compliance, incentives, and behavioral policy forecast must respect declared validated operational capacity and forecast uncertainty.",
+      "content_hash": "sha256:6a0b4071cec1b0938ed373b160d5a307b475e098a8b2587d35e97e4d6c73e01a",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "What rule, group, channel, season, and deadline-specific workload should operations prepare for?",
+      "decision_type": "forecast",
+      "design_id": "scenario.equity.compliance-incentives.assistance-inspection-demand.v1",
+      "design_order": 226,
+      "evidence_gate": "model-calibration",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "proposed"
+      ],
+      "family_id": "equity.compliance-incentives",
+      "family_title": "Compliance, incentives, and behavioral policy",
+      "horizon": "weeks",
+      "implementation_status": "design-only",
+      "primary_outcome": "priority assistance and inspection demand above capacity",
+      "prohibited_claims": [
+        "Do not call forecast cases violations, intentional behavior, or enforcement outcomes.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "service-area",
+      "suite": "behavioral-policy-equity",
+      "title": "Forecast compliance assistance and inspection demand"
+    },
+    {
+      "analysis_modes": [
+        "descriptive",
+        "optimization"
+      ],
+      "binding_constraint": "The compliance, incentives, and behavioral policy prioritize must respect declared capital, operating, maintenance, and delivery budgets.",
+      "content_hash": "sha256:0cf77ff25f8928bad6324d66a1f419d366e1818226d68b40e6ce168001b58fe4",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Which simplification, reminder, incentive, technical support, inspection, and accountability measures should be funded?",
+      "decision_type": "prioritize",
+      "design_id": "scenario.equity.compliance-incentives.compliance-policy-portfolio.v1",
+      "design_order": 227,
+      "evidence_gate": "cost-capacity",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed"
+      ],
+      "family_id": "equity.compliance-incentives",
+      "family_title": "Compliance, incentives, and behavioral policy",
+      "horizon": "multi-year",
+      "implementation_status": "design-only",
+      "primary_outcome": "verified unresolved compliance burden and harm risk",
+      "prohibited_claims": [
+        "Do not report modeled compliance change as lawful behavior, public benefit, or welfare improvement.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "service-area",
+      "suite": "behavioral-policy-equity",
+      "title": "Prioritize compliance assistance and policy redesign"
+    },
+    {
+      "analysis_modes": [
+        "simulation",
+        "optimization"
+      ],
+      "binding_constraint": "The compliance, incentives, and behavioral policy site must respect declared land control, accessibility, permitting, safety, and operating feasibility.",
+      "content_hash": "sha256:20aebf6c7f1618ee6fe893bc24139a4d16d0b1772f57df615d1eb78a2bf6a708",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Where should non-enforcement assistance, document, inspection, and technical services reduce verified barriers?",
+      "decision_type": "site",
+      "design_id": "scenario.equity.compliance-incentives.compliance-assistance-access.v1",
+      "design_order": 228,
+      "evidence_gate": "legal-authority",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "family_id": "equity.compliance-incentives",
+      "family_title": "Compliance, incentives, and behavioral policy",
+      "horizon": "multi-year",
+      "implementation_status": "design-only",
+      "primary_outcome": "eligible cases beyond usable qualified assistance",
+      "prohibited_claims": [
+        "Do not call a candidate assistance site trusted, neutral, accessible, qualified, or used.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "facility",
+      "suite": "behavioral-policy-equity",
+      "title": "Site compliance assistance and technical-support access"
+    },
+    {
+      "analysis_modes": [
+        "simulation",
+        "optimization"
+      ],
+      "binding_constraint": "The compliance, incentives, and behavioral policy allocate must respect declared minimum service, eligibility, capacity, and distributional safeguards.",
+      "content_hash": "sha256:c78321aa452d6c8f59f8eae9f3e04a551dc8af03c1ef70c181417bd6723d3770",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "How should navigators, technical aid, incentives, inspectors, language, and appeal support be assigned?",
+      "decision_type": "allocate",
+      "design_id": "scenario.equity.compliance-incentives.assistance-enforcement-capacity.v1",
+      "design_order": 229,
+      "evidence_gate": "equity-measurement",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "family_id": "equity.compliance-incentives",
+      "family_title": "Compliance, incentives, and behavioral policy",
+      "horizon": "weeks",
+      "implementation_status": "design-only",
+      "primary_outcome": "priority cases without qualified assistance or review capacity",
+      "prohibited_claims": [
+        "Do not report assigned assistance or inspection as contact, compliance, violation, sanction, or resolution.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "population-group",
+      "suite": "behavioral-policy-equity",
+      "title": "Allocate compliance assistance and inspection capacity"
+    },
+    {
+      "analysis_modes": [
+        "forecast",
+        "optimization"
+      ],
+      "binding_constraint": "The compliance, incentives, and behavioral policy schedule must respect declared labor, access, sequencing, notice, and completion windows.",
+      "content_hash": "sha256:0fa695875a333d25662c95db41e7cefe4e0305451a7b1314028453b9d0468839",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "When should notice, support, cure periods, inspection, decision, appeal, and follow-up occur?",
+      "decision_type": "schedule",
+      "design_id": "scenario.equity.compliance-incentives.notice-assistance-inspection.v1",
+      "design_order": 230,
+      "evidence_gate": "temporal-alignment",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed"
+      ],
+      "family_id": "equity.compliance-incentives",
+      "family_title": "Compliance, incentives, and behavioral policy",
+      "horizon": "weeks",
+      "implementation_status": "design-only",
+      "primary_outcome": "case-days outside lawful notice, assistance, and review windows",
+      "prohibited_claims": [
+        "Do not call scheduled notice delivered, understood, lawful, cured, inspected, or adjudicated.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "service-area",
+      "suite": "behavioral-policy-equity",
+      "title": "Schedule notices, assistance, inspections, and appeals"
+    },
+    {
+      "analysis_modes": [
+        "forecast",
+        "simulation",
+        "optimization"
+      ],
+      "binding_constraint": "The compliance, incentives, and behavioral policy stress test must respect declared minimum continuity and safety thresholds across severe scenarios.",
+      "content_hash": "sha256:4f538030c0c823bd51c35ad14e9022ed5f0ad4cc1f545624c01eebe46f4276ed",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Which assistance and incentive strategy remains rights-preserving across uptake, substitution, burden, and enforcement scenarios?",
+      "decision_type": "stress-test",
+      "design_id": "scenario.equity.compliance-incentives.policy-response-uncertainty.v1",
+      "design_order": 231,
+      "evidence_gate": "external-validation",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "family_id": "equity.compliance-incentives",
+      "family_title": "Compliance, incentives, and behavioral policy",
+      "horizon": "seasonal",
+      "implementation_status": "design-only",
+      "primary_outcome": "scenario-weighted unresolved harm and administrative burden",
+      "prohibited_claims": [
+        "Do not present simulated preferences, responses, compliance, or welfare as observed behavior.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "population-group",
+      "suite": "behavioral-policy-equity",
+      "title": "Stress-test behavioral policy under heterogeneous response"
+    },
+    {
+      "analysis_modes": [
+        "descriptive",
+        "causal"
+      ],
+      "binding_constraint": "The compliance, incentives, and behavioral policy evaluate must respect declared pre-specified assignment, comparison, outcome, spillover, and subgroup rules.",
+      "content_hash": "sha256:410a78e8ca07194b6dbdd252243e807bf4113590f36e8350f5344101b3e34a88",
+      "current_readiness": "blocked-multiple-gates",
+      "decision_question": "Did randomized or phased assistance improve verified lawful completion without burden or coercion?",
+      "decision_type": "evaluate",
+      "design_id": "scenario.equity.compliance-incentives.assistance-incentive-effect.v1",
+      "design_order": 232,
+      "evidence_gate": "causal-identification",
+      "evidence_types": [
+        "causal",
+        "estimated",
+        "observed",
+        "proposed"
+      ],
+      "family_id": "equity.compliance-incentives",
+      "family_title": "Compliance, incentives, and behavioral policy",
+      "horizon": "multi-year",
+      "implementation_status": "design-only",
+      "primary_outcome": "change in verified timely lawful completion and administrative burden",
+      "prohibited_claims": [
+        "Do not infer intent, welfare, deterrence, or durable behavior from one administrative completion outcome.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "population-group",
+      "suite": "behavioral-policy-equity",
+      "title": "Evaluate compliance assistance and incentives"
+    }
+  ],
+  "family": {
+    "affected_system": "rights-preserving compliance assistance, incentives, inspections, and enforcement",
+    "claim_boundary": [
+      "Area and administrative differences do not establish discrimination, preferences, or individual behavior.",
+      "Behavioral and allocation designs require rights, accessibility, privacy, and non-coercion review.",
+      "Causal, fairness, adoption, and welfare claims require direct outcomes and independent governance evidence."
+    ],
+    "common_source_roles": [
+      "demographic-context",
+      "legal-regulatory",
+      "municipal-demand"
+    ],
+    "decision_owner": "regulatory operations director and behavioral insights lead",
+    "decision_types": [
+      "diagnose",
+      "forecast",
+      "prioritize",
+      "site",
+      "allocate",
+      "schedule",
+      "stress-test",
+      "evaluate"
+    ],
+    "description": "Eight decisions for process diagnosis, workload forecasting, policy portfolios, service siting, support allocation, contact scheduling, behavior stress, and incentive evaluation.",
+    "design_refs": [
+      "scenario.equity.compliance-incentives.compliance-process-friction.v1",
+      "scenario.equity.compliance-incentives.assistance-inspection-demand.v1",
+      "scenario.equity.compliance-incentives.compliance-policy-portfolio.v1",
+      "scenario.equity.compliance-incentives.compliance-assistance-access.v1",
+      "scenario.equity.compliance-incentives.assistance-enforcement-capacity.v1",
+      "scenario.equity.compliance-incentives.notice-assistance-inspection.v1",
+      "scenario.equity.compliance-incentives.policy-response-uncertainty.v1",
+      "scenario.equity.compliance-incentives.assistance-incentive-effect.v1"
+    ],
+    "design_signatures": [
+      "sha256:e122996843b38fc5546ca38bc2d6a13061fb233a64c9e4da2b673a70091dbaa3",
+      "sha256:3ac4d9a3edb49589e9ca83435acddf37a03c1fe2d070484456303724ca882617",
+      "sha256:e56cc51f81b9a9b79cd3abf88e0c655d8d4e2bafe879746057bbeca0ed457a97",
+      "sha256:9ac750bf7eabecbe4ac20e0c5617b72db324f46279619066c151355431fe7183",
+      "sha256:b453ebd29c0c874a77e6085ea54f391993602ce21d72cddd06b67c834448bf2a",
+      "sha256:09cc835fd6fc1447adbce974896f166b735e52d6d01d5d80d80111f7517391bb",
+      "sha256:0bedb113f76c72445c01cd0f985a2cb1e718462fba53b574f379296a48e0f192",
+      "sha256:e66e7f146adcf8b23e68ad057633d1f0c31e335ba3b009a1da59df3af01a0dbc"
+    ],
+    "family_id": "equity.compliance-incentives",
+    "family_order": 29,
+    "schema_version": "1.0.0",
+    "suite": "behavioral-policy-equity",
+    "title": "Compliance, incentives, and behavioral policy"
+  },
+  "library_claim_boundary": [
+    "The catalog contains 240 decision designs, not 240 city executions.",
+    "Exactly twelve designs map to existing Tier-D reference templates; 228 remain design-only.",
+    "A reference implementation can be an explicit negative release and does not imply impact.",
+    "No record claims a city binding, new method, deployment, adoption, or real-user outcome.",
+    "Future execution requires source binding, gate passage, and domain, legal, community, and operational review."
+  ]
+}

@@ -1,0 +1,162 @@
+{
+  "affected_system": "walking, cycling, and shared micromobility network",
+  "alternatives": [
+    "activate a bounded reserve from forecast risk bands for active and shared-mobility trip demand",
+    "use rolling forecasts and conservative capacity triggers for active and shared-mobility trip demand",
+    "pair weather-event and land-use conditioned trip forecasting with an explicit stop, review, and escalation rule"
+  ],
+  "analysis_modes": [
+    "forecast"
+  ],
+  "assumptions": [
+    "Trips, counts, facilities, stress levels, barriers, and shared-vehicle states use documented coverage.",
+    "Observed shared-system trips do not represent all walking and cycling demand.",
+    "All alternatives, capacities, costs, effects, thresholds, and failure scenarios are proposed until bound to evidence."
+  ],
+  "baseline": "continue ordinary capacity planning for active and shared-mobility trip demand.",
+  "city_bindings": [],
+  "constraints": [
+    {
+      "binding": true,
+      "constraint_id": "scenario.mobility.active-mobility.active-trip-demand.v1.constraint.binding",
+      "description": "The active mobility network and micromobility forecast must respect declared validated operational capacity and forecast uncertainty.",
+      "hard": true,
+      "kind": "capacity",
+      "required_source_roles": [
+        "asset-inventory",
+        "climate-hazard",
+        "geographic-identity",
+        "land-parcel",
+        "real-time-state",
+        "transport-network"
+      ]
+    },
+    {
+      "binding": false,
+      "constraint_id": "scenario.mobility.active-mobility.active-trip-demand.v1.constraint.evidence-scope",
+      "description": "Every released metric must retain evidence type, source lineage, geography, time, assumptions, and uncertainty.",
+      "hard": true,
+      "kind": "technical",
+      "required_source_roles": [
+        "asset-inventory"
+      ]
+    },
+    {
+      "binding": false,
+      "constraint_id": "scenario.mobility.active-mobility.active-trip-demand.v1.constraint.decision-authority",
+      "description": "No analytical output may bypass lawful authority, accountable human review, or an applicable appeal process.",
+      "hard": true,
+      "kind": "regulatory",
+      "required_source_roles": [
+        "asset-inventory"
+      ]
+    }
+  ],
+  "current_readiness": "blocked-missing-source",
+  "decision_cadence": "recompiled at each planning cycle and after material evidence change",
+  "decision_owner": "active transportation director and shared-mobility program manager",
+  "decision_question": "What station, corridor, and time-specific trip and vehicle-availability range should operations prepare for?",
+  "decision_type": "forecast",
+  "design_id": "scenario.mobility.active-mobility.active-trip-demand.v1",
+  "design_order": 74,
+  "design_signature": "sha256:1518a542f9c8e1e9e00bc3f22a67f8dbccfb5e39ab1f4ddc3c2ca7c7380b2334",
+  "evidence_requirements": [
+    "estimated",
+    "observed",
+    "proposed"
+  ],
+  "family_id": "mobility.active-mobility",
+  "family_title": "Active mobility network and micromobility",
+  "horizon": "weeks",
+  "implementation_status": "design-only",
+  "independence_key": {
+    "binding_constraint": "The active mobility network and micromobility forecast must respect declared validated operational capacity and forecast uncertainty.",
+    "decision_object": "active and shared-mobility trip demand",
+    "evidence_gate": "Evidence for active and shared-mobility trip demand passes documented checks for held-out error, interval coverage, event detection, drift, and baseline comparison.",
+    "horizon": "weeks",
+    "intervention_mechanism": "weather-event and land-use conditioned trip forecasting",
+    "primary_outcome": "trip requests without feasible vehicle or route capacity",
+    "spatial_unit": "network"
+  },
+  "intended_claim": "A versioned forecast design for comparing declared alternatives affecting active and shared-mobility trip demand, conditional on its evidence gate.",
+  "limitations": [
+    "This library record has no city binding and therefore reports no local input, output, or recommendation.",
+    "Readiness describes explicit source and method gates; it does not certify implementation feasibility.",
+    "External domain, legal, community, security, and operational review remains outside this design artifact."
+  ],
+  "method_claimed": false,
+  "objectives": [
+    {
+      "evidence_type": "estimated",
+      "metric": "trip requests without feasible vehicle or route capacity",
+      "objective_id": "scenario.mobility.active-mobility.active-trip-demand.v1.objective.primary",
+      "primary": true,
+      "sense": "minimize",
+      "unit": "trips"
+    },
+    {
+      "evidence_type": "estimated",
+      "metric": "distributional gap in trip requests without feasible vehicle or route capacity",
+      "objective_id": "scenario.mobility.active-mobility.active-trip-demand.v1.objective.equity",
+      "primary": false,
+      "sense": "minimize",
+      "unit": "trips"
+    },
+    {
+      "evidence_type": "observed",
+      "metric": "decision claims with complete evidence lineage",
+      "objective_id": "scenario.mobility.active-mobility.active-trip-demand.v1.objective.traceability",
+      "primary": false,
+      "sense": "maximize",
+      "unit": "percent"
+    }
+  ],
+  "prohibited_claims": [
+    "Do not treat shared-platform demand as total walking or cycling demand.",
+    "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+    "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+    "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+  ],
+  "release_gate": {
+    "failure_release": "Release an explicit insufficient-evidence record naming missing sources, failed diagnostics, prohibited claims, and the next validation action.",
+    "failure_status": "insufficient-evidence",
+    "gate_id": "scenario.mobility.active-mobility.active-trip-demand.v1.gate.release",
+    "gate_type": "model-calibration",
+    "pass_condition": "Evidence for active and shared-mobility trip demand passes documented checks for held-out error, interval coverage, event detection, drift, and baseline comparison.",
+    "required_evidence_types": [
+      "estimated",
+      "observed"
+    ],
+    "required_source_roles": [
+      "asset-inventory",
+      "climate-hazard",
+      "geographic-identity",
+      "land-parcel",
+      "real-time-state",
+      "transport-network"
+    ]
+  },
+  "required_source_roles": [
+    "asset-inventory",
+    "climate-hazard",
+    "geographic-identity",
+    "land-parcel",
+    "real-time-state",
+    "transport-network"
+  ],
+  "schema_version": "1.0.0",
+  "spatial_unit": "network",
+  "suite": "mobility-accessibility-operations",
+  "tags": [
+    "design-only",
+    "forecast",
+    "mobility-accessibility-operations",
+    "mobility.active-mobility",
+    "scenario-library"
+  ],
+  "title": "Forecast active and shared-mobility demand",
+  "transportability_risks": [
+    "Topography, climate, street stress, vehicle access, pricing, and safety perceptions vary.",
+    "Platform data can exclude private bicycles, pedestrians, and non-users."
+  ]
+}

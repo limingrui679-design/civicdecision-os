@@ -1,0 +1,43 @@
+{
+  "artifact_set_hash": "sha256:60c5f04ba427acf222aa5aa628093473a1a1806e00e5b725db2f559e67693e8d",
+  "audit_passed": true,
+  "city_bound_executions_counted": 0,
+  "claim_boundary": [
+    "The catalog contains 240 decision designs, not 240 city executions.",
+    "Exactly twelve designs map to existing Tier-D reference templates; 228 remain design-only.",
+    "A reference implementation can be an explicit negative release and does not imply impact.",
+    "No record claims a city binding, new method, deployment, adoption, or real-user outcome.",
+    "Future execution requires source binding, gate passage, and domain, legal, community, and operational review."
+  ],
+  "design_count": 240,
+  "design_only_scenarios": 228,
+  "duplicate_question_count": 0,
+  "duplicate_title_count": 0,
+  "exact_signature_collision_count": 0,
+  "family_count": 30,
+  "high_similarity_pair_count": 0,
+  "high_similarity_threshold": 0.9,
+  "invariants": [
+    "Thirty domain families each contain exactly one design for every decision type.",
+    "All 240 substantive independence signatures are unique.",
+    "Titles and decision questions are exact-normalized unique.",
+    "No pair reaches the fixed high-similarity threshold.",
+    "Every design declares alternatives, objectives, and a single binding hard constraint.",
+    "Every design declares source roles, evidence types, and a negative release gate.",
+    "Every design preserves assumptions, limitations, prohibited claims, and transfer risks.",
+    "Exactly twelve existing Tier-D templates map one-to-one to reference implementations.",
+    "The other 228 records remain design-only and report source or method readiness gaps.",
+    "No design counts a city binding, execution, deployment, adoption, impact, or new method."
+  ],
+  "library_content_hash": "sha256:60c5f04ba427acf222aa5aa628093473a1a1806e00e5b725db2f559e67693e8d",
+  "limitations": [
+    "Token Jaccard is a transparent duplication diagnostic, not proof of conceptual novelty.",
+    "Domain experts and affected communities have not externally reviewed all 240 designs.",
+    "Readiness is computed against the current repository source roles, not every possible city source.",
+    "Design breadth does not substitute for future city-specific validation and implementation evidence."
+  ],
+  "maximum_pairwise_similarity": 0.646154,
+  "methods_claimed": 0,
+  "reference_implemented_designs": 12,
+  "schema_version": "1.0.0"
+}

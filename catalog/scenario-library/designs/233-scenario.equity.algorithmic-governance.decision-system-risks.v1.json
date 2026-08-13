@@ -1,0 +1,162 @@
+{
+  "affected_system": "public-sector analytical, scoring, triage, optimization, and human-review systems",
+  "alternatives": [
+    "verify the highest-consequence signals before acting on algorithmic decision-system evidence and control gaps",
+    "combine targeted inspection, monitoring, and data-quality repair for algorithmic decision-system evidence and control gaps",
+    "pair end-to-end claim, lineage, decision, recourse, and outcome diagnosis with an explicit stop, review, and escalation rule"
+  ],
+  "analysis_modes": [
+    "descriptive"
+  ],
+  "assumptions": [
+    "Model output, recommendation, human decision, action, appeal, service, and outcome remain distinct.",
+    "High-impact decisions require lawful authority, human responsibility, contestability, and incident response.",
+    "All alternatives, capacities, costs, effects, thresholds, and failure scenarios are proposed until bound to evidence."
+  ],
+  "baseline": "continue current inspection and reporting practice for algorithmic decision-system evidence and control gaps.",
+  "city_bindings": [],
+  "constraints": [
+    {
+      "binding": true,
+      "constraint_id": "scenario.equity.algorithmic-governance.decision-system-risks.v1.constraint.binding",
+      "description": "The algorithmic decision support and governance diagnose must respect declared measurement resolution and classification uncertainty.",
+      "hard": true,
+      "kind": "technical",
+      "required_source_roles": [
+        "community-input",
+        "equity-attribute",
+        "intervention-assignment",
+        "legal-regulatory",
+        "outcome-panel",
+        "service-schedule"
+      ]
+    },
+    {
+      "binding": false,
+      "constraint_id": "scenario.equity.algorithmic-governance.decision-system-risks.v1.constraint.evidence-scope",
+      "description": "Every released metric must retain evidence type, source lineage, geography, time, assumptions, and uncertainty.",
+      "hard": true,
+      "kind": "technical",
+      "required_source_roles": [
+        "community-input"
+      ]
+    },
+    {
+      "binding": false,
+      "constraint_id": "scenario.equity.algorithmic-governance.decision-system-risks.v1.constraint.decision-authority",
+      "description": "No analytical output may bypass lawful authority, accountable human review, or an applicable appeal process.",
+      "hard": true,
+      "kind": "regulatory",
+      "required_source_roles": [
+        "community-input"
+      ]
+    }
+  ],
+  "current_readiness": "blocked-missing-source",
+  "decision_cadence": "recompiled at each planning cycle and after material evidence change",
+  "decision_owner": "algorithmic accountability officer and responsible technology review board",
+  "decision_question": "Which data, model, interface, human, action, appeal, and outcome stages have unresolved evidence or governance gaps?",
+  "decision_type": "diagnose",
+  "design_id": "scenario.equity.algorithmic-governance.decision-system-risks.v1",
+  "design_order": 233,
+  "design_signature": "sha256:83e2dd2cec675b943beb86499ab67bc3dcb26ccf367c8f1b32cf20ce6f605f59",
+  "evidence_requirements": [
+    "estimated",
+    "observed",
+    "proposed"
+  ],
+  "family_id": "equity.algorithmic-governance",
+  "family_title": "Algorithmic decision support and governance",
+  "horizon": "annual",
+  "implementation_status": "design-only",
+  "independence_key": {
+    "binding_constraint": "The algorithmic decision support and governance diagnose must respect declared measurement resolution and classification uncertainty.",
+    "decision_object": "algorithmic decision-system evidence and control gaps",
+    "evidence_gate": "Evidence for algorithmic decision-system evidence and control gaps passes documented checks for coverage, semantics, geography, timestamps, and uncertainty.",
+    "horizon": "annual",
+    "intervention_mechanism": "end-to-end claim, lineage, decision, recourse, and outcome diagnosis",
+    "primary_outcome": "high-impact decision pathways with unresolved controls",
+    "spatial_unit": "network"
+  },
+  "intended_claim": "A versioned diagnose design for comparing declared alternatives affecting algorithmic decision-system evidence and control gaps, conditional on its evidence gate.",
+  "limitations": [
+    "This library record has no city binding and therefore reports no local input, output, or recommendation.",
+    "Readiness describes explicit source and method gates; it does not certify implementation feasibility.",
+    "External domain, legal, community, security, and operational review remains outside this design artifact."
+  ],
+  "method_claimed": false,
+  "objectives": [
+    {
+      "evidence_type": "estimated",
+      "metric": "high-impact decision pathways with unresolved controls",
+      "objective_id": "scenario.equity.algorithmic-governance.decision-system-risks.v1.objective.primary",
+      "primary": true,
+      "sense": "minimize",
+      "unit": "pathways"
+    },
+    {
+      "evidence_type": "estimated",
+      "metric": "distributional gap in high-impact decision pathways with unresolved controls",
+      "objective_id": "scenario.equity.algorithmic-governance.decision-system-risks.v1.objective.equity",
+      "primary": false,
+      "sense": "minimize",
+      "unit": "pathways"
+    },
+    {
+      "evidence_type": "observed",
+      "metric": "decision claims with complete evidence lineage",
+      "objective_id": "scenario.equity.algorithmic-governance.decision-system-risks.v1.objective.traceability",
+      "primary": false,
+      "sense": "maximize",
+      "unit": "percent"
+    }
+  ],
+  "prohibited_claims": [
+    "Do not label a metric gap unlawful discrimination or a documented control effective without evidence.",
+    "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+    "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+    "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+  ],
+  "release_gate": {
+    "failure_release": "Release an explicit insufficient-evidence record naming missing sources, failed diagnostics, prohibited claims, and the next validation action.",
+    "failure_status": "insufficient-evidence",
+    "gate_id": "scenario.equity.algorithmic-governance.decision-system-risks.v1.gate.release",
+    "gate_type": "geographic-alignment",
+    "pass_condition": "Evidence for algorithmic decision-system evidence and control gaps passes documented checks for coverage, semantics, geography, timestamps, and uncertainty.",
+    "required_evidence_types": [
+      "observed",
+      "proposed"
+    ],
+    "required_source_roles": [
+      "community-input",
+      "equity-attribute",
+      "intervention-assignment",
+      "legal-regulatory",
+      "outcome-panel",
+      "service-schedule"
+    ]
+  },
+  "required_source_roles": [
+    "community-input",
+    "equity-attribute",
+    "intervention-assignment",
+    "legal-regulatory",
+    "outcome-panel",
+    "service-schedule"
+  ],
+  "schema_version": "1.0.0",
+  "spatial_unit": "network",
+  "suite": "behavioral-policy-equity",
+  "tags": [
+    "behavioral-policy-equity",
+    "design-only",
+    "diagnose",
+    "equity.algorithmic-governance",
+    "scenario-library"
+  ],
+  "title": "Diagnose algorithmic decision-system risks and control gaps",
+  "transportability_risks": [
+    "Law, institutional process, data-generating systems, populations, incentives, and recourse differ.",
+    "Technical fairness metrics may conflict and cannot establish legal or substantive fairness alone."
+  ]
+}

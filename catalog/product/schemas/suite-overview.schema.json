@@ -16,6 +16,21 @@
       "title": "Completed Count",
       "type": "integer"
     },
+    "design_count": {
+      "minimum": 0,
+      "title": "Design Count",
+      "type": "integer"
+    },
+    "design_family_count": {
+      "minimum": 0,
+      "title": "Design Family Count",
+      "type": "integer"
+    },
+    "design_only_scenarios": {
+      "minimum": 0,
+      "title": "Design Only Scenarios",
+      "type": "integer"
+    },
     "execution_count": {
       "minimum": 0,
       "title": "Execution Count",
@@ -24,6 +39,11 @@
     "negative_count": {
       "minimum": 0,
       "title": "Negative Count",
+      "type": "integer"
+    },
+    "reference_implemented_designs": {
+      "minimum": 0,
+      "title": "Reference Implemented Designs",
       "type": "integer"
     },
     "suite": {
@@ -39,6 +59,10 @@
   },
   "required": [
     "suite",
+    "design_family_count",
+    "design_count",
+    "reference_implemented_designs",
+    "design_only_scenarios",
     "template_count",
     "execution_count",
     "completed_count",

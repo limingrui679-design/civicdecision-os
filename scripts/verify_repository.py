@@ -50,6 +50,15 @@ from civicdecision.protocols.decision import DecisionPack
 from civicdecision.protocols.scenario import PolicyScenario
 from civicdecision.protocols.schemas import build_schemas
 from civicdecision.protocols.source import SourceManifest
+from civicdecision.scenario_library.build import build_scenario_library
+from civicdecision.scenario_library.models import (
+    ImplementationStatus,
+    ScenarioDesign,
+    ScenarioFamily,
+    ScenarioLibraryAudit,
+    ScenarioLibraryManifest,
+    ScenarioLibraryRegistry,
+)
 from civicdecision.semantic.city_catalog import (
     GlobalCityCatalog,
     build_global_city_catalog,
@@ -427,6 +436,8 @@ def verify_repository() -> dict[str, object]:
         raise RuntimeError("product manifest catalog fingerprint differs from validated store")
     if product_manifest.artifact_count != len(product_manifest.artifacts):
         raise RuntimeError("product artifact manifest count does not reconcile")
+    if product_manifest.artifact_count != 336:
+        raise RuntimeError("product artifact manifest must inventory exactly 336 base artifacts")
     for product_entry in product_manifest.artifacts:
         product_path = safe_relative_artifact(product_dir, product_entry.path)
         if (
@@ -436,8 +447,75 @@ def verify_repository() -> dict[str, object]:
             raise RuntimeError(f"product artifact entry mismatch: {product_entry.path}")
     product_openapi = json.loads((product_dir / "openapi-v1.json").read_text(encoding="utf-8"))
     product_api_paths = product_openapi.get("paths")
-    if not isinstance(product_api_paths, dict) or len(product_api_paths) < 12:
-        raise RuntimeError("product OpenAPI document does not expose the required surface")
+    if not isinstance(product_api_paths, dict) or len(product_api_paths) != 19:
+        raise RuntimeError("product OpenAPI document must expose exactly 19 validated paths")
+    product_files = [path for path in product_dir.rglob("*") if path.is_file()]
+    product_schema_count = sum(
+        item.path.startswith("schemas/") for item in product_manifest.artifacts
+    )
+    product_design_details = sum(
+        item.path.startswith("designs/detail/") for item in product_manifest.artifacts
+    )
+    product_family_details = sum(
+        item.path.startswith("design-families/detail/") for item in product_manifest.artifacts
+    )
+    if (
+        len(product_files) != 338
+        or product_schema_count != 28
+        or product_design_details != 240
+        or product_family_details != 30
+    ):
+        raise RuntimeError("product static projection inventory does not reconcile")
+
+    scenario_library_dir = ROOT / "catalog/scenario-library"
+    verify_checksum(scenario_library_dir)
+    scenario_library_registry = validate_document(
+        scenario_library_dir / "registry.json", ScenarioLibraryRegistry
+    )
+    scenario_library_audit = validate_document(
+        scenario_library_dir / "audit.json", ScenarioLibraryAudit
+    )
+    scenario_library_manifest = validate_document(
+        scenario_library_dir / "artifact-manifest.json", ScenarioLibraryManifest
+    )
+    if not scenario_library_audit.audit_passed:
+        raise RuntimeError("scenario library anti-duplication audit did not pass")
+    scenario_library_designs = []
+    for design_entry in scenario_library_registry.designs:
+        path = safe_relative_artifact(scenario_library_dir, design_entry.artifact_path)
+        design = validate_document(path, ScenarioDesign)
+        if (
+            design.design_id != design_entry.design_id
+            or design.content_hash() != design_entry.content_hash
+            or sha256_file(path)
+            != next(
+                item.content_hash
+                for item in scenario_library_manifest.artifacts
+                if item.path == design_entry.artifact_path
+            )
+        ):
+            raise RuntimeError(f"scenario library design entry mismatch: {design_entry.design_id}")
+        scenario_library_designs.append(design)
+    scenario_library_families = []
+    for family_entry in scenario_library_registry.families:
+        path = safe_relative_artifact(scenario_library_dir, family_entry.artifact_path)
+        family = validate_document(path, ScenarioFamily)
+        if (
+            family.family_id != family_entry.family_id
+            or family.content_hash() != family_entry.content_hash
+        ):
+            raise RuntimeError(f"scenario library family entry mismatch: {family_entry.family_id}")
+        scenario_library_families.append(family)
+    if len(scenario_library_manifest.artifacts) != 280:
+        raise RuntimeError("scenario library manifest must inventory 280 base artifacts")
+    scenario_library_files = [path for path in scenario_library_dir.rglob("*") if path.is_file()]
+    if len(scenario_library_files) != 282:
+        raise RuntimeError("scenario library tree must contain exactly 282 files")
+    if sum(
+        item.implementation_status is ImplementationStatus.REFERENCE_IMPLEMENTED
+        for item in scenario_library_designs
+    ) != 12 or any(item.city_bindings or item.method_claimed for item in scenario_library_designs):
+        raise RuntimeError("scenario library claim boundary or implementation mapping failed")
 
     cdc_dir = ROOT / "examples/data/cdc-places"
     data = cdc_dir / "cdc-places-7ccf6e7d6dc3.json"
@@ -517,6 +595,9 @@ def verify_repository() -> dict[str, object]:
         rebuilt_product_dir = temporary_root / "product"
         build_product_artifacts(ROOT, rebuilt_product_dir)
         assert_tree_same(product_dir, rebuilt_product_dir)
+        rebuilt_scenario_library_dir = temporary_root / "scenario-library"
+        build_scenario_library(ROOT, rebuilt_scenario_library_dir)
+        assert_tree_same(scenario_library_dir, rebuilt_scenario_library_dir)
 
     statuses = Counter(pack.status.value for pack in packs)
     connector_families = Counter(item.family.value for item in CONNECTOR_REGISTRY)
@@ -597,16 +678,33 @@ def verify_repository() -> dict[str, object]:
         "rebuilt_reference_hashes": sorted(rebuilt_hashes),
         "rebuilds_exactly_matched": len(rebuilt_hashes),
         "scenario_documents": len(scenario_paths),
-        "product_artifacts": len(product_manifest.artifacts) + 2,
+        "scenario_library_designs": len(scenario_library_designs),
+        "scenario_library_families": len(scenario_library_families),
+        "scenario_library_files": len(scenario_library_files),
+        "scenario_library_exactly_rebuilt": True,
+        "scenario_library_reference_implementations": sum(
+            item.implementation_status is ImplementationStatus.REFERENCE_IMPLEMENTED
+            for item in scenario_library_designs
+        ),
+        "scenario_library_city_bindings": sum(
+            len(item.city_bindings) for item in scenario_library_designs
+        ),
+        "scenario_library_methods_claimed": sum(
+            item.method_claimed for item in scenario_library_designs
+        ),
+        "scenario_library_maximum_pairwise_similarity": (
+            scenario_library_audit.maximum_pairwise_similarity
+        ),
+        "product_artifacts": len(product_files),
         "product_catalog_fingerprint": product_manifest.catalog_fingerprint,
         "product_checksum_entries": len(
             (product_dir / "SHA256SUMS").read_text(encoding="ascii").splitlines()
         ),
         "product_exactly_rebuilt": True,
         "product_openapi_paths": len(product_api_paths),
-        "product_schema_artifacts": sum(
-            item.path.startswith("schemas/") for item in product_manifest.artifacts
-        ),
+        "product_schema_artifacts": product_schema_count,
+        "product_scenario_design_details": product_design_details,
+        "product_scenario_family_details": product_family_details,
         "product_web_assets": len(
             json.loads((product_dir / "web-assets.json").read_text(encoding="utf-8"))["assets"]
         ),

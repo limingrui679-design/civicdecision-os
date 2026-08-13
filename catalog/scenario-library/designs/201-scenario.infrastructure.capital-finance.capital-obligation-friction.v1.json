@@ -1,0 +1,162 @@
+{
+  "affected_system": "municipal capital planning, debt, grants, reserves, procurement, and asset delivery",
+  "alternatives": [
+    "verify the highest-consequence signals before acting on capital obligation, backlog, and delivery risk",
+    "combine targeted inspection, monitoring, and data-quality repair for capital obligation, backlog, and delivery risk",
+    "pair asset-budget-contract-schedule reconciliation with an explicit stop, review, and escalation rule"
+  ],
+  "analysis_modes": [
+    "descriptive"
+  ],
+  "assumptions": [
+    "Budgets, obligations, appropriations, encumbrances, expenditures, schedules, and assets are reconciled.",
+    "All fiscal scenarios separate nominal, real, committed, contingent, and modeled amounts.",
+    "All alternatives, capacities, costs, effects, thresholds, and failure scenarios are proposed until bound to evidence."
+  ],
+  "baseline": "continue current inspection and reporting practice for capital obligation, backlog, and delivery risk.",
+  "city_bindings": [],
+  "constraints": [
+    {
+      "binding": true,
+      "constraint_id": "scenario.infrastructure.capital-finance.capital-obligation-friction.v1.constraint.binding",
+      "description": "The capital portfolio and municipal finance diagnose must respect declared measurement resolution and classification uncertainty.",
+      "hard": true,
+      "kind": "technical",
+      "required_source_roles": [
+        "asset-condition",
+        "asset-inventory",
+        "financial-cost",
+        "legal-regulatory",
+        "operating-capacity",
+        "real-time-state"
+      ]
+    },
+    {
+      "binding": false,
+      "constraint_id": "scenario.infrastructure.capital-finance.capital-obligation-friction.v1.constraint.evidence-scope",
+      "description": "Every released metric must retain evidence type, source lineage, geography, time, assumptions, and uncertainty.",
+      "hard": true,
+      "kind": "technical",
+      "required_source_roles": [
+        "asset-condition"
+      ]
+    },
+    {
+      "binding": false,
+      "constraint_id": "scenario.infrastructure.capital-finance.capital-obligation-friction.v1.constraint.decision-authority",
+      "description": "No analytical output may bypass lawful authority, accountable human review, or an applicable appeal process.",
+      "hard": true,
+      "kind": "regulatory",
+      "required_source_roles": [
+        "asset-condition"
+      ]
+    }
+  ],
+  "current_readiness": "blocked-missing-source",
+  "decision_cadence": "recompiled at each planning cycle and after material evidence change",
+  "decision_owner": "chief financial officer and capital planning director",
+  "decision_question": "Which assets and projects show reconciled condition need, cost growth, delay, funding gap, or delivery risk?",
+  "decision_type": "diagnose",
+  "design_id": "scenario.infrastructure.capital-finance.capital-obligation-friction.v1",
+  "design_order": 201,
+  "design_signature": "sha256:c1fa35ac874c80f312edc0baa61dc774ea886868148d0112efd96d958ed3de7e",
+  "evidence_requirements": [
+    "estimated",
+    "observed",
+    "proposed"
+  ],
+  "family_id": "infrastructure.capital-finance",
+  "family_title": "Capital portfolio and municipal finance",
+  "horizon": "annual",
+  "implementation_status": "design-only",
+  "independence_key": {
+    "binding_constraint": "The capital portfolio and municipal finance diagnose must respect declared measurement resolution and classification uncertainty.",
+    "decision_object": "capital obligation, backlog, and delivery risk",
+    "evidence_gate": "Evidence for capital obligation, backlog, and delivery risk passes documented checks for coverage, semantics, geography, timestamps, and uncertainty.",
+    "horizon": "annual",
+    "intervention_mechanism": "asset-budget-contract-schedule reconciliation",
+    "primary_outcome": "verified high-consequence unfunded or delayed obligations",
+    "spatial_unit": "asset"
+  },
+  "intended_claim": "A versioned diagnose design for comparing declared alternatives affecting capital obligation, backlog, and delivery risk, conditional on its evidence gate.",
+  "limitations": [
+    "This library record has no city binding and therefore reports no local input, output, or recommendation.",
+    "Readiness describes explicit source and method gates; it does not certify implementation feasibility.",
+    "External domain, legal, community, security, and operational review remains outside this design artifact."
+  ],
+  "method_claimed": false,
+  "objectives": [
+    {
+      "evidence_type": "estimated",
+      "metric": "verified high-consequence unfunded or delayed obligations",
+      "objective_id": "scenario.infrastructure.capital-finance.capital-obligation-friction.v1.objective.primary",
+      "primary": true,
+      "sense": "minimize",
+      "unit": "currency"
+    },
+    {
+      "evidence_type": "estimated",
+      "metric": "distributional gap in verified high-consequence unfunded or delayed obligations",
+      "objective_id": "scenario.infrastructure.capital-finance.capital-obligation-friction.v1.objective.equity",
+      "primary": false,
+      "sense": "minimize",
+      "unit": "currency"
+    },
+    {
+      "evidence_type": "observed",
+      "metric": "decision claims with complete evidence lineage",
+      "objective_id": "scenario.infrastructure.capital-finance.capital-obligation-friction.v1.objective.traceability",
+      "primary": false,
+      "sense": "maximize",
+      "unit": "percent"
+    }
+  ],
+  "prohibited_claims": [
+    "Do not call a request, estimate, or plan an audited liability, appropriation, or expenditure.",
+    "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+    "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+    "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+  ],
+  "release_gate": {
+    "failure_release": "Release an explicit insufficient-evidence record naming missing sources, failed diagnostics, prohibited claims, and the next validation action.",
+    "failure_status": "insufficient-evidence",
+    "gate_id": "scenario.infrastructure.capital-finance.capital-obligation-friction.v1.gate.release",
+    "gate_type": "geographic-alignment",
+    "pass_condition": "Evidence for capital obligation, backlog, and delivery risk passes documented checks for coverage, semantics, geography, timestamps, and uncertainty.",
+    "required_evidence_types": [
+      "observed",
+      "proposed"
+    ],
+    "required_source_roles": [
+      "asset-condition",
+      "asset-inventory",
+      "financial-cost",
+      "legal-regulatory",
+      "operating-capacity",
+      "real-time-state"
+    ]
+  },
+  "required_source_roles": [
+    "asset-condition",
+    "asset-inventory",
+    "financial-cost",
+    "legal-regulatory",
+    "operating-capacity",
+    "real-time-state"
+  ],
+  "schema_version": "1.0.0",
+  "spatial_unit": "asset",
+  "suite": "infrastructure-finance-asset-risk",
+  "tags": [
+    "design-only",
+    "diagnose",
+    "infrastructure-finance-asset-risk",
+    "infrastructure.capital-finance",
+    "scenario-library"
+  ],
+  "title": "Diagnose capital obligations, backlog, and delivery friction",
+  "transportability_risks": [
+    "Accounting, tax authority, debt limits, grants, procurement, labor, and markets differ.",
+    "Historical delivery and cost relationships may shift under inflation or policy change."
+  ]
+}

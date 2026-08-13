@@ -1,0 +1,335 @@
+{
+  "designs": [
+    {
+      "analysis_modes": [
+        "descriptive"
+      ],
+      "binding_constraint": "A hotspot must be supported by verified events and mapped drainage connectivity rather than complaints alone.",
+      "content_hash": "sha256:571f852183b3bf0f061b727980a998d4ae547569f90408d398f7e04bf6e6a6db",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Where do rainfall, drainage condition, surface flow paths, and verified flooding jointly indicate failure risk?",
+      "decision_type": "diagnose",
+      "design_id": "scenario.climate.flood-stormwater.drainage-failure-patterns.v1",
+      "design_order": 9,
+      "evidence_gate": "geographic-alignment",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "proposed"
+      ],
+      "family_id": "climate.flood-stormwater",
+      "family_title": "Flood and stormwater resilience",
+      "horizon": "annual",
+      "implementation_status": "design-only",
+      "primary_outcome": "verified flood events unexplained by mapped drainage capacity",
+      "prohibited_claims": [
+        "Do not convert flood complaints into verified inundation depths or engineering failure diagnoses.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "asset",
+      "suite": "climate-disaster-resilience",
+      "title": "Diagnose recurrent drainage-failure patterns"
+    },
+    {
+      "analysis_modes": [
+        "forecast"
+      ],
+      "binding_constraint": "The forecast must distinguish routine service calls from verified emergency response tasks.",
+      "content_hash": "sha256:06511618790a7150693a59d3da461d155da0556483039f011b8371f1cd2e495e",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "What range of pumping, road-closure, and resident-assistance demand follows the forecast rainfall envelope?",
+      "decision_type": "forecast",
+      "design_id": "scenario.climate.flood-stormwater.runoff-response-demand.v1",
+      "design_order": 10,
+      "evidence_gate": "model-calibration",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "proposed"
+      ],
+      "family_id": "climate.flood-stormwater",
+      "family_title": "Flood and stormwater resilience",
+      "horizon": "days",
+      "implementation_status": "design-only",
+      "primary_outcome": "response tasks above available event capacity",
+      "prohibited_claims": [
+        "Do not present forecast operational demand as predicted flood depth or property damage.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "service-area",
+      "suite": "climate-disaster-resilience",
+      "title": "Forecast rainfall-runoff response demand"
+    },
+    {
+      "analysis_modes": [
+        "simulation",
+        "optimization"
+      ],
+      "binding_constraint": "The selected portfolio must fit capital, maintenance, land, and delivery-year budgets.",
+      "content_hash": "sha256:f49f4930f8f691acfbad87ae7888a70547604e82cd9605be393c1c62fe1cd86f",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Which asset renewals and runoff-reduction projects best reduce expected disruption under the capital ceiling?",
+      "decision_type": "prioritize",
+      "design_id": "scenario.climate.flood-stormwater.drainage-renewal.v1",
+      "design_order": 11,
+      "evidence_gate": "cost-capacity",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "family_id": "climate.flood-stormwater",
+      "family_title": "Flood and stormwater resilience",
+      "horizon": "multi-year",
+      "implementation_status": "design-only",
+      "primary_outcome": "expected annual service-disruption hours",
+      "prohibited_claims": [
+        "Do not call modeled avoided disruption a realized financial saving.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "asset",
+      "suite": "climate-disaster-resilience",
+      "title": "Prioritize drainage renewal and green-infrastructure projects"
+    },
+    {
+      "analysis_modes": [
+        "simulation",
+        "optimization"
+      ],
+      "binding_constraint": "Sites must avoid protected habitat, contaminated land, displacement risk, and infeasible subsurface conditions.",
+      "content_hash": "sha256:349713f802d4894902b35d923274aafad0b4ac43b2836d7305499aa8e7ac2c58",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Which parcels can host retention while reducing runoff and avoiding displacement or environmental harm?",
+      "decision_type": "site",
+      "design_id": "scenario.climate.flood-stormwater.retention-storage-sites.v1",
+      "design_order": 12,
+      "evidence_gate": "legal-authority",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "family_id": "climate.flood-stormwater",
+      "family_title": "Flood and stormwater resilience",
+      "horizon": "multi-year",
+      "implementation_status": "design-only",
+      "primary_outcome": "unmanaged design-storm runoff volume",
+      "prohibited_claims": [
+        "Do not treat a screened parcel as acquired, permitted, or hydraulically designed.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "parcel",
+      "suite": "climate-disaster-resilience",
+      "title": "Site distributed stormwater retention and storage"
+    },
+    {
+      "analysis_modes": [
+        "simulation",
+        "optimization"
+      ],
+      "binding_constraint": "Travel, setup, relocation, and crew-safety times must fit the forecast lead-time window.",
+      "content_hash": "sha256:d9c63bf4e078aa15ce9d3326dc75e159a19daf5b4e113144dbc6299f59c4a142",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "How should mobile pumps, barriers, and response teams be assigned as observed conditions change?",
+      "decision_type": "allocate",
+      "design_id": "scenario.climate.flood-stormwater.flood-response-assets.v1",
+      "design_order": 13,
+      "evidence_gate": "temporal-alignment",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "family_id": "climate.flood-stormwater",
+      "family_title": "Flood and stormwater resilience",
+      "horizon": "real-time",
+      "implementation_status": "design-only",
+      "primary_outcome": "critical locations without timely flood-response coverage",
+      "prohibited_claims": [
+        "Do not call a modeled dispatch plan an executed emergency response.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "network",
+      "suite": "climate-disaster-resilience",
+      "title": "Allocate pumps, barriers, and flood-response crews"
+    },
+    {
+      "analysis_modes": [
+        "forecast",
+        "optimization"
+      ],
+      "binding_constraint": "The schedule must respect crew skills, access permits, traffic windows, and equipment availability.",
+      "content_hash": "sha256:de1a89d3fddfe4b9a136697793d00b34443e3b7d5b155b424e983ffb6abf84dc",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "When should catch basins, culverts, and pumps be inspected or cleared before forecast wet periods?",
+      "decision_type": "schedule",
+      "design_id": "scenario.climate.flood-stormwater.drainage-maintenance-window.v1",
+      "design_order": 14,
+      "evidence_gate": "temporal-alignment",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed"
+      ],
+      "family_id": "climate.flood-stormwater",
+      "family_title": "Flood and stormwater resilience",
+      "horizon": "weeks",
+      "implementation_status": "design-only",
+      "primary_outcome": "high-risk asset-days overdue before major rainfall",
+      "prohibited_claims": [
+        "Do not equate a service request closure with verified maintenance completion.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "asset",
+      "suite": "climate-disaster-resilience",
+      "title": "Schedule drainage inspection and maintenance windows"
+    },
+    {
+      "analysis_modes": [
+        "forecast",
+        "simulation",
+        "optimization"
+      ],
+      "binding_constraint": "Critical drainage and emergency functions must stay above the minimum continuity threshold in severe scenarios.",
+      "content_hash": "sha256:f4bad65682f30a9d689692063173bbee44e2ef205839f23ab8165dc5ccc761f2",
+      "current_readiness": "reference-implemented",
+      "decision_question": "Which continuity strategy remains viable across rainfall, tide, blockage, outage, and demand-surge scenarios?",
+      "decision_type": "stress-test",
+      "design_id": "scenario.climate.flood-stormwater.compound-rainfall-continuity.v1",
+      "design_order": 15,
+      "evidence_gate": "source-lineage",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "existing_template_ref": "deep.climate.rainfall-continuity.v1",
+      "family_id": "climate.flood-stormwater",
+      "family_title": "Flood and stormwater resilience",
+      "horizon": "weeks",
+      "implementation_status": "reference-implemented",
+      "primary_outcome": "scenario-weighted critical service interruption",
+      "prohibited_claims": [
+        "Do not claim precipitation caused observed requests or that assumed flood losses were observed.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "citywide",
+      "suite": "climate-disaster-resilience",
+      "title": "Stress-test continuity under compound rainfall and outage"
+    },
+    {
+      "analysis_modes": [
+        "descriptive",
+        "causal"
+      ],
+      "binding_constraint": "Treated and comparison catchments must have stable monitoring, comparable storms, and no unmodeled drainage redesign.",
+      "content_hash": "sha256:49709624bd66abb19edf1e555b45ea90e352d8c2d268cd706e29eb73615a3fc8",
+      "current_readiness": "blocked-multiple-gates",
+      "decision_question": "Did phased green-infrastructure installation reduce verified runoff and disruption relative to credible comparisons?",
+      "decision_type": "evaluate",
+      "design_id": "scenario.climate.flood-stormwater.green-infrastructure-effect.v1",
+      "design_order": 16,
+      "evidence_gate": "causal-identification",
+      "evidence_types": [
+        "causal",
+        "estimated",
+        "observed",
+        "proposed"
+      ],
+      "family_id": "climate.flood-stormwater",
+      "family_title": "Flood and stormwater resilience",
+      "horizon": "multi-year",
+      "implementation_status": "design-only",
+      "primary_outcome": "change in event runoff volume",
+      "prohibited_claims": [
+        "Do not infer causal flood reduction from post-installation complaints alone.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "service-area",
+      "suite": "climate-disaster-resilience",
+      "title": "Evaluate distributed green-infrastructure effects"
+    }
+  ],
+  "family": {
+    "affected_system": "urban drainage, stormwater, and flood-response system",
+    "claim_boundary": [
+      "Hazard observations and modeled exposure do not establish individual harm or causation.",
+      "Proposed adaptations are planning alternatives, not adopted policy or engineered designs.",
+      "A design-only record is not a city execution, validated forecast, or impact result."
+    ],
+    "common_source_roles": [
+      "asset-inventory",
+      "climate-hazard",
+      "geographic-identity"
+    ],
+    "decision_owner": "stormwater utility director and emergency-management lead",
+    "decision_types": [
+      "diagnose",
+      "forecast",
+      "prioritize",
+      "site",
+      "allocate",
+      "schedule",
+      "stress-test",
+      "evaluate"
+    ],
+    "description": "Decision designs for drainage diagnosis, rainfall-runoff workload, green infrastructure, response deployment, maintenance timing, compound flooding, and causal evaluation.",
+    "design_refs": [
+      "scenario.climate.flood-stormwater.drainage-failure-patterns.v1",
+      "scenario.climate.flood-stormwater.runoff-response-demand.v1",
+      "scenario.climate.flood-stormwater.drainage-renewal.v1",
+      "scenario.climate.flood-stormwater.retention-storage-sites.v1",
+      "scenario.climate.flood-stormwater.flood-response-assets.v1",
+      "scenario.climate.flood-stormwater.drainage-maintenance-window.v1",
+      "scenario.climate.flood-stormwater.compound-rainfall-continuity.v1",
+      "scenario.climate.flood-stormwater.green-infrastructure-effect.v1"
+    ],
+    "design_signatures": [
+      "sha256:3e690451937d44944964788821dd81db5c76564cae502625d6564fe54df56c03",
+      "sha256:b432a1d79a55b59e2a09d71b8a4150a46f50f73fb0250fce2d5ef158573ff597",
+      "sha256:b47d97eba11c2c9cf654c592bc46b5c4755a2787128dd2302604a591bc8069dc",
+      "sha256:8947e8a1525c35a4f5a6f7174b9c6a9508cf58ed52fbc320cceef56e0851daa1",
+      "sha256:94c04ca69e3bbec0b3158d8eb70f1b64d797171f68e95244098e1c2980468ca2",
+      "sha256:22e1cb8b28c3c0a1a14a9ec9ec66eb1642b5c81cc278362b57b863683caedc30",
+      "sha256:6a5a10a362e35491600e55adee92f8796afaf7efeaaad074cc99e288a65e161f",
+      "sha256:d6c9efb68622fdeb67d1c63083c2b0e25dbfdb9515c128a25ab466f6e0ea8f28"
+    ],
+    "family_id": "climate.flood-stormwater",
+    "family_order": 2,
+    "schema_version": "1.0.0",
+    "suite": "climate-disaster-resilience",
+    "title": "Flood and stormwater resilience"
+  },
+  "library_claim_boundary": [
+    "The catalog contains 240 decision designs, not 240 city executions.",
+    "Exactly twelve designs map to existing Tier-D reference templates; 228 remain design-only.",
+    "A reference implementation can be an explicit negative release and does not imply impact.",
+    "No record claims a city binding, new method, deployment, adoption, or real-user outcome.",
+    "Future execution requires source binding, gate passage, and domain, legal, community, and operational review."
+  ]
+}

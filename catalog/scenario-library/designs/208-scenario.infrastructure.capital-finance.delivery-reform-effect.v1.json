@@ -1,0 +1,170 @@
+{
+  "affected_system": "municipal capital planning, debt, grants, reserves, procurement, and asset delivery",
+  "alternatives": [
+    "compare eligible treated and credible untreated units for phased municipal capital delivery and financing reform",
+    "estimate pre-specified overall and distributional effects of phased municipal capital delivery and financing reform",
+    "pair matched project cohort event-study with scope-change controls with an explicit stop, review, and escalation rule"
+  ],
+  "analysis_modes": [
+    "descriptive",
+    "causal"
+  ],
+  "assumptions": [
+    "Budgets, obligations, appropriations, encumbrances, expenditures, schedules, and assets are reconciled.",
+    "All fiscal scenarios separate nominal, real, committed, contingent, and modeled amounts.",
+    "All alternatives, capacities, costs, effects, thresholds, and failure scenarios are proposed until bound to evidence."
+  ],
+  "baseline": "retain pre-intervention conditions for phased municipal capital delivery and financing reform.",
+  "city_bindings": [],
+  "constraints": [
+    {
+      "binding": true,
+      "constraint_id": "scenario.infrastructure.capital-finance.delivery-reform-effect.v1.constraint.binding",
+      "description": "The capital portfolio and municipal finance evaluate must respect declared pre-specified assignment, comparison, outcome, spillover, and subgroup rules.",
+      "hard": true,
+      "kind": "equity",
+      "required_source_roles": [
+        "asset-condition",
+        "asset-inventory",
+        "financial-cost",
+        "intervention-assignment",
+        "legal-regulatory",
+        "operating-capacity",
+        "outcome-panel",
+        "real-time-state"
+      ]
+    },
+    {
+      "binding": false,
+      "constraint_id": "scenario.infrastructure.capital-finance.delivery-reform-effect.v1.constraint.evidence-scope",
+      "description": "Every released metric must retain evidence type, source lineage, geography, time, assumptions, and uncertainty.",
+      "hard": true,
+      "kind": "technical",
+      "required_source_roles": [
+        "asset-condition"
+      ]
+    },
+    {
+      "binding": false,
+      "constraint_id": "scenario.infrastructure.capital-finance.delivery-reform-effect.v1.constraint.decision-authority",
+      "description": "No analytical output may bypass lawful authority, accountable human review, or an applicable appeal process.",
+      "hard": true,
+      "kind": "regulatory",
+      "required_source_roles": [
+        "asset-condition"
+      ]
+    }
+  ],
+  "current_readiness": "blocked-multiple-gates",
+  "decision_cadence": "recompiled at each planning cycle and after material evidence change",
+  "decision_owner": "chief financial officer and capital planning director",
+  "decision_question": "Did phased procurement, bundling, funding, or delivery reforms improve verified cost and schedule performance?",
+  "decision_type": "evaluate",
+  "design_id": "scenario.infrastructure.capital-finance.delivery-reform-effect.v1",
+  "design_order": 208,
+  "design_signature": "sha256:46f48a8a654b7e65c4f72b8b12b65dc2360e6089e0d8d95075c90dae88212c1c",
+  "evidence_requirements": [
+    "causal",
+    "estimated",
+    "observed",
+    "proposed"
+  ],
+  "family_id": "infrastructure.capital-finance",
+  "family_title": "Capital portfolio and municipal finance",
+  "horizon": "multi-year",
+  "implementation_status": "design-only",
+  "independence_key": {
+    "binding_constraint": "The capital portfolio and municipal finance evaluate must respect declared pre-specified assignment, comparison, outcome, spillover, and subgroup rules.",
+    "decision_object": "phased municipal capital delivery and financing reform",
+    "evidence_gate": "Evidence for phased municipal capital delivery and financing reform passes documented checks for dated assignment, comparison validity, pre-trends, outcome panels, attrition, spillovers, and falsification tests.",
+    "horizon": "multi-year",
+    "intervention_mechanism": "matched project cohort event-study with scope-change controls",
+    "primary_outcome": "change in scope-adjusted cost and delivery variance",
+    "spatial_unit": "asset"
+  },
+  "intended_claim": "A versioned evaluate design for comparing declared alternatives affecting phased municipal capital delivery and financing reform, conditional on its evidence gate.",
+  "limitations": [
+    "This library record has no city binding and therefore reports no local input, output, or recommendation.",
+    "Readiness describes explicit source and method gates; it does not certify implementation feasibility.",
+    "External domain, legal, community, security, and operational review remains outside this design artifact."
+  ],
+  "method_claimed": false,
+  "objectives": [
+    {
+      "evidence_type": "estimated",
+      "metric": "change in scope-adjusted cost and delivery variance",
+      "objective_id": "scenario.infrastructure.capital-finance.delivery-reform-effect.v1.objective.primary",
+      "primary": true,
+      "sense": "minimize",
+      "unit": "percentage points"
+    },
+    {
+      "evidence_type": "estimated",
+      "metric": "distributional gap in change in scope-adjusted cost and delivery variance",
+      "objective_id": "scenario.infrastructure.capital-finance.delivery-reform-effect.v1.objective.equity",
+      "primary": false,
+      "sense": "minimize",
+      "unit": "percentage points"
+    },
+    {
+      "evidence_type": "observed",
+      "metric": "decision claims with complete evidence lineage",
+      "objective_id": "scenario.infrastructure.capital-finance.delivery-reform-effect.v1.objective.traceability",
+      "primary": false,
+      "sense": "maximize",
+      "unit": "percent"
+    }
+  ],
+  "prohibited_claims": [
+    "Do not infer causal public value, quality, or fiscal health from cost and schedule variance alone.",
+    "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+    "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+    "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+  ],
+  "release_gate": {
+    "failure_release": "Release an explicit insufficient-evidence record naming missing sources, failed diagnostics, prohibited claims, and the next validation action.",
+    "failure_status": "insufficient-evidence",
+    "gate_id": "scenario.infrastructure.capital-finance.delivery-reform-effect.v1.gate.release",
+    "gate_type": "causal-identification",
+    "pass_condition": "Evidence for phased municipal capital delivery and financing reform passes documented checks for dated assignment, comparison validity, pre-trends, outcome panels, attrition, spillovers, and falsification tests.",
+    "required_evidence_types": [
+      "causal",
+      "observed"
+    ],
+    "required_source_roles": [
+      "asset-condition",
+      "asset-inventory",
+      "financial-cost",
+      "intervention-assignment",
+      "legal-regulatory",
+      "operating-capacity",
+      "outcome-panel",
+      "real-time-state"
+    ]
+  },
+  "required_source_roles": [
+    "asset-condition",
+    "asset-inventory",
+    "financial-cost",
+    "intervention-assignment",
+    "legal-regulatory",
+    "operating-capacity",
+    "outcome-panel",
+    "real-time-state"
+  ],
+  "schema_version": "1.0.0",
+  "spatial_unit": "asset",
+  "suite": "infrastructure-finance-asset-risk",
+  "tags": [
+    "design-only",
+    "evaluate",
+    "infrastructure-finance-asset-risk",
+    "infrastructure.capital-finance",
+    "scenario-library"
+  ],
+  "title": "Evaluate capital delivery and financing reforms",
+  "transportability_risks": [
+    "Accounting, tax authority, debt limits, grants, procurement, labor, and markets differ.",
+    "Historical delivery and cost relationships may shift under inflation or policy change."
+  ]
+}

@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+from enum import StrEnum
 from pathlib import Path
 from types import TracebackType
 from typing import Self
@@ -9,14 +10,20 @@ from typing import Self
 import httpx
 
 from civicdecision import __version__
+from civicdecision.deep.models import ApplicationSuite
 from civicdecision.product.models import (
     BenchmarkOverview,
     CatalogSummary,
     CityDetail,
     CityPage,
     ProductTier,
+    ScenarioDesignDetail,
+    ScenarioDesignPage,
     ScenarioDetail,
+    ScenarioFamilyDetail,
+    ScenarioFamilyPage,
     ScenarioKind,
+    ScenarioLibraryEvidence,
     ScenarioPage,
     ScenarioStatus,
     SourcePage,
@@ -24,6 +31,11 @@ from civicdecision.product.models import (
 )
 from civicdecision.product.store import ArtifactStore
 from civicdecision.protocols.decision import DecisionPack
+from civicdecision.scenario_library.models import (
+    CurrentReadiness,
+    DecisionType,
+    ImplementationStatus,
+)
 
 
 class SDKHTTPError(RuntimeError):
@@ -38,11 +50,11 @@ class SDKHTTPError(RuntimeError):
 
 
 def _params(
-    **values: str | int | ProductTier | ScenarioKind | ScenarioStatus | None,
+    **values: str | int | StrEnum | None,
 ) -> dict[str, str | int]:
     result: dict[str, str | int] = {}
     for key, value in values.items():
-        if isinstance(value, (ProductTier, ScenarioKind, ScenarioStatus)):
+        if isinstance(value, StrEnum):
             result[key] = value.value
         elif value is not None:
             result[key] = value
@@ -118,6 +130,53 @@ class CivicDecisionSDK:
 
     def scenario(self, execution_id: str) -> ScenarioDetail:
         return self.store.scenario_detail(execution_id)
+
+    def designs(
+        self,
+        *,
+        suite: ApplicationSuite | None = None,
+        family_id: str | None = None,
+        decision_type: DecisionType | None = None,
+        implementation_status: ImplementationStatus | None = None,
+        current_readiness: CurrentReadiness | None = None,
+        query: str | None = None,
+        limit: int = 50,
+        offset: int = 0,
+    ) -> ScenarioDesignPage:
+        return self.store.list_scenario_designs(
+            suite=suite,
+            family_id=family_id,
+            decision_type=decision_type,
+            implementation_status=implementation_status,
+            current_readiness=current_readiness,
+            query=query,
+            limit=limit,
+            offset=offset,
+        )
+
+    def design(self, design_id: str) -> ScenarioDesignDetail:
+        return self.store.scenario_design_detail(design_id)
+
+    def design_families(
+        self,
+        *,
+        suite: ApplicationSuite | None = None,
+        query: str | None = None,
+        limit: int = 50,
+        offset: int = 0,
+    ) -> ScenarioFamilyPage:
+        return self.store.list_scenario_families(
+            suite=suite,
+            query=query,
+            limit=limit,
+            offset=offset,
+        )
+
+    def design_family(self, family_id: str) -> ScenarioFamilyDetail:
+        return self.store.scenario_family_detail(family_id)
+
+    def scenario_library_evidence(self) -> ScenarioLibraryEvidence:
+        return self.store.scenario_library_evidence()
 
     def decision_pack(self, execution_id: str) -> DecisionPack:
         return self.store.decision_pack(execution_id)
@@ -245,6 +304,60 @@ class CivicDecisionClient:
 
     def scenario(self, execution_id: str) -> ScenarioDetail:
         return ScenarioDetail.model_validate(self._get(f"/api/v1/scenarios/{execution_id}").json())
+
+    def designs(
+        self,
+        *,
+        suite: ApplicationSuite | None = None,
+        family_id: str | None = None,
+        decision_type: DecisionType | None = None,
+        implementation_status: ImplementationStatus | None = None,
+        current_readiness: CurrentReadiness | None = None,
+        query: str | None = None,
+        limit: int = 50,
+        offset: int = 0,
+    ) -> ScenarioDesignPage:
+        response = self._get(
+            "/api/v1/designs",
+            params=_params(
+                suite=suite,
+                family_id=family_id,
+                decision_type=decision_type,
+                implementation_status=implementation_status,
+                current_readiness=current_readiness,
+                q=query,
+                limit=limit,
+                offset=offset,
+            ),
+        )
+        return ScenarioDesignPage.model_validate(response.json())
+
+    def design(self, design_id: str) -> ScenarioDesignDetail:
+        return ScenarioDesignDetail.model_validate(self._get(f"/api/v1/designs/{design_id}").json())
+
+    def design_families(
+        self,
+        *,
+        suite: ApplicationSuite | None = None,
+        query: str | None = None,
+        limit: int = 50,
+        offset: int = 0,
+    ) -> ScenarioFamilyPage:
+        response = self._get(
+            "/api/v1/design-families",
+            params=_params(suite=suite, q=query, limit=limit, offset=offset),
+        )
+        return ScenarioFamilyPage.model_validate(response.json())
+
+    def design_family(self, family_id: str) -> ScenarioFamilyDetail:
+        return ScenarioFamilyDetail.model_validate(
+            self._get(f"/api/v1/design-families/{family_id}").json()
+        )
+
+    def scenario_library_evidence(self) -> ScenarioLibraryEvidence:
+        return ScenarioLibraryEvidence.model_validate(
+            self._get("/api/v1/evidence/scenario-library").json()
+        )
 
     def decision_pack(self, execution_id: str) -> DecisionPack:
         return DecisionPack.model_validate(
@@ -384,6 +497,62 @@ class AsyncCivicDecisionClient:
     async def scenario(self, execution_id: str) -> ScenarioDetail:
         return ScenarioDetail.model_validate(
             (await self._get(f"/api/v1/scenarios/{execution_id}")).json()
+        )
+
+    async def designs(
+        self,
+        *,
+        suite: ApplicationSuite | None = None,
+        family_id: str | None = None,
+        decision_type: DecisionType | None = None,
+        implementation_status: ImplementationStatus | None = None,
+        current_readiness: CurrentReadiness | None = None,
+        query: str | None = None,
+        limit: int = 50,
+        offset: int = 0,
+    ) -> ScenarioDesignPage:
+        response = await self._get(
+            "/api/v1/designs",
+            params=_params(
+                suite=suite,
+                family_id=family_id,
+                decision_type=decision_type,
+                implementation_status=implementation_status,
+                current_readiness=current_readiness,
+                q=query,
+                limit=limit,
+                offset=offset,
+            ),
+        )
+        return ScenarioDesignPage.model_validate(response.json())
+
+    async def design(self, design_id: str) -> ScenarioDesignDetail:
+        return ScenarioDesignDetail.model_validate(
+            (await self._get(f"/api/v1/designs/{design_id}")).json()
+        )
+
+    async def design_families(
+        self,
+        *,
+        suite: ApplicationSuite | None = None,
+        query: str | None = None,
+        limit: int = 50,
+        offset: int = 0,
+    ) -> ScenarioFamilyPage:
+        response = await self._get(
+            "/api/v1/design-families",
+            params=_params(suite=suite, q=query, limit=limit, offset=offset),
+        )
+        return ScenarioFamilyPage.model_validate(response.json())
+
+    async def design_family(self, family_id: str) -> ScenarioFamilyDetail:
+        return ScenarioFamilyDetail.model_validate(
+            (await self._get(f"/api/v1/design-families/{family_id}")).json()
+        )
+
+    async def scenario_library_evidence(self) -> ScenarioLibraryEvidence:
+        return ScenarioLibraryEvidence.model_validate(
+            (await self._get("/api/v1/evidence/scenario-library")).json()
         )
 
     async def decision_pack(self, execution_id: str) -> DecisionPack:

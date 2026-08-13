@@ -1,0 +1,166 @@
+{
+  "affected_system": "urban water supply, distribution, and conservation system",
+  "alternatives": [
+    "accelerate leakage reduction and emergency interconnections",
+    "add modular reuse and storage capacity",
+    "select a robust staged portfolio across climate sequences"
+  ],
+  "analysis_modes": [
+    "forecast",
+    "simulation",
+    "optimization"
+  ],
+  "assumptions": [
+    "Supply, demand, leakage, and storage balances use reconciled units and meter coverage.",
+    "Restriction response and climate sequences are observed inputs or labeled scenarios.",
+    "All alternatives, capacities, costs, effects, thresholds, and failure scenarios are proposed until bound to evidence."
+  ],
+  "baseline": "Current sources and renewal plans face the multi-year scenario without additional measures.",
+  "city_bindings": [],
+  "constraints": [
+    {
+      "binding": true,
+      "constraint_id": "scenario.climate.drought-water.multi-year-water-security.v1.constraint.binding",
+      "description": "Essential-service reliability must exceed the declared threshold across severe climate and asset-failure scenarios.",
+      "hard": true,
+      "kind": "risk",
+      "required_source_roles": [
+        "asset-condition",
+        "asset-inventory",
+        "climate-hazard",
+        "environmental-exposure",
+        "financial-cost",
+        "operating-capacity"
+      ]
+    },
+    {
+      "binding": false,
+      "constraint_id": "scenario.climate.drought-water.multi-year-water-security.v1.constraint.evidence-scope",
+      "description": "Every released metric must retain evidence type, source lineage, geography, time, assumptions, and uncertainty.",
+      "hard": true,
+      "kind": "technical",
+      "required_source_roles": [
+        "asset-condition"
+      ]
+    },
+    {
+      "binding": false,
+      "constraint_id": "scenario.climate.drought-water.multi-year-water-security.v1.constraint.decision-authority",
+      "description": "No analytical output may bypass lawful authority, accountable human review, or an applicable appeal process.",
+      "hard": true,
+      "kind": "regulatory",
+      "required_source_roles": [
+        "asset-condition"
+      ]
+    }
+  ],
+  "current_readiness": "blocked-missing-source",
+  "decision_cadence": "recompiled at each planning cycle and after material evidence change",
+  "decision_owner": "water utility general manager and drought-response lead",
+  "decision_question": "Which portfolio sustains essential supply across prolonged drought, infrastructure failure, and demand uncertainty?",
+  "decision_type": "stress-test",
+  "design_id": "scenario.climate.drought-water.multi-year-water-security.v1",
+  "design_order": 31,
+  "design_signature": "sha256:af9db0182aa83a7b3d504410f06d7d2aaa61c56c118e9b2b0b6ab29d5897e36c",
+  "evidence_requirements": [
+    "estimated",
+    "observed",
+    "optimized",
+    "proposed",
+    "simulated"
+  ],
+  "family_id": "climate.drought-water",
+  "family_title": "Drought and urban water security",
+  "horizon": "multi-year",
+  "implementation_status": "design-only",
+  "independence_key": {
+    "binding_constraint": "Essential-service reliability must exceed the declared threshold across severe climate and asset-failure scenarios.",
+    "decision_object": "multi-year water-security strategy",
+    "evidence_gate": "Hydrology, demand elasticity, failure, repair, project-yield, and climate-sequence ranges have independent support.",
+    "horizon": "multi-year",
+    "intervention_mechanism": "stochastic storage and infrastructure reliability simulation",
+    "primary_outcome": "scenario-weighted essential shortage volume",
+    "spatial_unit": "citywide"
+  },
+  "intended_claim": "A versioned stress-test design for comparing declared alternatives affecting multi-year water-security strategy, conditional on its evidence gate.",
+  "limitations": [
+    "This library record has no city binding and therefore reports no local input, output, or recommendation.",
+    "Readiness describes explicit source and method gates; it does not certify implementation feasibility.",
+    "External domain, legal, community, security, and operational review remains outside this design artifact."
+  ],
+  "method_claimed": false,
+  "objectives": [
+    {
+      "evidence_type": "estimated",
+      "metric": "scenario-weighted essential shortage volume",
+      "objective_id": "scenario.climate.drought-water.multi-year-water-security.v1.objective.primary",
+      "primary": true,
+      "sense": "minimize",
+      "unit": "cubic meters"
+    },
+    {
+      "evidence_type": "estimated",
+      "metric": "distributional gap in scenario-weighted essential shortage volume",
+      "objective_id": "scenario.climate.drought-water.multi-year-water-security.v1.objective.equity",
+      "primary": false,
+      "sense": "minimize",
+      "unit": "cubic meters"
+    },
+    {
+      "evidence_type": "observed",
+      "metric": "decision claims with complete evidence lineage",
+      "objective_id": "scenario.climate.drought-water.multi-year-water-security.v1.objective.traceability",
+      "primary": false,
+      "sense": "maximize",
+      "unit": "percent"
+    }
+  ],
+  "prohibited_claims": [
+    "Do not present synthetic drought sequences as forecasts or assumed project yield as observed supply.",
+    "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+    "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+    "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+  ],
+  "release_gate": {
+    "failure_release": "Release an explicit insufficient-evidence record naming missing sources, failed diagnostics, prohibited claims, and the next validation action.",
+    "failure_status": "insufficient-evidence",
+    "gate_id": "scenario.climate.drought-water.multi-year-water-security.v1.gate.release",
+    "gate_type": "external-validation",
+    "pass_condition": "Hydrology, demand elasticity, failure, repair, project-yield, and climate-sequence ranges have independent support.",
+    "required_evidence_types": [
+      "estimated",
+      "observed"
+    ],
+    "required_source_roles": [
+      "asset-condition",
+      "asset-inventory",
+      "climate-hazard",
+      "environmental-exposure",
+      "financial-cost",
+      "operating-capacity"
+    ]
+  },
+  "required_source_roles": [
+    "asset-condition",
+    "asset-inventory",
+    "climate-hazard",
+    "environmental-exposure",
+    "financial-cost",
+    "operating-capacity"
+  ],
+  "schema_version": "1.0.0",
+  "spatial_unit": "citywide",
+  "suite": "climate-disaster-resilience",
+  "tags": [
+    "climate-disaster-resilience",
+    "climate.drought-water",
+    "design-only",
+    "scenario-library",
+    "stress-test"
+  ],
+  "title": "Stress-test multi-year urban water security",
+  "transportability_risks": [
+    "Water rights, source portfolios, pricing, metering, leakage, and climate regimes differ.",
+    "Household conservation behavior may not transfer across tariff and tenure systems."
+  ]
+}

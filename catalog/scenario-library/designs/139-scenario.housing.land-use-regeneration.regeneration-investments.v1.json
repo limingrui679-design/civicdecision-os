@@ -1,0 +1,164 @@
+{
+  "affected_system": "land-use planning, public investment, regeneration, and community-benefit system",
+  "alternatives": [
+    "rank verified high-consequence candidates for inclusive neighborhood regeneration investment portfolio",
+    "select a risk-, equity-, and lifecycle-balanced portfolio for inclusive neighborhood regeneration investment portfolio",
+    "pair community-benefit, access, risk, and lifecycle portfolio optimization with an explicit stop, review, and escalation rule"
+  ],
+  "analysis_modes": [
+    "descriptive",
+    "optimization"
+  ],
+  "assumptions": [
+    "Parcels, zoning, ownership, development, business, housing, public assets, and population use dated versions.",
+    "Scenario capacity and market response are not treated as approved projects or inevitable change.",
+    "All alternatives, capacities, costs, effects, thresholds, and failure scenarios are proposed until bound to evidence."
+  ],
+  "baseline": "fund only already-committed work for inclusive neighborhood regeneration investment portfolio.",
+  "city_bindings": [],
+  "constraints": [
+    {
+      "binding": true,
+      "constraint_id": "scenario.housing.land-use-regeneration.regeneration-investments.v1.constraint.binding",
+      "description": "The land use, regeneration, and neighborhood change prioritize must respect declared capital, operating, maintenance, and delivery budgets.",
+      "hard": true,
+      "kind": "budget",
+      "required_source_roles": [
+        "asset-condition",
+        "community-input",
+        "financial-cost",
+        "geographic-identity",
+        "housing-market",
+        "land-parcel"
+      ]
+    },
+    {
+      "binding": false,
+      "constraint_id": "scenario.housing.land-use-regeneration.regeneration-investments.v1.constraint.evidence-scope",
+      "description": "Every released metric must retain evidence type, source lineage, geography, time, assumptions, and uncertainty.",
+      "hard": true,
+      "kind": "technical",
+      "required_source_roles": [
+        "asset-condition"
+      ]
+    },
+    {
+      "binding": false,
+      "constraint_id": "scenario.housing.land-use-regeneration.regeneration-investments.v1.constraint.decision-authority",
+      "description": "No analytical output may bypass lawful authority, accountable human review, or an applicable appeal process.",
+      "hard": true,
+      "kind": "regulatory",
+      "required_source_roles": [
+        "asset-condition"
+      ]
+    }
+  ],
+  "current_readiness": "blocked-missing-source",
+  "decision_cadence": "recompiled at each planning cycle and after material evidence change",
+  "decision_owner": "planning director and neighborhood regeneration commissioner",
+  "decision_question": "Which infrastructure, public realm, housing, business, and cultural-asset investments should be sequenced?",
+  "decision_type": "prioritize",
+  "design_id": "scenario.housing.land-use-regeneration.regeneration-investments.v1",
+  "design_order": 139,
+  "design_signature": "sha256:ff22345e2717be81e1567374d0640224d9730b8782559dd4508233db75c684de",
+  "evidence_requirements": [
+    "estimated",
+    "observed",
+    "optimized",
+    "proposed"
+  ],
+  "family_id": "housing.land-use-regeneration",
+  "family_title": "Land use, regeneration, and neighborhood change",
+  "horizon": "multi-year",
+  "implementation_status": "design-only",
+  "independence_key": {
+    "binding_constraint": "The land use, regeneration, and neighborhood change prioritize must respect declared capital, operating, maintenance, and delivery budgets.",
+    "decision_object": "inclusive neighborhood regeneration investment portfolio",
+    "evidence_gate": "Evidence for inclusive neighborhood regeneration investment portfolio passes documented checks for cost, benefit, service life, dependencies, deliverability, and maintenance burden.",
+    "horizon": "multi-year",
+    "intervention_mechanism": "community-benefit, access, risk, and lifecycle portfolio optimization",
+    "primary_outcome": "unmet verified community-benefit and infrastructure need",
+    "spatial_unit": "asset"
+  },
+  "intended_claim": "A versioned prioritize design for comparing declared alternatives affecting inclusive neighborhood regeneration investment portfolio, conditional on its evidence gate.",
+  "limitations": [
+    "This library record has no city binding and therefore reports no local input, output, or recommendation.",
+    "Readiness describes explicit source and method gates; it does not certify implementation feasibility.",
+    "External domain, legal, community, security, and operational review remains outside this design artifact."
+  ],
+  "method_claimed": false,
+  "objectives": [
+    {
+      "evidence_type": "estimated",
+      "metric": "unmet verified community-benefit and infrastructure need",
+      "objective_id": "scenario.housing.land-use-regeneration.regeneration-investments.v1.objective.primary",
+      "primary": true,
+      "sense": "minimize",
+      "unit": "benefit-units"
+    },
+    {
+      "evidence_type": "estimated",
+      "metric": "distributional gap in unmet verified community-benefit and infrastructure need",
+      "objective_id": "scenario.housing.land-use-regeneration.regeneration-investments.v1.objective.equity",
+      "primary": false,
+      "sense": "minimize",
+      "unit": "benefit-units"
+    },
+    {
+      "evidence_type": "observed",
+      "metric": "decision claims with complete evidence lineage",
+      "objective_id": "scenario.housing.land-use-regeneration.regeneration-investments.v1.objective.traceability",
+      "primary": false,
+      "sense": "maximize",
+      "unit": "percent"
+    }
+  ],
+  "prohibited_claims": [
+    "Do not report modeled community benefits as agreed, delivered, or causally achieved.",
+    "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+    "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+    "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+  ],
+  "release_gate": {
+    "failure_release": "Release an explicit insufficient-evidence record naming missing sources, failed diagnostics, prohibited claims, and the next validation action.",
+    "failure_status": "insufficient-evidence",
+    "gate_id": "scenario.housing.land-use-regeneration.regeneration-investments.v1.gate.release",
+    "gate_type": "cost-capacity",
+    "pass_condition": "Evidence for inclusive neighborhood regeneration investment portfolio passes documented checks for cost, benefit, service life, dependencies, deliverability, and maintenance burden.",
+    "required_evidence_types": [
+      "observed",
+      "proposed"
+    ],
+    "required_source_roles": [
+      "asset-condition",
+      "community-input",
+      "financial-cost",
+      "geographic-identity",
+      "housing-market",
+      "land-parcel"
+    ]
+  },
+  "required_source_roles": [
+    "asset-condition",
+    "community-input",
+    "financial-cost",
+    "geographic-identity",
+    "housing-market",
+    "land-parcel"
+  ],
+  "schema_version": "1.0.0",
+  "spatial_unit": "asset",
+  "suite": "housing-land-use-regeneration",
+  "tags": [
+    "design-only",
+    "housing-land-use-regeneration",
+    "housing.land-use-regeneration",
+    "prioritize",
+    "scenario-library"
+  ],
+  "title": "Prioritize inclusive regeneration investments",
+  "transportability_risks": [
+    "Planning law, property rights, finance, markets, institutions, and community priorities differ.",
+    "Parcel and transaction data may miss informal tenure, businesses, and cultural assets."
+  ]
+}

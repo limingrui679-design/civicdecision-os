@@ -1,0 +1,168 @@
+{
+  "affected_system": "affordable housing production, preservation, subsidy, and compliance system",
+  "alternatives": [
+    "screen feasible locations against the largest access gaps for affordable-housing development locations",
+    "co-optimize distributed and high-capacity locations for affordable-housing development locations",
+    "pair parcel feasibility, access, hazard, and displacement-aware siting with an explicit stop, review, and escalation rule"
+  ],
+  "analysis_modes": [
+    "simulation",
+    "optimization"
+  ],
+  "assumptions": [
+    "Units, affordability restrictions, occupancy, financing, condition, pipeline, and parcel feasibility are reconciled.",
+    "Modeled development feasibility is not treated as entitlement, financing close, or completed housing.",
+    "All alternatives, capacities, costs, effects, thresholds, and failure scenarios are proposed until bound to evidence."
+  ],
+  "baseline": "retain only existing approved locations for affordable-housing development locations.",
+  "city_bindings": [],
+  "constraints": [
+    {
+      "binding": true,
+      "constraint_id": "scenario.housing.affordable-supply.affordable-housing-sites.v1.constraint.binding",
+      "description": "The affordable housing siting and preservation site must respect declared land control, accessibility, permitting, safety, and operating feasibility.",
+      "hard": true,
+      "kind": "regulatory",
+      "required_source_roles": [
+        "climate-hazard",
+        "equity-attribute",
+        "geographic-identity",
+        "housing-market",
+        "land-parcel",
+        "legal-regulatory",
+        "transport-network"
+      ]
+    },
+    {
+      "binding": false,
+      "constraint_id": "scenario.housing.affordable-supply.affordable-housing-sites.v1.constraint.evidence-scope",
+      "description": "Every released metric must retain evidence type, source lineage, geography, time, assumptions, and uncertainty.",
+      "hard": true,
+      "kind": "technical",
+      "required_source_roles": [
+        "climate-hazard"
+      ]
+    },
+    {
+      "binding": false,
+      "constraint_id": "scenario.housing.affordable-supply.affordable-housing-sites.v1.constraint.decision-authority",
+      "description": "No analytical output may bypass lawful authority, accountable human review, or an applicable appeal process.",
+      "hard": true,
+      "kind": "regulatory",
+      "required_source_roles": [
+        "climate-hazard"
+      ]
+    }
+  ],
+  "current_readiness": "blocked-missing-source",
+  "decision_cadence": "recompiled at each planning cycle and after material evidence change",
+  "decision_owner": "housing development commissioner and affordable-housing finance director",
+  "decision_question": "Which parcels support feasible affordable homes near opportunity while avoiding hazard and displacement burdens?",
+  "decision_type": "site",
+  "design_id": "scenario.housing.affordable-supply.affordable-housing-sites.v1",
+  "design_order": 132,
+  "design_signature": "sha256:2abdd3400e71da58a66c9b9a8e365b7010a43995afc7310480261f0c8321c322",
+  "evidence_requirements": [
+    "estimated",
+    "observed",
+    "optimized",
+    "proposed",
+    "simulated"
+  ],
+  "family_id": "housing.affordable-supply",
+  "family_title": "Affordable housing siting and preservation",
+  "horizon": "multi-year",
+  "implementation_status": "design-only",
+  "independence_key": {
+    "binding_constraint": "The affordable housing siting and preservation site must respect declared land control, accessibility, permitting, safety, and operating feasibility.",
+    "decision_object": "affordable-housing development locations",
+    "evidence_gate": "Evidence for affordable-housing development locations passes documented checks for parcel control, legal authority, environmental review, access, capacity, and operator responsibility.",
+    "horizon": "multi-year",
+    "intervention_mechanism": "parcel feasibility, access, hazard, and displacement-aware siting",
+    "primary_outcome": "feasible affordable homes outside opportunity access",
+    "spatial_unit": "parcel"
+  },
+  "intended_claim": "A versioned site design for comparing declared alternatives affecting affordable-housing development locations, conditional on its evidence gate.",
+  "limitations": [
+    "This library record has no city binding and therefore reports no local input, output, or recommendation.",
+    "Readiness describes explicit source and method gates; it does not certify implementation feasibility.",
+    "External domain, legal, community, security, and operational review remains outside this design artifact."
+  ],
+  "method_claimed": false,
+  "objectives": [
+    {
+      "evidence_type": "estimated",
+      "metric": "feasible affordable homes outside opportunity access",
+      "objective_id": "scenario.housing.affordable-supply.affordable-housing-sites.v1.objective.primary",
+      "primary": true,
+      "sense": "minimize",
+      "unit": "homes"
+    },
+    {
+      "evidence_type": "estimated",
+      "metric": "distributional gap in feasible affordable homes outside opportunity access",
+      "objective_id": "scenario.housing.affordable-supply.affordable-housing-sites.v1.objective.equity",
+      "primary": false,
+      "sense": "minimize",
+      "unit": "homes"
+    },
+    {
+      "evidence_type": "observed",
+      "metric": "decision claims with complete evidence lineage",
+      "objective_id": "scenario.housing.affordable-supply.affordable-housing-sites.v1.objective.traceability",
+      "primary": false,
+      "sense": "maximize",
+      "unit": "percent"
+    }
+  ],
+  "prohibited_claims": [
+    "Do not call a screened parcel entitled, acquired, financeable, buildable, or community-supported.",
+    "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+    "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+    "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+  ],
+  "release_gate": {
+    "failure_release": "Release an explicit insufficient-evidence record naming missing sources, failed diagnostics, prohibited claims, and the next validation action.",
+    "failure_status": "insufficient-evidence",
+    "gate_id": "scenario.housing.affordable-supply.affordable-housing-sites.v1.gate.release",
+    "gate_type": "legal-authority",
+    "pass_condition": "Evidence for affordable-housing development locations passes documented checks for parcel control, legal authority, environmental review, access, capacity, and operator responsibility.",
+    "required_evidence_types": [
+      "observed",
+      "proposed"
+    ],
+    "required_source_roles": [
+      "climate-hazard",
+      "equity-attribute",
+      "geographic-identity",
+      "housing-market",
+      "land-parcel",
+      "legal-regulatory",
+      "transport-network"
+    ]
+  },
+  "required_source_roles": [
+    "climate-hazard",
+    "equity-attribute",
+    "geographic-identity",
+    "housing-market",
+    "land-parcel",
+    "legal-regulatory",
+    "transport-network"
+  ],
+  "schema_version": "1.0.0",
+  "spatial_unit": "parcel",
+  "suite": "housing-land-use-regeneration",
+  "tags": [
+    "design-only",
+    "housing-land-use-regeneration",
+    "housing.affordable-supply",
+    "scenario-library",
+    "site"
+  ],
+  "title": "Site affordable housing with access and anti-displacement safeguards",
+  "transportability_risks": [
+    "Land law, subsidy programs, construction costs, finance, tenant protections, and markets differ.",
+    "Observed transactions may omit informal displacement and off-market preservation risks."
+  ]
+}

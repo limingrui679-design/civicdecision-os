@@ -1,0 +1,162 @@
+{
+  "affected_system": "affordable housing production, preservation, subsidy, and compliance system",
+  "alternatives": [
+    "verify the highest-consequence signals before acting on affordable-housing preservation risk and supply gaps",
+    "combine targeted inspection, monitoring, and data-quality repair for affordable-housing preservation risk and supply gaps",
+    "pair property-level restriction, condition, finance, and market reconciliation with an explicit stop, review, and escalation rule"
+  ],
+  "analysis_modes": [
+    "descriptive"
+  ],
+  "assumptions": [
+    "Units, affordability restrictions, occupancy, financing, condition, pipeline, and parcel feasibility are reconciled.",
+    "Modeled development feasibility is not treated as entitlement, financing close, or completed housing.",
+    "All alternatives, capacities, costs, effects, thresholds, and failure scenarios are proposed until bound to evidence."
+  ],
+  "baseline": "continue current inspection and reporting practice for affordable-housing preservation risk and supply gaps.",
+  "city_bindings": [],
+  "constraints": [
+    {
+      "binding": true,
+      "constraint_id": "scenario.housing.affordable-supply.affordability-loss-risk.v1.constraint.binding",
+      "description": "The affordable housing siting and preservation diagnose must respect declared measurement resolution and classification uncertainty.",
+      "hard": true,
+      "kind": "technical",
+      "required_source_roles": [
+        "asset-condition",
+        "equity-attribute",
+        "financial-cost",
+        "geographic-identity",
+        "housing-market",
+        "land-parcel"
+      ]
+    },
+    {
+      "binding": false,
+      "constraint_id": "scenario.housing.affordable-supply.affordability-loss-risk.v1.constraint.evidence-scope",
+      "description": "Every released metric must retain evidence type, source lineage, geography, time, assumptions, and uncertainty.",
+      "hard": true,
+      "kind": "technical",
+      "required_source_roles": [
+        "asset-condition"
+      ]
+    },
+    {
+      "binding": false,
+      "constraint_id": "scenario.housing.affordable-supply.affordability-loss-risk.v1.constraint.decision-authority",
+      "description": "No analytical output may bypass lawful authority, accountable human review, or an applicable appeal process.",
+      "hard": true,
+      "kind": "regulatory",
+      "required_source_roles": [
+        "asset-condition"
+      ]
+    }
+  ],
+  "current_readiness": "blocked-missing-source",
+  "decision_cadence": "recompiled at each planning cycle and after material evidence change",
+  "decision_owner": "housing development commissioner and affordable-housing finance director",
+  "decision_question": "Which properties, restrictions, market pressures, conditions, and access patterns indicate preservation or supply risk?",
+  "decision_type": "diagnose",
+  "design_id": "scenario.housing.affordable-supply.affordability-loss-risk.v1",
+  "design_order": 129,
+  "design_signature": "sha256:760df56edf6b758b4dde2fa47bf3de3295054382d3758b598d9bc00c04a5136c",
+  "evidence_requirements": [
+    "estimated",
+    "observed",
+    "proposed"
+  ],
+  "family_id": "housing.affordable-supply",
+  "family_title": "Affordable housing siting and preservation",
+  "horizon": "annual",
+  "implementation_status": "design-only",
+  "independence_key": {
+    "binding_constraint": "The affordable housing siting and preservation diagnose must respect declared measurement resolution and classification uncertainty.",
+    "decision_object": "affordable-housing preservation risk and supply gaps",
+    "evidence_gate": "Evidence for affordable-housing preservation risk and supply gaps passes documented checks for coverage, semantics, geography, timestamps, and uncertainty.",
+    "horizon": "annual",
+    "intervention_mechanism": "property-level restriction, condition, finance, and market reconciliation",
+    "primary_outcome": "affordable homes at verified near-term loss risk",
+    "spatial_unit": "parcel"
+  },
+  "intended_claim": "A versioned diagnose design for comparing declared alternatives affecting affordable-housing preservation risk and supply gaps, conditional on its evidence gate.",
+  "limitations": [
+    "This library record has no city binding and therefore reports no local input, output, or recommendation.",
+    "Readiness describes explicit source and method gates; it does not certify implementation feasibility.",
+    "External domain, legal, community, security, and operational review remains outside this design artifact."
+  ],
+  "method_claimed": false,
+  "objectives": [
+    {
+      "evidence_type": "estimated",
+      "metric": "affordable homes at verified near-term loss risk",
+      "objective_id": "scenario.housing.affordable-supply.affordability-loss-risk.v1.objective.primary",
+      "primary": true,
+      "sense": "minimize",
+      "unit": "homes"
+    },
+    {
+      "evidence_type": "estimated",
+      "metric": "distributional gap in affordable homes at verified near-term loss risk",
+      "objective_id": "scenario.housing.affordable-supply.affordability-loss-risk.v1.objective.equity",
+      "primary": false,
+      "sense": "minimize",
+      "unit": "homes"
+    },
+    {
+      "evidence_type": "observed",
+      "metric": "decision claims with complete evidence lineage",
+      "objective_id": "scenario.housing.affordable-supply.affordability-loss-risk.v1.objective.traceability",
+      "primary": false,
+      "sense": "maximize",
+      "unit": "percent"
+    }
+  ],
+  "prohibited_claims": [
+    "Do not label market pressure displacement or a unit affordable without restriction and rent evidence.",
+    "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+    "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+    "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+  ],
+  "release_gate": {
+    "failure_release": "Release an explicit insufficient-evidence record naming missing sources, failed diagnostics, prohibited claims, and the next validation action.",
+    "failure_status": "insufficient-evidence",
+    "gate_id": "scenario.housing.affordable-supply.affordability-loss-risk.v1.gate.release",
+    "gate_type": "geographic-alignment",
+    "pass_condition": "Evidence for affordable-housing preservation risk and supply gaps passes documented checks for coverage, semantics, geography, timestamps, and uncertainty.",
+    "required_evidence_types": [
+      "observed",
+      "proposed"
+    ],
+    "required_source_roles": [
+      "asset-condition",
+      "equity-attribute",
+      "financial-cost",
+      "geographic-identity",
+      "housing-market",
+      "land-parcel"
+    ]
+  },
+  "required_source_roles": [
+    "asset-condition",
+    "equity-attribute",
+    "financial-cost",
+    "geographic-identity",
+    "housing-market",
+    "land-parcel"
+  ],
+  "schema_version": "1.0.0",
+  "spatial_unit": "parcel",
+  "suite": "housing-land-use-regeneration",
+  "tags": [
+    "design-only",
+    "diagnose",
+    "housing-land-use-regeneration",
+    "housing.affordable-supply",
+    "scenario-library"
+  ],
+  "title": "Diagnose affordable-housing loss and supply gaps",
+  "transportability_risks": [
+    "Land law, subsidy programs, construction costs, finance, tenant protections, and markets differ.",
+    "Observed transactions may omit informal displacement and off-market preservation risks."
+  ]
+}

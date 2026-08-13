@@ -1,0 +1,165 @@
+{
+  "affected_system": "coastal protection, evacuation, and long-term adaptation system",
+  "alternatives": [
+    "upgrade existing low-exposure high-access facilities",
+    "add distributed neighborhood shelters outside surge zones",
+    "co-site shelter, backup power, and emergency logistics capacity"
+  ],
+  "analysis_modes": [
+    "simulation",
+    "optimization"
+  ],
+  "assumptions": [
+    "Elevation, surge, shoreline, asset, and population layers share documented vertical and horizontal datums.",
+    "Sea-level pathways, damage functions, and adaptation performance remain explicit scenarios.",
+    "All alternatives, capacities, costs, effects, thresholds, and failure scenarios are proposed until bound to evidence."
+  ],
+  "baseline": "Only existing designated shelters and depots operate.",
+  "city_bindings": [],
+  "constraints": [
+    {
+      "binding": true,
+      "constraint_id": "scenario.climate.coastal-storms.coastal-shelter-logistics.v1.constraint.binding",
+      "description": "Candidate sites must remain operable under design surge, wind, access, power, and supply scenarios.",
+      "hard": true,
+      "kind": "risk",
+      "required_source_roles": [
+        "asset-inventory",
+        "climate-hazard",
+        "facility-inventory",
+        "geographic-identity",
+        "operating-capacity",
+        "transport-network"
+      ]
+    },
+    {
+      "binding": false,
+      "constraint_id": "scenario.climate.coastal-storms.coastal-shelter-logistics.v1.constraint.evidence-scope",
+      "description": "Every released metric must retain evidence type, source lineage, geography, time, assumptions, and uncertainty.",
+      "hard": true,
+      "kind": "technical",
+      "required_source_roles": [
+        "asset-inventory"
+      ]
+    },
+    {
+      "binding": false,
+      "constraint_id": "scenario.climate.coastal-storms.coastal-shelter-logistics.v1.constraint.decision-authority",
+      "description": "No analytical output may bypass lawful authority, accountable human review, or an applicable appeal process.",
+      "hard": true,
+      "kind": "regulatory",
+      "required_source_roles": [
+        "asset-inventory"
+      ]
+    }
+  ],
+  "current_readiness": "blocked-missing-source",
+  "decision_cadence": "recompiled at each planning cycle and after material evidence change",
+  "decision_owner": "coastal resilience director and emergency-management commissioner",
+  "decision_question": "Where should shelters and logistics hubs remain accessible outside compound surge, wind, and outage exposure?",
+  "decision_type": "site",
+  "design_id": "scenario.climate.coastal-storms.coastal-shelter-logistics.v1",
+  "design_order": 36,
+  "design_signature": "sha256:f0a78c4f5696c8816a0e01915c680f329afa3a8ea1ab971205a1bfccbd57f264",
+  "evidence_requirements": [
+    "estimated",
+    "observed",
+    "optimized",
+    "proposed",
+    "simulated"
+  ],
+  "family_id": "climate.coastal-storms",
+  "family_title": "Coastal storms and sea-level adaptation",
+  "horizon": "multi-year",
+  "implementation_status": "design-only",
+  "independence_key": {
+    "binding_constraint": "Candidate sites must remain operable under design surge, wind, access, power, and supply scenarios.",
+    "decision_object": "coastal shelter and emergency-logistics locations",
+    "evidence_gate": "Facilities, evacuation networks, capacities, hazards, travel times, and failure dependencies pass validation.",
+    "horizon": "multi-year",
+    "intervention_mechanism": "multi-hazard capacitated facility siting with evacuation access",
+    "primary_outcome": "at-risk population beyond safe shelter capacity",
+    "spatial_unit": "facility"
+  },
+  "intended_claim": "A versioned site design for comparing declared alternatives affecting coastal shelter and emergency-logistics locations, conditional on its evidence gate.",
+  "limitations": [
+    "This library record has no city binding and therefore reports no local input, output, or recommendation.",
+    "Readiness describes explicit source and method gates; it does not certify implementation feasibility.",
+    "External domain, legal, community, security, and operational review remains outside this design artifact."
+  ],
+  "method_claimed": false,
+  "objectives": [
+    {
+      "evidence_type": "estimated",
+      "metric": "at-risk population beyond safe shelter capacity",
+      "objective_id": "scenario.climate.coastal-storms.coastal-shelter-logistics.v1.objective.primary",
+      "primary": true,
+      "sense": "minimize",
+      "unit": "people"
+    },
+    {
+      "evidence_type": "estimated",
+      "metric": "distributional gap in at-risk population beyond safe shelter capacity",
+      "objective_id": "scenario.climate.coastal-storms.coastal-shelter-logistics.v1.objective.equity",
+      "primary": false,
+      "sense": "minimize",
+      "unit": "people"
+    },
+    {
+      "evidence_type": "observed",
+      "metric": "decision claims with complete evidence lineage",
+      "objective_id": "scenario.climate.coastal-storms.coastal-shelter-logistics.v1.objective.traceability",
+      "primary": false,
+      "sense": "maximize",
+      "unit": "percent"
+    }
+  ],
+  "prohibited_claims": [
+    "Do not label a candidate facility safe without structural, access, and continuity verification.",
+    "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+    "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+    "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+  ],
+  "release_gate": {
+    "failure_release": "Release an explicit insufficient-evidence record naming missing sources, failed diagnostics, prohibited claims, and the next validation action.",
+    "failure_status": "insufficient-evidence",
+    "gate_id": "scenario.climate.coastal-storms.coastal-shelter-logistics.v1.gate.release",
+    "gate_type": "network-readiness",
+    "pass_condition": "Facilities, evacuation networks, capacities, hazards, travel times, and failure dependencies pass validation.",
+    "required_evidence_types": [
+      "observed",
+      "proposed"
+    ],
+    "required_source_roles": [
+      "asset-inventory",
+      "climate-hazard",
+      "facility-inventory",
+      "geographic-identity",
+      "operating-capacity",
+      "transport-network"
+    ]
+  },
+  "required_source_roles": [
+    "asset-inventory",
+    "climate-hazard",
+    "facility-inventory",
+    "geographic-identity",
+    "operating-capacity",
+    "transport-network"
+  ],
+  "schema_version": "1.0.0",
+  "spatial_unit": "facility",
+  "suite": "climate-disaster-resilience",
+  "tags": [
+    "climate-disaster-resilience",
+    "climate.coastal-storms",
+    "design-only",
+    "scenario-library",
+    "site"
+  ],
+  "title": "Site coastal shelters and resilient logistics hubs",
+  "transportability_risks": [
+    "Coastal morphology, tides, subsidence, protection standards, and evacuation behavior differ.",
+    "Long-horizon adaptation values depend on local finance, land tenure, and legal authority."
+  ]
+}

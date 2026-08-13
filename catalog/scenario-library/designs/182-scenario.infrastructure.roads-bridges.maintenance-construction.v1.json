@@ -1,0 +1,164 @@
+{
+  "affected_system": "roadway, bridge, sidewalk, signal, and public right-of-way asset network",
+  "alternatives": [
+    "advance high-risk work within verified feasible windows for road and bridge inspection and maintenance schedule",
+    "use rolling risk and capacity updates to reschedule road and bridge inspection and maintenance schedule",
+    "pair condition-, dependency-, traffic-, weather-, and crew-aware scheduling with an explicit stop, review, and escalation rule"
+  ],
+  "analysis_modes": [
+    "forecast",
+    "optimization"
+  ],
+  "assumptions": [
+    "Assets, inspections, defects, work orders, costs, traffic, restrictions, and completion are reconciled.",
+    "Engineering thresholds and deterioration models are locally reviewed and versioned.",
+    "All alternatives, capacities, costs, effects, thresholds, and failure scenarios are proposed until bound to evidence."
+  ],
+  "baseline": "continue the fixed operating calendar for road and bridge inspection and maintenance schedule.",
+  "city_bindings": [],
+  "constraints": [
+    {
+      "binding": true,
+      "constraint_id": "scenario.infrastructure.roads-bridges.maintenance-construction.v1.constraint.binding",
+      "description": "The road and bridge asset management schedule must respect declared labor, access, sequencing, notice, and completion windows.",
+      "hard": true,
+      "kind": "time",
+      "required_source_roles": [
+        "asset-condition",
+        "asset-inventory",
+        "climate-hazard",
+        "geographic-identity",
+        "service-schedule",
+        "transport-network"
+      ]
+    },
+    {
+      "binding": false,
+      "constraint_id": "scenario.infrastructure.roads-bridges.maintenance-construction.v1.constraint.evidence-scope",
+      "description": "Every released metric must retain evidence type, source lineage, geography, time, assumptions, and uncertainty.",
+      "hard": true,
+      "kind": "technical",
+      "required_source_roles": [
+        "asset-condition"
+      ]
+    },
+    {
+      "binding": false,
+      "constraint_id": "scenario.infrastructure.roads-bridges.maintenance-construction.v1.constraint.decision-authority",
+      "description": "No analytical output may bypass lawful authority, accountable human review, or an applicable appeal process.",
+      "hard": true,
+      "kind": "regulatory",
+      "required_source_roles": [
+        "asset-condition"
+      ]
+    }
+  ],
+  "current_readiness": "blocked-missing-source",
+  "decision_cadence": "recompiled at each planning cycle and after material evidence change",
+  "decision_owner": "public works asset manager and chief infrastructure engineer",
+  "decision_question": "When should inspections and treatments occur given condition, traffic, weather, dependencies, and permits?",
+  "decision_type": "schedule",
+  "design_id": "scenario.infrastructure.roads-bridges.maintenance-construction.v1",
+  "design_order": 182,
+  "design_signature": "sha256:b564534d6bf70b70b13b9187c5ebdc4b7fbf56db52789a4e1e102f1cedd36eda",
+  "evidence_requirements": [
+    "estimated",
+    "observed",
+    "optimized",
+    "proposed"
+  ],
+  "family_id": "infrastructure.roads-bridges",
+  "family_title": "Road and bridge asset management",
+  "horizon": "weeks",
+  "implementation_status": "design-only",
+  "independence_key": {
+    "binding_constraint": "The road and bridge asset management schedule must respect declared labor, access, sequencing, notice, and completion windows.",
+    "decision_object": "road and bridge inspection and maintenance schedule",
+    "evidence_gate": "Evidence for road and bridge inspection and maintenance schedule passes documented checks for effective dates, time zones, calendars, lead times, completion semantics, and update cadence.",
+    "horizon": "weeks",
+    "intervention_mechanism": "condition-, dependency-, traffic-, weather-, and crew-aware scheduling",
+    "primary_outcome": "high-consequence asset-days beyond treatment thresholds",
+    "spatial_unit": "network"
+  },
+  "intended_claim": "A versioned schedule design for comparing declared alternatives affecting road and bridge inspection and maintenance schedule, conditional on its evidence gate.",
+  "limitations": [
+    "This library record has no city binding and therefore reports no local input, output, or recommendation.",
+    "Readiness describes explicit source and method gates; it does not certify implementation feasibility.",
+    "External domain, legal, community, security, and operational review remains outside this design artifact."
+  ],
+  "method_claimed": false,
+  "objectives": [
+    {
+      "evidence_type": "estimated",
+      "metric": "high-consequence asset-days beyond treatment thresholds",
+      "objective_id": "scenario.infrastructure.roads-bridges.maintenance-construction.v1.objective.primary",
+      "primary": true,
+      "sense": "minimize",
+      "unit": "asset-days"
+    },
+    {
+      "evidence_type": "estimated",
+      "metric": "distributional gap in high-consequence asset-days beyond treatment thresholds",
+      "objective_id": "scenario.infrastructure.roads-bridges.maintenance-construction.v1.objective.equity",
+      "primary": false,
+      "sense": "minimize",
+      "unit": "asset-days"
+    },
+    {
+      "evidence_type": "observed",
+      "metric": "decision claims with complete evidence lineage",
+      "objective_id": "scenario.infrastructure.roads-bridges.maintenance-construction.v1.objective.traceability",
+      "primary": false,
+      "sense": "maximize",
+      "unit": "percent"
+    }
+  ],
+  "prohibited_claims": [
+    "Do not call a scheduled inspection or treatment completed or the asset safe.",
+    "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+    "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+    "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+  ],
+  "release_gate": {
+    "failure_release": "Release an explicit insufficient-evidence record naming missing sources, failed diagnostics, prohibited claims, and the next validation action.",
+    "failure_status": "insufficient-evidence",
+    "gate_id": "scenario.infrastructure.roads-bridges.maintenance-construction.v1.gate.release",
+    "gate_type": "temporal-alignment",
+    "pass_condition": "Evidence for road and bridge inspection and maintenance schedule passes documented checks for effective dates, time zones, calendars, lead times, completion semantics, and update cadence.",
+    "required_evidence_types": [
+      "observed",
+      "proposed"
+    ],
+    "required_source_roles": [
+      "asset-condition",
+      "asset-inventory",
+      "climate-hazard",
+      "geographic-identity",
+      "service-schedule",
+      "transport-network"
+    ]
+  },
+  "required_source_roles": [
+    "asset-condition",
+    "asset-inventory",
+    "climate-hazard",
+    "geographic-identity",
+    "service-schedule",
+    "transport-network"
+  ],
+  "schema_version": "1.0.0",
+  "spatial_unit": "network",
+  "suite": "infrastructure-finance-asset-risk",
+  "tags": [
+    "design-only",
+    "infrastructure-finance-asset-risk",
+    "infrastructure.roads-bridges",
+    "scenario-library",
+    "schedule"
+  ],
+  "title": "Schedule inspections, maintenance, and construction windows",
+  "transportability_risks": [
+    "Materials, climate, loading, standards, inspection, procurement, and unit costs differ.",
+    "Service requests can reveal workload but not structural condition or safety."
+  ]
+}

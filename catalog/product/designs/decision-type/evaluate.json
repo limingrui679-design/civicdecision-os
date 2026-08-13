@@ -1,0 +1,1029 @@
+{
+  "claim_boundary": "Design records are not city executions, deployments, adoptions, or impacts.",
+  "items": [
+    {
+      "analysis_modes": [
+        "descriptive",
+        "causal"
+      ],
+      "binding_constraint": "Impact estimates must report heterogeneous effects for pre-specified vulnerability groups without post-treatment selection.",
+      "content_hash": "sha256:1f28edcf13b65dca50bde37e0aa08f32187e707a28f050763e5c0b602cff7066",
+      "current_readiness": "blocked-multiple-gates",
+      "decision_question": "Did the phased heat-adaptation program reduce indoor heat burden without widening service disparities?",
+      "decision_type": "evaluate",
+      "design_id": "scenario.climate.extreme-heat.cool-roof-impact.v1",
+      "design_order": 8,
+      "evidence_gate": "causal-identification",
+      "evidence_types": [
+        "causal",
+        "estimated",
+        "observed",
+        "proposed"
+      ],
+      "family_id": "climate.extreme-heat",
+      "family_title": "Extreme heat exposure and response",
+      "horizon": "multi-year",
+      "implementation_status": "design-only",
+      "primary_outcome": "change in measured indoor overheating hours",
+      "prohibited_claims": [
+        "Do not infer health effects from indoor temperature alone or call association causal without the identification gate.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "population-group",
+      "suite": "climate-disaster-resilience",
+      "title": "Evaluate a cool-roof and household-cooling program"
+    },
+    {
+      "analysis_modes": [
+        "descriptive",
+        "causal"
+      ],
+      "binding_constraint": "Treated and comparison catchments must have stable monitoring, comparable storms, and no unmodeled drainage redesign.",
+      "content_hash": "sha256:49709624bd66abb19edf1e555b45ea90e352d8c2d268cd706e29eb73615a3fc8",
+      "current_readiness": "blocked-multiple-gates",
+      "decision_question": "Did phased green-infrastructure installation reduce verified runoff and disruption relative to credible comparisons?",
+      "decision_type": "evaluate",
+      "design_id": "scenario.climate.flood-stormwater.green-infrastructure-effect.v1",
+      "design_order": 16,
+      "evidence_gate": "causal-identification",
+      "evidence_types": [
+        "causal",
+        "estimated",
+        "observed",
+        "proposed"
+      ],
+      "family_id": "climate.flood-stormwater",
+      "family_title": "Flood and stormwater resilience",
+      "horizon": "multi-year",
+      "implementation_status": "design-only",
+      "primary_outcome": "change in event runoff volume",
+      "prohibited_claims": [
+        "Do not infer causal flood reduction from post-installation complaints alone.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "service-area",
+      "suite": "climate-disaster-resilience",
+      "title": "Evaluate distributed green-infrastructure effects"
+    },
+    {
+      "analysis_modes": [
+        "descriptive",
+        "causal"
+      ],
+      "binding_constraint": "Attrition, device use, housing leakage, and subgroup effects must follow the pre-analysis plan.",
+      "content_hash": "sha256:54842bdb01abf95b807f7b1166bb5f58184224766c5aad3466a971ba9fdda2c6",
+      "current_readiness": "blocked-multiple-gates",
+      "decision_question": "Did phased filtration support reduce measured indoor particulate exposure and unequal protection?",
+      "decision_type": "evaluate",
+      "design_id": "scenario.climate.wildfire-smoke.filtration-program-effect.v1",
+      "design_order": 24,
+      "evidence_gate": "causal-identification",
+      "evidence_types": [
+        "causal",
+        "estimated",
+        "observed",
+        "proposed"
+      ],
+      "family_id": "climate.wildfire-smoke",
+      "family_title": "Wildfire smoke and air-quality resilience",
+      "horizon": "seasonal",
+      "implementation_status": "design-only",
+      "primary_outcome": "change in indoor fine-particulate concentration",
+      "prohibited_claims": [
+        "Do not interpret device receipt as use or indoor particulate change as a clinical outcome.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "population-group",
+      "suite": "climate-disaster-resilience",
+      "title": "Evaluate household filtration and outreach effects"
+    },
+    {
+      "analysis_modes": [
+        "descriptive",
+        "causal"
+      ],
+      "binding_constraint": "Essential-use floors, affordability, treatment timing, and heterogeneous effects must be pre-specified.",
+      "content_hash": "sha256:06382fb026b98d4c7552bfbb159d77de850fe2fb8ae007fd790d0b85b5a61b23",
+      "current_readiness": "blocked-multiple-gates",
+      "decision_question": "Did a phased conservation incentive reduce discretionary demand without burdening essential use?",
+      "decision_type": "evaluate",
+      "design_id": "scenario.climate.drought-water.conservation-incentive-effect.v1",
+      "design_order": 32,
+      "evidence_gate": "causal-identification",
+      "evidence_types": [
+        "causal",
+        "estimated",
+        "observed",
+        "proposed"
+      ],
+      "family_id": "climate.drought-water",
+      "family_title": "Drought and urban water security",
+      "horizon": "annual",
+      "implementation_status": "design-only",
+      "primary_outcome": "change in weather-normalized discretionary water demand",
+      "prohibited_claims": [
+        "Do not infer welfare gains from lower consumption or causal effects from simple before-after billing totals.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "population-group",
+      "suite": "climate-disaster-resilience",
+      "title": "Evaluate conservation pricing and assistance effects"
+    },
+    {
+      "analysis_modes": [
+        "descriptive",
+        "causal"
+      ],
+      "binding_constraint": "Selection, insurance, mobility, spillovers, attrition, and displacement outcomes must be pre-specified and observed.",
+      "content_hash": "sha256:3227ec339d24dc1c4ee91b0ac6f46385af5d032a4c01c0138cc276e80fab6c3a",
+      "current_readiness": "blocked-multiple-gates",
+      "decision_question": "Did phased elevation or voluntary acquisition reduce verified loss and displacement burden?",
+      "decision_type": "evaluate",
+      "design_id": "scenario.climate.coastal-storms.coastal-adaptation-effect.v1",
+      "design_order": 40,
+      "evidence_gate": "causal-identification",
+      "evidence_types": [
+        "causal",
+        "estimated",
+        "observed",
+        "proposed"
+      ],
+      "family_id": "climate.coastal-storms",
+      "family_title": "Coastal storms and sea-level adaptation",
+      "horizon": "multi-year",
+      "implementation_status": "design-only",
+      "primary_outcome": "change in event-related verified loss",
+      "prohibited_claims": [
+        "Do not infer causal protection or equitable relocation from selected participant outcomes alone.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "parcel",
+      "suite": "climate-disaster-resilience",
+      "title": "Evaluate property-level coastal adaptation effects"
+    },
+    {
+      "analysis_modes": [
+        "descriptive",
+        "causal"
+      ],
+      "binding_constraint": "The transit reliability and passenger continuity evaluate must respect declared pre-specified assignment, comparison, outcome, spillover, and subgroup rules.",
+      "content_hash": "sha256:b6007173c84598f4aa412ce2ab59d3820d44a3466716254daeddb9e1fe8af843",
+      "current_readiness": "blocked-multiple-gates",
+      "decision_question": "Did phased transit-priority and timetable changes improve reliable passenger travel without displacement?",
+      "decision_type": "evaluate",
+      "design_id": "scenario.mobility.transit-reliability.priority-lane-effect.v1",
+      "design_order": 48,
+      "evidence_gate": "causal-identification",
+      "evidence_types": [
+        "causal",
+        "estimated",
+        "observed",
+        "proposed"
+      ],
+      "family_id": "mobility.transit-reliability",
+      "family_title": "Transit reliability and passenger continuity",
+      "horizon": "multi-year",
+      "implementation_status": "design-only",
+      "primary_outcome": "change in passenger-weighted reliable travel time",
+      "prohibited_claims": [
+        "Do not infer causal passenger benefits from simple before-after vehicle speed.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "corridor",
+      "suite": "mobility-accessibility-operations",
+      "title": "Evaluate transit priority and schedule redesign"
+    },
+    {
+      "analysis_modes": [
+        "descriptive",
+        "causal"
+      ],
+      "binding_constraint": "The pedestrian safety and universal accessibility evaluate must respect declared pre-specified assignment, comparison, outcome, spillover, and subgroup rules.",
+      "content_hash": "sha256:1abe6c9486cd690155c143ea8abbe992f8f4acdf3bb2ded68c4b8b742080a857",
+      "current_readiness": "blocked-multiple-gates",
+      "decision_question": "Did phased quick-build treatments reduce measured conflicts and improve accessible crossing performance?",
+      "decision_type": "evaluate",
+      "design_id": "scenario.mobility.pedestrian-safety.quick-build-safety-effect.v1",
+      "design_order": 56,
+      "evidence_gate": "causal-identification",
+      "evidence_types": [
+        "causal",
+        "estimated",
+        "observed",
+        "proposed"
+      ],
+      "family_id": "mobility.pedestrian-safety",
+      "family_title": "Pedestrian safety and universal accessibility",
+      "horizon": "multi-year",
+      "implementation_status": "design-only",
+      "primary_outcome": "change in exposure-normalized severe pedestrian conflicts",
+      "prohibited_claims": [
+        "Do not infer injury prevention from unvalidated conflict detection or uncontrolled before-after counts.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "corridor",
+      "suite": "mobility-accessibility-operations",
+      "title": "Evaluate quick-build pedestrian safety treatments"
+    },
+    {
+      "analysis_modes": [
+        "descriptive",
+        "causal"
+      ],
+      "binding_constraint": "The urban freight and curb operations evaluate must respect declared pre-specified assignment, comparison, outcome, spillover, and subgroup rules.",
+      "content_hash": "sha256:bbe63961a9a60acb07db7ed068477c4d1f8e9c9c8e6c14f4a5033254160f4424",
+      "current_readiness": "blocked-multiple-gates",
+      "decision_question": "Did phased reservations or dynamic curb rules reduce verified conflict and delay without shifting harm?",
+      "decision_type": "evaluate",
+      "design_id": "scenario.mobility.freight-curb.dynamic-curb-effect.v1",
+      "design_order": 64,
+      "evidence_gate": "causal-identification",
+      "evidence_types": [
+        "causal",
+        "estimated",
+        "observed",
+        "proposed"
+      ],
+      "family_id": "mobility.freight-curb",
+      "family_title": "Urban freight and curb operations",
+      "horizon": "multi-year",
+      "implementation_status": "design-only",
+      "primary_outcome": "change in legal loading success and conflict time",
+      "prohibited_claims": [
+        "Do not infer causal freight or safety effects without measuring enforcement, substitution, and spillovers.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "corridor",
+      "suite": "mobility-accessibility-operations",
+      "title": "Evaluate dynamic curb management"
+    },
+    {
+      "analysis_modes": [
+        "descriptive",
+        "causal"
+      ],
+      "binding_constraint": "The evacuation and emergency mobility evaluate must respect declared pre-specified assignment, comparison, outcome, spillover, and subgroup rules.",
+      "content_hash": "sha256:9c553bac3e7fc0aaab163e60f2c92b9a7a7b8b61a1c7de4931838aec305cbb5a",
+      "current_readiness": "blocked-multiple-gates",
+      "decision_question": "Did phased exercises and targeted outreach improve verified readiness and assisted-transport completion?",
+      "decision_type": "evaluate",
+      "design_id": "scenario.mobility.emergency-mobility.evacuation-exercise-effect.v1",
+      "design_order": 72,
+      "evidence_gate": "causal-identification",
+      "evidence_types": [
+        "causal",
+        "estimated",
+        "observed",
+        "proposed"
+      ],
+      "family_id": "mobility.emergency-mobility",
+      "family_title": "Evacuation and emergency mobility",
+      "horizon": "multi-year",
+      "implementation_status": "design-only",
+      "primary_outcome": "change in verified preparedness task completion",
+      "prohibited_claims": [
+        "Do not infer real-disaster evacuation or survival effects from an exercise outcome.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "population-group",
+      "suite": "mobility-accessibility-operations",
+      "title": "Evaluate emergency mobility exercises and outreach"
+    },
+    {
+      "analysis_modes": [
+        "descriptive",
+        "causal"
+      ],
+      "binding_constraint": "The active mobility network and micromobility evaluate must respect declared pre-specified assignment, comparison, outcome, spillover, and subgroup rules.",
+      "content_hash": "sha256:70afff7f03eb2228b896af6a4638e97e7cd90780622946dd7511ce9efaf532fe",
+      "current_readiness": "blocked-multiple-gates",
+      "decision_question": "Did phased protected links change exposure-normalized use, conflicts, and access across groups?",
+      "decision_type": "evaluate",
+      "design_id": "scenario.mobility.active-mobility.protected-network-effect.v1",
+      "design_order": 80,
+      "evidence_gate": "causal-identification",
+      "evidence_types": [
+        "causal",
+        "estimated",
+        "observed",
+        "proposed"
+      ],
+      "family_id": "mobility.active-mobility",
+      "family_title": "Active mobility network and micromobility",
+      "horizon": "multi-year",
+      "implementation_status": "design-only",
+      "primary_outcome": "change in low-stress trips and exposure-normalized conflicts",
+      "prohibited_claims": [
+        "Do not infer causal mode shift or injury reduction from selected counters or simple before-after totals.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "corridor",
+      "suite": "mobility-accessibility-operations",
+      "title": "Evaluate protected active-mobility network expansion"
+    },
+    {
+      "analysis_modes": [
+        "descriptive",
+        "causal"
+      ],
+      "binding_constraint": "The heat-health surveillance and prevention evaluate must respect declared pre-specified assignment, comparison, outcome, spillover, and subgroup rules.",
+      "content_hash": "sha256:824181e67fafde09655e56b4eaf676fbfa24a33e03b498455518e934a400d040",
+      "current_readiness": "blocked-multiple-gates",
+      "decision_question": "Did phased proactive outreach reduce verified emergency heat-health events without unequal exclusion?",
+      "decision_type": "evaluate",
+      "design_id": "scenario.health.heat-health.heat-outreach-effect.v1",
+      "design_order": 88,
+      "evidence_gate": "causal-identification",
+      "evidence_types": [
+        "causal",
+        "estimated",
+        "observed",
+        "proposed"
+      ],
+      "family_id": "health.heat-health",
+      "family_title": "Heat-health surveillance and prevention",
+      "horizon": "multi-year",
+      "implementation_status": "design-only",
+      "primary_outcome": "change in verified heat-related emergency encounters",
+      "prohibited_claims": [
+        "Do not infer mortality or causal protection without validated outcomes and assignment diagnostics.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "population-group",
+      "suite": "population-health-environmental-exposure",
+      "title": "Evaluate targeted heat-health outreach"
+    },
+    {
+      "analysis_modes": [
+        "descriptive",
+        "causal"
+      ],
+      "binding_constraint": "The air-quality exposure and respiratory health evaluate must respect declared pre-specified assignment, comparison, outcome, spillover, and subgroup rules.",
+      "content_hash": "sha256:dec24756ee7d5eb30a2e533f65232c316db567754dc3807f22ac14ffb84e24c6",
+      "current_readiness": "blocked-multiple-gates",
+      "decision_question": "Did phased protection or source-control measures reduce measured exposure and verified respiratory events?",
+      "decision_type": "evaluate",
+      "design_id": "scenario.health.air-quality.clean-air-program-effect.v1",
+      "design_order": 96,
+      "evidence_gate": "causal-identification",
+      "evidence_types": [
+        "causal",
+        "estimated",
+        "observed",
+        "proposed"
+      ],
+      "family_id": "health.air-quality",
+      "family_title": "Air-quality exposure and respiratory health",
+      "horizon": "multi-year",
+      "implementation_status": "design-only",
+      "primary_outcome": "change in measured exposure and respiratory-event rate",
+      "prohibited_claims": [
+        "Do not infer causal health benefits without assignment, exposure, outcome, and spillover validity.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "population-group",
+      "suite": "population-health-environmental-exposure",
+      "title": "Evaluate clean-air protection and source-control effects"
+    },
+    {
+      "analysis_modes": [
+        "descriptive",
+        "causal"
+      ],
+      "binding_constraint": "The infectious-disease public-health operations evaluate must respect declared pre-specified assignment, comparison, outcome, spillover, and subgroup rules.",
+      "content_hash": "sha256:eea580805d8dc426dea1c6648173cd387779cce1a596d6b4abae79b1078c851f",
+      "current_readiness": "blocked-multiple-gates",
+      "decision_question": "Did phased mobile access and outreach improve verified service uptake without widening disparities?",
+      "decision_type": "evaluate",
+      "design_id": "scenario.health.infectious-operations.outreach-access-effect.v1",
+      "design_order": 104,
+      "evidence_gate": "causal-identification",
+      "evidence_types": [
+        "causal",
+        "estimated",
+        "observed",
+        "proposed"
+      ],
+      "family_id": "health.infectious-operations",
+      "family_title": "Infectious-disease public-health operations",
+      "horizon": "multi-year",
+      "implementation_status": "design-only",
+      "primary_outcome": "change in verified eligible service completion",
+      "prohibited_claims": [
+        "Do not infer infection prevention or clinical benefit from appointment or uptake outcomes alone.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "population-group",
+      "suite": "population-health-environmental-exposure",
+      "title": "Evaluate targeted infectious-disease access strategies"
+    },
+    {
+      "analysis_modes": [
+        "descriptive",
+        "causal"
+      ],
+      "binding_constraint": "The food access and environmental health evaluate must respect declared pre-specified assignment, comparison, outcome, spillover, and subgroup rules.",
+      "content_hash": "sha256:ca424ef8050c6b2b2b37a09c89bb5d659d656e3fd0e4b7f64b5e88396e43addf",
+      "current_readiness": "blocked-multiple-gates",
+      "decision_question": "Did phased mobile services improve verified access and benefit completion among eligible groups?",
+      "decision_type": "evaluate",
+      "design_id": "scenario.health.food-environment.mobile-food-access-effect.v1",
+      "design_order": 112,
+      "evidence_gate": "causal-identification",
+      "evidence_types": [
+        "causal",
+        "estimated",
+        "observed",
+        "proposed"
+      ],
+      "family_id": "health.food-environment",
+      "family_title": "Food access and environmental health",
+      "horizon": "multi-year",
+      "implementation_status": "design-only",
+      "primary_outcome": "change in verified affordable food-service completion",
+      "prohibited_claims": [
+        "Do not infer food security, diet quality, or health impact from program use alone.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "population-group",
+      "suite": "population-health-environmental-exposure",
+      "title": "Evaluate mobile food-access and benefit-navigation programs"
+    },
+    {
+      "analysis_modes": [
+        "descriptive",
+        "causal"
+      ],
+      "binding_constraint": "The housing habitability and code operations evaluate must respect declared pre-specified assignment, comparison, outcome, spillover, and subgroup rules.",
+      "content_hash": "sha256:cb8270cab3f8167624ad107a44b50ad9d83fd90ee4d95ea1401cd233346e712f",
+      "current_readiness": "blocked-multiple-gates",
+      "decision_question": "Did phased proactive inspection reduce verified severe conditions without displacement or selective enforcement?",
+      "decision_type": "evaluate",
+      "design_id": "scenario.housing.habitability-code.proactive-inspection-effect.v1",
+      "design_order": 120,
+      "evidence_gate": "causal-identification",
+      "evidence_types": [
+        "causal",
+        "estimated",
+        "observed",
+        "proposed"
+      ],
+      "family_id": "housing.habitability-code",
+      "family_title": "Housing habitability and code operations",
+      "horizon": "multi-year",
+      "implementation_status": "design-only",
+      "primary_outcome": "change in verified severe condition duration",
+      "prohibited_claims": [
+        "Do not infer causal habitability, health, or displacement effects from complaint closure alone.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "asset",
+      "suite": "housing-land-use-regeneration",
+      "title": "Evaluate proactive housing inspection and repair support"
+    },
+    {
+      "analysis_modes": [
+        "descriptive",
+        "causal"
+      ],
+      "binding_constraint": "The homelessness prevention and housing stability evaluate must respect declared pre-specified assignment, comparison, outcome, spillover, and subgroup rules.",
+      "content_hash": "sha256:c3ff331d9a822fbe5a8ef6555cd33f22ed9bd66fd599eed00f6b49c66462f106",
+      "current_readiness": "blocked-multiple-gates",
+      "decision_question": "Did phased prevention support improve verified housing stability without exclusion or delayed harm?",
+      "decision_type": "evaluate",
+      "design_id": "scenario.housing.homelessness-prevention.rental-assistance-effect.v1",
+      "design_order": 128,
+      "evidence_gate": "causal-identification",
+      "evidence_types": [
+        "causal",
+        "estimated",
+        "observed",
+        "proposed"
+      ],
+      "family_id": "housing.homelessness-prevention",
+      "family_title": "Homelessness prevention and housing stability",
+      "horizon": "multi-year",
+      "implementation_status": "design-only",
+      "primary_outcome": "change in verified stable housing retention",
+      "prohibited_claims": [
+        "Do not infer long-term stability, well-being, or causal impact from payment issuance alone.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "population-group",
+      "suite": "housing-land-use-regeneration",
+      "title": "Evaluate rental assistance and legal support"
+    },
+    {
+      "analysis_modes": [
+        "descriptive",
+        "causal"
+      ],
+      "binding_constraint": "The affordable housing siting and preservation evaluate must respect declared pre-specified assignment, comparison, outcome, spillover, and subgroup rules.",
+      "content_hash": "sha256:b425da0d91ee16d0e5a8ffde4daaf2cbaeef7e6976af3fe6c6d6d9fad6e33711",
+      "current_readiness": "blocked-multiple-gates",
+      "decision_question": "Did phased acquisition or rehabilitation preserve verified affordability and housing stability?",
+      "decision_type": "evaluate",
+      "design_id": "scenario.housing.affordable-supply.preservation-program-effect.v1",
+      "design_order": 136,
+      "evidence_gate": "causal-identification",
+      "evidence_types": [
+        "causal",
+        "estimated",
+        "observed",
+        "proposed"
+      ],
+      "family_id": "housing.affordable-supply",
+      "family_title": "Affordable housing siting and preservation",
+      "horizon": "multi-year",
+      "implementation_status": "design-only",
+      "primary_outcome": "change in verified affordable home-years and tenant retention",
+      "prohibited_claims": [
+        "Do not infer causal anti-displacement or well-being effects from project completion alone.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "parcel",
+      "suite": "housing-land-use-regeneration",
+      "title": "Evaluate affordable-housing preservation interventions"
+    },
+    {
+      "analysis_modes": [
+        "descriptive",
+        "causal"
+      ],
+      "binding_constraint": "The land use, regeneration, and neighborhood change evaluate must respect declared pre-specified assignment, comparison, outcome, spillover, and subgroup rules.",
+      "content_hash": "sha256:e5f2b3feb7dcff0842c9337d6d6ca4c07de162a9a98153b0009da02a18789d42",
+      "current_readiness": "blocked-multiple-gates",
+      "decision_question": "Did phased regeneration improve verified access and opportunity without displacement or benefit leakage?",
+      "decision_type": "evaluate",
+      "design_id": "scenario.housing.land-use-regeneration.regeneration-effect.v1",
+      "design_order": 144,
+      "evidence_gate": "causal-identification",
+      "evidence_types": [
+        "causal",
+        "estimated",
+        "observed",
+        "proposed"
+      ],
+      "family_id": "housing.land-use-regeneration",
+      "family_title": "Land use, regeneration, and neighborhood change",
+      "horizon": "multi-year",
+      "implementation_status": "design-only",
+      "primary_outcome": "change in verified access, stability, and secured community benefits",
+      "prohibited_claims": [
+        "Do not infer inclusive growth, well-being, or anti-displacement effects from investment totals alone.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "neighborhood",
+      "suite": "housing-land-use-regeneration",
+      "title": "Evaluate regeneration and community-benefit effects"
+    },
+    {
+      "analysis_modes": [
+        "descriptive",
+        "causal"
+      ],
+      "binding_constraint": "The 311 and public-service demand operations evaluate must respect declared pre-specified assignment, comparison, outcome, spillover, and subgroup rules.",
+      "content_hash": "sha256:b54f48d389d4a64f2451b755a921c4abcfdfd5a5a4df7a61a3290b2f1be60a58",
+      "current_readiness": "blocked-multiple-gates",
+      "decision_question": "Did phased channel and routing changes reduce verified resident effort and workflow delay without exclusion?",
+      "decision_type": "evaluate",
+      "design_id": "scenario.public-service.demand.channel-redesign-effect.v1",
+      "design_order": 152,
+      "evidence_gate": "causal-identification",
+      "evidence_types": [
+        "causal",
+        "estimated",
+        "observed",
+        "proposed"
+      ],
+      "family_id": "public-service.demand",
+      "family_title": "311 and public-service demand operations",
+      "horizon": "multi-year",
+      "implementation_status": "design-only",
+      "primary_outcome": "change in verified end-to-end handling time and repeat contact",
+      "prohibited_claims": [
+        "Do not infer resident welfare, satisfaction, or causal resolution from closure codes alone.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "service-area",
+      "suite": "public-service-operations",
+      "title": "Evaluate service intake and routing redesign"
+    },
+    {
+      "analysis_modes": [
+        "descriptive",
+        "causal"
+      ],
+      "binding_constraint": "The sanitation, waste, and street cleanliness evaluate must respect declared pre-specified assignment, comparison, outcome, spillover, and subgroup rules.",
+      "content_hash": "sha256:89e991b828281d4b857322642a60f83a03d0724cf9ed139d3cd54771bd215377",
+      "current_readiness": "blocked-multiple-gates",
+      "decision_question": "Did phased route, container, enforcement, or outreach changes reduce verified overflow and contamination?",
+      "decision_type": "evaluate",
+      "design_id": "scenario.public-service.sanitation.waste-prevention-effect.v1",
+      "design_order": 160,
+      "evidence_gate": "causal-identification",
+      "evidence_types": [
+        "causal",
+        "estimated",
+        "observed",
+        "proposed"
+      ],
+      "family_id": "public-service.sanitation",
+      "family_title": "Sanitation, waste, and street cleanliness",
+      "horizon": "multi-year",
+      "implementation_status": "design-only",
+      "primary_outcome": "change in verified overflow, contamination, and missed collection",
+      "prohibited_claims": [
+        "Do not infer causal cleanliness, behavior, or environmental benefits from requests alone.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "service-area",
+      "suite": "public-service-operations",
+      "title": "Evaluate waste prevention and collection redesign"
+    },
+    {
+      "analysis_modes": [
+        "descriptive",
+        "causal"
+      ],
+      "binding_constraint": "The emergency response readiness and allocation evaluate must respect declared pre-specified assignment, comparison, outcome, spillover, and subgroup rules.",
+      "content_hash": "sha256:a2474791811b83ed22e07447099ca3ecd9d22f86d2270d4d94718a912e53dfac",
+      "current_readiness": "blocked-multiple-gates",
+      "decision_question": "Did phased call-processing or unit-positioning changes improve verified coverage without unequal service?",
+      "decision_type": "evaluate",
+      "design_id": "scenario.public-service.emergency-response.dispatch-process-effect.v1",
+      "design_order": 168,
+      "evidence_gate": "causal-identification",
+      "evidence_types": [
+        "causal",
+        "estimated",
+        "observed",
+        "proposed"
+      ],
+      "family_id": "public-service.emergency-response",
+      "family_title": "Emergency response readiness and allocation",
+      "horizon": "multi-year",
+      "implementation_status": "design-only",
+      "primary_outcome": "change in stage-resolved priority response time and coverage",
+      "prohibited_claims": [
+        "Do not infer clinical, safety, or survival effects from response-time changes alone.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "service-area",
+      "suite": "public-service-operations",
+      "title": "Evaluate emergency communications and deployment redesign"
+    },
+    {
+      "analysis_modes": [
+        "descriptive",
+        "causal"
+      ],
+      "binding_constraint": "The digital public access and administrative service delivery evaluate must respect declared pre-specified assignment, comparison, outcome, spillover, and subgroup rules.",
+      "content_hash": "sha256:d09ffbda636019323c578b6a1e3e516cdd91380a2ea7b901abbb5cd5a7b32f30",
+      "current_readiness": "blocked-multiple-gates",
+      "decision_question": "Did phased redesign reduce verified completion friction without excluding non-digital users?",
+      "decision_type": "evaluate",
+      "design_id": "scenario.public-service.digital-access.assisted-service-effect.v1",
+      "design_order": 176,
+      "evidence_gate": "causal-identification",
+      "evidence_types": [
+        "causal",
+        "estimated",
+        "observed",
+        "proposed"
+      ],
+      "family_id": "public-service.digital-access",
+      "family_title": "Digital public access and administrative service delivery",
+      "horizon": "multi-year",
+      "implementation_status": "design-only",
+      "primary_outcome": "change in verified eligible journey completion and user effort",
+      "prohibited_claims": [
+        "Do not infer benefit receipt, well-being, or causal inclusion from page completion alone.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "population-group",
+      "suite": "public-service-operations",
+      "title": "Evaluate assisted digital service redesign"
+    },
+    {
+      "analysis_modes": [
+        "descriptive",
+        "causal"
+      ],
+      "binding_constraint": "The road and bridge asset management evaluate must respect declared pre-specified assignment, comparison, outcome, spillover, and subgroup rules.",
+      "content_hash": "sha256:7f1669490e7b0581034f9beefa2d2b809e629e0c7b8f5156c5b27d4b1558a6bc",
+      "current_readiness": "blocked-multiple-gates",
+      "decision_question": "Did phased preventive treatments extend verified asset condition and reduce unplanned service loss?",
+      "decision_type": "evaluate",
+      "design_id": "scenario.infrastructure.roads-bridges.preventive-maintenance-effect.v1",
+      "design_order": 184,
+      "evidence_gate": "causal-identification",
+      "evidence_types": [
+        "causal",
+        "estimated",
+        "observed",
+        "proposed"
+      ],
+      "family_id": "infrastructure.roads-bridges",
+      "family_title": "Road and bridge asset management",
+      "horizon": "multi-year",
+      "implementation_status": "design-only",
+      "primary_outcome": "change in verified condition life and unplanned restriction days",
+      "prohibited_claims": [
+        "Do not infer structural safety or causal lifecycle value without comparable inspections and treatment assignment.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "asset",
+      "suite": "infrastructure-finance-asset-risk",
+      "title": "Evaluate preventive maintenance and treatment strategies"
+    },
+    {
+      "analysis_modes": [
+        "descriptive",
+        "causal"
+      ],
+      "binding_constraint": "The water and wastewater infrastructure evaluate must respect declared pre-specified assignment, comparison, outcome, spillover, and subgroup rules.",
+      "content_hash": "sha256:6f4cecec041f1bfdbf1dccc99255a1ae73358455ca4a469c1523063b774d9cd0",
+      "current_readiness": "blocked-multiple-gates",
+      "decision_question": "Did phased renewal or pressure management reduce verified failures and service loss?",
+      "decision_type": "evaluate",
+      "design_id": "scenario.infrastructure.water-wastewater.renewal-strategy-effect.v1",
+      "design_order": 192,
+      "evidence_gate": "causal-identification",
+      "evidence_types": [
+        "causal",
+        "estimated",
+        "observed",
+        "proposed"
+      ],
+      "family_id": "infrastructure.water-wastewater",
+      "family_title": "Water and wastewater infrastructure",
+      "horizon": "multi-year",
+      "implementation_status": "design-only",
+      "primary_outcome": "change in verified failures and service interruption",
+      "prohibited_claims": [
+        "Do not infer causal water quality, health, or lifecycle effects from work completion alone.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "asset",
+      "suite": "infrastructure-finance-asset-risk",
+      "title": "Evaluate utility renewal and pressure-management strategies"
+    },
+    {
+      "analysis_modes": [
+        "descriptive",
+        "causal"
+      ],
+      "binding_constraint": "The municipal energy and building decarbonization evaluate must respect declared pre-specified assignment, comparison, outcome, spillover, and subgroup rules.",
+      "content_hash": "sha256:c147ff3e5e041553bfbe635ce068caa1cbf83027b7b273bb09d4ee0009528efc",
+      "current_readiness": "blocked-multiple-gates",
+      "decision_question": "Did phased retrofits reduce weather-normalized energy and emissions while preserving comfort and service?",
+      "decision_type": "evaluate",
+      "design_id": "scenario.infrastructure.energy-buildings.retrofit-performance.v1",
+      "design_order": 200,
+      "evidence_gate": "causal-identification",
+      "evidence_types": [
+        "causal",
+        "estimated",
+        "observed",
+        "proposed"
+      ],
+      "family_id": "infrastructure.energy-buildings",
+      "family_title": "Municipal energy and building decarbonization",
+      "horizon": "multi-year",
+      "implementation_status": "design-only",
+      "primary_outcome": "change in weather- and occupancy-normalized energy use",
+      "prohibited_claims": [
+        "Do not infer causal carbon, cost, or comfort effects without stable meters, factors, occupancy, and comparisons.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "asset",
+      "suite": "infrastructure-finance-asset-risk",
+      "title": "Evaluate municipal building retrofit performance"
+    },
+    {
+      "analysis_modes": [
+        "descriptive",
+        "causal"
+      ],
+      "binding_constraint": "The capital portfolio and municipal finance evaluate must respect declared pre-specified assignment, comparison, outcome, spillover, and subgroup rules.",
+      "content_hash": "sha256:fd200cdeba92ad3f5499556043300dae9770cfefb4b6b9353294a75e55e4a5cf",
+      "current_readiness": "blocked-multiple-gates",
+      "decision_question": "Did phased procurement, bundling, funding, or delivery reforms improve verified cost and schedule performance?",
+      "decision_type": "evaluate",
+      "design_id": "scenario.infrastructure.capital-finance.delivery-reform-effect.v1",
+      "design_order": 208,
+      "evidence_gate": "causal-identification",
+      "evidence_types": [
+        "causal",
+        "estimated",
+        "observed",
+        "proposed"
+      ],
+      "family_id": "infrastructure.capital-finance",
+      "family_title": "Capital portfolio and municipal finance",
+      "horizon": "multi-year",
+      "implementation_status": "design-only",
+      "primary_outcome": "change in scope-adjusted cost and delivery variance",
+      "prohibited_claims": [
+        "Do not infer causal public value, quality, or fiscal health from cost and schedule variance alone.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "asset",
+      "suite": "infrastructure-finance-asset-risk",
+      "title": "Evaluate capital delivery and financing reforms"
+    },
+    {
+      "analysis_modes": [
+        "descriptive",
+        "causal"
+      ],
+      "binding_constraint": "The distributional public-service equity evaluate must respect declared pre-specified assignment, comparison, outcome, spillover, and subgroup rules.",
+      "content_hash": "sha256:4e279e85b97bfaf4c5cba43dc6b3c754ea74560433c2eb932e13da1e7aa1298b",
+      "current_readiness": "blocked-multiple-gates",
+      "decision_question": "Did phased access and capacity interventions reduce verified need-adjusted disparities without displacement?",
+      "decision_type": "evaluate",
+      "design_id": "scenario.equity.distributional-service.equity-policy-effect.v1",
+      "design_order": 216,
+      "evidence_gate": "causal-identification",
+      "evidence_types": [
+        "causal",
+        "estimated",
+        "observed",
+        "proposed"
+      ],
+      "family_id": "equity.distributional-service",
+      "family_title": "Distributional public-service equity",
+      "horizon": "multi-year",
+      "implementation_status": "design-only",
+      "primary_outcome": "change in need-adjusted service access and outcome gaps",
+      "prohibited_claims": [
+        "Do not infer discrimination reduction, welfare, or causal equity from area-level requests alone.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "population-group",
+      "suite": "behavioral-policy-equity",
+      "title": "Evaluate service-equity interventions"
+    },
+    {
+      "analysis_modes": [
+        "descriptive",
+        "causal"
+      ],
+      "binding_constraint": "The public participation and risk communication evaluate must respect declared pre-specified assignment, comparison, outcome, spillover, and subgroup rules.",
+      "content_hash": "sha256:341d5a51b32ac4b08e92fc01cd0b00111fa498f6138d8283d15ccf0a9fd4161e",
+      "current_readiness": "blocked-multiple-gates",
+      "decision_question": "Did phased language, access, deliberation, or feedback changes improve verified participation and understanding?",
+      "decision_type": "evaluate",
+      "design_id": "scenario.equity.participation-communication.engagement-design-effect.v1",
+      "design_order": 224,
+      "evidence_gate": "causal-identification",
+      "evidence_types": [
+        "causal",
+        "estimated",
+        "observed",
+        "proposed"
+      ],
+      "family_id": "equity.participation-communication",
+      "family_title": "Public participation and risk communication",
+      "horizon": "multi-year",
+      "implementation_status": "design-only",
+      "primary_outcome": "change in verified usable participation and comprehension",
+      "prohibited_claims": [
+        "Do not infer trust, consent, legitimacy, behavior, or policy influence from attendance alone.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "population-group",
+      "suite": "behavioral-policy-equity",
+      "title": "Evaluate inclusive engagement and risk communication"
+    },
+    {
+      "analysis_modes": [
+        "descriptive",
+        "causal"
+      ],
+      "binding_constraint": "The compliance, incentives, and behavioral policy evaluate must respect declared pre-specified assignment, comparison, outcome, spillover, and subgroup rules.",
+      "content_hash": "sha256:410a78e8ca07194b6dbdd252243e807bf4113590f36e8350f5344101b3e34a88",
+      "current_readiness": "blocked-multiple-gates",
+      "decision_question": "Did randomized or phased assistance improve verified lawful completion without burden or coercion?",
+      "decision_type": "evaluate",
+      "design_id": "scenario.equity.compliance-incentives.assistance-incentive-effect.v1",
+      "design_order": 232,
+      "evidence_gate": "causal-identification",
+      "evidence_types": [
+        "causal",
+        "estimated",
+        "observed",
+        "proposed"
+      ],
+      "family_id": "equity.compliance-incentives",
+      "family_title": "Compliance, incentives, and behavioral policy",
+      "horizon": "multi-year",
+      "implementation_status": "design-only",
+      "primary_outcome": "change in verified timely lawful completion and administrative burden",
+      "prohibited_claims": [
+        "Do not infer intent, welfare, deterrence, or durable behavior from one administrative completion outcome.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "population-group",
+      "suite": "behavioral-policy-equity",
+      "title": "Evaluate compliance assistance and incentives"
+    },
+    {
+      "analysis_modes": [
+        "descriptive",
+        "causal"
+      ],
+      "binding_constraint": "The algorithmic decision support and governance evaluate must respect declared pre-specified assignment, comparison, outcome, spillover, and subgroup rules.",
+      "content_hash": "sha256:652ce438169c833d886ccb5eaebe3bc4d2066381c2611c6dc5c98c5e3d956eaa",
+      "current_readiness": "reference-implemented",
+      "decision_question": "Did phased decision support improve verified service outcomes without unequal error, automation bias, or reduced recourse?",
+      "decision_type": "evaluate",
+      "design_id": "scenario.equity.algorithmic-governance.decision-support-effect.v1",
+      "design_order": 240,
+      "evidence_gate": "causal-identification",
+      "evidence_types": [
+        "causal",
+        "estimated",
+        "observed",
+        "proposed"
+      ],
+      "existing_template_ref": "deep.equity.causal-service-effectiveness.v1",
+      "family_id": "equity.algorithmic-governance",
+      "family_title": "Algorithmic decision support and governance",
+      "horizon": "multi-year",
+      "implementation_status": "reference-implemented",
+      "primary_outcome": "change in verified service outcome, error, override, and recourse gaps",
+      "prohibited_claims": [
+        "Do not infer causal service effectiveness from aggregate before-after counts without assignment and counterfactual evidence.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "population-group",
+      "suite": "behavioral-policy-equity",
+      "title": "Evaluate algorithmic decision support and human review"
+    }
+  ],
+  "kind": "scenario-designs.decision-type.evaluate",
+  "record_count": 30,
+  "schema_version": "1.0.0"
+}

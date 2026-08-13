@@ -1,0 +1,50 @@
+{
+  "affected_system": "urban smoke exposure and clean-air protection system",
+  "claim_boundary": [
+    "Hazard observations and modeled exposure do not establish individual harm or causation.",
+    "Proposed adaptations are planning alternatives, not adopted policy or engineered designs.",
+    "A design-only record is not a city execution, validated forecast, or impact result."
+  ],
+  "common_source_roles": [
+    "climate-hazard",
+    "environmental-exposure",
+    "geographic-identity"
+  ],
+  "decision_owner": "air-quality response coordinator and public-health director",
+  "decision_types": [
+    "diagnose",
+    "forecast",
+    "prioritize",
+    "site",
+    "allocate",
+    "schedule",
+    "stress-test",
+    "evaluate"
+  ],
+  "description": "Decision designs for smoke exposure, episode forecasting, building filtration, clean-air siting, supply allocation, activity scheduling, prolonged-event continuity, and evaluation.",
+  "design_refs": [
+    "scenario.climate.wildfire-smoke.smoke-protection-gaps.v1",
+    "scenario.climate.wildfire-smoke.smoke-episode-load.v1",
+    "scenario.climate.wildfire-smoke.filtration-retrofits.v1",
+    "scenario.climate.wildfire-smoke.clean-air-centers.v1",
+    "scenario.climate.wildfire-smoke.filters-monitors-outreach.v1",
+    "scenario.climate.wildfire-smoke.smoke-safe-activities.v1",
+    "scenario.climate.wildfire-smoke.prolonged-smoke-continuity.v1",
+    "scenario.climate.wildfire-smoke.filtration-program-effect.v1"
+  ],
+  "design_signatures": [
+    "sha256:b9a20a7135047103ff30443efe2f51f14344e685a2ab2c0f90a4b7133b8f7b72",
+    "sha256:c977d3abc70e7ed5932cb09a1302af06aa45393605345674d770863ac1226363",
+    "sha256:9b0fac6d04502130d4a95d134e0f950b97610ab7dd74c88aaf1580576357bf92",
+    "sha256:39d12b6a6616be6d89d5f2a336796cd02dc86b89023c393861f205f12da51dbb",
+    "sha256:c77de7425d188a2281093b8979bbf112f422759300fb8a6e4cbdde73bbd400c6",
+    "sha256:207a87e723b37e30b7fcec140ffb3ba7ba2ed75db87768fc37e9122cbb92268e",
+    "sha256:04b74ad1c158568af7768fd3e9f0913d6e63149d97777d6a02b1bce21056e904",
+    "sha256:01d14455494a1f800d2845cbbfee0f109993b86d8f7747bbe53b4bf50b65a167"
+  ],
+  "family_id": "climate.wildfire-smoke",
+  "family_order": 3,
+  "schema_version": "1.0.0",
+  "suite": "climate-disaster-resilience",
+  "title": "Wildfire smoke and air-quality resilience"
+}

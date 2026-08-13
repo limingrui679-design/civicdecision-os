@@ -1,0 +1,970 @@
+{
+  "claim_boundary": "Design records are not city executions, deployments, adoptions, or impacts.",
+  "items": [
+    {
+      "analysis_modes": [
+        "descriptive"
+      ],
+      "binding_constraint": "Risk strata must be comparable across neighborhoods without suppressing small vulnerable groups.",
+      "content_hash": "sha256:1edd9ba1c655b300e653496f4cd133f2ee191e2c0681697574f8b6c1b08144e5",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Which neighborhoods combine sustained heat exposure, vulnerable populations, and weak cooling access?",
+      "decision_type": "diagnose",
+      "design_id": "scenario.climate.extreme-heat.heat-access-gaps.v1",
+      "design_order": 1,
+      "evidence_gate": "geographic-alignment",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "proposed"
+      ],
+      "family_id": "climate.extreme-heat",
+      "family_title": "Extreme heat exposure and response",
+      "horizon": "seasonal",
+      "implementation_status": "design-only",
+      "primary_outcome": "population in high-heat low-access areas",
+      "prohibited_claims": [
+        "Do not label an exposure-access screen as observed illness or a causal vulnerability score.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "neighborhood",
+      "suite": "climate-disaster-resilience",
+      "title": "Diagnose neighborhood heat exposure and cooling-access gaps"
+    },
+    {
+      "analysis_modes": [
+        "descriptive"
+      ],
+      "binding_constraint": "A hotspot must be supported by verified events and mapped drainage connectivity rather than complaints alone.",
+      "content_hash": "sha256:571f852183b3bf0f061b727980a998d4ae547569f90408d398f7e04bf6e6a6db",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Where do rainfall, drainage condition, surface flow paths, and verified flooding jointly indicate failure risk?",
+      "decision_type": "diagnose",
+      "design_id": "scenario.climate.flood-stormwater.drainage-failure-patterns.v1",
+      "design_order": 9,
+      "evidence_gate": "geographic-alignment",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "proposed"
+      ],
+      "family_id": "climate.flood-stormwater",
+      "family_title": "Flood and stormwater resilience",
+      "horizon": "annual",
+      "implementation_status": "design-only",
+      "primary_outcome": "verified flood events unexplained by mapped drainage capacity",
+      "prohibited_claims": [
+        "Do not convert flood complaints into verified inundation depths or engineering failure diagnoses.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "asset",
+      "suite": "climate-disaster-resilience",
+      "title": "Diagnose recurrent drainage-failure patterns"
+    },
+    {
+      "analysis_modes": [
+        "descriptive"
+      ],
+      "binding_constraint": "Protection-gap estimates must preserve uncertainty where monitor or building data are sparse.",
+      "content_hash": "sha256:3e43f3d9ff58fe5285c979ee2de5fb1ead6eaed2055af94863165b9a2a73423f",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Which populations experience repeated smoke exposure without reliable indoor clean-air protection?",
+      "decision_type": "diagnose",
+      "design_id": "scenario.climate.wildfire-smoke.smoke-protection-gaps.v1",
+      "design_order": 17,
+      "evidence_gate": "geographic-alignment",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "proposed"
+      ],
+      "family_id": "climate.wildfire-smoke",
+      "family_title": "Wildfire smoke and air-quality resilience",
+      "horizon": "seasonal",
+      "implementation_status": "design-only",
+      "primary_outcome": "people in high-exposure low-protection conditions",
+      "prohibited_claims": [
+        "Do not label modeled particulate exposure as an individual dose or diagnosis.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "neighborhood",
+      "suite": "climate-disaster-resilience",
+      "title": "Diagnose smoke-exposure and clean-air protection gaps"
+    },
+    {
+      "analysis_modes": [
+        "descriptive"
+      ],
+      "binding_constraint": "An anomaly must exceed combined production, customer-meter, and boundary-flow uncertainty.",
+      "content_hash": "sha256:f6338bbf87fdc175c9c7ed176359833585afc831ac9fe4968ef536ae83182577",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Which zones show persistent production-consumption imbalance after meter uncertainty and authorized uses are reconciled?",
+      "decision_type": "diagnose",
+      "design_id": "scenario.climate.drought-water.water-loss-balance.v1",
+      "design_order": 25,
+      "evidence_gate": "data-completeness",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "proposed"
+      ],
+      "family_id": "climate.drought-water",
+      "family_title": "Drought and urban water security",
+      "horizon": "annual",
+      "implementation_status": "design-only",
+      "primary_outcome": "unexplained distribution water volume",
+      "prohibited_claims": [
+        "Do not label balance residuals as confirmed leaks or unauthorized consumption.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "service-area",
+      "suite": "climate-disaster-resilience",
+      "title": "Diagnose non-revenue water and demand anomalies"
+    },
+    {
+      "analysis_modes": [
+        "descriptive"
+      ],
+      "binding_constraint": "Exposure findings require verified elevation, protection, asset function, and dependency records.",
+      "content_hash": "sha256:6e269a3422ab34f1dd57602822262518ccaac6dedd8a3dbd1c406836a3bca555",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Which critical services depend on coastal assets exposed across surge and sea-level pathways?",
+      "decision_type": "diagnose",
+      "design_id": "scenario.climate.coastal-storms.coastal-dependency-exposure.v1",
+      "design_order": 33,
+      "evidence_gate": "geographic-alignment",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "proposed"
+      ],
+      "family_id": "climate.coastal-storms",
+      "family_title": "Coastal storms and sea-level adaptation",
+      "horizon": "multi-year",
+      "implementation_status": "design-only",
+      "primary_outcome": "critical service dependencies exposed to coastal flooding",
+      "prohibited_claims": [
+        "Do not equate mapped inundation exposure with observed damage or failure.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "network",
+      "suite": "climate-disaster-resilience",
+      "title": "Diagnose coastal asset exposure and service dependencies"
+    },
+    {
+      "analysis_modes": [
+        "descriptive"
+      ],
+      "binding_constraint": "The transit reliability and passenger continuity diagnose must respect declared measurement resolution and classification uncertainty.",
+      "content_hash": "sha256:2fddb23d90507f595f15cb538014cb60501f5cd53131cfbb86539f04a6b79344",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Which route segments and transfer nodes repeatedly propagate delay into passenger connection failures?",
+      "decision_type": "diagnose",
+      "design_id": "scenario.mobility.transit-reliability.delay-propagation.v1",
+      "design_order": 41,
+      "evidence_gate": "geographic-alignment",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "proposed"
+      ],
+      "family_id": "mobility.transit-reliability",
+      "family_title": "Transit reliability and passenger continuity",
+      "horizon": "annual",
+      "implementation_status": "design-only",
+      "primary_outcome": "passenger-weighted missed connections",
+      "prohibited_claims": [
+        "Do not infer passenger experience from vehicle delay without validated load and transfer evidence.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "network",
+      "suite": "mobility-accessibility-operations",
+      "title": "Diagnose transit delay propagation and missed connections"
+    },
+    {
+      "analysis_modes": [
+        "descriptive"
+      ],
+      "binding_constraint": "The pedestrian safety and universal accessibility diagnose must respect declared measurement resolution and classification uncertainty.",
+      "content_hash": "sha256:496e0e0ddd7f8c5fb2f52916b168542ef6bf7d737dadf6dbc80bddb2faa0791a",
+      "current_readiness": "reference-implemented",
+      "decision_question": "Where do verified barriers, crossings, conflicts, speeds, and destinations break continuous safe access?",
+      "decision_type": "diagnose",
+      "design_id": "scenario.mobility.pedestrian-safety.accessible-route-breaks.v1",
+      "design_order": 49,
+      "evidence_gate": "geographic-alignment",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "proposed"
+      ],
+      "existing_template_ref": "deep.mobility.accessibility-request.v1",
+      "family_id": "mobility.pedestrian-safety",
+      "family_title": "Pedestrian safety and universal accessibility",
+      "horizon": "annual",
+      "implementation_status": "reference-implemented",
+      "primary_outcome": "essential destinations without a continuous safe accessible route",
+      "prohibited_claims": [
+        "Do not equate request keywords or mapped sidewalks with verified accessible routes.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "network",
+      "suite": "mobility-accessibility-operations",
+      "title": "Diagnose pedestrian safety and accessible-route breaks"
+    },
+    {
+      "analysis_modes": [
+        "descriptive"
+      ],
+      "binding_constraint": "The urban freight and curb operations diagnose must respect declared measurement resolution and classification uncertainty.",
+      "content_hash": "sha256:2740606786f1da7e3cbfc001383766285d79959efb30eba5cc1af8341f59933e",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Where do regulations, occupancy, deliveries, double parking, safety, and access needs conflict?",
+      "decision_type": "diagnose",
+      "design_id": "scenario.mobility.freight-curb.curb-friction.v1",
+      "design_order": 57,
+      "evidence_gate": "geographic-alignment",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "proposed"
+      ],
+      "family_id": "mobility.freight-curb",
+      "family_title": "Urban freight and curb operations",
+      "horizon": "annual",
+      "implementation_status": "design-only",
+      "primary_outcome": "commercial stops without legal usable curb access",
+      "prohibited_claims": [
+        "Do not infer all delivery behavior from citations, sensors, or one platform feed.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "corridor",
+      "suite": "mobility-accessibility-operations",
+      "title": "Diagnose curb conflict and freight-access friction"
+    },
+    {
+      "analysis_modes": [
+        "descriptive"
+      ],
+      "binding_constraint": "The evacuation and emergency mobility diagnose must respect declared measurement resolution and classification uncertainty.",
+      "content_hash": "sha256:a831a893c394f670ff78d969c9005e53858e4a088563fb3e32f01c4f8ac12335",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Which populations and critical facilities lack a verified feasible evacuation or responder-access path?",
+      "decision_type": "diagnose",
+      "design_id": "scenario.mobility.emergency-mobility.evacuation-access-gaps.v1",
+      "design_order": 65,
+      "evidence_gate": "geographic-alignment",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "proposed"
+      ],
+      "family_id": "mobility.emergency-mobility",
+      "family_title": "Evacuation and emergency mobility",
+      "horizon": "annual",
+      "implementation_status": "design-only",
+      "primary_outcome": "at-risk people without a verified feasible mobility plan",
+      "prohibited_claims": [
+        "Do not infer individual evacuation need or willingness from area demographics.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "network",
+      "suite": "mobility-accessibility-operations",
+      "title": "Diagnose evacuation and assisted-mobility gaps"
+    },
+    {
+      "analysis_modes": [
+        "descriptive"
+      ],
+      "binding_constraint": "The active mobility network and micromobility diagnose must respect declared measurement resolution and classification uncertainty.",
+      "content_hash": "sha256:873d94353b7c7aaa9373714be8108d28a765006263e36e4aba7fa4e7ad8f0c09",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Which missing links prevent continuous low-stress access between neighborhoods and essential destinations?",
+      "decision_type": "diagnose",
+      "design_id": "scenario.mobility.active-mobility.low-stress-network-gaps.v1",
+      "design_order": 73,
+      "evidence_gate": "geographic-alignment",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "proposed"
+      ],
+      "family_id": "mobility.active-mobility",
+      "family_title": "Active mobility network and micromobility",
+      "horizon": "annual",
+      "implementation_status": "design-only",
+      "primary_outcome": "essential trips disconnected from a low-stress network",
+      "prohibited_claims": [
+        "Do not infer route accessibility or demand from request labels or mapped segments alone.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "network",
+      "suite": "mobility-accessibility-operations",
+      "title": "Diagnose low-stress active-mobility network gaps"
+    },
+    {
+      "analysis_modes": [
+        "descriptive"
+      ],
+      "binding_constraint": "The heat-health surveillance and prevention diagnose must respect declared measurement resolution and classification uncertainty.",
+      "content_hash": "sha256:0722914b8a70835cd41125a89b95eed0095dcc1ee66f81cbf935f702842e5fa3",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Where and when do verified heat-related syndromes diverge from expected seasonal and reporting patterns?",
+      "decision_type": "diagnose",
+      "design_id": "scenario.health.heat-health.heat-illness-patterns.v1",
+      "design_order": 81,
+      "evidence_gate": "geographic-alignment",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "proposed"
+      ],
+      "family_id": "health.heat-health",
+      "family_title": "Heat-health surveillance and prevention",
+      "horizon": "annual",
+      "implementation_status": "design-only",
+      "primary_outcome": "unexplained excess heat-related health events",
+      "prohibited_claims": [
+        "Do not diagnose individuals or attribute events to heat from aggregate temporal overlap.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "population-group",
+      "suite": "population-health-environmental-exposure",
+      "title": "Diagnose heat-health surveillance patterns"
+    },
+    {
+      "analysis_modes": [
+        "descriptive"
+      ],
+      "binding_constraint": "The air-quality exposure and respiratory health diagnose must respect declared measurement resolution and classification uncertainty.",
+      "content_hash": "sha256:ffedba5c502f87aa73235803cb6887bfc51d474be7eab3c1021c14c9de08ef88",
+      "current_readiness": "reference-implemented",
+      "decision_question": "Which areas show persistent pollutant, respiratory, and service signals after coverage differences are separated?",
+      "decision_type": "diagnose",
+      "design_id": "scenario.health.air-quality.exposure-health-discordance.v1",
+      "design_order": 89,
+      "evidence_gate": "geographic-alignment",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "proposed"
+      ],
+      "existing_template_ref": "deep.health.environmental-request-screen.v1",
+      "family_id": "health.air-quality",
+      "family_title": "Air-quality exposure and respiratory health",
+      "horizon": "annual",
+      "implementation_status": "reference-implemented",
+      "primary_outcome": "unresolved high-exposure high-burden population",
+      "prohibited_claims": [
+        "Do not convert environmental request labels into measured exposure, diagnosis, or causal health risk.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "neighborhood",
+      "suite": "population-health-environmental-exposure",
+      "title": "Diagnose environmental exposure and respiratory-health patterns"
+    },
+    {
+      "analysis_modes": [
+        "descriptive"
+      ],
+      "binding_constraint": "The infectious-disease public-health operations diagnose must respect declared measurement resolution and classification uncertainty.",
+      "content_hash": "sha256:2c3241b59aa68f1439208a15da125c43417ab545fc432a461d8f45973e423047",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Which place-time signals remain unusual after testing, reporting delay, seasonality, and source coverage are reconciled?",
+      "decision_type": "diagnose",
+      "design_id": "scenario.health.infectious-operations.surveillance-discordance.v1",
+      "design_order": 97,
+      "evidence_gate": "geographic-alignment",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "proposed"
+      ],
+      "family_id": "health.infectious-operations",
+      "family_title": "Infectious-disease public-health operations",
+      "horizon": "annual",
+      "implementation_status": "design-only",
+      "primary_outcome": "unresolved abnormal surveillance signals",
+      "prohibited_claims": [
+        "Do not label an aggregate anomaly an outbreak, individual infection, or transmission source.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "service-area",
+      "suite": "population-health-environmental-exposure",
+      "title": "Diagnose infectious-disease surveillance discordance"
+    },
+    {
+      "analysis_modes": [
+        "descriptive"
+      ],
+      "binding_constraint": "The food access and environmental health diagnose must respect declared measurement resolution and classification uncertainty.",
+      "content_hash": "sha256:d5560f54ad3b84b2df3cd46997021de51e53d502b6fb79ab0e753affff33785c",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Where do outlet access, affordability, verified hazards, inspection coverage, and assistance gaps coincide?",
+      "decision_type": "diagnose",
+      "design_id": "scenario.health.food-environment.food-environment-gaps.v1",
+      "design_order": 105,
+      "evidence_gate": "geographic-alignment",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "proposed"
+      ],
+      "family_id": "health.food-environment",
+      "family_title": "Food access and environmental health",
+      "horizon": "annual",
+      "implementation_status": "design-only",
+      "primary_outcome": "people in high-need low-service conditions",
+      "prohibited_claims": [
+        "Do not convert request labels, outlet distance, or program nonparticipation into verified hazard or hunger.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "neighborhood",
+      "suite": "population-health-environmental-exposure",
+      "title": "Diagnose food-access and environmental-health service gaps"
+    },
+    {
+      "analysis_modes": [
+        "descriptive"
+      ],
+      "binding_constraint": "The housing habitability and code operations diagnose must respect declared measurement resolution and classification uncertainty.",
+      "content_hash": "sha256:fb2e99691b9b8971e402048dfebda6f5a8cbae8a4169e977a0357f109d46a259",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Which buildings show persistent complaint, inspection, violation, ownership, and repair patterns requiring verification?",
+      "decision_type": "diagnose",
+      "design_id": "scenario.housing.habitability-code.habitability-signals.v1",
+      "design_order": 113,
+      "evidence_gate": "geographic-alignment",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "proposed"
+      ],
+      "family_id": "housing.habitability-code",
+      "family_title": "Housing habitability and code operations",
+      "horizon": "annual",
+      "implementation_status": "design-only",
+      "primary_outcome": "high-priority buildings with unresolved verified conditions",
+      "prohibited_claims": [
+        "Do not label complaint keywords as verified violations, unsafe housing, or landlord misconduct.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "asset",
+      "suite": "housing-land-use-regeneration",
+      "title": "Diagnose unresolved housing habitability signals"
+    },
+    {
+      "analysis_modes": [
+        "descriptive"
+      ],
+      "binding_constraint": "The homelessness prevention and housing stability diagnose must respect declared measurement resolution and classification uncertainty.",
+      "content_hash": "sha256:05e2832778af2ac6014c81cba41f7517fdacaa3fb9a78e121008d8cbcc0cb83e",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Where do rent burden, court filings, shelter entry, benefit loss, and service access reveal preventable system gaps?",
+      "decision_type": "diagnose",
+      "design_id": "scenario.housing.homelessness-prevention.stability-service-gaps.v1",
+      "design_order": 121,
+      "evidence_gate": "geographic-alignment",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "proposed"
+      ],
+      "family_id": "housing.homelessness-prevention",
+      "family_title": "Homelessness prevention and housing stability",
+      "horizon": "annual",
+      "implementation_status": "design-only",
+      "primary_outcome": "eligible households entering crisis without prior prevention access",
+      "prohibited_claims": [
+        "Do not label a household homeless, likely to be evicted, or noncompliant from proxy variables.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "population-group",
+      "suite": "housing-land-use-regeneration",
+      "title": "Diagnose housing-instability and prevention-service gaps"
+    },
+    {
+      "analysis_modes": [
+        "descriptive"
+      ],
+      "binding_constraint": "The affordable housing siting and preservation diagnose must respect declared measurement resolution and classification uncertainty.",
+      "content_hash": "sha256:2ee65f6e07ef7871370c7ac4a1af2ad19c054a32f06fa73dfed204d4dea52226",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Which properties, restrictions, market pressures, conditions, and access patterns indicate preservation or supply risk?",
+      "decision_type": "diagnose",
+      "design_id": "scenario.housing.affordable-supply.affordability-loss-risk.v1",
+      "design_order": 129,
+      "evidence_gate": "geographic-alignment",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "proposed"
+      ],
+      "family_id": "housing.affordable-supply",
+      "family_title": "Affordable housing siting and preservation",
+      "horizon": "annual",
+      "implementation_status": "design-only",
+      "primary_outcome": "affordable homes at verified near-term loss risk",
+      "prohibited_claims": [
+        "Do not label market pressure displacement or a unit affordable without restriction and rent evidence.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "parcel",
+      "suite": "housing-land-use-regeneration",
+      "title": "Diagnose affordable-housing loss and supply gaps"
+    },
+    {
+      "analysis_modes": [
+        "descriptive"
+      ],
+      "binding_constraint": "The land use, regeneration, and neighborhood change diagnose must respect declared measurement resolution and classification uncertainty.",
+      "content_hash": "sha256:121c42003f1d617d680ae1f530034180eb19b584c55bf67c6650dd288ace635b",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Where do parcel constraints, vacancy, infrastructure, hazards, market pressure, and valued assets create planning conflicts?",
+      "decision_type": "diagnose",
+      "design_id": "scenario.housing.land-use-regeneration.land-use-friction.v1",
+      "design_order": 137,
+      "evidence_gate": "geographic-alignment",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "proposed"
+      ],
+      "family_id": "housing.land-use-regeneration",
+      "family_title": "Land use, regeneration, and neighborhood change",
+      "horizon": "annual",
+      "implementation_status": "design-only",
+      "primary_outcome": "priority parcels with unresolved feasibility and community-risk conflicts",
+      "prohibited_claims": [
+        "Do not label vacancy blight, development capacity, consent, or regeneration opportunity without verification.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "parcel",
+      "suite": "housing-land-use-regeneration",
+      "title": "Diagnose land-use capacity, vacancy, and community-asset friction"
+    },
+    {
+      "analysis_modes": [
+        "descriptive"
+      ],
+      "binding_constraint": "The 311 and public-service demand operations diagnose must respect declared measurement resolution and classification uncertainty.",
+      "content_hash": "sha256:e1e0033d585327fefc7760cf24f544276884faa9711364354bdb3f19686a7367",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Which categories, channels, places, and handoffs produce persistent demand, duplication, delay, or rework?",
+      "decision_type": "diagnose",
+      "design_id": "scenario.public-service.demand.request-workload.v1",
+      "design_order": 145,
+      "evidence_gate": "geographic-alignment",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "proposed"
+      ],
+      "family_id": "public-service.demand",
+      "family_title": "311 and public-service demand operations",
+      "horizon": "annual",
+      "implementation_status": "design-only",
+      "primary_outcome": "requests with unresolved routing or repeated workflow transitions",
+      "prohibited_claims": [
+        "Do not call requests verified incidents, unresolved harms, or failed service delivery.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "service-area",
+      "suite": "public-service-operations",
+      "title": "Diagnose public-service request workload and workflow friction"
+    },
+    {
+      "analysis_modes": [
+        "descriptive"
+      ],
+      "binding_constraint": "The sanitation, waste, and street cleanliness diagnose must respect declared measurement resolution and classification uncertainty.",
+      "content_hash": "sha256:48871d5dee686560db4058bc2314f096d8015745f1ed1c0b48058c91dd085445",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Which routes, assets, categories, places, and handoffs show persistent sanitation workload or verified failure?",
+      "decision_type": "diagnose",
+      "design_id": "scenario.public-service.sanitation.sanitation-workload.v1",
+      "design_order": 153,
+      "evidence_gate": "geographic-alignment",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "proposed"
+      ],
+      "family_id": "public-service.sanitation",
+      "family_title": "Sanitation, waste, and street cleanliness",
+      "horizon": "annual",
+      "implementation_status": "design-only",
+      "primary_outcome": "verified recurring sanitation tasks without durable resolution",
+      "prohibited_claims": [
+        "Do not convert sanitation-related request keywords into verified waste conditions.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "service-area",
+      "suite": "public-service-operations",
+      "title": "Diagnose sanitation workload and recurring failure patterns"
+    },
+    {
+      "analysis_modes": [
+        "descriptive"
+      ],
+      "binding_constraint": "The emergency response readiness and allocation diagnose must respect declared measurement resolution and classification uncertainty.",
+      "content_hash": "sha256:769fcdd7a0c405c6cdf329465140c10254fa2c41e3d87d78a0bfb8534a3045b1",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Which call-processing, dispatch, travel, handoff, and availability stages drive verified coverage gaps?",
+      "decision_type": "diagnose",
+      "design_id": "scenario.public-service.emergency-response.response-coverage-gaps.v1",
+      "design_order": 161,
+      "evidence_gate": "geographic-alignment",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "proposed"
+      ],
+      "family_id": "public-service.emergency-response",
+      "family_title": "Emergency response readiness and allocation",
+      "horizon": "annual",
+      "implementation_status": "design-only",
+      "primary_outcome": "priority incidents outside verified response targets",
+      "prohibited_claims": [
+        "Do not infer incident severity, fault, survival, or service quality from response time alone.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "service-area",
+      "suite": "public-service-operations",
+      "title": "Diagnose emergency response coverage and workflow gaps"
+    },
+    {
+      "analysis_modes": [
+        "descriptive"
+      ],
+      "binding_constraint": "The digital public access and administrative service delivery diagnose must respect declared measurement resolution and classification uncertainty.",
+      "content_hash": "sha256:1d941b0acff84ea9d05b11092219d3a342d7e6aa470974f5d990a27ff10fa37a",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Where do users encounter verified error, abandonment, repeat contact, language, access, or handoff friction?",
+      "decision_type": "diagnose",
+      "design_id": "scenario.public-service.digital-access.service-journey-friction.v1",
+      "design_order": 169,
+      "evidence_gate": "geographic-alignment",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "proposed"
+      ],
+      "family_id": "public-service.digital-access",
+      "family_title": "Digital public access and administrative service delivery",
+      "horizon": "annual",
+      "implementation_status": "design-only",
+      "primary_outcome": "eligible service journeys with unresolved verified friction",
+      "prohibited_claims": [
+        "Do not interpret non-completion as ineligibility, user error, disinterest, or lack of need.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "population-group",
+      "suite": "public-service-operations",
+      "title": "Diagnose digital and assisted-service journey friction"
+    },
+    {
+      "analysis_modes": [
+        "descriptive"
+      ],
+      "binding_constraint": "The road and bridge asset management diagnose must respect declared measurement resolution and classification uncertainty.",
+      "content_hash": "sha256:23d2e245cbf4ec698f1213c4860432668b3ccc131135dd1d32bdffe40f525e20",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Which inspected assets show verified deterioration, repeated defects, dependency risk, or data inconsistency?",
+      "decision_type": "diagnose",
+      "design_id": "scenario.infrastructure.roads-bridges.asset-condition-failure.v1",
+      "design_order": 177,
+      "evidence_gate": "geographic-alignment",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "proposed"
+      ],
+      "family_id": "infrastructure.roads-bridges",
+      "family_title": "Road and bridge asset management",
+      "horizon": "annual",
+      "implementation_status": "design-only",
+      "primary_outcome": "high-consequence assets with unresolved verified defects",
+      "prohibited_claims": [
+        "Do not convert infrastructure request labels into engineering condition or safety findings.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "asset",
+      "suite": "infrastructure-finance-asset-risk",
+      "title": "Diagnose roadway and bridge condition and failure patterns"
+    },
+    {
+      "analysis_modes": [
+        "descriptive"
+      ],
+      "binding_constraint": "The water and wastewater infrastructure diagnose must respect declared measurement resolution and classification uncertainty.",
+      "content_hash": "sha256:f97cbfe30b34b36099e2640d58e9412916475150277bf2e52a3b5650209c3d63",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Which assets show verified break, overflow, pressure, quality, condition, or repeat-repair patterns?",
+      "decision_type": "diagnose",
+      "design_id": "scenario.infrastructure.water-wastewater.utility-failure-patterns.v1",
+      "design_order": 185,
+      "evidence_gate": "geographic-alignment",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "proposed"
+      ],
+      "family_id": "infrastructure.water-wastewater",
+      "family_title": "Water and wastewater infrastructure",
+      "horizon": "annual",
+      "implementation_status": "design-only",
+      "primary_outcome": "high-consequence assets with unresolved failure evidence",
+      "prohibited_claims": [
+        "Do not infer water quality, leakage, overflow, or asset failure from complaints alone.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "network",
+      "suite": "infrastructure-finance-asset-risk",
+      "title": "Diagnose water and wastewater asset failure patterns"
+    },
+    {
+      "analysis_modes": [
+        "descriptive"
+      ],
+      "binding_constraint": "The municipal energy and building decarbonization diagnose must respect declared measurement resolution and classification uncertainty.",
+      "content_hash": "sha256:ddb02e3970fa167a4d77faf440e6506c3f1c54398700aff38a4ed39f2110f8f3",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Which buildings show weather- and occupancy-adjusted energy, comfort, equipment, or emissions anomalies?",
+      "decision_type": "diagnose",
+      "design_id": "scenario.infrastructure.energy-buildings.building-energy-performance.v1",
+      "design_order": 193,
+      "evidence_gate": "geographic-alignment",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "proposed"
+      ],
+      "family_id": "infrastructure.energy-buildings",
+      "family_title": "Municipal energy and building decarbonization",
+      "horizon": "annual",
+      "implementation_status": "design-only",
+      "primary_outcome": "verified excess energy and emissions above building baselines",
+      "prohibited_claims": [
+        "Do not label benchmark deviation waste, malfunction, discomfort, or avoidable emissions without verification.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "asset",
+      "suite": "infrastructure-finance-asset-risk",
+      "title": "Diagnose municipal building energy and emissions performance"
+    },
+    {
+      "analysis_modes": [
+        "descriptive"
+      ],
+      "binding_constraint": "The capital portfolio and municipal finance diagnose must respect declared measurement resolution and classification uncertainty.",
+      "content_hash": "sha256:495bb10adc88498c508e083b56f79bdc282aeb1ac1287cafebfbb3286ad91859",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Which assets and projects show reconciled condition need, cost growth, delay, funding gap, or delivery risk?",
+      "decision_type": "diagnose",
+      "design_id": "scenario.infrastructure.capital-finance.capital-obligation-friction.v1",
+      "design_order": 201,
+      "evidence_gate": "geographic-alignment",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "proposed"
+      ],
+      "family_id": "infrastructure.capital-finance",
+      "family_title": "Capital portfolio and municipal finance",
+      "horizon": "annual",
+      "implementation_status": "design-only",
+      "primary_outcome": "verified high-consequence unfunded or delayed obligations",
+      "prohibited_claims": [
+        "Do not call a request, estimate, or plan an audited liability, appropriation, or expenditure.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "asset",
+      "suite": "infrastructure-finance-asset-risk",
+      "title": "Diagnose capital obligations, backlog, and delivery friction"
+    },
+    {
+      "analysis_modes": [
+        "descriptive"
+      ],
+      "binding_constraint": "The distributional public-service equity diagnose must respect declared measurement resolution and classification uncertainty.",
+      "content_hash": "sha256:841d8e481a5e563ba9db4a4e8f292068198bacba9eec646907ff2a2ca9e21975",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Which groups and areas show persistent differences after need, eligibility, access, reporting, and case mix are separated?",
+      "decision_type": "diagnose",
+      "design_id": "scenario.equity.distributional-service.service-disparities.v1",
+      "design_order": 209,
+      "evidence_gate": "geographic-alignment",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "proposed"
+      ],
+      "family_id": "equity.distributional-service",
+      "family_title": "Distributional public-service equity",
+      "horizon": "annual",
+      "implementation_status": "design-only",
+      "primary_outcome": "unexplained service-access and quality gap",
+      "prohibited_claims": [
+        "Do not label an adjusted area difference discrimination, individual treatment, or causal inequity.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "population-group",
+      "suite": "behavioral-policy-equity",
+      "title": "Diagnose distributional service-access and quality disparities"
+    },
+    {
+      "analysis_modes": [
+        "descriptive"
+      ],
+      "binding_constraint": "The public participation and risk communication diagnose must respect declared measurement resolution and classification uncertainty.",
+      "content_hash": "sha256:f761e2aa079b49ab71109729e1bbb862eef8070c9583ec4684dbcb57c811025c",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Which affected groups and issues are missing across invitation, access, participation, response, and closure stages?",
+      "decision_type": "diagnose",
+      "design_id": "scenario.equity.participation-communication.participation-gaps.v1",
+      "design_order": 217,
+      "evidence_gate": "geographic-alignment",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "proposed"
+      ],
+      "family_id": "equity.participation-communication",
+      "family_title": "Public participation and risk communication",
+      "horizon": "annual",
+      "implementation_status": "design-only",
+      "primary_outcome": "affected people without usable participation and feedback access",
+      "prohibited_claims": [
+        "Do not label nonparticipation apathy, opposition, consent, satisfaction, or lack of concern.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "population-group",
+      "suite": "behavioral-policy-equity",
+      "title": "Diagnose participation, representation, and feedback gaps"
+    },
+    {
+      "analysis_modes": [
+        "descriptive"
+      ],
+      "binding_constraint": "The compliance, incentives, and behavioral policy diagnose must respect declared measurement resolution and classification uncertainty.",
+      "content_hash": "sha256:c5bd8115a4a5db2a2e1b82f66d14ad08c6e22b94dd3a470833208ab47d051b7a",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Which notice, eligibility, capability, process, inspection, and enforcement stages create verified friction or unequal burden?",
+      "decision_type": "diagnose",
+      "design_id": "scenario.equity.compliance-incentives.compliance-process-friction.v1",
+      "design_order": 225,
+      "evidence_gate": "geographic-alignment",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "proposed"
+      ],
+      "family_id": "equity.compliance-incentives",
+      "family_title": "Compliance, incentives, and behavioral policy",
+      "horizon": "annual",
+      "implementation_status": "design-only",
+      "primary_outcome": "eligible or regulated cases with unresolved process barriers",
+      "prohibited_claims": [
+        "Do not label non-completion intentional noncompliance, irresponsibility, risk, or guilt.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "population-group",
+      "suite": "behavioral-policy-equity",
+      "title": "Diagnose compliance and administrative-burden pathways"
+    },
+    {
+      "analysis_modes": [
+        "descriptive"
+      ],
+      "binding_constraint": "The algorithmic decision support and governance diagnose must respect declared measurement resolution and classification uncertainty.",
+      "content_hash": "sha256:d6416ae6b979cb4a33d1cd64b75a8a8bd4d2d2eccff990fb22ebc9ccc5904a71",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Which data, model, interface, human, action, appeal, and outcome stages have unresolved evidence or governance gaps?",
+      "decision_type": "diagnose",
+      "design_id": "scenario.equity.algorithmic-governance.decision-system-risks.v1",
+      "design_order": 233,
+      "evidence_gate": "geographic-alignment",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "proposed"
+      ],
+      "family_id": "equity.algorithmic-governance",
+      "family_title": "Algorithmic decision support and governance",
+      "horizon": "annual",
+      "implementation_status": "design-only",
+      "primary_outcome": "high-impact decision pathways with unresolved controls",
+      "prohibited_claims": [
+        "Do not label a metric gap unlawful discrimination or a documented control effective without evidence.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "network",
+      "suite": "behavioral-policy-equity",
+      "title": "Diagnose algorithmic decision-system risks and control gaps"
+    }
+  ],
+  "kind": "scenario-designs.decision-type.diagnose",
+  "record_count": 30,
+  "schema_version": "1.0.0"
+}

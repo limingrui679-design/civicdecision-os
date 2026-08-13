@@ -1,0 +1,1377 @@
+{
+  "claim_boundary": "Design records are not city executions, deployments, adoptions, or impacts.",
+  "items": [
+    {
+      "analysis_modes": [
+        "descriptive"
+      ],
+      "binding_constraint": "Risk strata must be comparable across neighborhoods without suppressing small vulnerable groups.",
+      "content_hash": "sha256:1edd9ba1c655b300e653496f4cd133f2ee191e2c0681697574f8b6c1b08144e5",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Which neighborhoods combine sustained heat exposure, vulnerable populations, and weak cooling access?",
+      "decision_type": "diagnose",
+      "design_id": "scenario.climate.extreme-heat.heat-access-gaps.v1",
+      "design_order": 1,
+      "evidence_gate": "geographic-alignment",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "proposed"
+      ],
+      "family_id": "climate.extreme-heat",
+      "family_title": "Extreme heat exposure and response",
+      "horizon": "seasonal",
+      "implementation_status": "design-only",
+      "primary_outcome": "population in high-heat low-access areas",
+      "prohibited_claims": [
+        "Do not label an exposure-access screen as observed illness or a causal vulnerability score.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "neighborhood",
+      "suite": "climate-disaster-resilience",
+      "title": "Diagnose neighborhood heat exposure and cooling-access gaps"
+    },
+    {
+      "analysis_modes": [
+        "forecast"
+      ],
+      "binding_constraint": "Forecast workload cannot exceed the declared staffing and cooling-support service envelope without escalation.",
+      "content_hash": "sha256:e2080a3f1b13be04c358bbc1231b2ada9b0124ecee55bab6761c22062effd1d5",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "What daily cooling, welfare-check, and service workload range should operations prepare for during forecast heat?",
+      "decision_type": "forecast",
+      "design_id": "scenario.climate.extreme-heat.heat-service-demand.v1",
+      "design_order": 2,
+      "evidence_gate": "model-calibration",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "proposed"
+      ],
+      "family_id": "climate.extreme-heat",
+      "family_title": "Extreme heat exposure and response",
+      "horizon": "days",
+      "implementation_status": "design-only",
+      "primary_outcome": "unserved heat-response requests",
+      "prohibited_claims": [
+        "Do not report forecast requests as emergency visits, deaths, or verified unmet need.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "service-area",
+      "suite": "climate-disaster-resilience",
+      "title": "Forecast heat-triggered public-service demand"
+    },
+    {
+      "analysis_modes": [
+        "descriptive",
+        "optimization"
+      ],
+      "binding_constraint": "Selected heat-mitigation projects must fit the adopted capital and maintenance budget envelope.",
+      "content_hash": "sha256:460a615c862b11a6e01ba2d630457e83804871bbc1ddb0e8bd5a0cc619d22955",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Which heat-mitigation projects should enter the funded portfolio under cost, exposure, and equity constraints?",
+      "decision_type": "prioritize",
+      "design_id": "scenario.climate.extreme-heat.cooling-investments.v1",
+      "design_order": 3,
+      "evidence_gate": "cost-capacity",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed"
+      ],
+      "family_id": "climate.extreme-heat",
+      "family_title": "Extreme heat exposure and response",
+      "horizon": "multi-year",
+      "implementation_status": "design-only",
+      "primary_outcome": "residual person-days of extreme heat exposure",
+      "prohibited_claims": [
+        "Do not call modeled exposure reduction a measured temperature or health outcome.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "asset",
+      "suite": "climate-disaster-resilience",
+      "title": "Prioritize shade, cool-roof, and cooling retrofit investments"
+    },
+    {
+      "analysis_modes": [
+        "descriptive",
+        "optimization"
+      ],
+      "binding_constraint": "Each selected facility must satisfy occupancy, backup-power, staffing, and accessible-entry capacity.",
+      "content_hash": "sha256:d504a3dab11cb5a95cc6e16f70b264a6c961b080d76e26bebdb5f2bbf4509c39",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Where should seasonal cooling centers open to reduce travel barriers while respecting facility capacity?",
+      "decision_type": "site",
+      "design_id": "scenario.climate.extreme-heat.cooling-center-network.v1",
+      "design_order": 4,
+      "evidence_gate": "network-readiness",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed"
+      ],
+      "family_id": "climate.extreme-heat",
+      "family_title": "Extreme heat exposure and response",
+      "horizon": "seasonal",
+      "implementation_status": "design-only",
+      "primary_outcome": "high-risk residents beyond the cooling-access threshold",
+      "prohibited_claims": [
+        "Do not infer accessible cooling from straight-line distance or an unvalidated network.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "facility",
+      "suite": "climate-disaster-resilience",
+      "title": "Site an accessible cooling-center network"
+    },
+    {
+      "analysis_modes": [
+        "simulation",
+        "optimization"
+      ],
+      "binding_constraint": "No high-vulnerability service area may fall below the declared minimum response coverage.",
+      "content_hash": "sha256:9e855c482459fe8366c5c65d70a22dc9d3af7c57ddd25d7df64dddfcdce0a77a",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "How should limited outreach teams, transport slots, and cooling supplies be distributed during a heat emergency?",
+      "decision_type": "allocate",
+      "design_id": "scenario.climate.extreme-heat.heat-response-resources.v1",
+      "design_order": 5,
+      "evidence_gate": "equity-measurement",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "family_id": "climate.extreme-heat",
+      "family_title": "Extreme heat exposure and response",
+      "horizon": "days",
+      "implementation_status": "design-only",
+      "primary_outcome": "high-risk residents without assigned heat-response capacity",
+      "prohibited_claims": [
+        "Do not describe an optimized allocation as delivered services or reduced mortality.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "service-area",
+      "suite": "climate-disaster-resilience",
+      "title": "Allocate heat-response teams and cooling supplies"
+    },
+    {
+      "analysis_modes": [
+        "forecast",
+        "optimization"
+      ],
+      "binding_constraint": "Schedules must respect labor rest rules, facility opening constraints, and activation lead times.",
+      "content_hash": "sha256:9a5167e340b6ee34a0cac4c07790b2dd75c5ab03e45ee4d96cc86ea828abfcf9",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "When should staff shifts, cooling-center hours, and welfare checks expand across a multi-day heat event?",
+      "decision_type": "schedule",
+      "design_id": "scenario.climate.extreme-heat.heat-operations-calendar.v1",
+      "design_order": 6,
+      "evidence_gate": "temporal-alignment",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed"
+      ],
+      "family_id": "climate.extreme-heat",
+      "family_title": "Extreme heat exposure and response",
+      "horizon": "days",
+      "implementation_status": "design-only",
+      "primary_outcome": "hours of forecast demand above staffed capacity",
+      "prohibited_claims": [
+        "Do not treat a proposed roster as an implemented labor plan or verified response time.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "citywide",
+      "suite": "climate-disaster-resilience",
+      "title": "Schedule heat-response shifts and facility hours"
+    },
+    {
+      "analysis_modes": [
+        "forecast",
+        "simulation",
+        "optimization"
+      ],
+      "binding_constraint": "Critical cooling and welfare-check functions must remain above the declared minimum continuity level.",
+      "content_hash": "sha256:ab71f9c6b07d04e466da5895d08e6b90c6065eb00fe52e628230435e9caafc33",
+      "current_readiness": "reference-implemented",
+      "decision_question": "Which continuity portfolio remains feasible under prolonged heat, power loss, and service-demand surge assumptions?",
+      "decision_type": "stress-test",
+      "design_id": "scenario.climate.extreme-heat.compound-heat-continuity.v1",
+      "design_order": 7,
+      "evidence_gate": "source-lineage",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "existing_template_ref": "deep.climate.heat-service-surge.v1",
+      "family_id": "climate.extreme-heat",
+      "family_title": "Extreme heat exposure and response",
+      "horizon": "weeks",
+      "implementation_status": "reference-implemented",
+      "primary_outcome": "scenario-weighted hours of critical service interruption",
+      "prohibited_claims": [
+        "Do not claim that simulated outages caused observed requests or that a stress test predicts an actual disaster.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "citywide",
+      "suite": "climate-disaster-resilience",
+      "title": "Stress-test service continuity during compound heat"
+    },
+    {
+      "analysis_modes": [
+        "descriptive",
+        "causal"
+      ],
+      "binding_constraint": "Impact estimates must report heterogeneous effects for pre-specified vulnerability groups without post-treatment selection.",
+      "content_hash": "sha256:1f28edcf13b65dca50bde37e0aa08f32187e707a28f050763e5c0b602cff7066",
+      "current_readiness": "blocked-multiple-gates",
+      "decision_question": "Did the phased heat-adaptation program reduce indoor heat burden without widening service disparities?",
+      "decision_type": "evaluate",
+      "design_id": "scenario.climate.extreme-heat.cool-roof-impact.v1",
+      "design_order": 8,
+      "evidence_gate": "causal-identification",
+      "evidence_types": [
+        "causal",
+        "estimated",
+        "observed",
+        "proposed"
+      ],
+      "family_id": "climate.extreme-heat",
+      "family_title": "Extreme heat exposure and response",
+      "horizon": "multi-year",
+      "implementation_status": "design-only",
+      "primary_outcome": "change in measured indoor overheating hours",
+      "prohibited_claims": [
+        "Do not infer health effects from indoor temperature alone or call association causal without the identification gate.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "population-group",
+      "suite": "climate-disaster-resilience",
+      "title": "Evaluate a cool-roof and household-cooling program"
+    },
+    {
+      "analysis_modes": [
+        "descriptive"
+      ],
+      "binding_constraint": "A hotspot must be supported by verified events and mapped drainage connectivity rather than complaints alone.",
+      "content_hash": "sha256:571f852183b3bf0f061b727980a998d4ae547569f90408d398f7e04bf6e6a6db",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Where do rainfall, drainage condition, surface flow paths, and verified flooding jointly indicate failure risk?",
+      "decision_type": "diagnose",
+      "design_id": "scenario.climate.flood-stormwater.drainage-failure-patterns.v1",
+      "design_order": 9,
+      "evidence_gate": "geographic-alignment",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "proposed"
+      ],
+      "family_id": "climate.flood-stormwater",
+      "family_title": "Flood and stormwater resilience",
+      "horizon": "annual",
+      "implementation_status": "design-only",
+      "primary_outcome": "verified flood events unexplained by mapped drainage capacity",
+      "prohibited_claims": [
+        "Do not convert flood complaints into verified inundation depths or engineering failure diagnoses.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "asset",
+      "suite": "climate-disaster-resilience",
+      "title": "Diagnose recurrent drainage-failure patterns"
+    },
+    {
+      "analysis_modes": [
+        "forecast"
+      ],
+      "binding_constraint": "The forecast must distinguish routine service calls from verified emergency response tasks.",
+      "content_hash": "sha256:06511618790a7150693a59d3da461d155da0556483039f011b8371f1cd2e495e",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "What range of pumping, road-closure, and resident-assistance demand follows the forecast rainfall envelope?",
+      "decision_type": "forecast",
+      "design_id": "scenario.climate.flood-stormwater.runoff-response-demand.v1",
+      "design_order": 10,
+      "evidence_gate": "model-calibration",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "proposed"
+      ],
+      "family_id": "climate.flood-stormwater",
+      "family_title": "Flood and stormwater resilience",
+      "horizon": "days",
+      "implementation_status": "design-only",
+      "primary_outcome": "response tasks above available event capacity",
+      "prohibited_claims": [
+        "Do not present forecast operational demand as predicted flood depth or property damage.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "service-area",
+      "suite": "climate-disaster-resilience",
+      "title": "Forecast rainfall-runoff response demand"
+    },
+    {
+      "analysis_modes": [
+        "simulation",
+        "optimization"
+      ],
+      "binding_constraint": "The selected portfolio must fit capital, maintenance, land, and delivery-year budgets.",
+      "content_hash": "sha256:f49f4930f8f691acfbad87ae7888a70547604e82cd9605be393c1c62fe1cd86f",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Which asset renewals and runoff-reduction projects best reduce expected disruption under the capital ceiling?",
+      "decision_type": "prioritize",
+      "design_id": "scenario.climate.flood-stormwater.drainage-renewal.v1",
+      "design_order": 11,
+      "evidence_gate": "cost-capacity",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "family_id": "climate.flood-stormwater",
+      "family_title": "Flood and stormwater resilience",
+      "horizon": "multi-year",
+      "implementation_status": "design-only",
+      "primary_outcome": "expected annual service-disruption hours",
+      "prohibited_claims": [
+        "Do not call modeled avoided disruption a realized financial saving.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "asset",
+      "suite": "climate-disaster-resilience",
+      "title": "Prioritize drainage renewal and green-infrastructure projects"
+    },
+    {
+      "analysis_modes": [
+        "simulation",
+        "optimization"
+      ],
+      "binding_constraint": "Sites must avoid protected habitat, contaminated land, displacement risk, and infeasible subsurface conditions.",
+      "content_hash": "sha256:349713f802d4894902b35d923274aafad0b4ac43b2836d7305499aa8e7ac2c58",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Which parcels can host retention while reducing runoff and avoiding displacement or environmental harm?",
+      "decision_type": "site",
+      "design_id": "scenario.climate.flood-stormwater.retention-storage-sites.v1",
+      "design_order": 12,
+      "evidence_gate": "legal-authority",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "family_id": "climate.flood-stormwater",
+      "family_title": "Flood and stormwater resilience",
+      "horizon": "multi-year",
+      "implementation_status": "design-only",
+      "primary_outcome": "unmanaged design-storm runoff volume",
+      "prohibited_claims": [
+        "Do not treat a screened parcel as acquired, permitted, or hydraulically designed.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "parcel",
+      "suite": "climate-disaster-resilience",
+      "title": "Site distributed stormwater retention and storage"
+    },
+    {
+      "analysis_modes": [
+        "simulation",
+        "optimization"
+      ],
+      "binding_constraint": "Travel, setup, relocation, and crew-safety times must fit the forecast lead-time window.",
+      "content_hash": "sha256:d9c63bf4e078aa15ce9d3326dc75e159a19daf5b4e113144dbc6299f59c4a142",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "How should mobile pumps, barriers, and response teams be assigned as observed conditions change?",
+      "decision_type": "allocate",
+      "design_id": "scenario.climate.flood-stormwater.flood-response-assets.v1",
+      "design_order": 13,
+      "evidence_gate": "temporal-alignment",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "family_id": "climate.flood-stormwater",
+      "family_title": "Flood and stormwater resilience",
+      "horizon": "real-time",
+      "implementation_status": "design-only",
+      "primary_outcome": "critical locations without timely flood-response coverage",
+      "prohibited_claims": [
+        "Do not call a modeled dispatch plan an executed emergency response.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "network",
+      "suite": "climate-disaster-resilience",
+      "title": "Allocate pumps, barriers, and flood-response crews"
+    },
+    {
+      "analysis_modes": [
+        "forecast",
+        "optimization"
+      ],
+      "binding_constraint": "The schedule must respect crew skills, access permits, traffic windows, and equipment availability.",
+      "content_hash": "sha256:de1a89d3fddfe4b9a136697793d00b34443e3b7d5b155b424e983ffb6abf84dc",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "When should catch basins, culverts, and pumps be inspected or cleared before forecast wet periods?",
+      "decision_type": "schedule",
+      "design_id": "scenario.climate.flood-stormwater.drainage-maintenance-window.v1",
+      "design_order": 14,
+      "evidence_gate": "temporal-alignment",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed"
+      ],
+      "family_id": "climate.flood-stormwater",
+      "family_title": "Flood and stormwater resilience",
+      "horizon": "weeks",
+      "implementation_status": "design-only",
+      "primary_outcome": "high-risk asset-days overdue before major rainfall",
+      "prohibited_claims": [
+        "Do not equate a service request closure with verified maintenance completion.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "asset",
+      "suite": "climate-disaster-resilience",
+      "title": "Schedule drainage inspection and maintenance windows"
+    },
+    {
+      "analysis_modes": [
+        "forecast",
+        "simulation",
+        "optimization"
+      ],
+      "binding_constraint": "Critical drainage and emergency functions must stay above the minimum continuity threshold in severe scenarios.",
+      "content_hash": "sha256:f4bad65682f30a9d689692063173bbee44e2ef205839f23ab8165dc5ccc761f2",
+      "current_readiness": "reference-implemented",
+      "decision_question": "Which continuity strategy remains viable across rainfall, tide, blockage, outage, and demand-surge scenarios?",
+      "decision_type": "stress-test",
+      "design_id": "scenario.climate.flood-stormwater.compound-rainfall-continuity.v1",
+      "design_order": 15,
+      "evidence_gate": "source-lineage",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "existing_template_ref": "deep.climate.rainfall-continuity.v1",
+      "family_id": "climate.flood-stormwater",
+      "family_title": "Flood and stormwater resilience",
+      "horizon": "weeks",
+      "implementation_status": "reference-implemented",
+      "primary_outcome": "scenario-weighted critical service interruption",
+      "prohibited_claims": [
+        "Do not claim precipitation caused observed requests or that assumed flood losses were observed.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "citywide",
+      "suite": "climate-disaster-resilience",
+      "title": "Stress-test continuity under compound rainfall and outage"
+    },
+    {
+      "analysis_modes": [
+        "descriptive",
+        "causal"
+      ],
+      "binding_constraint": "Treated and comparison catchments must have stable monitoring, comparable storms, and no unmodeled drainage redesign.",
+      "content_hash": "sha256:49709624bd66abb19edf1e555b45ea90e352d8c2d268cd706e29eb73615a3fc8",
+      "current_readiness": "blocked-multiple-gates",
+      "decision_question": "Did phased green-infrastructure installation reduce verified runoff and disruption relative to credible comparisons?",
+      "decision_type": "evaluate",
+      "design_id": "scenario.climate.flood-stormwater.green-infrastructure-effect.v1",
+      "design_order": 16,
+      "evidence_gate": "causal-identification",
+      "evidence_types": [
+        "causal",
+        "estimated",
+        "observed",
+        "proposed"
+      ],
+      "family_id": "climate.flood-stormwater",
+      "family_title": "Flood and stormwater resilience",
+      "horizon": "multi-year",
+      "implementation_status": "design-only",
+      "primary_outcome": "change in event runoff volume",
+      "prohibited_claims": [
+        "Do not infer causal flood reduction from post-installation complaints alone.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "service-area",
+      "suite": "climate-disaster-resilience",
+      "title": "Evaluate distributed green-infrastructure effects"
+    },
+    {
+      "analysis_modes": [
+        "descriptive"
+      ],
+      "binding_constraint": "Protection-gap estimates must preserve uncertainty where monitor or building data are sparse.",
+      "content_hash": "sha256:3e43f3d9ff58fe5285c979ee2de5fb1ead6eaed2055af94863165b9a2a73423f",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Which populations experience repeated smoke exposure without reliable indoor clean-air protection?",
+      "decision_type": "diagnose",
+      "design_id": "scenario.climate.wildfire-smoke.smoke-protection-gaps.v1",
+      "design_order": 17,
+      "evidence_gate": "geographic-alignment",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "proposed"
+      ],
+      "family_id": "climate.wildfire-smoke",
+      "family_title": "Wildfire smoke and air-quality resilience",
+      "horizon": "seasonal",
+      "implementation_status": "design-only",
+      "primary_outcome": "people in high-exposure low-protection conditions",
+      "prohibited_claims": [
+        "Do not label modeled particulate exposure as an individual dose or diagnosis.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "neighborhood",
+      "suite": "climate-disaster-resilience",
+      "title": "Diagnose smoke-exposure and clean-air protection gaps"
+    },
+    {
+      "analysis_modes": [
+        "forecast"
+      ],
+      "binding_constraint": "Activation forecasts must expose uncertainty and cannot exceed the spatial resolution of validated inputs.",
+      "content_hash": "sha256:bec11155058e57e528b7ee3b2339a45ad0c9850d3557d32297b2a876517cf5c7",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "What probabilistic smoke and assistance-demand envelope should local operations prepare for?",
+      "decision_type": "forecast",
+      "design_id": "scenario.climate.wildfire-smoke.smoke-episode-load.v1",
+      "design_order": 18,
+      "evidence_gate": "model-calibration",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "proposed"
+      ],
+      "family_id": "climate.wildfire-smoke",
+      "family_title": "Wildfire smoke and air-quality resilience",
+      "horizon": "days",
+      "implementation_status": "design-only",
+      "primary_outcome": "service demand above clean-air response capacity",
+      "prohibited_claims": [
+        "Do not present regional smoke forecasts as measured neighborhood exposure.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "citywide",
+      "suite": "climate-disaster-resilience",
+      "title": "Forecast smoke episode intensity and service load"
+    },
+    {
+      "analysis_modes": [
+        "descriptive",
+        "optimization"
+      ],
+      "binding_constraint": "Retrofit selection must fit capital, filter-replacement, energy, and maintenance budgets.",
+      "content_hash": "sha256:4920e0e06cef35c340f7dd5e897847bdcdc13294b280c2c91abdaa744940f4af",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Which public buildings should receive filtration and envelope upgrades first under limited capital?",
+      "decision_type": "prioritize",
+      "design_id": "scenario.climate.wildfire-smoke.filtration-retrofits.v1",
+      "design_order": 19,
+      "evidence_gate": "cost-capacity",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed"
+      ],
+      "family_id": "climate.wildfire-smoke",
+      "family_title": "Wildfire smoke and air-quality resilience",
+      "horizon": "multi-year",
+      "implementation_status": "design-only",
+      "primary_outcome": "vulnerable occupant-hours above indoor particulate thresholds",
+      "prohibited_claims": [
+        "Do not call engineering performance assumptions measured indoor exposure reduction.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "facility",
+      "suite": "climate-disaster-resilience",
+      "title": "Prioritize public-building filtration retrofits"
+    },
+    {
+      "analysis_modes": [
+        "descriptive",
+        "optimization"
+      ],
+      "binding_constraint": "Every selected center must pass indoor-air, power, accessible-entry, occupancy, and staffing requirements.",
+      "content_hash": "sha256:6e3b568b1baee25bc51ff6e1052886dbe1e22c2ade175ecf410f9b72c63803b4",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Where should verified clean-air spaces operate to maximize safe access during smoke events?",
+      "decision_type": "site",
+      "design_id": "scenario.climate.wildfire-smoke.clean-air-centers.v1",
+      "design_order": 20,
+      "evidence_gate": "network-readiness",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed"
+      ],
+      "family_id": "climate.wildfire-smoke",
+      "family_title": "Wildfire smoke and air-quality resilience",
+      "horizon": "seasonal",
+      "implementation_status": "design-only",
+      "primary_outcome": "high-risk residents beyond a qualified clean-air space",
+      "prohibited_claims": [
+        "Do not call an ordinary public building a clean-air center without indoor-air verification.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "facility",
+      "suite": "climate-disaster-resilience",
+      "title": "Site a network of public clean-air centers"
+    },
+    {
+      "analysis_modes": [
+        "simulation",
+        "optimization"
+      ],
+      "binding_constraint": "Minimum protection shares for high-risk groups must be satisfied before residual allocation.",
+      "content_hash": "sha256:63be4d8da45e7fd5dd780ef8c6f3226fb46e519893262801f6333899dbd2c56c",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "How should limited filtration units, calibrated monitors, and outreach capacity be distributed?",
+      "decision_type": "allocate",
+      "design_id": "scenario.climate.wildfire-smoke.filters-monitors-outreach.v1",
+      "design_order": 21,
+      "evidence_gate": "equity-measurement",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "family_id": "climate.wildfire-smoke",
+      "family_title": "Wildfire smoke and air-quality resilience",
+      "horizon": "weeks",
+      "implementation_status": "design-only",
+      "primary_outcome": "high-risk households without assigned protection capacity",
+      "prohibited_claims": [
+        "Do not report allocated equipment as installed, used correctly, or clinically effective.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "population-group",
+      "suite": "climate-disaster-resilience",
+      "title": "Allocate filters, monitors, and smoke outreach"
+    },
+    {
+      "analysis_modes": [
+        "forecast",
+        "optimization"
+      ],
+      "binding_constraint": "Schedules must comply with occupational, school, accessibility, and emergency communication rules.",
+      "content_hash": "sha256:ce0af3cad9ae12e05b3a01c0db51b788c118c31b93b3aa3d2ad794b304b7e68e",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "When should outdoor activities shift, shorten, move indoors, or resume as air quality changes?",
+      "decision_type": "schedule",
+      "design_id": "scenario.climate.wildfire-smoke.smoke-safe-activities.v1",
+      "design_order": 22,
+      "evidence_gate": "temporal-alignment",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed"
+      ],
+      "family_id": "climate.wildfire-smoke",
+      "family_title": "Wildfire smoke and air-quality resilience",
+      "horizon": "days",
+      "implementation_status": "design-only",
+      "primary_outcome": "scheduled participant-hours above exposure limits",
+      "prohibited_claims": [
+        "Do not treat a schedule rule as proof of participant exposure or compliance.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "facility",
+      "suite": "climate-disaster-resilience",
+      "title": "Schedule outdoor work, school, and public activities during smoke"
+    },
+    {
+      "analysis_modes": [
+        "simulation",
+        "optimization"
+      ],
+      "binding_constraint": "Minimum clean-air coverage for high-risk populations must hold under supply and facility failure scenarios.",
+      "content_hash": "sha256:7d5691c58e5217d6802854e7cf92675dbb9d4945e96d189c8163ddc7b8e754fc",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Can clean-air facilities, filters, staff, and communications sustain a multi-week smoke episode?",
+      "decision_type": "stress-test",
+      "design_id": "scenario.climate.wildfire-smoke.prolonged-smoke-continuity.v1",
+      "design_order": 23,
+      "evidence_gate": "external-validation",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "family_id": "climate.wildfire-smoke",
+      "family_title": "Wildfire smoke and air-quality resilience",
+      "horizon": "weeks",
+      "implementation_status": "design-only",
+      "primary_outcome": "scenario-weighted days below minimum clean-air coverage",
+      "prohibited_claims": [
+        "Do not present assumed smoke duration or equipment failure as a forecast event.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "citywide",
+      "suite": "climate-disaster-resilience",
+      "title": "Stress-test prolonged smoke-response continuity"
+    },
+    {
+      "analysis_modes": [
+        "descriptive",
+        "causal"
+      ],
+      "binding_constraint": "Attrition, device use, housing leakage, and subgroup effects must follow the pre-analysis plan.",
+      "content_hash": "sha256:54842bdb01abf95b807f7b1166bb5f58184224766c5aad3466a971ba9fdda2c6",
+      "current_readiness": "blocked-multiple-gates",
+      "decision_question": "Did phased filtration support reduce measured indoor particulate exposure and unequal protection?",
+      "decision_type": "evaluate",
+      "design_id": "scenario.climate.wildfire-smoke.filtration-program-effect.v1",
+      "design_order": 24,
+      "evidence_gate": "causal-identification",
+      "evidence_types": [
+        "causal",
+        "estimated",
+        "observed",
+        "proposed"
+      ],
+      "family_id": "climate.wildfire-smoke",
+      "family_title": "Wildfire smoke and air-quality resilience",
+      "horizon": "seasonal",
+      "implementation_status": "design-only",
+      "primary_outcome": "change in indoor fine-particulate concentration",
+      "prohibited_claims": [
+        "Do not interpret device receipt as use or indoor particulate change as a clinical outcome.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "population-group",
+      "suite": "climate-disaster-resilience",
+      "title": "Evaluate household filtration and outreach effects"
+    },
+    {
+      "analysis_modes": [
+        "descriptive"
+      ],
+      "binding_constraint": "An anomaly must exceed combined production, customer-meter, and boundary-flow uncertainty.",
+      "content_hash": "sha256:f6338bbf87fdc175c9c7ed176359833585afc831ac9fe4968ef536ae83182577",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Which zones show persistent production-consumption imbalance after meter uncertainty and authorized uses are reconciled?",
+      "decision_type": "diagnose",
+      "design_id": "scenario.climate.drought-water.water-loss-balance.v1",
+      "design_order": 25,
+      "evidence_gate": "data-completeness",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "proposed"
+      ],
+      "family_id": "climate.drought-water",
+      "family_title": "Drought and urban water security",
+      "horizon": "annual",
+      "implementation_status": "design-only",
+      "primary_outcome": "unexplained distribution water volume",
+      "prohibited_claims": [
+        "Do not label balance residuals as confirmed leaks or unauthorized consumption.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "service-area",
+      "suite": "climate-disaster-resilience",
+      "title": "Diagnose non-revenue water and demand anomalies"
+    },
+    {
+      "analysis_modes": [
+        "forecast",
+        "simulation"
+      ],
+      "binding_constraint": "Forecast operations must preserve the adopted emergency storage and environmental-flow reserve.",
+      "content_hash": "sha256:d0a3154a41d75c27296163024b24430e750111feb174ea49373c97f0527bee2f",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "What seasonal probability distribution of storage and shortage follows climate, demand, and operating assumptions?",
+      "decision_type": "forecast",
+      "design_id": "scenario.climate.drought-water.drought-supply-demand.v1",
+      "design_order": 26,
+      "evidence_gate": "model-calibration",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "proposed",
+        "simulated"
+      ],
+      "family_id": "climate.drought-water",
+      "family_title": "Drought and urban water security",
+      "horizon": "seasonal",
+      "implementation_status": "design-only",
+      "primary_outcome": "expected potable-water shortage volume",
+      "prohibited_claims": [
+        "Do not call a climate-conditioned water balance a deterministic shortage prediction.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "citywide",
+      "suite": "climate-disaster-resilience",
+      "title": "Forecast drought supply-demand balance"
+    },
+    {
+      "analysis_modes": [
+        "simulation",
+        "optimization"
+      ],
+      "binding_constraint": "Selected projects must fit capital, energy, treatment, maintenance, and delivery-capacity limits.",
+      "content_hash": "sha256:0cb0e771e37e0c80d111fc225ea1c05fd2b059c3b902740707064cc422cecfa2",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Which investments best reduce shortage and failure risk within capital and operating limits?",
+      "decision_type": "prioritize",
+      "design_id": "scenario.climate.drought-water.water-security-portfolio.v1",
+      "design_order": 27,
+      "evidence_gate": "cost-capacity",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "family_id": "climate.drought-water",
+      "family_title": "Drought and urban water security",
+      "horizon": "multi-year",
+      "implementation_status": "design-only",
+      "primary_outcome": "expected annual shortage and leakage volume",
+      "prohibited_claims": [
+        "Do not report modeled yield or avoided shortage as delivered water.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "asset",
+      "suite": "climate-disaster-resilience",
+      "title": "Prioritize leakage, reuse, and supply-reliability investments"
+    },
+    {
+      "analysis_modes": [
+        "simulation",
+        "optimization"
+      ],
+      "binding_constraint": "Sites must meet water-quality, discharge, land, energy, permitting, and community-burden constraints.",
+      "content_hash": "sha256:e3fcfd9faecd2a7bdb5822314e54305895d3cf8371d565219ddc7e3e5f0ab847",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Where can reuse treatment or storage connect feasible supply to demand with acceptable environmental and community burdens?",
+      "decision_type": "site",
+      "design_id": "scenario.climate.drought-water.reuse-storage-facilities.v1",
+      "design_order": 28,
+      "evidence_gate": "legal-authority",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "family_id": "climate.drought-water",
+      "family_title": "Drought and urban water security",
+      "horizon": "multi-year",
+      "implementation_status": "design-only",
+      "primary_outcome": "unserved reliable non-potable water demand",
+      "prohibited_claims": [
+        "Do not describe a screened location as permitted, engineered, or publicly accepted.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "facility",
+      "suite": "climate-disaster-resilience",
+      "title": "Site water reuse and distributed storage facilities"
+    },
+    {
+      "analysis_modes": [
+        "simulation",
+        "optimization"
+      ],
+      "binding_constraint": "Allocation must honor water rights, public-health minimums, environmental flows, and adopted drought rules.",
+      "content_hash": "sha256:f0989d4744da33baf448b0ce6227a3bf9e12506562f781af3c288d71bae5ef8d",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "How should constrained supply be allocated while protecting essential, environmental, and equity requirements?",
+      "decision_type": "allocate",
+      "design_id": "scenario.climate.drought-water.scarce-water-allocation.v1",
+      "design_order": 29,
+      "evidence_gate": "legal-authority",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "family_id": "climate.drought-water",
+      "family_title": "Drought and urban water security",
+      "horizon": "weeks",
+      "implementation_status": "design-only",
+      "primary_outcome": "essential demand left unmet",
+      "prohibited_claims": [
+        "Do not present a modeled scarcity allocation as a lawful order or delivered volume.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "service-area",
+      "suite": "climate-disaster-resilience",
+      "title": "Allocate scarce water across essential uses"
+    },
+    {
+      "analysis_modes": [
+        "forecast",
+        "optimization"
+      ],
+      "binding_constraint": "Treatment, conveyance, maintenance, notice, and restriction lead times must be respected.",
+      "content_hash": "sha256:9971f99e71a3b46b51549a8582360ab4838201288faf1128984ce8664991c2b1",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "When should source switching, maintenance, irrigation limits, and restriction stages occur?",
+      "decision_type": "schedule",
+      "design_id": "scenario.climate.drought-water.drought-operations.v1",
+      "design_order": 30,
+      "evidence_gate": "temporal-alignment",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed"
+      ],
+      "family_id": "climate.drought-water",
+      "family_title": "Drought and urban water security",
+      "horizon": "seasonal",
+      "implementation_status": "design-only",
+      "primary_outcome": "days below emergency storage reserve",
+      "prohibited_claims": [
+        "Do not call an optimized calendar an adopted restriction or completed maintenance plan.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "citywide",
+      "suite": "climate-disaster-resilience",
+      "title": "Schedule drought operations, maintenance, and restrictions"
+    },
+    {
+      "analysis_modes": [
+        "forecast",
+        "simulation",
+        "optimization"
+      ],
+      "binding_constraint": "Essential-service reliability must exceed the declared threshold across severe climate and asset-failure scenarios.",
+      "content_hash": "sha256:d2929161406d7f42dd93b55908281b58b7767ace0ee4e4c1acc5dfaf00a6e861",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Which portfolio sustains essential supply across prolonged drought, infrastructure failure, and demand uncertainty?",
+      "decision_type": "stress-test",
+      "design_id": "scenario.climate.drought-water.multi-year-water-security.v1",
+      "design_order": 31,
+      "evidence_gate": "external-validation",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "family_id": "climate.drought-water",
+      "family_title": "Drought and urban water security",
+      "horizon": "multi-year",
+      "implementation_status": "design-only",
+      "primary_outcome": "scenario-weighted essential shortage volume",
+      "prohibited_claims": [
+        "Do not present synthetic drought sequences as forecasts or assumed project yield as observed supply.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "citywide",
+      "suite": "climate-disaster-resilience",
+      "title": "Stress-test multi-year urban water security"
+    },
+    {
+      "analysis_modes": [
+        "descriptive",
+        "causal"
+      ],
+      "binding_constraint": "Essential-use floors, affordability, treatment timing, and heterogeneous effects must be pre-specified.",
+      "content_hash": "sha256:06382fb026b98d4c7552bfbb159d77de850fe2fb8ae007fd790d0b85b5a61b23",
+      "current_readiness": "blocked-multiple-gates",
+      "decision_question": "Did a phased conservation incentive reduce discretionary demand without burdening essential use?",
+      "decision_type": "evaluate",
+      "design_id": "scenario.climate.drought-water.conservation-incentive-effect.v1",
+      "design_order": 32,
+      "evidence_gate": "causal-identification",
+      "evidence_types": [
+        "causal",
+        "estimated",
+        "observed",
+        "proposed"
+      ],
+      "family_id": "climate.drought-water",
+      "family_title": "Drought and urban water security",
+      "horizon": "annual",
+      "implementation_status": "design-only",
+      "primary_outcome": "change in weather-normalized discretionary water demand",
+      "prohibited_claims": [
+        "Do not infer welfare gains from lower consumption or causal effects from simple before-after billing totals.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "population-group",
+      "suite": "climate-disaster-resilience",
+      "title": "Evaluate conservation pricing and assistance effects"
+    },
+    {
+      "analysis_modes": [
+        "descriptive"
+      ],
+      "binding_constraint": "Exposure findings require verified elevation, protection, asset function, and dependency records.",
+      "content_hash": "sha256:6e269a3422ab34f1dd57602822262518ccaac6dedd8a3dbd1c406836a3bca555",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Which critical services depend on coastal assets exposed across surge and sea-level pathways?",
+      "decision_type": "diagnose",
+      "design_id": "scenario.climate.coastal-storms.coastal-dependency-exposure.v1",
+      "design_order": 33,
+      "evidence_gate": "geographic-alignment",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "proposed"
+      ],
+      "family_id": "climate.coastal-storms",
+      "family_title": "Coastal storms and sea-level adaptation",
+      "horizon": "multi-year",
+      "implementation_status": "design-only",
+      "primary_outcome": "critical service dependencies exposed to coastal flooding",
+      "prohibited_claims": [
+        "Do not equate mapped inundation exposure with observed damage or failure.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "network",
+      "suite": "climate-disaster-resilience",
+      "title": "Diagnose coastal asset exposure and service dependencies"
+    },
+    {
+      "analysis_modes": [
+        "forecast",
+        "simulation"
+      ],
+      "binding_constraint": "Operational forecasts must retain uncertainty from storm track, tide, protection state, and damage translation.",
+      "content_hash": "sha256:d1ba8609e4d4d7f27cd5c33567b8c774d3b2d8e84ef2315c87741592c0786e17",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "What probabilistic surge, access, outage, and response-demand envelope should operations use?",
+      "decision_type": "forecast",
+      "design_id": "scenario.climate.coastal-storms.storm-surge-operations.v1",
+      "design_order": 34,
+      "evidence_gate": "model-calibration",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "proposed",
+        "simulated"
+      ],
+      "family_id": "climate.coastal-storms",
+      "family_title": "Coastal storms and sea-level adaptation",
+      "horizon": "days",
+      "implementation_status": "design-only",
+      "primary_outcome": "critical service demand above operable capacity",
+      "prohibited_claims": [
+        "Do not present forecast inundation or outage as an observed impact.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "citywide",
+      "suite": "climate-disaster-resilience",
+      "title": "Forecast coastal storm operational impacts"
+    },
+    {
+      "analysis_modes": [
+        "simulation",
+        "optimization"
+      ],
+      "binding_constraint": "The portfolio must fit capital, maintenance, acquisition, financing, and delivery constraints by phase.",
+      "content_hash": "sha256:a1655cbd2853d1cada48fe6a69531328742c7f07fee2bdc645f563ef4537f608",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Which phased adaptation portfolio best preserves services and equity under uncertain sea-level pathways?",
+      "decision_type": "prioritize",
+      "design_id": "scenario.climate.coastal-storms.coastal-adaptation-portfolio.v1",
+      "design_order": 35,
+      "evidence_gate": "cost-capacity",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "family_id": "climate.coastal-storms",
+      "family_title": "Coastal storms and sea-level adaptation",
+      "horizon": "multi-year",
+      "implementation_status": "design-only",
+      "primary_outcome": "expected critical-service disruption across sea-level pathways",
+      "prohibited_claims": [
+        "Do not call modeled avoided loss a realized benefit or a pathway an adopted land policy.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "asset",
+      "suite": "climate-disaster-resilience",
+      "title": "Prioritize coastal protection, accommodation, and retreat"
+    },
+    {
+      "analysis_modes": [
+        "simulation",
+        "optimization"
+      ],
+      "binding_constraint": "Candidate sites must remain operable under design surge, wind, access, power, and supply scenarios.",
+      "content_hash": "sha256:5171a90211c0e0d5960c6ae9e57ea33fe47d24209302242754e4e3b74bf3498f",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Where should shelters and logistics hubs remain accessible outside compound surge, wind, and outage exposure?",
+      "decision_type": "site",
+      "design_id": "scenario.climate.coastal-storms.coastal-shelter-logistics.v1",
+      "design_order": 36,
+      "evidence_gate": "network-readiness",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "family_id": "climate.coastal-storms",
+      "family_title": "Coastal storms and sea-level adaptation",
+      "horizon": "multi-year",
+      "implementation_status": "design-only",
+      "primary_outcome": "at-risk population beyond safe shelter capacity",
+      "prohibited_claims": [
+        "Do not label a candidate facility safe without structural, access, and continuity verification.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "facility",
+      "suite": "climate-disaster-resilience",
+      "title": "Site coastal shelters and resilient logistics hubs"
+    },
+    {
+      "analysis_modes": [
+        "forecast",
+        "simulation",
+        "optimization"
+      ],
+      "binding_constraint": "Staging, travel, loading, crew-safety, and evacuation-clearance times must fit the landfall window.",
+      "content_hash": "sha256:65b84446a665a852ff7421fd4bedd7863f32774850bf24f1d03a2efe5ecc5354",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "How should accessible transport, rescue assets, generators, and supplies be staged before landfall?",
+      "decision_type": "allocate",
+      "design_id": "scenario.climate.coastal-storms.coastal-emergency-resources.v1",
+      "design_order": 37,
+      "evidence_gate": "temporal-alignment",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "family_id": "climate.coastal-storms",
+      "family_title": "Coastal storms and sea-level adaptation",
+      "horizon": "days",
+      "implementation_status": "design-only",
+      "primary_outcome": "high-risk residents and critical sites without assigned support",
+      "prohibited_claims": [
+        "Do not report a staged resource plan as completed evacuation or delivered assistance.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "network",
+      "suite": "climate-disaster-resilience",
+      "title": "Allocate coastal emergency transport and supplies"
+    },
+    {
+      "analysis_modes": [
+        "forecast",
+        "simulation",
+        "optimization"
+      ],
+      "binding_constraint": "Each phase must satisfy clearance time, transport capacity, worker safety, and public-notice lead time.",
+      "content_hash": "sha256:29f405a613b3625a6894cdb73055a8d6a7e5da9c475d516b5e1263cf781f9201",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "When should ports, roads, services, and evacuation zones transition before a coastal storm?",
+      "decision_type": "schedule",
+      "design_id": "scenario.climate.coastal-storms.coastal-closure-evacuation.v1",
+      "design_order": 38,
+      "evidence_gate": "network-readiness",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "family_id": "climate.coastal-storms",
+      "family_title": "Coastal storms and sea-level adaptation",
+      "horizon": "days",
+      "implementation_status": "design-only",
+      "primary_outcome": "population remaining in risk zones at unsafe conditions",
+      "prohibited_claims": [
+        "Do not call simulated clearance an actual evacuation result or assume universal compliance.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "network",
+      "suite": "climate-disaster-resilience",
+      "title": "Schedule coastal closures and phased evacuation"
+    },
+    {
+      "analysis_modes": [
+        "forecast",
+        "simulation",
+        "optimization"
+      ],
+      "binding_constraint": "Life-safety and critical-service thresholds must hold under severe correlated failure scenarios.",
+      "content_hash": "sha256:9cbd1f90fb7ce0f609ae8bff881184840709e3ad7b3ff7ccbdc654d25b63aa96",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Which adaptation and continuity strategy survives surge, rain, wind, power, access, and supply-chain failures?",
+      "decision_type": "stress-test",
+      "design_id": "scenario.climate.coastal-storms.compound-coastal-failure.v1",
+      "design_order": 39,
+      "evidence_gate": "external-validation",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "family_id": "climate.coastal-storms",
+      "family_title": "Coastal storms and sea-level adaptation",
+      "horizon": "weeks",
+      "implementation_status": "design-only",
+      "primary_outcome": "scenario-weighted critical service outage duration",
+      "prohibited_claims": [
+        "Do not describe synthetic compound failures as forecast probabilities without calibrated dependence evidence.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "network",
+      "suite": "climate-disaster-resilience",
+      "title": "Stress-test coastal systems under compound failure"
+    },
+    {
+      "analysis_modes": [
+        "descriptive",
+        "causal"
+      ],
+      "binding_constraint": "Selection, insurance, mobility, spillovers, attrition, and displacement outcomes must be pre-specified and observed.",
+      "content_hash": "sha256:3227ec339d24dc1c4ee91b0ac6f46385af5d032a4c01c0138cc276e80fab6c3a",
+      "current_readiness": "blocked-multiple-gates",
+      "decision_question": "Did phased elevation or voluntary acquisition reduce verified loss and displacement burden?",
+      "decision_type": "evaluate",
+      "design_id": "scenario.climate.coastal-storms.coastal-adaptation-effect.v1",
+      "design_order": 40,
+      "evidence_gate": "causal-identification",
+      "evidence_types": [
+        "causal",
+        "estimated",
+        "observed",
+        "proposed"
+      ],
+      "family_id": "climate.coastal-storms",
+      "family_title": "Coastal storms and sea-level adaptation",
+      "horizon": "multi-year",
+      "implementation_status": "design-only",
+      "primary_outcome": "change in event-related verified loss",
+      "prohibited_claims": [
+        "Do not infer causal protection or equitable relocation from selected participant outcomes alone.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "parcel",
+      "suite": "climate-disaster-resilience",
+      "title": "Evaluate property-level coastal adaptation effects"
+    }
+  ],
+  "kind": "scenario-designs.suite.climate-disaster-resilience",
+  "record_count": 40,
+  "schema_version": "1.0.0"
+}

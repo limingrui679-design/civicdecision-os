@@ -1,0 +1,165 @@
+{
+  "affected_system": "urban smoke exposure and clean-air protection system",
+  "alternatives": [
+    "increase pre-season filter inventory",
+    "create redundant clean-air sites and rotating staff",
+    "adopt robust replenishment triggers across duration scenarios"
+  ],
+  "analysis_modes": [
+    "simulation",
+    "optimization"
+  ],
+  "assumptions": [
+    "Air-quality observations carry calibration, siting, and temporal metadata.",
+    "Indoor infiltration and filtration effects are measured locally or labeled assumptions.",
+    "All alternatives, capacities, costs, effects, thresholds, and failure scenarios are proposed until bound to evidence."
+  ],
+  "baseline": "Existing filter stocks and facility plans face prolonged smoke without replenishment changes.",
+  "city_bindings": [],
+  "constraints": [
+    {
+      "binding": true,
+      "constraint_id": "scenario.climate.wildfire-smoke.prolonged-smoke-continuity.v1.constraint.binding",
+      "description": "Minimum clean-air coverage for high-risk populations must hold under supply and facility failure scenarios.",
+      "hard": true,
+      "kind": "risk",
+      "required_source_roles": [
+        "climate-hazard",
+        "environmental-exposure",
+        "facility-inventory",
+        "financial-cost",
+        "geographic-identity",
+        "operating-capacity"
+      ]
+    },
+    {
+      "binding": false,
+      "constraint_id": "scenario.climate.wildfire-smoke.prolonged-smoke-continuity.v1.constraint.evidence-scope",
+      "description": "Every released metric must retain evidence type, source lineage, geography, time, assumptions, and uncertainty.",
+      "hard": true,
+      "kind": "technical",
+      "required_source_roles": [
+        "climate-hazard"
+      ]
+    },
+    {
+      "binding": false,
+      "constraint_id": "scenario.climate.wildfire-smoke.prolonged-smoke-continuity.v1.constraint.decision-authority",
+      "description": "No analytical output may bypass lawful authority, accountable human review, or an applicable appeal process.",
+      "hard": true,
+      "kind": "regulatory",
+      "required_source_roles": [
+        "climate-hazard"
+      ]
+    }
+  ],
+  "current_readiness": "blocked-missing-source",
+  "decision_cadence": "recompiled at each planning cycle and after material evidence change",
+  "decision_owner": "air-quality response coordinator and public-health director",
+  "decision_question": "Can clean-air facilities, filters, staff, and communications sustain a multi-week smoke episode?",
+  "decision_type": "stress-test",
+  "design_id": "scenario.climate.wildfire-smoke.prolonged-smoke-continuity.v1",
+  "design_order": 23,
+  "design_signature": "sha256:04b74ad1c158568af7768fd3e9f0913d6e63149d97777d6a02b1bce21056e904",
+  "evidence_requirements": [
+    "estimated",
+    "observed",
+    "optimized",
+    "proposed",
+    "simulated"
+  ],
+  "family_id": "climate.wildfire-smoke",
+  "family_title": "Wildfire smoke and air-quality resilience",
+  "horizon": "weeks",
+  "implementation_status": "design-only",
+  "independence_key": {
+    "binding_constraint": "Minimum clean-air coverage for high-risk populations must hold under supply and facility failure scenarios.",
+    "decision_object": "prolonged-smoke response continuity plan",
+    "evidence_gate": "Infiltration, filter life, demand, failure, and replenishment parameters have external or local validation ranges.",
+    "horizon": "weeks",
+    "intervention_mechanism": "inventory-depletion and facility-failure simulation",
+    "primary_outcome": "scenario-weighted days below minimum clean-air coverage",
+    "spatial_unit": "citywide"
+  },
+  "intended_claim": "A versioned stress-test design for comparing declared alternatives affecting prolonged-smoke response continuity plan, conditional on its evidence gate.",
+  "limitations": [
+    "This library record has no city binding and therefore reports no local input, output, or recommendation.",
+    "Readiness describes explicit source and method gates; it does not certify implementation feasibility.",
+    "External domain, legal, community, security, and operational review remains outside this design artifact."
+  ],
+  "method_claimed": false,
+  "objectives": [
+    {
+      "evidence_type": "estimated",
+      "metric": "scenario-weighted days below minimum clean-air coverage",
+      "objective_id": "scenario.climate.wildfire-smoke.prolonged-smoke-continuity.v1.objective.primary",
+      "primary": true,
+      "sense": "minimize",
+      "unit": "days"
+    },
+    {
+      "evidence_type": "estimated",
+      "metric": "distributional gap in scenario-weighted days below minimum clean-air coverage",
+      "objective_id": "scenario.climate.wildfire-smoke.prolonged-smoke-continuity.v1.objective.equity",
+      "primary": false,
+      "sense": "minimize",
+      "unit": "days"
+    },
+    {
+      "evidence_type": "observed",
+      "metric": "decision claims with complete evidence lineage",
+      "objective_id": "scenario.climate.wildfire-smoke.prolonged-smoke-continuity.v1.objective.traceability",
+      "primary": false,
+      "sense": "maximize",
+      "unit": "percent"
+    }
+  ],
+  "prohibited_claims": [
+    "Do not present assumed smoke duration or equipment failure as a forecast event.",
+    "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+    "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+    "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+  ],
+  "release_gate": {
+    "failure_release": "Release an explicit insufficient-evidence record naming missing sources, failed diagnostics, prohibited claims, and the next validation action.",
+    "failure_status": "insufficient-evidence",
+    "gate_id": "scenario.climate.wildfire-smoke.prolonged-smoke-continuity.v1.gate.release",
+    "gate_type": "external-validation",
+    "pass_condition": "Infiltration, filter life, demand, failure, and replenishment parameters have external or local validation ranges.",
+    "required_evidence_types": [
+      "estimated",
+      "observed"
+    ],
+    "required_source_roles": [
+      "climate-hazard",
+      "environmental-exposure",
+      "facility-inventory",
+      "financial-cost",
+      "geographic-identity",
+      "operating-capacity"
+    ]
+  },
+  "required_source_roles": [
+    "climate-hazard",
+    "environmental-exposure",
+    "facility-inventory",
+    "financial-cost",
+    "geographic-identity",
+    "operating-capacity"
+  ],
+  "schema_version": "1.0.0",
+  "spatial_unit": "citywide",
+  "suite": "climate-disaster-resilience",
+  "tags": [
+    "climate-disaster-resilience",
+    "climate.wildfire-smoke",
+    "design-only",
+    "scenario-library",
+    "stress-test"
+  ],
+  "title": "Stress-test prolonged smoke-response continuity",
+  "transportability_risks": [
+    "Smoke chemistry, building leakage, monitor density, and household behavior differ.",
+    "Regional forecasts and satellite products may have city-specific resolution limits."
+  ]
+}

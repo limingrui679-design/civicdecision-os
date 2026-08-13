@@ -1,0 +1,162 @@
+{
+  "affected_system": "coastal protection, evacuation, and long-term adaptation system",
+  "alternatives": [
+    "verify high-consequence exposure and hidden dependencies",
+    "protect operational continuity for repeatedly exposed assets",
+    "reduce dependency concentration through redundancy and relocation"
+  ],
+  "analysis_modes": [
+    "descriptive"
+  ],
+  "assumptions": [
+    "Elevation, surge, shoreline, asset, and population layers share documented vertical and horizontal datums.",
+    "Sea-level pathways, damage functions, and adaptation performance remain explicit scenarios.",
+    "All alternatives, capacities, costs, effects, thresholds, and failure scenarios are proposed until bound to evidence."
+  ],
+  "baseline": "Existing coastal defenses and service dependencies remain unchanged.",
+  "city_bindings": [],
+  "constraints": [
+    {
+      "binding": true,
+      "constraint_id": "scenario.climate.coastal-storms.coastal-dependency-exposure.v1.constraint.binding",
+      "description": "Exposure findings require verified elevation, protection, asset function, and dependency records.",
+      "hard": true,
+      "kind": "technical",
+      "required_source_roles": [
+        "asset-condition",
+        "asset-inventory",
+        "climate-hazard",
+        "environmental-exposure",
+        "facility-inventory",
+        "geographic-identity"
+      ]
+    },
+    {
+      "binding": false,
+      "constraint_id": "scenario.climate.coastal-storms.coastal-dependency-exposure.v1.constraint.evidence-scope",
+      "description": "Every released metric must retain evidence type, source lineage, geography, time, assumptions, and uncertainty.",
+      "hard": true,
+      "kind": "technical",
+      "required_source_roles": [
+        "asset-condition"
+      ]
+    },
+    {
+      "binding": false,
+      "constraint_id": "scenario.climate.coastal-storms.coastal-dependency-exposure.v1.constraint.decision-authority",
+      "description": "No analytical output may bypass lawful authority, accountable human review, or an applicable appeal process.",
+      "hard": true,
+      "kind": "regulatory",
+      "required_source_roles": [
+        "asset-condition"
+      ]
+    }
+  ],
+  "current_readiness": "blocked-missing-source",
+  "decision_cadence": "recompiled at each planning cycle and after material evidence change",
+  "decision_owner": "coastal resilience director and emergency-management commissioner",
+  "decision_question": "Which critical services depend on coastal assets exposed across surge and sea-level pathways?",
+  "decision_type": "diagnose",
+  "design_id": "scenario.climate.coastal-storms.coastal-dependency-exposure.v1",
+  "design_order": 33,
+  "design_signature": "sha256:15238f45da74dfc8dc6cd35c266002563fad7530acf7c11ba70f27e4b6bfc929",
+  "evidence_requirements": [
+    "estimated",
+    "observed",
+    "proposed"
+  ],
+  "family_id": "climate.coastal-storms",
+  "family_title": "Coastal storms and sea-level adaptation",
+  "horizon": "multi-year",
+  "implementation_status": "design-only",
+  "independence_key": {
+    "binding_constraint": "Exposure findings require verified elevation, protection, asset function, and dependency records.",
+    "decision_object": "coastal critical-asset and dependency exposure",
+    "evidence_gate": "Surge surfaces, elevation, defenses, parcels, assets, and service areas use reconciled datums and geometries.",
+    "horizon": "multi-year",
+    "intervention_mechanism": "datum-aligned inundation and service-dependency graph analysis",
+    "primary_outcome": "critical service dependencies exposed to coastal flooding",
+    "spatial_unit": "network"
+  },
+  "intended_claim": "A versioned diagnose design for comparing declared alternatives affecting coastal critical-asset and dependency exposure, conditional on its evidence gate.",
+  "limitations": [
+    "This library record has no city binding and therefore reports no local input, output, or recommendation.",
+    "Readiness describes explicit source and method gates; it does not certify implementation feasibility.",
+    "External domain, legal, community, security, and operational review remains outside this design artifact."
+  ],
+  "method_claimed": false,
+  "objectives": [
+    {
+      "evidence_type": "estimated",
+      "metric": "critical service dependencies exposed to coastal flooding",
+      "objective_id": "scenario.climate.coastal-storms.coastal-dependency-exposure.v1.objective.primary",
+      "primary": true,
+      "sense": "minimize",
+      "unit": "dependencies"
+    },
+    {
+      "evidence_type": "estimated",
+      "metric": "distributional gap in critical service dependencies exposed to coastal flooding",
+      "objective_id": "scenario.climate.coastal-storms.coastal-dependency-exposure.v1.objective.equity",
+      "primary": false,
+      "sense": "minimize",
+      "unit": "dependencies"
+    },
+    {
+      "evidence_type": "observed",
+      "metric": "decision claims with complete evidence lineage",
+      "objective_id": "scenario.climate.coastal-storms.coastal-dependency-exposure.v1.objective.traceability",
+      "primary": false,
+      "sense": "maximize",
+      "unit": "percent"
+    }
+  ],
+  "prohibited_claims": [
+    "Do not equate mapped inundation exposure with observed damage or failure.",
+    "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+    "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+    "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+  ],
+  "release_gate": {
+    "failure_release": "Release an explicit insufficient-evidence record naming missing sources, failed diagnostics, prohibited claims, and the next validation action.",
+    "failure_status": "insufficient-evidence",
+    "gate_id": "scenario.climate.coastal-storms.coastal-dependency-exposure.v1.gate.release",
+    "gate_type": "geographic-alignment",
+    "pass_condition": "Surge surfaces, elevation, defenses, parcels, assets, and service areas use reconciled datums and geometries.",
+    "required_evidence_types": [
+      "observed",
+      "proposed"
+    ],
+    "required_source_roles": [
+      "asset-condition",
+      "asset-inventory",
+      "climate-hazard",
+      "environmental-exposure",
+      "facility-inventory",
+      "geographic-identity"
+    ]
+  },
+  "required_source_roles": [
+    "asset-condition",
+    "asset-inventory",
+    "climate-hazard",
+    "environmental-exposure",
+    "facility-inventory",
+    "geographic-identity"
+  ],
+  "schema_version": "1.0.0",
+  "spatial_unit": "network",
+  "suite": "climate-disaster-resilience",
+  "tags": [
+    "climate-disaster-resilience",
+    "climate.coastal-storms",
+    "design-only",
+    "diagnose",
+    "scenario-library"
+  ],
+  "title": "Diagnose coastal asset exposure and service dependencies",
+  "transportability_risks": [
+    "Coastal morphology, tides, subsidence, protection standards, and evacuation behavior differ.",
+    "Long-horizon adaptation values depend on local finance, land tenure, and legal authority."
+  ]
+}

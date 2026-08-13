@@ -1,0 +1,164 @@
+{
+  "affected_system": "urban drainage, stormwater, and flood-response system",
+  "alternatives": [
+    "advance overdue high-consequence assets",
+    "schedule catchment-wide cleaning before seasonal rainfall",
+    "balance condition risk with forecast-triggered maintenance windows"
+  ],
+  "analysis_modes": [
+    "forecast",
+    "optimization"
+  ],
+  "assumptions": [
+    "Rainfall, terrain, drainage, and complaint records use explicit spatial and temporal supports.",
+    "Hydraulic capacities and intervention effects remain measured inputs or labeled assumptions.",
+    "All alternatives, capacities, costs, effects, thresholds, and failure scenarios are proposed until bound to evidence."
+  ],
+  "baseline": "Assets follow fixed cyclical maintenance intervals.",
+  "city_bindings": [],
+  "constraints": [
+    {
+      "binding": true,
+      "constraint_id": "scenario.climate.flood-stormwater.drainage-maintenance-window.v1.constraint.binding",
+      "description": "The schedule must respect crew skills, access permits, traffic windows, and equipment availability.",
+      "hard": true,
+      "kind": "capacity",
+      "required_source_roles": [
+        "asset-condition",
+        "asset-inventory",
+        "climate-hazard",
+        "geographic-identity",
+        "operating-capacity",
+        "service-schedule"
+      ]
+    },
+    {
+      "binding": false,
+      "constraint_id": "scenario.climate.flood-stormwater.drainage-maintenance-window.v1.constraint.evidence-scope",
+      "description": "Every released metric must retain evidence type, source lineage, geography, time, assumptions, and uncertainty.",
+      "hard": true,
+      "kind": "technical",
+      "required_source_roles": [
+        "asset-condition"
+      ]
+    },
+    {
+      "binding": false,
+      "constraint_id": "scenario.climate.flood-stormwater.drainage-maintenance-window.v1.constraint.decision-authority",
+      "description": "No analytical output may bypass lawful authority, accountable human review, or an applicable appeal process.",
+      "hard": true,
+      "kind": "regulatory",
+      "required_source_roles": [
+        "asset-condition"
+      ]
+    }
+  ],
+  "current_readiness": "blocked-missing-source",
+  "decision_cadence": "recompiled at each planning cycle and after material evidence change",
+  "decision_owner": "stormwater utility director and emergency-management lead",
+  "decision_question": "When should catch basins, culverts, and pumps be inspected or cleared before forecast wet periods?",
+  "decision_type": "schedule",
+  "design_id": "scenario.climate.flood-stormwater.drainage-maintenance-window.v1",
+  "design_order": 14,
+  "design_signature": "sha256:22e1cb8b28c3c0a1a14a9ec9ec66eb1642b5c81cc278362b57b863683caedc30",
+  "evidence_requirements": [
+    "estimated",
+    "observed",
+    "optimized",
+    "proposed"
+  ],
+  "family_id": "climate.flood-stormwater",
+  "family_title": "Flood and stormwater resilience",
+  "horizon": "weeks",
+  "implementation_status": "design-only",
+  "independence_key": {
+    "binding_constraint": "The schedule must respect crew skills, access permits, traffic windows, and equipment availability.",
+    "decision_object": "preventive stormwater maintenance calendar",
+    "evidence_gate": "Condition inspections, work orders, forecast windows, and asset histories share effective dates and completion semantics.",
+    "horizon": "weeks",
+    "intervention_mechanism": "weather-aware condition-based maintenance scheduling",
+    "primary_outcome": "high-risk asset-days overdue before major rainfall",
+    "spatial_unit": "asset"
+  },
+  "intended_claim": "A versioned schedule design for comparing declared alternatives affecting preventive stormwater maintenance calendar, conditional on its evidence gate.",
+  "limitations": [
+    "This library record has no city binding and therefore reports no local input, output, or recommendation.",
+    "Readiness describes explicit source and method gates; it does not certify implementation feasibility.",
+    "External domain, legal, community, security, and operational review remains outside this design artifact."
+  ],
+  "method_claimed": false,
+  "objectives": [
+    {
+      "evidence_type": "estimated",
+      "metric": "high-risk asset-days overdue before major rainfall",
+      "objective_id": "scenario.climate.flood-stormwater.drainage-maintenance-window.v1.objective.primary",
+      "primary": true,
+      "sense": "minimize",
+      "unit": "asset-days"
+    },
+    {
+      "evidence_type": "estimated",
+      "metric": "distributional gap in high-risk asset-days overdue before major rainfall",
+      "objective_id": "scenario.climate.flood-stormwater.drainage-maintenance-window.v1.objective.equity",
+      "primary": false,
+      "sense": "minimize",
+      "unit": "asset-days"
+    },
+    {
+      "evidence_type": "observed",
+      "metric": "decision claims with complete evidence lineage",
+      "objective_id": "scenario.climate.flood-stormwater.drainage-maintenance-window.v1.objective.traceability",
+      "primary": false,
+      "sense": "maximize",
+      "unit": "percent"
+    }
+  ],
+  "prohibited_claims": [
+    "Do not equate a service request closure with verified maintenance completion.",
+    "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+    "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+    "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+  ],
+  "release_gate": {
+    "failure_release": "Release an explicit insufficient-evidence record naming missing sources, failed diagnostics, prohibited claims, and the next validation action.",
+    "failure_status": "insufficient-evidence",
+    "gate_id": "scenario.climate.flood-stormwater.drainage-maintenance-window.v1.gate.release",
+    "gate_type": "temporal-alignment",
+    "pass_condition": "Condition inspections, work orders, forecast windows, and asset histories share effective dates and completion semantics.",
+    "required_evidence_types": [
+      "observed",
+      "proposed"
+    ],
+    "required_source_roles": [
+      "asset-condition",
+      "asset-inventory",
+      "climate-hazard",
+      "geographic-identity",
+      "operating-capacity",
+      "service-schedule"
+    ]
+  },
+  "required_source_roles": [
+    "asset-condition",
+    "asset-inventory",
+    "climate-hazard",
+    "geographic-identity",
+    "operating-capacity",
+    "service-schedule"
+  ],
+  "schema_version": "1.0.0",
+  "spatial_unit": "asset",
+  "suite": "climate-disaster-resilience",
+  "tags": [
+    "climate-disaster-resilience",
+    "climate.flood-stormwater",
+    "design-only",
+    "scenario-library",
+    "schedule"
+  ],
+  "title": "Schedule drainage inspection and maintenance windows",
+  "transportability_risks": [
+    "Drainage standards, imperviousness, topography, tides, and maintenance regimes differ.",
+    "Complaint density may reflect reporting access rather than flood incidence."
+  ]
+}

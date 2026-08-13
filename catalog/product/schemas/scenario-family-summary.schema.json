@@ -1,0 +1,100 @@
+{
+  "$defs": {
+    "DecisionType": {
+      "enum": [
+        "diagnose",
+        "forecast",
+        "prioritize",
+        "site",
+        "allocate",
+        "schedule",
+        "stress-test",
+        "evaluate"
+      ],
+      "title": "DecisionType",
+      "type": "string"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "affected_system": {
+      "minLength": 5,
+      "title": "Affected System",
+      "type": "string"
+    },
+    "content_hash": {
+      "pattern": "^sha256:[0-9a-f]{64}$",
+      "title": "Content Hash",
+      "type": "string"
+    },
+    "decision_owner": {
+      "minLength": 3,
+      "title": "Decision Owner",
+      "type": "string"
+    },
+    "decision_types": {
+      "items": {
+        "$ref": "#/$defs/DecisionType"
+      },
+      "minItems": 1,
+      "title": "Decision Types",
+      "type": "array"
+    },
+    "description": {
+      "minLength": 12,
+      "title": "Description",
+      "type": "string"
+    },
+    "design_count": {
+      "minimum": 1,
+      "title": "Design Count",
+      "type": "integer"
+    },
+    "design_only_count": {
+      "minimum": 0,
+      "title": "Design Only Count",
+      "type": "integer"
+    },
+    "family_id": {
+      "pattern": "^[a-z0-9]+(?:[._-][a-z0-9]+)*$",
+      "title": "Family Id",
+      "type": "string"
+    },
+    "family_order": {
+      "minimum": 1,
+      "title": "Family Order",
+      "type": "integer"
+    },
+    "reference_implemented_count": {
+      "minimum": 0,
+      "title": "Reference Implemented Count",
+      "type": "integer"
+    },
+    "suite": {
+      "minLength": 1,
+      "title": "Suite",
+      "type": "string"
+    },
+    "title": {
+      "minLength": 3,
+      "title": "Title",
+      "type": "string"
+    }
+  },
+  "required": [
+    "family_order",
+    "family_id",
+    "suite",
+    "title",
+    "description",
+    "affected_system",
+    "decision_owner",
+    "design_count",
+    "reference_implemented_count",
+    "design_only_count",
+    "decision_types",
+    "content_hash"
+  ],
+  "title": "ScenarioFamilySummary",
+  "type": "object"
+}

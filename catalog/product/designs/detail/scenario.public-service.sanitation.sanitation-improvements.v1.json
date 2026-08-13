@@ -1,0 +1,226 @@
+{
+  "audit_maximum_pairwise_similarity": 0.646154,
+  "design": {
+    "affected_system": "waste collection, recycling, street cleaning, illegal-dumping, and sanitation response",
+    "alternatives": [
+      "rank verified high-consequence candidates for sanitation asset and service improvement portfolio",
+      "select a risk-, equity-, and lifecycle-balanced portfolio for sanitation asset and service improvement portfolio",
+      "pair failure, demand, equity, cost, and lifecycle portfolio optimization with an explicit stop, review, and escalation rule"
+    ],
+    "analysis_modes": [
+      "descriptive",
+      "optimization"
+    ],
+    "assumptions": [
+      "Requests, route events, tonnage, inspections, dumping evidence, contamination, and completion remain distinct.",
+      "Waste generation and service demand are measured or modeled with declared coverage.",
+      "All alternatives, capacities, costs, effects, thresholds, and failure scenarios are proposed until bound to evidence."
+    ],
+    "baseline": "fund only already-committed work for sanitation asset and service improvement portfolio.",
+    "city_bindings": [],
+    "constraints": [
+      {
+        "binding": true,
+        "constraint_id": "scenario.public-service.sanitation.sanitation-improvements.v1.constraint.binding",
+        "description": "The sanitation, waste, and street cleanliness prioritize must respect declared capital, operating, maintenance, and delivery budgets.",
+        "hard": true,
+        "kind": "budget",
+        "required_source_roles": [
+          "asset-condition",
+          "asset-inventory",
+          "equity-attribute",
+          "financial-cost",
+          "municipal-demand",
+          "transport-network"
+        ]
+      },
+      {
+        "binding": false,
+        "constraint_id": "scenario.public-service.sanitation.sanitation-improvements.v1.constraint.evidence-scope",
+        "description": "Every released metric must retain evidence type, source lineage, geography, time, assumptions, and uncertainty.",
+        "hard": true,
+        "kind": "technical",
+        "required_source_roles": [
+          "asset-condition"
+        ]
+      },
+      {
+        "binding": false,
+        "constraint_id": "scenario.public-service.sanitation.sanitation-improvements.v1.constraint.decision-authority",
+        "description": "No analytical output may bypass lawful authority, accountable human review, or an applicable appeal process.",
+        "hard": true,
+        "kind": "regulatory",
+        "required_source_roles": [
+          "asset-condition"
+        ]
+      }
+    ],
+    "current_readiness": "reference-implemented",
+    "decision_cadence": "recompiled at each planning cycle and after material evidence change",
+    "decision_owner": "sanitation commissioner and waste operations chief",
+    "decision_question": "Which vehicles, containers, depots, public bins, route tools, and prevention measures should be funded?",
+    "decision_type": "prioritize",
+    "design_id": "scenario.public-service.sanitation.sanitation-improvements.v1",
+    "design_order": 155,
+    "design_signature": "sha256:e87ee60f13fca2bace5aa7e8317f2313d9bd2b7d78a4c1ea1ed8bb41b3dcdd9a",
+    "evidence_requirements": [
+      "estimated",
+      "observed",
+      "optimized",
+      "proposed"
+    ],
+    "existing_template_ref": "deep.public-service.sanitation-workload.v1",
+    "family_id": "public-service.sanitation",
+    "family_title": "Sanitation, waste, and street cleanliness",
+    "horizon": "multi-year",
+    "implementation_status": "reference-implemented",
+    "independence_key": {
+      "binding_constraint": "The sanitation, waste, and street cleanliness prioritize must respect declared capital, operating, maintenance, and delivery budgets.",
+      "decision_object": "sanitation asset and service improvement portfolio",
+      "evidence_gate": "Evidence for sanitation asset and service improvement portfolio passes documented checks for cost, benefit, service life, dependencies, deliverability, and maintenance burden.",
+      "horizon": "multi-year",
+      "intervention_mechanism": "failure, demand, equity, cost, and lifecycle portfolio optimization",
+      "primary_outcome": "expected sanitation service failure and overflow burden",
+      "spatial_unit": "asset"
+    },
+    "intended_claim": "A versioned prioritize design for comparing declared alternatives affecting sanitation asset and service improvement portfolio, conditional on its evidence gate.",
+    "limitations": [
+      "This library record has no city binding and therefore reports no local input, output, or recommendation.",
+      "Readiness describes explicit source and method gates; it does not certify implementation feasibility.",
+      "External domain, legal, community, security, and operational review remains outside this design artifact."
+    ],
+    "method_claimed": false,
+    "objectives": [
+      {
+        "evidence_type": "estimated",
+        "metric": "expected sanitation service failure and overflow burden",
+        "objective_id": "scenario.public-service.sanitation.sanitation-improvements.v1.objective.primary",
+        "primary": true,
+        "sense": "minimize",
+        "unit": "service-hours"
+      },
+      {
+        "evidence_type": "estimated",
+        "metric": "distributional gap in expected sanitation service failure and overflow burden",
+        "objective_id": "scenario.public-service.sanitation.sanitation-improvements.v1.objective.equity",
+        "primary": false,
+        "sense": "minimize",
+        "unit": "service-hours"
+      },
+      {
+        "evidence_type": "observed",
+        "metric": "decision claims with complete evidence lineage",
+        "objective_id": "scenario.public-service.sanitation.sanitation-improvements.v1.objective.traceability",
+        "primary": false,
+        "sense": "maximize",
+        "unit": "percent"
+      }
+    ],
+    "prohibited_claims": [
+      "Do not report modeled cleanliness or service gains as observed outcomes.",
+      "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+      "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+      "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+    ],
+    "reference_implementation_note": "Tier-D template deep.public-service.sanitation-workload.v1 (Sanitation-related request workload planning) supplies a bounded reference workflow for this design axis. The mapping does not establish complete city-specific inputs, external validity, deployment, adoption, or impact.",
+    "release_gate": {
+      "failure_release": "Release an explicit insufficient-evidence record naming missing sources, failed diagnostics, prohibited claims, and the next validation action.",
+      "failure_status": "insufficient-evidence",
+      "gate_id": "scenario.public-service.sanitation.sanitation-improvements.v1.gate.release",
+      "gate_type": "cost-capacity",
+      "pass_condition": "Evidence for sanitation asset and service improvement portfolio passes documented checks for cost, benefit, service life, dependencies, deliverability, and maintenance burden.",
+      "required_evidence_types": [
+        "observed",
+        "proposed"
+      ],
+      "required_source_roles": [
+        "asset-condition",
+        "asset-inventory",
+        "equity-attribute",
+        "financial-cost",
+        "municipal-demand",
+        "transport-network"
+      ]
+    },
+    "required_source_roles": [
+      "asset-condition",
+      "asset-inventory",
+      "equity-attribute",
+      "financial-cost",
+      "municipal-demand",
+      "transport-network"
+    ],
+    "schema_version": "1.0.0",
+    "spatial_unit": "asset",
+    "suite": "public-service-operations",
+    "tags": [
+      "prioritize",
+      "public-service-operations",
+      "public-service.sanitation",
+      "reference-implemented",
+      "scenario-library"
+    ],
+    "title": "Prioritize sanitation assets and service improvements",
+    "transportability_risks": [
+      "Collection systems, housing form, waste law, contracts, markets, and reporting behavior differ.",
+      "Request labels and tonnage do not fully capture cleanliness or illegal dumping."
+    ]
+  },
+  "family": {
+    "affected_system": "waste collection, recycling, street cleaning, illegal-dumping, and sanitation response",
+    "claim_boundary": [
+      "Service requests measure reported workload, not verified incidents, need, harm, or resolution.",
+      "Assignments and schedules are proposed operations, not completed work or public outcomes.",
+      "Design records do not establish agency adoption, deployment, productivity, or resident impact."
+    ],
+    "common_source_roles": [
+      "asset-inventory",
+      "municipal-demand",
+      "transport-network"
+    ],
+    "decision_owner": "sanitation commissioner and waste operations chief",
+    "decision_types": [
+      "diagnose",
+      "forecast",
+      "prioritize",
+      "site",
+      "allocate",
+      "schedule",
+      "stress-test",
+      "evaluate"
+    ],
+    "description": "Eight decisions for sanitation signal diagnosis, workload forecasting, asset investment, facility siting, crew allocation, route scheduling, disruption stress, and intervention evaluation.",
+    "design_refs": [
+      "scenario.public-service.sanitation.sanitation-workload.v1",
+      "scenario.public-service.sanitation.waste-service-demand.v1",
+      "scenario.public-service.sanitation.sanitation-improvements.v1",
+      "scenario.public-service.sanitation.sanitation-facilities.v1",
+      "scenario.public-service.sanitation.sanitation-crews-fleet.v1",
+      "scenario.public-service.sanitation.collection-cleaning-routes.v1",
+      "scenario.public-service.sanitation.waste-continuity.v1",
+      "scenario.public-service.sanitation.waste-prevention-effect.v1"
+    ],
+    "design_signatures": [
+      "sha256:f90b12a5eaa3ab801a7e9a5f91d66afe8ce36c63c21dd985d53cab8c53710a46",
+      "sha256:013c459e7a7b8c3a71e0d57c824ffe23f24e1776023a5358911424a9b3799cc8",
+      "sha256:e87ee60f13fca2bace5aa7e8317f2313d9bd2b7d78a4c1ea1ed8bb41b3dcdd9a",
+      "sha256:60572d60ec4c926e70dbc020014d586a699cdef9fb859c32b37a4fe7de96ec57",
+      "sha256:6ac9d73c1fed502eb8f8e20ff440901568b9a314b40e83570c77cbc1d0523e4d",
+      "sha256:e56d624f0f82ec79b4ec57010dc37048044f8101dfdae4a7e40872edb4a5e287",
+      "sha256:fe3efa15456e090a7e535e1b44b5797959b863ee8f9e540f5469e4d2c1d20318",
+      "sha256:bb1921577a391c0274ed6dbceb65b80e2c97e300cf74727dfd4722747b3ca6fb"
+    ],
+    "family_id": "public-service.sanitation",
+    "family_order": 20,
+    "schema_version": "1.0.0",
+    "suite": "public-service-operations",
+    "title": "Sanitation, waste, and street cleanliness"
+  },
+  "library_claim_boundary": [
+    "The catalog contains 240 decision designs, not 240 city executions.",
+    "Exactly twelve designs map to existing Tier-D reference templates; 228 remain design-only.",
+    "A reference implementation can be an explicit negative release and does not imply impact.",
+    "No record claims a city binding, new method, deployment, adoption, or real-user outcome.",
+    "Future execution requires source binding, gate passage, and domain, legal, community, and operational review."
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "affected_system": "non-clinical emergency call handling, unit readiness, and incident support network",
+  "claim_boundary": [
+    "Service requests measure reported workload, not verified incidents, need, harm, or resolution.",
+    "Assignments and schedules are proposed operations, not completed work or public outcomes.",
+    "Design records do not establish agency adoption, deployment, productivity, or resident impact."
+  ],
+  "common_source_roles": [
+    "municipal-demand",
+    "operating-capacity",
+    "transport-network"
+  ],
+  "decision_owner": "emergency communications director and public-safety operations chief",
+  "decision_types": [
+    "diagnose",
+    "forecast",
+    "prioritize",
+    "site",
+    "allocate",
+    "schedule",
+    "stress-test",
+    "evaluate"
+  ],
+  "description": "Eight decisions for response-gap diagnosis, demand forecasting, readiness portfolios, station siting, unit allocation, coverage schedules, surge stress, and system evaluation.",
+  "design_refs": [
+    "scenario.public-service.emergency-response.response-coverage-gaps.v1",
+    "scenario.public-service.emergency-response.incident-unit-demand.v1",
+    "scenario.public-service.emergency-response.response-readiness-portfolio.v1",
+    "scenario.public-service.emergency-response.response-bases.v1",
+    "scenario.public-service.emergency-response.response-units.v1",
+    "scenario.public-service.emergency-response.readiness-coverage.v1",
+    "scenario.public-service.emergency-response.multi-incident-surge.v1",
+    "scenario.public-service.emergency-response.dispatch-process-effect.v1"
+  ],
+  "design_signatures": [
+    "sha256:e27b8be2c0814b76fea01cfa8acc10f6fab177356c45baf3c74e9a08f379cbde",
+    "sha256:9b586dfebcf6f6cb5e7c10c39e0623de0ee43ee320e2e8a4b19674949ed2aa1f",
+    "sha256:24b63f3a2e582a8c236322231d655c73bcffe602176efb98a0ecd0b4ed953c35",
+    "sha256:a79c1450d74dceb0f735ee3f29d2edf0a49808f8c736f60a60887a073efbcfa8",
+    "sha256:96700c558c258f69d4c1e660989603c80c1ca8e0052a91fcafd730daf4f652c9",
+    "sha256:b98fb2cb8e24fd5523805b9a90da0d6ee4b45f37111faeb9985f691d4202bc15",
+    "sha256:f9c0cd8e327d3c19532350b0d12590eff90581bb17dd995c1d3934f26fe2198b",
+    "sha256:63225657ffafbbb8204234fe556ed9ff5ba7d53ca4e6a40c7a87e410c419bb43"
+  ],
+  "family_id": "public-service.emergency-response",
+  "family_order": 21,
+  "schema_version": "1.0.0",
+  "suite": "public-service-operations",
+  "title": "Emergency response readiness and allocation"
+}

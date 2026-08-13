@@ -1,0 +1,159 @@
+{
+  "affected_system": "urban smoke exposure and clean-air protection system",
+  "alternatives": [
+    "verify protection conditions in the largest apparent gaps",
+    "target portable filtration support to confirmed high-risk households",
+    "combine building upgrades with accessible public clean-air spaces"
+  ],
+  "analysis_modes": [
+    "descriptive"
+  ],
+  "assumptions": [
+    "Air-quality observations carry calibration, siting, and temporal metadata.",
+    "Indoor infiltration and filtration effects are measured locally or labeled assumptions.",
+    "All alternatives, capacities, costs, effects, thresholds, and failure scenarios are proposed until bound to evidence."
+  ],
+  "baseline": "Existing filtration and public clean-air resources remain unchanged.",
+  "city_bindings": [],
+  "constraints": [
+    {
+      "binding": true,
+      "constraint_id": "scenario.climate.wildfire-smoke.smoke-protection-gaps.v1.constraint.binding",
+      "description": "Protection-gap estimates must preserve uncertainty where monitor or building data are sparse.",
+      "hard": true,
+      "kind": "equity",
+      "required_source_roles": [
+        "climate-hazard",
+        "environmental-exposure",
+        "equity-attribute",
+        "facility-inventory",
+        "geographic-identity"
+      ]
+    },
+    {
+      "binding": false,
+      "constraint_id": "scenario.climate.wildfire-smoke.smoke-protection-gaps.v1.constraint.evidence-scope",
+      "description": "Every released metric must retain evidence type, source lineage, geography, time, assumptions, and uncertainty.",
+      "hard": true,
+      "kind": "technical",
+      "required_source_roles": [
+        "climate-hazard"
+      ]
+    },
+    {
+      "binding": false,
+      "constraint_id": "scenario.climate.wildfire-smoke.smoke-protection-gaps.v1.constraint.decision-authority",
+      "description": "No analytical output may bypass lawful authority, accountable human review, or an applicable appeal process.",
+      "hard": true,
+      "kind": "regulatory",
+      "required_source_roles": [
+        "climate-hazard"
+      ]
+    }
+  ],
+  "current_readiness": "blocked-missing-source",
+  "decision_cadence": "recompiled at each planning cycle and after material evidence change",
+  "decision_owner": "air-quality response coordinator and public-health director",
+  "decision_question": "Which populations experience repeated smoke exposure without reliable indoor clean-air protection?",
+  "decision_type": "diagnose",
+  "design_id": "scenario.climate.wildfire-smoke.smoke-protection-gaps.v1",
+  "design_order": 17,
+  "design_signature": "sha256:b9a20a7135047103ff30443efe2f51f14344e685a2ab2c0f90a4b7133b8f7b72",
+  "evidence_requirements": [
+    "estimated",
+    "observed",
+    "proposed"
+  ],
+  "family_id": "climate.wildfire-smoke",
+  "family_title": "Wildfire smoke and air-quality resilience",
+  "horizon": "seasonal",
+  "implementation_status": "design-only",
+  "independence_key": {
+    "binding_constraint": "Protection-gap estimates must preserve uncertainty where monitor or building data are sparse.",
+    "decision_object": "population smoke-exposure and protection gaps",
+    "evidence_gate": "Monitor footprints, satellite grids, building records, and population estimates align to declared geographies.",
+    "horizon": "seasonal",
+    "intervention_mechanism": "monitor-satellite-building vulnerability triangulation",
+    "primary_outcome": "people in high-exposure low-protection conditions",
+    "spatial_unit": "neighborhood"
+  },
+  "intended_claim": "A versioned diagnose design for comparing declared alternatives affecting population smoke-exposure and protection gaps, conditional on its evidence gate.",
+  "limitations": [
+    "This library record has no city binding and therefore reports no local input, output, or recommendation.",
+    "Readiness describes explicit source and method gates; it does not certify implementation feasibility.",
+    "External domain, legal, community, security, and operational review remains outside this design artifact."
+  ],
+  "method_claimed": false,
+  "objectives": [
+    {
+      "evidence_type": "estimated",
+      "metric": "people in high-exposure low-protection conditions",
+      "objective_id": "scenario.climate.wildfire-smoke.smoke-protection-gaps.v1.objective.primary",
+      "primary": true,
+      "sense": "minimize",
+      "unit": "people"
+    },
+    {
+      "evidence_type": "estimated",
+      "metric": "distributional gap in people in high-exposure low-protection conditions",
+      "objective_id": "scenario.climate.wildfire-smoke.smoke-protection-gaps.v1.objective.equity",
+      "primary": false,
+      "sense": "minimize",
+      "unit": "people"
+    },
+    {
+      "evidence_type": "observed",
+      "metric": "decision claims with complete evidence lineage",
+      "objective_id": "scenario.climate.wildfire-smoke.smoke-protection-gaps.v1.objective.traceability",
+      "primary": false,
+      "sense": "maximize",
+      "unit": "percent"
+    }
+  ],
+  "prohibited_claims": [
+    "Do not label modeled particulate exposure as an individual dose or diagnosis.",
+    "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+    "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+    "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+  ],
+  "release_gate": {
+    "failure_release": "Release an explicit insufficient-evidence record naming missing sources, failed diagnostics, prohibited claims, and the next validation action.",
+    "failure_status": "insufficient-evidence",
+    "gate_id": "scenario.climate.wildfire-smoke.smoke-protection-gaps.v1.gate.release",
+    "gate_type": "geographic-alignment",
+    "pass_condition": "Monitor footprints, satellite grids, building records, and population estimates align to declared geographies.",
+    "required_evidence_types": [
+      "observed",
+      "proposed"
+    ],
+    "required_source_roles": [
+      "climate-hazard",
+      "environmental-exposure",
+      "equity-attribute",
+      "facility-inventory",
+      "geographic-identity"
+    ]
+  },
+  "required_source_roles": [
+    "climate-hazard",
+    "environmental-exposure",
+    "equity-attribute",
+    "facility-inventory",
+    "geographic-identity"
+  ],
+  "schema_version": "1.0.0",
+  "spatial_unit": "neighborhood",
+  "suite": "climate-disaster-resilience",
+  "tags": [
+    "climate-disaster-resilience",
+    "climate.wildfire-smoke",
+    "design-only",
+    "diagnose",
+    "scenario-library"
+  ],
+  "title": "Diagnose smoke-exposure and clean-air protection gaps",
+  "transportability_risks": [
+    "Smoke chemistry, building leakage, monitor density, and household behavior differ.",
+    "Regional forecasts and satellite products may have city-specific resolution limits."
+  ]
+}

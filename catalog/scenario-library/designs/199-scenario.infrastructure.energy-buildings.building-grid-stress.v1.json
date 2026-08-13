@@ -1,0 +1,166 @@
+{
+  "affected_system": "municipal buildings, distributed energy, electrification, and emissions management",
+  "alternatives": [
+    "add targeted redundancy around the largest failure modes in municipal building energy continuity under grid and climate stress",
+    "select an adaptive robust portfolio across severe scenarios for municipal building energy continuity under grid and climate stress",
+    "pair load, weather, grid, equipment, storage, and backup-power simulation with an explicit stop, review, and escalation rule"
+  ],
+  "analysis_modes": [
+    "forecast",
+    "simulation",
+    "optimization"
+  ],
+  "assumptions": [
+    "Meters, fuels, tariffs, weather, occupancy, equipment, projects, and emissions factors are versioned.",
+    "Modeled energy and carbon savings remain distinct from measured post-project performance.",
+    "All alternatives, capacities, costs, effects, thresholds, and failure scenarios are proposed until bound to evidence."
+  ],
+  "baseline": "apply current continuity provisions to municipal building energy continuity under grid and climate stress.",
+  "city_bindings": [],
+  "constraints": [
+    {
+      "binding": true,
+      "constraint_id": "scenario.infrastructure.energy-buildings.building-grid-stress.v1.constraint.binding",
+      "description": "The municipal energy and building decarbonization stress test must respect declared minimum continuity and safety thresholds across severe scenarios.",
+      "hard": true,
+      "kind": "risk",
+      "required_source_roles": [
+        "asset-condition",
+        "asset-inventory",
+        "climate-hazard",
+        "environmental-exposure",
+        "financial-cost",
+        "operating-capacity"
+      ]
+    },
+    {
+      "binding": false,
+      "constraint_id": "scenario.infrastructure.energy-buildings.building-grid-stress.v1.constraint.evidence-scope",
+      "description": "Every released metric must retain evidence type, source lineage, geography, time, assumptions, and uncertainty.",
+      "hard": true,
+      "kind": "technical",
+      "required_source_roles": [
+        "asset-condition"
+      ]
+    },
+    {
+      "binding": false,
+      "constraint_id": "scenario.infrastructure.energy-buildings.building-grid-stress.v1.constraint.decision-authority",
+      "description": "No analytical output may bypass lawful authority, accountable human review, or an applicable appeal process.",
+      "hard": true,
+      "kind": "regulatory",
+      "required_source_roles": [
+        "asset-condition"
+      ]
+    }
+  ],
+  "current_readiness": "blocked-missing-source",
+  "decision_cadence": "recompiled at each planning cycle and after material evidence change",
+  "decision_owner": "municipal energy director and public-building portfolio manager",
+  "decision_question": "Which electrification and resilience strategy preserves critical services under peak, outage, weather, and equipment failures?",
+  "decision_type": "stress-test",
+  "design_id": "scenario.infrastructure.energy-buildings.building-grid-stress.v1",
+  "design_order": 199,
+  "design_signature": "sha256:5449461d52d6c37862db488871e4d6444f03b2c85fd90625055e32c9e8049bc8",
+  "evidence_requirements": [
+    "estimated",
+    "observed",
+    "optimized",
+    "proposed",
+    "simulated"
+  ],
+  "family_id": "infrastructure.energy-buildings",
+  "family_title": "Municipal energy and building decarbonization",
+  "horizon": "seasonal",
+  "implementation_status": "design-only",
+  "independence_key": {
+    "binding_constraint": "The municipal energy and building decarbonization stress test must respect declared minimum continuity and safety thresholds across severe scenarios.",
+    "decision_object": "municipal building energy continuity under grid and climate stress",
+    "evidence_gate": "Evidence for municipal building energy continuity under grid and climate stress passes documented checks for scenario ranges, dependence, failure rates, recovery, intervention performance, and sensitivity.",
+    "horizon": "seasonal",
+    "intervention_mechanism": "load, weather, grid, equipment, storage, and backup-power simulation",
+    "primary_outcome": "scenario-weighted critical-load service interruption",
+    "spatial_unit": "network"
+  },
+  "intended_claim": "A versioned stress-test design for comparing declared alternatives affecting municipal building energy continuity under grid and climate stress, conditional on its evidence gate.",
+  "limitations": [
+    "This library record has no city binding and therefore reports no local input, output, or recommendation.",
+    "Readiness describes explicit source and method gates; it does not certify implementation feasibility.",
+    "External domain, legal, community, security, and operational review remains outside this design artifact."
+  ],
+  "method_claimed": false,
+  "objectives": [
+    {
+      "evidence_type": "estimated",
+      "metric": "scenario-weighted critical-load service interruption",
+      "objective_id": "scenario.infrastructure.energy-buildings.building-grid-stress.v1.objective.primary",
+      "primary": true,
+      "sense": "minimize",
+      "unit": "kilowatt-hours unserved"
+    },
+    {
+      "evidence_type": "estimated",
+      "metric": "distributional gap in scenario-weighted critical-load service interruption",
+      "objective_id": "scenario.infrastructure.energy-buildings.building-grid-stress.v1.objective.equity",
+      "primary": false,
+      "sense": "minimize",
+      "unit": "kilowatt-hours unserved"
+    },
+    {
+      "evidence_type": "observed",
+      "metric": "decision claims with complete evidence lineage",
+      "objective_id": "scenario.infrastructure.energy-buildings.building-grid-stress.v1.objective.traceability",
+      "primary": false,
+      "sense": "maximize",
+      "unit": "percent"
+    }
+  ],
+  "prohibited_claims": [
+    "Do not present synthetic load, outage, or backup performance as observed events.",
+    "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+    "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+    "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+  ],
+  "release_gate": {
+    "failure_release": "Release an explicit insufficient-evidence record naming missing sources, failed diagnostics, prohibited claims, and the next validation action.",
+    "failure_status": "insufficient-evidence",
+    "gate_id": "scenario.infrastructure.energy-buildings.building-grid-stress.v1.gate.release",
+    "gate_type": "external-validation",
+    "pass_condition": "Evidence for municipal building energy continuity under grid and climate stress passes documented checks for scenario ranges, dependence, failure rates, recovery, intervention performance, and sensitivity.",
+    "required_evidence_types": [
+      "estimated",
+      "observed"
+    ],
+    "required_source_roles": [
+      "asset-condition",
+      "asset-inventory",
+      "climate-hazard",
+      "environmental-exposure",
+      "financial-cost",
+      "operating-capacity"
+    ]
+  },
+  "required_source_roles": [
+    "asset-condition",
+    "asset-inventory",
+    "climate-hazard",
+    "environmental-exposure",
+    "financial-cost",
+    "operating-capacity"
+  ],
+  "schema_version": "1.0.0",
+  "spatial_unit": "network",
+  "suite": "infrastructure-finance-asset-risk",
+  "tags": [
+    "design-only",
+    "infrastructure-finance-asset-risk",
+    "infrastructure.energy-buildings",
+    "scenario-library",
+    "stress-test"
+  ],
+  "title": "Stress-test municipal buildings under grid and climate stress",
+  "transportability_risks": [
+    "Climate, grids, tariffs, fuels, building codes, stock, occupancy, and finance differ.",
+    "Operational changes can confound retrofit performance comparisons."
+  ]
+}

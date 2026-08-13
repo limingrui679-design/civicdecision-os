@@ -10,6 +10,16 @@ from pydantic import Field, field_validator, model_validator
 
 from civicdecision.protocols.base import IDENTIFIER_PATTERN, JsonValue, StrictModel, ensure_aware
 from civicdecision.protocols.evidence import EvidenceType
+from civicdecision.scenario_library.models import (
+    CurrentReadiness,
+    DecisionHorizon,
+    DecisionType,
+    EvidenceGateType,
+    ImplementationStatus,
+    ScenarioDesign,
+    ScenarioFamily,
+    SpatialUnit,
+)
 
 
 class ProductTier(StrEnum):
@@ -56,6 +66,14 @@ class CatalogSummary(StrictModel):
     source_artifacts: int = Field(ge=0)
     declared_source_units: int = Field(ge=0)
     standard_scenario_screens: int = Field(ge=0)
+    scenario_library_designs: int = Field(ge=0)
+    scenario_library_families: int = Field(ge=0)
+    reference_implemented_designs: int = Field(ge=0)
+    design_only_scenarios: int = Field(ge=0)
+    scenario_library_city_bindings: int = Field(ge=0)
+    scenario_library_methods_claimed: int = Field(ge=0)
+    scenario_library_audit_passed: bool
+    scenario_library_maximum_similarity: float = Field(ge=0, le=1)
     nonduplicative_deep_designs: int = Field(ge=0)
     deep_scenario_executions: int = Field(ge=0)
     completed_deep_executions: int = Field(ge=0)
@@ -83,6 +101,12 @@ class CatalogSummary(StrictModel):
             raise ValueError("deep scenario status counts must reconcile")
         if self.decision_packs != self.completed_decision_packs + self.negative_decision_packs:
             raise ValueError("DecisionPack status counts must reconcile")
+        if self.scenario_library_designs != (
+            self.reference_implemented_designs + self.design_only_scenarios
+        ):
+            raise ValueError("scenario library implementation counts must reconcile")
+        if self.scenario_library_designs != self.scenario_library_families * 8:
+            raise ValueError("scenario library must contain eight designs per family")
         return self
 
 
@@ -220,6 +244,127 @@ class ScenarioPage(StrictModel):
         return self
 
 
+class ScenarioDesignSummary(StrictModel):
+    design_order: int = Field(ge=1)
+    design_id: str = Field(pattern=IDENTIFIER_PATTERN)
+    family_id: str = Field(pattern=IDENTIFIER_PATTERN)
+    suite: str = Field(min_length=1)
+    family_title: str = Field(min_length=3)
+    title: str = Field(min_length=5)
+    decision_question: str = Field(min_length=12)
+    decision_type: DecisionType
+    horizon: DecisionHorizon
+    spatial_unit: SpatialUnit
+    primary_outcome: str = Field(min_length=5)
+    binding_constraint: str = Field(min_length=5)
+    evidence_gate: EvidenceGateType
+    implementation_status: ImplementationStatus
+    current_readiness: CurrentReadiness
+    existing_template_ref: str | None = Field(default=None, pattern=IDENTIFIER_PATTERN)
+    analysis_modes: list[str] = Field(min_length=1)
+    evidence_types: list[EvidenceType] = Field(min_length=1)
+    prohibited_claims: list[str] = Field(min_length=2)
+    content_hash: str = Field(pattern=r"^sha256:[0-9a-f]{64}$")
+
+
+class ScenarioDesignPage(StrictModel):
+    pagination: Pagination
+    items: list[ScenarioDesignSummary]
+
+    @model_validator(mode="after")
+    def count_matches(self) -> ScenarioDesignPage:
+        if len(self.items) != self.pagination.returned:
+            raise ValueError("scenario design page item count must match pagination")
+        return self
+
+
+class ScenarioFamilySummary(StrictModel):
+    family_order: int = Field(ge=1)
+    family_id: str = Field(pattern=IDENTIFIER_PATTERN)
+    suite: str = Field(min_length=1)
+    title: str = Field(min_length=3)
+    description: str = Field(min_length=12)
+    affected_system: str = Field(min_length=5)
+    decision_owner: str = Field(min_length=3)
+    design_count: int = Field(ge=1)
+    reference_implemented_count: int = Field(ge=0)
+    design_only_count: int = Field(ge=0)
+    decision_types: list[DecisionType] = Field(min_length=1)
+    content_hash: str = Field(pattern=r"^sha256:[0-9a-f]{64}$")
+
+    @model_validator(mode="after")
+    def counts_reconcile(self) -> ScenarioFamilySummary:
+        if self.design_count != self.reference_implemented_count + self.design_only_count:
+            raise ValueError("scenario family implementation counts must reconcile")
+        return self
+
+
+class ScenarioFamilyPage(StrictModel):
+    pagination: Pagination
+    items: list[ScenarioFamilySummary]
+
+    @model_validator(mode="after")
+    def count_matches(self) -> ScenarioFamilyPage:
+        if len(self.items) != self.pagination.returned:
+            raise ValueError("scenario family page item count must match pagination")
+        return self
+
+
+class ScenarioDesignDetail(StrictModel):
+    design: ScenarioDesign
+    family: ScenarioFamily
+    library_claim_boundary: list[str] = Field(min_length=4)
+    audit_maximum_pairwise_similarity: float = Field(ge=0, le=1)
+
+    @model_validator(mode="after")
+    def references_reconcile(self) -> ScenarioDesignDetail:
+        if self.design.family_id != self.family.family_id:
+            raise ValueError("scenario design detail family must match the design")
+        if self.design.design_id not in self.family.design_refs:
+            raise ValueError("scenario design detail family must reference the design")
+        return self
+
+
+class ScenarioFamilyDetail(StrictModel):
+    family: ScenarioFamily
+    designs: list[ScenarioDesignSummary] = Field(min_length=8, max_length=8)
+    library_claim_boundary: list[str] = Field(min_length=4)
+
+    @model_validator(mode="after")
+    def references_reconcile(self) -> ScenarioFamilyDetail:
+        if [item.design_id for item in self.designs] != self.family.design_refs:
+            raise ValueError("scenario family detail designs must follow registered references")
+        return self
+
+
+class ScenarioLibraryEvidence(StrictModel):
+    schema_version: Literal["1.0.0"] = "1.0.0"
+    design_count: int = Field(ge=0)
+    family_count: int = Field(ge=0)
+    reference_implemented_designs: int = Field(ge=0)
+    design_only_scenarios: int = Field(ge=0)
+    city_bound_executions_counted: int = Field(ge=0)
+    methods_claimed: int = Field(ge=0)
+    audit_passed: bool
+    high_similarity_threshold: float = Field(gt=0, le=1)
+    maximum_pairwise_similarity: float = Field(ge=0, le=1)
+    high_similarity_pair_count: int = Field(ge=0)
+    exact_signature_collision_count: int = Field(ge=0)
+    duplicate_title_count: int = Field(ge=0)
+    duplicate_question_count: int = Field(ge=0)
+    artifact_set_hash: str = Field(pattern=r"^sha256:[0-9a-f]{64}$")
+    library_content_hash: str = Field(pattern=r"^sha256:[0-9a-f]{64}$")
+    claim_boundary: list[str] = Field(min_length=4)
+    invariants: list[str] = Field(min_length=8)
+    limitations: list[str] = Field(min_length=3)
+
+    @model_validator(mode="after")
+    def totals_reconcile(self) -> ScenarioLibraryEvidence:
+        if self.design_count != self.reference_implemented_designs + self.design_only_scenarios:
+            raise ValueError("scenario library evidence implementation counts must reconcile")
+        return self
+
+
 class SourceSummary(StrictModel):
     artifact_id: str = Field(pattern=IDENTIFIER_PATTERN)
     source_id: str = Field(pattern=IDENTIFIER_PATTERN)
@@ -267,6 +412,10 @@ class ScenarioDetail(StrictModel):
 
 class SuiteOverview(StrictModel):
     suite: str = Field(min_length=1)
+    design_family_count: int = Field(ge=0)
+    design_count: int = Field(ge=0)
+    reference_implemented_designs: int = Field(ge=0)
+    design_only_scenarios: int = Field(ge=0)
     template_count: int = Field(ge=0)
     execution_count: int = Field(ge=0)
     completed_count: int = Field(ge=0)
@@ -278,6 +427,8 @@ class SuiteOverview(StrictModel):
     def counts_reconcile(self) -> SuiteOverview:
         if self.execution_count != self.completed_count + self.negative_count:
             raise ValueError("suite execution statuses must reconcile")
+        if self.design_count != self.reference_implemented_designs + self.design_only_scenarios:
+            raise ValueError("suite scenario-design statuses must reconcile")
         return self
 
 
@@ -309,8 +460,15 @@ __all__ = [
     "Pagination",
     "ProductHealth",
     "ProductTier",
+    "ScenarioDesignDetail",
+    "ScenarioDesignPage",
+    "ScenarioDesignSummary",
     "ScenarioDetail",
+    "ScenarioFamilyDetail",
+    "ScenarioFamilyPage",
+    "ScenarioFamilySummary",
     "ScenarioKind",
+    "ScenarioLibraryEvidence",
     "ScenarioPage",
     "ScenarioStatus",
     "ScenarioSummary",

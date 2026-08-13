@@ -1,0 +1,333 @@
+{
+  "designs": [
+    {
+      "analysis_modes": [
+        "descriptive"
+      ],
+      "binding_constraint": "The active mobility network and micromobility diagnose must respect declared measurement resolution and classification uncertainty.",
+      "content_hash": "sha256:873d94353b7c7aaa9373714be8108d28a765006263e36e4aba7fa4e7ad8f0c09",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Which missing links prevent continuous low-stress access between neighborhoods and essential destinations?",
+      "decision_type": "diagnose",
+      "design_id": "scenario.mobility.active-mobility.low-stress-network-gaps.v1",
+      "design_order": 73,
+      "evidence_gate": "geographic-alignment",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "proposed"
+      ],
+      "family_id": "mobility.active-mobility",
+      "family_title": "Active mobility network and micromobility",
+      "horizon": "annual",
+      "implementation_status": "design-only",
+      "primary_outcome": "essential trips disconnected from a low-stress network",
+      "prohibited_claims": [
+        "Do not infer route accessibility or demand from request labels or mapped segments alone.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "network",
+      "suite": "mobility-accessibility-operations",
+      "title": "Diagnose low-stress active-mobility network gaps"
+    },
+    {
+      "analysis_modes": [
+        "forecast"
+      ],
+      "binding_constraint": "The active mobility network and micromobility forecast must respect declared validated operational capacity and forecast uncertainty.",
+      "content_hash": "sha256:f4b000b1275a42a4e497d81c743309c68848c9257551c3be9ab45b7a9558f896",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "What station, corridor, and time-specific trip and vehicle-availability range should operations prepare for?",
+      "decision_type": "forecast",
+      "design_id": "scenario.mobility.active-mobility.active-trip-demand.v1",
+      "design_order": 74,
+      "evidence_gate": "model-calibration",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "proposed"
+      ],
+      "family_id": "mobility.active-mobility",
+      "family_title": "Active mobility network and micromobility",
+      "horizon": "weeks",
+      "implementation_status": "design-only",
+      "primary_outcome": "trip requests without feasible vehicle or route capacity",
+      "prohibited_claims": [
+        "Do not treat shared-platform demand as total walking or cycling demand.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "network",
+      "suite": "mobility-accessibility-operations",
+      "title": "Forecast active and shared-mobility demand"
+    },
+    {
+      "analysis_modes": [
+        "descriptive",
+        "optimization"
+      ],
+      "binding_constraint": "The active mobility network and micromobility prioritize must respect declared capital, operating, maintenance, and delivery budgets.",
+      "content_hash": "sha256:5a15f5879e476711c1aada33768658870994ff8e009f85788966d6561e605a58",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Which protected links, crossings, greenways, and accessibility repairs close the most consequential gaps?",
+      "decision_type": "prioritize",
+      "design_id": "scenario.mobility.active-mobility.active-network-projects.v1",
+      "design_order": 75,
+      "evidence_gate": "cost-capacity",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed"
+      ],
+      "family_id": "mobility.active-mobility",
+      "family_title": "Active mobility network and micromobility",
+      "horizon": "multi-year",
+      "implementation_status": "design-only",
+      "primary_outcome": "essential trips remaining outside a low-stress accessible network",
+      "prohibited_claims": [
+        "Do not report modeled connectivity or safety gains as completed trips or prevented crashes.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "asset",
+      "suite": "mobility-accessibility-operations",
+      "title": "Prioritize active-mobility network projects"
+    },
+    {
+      "analysis_modes": [
+        "simulation",
+        "optimization"
+      ],
+      "binding_constraint": "The active mobility network and micromobility site must respect declared land control, accessibility, permitting, safety, and operating feasibility.",
+      "content_hash": "sha256:64a40def4298f85495b7882b7275fc710c5ca0d0730e70652dc5aacc24fa6fe2",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Where should stations and secure parking expand access without obstructing pedestrian use?",
+      "decision_type": "site",
+      "design_id": "scenario.mobility.active-mobility.shared-mobility-stations.v1",
+      "design_order": 76,
+      "evidence_gate": "legal-authority",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "family_id": "mobility.active-mobility",
+      "family_title": "Active mobility network and micromobility",
+      "horizon": "multi-year",
+      "implementation_status": "design-only",
+      "primary_outcome": "residents beyond reliable shared-mobility access",
+      "prohibited_claims": [
+        "Do not label a candidate station feasible, accessible, or publicly accepted without validation.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "facility",
+      "suite": "mobility-accessibility-operations",
+      "title": "Site shared-mobility stations and secure parking"
+    },
+    {
+      "analysis_modes": [
+        "simulation",
+        "optimization"
+      ],
+      "binding_constraint": "The active mobility network and micromobility allocate must respect declared minimum service, eligibility, capacity, and distributional safeguards.",
+      "content_hash": "sha256:95a3e46988632d5fff57bded1cca054a24800b83d89530949a38fbc46c897e9b",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "How should vehicles, adaptive devices, docks, and charging capacity be distributed?",
+      "decision_type": "allocate",
+      "design_id": "scenario.mobility.active-mobility.shared-fleet.v1",
+      "design_order": 77,
+      "evidence_gate": "equity-measurement",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "family_id": "mobility.active-mobility",
+      "family_title": "Active mobility network and micromobility",
+      "horizon": "weeks",
+      "implementation_status": "design-only",
+      "primary_outcome": "forecast trips without an available suitable vehicle",
+      "prohibited_claims": [
+        "Do not report vehicle allocation as availability at use time or completed equitable access.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "facility",
+      "suite": "mobility-accessibility-operations",
+      "title": "Allocate shared bicycles, devices, and charging capacity"
+    },
+    {
+      "analysis_modes": [
+        "forecast",
+        "optimization"
+      ],
+      "binding_constraint": "The active mobility network and micromobility schedule must respect declared labor, access, sequencing, notice, and completion windows.",
+      "content_hash": "sha256:2ef24b3a1075886605c188ac65f04e749e220d8360b3e362f79b0883bd1f57a6",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "When should vehicles be rebalanced, charged, inspected, and returned to service?",
+      "decision_type": "schedule",
+      "design_id": "scenario.mobility.active-mobility.fleet-rebalancing.v1",
+      "design_order": 78,
+      "evidence_gate": "temporal-alignment",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed"
+      ],
+      "family_id": "mobility.active-mobility",
+      "family_title": "Active mobility network and micromobility",
+      "horizon": "weeks",
+      "implementation_status": "design-only",
+      "primary_outcome": "station-hours outside vehicle availability targets",
+      "prohibited_claims": [
+        "Do not call an optimized rebalancing route executed or a work order verified complete.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "network",
+      "suite": "mobility-accessibility-operations",
+      "title": "Schedule shared-mobility rebalancing and maintenance"
+    },
+    {
+      "analysis_modes": [
+        "forecast",
+        "simulation",
+        "optimization"
+      ],
+      "binding_constraint": "The active mobility network and micromobility stress test must respect declared minimum continuity and safety thresholds across severe scenarios.",
+      "content_hash": "sha256:188cf7e30b8b594c85c167fd46d21341973b1484e2c4427581415aad347a4302",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Which detours and operating plan preserve low-stress access during closures, weather, and fleet outages?",
+      "decision_type": "stress-test",
+      "design_id": "scenario.mobility.active-mobility.active-network-continuity.v1",
+      "design_order": 79,
+      "evidence_gate": "external-validation",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "family_id": "mobility.active-mobility",
+      "family_title": "Active mobility network and micromobility",
+      "horizon": "seasonal",
+      "implementation_status": "design-only",
+      "primary_outcome": "essential trips without a low-stress feasible alternative",
+      "prohibited_claims": [
+        "Do not describe a modeled detour as field-verified safe or an assumed trip as observed.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "network",
+      "suite": "mobility-accessibility-operations",
+      "title": "Stress-test active-mobility network continuity"
+    },
+    {
+      "analysis_modes": [
+        "descriptive",
+        "causal"
+      ],
+      "binding_constraint": "The active mobility network and micromobility evaluate must respect declared pre-specified assignment, comparison, outcome, spillover, and subgroup rules.",
+      "content_hash": "sha256:70afff7f03eb2228b896af6a4638e97e7cd90780622946dd7511ce9efaf532fe",
+      "current_readiness": "blocked-multiple-gates",
+      "decision_question": "Did phased protected links change exposure-normalized use, conflicts, and access across groups?",
+      "decision_type": "evaluate",
+      "design_id": "scenario.mobility.active-mobility.protected-network-effect.v1",
+      "design_order": 80,
+      "evidence_gate": "causal-identification",
+      "evidence_types": [
+        "causal",
+        "estimated",
+        "observed",
+        "proposed"
+      ],
+      "family_id": "mobility.active-mobility",
+      "family_title": "Active mobility network and micromobility",
+      "horizon": "multi-year",
+      "implementation_status": "design-only",
+      "primary_outcome": "change in low-stress trips and exposure-normalized conflicts",
+      "prohibited_claims": [
+        "Do not infer causal mode shift or injury reduction from selected counters or simple before-after totals.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "corridor",
+      "suite": "mobility-accessibility-operations",
+      "title": "Evaluate protected active-mobility network expansion"
+    }
+  ],
+  "family": {
+    "affected_system": "walking, cycling, and shared micromobility network",
+    "claim_boundary": [
+      "Network, request, and schedule records do not establish individual travel behavior or harm.",
+      "Optimized routes and allocations are planning outputs, not dispatched or completed trips.",
+      "Design-only records do not claim current city data, implementation, compliance, or impact."
+    ],
+    "common_source_roles": [
+      "asset-inventory",
+      "geographic-identity",
+      "transport-network"
+    ],
+    "decision_owner": "active transportation director and shared-mobility program manager",
+    "decision_types": [
+      "diagnose",
+      "forecast",
+      "prioritize",
+      "site",
+      "allocate",
+      "schedule",
+      "stress-test",
+      "evaluate"
+    ],
+    "description": "Eight decisions for network-gap diagnosis, demand forecasting, project selection, station siting, fleet allocation, rebalancing schedules, network stress, and infrastructure evaluation.",
+    "design_refs": [
+      "scenario.mobility.active-mobility.low-stress-network-gaps.v1",
+      "scenario.mobility.active-mobility.active-trip-demand.v1",
+      "scenario.mobility.active-mobility.active-network-projects.v1",
+      "scenario.mobility.active-mobility.shared-mobility-stations.v1",
+      "scenario.mobility.active-mobility.shared-fleet.v1",
+      "scenario.mobility.active-mobility.fleet-rebalancing.v1",
+      "scenario.mobility.active-mobility.active-network-continuity.v1",
+      "scenario.mobility.active-mobility.protected-network-effect.v1"
+    ],
+    "design_signatures": [
+      "sha256:7fb0f73534c061f37be2f058e67180ba3b1e6990a8ca454e64bbfcc7fc17b33c",
+      "sha256:1518a542f9c8e1e9e00bc3f22a67f8dbccfb5e39ab1f4ddc3c2ca7c7380b2334",
+      "sha256:1cdbc5be28d47395ef25bf4293720bc2b93a6f10575aabbf618f8aaaff6b4a8a",
+      "sha256:e3a249fffa740fbf07f61c5527bd4dd9a1c235e77f0bd158389e214484a96d6a",
+      "sha256:49fe1419b72d2b9f8bfbf9ab5cc32b43a1f7047c9a37f9ab7d74107015d52d07",
+      "sha256:6db5877219dfcda854affce9fd7c30768d9b5ced11b1085b09b4f3657aed5774",
+      "sha256:320fb477cef10f68ad6b546588bae694c1483f18480397c9e02de0dad55a77c3",
+      "sha256:51607909ed55f628835927a9bea52d419a8b4cf899b1315be0467c58bdf0e580"
+    ],
+    "family_id": "mobility.active-mobility",
+    "family_order": 10,
+    "schema_version": "1.0.0",
+    "suite": "mobility-accessibility-operations",
+    "title": "Active mobility network and micromobility"
+  },
+  "library_claim_boundary": [
+    "The catalog contains 240 decision designs, not 240 city executions.",
+    "Exactly twelve designs map to existing Tier-D reference templates; 228 remain design-only.",
+    "A reference implementation can be an explicit negative release and does not imply impact.",
+    "No record claims a city binding, new method, deployment, adoption, or real-user outcome.",
+    "Future execution requires source binding, gate passage, and domain, legal, community, and operational review."
+  ]
+}

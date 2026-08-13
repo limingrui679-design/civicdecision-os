@@ -23,8 +23,15 @@ from civicdecision.product.models import (
     CityPage,
     CitySummary,
     ProductHealth,
+    ScenarioDesignDetail,
+    ScenarioDesignPage,
+    ScenarioDesignSummary,
     ScenarioDetail,
+    ScenarioFamilyDetail,
+    ScenarioFamilyPage,
+    ScenarioFamilySummary,
     ScenarioKind,
+    ScenarioLibraryEvidence,
     ScenarioPage,
     ScenarioSummary,
     SourcePage,
@@ -33,6 +40,14 @@ from civicdecision.product.models import (
 )
 from civicdecision.product.store import ArtifactStore
 from civicdecision.protocols.base import StrictModel, sha256_file
+from civicdecision.scenario_library.models import (
+    DecisionType,
+    ImplementationStatus,
+    ScenarioDesign,
+    ScenarioFamily,
+    ScenarioLibraryAudit,
+    ScenarioLibraryRegistry,
+)
 
 
 class ProductArtifactEntry(StrictModel):
@@ -109,6 +124,17 @@ def _schema_documents() -> dict[str, dict[str, object]]:
         ScenarioSummary,
         ScenarioPage,
         ScenarioDetail,
+        ScenarioDesignSummary,
+        ScenarioDesignPage,
+        ScenarioDesignDetail,
+        ScenarioFamilySummary,
+        ScenarioFamilyPage,
+        ScenarioFamilyDetail,
+        ScenarioLibraryEvidence,
+        ScenarioDesign,
+        ScenarioFamily,
+        ScenarioLibraryAudit,
+        ScenarioLibraryRegistry,
         SourceSummary,
         SourcePage,
         SuiteOverview,
@@ -220,6 +246,60 @@ def _build_into(
             len(scenarios),
         )
 
+    designs = store.scenario_design_summaries
+    design_sets: dict[str, Sequence[StrictModel]] = {
+        "index": list(designs),
+        "reference-implemented": [
+            item
+            for item in designs
+            if item.implementation_status is ImplementationStatus.REFERENCE_IMPLEMENTED
+        ],
+        "design-only": [
+            item
+            for item in designs
+            if item.implementation_status is ImplementationStatus.DESIGN_ONLY
+        ],
+    }
+    for suite in sorted({item.suite for item in designs}):
+        design_sets[f"suite/{suite}"] = [item for item in designs if item.suite == suite]
+    for decision_type in DecisionType:
+        design_sets[f"decision-type/{decision_type.value}"] = [
+            item for item in designs if item.decision_type is decision_type
+        ]
+    for name, design_rows in sorted(design_sets.items()):
+        write_json(
+            f"designs/{name}.json",
+            _collection(
+                f"scenario-designs.{name.replace('/', '.')}",
+                design_rows,
+                "Design records are not city executions, deployments, adoptions, or impacts.",
+            ),
+            len(design_rows),
+        )
+    for design in designs:
+        write_model(
+            f"designs/detail/{design.design_id}.json",
+            store.scenario_design_detail(design.design_id),
+            1,
+        )
+
+    families = store.scenario_family_summaries
+    write_json(
+        "design-families/index.json",
+        _collection(
+            "scenario-design-families",
+            families,
+            "Each family is a coverage group of eight decision types, not one delivered project.",
+        ),
+        len(families),
+    )
+    for family in families:
+        write_model(
+            f"design-families/detail/{family.family_id}.json",
+            store.scenario_family_detail(family.family_id),
+            8,
+        )
+
     write_json(
         "sources/index.json",
         _collection(
@@ -241,6 +321,21 @@ def _build_into(
     )
     write_model("benchmarks/overview.json", store.benchmark_overview())
     write_model("evidence/tier-d-summary.json", store.deep_evidence, 96)
+    write_model(
+        "evidence/scenario-library-summary.json",
+        store.scenario_library_evidence(),
+        240,
+    )
+    write_model(
+        "evidence/scenario-library-audit.json",
+        store.scenario_library_audit,
+        240,
+    )
+    write_model(
+        "evidence/scenario-library-registry.json",
+        store.scenario_library_registry,
+        270,
+    )
     write_json("openapi-v1.json", create_app(store=store).openapi())
     write_json("web-assets.json", _web_asset_manifest(repository_root), 4)
     for relative, schema in sorted(_schema_documents().items()):

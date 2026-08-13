@@ -1,0 +1,165 @@
+{
+  "affected_system": "pedestrian right-of-way, crossings, sidewalks, and accessible routes",
+  "alternatives": [
+    "protect minimum coverage before needs-based allocation of pedestrian inspection and quick-build resources",
+    "adapt allocations using observed demand, uptake, and capacity for pedestrian inspection and quick-build resources",
+    "pair minimum-access and severity-constrained crew allocation with an explicit stop, review, and escalation rule"
+  ],
+  "analysis_modes": [
+    "simulation",
+    "optimization"
+  ],
+  "assumptions": [
+    "Crash, conflict, barrier, sidewalk, crossing, and demand data have explicit observation processes.",
+    "Accessibility is evaluated across route continuity, slope, surface, crossing, and obstruction dimensions.",
+    "All alternatives, capacities, costs, effects, thresholds, and failure scenarios are proposed until bound to evidence."
+  ],
+  "baseline": "retain the current distribution rule for pedestrian inspection and quick-build resources.",
+  "city_bindings": [],
+  "constraints": [
+    {
+      "binding": true,
+      "constraint_id": "scenario.mobility.pedestrian-safety.inspection-quick-build.v1.constraint.binding",
+      "description": "The pedestrian safety and universal accessibility allocate must respect declared minimum service, eligibility, capacity, and distributional safeguards.",
+      "hard": true,
+      "kind": "equity",
+      "required_source_roles": [
+        "asset-inventory",
+        "equity-attribute",
+        "geographic-identity",
+        "municipal-demand",
+        "operating-capacity",
+        "transport-network"
+      ]
+    },
+    {
+      "binding": false,
+      "constraint_id": "scenario.mobility.pedestrian-safety.inspection-quick-build.v1.constraint.evidence-scope",
+      "description": "Every released metric must retain evidence type, source lineage, geography, time, assumptions, and uncertainty.",
+      "hard": true,
+      "kind": "technical",
+      "required_source_roles": [
+        "asset-inventory"
+      ]
+    },
+    {
+      "binding": false,
+      "constraint_id": "scenario.mobility.pedestrian-safety.inspection-quick-build.v1.constraint.decision-authority",
+      "description": "No analytical output may bypass lawful authority, accountable human review, or an applicable appeal process.",
+      "hard": true,
+      "kind": "regulatory",
+      "required_source_roles": [
+        "asset-inventory"
+      ]
+    }
+  ],
+  "current_readiness": "blocked-missing-source",
+  "decision_cadence": "recompiled at each planning cycle and after material evidence change",
+  "decision_owner": "vision-zero director and accessibility compliance officer",
+  "decision_question": "How should inspectors, temporary barriers, signal crews, and accessibility repairs be distributed?",
+  "decision_type": "allocate",
+  "design_id": "scenario.mobility.pedestrian-safety.inspection-quick-build.v1",
+  "design_order": 53,
+  "design_signature": "sha256:cdaa7a19032fd3b386282cffff84154f86a326d0903afe2d9b58cc521e8d2df9",
+  "evidence_requirements": [
+    "estimated",
+    "observed",
+    "optimized",
+    "proposed",
+    "simulated"
+  ],
+  "family_id": "mobility.pedestrian-safety",
+  "family_title": "Pedestrian safety and universal accessibility",
+  "horizon": "weeks",
+  "implementation_status": "design-only",
+  "independence_key": {
+    "binding_constraint": "The pedestrian safety and universal accessibility allocate must respect declared minimum service, eligibility, capacity, and distributional safeguards.",
+    "decision_object": "pedestrian inspection and quick-build resources",
+    "evidence_gate": "Evidence for pedestrian inspection and quick-build resources passes documented checks for eligible denominators, group attributes, inventory, minimum-service rules, and allocation records.",
+    "horizon": "weeks",
+    "intervention_mechanism": "minimum-access and severity-constrained crew allocation",
+    "primary_outcome": "verified high-consequence barriers without assigned response",
+    "spatial_unit": "service-area"
+  },
+  "intended_claim": "A versioned allocate design for comparing declared alternatives affecting pedestrian inspection and quick-build resources, conditional on its evidence gate.",
+  "limitations": [
+    "This library record has no city binding and therefore reports no local input, output, or recommendation.",
+    "Readiness describes explicit source and method gates; it does not certify implementation feasibility.",
+    "External domain, legal, community, security, and operational review remains outside this design artifact."
+  ],
+  "method_claimed": false,
+  "objectives": [
+    {
+      "evidence_type": "estimated",
+      "metric": "verified high-consequence barriers without assigned response",
+      "objective_id": "scenario.mobility.pedestrian-safety.inspection-quick-build.v1.objective.primary",
+      "primary": true,
+      "sense": "minimize",
+      "unit": "barriers"
+    },
+    {
+      "evidence_type": "estimated",
+      "metric": "distributional gap in verified high-consequence barriers without assigned response",
+      "objective_id": "scenario.mobility.pedestrian-safety.inspection-quick-build.v1.objective.equity",
+      "primary": false,
+      "sense": "minimize",
+      "unit": "barriers"
+    },
+    {
+      "evidence_type": "observed",
+      "metric": "decision claims with complete evidence lineage",
+      "objective_id": "scenario.mobility.pedestrian-safety.inspection-quick-build.v1.objective.traceability",
+      "primary": false,
+      "sense": "maximize",
+      "unit": "percent"
+    }
+  ],
+  "prohibited_claims": [
+    "Do not report assigned crews as completed repairs or verified compliance.",
+    "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+    "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+    "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+  ],
+  "release_gate": {
+    "failure_release": "Release an explicit insufficient-evidence record naming missing sources, failed diagnostics, prohibited claims, and the next validation action.",
+    "failure_status": "insufficient-evidence",
+    "gate_id": "scenario.mobility.pedestrian-safety.inspection-quick-build.v1.gate.release",
+    "gate_type": "equity-measurement",
+    "pass_condition": "Evidence for pedestrian inspection and quick-build resources passes documented checks for eligible denominators, group attributes, inventory, minimum-service rules, and allocation records.",
+    "required_evidence_types": [
+      "observed",
+      "proposed"
+    ],
+    "required_source_roles": [
+      "asset-inventory",
+      "equity-attribute",
+      "geographic-identity",
+      "municipal-demand",
+      "operating-capacity",
+      "transport-network"
+    ]
+  },
+  "required_source_roles": [
+    "asset-inventory",
+    "equity-attribute",
+    "geographic-identity",
+    "municipal-demand",
+    "operating-capacity",
+    "transport-network"
+  ],
+  "schema_version": "1.0.0",
+  "spatial_unit": "service-area",
+  "suite": "mobility-accessibility-operations",
+  "tags": [
+    "allocate",
+    "design-only",
+    "mobility-accessibility-operations",
+    "mobility.pedestrian-safety",
+    "scenario-library"
+  ],
+  "title": "Allocate inspections and quick-build safety resources",
+  "transportability_risks": [
+    "Street design, enforcement, mobility-device needs, exposure, and reporting vary by place.",
+    "Crash-only models underrepresent near misses and unreported accessibility barriers."
+  ]
+}

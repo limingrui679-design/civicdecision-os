@@ -1,0 +1,225 @@
+{
+  "audit_maximum_pairwise_similarity": 0.646154,
+  "design": {
+    "affected_system": "municipal buildings, distributed energy, electrification, and emissions management",
+    "alternatives": [
+      "protect minimum coverage before needs-based allocation of municipal energy capital and project delivery capacity",
+      "adapt allocations using observed demand, uptake, and capacity for municipal energy capital and project delivery capacity",
+      "pair carbon, resilience, readiness, and minimum-service allocation with an explicit stop, review, and escalation rule"
+    ],
+    "analysis_modes": [
+      "simulation",
+      "optimization"
+    ],
+    "assumptions": [
+      "Meters, fuels, tariffs, weather, occupancy, equipment, projects, and emissions factors are versioned.",
+      "Modeled energy and carbon savings remain distinct from measured post-project performance.",
+      "All alternatives, capacities, costs, effects, thresholds, and failure scenarios are proposed until bound to evidence."
+    ],
+    "baseline": "retain the current distribution rule for municipal energy capital and project delivery capacity.",
+    "city_bindings": [],
+    "constraints": [
+      {
+        "binding": true,
+        "constraint_id": "scenario.infrastructure.energy-buildings.energy-capital-capacity.v1.constraint.binding",
+        "description": "The municipal energy and building decarbonization allocate must respect declared minimum service, eligibility, capacity, and distributional safeguards.",
+        "hard": true,
+        "kind": "equity",
+        "required_source_roles": [
+          "asset-condition",
+          "asset-inventory",
+          "environmental-exposure",
+          "equity-attribute",
+          "financial-cost",
+          "operating-capacity"
+        ]
+      },
+      {
+        "binding": false,
+        "constraint_id": "scenario.infrastructure.energy-buildings.energy-capital-capacity.v1.constraint.evidence-scope",
+        "description": "Every released metric must retain evidence type, source lineage, geography, time, assumptions, and uncertainty.",
+        "hard": true,
+        "kind": "technical",
+        "required_source_roles": [
+          "asset-condition"
+        ]
+      },
+      {
+        "binding": false,
+        "constraint_id": "scenario.infrastructure.energy-buildings.energy-capital-capacity.v1.constraint.decision-authority",
+        "description": "No analytical output may bypass lawful authority, accountable human review, or an applicable appeal process.",
+        "hard": true,
+        "kind": "regulatory",
+        "required_source_roles": [
+          "asset-condition"
+        ]
+      }
+    ],
+    "current_readiness": "blocked-missing-source",
+    "decision_cadence": "recompiled at each planning cycle and after material evidence change",
+    "decision_owner": "municipal energy director and public-building portfolio manager",
+    "decision_question": "How should capital, incentives, engineering, procurement, and commissioning capacity be distributed?",
+    "decision_type": "allocate",
+    "design_id": "scenario.infrastructure.energy-buildings.energy-capital-capacity.v1",
+    "design_order": 197,
+    "design_signature": "sha256:e294a9ef142364512e96d429e2ce59f987cb1d98d6a67fd9d5b5ef52a184f124",
+    "evidence_requirements": [
+      "estimated",
+      "observed",
+      "optimized",
+      "proposed",
+      "simulated"
+    ],
+    "family_id": "infrastructure.energy-buildings",
+    "family_title": "Municipal energy and building decarbonization",
+    "horizon": "weeks",
+    "implementation_status": "design-only",
+    "independence_key": {
+      "binding_constraint": "The municipal energy and building decarbonization allocate must respect declared minimum service, eligibility, capacity, and distributional safeguards.",
+      "decision_object": "municipal energy capital and project delivery capacity",
+      "evidence_gate": "Evidence for municipal energy capital and project delivery capacity passes documented checks for eligible denominators, group attributes, inventory, minimum-service rules, and allocation records.",
+      "horizon": "weeks",
+      "intervention_mechanism": "carbon, resilience, readiness, and minimum-service allocation",
+      "primary_outcome": "qualified emissions-reduction projects without assigned capacity",
+      "spatial_unit": "asset"
+    },
+    "intended_claim": "A versioned allocate design for comparing declared alternatives affecting municipal energy capital and project delivery capacity, conditional on its evidence gate.",
+    "limitations": [
+      "This library record has no city binding and therefore reports no local input, output, or recommendation.",
+      "Readiness describes explicit source and method gates; it does not certify implementation feasibility.",
+      "External domain, legal, community, security, and operational review remains outside this design artifact."
+    ],
+    "method_claimed": false,
+    "objectives": [
+      {
+        "evidence_type": "estimated",
+        "metric": "qualified emissions-reduction projects without assigned capacity",
+        "objective_id": "scenario.infrastructure.energy-buildings.energy-capital-capacity.v1.objective.primary",
+        "primary": true,
+        "sense": "minimize",
+        "unit": "project-tonnes CO2e"
+      },
+      {
+        "evidence_type": "estimated",
+        "metric": "distributional gap in qualified emissions-reduction projects without assigned capacity",
+        "objective_id": "scenario.infrastructure.energy-buildings.energy-capital-capacity.v1.objective.equity",
+        "primary": false,
+        "sense": "minimize",
+        "unit": "project-tonnes CO2e"
+      },
+      {
+        "evidence_type": "observed",
+        "metric": "decision claims with complete evidence lineage",
+        "objective_id": "scenario.infrastructure.energy-buildings.energy-capital-capacity.v1.objective.traceability",
+        "primary": false,
+        "sense": "maximize",
+        "unit": "percent"
+      }
+    ],
+    "prohibited_claims": [
+      "Do not report allocated capital or staff as a contract, installation, commissioning, or saving.",
+      "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+      "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+      "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+    ],
+    "release_gate": {
+      "failure_release": "Release an explicit insufficient-evidence record naming missing sources, failed diagnostics, prohibited claims, and the next validation action.",
+      "failure_status": "insufficient-evidence",
+      "gate_id": "scenario.infrastructure.energy-buildings.energy-capital-capacity.v1.gate.release",
+      "gate_type": "equity-measurement",
+      "pass_condition": "Evidence for municipal energy capital and project delivery capacity passes documented checks for eligible denominators, group attributes, inventory, minimum-service rules, and allocation records.",
+      "required_evidence_types": [
+        "observed",
+        "proposed"
+      ],
+      "required_source_roles": [
+        "asset-condition",
+        "asset-inventory",
+        "environmental-exposure",
+        "equity-attribute",
+        "financial-cost",
+        "operating-capacity"
+      ]
+    },
+    "required_source_roles": [
+      "asset-condition",
+      "asset-inventory",
+      "environmental-exposure",
+      "equity-attribute",
+      "financial-cost",
+      "operating-capacity"
+    ],
+    "schema_version": "1.0.0",
+    "spatial_unit": "asset",
+    "suite": "infrastructure-finance-asset-risk",
+    "tags": [
+      "allocate",
+      "design-only",
+      "infrastructure-finance-asset-risk",
+      "infrastructure.energy-buildings",
+      "scenario-library"
+    ],
+    "title": "Allocate energy capital, incentives, and delivery capacity",
+    "transportability_risks": [
+      "Climate, grids, tariffs, fuels, building codes, stock, occupancy, and finance differ.",
+      "Operational changes can confound retrofit performance comparisons."
+    ]
+  },
+  "family": {
+    "affected_system": "municipal buildings, distributed energy, electrification, and emissions management",
+    "claim_boundary": [
+      "Requests and proxy indicators do not replace engineering inspection, accounting, or legal review.",
+      "Selected projects and schedules are planning outputs, not appropriations, designs, contracts, or construction.",
+      "Modeled lifecycle, emissions, reliability, and fiscal effects are not realized outcomes."
+    ],
+    "common_source_roles": [
+      "asset-inventory",
+      "environmental-exposure",
+      "financial-cost"
+    ],
+    "decision_owner": "municipal energy director and public-building portfolio manager",
+    "decision_types": [
+      "diagnose",
+      "forecast",
+      "prioritize",
+      "site",
+      "allocate",
+      "schedule",
+      "stress-test",
+      "evaluate"
+    ],
+    "description": "Eight decisions for energy diagnosis, load forecasting, retrofit portfolios, clean-energy siting, capital allocation, project scheduling, grid stress, and retrofit evaluation.",
+    "design_refs": [
+      "scenario.infrastructure.energy-buildings.building-energy-performance.v1",
+      "scenario.infrastructure.energy-buildings.building-load-emissions.v1",
+      "scenario.infrastructure.energy-buildings.decarbonization-portfolio.v1",
+      "scenario.infrastructure.energy-buildings.distributed-clean-energy.v1",
+      "scenario.infrastructure.energy-buildings.energy-capital-capacity.v1",
+      "scenario.infrastructure.energy-buildings.decarbonization-projects.v1",
+      "scenario.infrastructure.energy-buildings.building-grid-stress.v1",
+      "scenario.infrastructure.energy-buildings.retrofit-performance.v1"
+    ],
+    "design_signatures": [
+      "sha256:6de976c970a2370ce565eeb9998d188a48648ad5e07a024810abbc48e4393b6a",
+      "sha256:c55b9161e0e571cd459c7416a615b4da1df1f1ba0343f9c8bcff89556c019ae8",
+      "sha256:034491823294dd24ca5643990215ae5a827239cba928ed03aba188bc93e4bc38",
+      "sha256:1ba1768d165ca42c6d0debd9d0474ce1f13c60035e7c51c29463b5f9d96cb896",
+      "sha256:e294a9ef142364512e96d429e2ce59f987cb1d98d6a67fd9d5b5ef52a184f124",
+      "sha256:26f0205c92f13637defd54f5558901cf07334f0d99ccb21f028503e3f2daaf47",
+      "sha256:5449461d52d6c37862db488871e4d6444f03b2c85fd90625055e32c9e8049bc8",
+      "sha256:bd41de21c60e7022c6099c5d5d6d4f19d857c1ba468143fe9a329f045fa67327"
+    ],
+    "family_id": "infrastructure.energy-buildings",
+    "family_order": 25,
+    "schema_version": "1.0.0",
+    "suite": "infrastructure-finance-asset-risk",
+    "title": "Municipal energy and building decarbonization"
+  },
+  "library_claim_boundary": [
+    "The catalog contains 240 decision designs, not 240 city executions.",
+    "Exactly twelve designs map to existing Tier-D reference templates; 228 remain design-only.",
+    "A reference implementation can be an explicit negative release and does not imply impact.",
+    "No record claims a city binding, new method, deployment, adoption, or real-user outcome.",
+    "Future execution requires source binding, gate passage, and domain, legal, community, and operational review."
+  ]
+}

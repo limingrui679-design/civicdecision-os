@@ -1,0 +1,333 @@
+{
+  "designs": [
+    {
+      "analysis_modes": [
+        "descriptive"
+      ],
+      "binding_constraint": "The infectious-disease public-health operations diagnose must respect declared measurement resolution and classification uncertainty.",
+      "content_hash": "sha256:2c3241b59aa68f1439208a15da125c43417ab545fc432a461d8f45973e423047",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Which place-time signals remain unusual after testing, reporting delay, seasonality, and source coverage are reconciled?",
+      "decision_type": "diagnose",
+      "design_id": "scenario.health.infectious-operations.surveillance-discordance.v1",
+      "design_order": 97,
+      "evidence_gate": "geographic-alignment",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "proposed"
+      ],
+      "family_id": "health.infectious-operations",
+      "family_title": "Infectious-disease public-health operations",
+      "horizon": "annual",
+      "implementation_status": "design-only",
+      "primary_outcome": "unresolved abnormal surveillance signals",
+      "prohibited_claims": [
+        "Do not label an aggregate anomaly an outbreak, individual infection, or transmission source.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "service-area",
+      "suite": "population-health-environmental-exposure",
+      "title": "Diagnose infectious-disease surveillance discordance"
+    },
+    {
+      "analysis_modes": [
+        "forecast"
+      ],
+      "binding_constraint": "The infectious-disease public-health operations forecast must respect declared validated operational capacity and forecast uncertainty.",
+      "content_hash": "sha256:a527928311220c7d60df6085c0cdd1f0bea5fb9d0b7d3bd1cc772dde563a3148",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "What probabilistic clinic, testing, laboratory, hotline, and bed demand should operations prepare for?",
+      "decision_type": "forecast",
+      "design_id": "scenario.health.infectious-operations.care-testing-demand.v1",
+      "design_order": 98,
+      "evidence_gate": "model-calibration",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "proposed"
+      ],
+      "family_id": "health.infectious-operations",
+      "family_title": "Infectious-disease public-health operations",
+      "horizon": "weeks",
+      "implementation_status": "design-only",
+      "primary_outcome": "care and testing demand above staffed capacity",
+      "prohibited_claims": [
+        "Do not call forecast workload infections, admissions, or transmission.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "service-area",
+      "suite": "population-health-environmental-exposure",
+      "title": "Forecast infectious-disease care and testing demand"
+    },
+    {
+      "analysis_modes": [
+        "descriptive",
+        "optimization"
+      ],
+      "binding_constraint": "The infectious-disease public-health operations prioritize must respect declared capital, operating, maintenance, and delivery budgets.",
+      "content_hash": "sha256:7ee5511ff58dc1424413c4cc9c362447085d4e8c4793857ee4974cc14d14947e",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Which laboratory, ventilation, data, workforce, supply, and community measures best reduce response fragility?",
+      "decision_type": "prioritize",
+      "design_id": "scenario.health.infectious-operations.preparedness-portfolio.v1",
+      "design_order": 99,
+      "evidence_gate": "cost-capacity",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed"
+      ],
+      "family_id": "health.infectious-operations",
+      "family_title": "Infectious-disease public-health operations",
+      "horizon": "multi-year",
+      "implementation_status": "design-only",
+      "primary_outcome": "expected essential response-capacity shortfall",
+      "prohibited_claims": [
+        "Do not report modeled preparedness as prevented cases or completed capacity.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "asset",
+      "suite": "population-health-environmental-exposure",
+      "title": "Prioritize infectious-disease preparedness investments"
+    },
+    {
+      "analysis_modes": [
+        "simulation",
+        "optimization"
+      ],
+      "binding_constraint": "The infectious-disease public-health operations site must respect declared land control, accessibility, permitting, safety, and operating feasibility.",
+      "content_hash": "sha256:f2f7791b2e22af98c4dc302085b408a2e0d49ec302f9141fe021841b9b0544f9",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Where should temporary health access points operate under demand, equity, cold-chain, and infection-control constraints?",
+      "decision_type": "site",
+      "design_id": "scenario.health.infectious-operations.testing-vaccination-sites.v1",
+      "design_order": 100,
+      "evidence_gate": "legal-authority",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "family_id": "health.infectious-operations",
+      "family_title": "Infectious-disease public-health operations",
+      "horizon": "multi-year",
+      "implementation_status": "design-only",
+      "primary_outcome": "eligible population beyond timely qualified service access",
+      "prohibited_claims": [
+        "Do not call a candidate site clinically qualified, staffed, supplied, or publicly accepted.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "facility",
+      "suite": "population-health-environmental-exposure",
+      "title": "Site accessible testing, vaccination, and treatment access points"
+    },
+    {
+      "analysis_modes": [
+        "simulation",
+        "optimization"
+      ],
+      "binding_constraint": "The infectious-disease public-health operations allocate must respect declared minimum service, eligibility, capacity, and distributional safeguards.",
+      "content_hash": "sha256:babf3782c979a09aeeaf2ec2b3e99e78fbaf46d9a8db9ae1a2c1e848ca51962b",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "How should constrained supplies and service capacity be allocated under clinical and equity priorities?",
+      "decision_type": "allocate",
+      "design_id": "scenario.health.infectious-operations.vaccines-tests-treatment.v1",
+      "design_order": 101,
+      "evidence_gate": "equity-measurement",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "family_id": "health.infectious-operations",
+      "family_title": "Infectious-disease public-health operations",
+      "horizon": "weeks",
+      "implementation_status": "design-only",
+      "primary_outcome": "eligible need without assigned service capacity",
+      "prohibited_claims": [
+        "Do not report allocated doses or slots as administered treatment or health benefit.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "population-group",
+      "suite": "population-health-environmental-exposure",
+      "title": "Allocate vaccines, tests, treatment, and outreach"
+    },
+    {
+      "analysis_modes": [
+        "forecast",
+        "optimization"
+      ],
+      "binding_constraint": "The infectious-disease public-health operations schedule must respect declared labor, access, sequencing, notice, and completion windows.",
+      "content_hash": "sha256:3c329019d78f38abc595af9a0f35b2d77aefe4e1916eabca9787cce53015e866",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "When should appointments, mobile services, laboratory batches, and outreach shifts operate?",
+      "decision_type": "schedule",
+      "design_id": "scenario.health.infectious-operations.clinic-lab-calendar.v1",
+      "design_order": 102,
+      "evidence_gate": "temporal-alignment",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed"
+      ],
+      "family_id": "health.infectious-operations",
+      "family_title": "Infectious-disease public-health operations",
+      "horizon": "weeks",
+      "implementation_status": "design-only",
+      "primary_outcome": "priority demand outside service and turnaround targets",
+      "prohibited_claims": [
+        "Do not call a schedule operated, appointments completed, or specimens processed.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "network",
+      "suite": "population-health-environmental-exposure",
+      "title": "Schedule clinics, laboratories, and outreach teams"
+    },
+    {
+      "analysis_modes": [
+        "forecast",
+        "simulation",
+        "optimization"
+      ],
+      "binding_constraint": "The infectious-disease public-health operations stress test must respect declared minimum continuity and safety thresholds across severe scenarios.",
+      "content_hash": "sha256:078730a0c2068b2c02d89aa2f1d138d380caae5bc6999245e1d11da224f6c99d",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Which capacity strategy preserves essential surveillance, testing, care, and communication under correlated surge?",
+      "decision_type": "stress-test",
+      "design_id": "scenario.health.infectious-operations.multi-pathogen-surge.v1",
+      "design_order": 103,
+      "evidence_gate": "external-validation",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "family_id": "health.infectious-operations",
+      "family_title": "Infectious-disease public-health operations",
+      "horizon": "seasonal",
+      "implementation_status": "design-only",
+      "primary_outcome": "scenario-weighted unmet priority health-service demand",
+      "prohibited_claims": [
+        "Do not present synthetic pathogen or demand scenarios as epidemiological forecasts.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "network",
+      "suite": "population-health-environmental-exposure",
+      "title": "Stress-test public-health operations under multi-pathogen surge"
+    },
+    {
+      "analysis_modes": [
+        "descriptive",
+        "causal"
+      ],
+      "binding_constraint": "The infectious-disease public-health operations evaluate must respect declared pre-specified assignment, comparison, outcome, spillover, and subgroup rules.",
+      "content_hash": "sha256:eea580805d8dc426dea1c6648173cd387779cce1a596d6b4abae79b1078c851f",
+      "current_readiness": "blocked-multiple-gates",
+      "decision_question": "Did phased mobile access and outreach improve verified service uptake without widening disparities?",
+      "decision_type": "evaluate",
+      "design_id": "scenario.health.infectious-operations.outreach-access-effect.v1",
+      "design_order": 104,
+      "evidence_gate": "causal-identification",
+      "evidence_types": [
+        "causal",
+        "estimated",
+        "observed",
+        "proposed"
+      ],
+      "family_id": "health.infectious-operations",
+      "family_title": "Infectious-disease public-health operations",
+      "horizon": "multi-year",
+      "implementation_status": "design-only",
+      "primary_outcome": "change in verified eligible service completion",
+      "prohibited_claims": [
+        "Do not infer infection prevention or clinical benefit from appointment or uptake outcomes alone.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "population-group",
+      "suite": "population-health-environmental-exposure",
+      "title": "Evaluate targeted infectious-disease access strategies"
+    }
+  ],
+  "family": {
+    "affected_system": "privacy-preserving infectious-disease surveillance and response operations",
+    "claim_boundary": [
+      "Area exposure, service, and vulnerability records do not diagnose individuals or prove harm.",
+      "Operational allocations are proposed planning outputs, not delivered clinical or social services.",
+      "Health-effect claims require outcome panels, identification, privacy, and external review."
+    ],
+    "common_source_roles": [
+      "geographic-identity",
+      "health-outcome",
+      "operating-capacity"
+    ],
+    "decision_owner": "communicable-disease director and public-health operations chief",
+    "decision_types": [
+      "diagnose",
+      "forecast",
+      "prioritize",
+      "site",
+      "allocate",
+      "schedule",
+      "stress-test",
+      "evaluate"
+    ],
+    "description": "Eight operational decisions for surveillance diagnosis, workload forecasting, preparedness investment, service siting, supply allocation, clinic scheduling, surge stress, and evaluation.",
+    "design_refs": [
+      "scenario.health.infectious-operations.surveillance-discordance.v1",
+      "scenario.health.infectious-operations.care-testing-demand.v1",
+      "scenario.health.infectious-operations.preparedness-portfolio.v1",
+      "scenario.health.infectious-operations.testing-vaccination-sites.v1",
+      "scenario.health.infectious-operations.vaccines-tests-treatment.v1",
+      "scenario.health.infectious-operations.clinic-lab-calendar.v1",
+      "scenario.health.infectious-operations.multi-pathogen-surge.v1",
+      "scenario.health.infectious-operations.outreach-access-effect.v1"
+    ],
+    "design_signatures": [
+      "sha256:188f99c226b5d251b2b1f03ca1e881e9290bf3c6e7a9194ca0169df00c08f664",
+      "sha256:1d3961a3a8a7866c3bbd50f4845c5091657b78db7f0d4249d70cf2ef8cd47acd",
+      "sha256:87ed6ee7be4fd134892ee4bdbb6c72b8f705bb64990656a14cef786e8f42761e",
+      "sha256:a7e6acd6efe63b4193a03dd2b7cf2876582921b810c4d82c158359a22a226798",
+      "sha256:38f0d39b29d77cef38ec24b127aaa5fbaf9032fd7635601ab7be0503db0c9bf1",
+      "sha256:518d041a74190cfc7a55436cc6bbba865bd6827c96678e5de45c808c1745b0b1",
+      "sha256:114d4756f8f007d6eb0c2b7f3542eb588e85e63cdec251098f68cec9ea77a274",
+      "sha256:bc2453f7e0a068dd2ed86aa2fc21dfca43b6237f0e24b1eca7aa834ada42e304"
+    ],
+    "family_id": "health.infectious-operations",
+    "family_order": 13,
+    "schema_version": "1.0.0",
+    "suite": "population-health-environmental-exposure",
+    "title": "Infectious-disease public-health operations"
+  },
+  "library_claim_boundary": [
+    "The catalog contains 240 decision designs, not 240 city executions.",
+    "Exactly twelve designs map to existing Tier-D reference templates; 228 remain design-only.",
+    "A reference implementation can be an explicit negative release and does not imply impact.",
+    "No record claims a city binding, new method, deployment, adoption, or real-user outcome.",
+    "Future execution requires source binding, gate passage, and domain, legal, community, and operational review."
+  ]
+}

@@ -1,0 +1,164 @@
+{
+  "affected_system": "public participation, multilingual communication, consultation, and feedback closure",
+  "alternatives": [
+    "rank verified high-consequence candidates for inclusive participation and communication improvement portfolio",
+    "select a risk-, equity-, and lifecycle-balanced portfolio for inclusive participation and communication improvement portfolio",
+    "pair representation, rights, usability, trust-risk, cost, and evidence prioritization with an explicit stop, review, and escalation rule"
+  ],
+  "analysis_modes": [
+    "descriptive",
+    "optimization"
+  ],
+  "assumptions": [
+    "Invitation, exposure, participation, contribution, response, decision, and trust remain distinct.",
+    "Participation records preserve consent, privacy, language, accessibility, and channel provenance.",
+    "All alternatives, capacities, costs, effects, thresholds, and failure scenarios are proposed until bound to evidence."
+  ],
+  "baseline": "fund only already-committed work for inclusive participation and communication improvement portfolio.",
+  "city_bindings": [],
+  "constraints": [
+    {
+      "binding": true,
+      "constraint_id": "scenario.equity.participation-communication.inclusive-engagement-portfolio.v1.constraint.binding",
+      "description": "The public participation and risk communication prioritize must respect declared capital, operating, maintenance, and delivery budgets.",
+      "hard": true,
+      "kind": "budget",
+      "required_source_roles": [
+        "community-input",
+        "demographic-context",
+        "equity-attribute",
+        "financial-cost",
+        "geographic-identity",
+        "legal-regulatory"
+      ]
+    },
+    {
+      "binding": false,
+      "constraint_id": "scenario.equity.participation-communication.inclusive-engagement-portfolio.v1.constraint.evidence-scope",
+      "description": "Every released metric must retain evidence type, source lineage, geography, time, assumptions, and uncertainty.",
+      "hard": true,
+      "kind": "technical",
+      "required_source_roles": [
+        "community-input"
+      ]
+    },
+    {
+      "binding": false,
+      "constraint_id": "scenario.equity.participation-communication.inclusive-engagement-portfolio.v1.constraint.decision-authority",
+      "description": "No analytical output may bypass lawful authority, accountable human review, or an applicable appeal process.",
+      "hard": true,
+      "kind": "regulatory",
+      "required_source_roles": [
+        "community-input"
+      ]
+    }
+  ],
+  "current_readiness": "blocked-missing-source",
+  "decision_cadence": "recompiled at each planning cycle and after material evidence change",
+  "decision_owner": "public engagement director and risk communications lead",
+  "decision_question": "Which language, accessibility, facilitation, compensation, channel, and feedback reforms should be funded?",
+  "decision_type": "prioritize",
+  "design_id": "scenario.equity.participation-communication.inclusive-engagement-portfolio.v1",
+  "design_order": 219,
+  "design_signature": "sha256:702b1ad4e8352969d6f546eb9443c3e77e82b04f97150424a1db8b979207e34c",
+  "evidence_requirements": [
+    "estimated",
+    "observed",
+    "optimized",
+    "proposed"
+  ],
+  "family_id": "equity.participation-communication",
+  "family_title": "Public participation and risk communication",
+  "horizon": "multi-year",
+  "implementation_status": "design-only",
+  "independence_key": {
+    "binding_constraint": "The public participation and risk communication prioritize must respect declared capital, operating, maintenance, and delivery budgets.",
+    "decision_object": "inclusive participation and communication improvement portfolio",
+    "evidence_gate": "Evidence for inclusive participation and communication improvement portfolio passes documented checks for cost, benefit, service life, dependencies, deliverability, and maintenance burden.",
+    "horizon": "multi-year",
+    "intervention_mechanism": "representation, rights, usability, trust-risk, cost, and evidence prioritization",
+    "primary_outcome": "affected-population participation and feedback access gap",
+    "spatial_unit": "service-area"
+  },
+  "intended_claim": "A versioned prioritize design for comparing declared alternatives affecting inclusive participation and communication improvement portfolio, conditional on its evidence gate.",
+  "limitations": [
+    "This library record has no city binding and therefore reports no local input, output, or recommendation.",
+    "Readiness describes explicit source and method gates; it does not certify implementation feasibility.",
+    "External domain, legal, community, security, and operational review remains outside this design artifact."
+  ],
+  "method_claimed": false,
+  "objectives": [
+    {
+      "evidence_type": "estimated",
+      "metric": "affected-population participation and feedback access gap",
+      "objective_id": "scenario.equity.participation-communication.inclusive-engagement-portfolio.v1.objective.primary",
+      "primary": true,
+      "sense": "minimize",
+      "unit": "person-engagement units"
+    },
+    {
+      "evidence_type": "estimated",
+      "metric": "distributional gap in affected-population participation and feedback access gap",
+      "objective_id": "scenario.equity.participation-communication.inclusive-engagement-portfolio.v1.objective.equity",
+      "primary": false,
+      "sense": "minimize",
+      "unit": "person-engagement units"
+    },
+    {
+      "evidence_type": "observed",
+      "metric": "decision claims with complete evidence lineage",
+      "objective_id": "scenario.equity.participation-communication.inclusive-engagement-portfolio.v1.objective.traceability",
+      "primary": false,
+      "sense": "maximize",
+      "unit": "percent"
+    }
+  ],
+  "prohibited_claims": [
+    "Do not report modeled inclusion as representative participation, consent, trust, or influence.",
+    "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+    "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+    "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+  ],
+  "release_gate": {
+    "failure_release": "Release an explicit insufficient-evidence record naming missing sources, failed diagnostics, prohibited claims, and the next validation action.",
+    "failure_status": "insufficient-evidence",
+    "gate_id": "scenario.equity.participation-communication.inclusive-engagement-portfolio.v1.gate.release",
+    "gate_type": "cost-capacity",
+    "pass_condition": "Evidence for inclusive participation and communication improvement portfolio passes documented checks for cost, benefit, service life, dependencies, deliverability, and maintenance burden.",
+    "required_evidence_types": [
+      "observed",
+      "proposed"
+    ],
+    "required_source_roles": [
+      "community-input",
+      "demographic-context",
+      "equity-attribute",
+      "financial-cost",
+      "geographic-identity",
+      "legal-regulatory"
+    ]
+  },
+  "required_source_roles": [
+    "community-input",
+    "demographic-context",
+    "equity-attribute",
+    "financial-cost",
+    "geographic-identity",
+    "legal-regulatory"
+  ],
+  "schema_version": "1.0.0",
+  "spatial_unit": "service-area",
+  "suite": "behavioral-policy-equity",
+  "tags": [
+    "behavioral-policy-equity",
+    "design-only",
+    "equity.participation-communication",
+    "prioritize",
+    "scenario-library"
+  ],
+  "title": "Prioritize inclusive participation and communication improvements",
+  "transportability_risks": [
+    "Trust, language, civic institutions, digital access, deliberation norms, and risk salience differ.",
+    "Participants are not automatically representative of affected populations."
+  ]
+}

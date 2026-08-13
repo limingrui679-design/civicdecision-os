@@ -1,0 +1,334 @@
+{
+  "designs": [
+    {
+      "analysis_modes": [
+        "descriptive"
+      ],
+      "binding_constraint": "The sanitation, waste, and street cleanliness diagnose must respect declared measurement resolution and classification uncertainty.",
+      "content_hash": "sha256:48871d5dee686560db4058bc2314f096d8015745f1ed1c0b48058c91dd085445",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Which routes, assets, categories, places, and handoffs show persistent sanitation workload or verified failure?",
+      "decision_type": "diagnose",
+      "design_id": "scenario.public-service.sanitation.sanitation-workload.v1",
+      "design_order": 153,
+      "evidence_gate": "geographic-alignment",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "proposed"
+      ],
+      "family_id": "public-service.sanitation",
+      "family_title": "Sanitation, waste, and street cleanliness",
+      "horizon": "annual",
+      "implementation_status": "design-only",
+      "primary_outcome": "verified recurring sanitation tasks without durable resolution",
+      "prohibited_claims": [
+        "Do not convert sanitation-related request keywords into verified waste conditions.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "service-area",
+      "suite": "public-service-operations",
+      "title": "Diagnose sanitation workload and recurring failure patterns"
+    },
+    {
+      "analysis_modes": [
+        "forecast"
+      ],
+      "binding_constraint": "The sanitation, waste, and street cleanliness forecast must respect declared validated operational capacity and forecast uncertainty.",
+      "content_hash": "sha256:da12a4f4761cb4917c9cdc32623b5684641111e4f84952e70961444d7459d99e",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "What route-time volume, contamination, cleaning, and exception workload should operations prepare for?",
+      "decision_type": "forecast",
+      "design_id": "scenario.public-service.sanitation.waste-service-demand.v1",
+      "design_order": 154,
+      "evidence_gate": "model-calibration",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "proposed"
+      ],
+      "family_id": "public-service.sanitation",
+      "family_title": "Sanitation, waste, and street cleanliness",
+      "horizon": "weeks",
+      "implementation_status": "design-only",
+      "primary_outcome": "service workload above route and facility capacity",
+      "prohibited_claims": [
+        "Do not present forecast workload as observed tonnage, dumping, contamination, or missed service.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "network",
+      "suite": "public-service-operations",
+      "title": "Forecast waste, recycling, and cleaning workload"
+    },
+    {
+      "analysis_modes": [
+        "descriptive",
+        "optimization"
+      ],
+      "binding_constraint": "The sanitation, waste, and street cleanliness prioritize must respect declared capital, operating, maintenance, and delivery budgets.",
+      "content_hash": "sha256:03ec772b9b5ce9667fd5c102c61c34851e14916e65fbe1e0888fad7647661f1a",
+      "current_readiness": "reference-implemented",
+      "decision_question": "Which vehicles, containers, depots, public bins, route tools, and prevention measures should be funded?",
+      "decision_type": "prioritize",
+      "design_id": "scenario.public-service.sanitation.sanitation-improvements.v1",
+      "design_order": 155,
+      "evidence_gate": "cost-capacity",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed"
+      ],
+      "existing_template_ref": "deep.public-service.sanitation-workload.v1",
+      "family_id": "public-service.sanitation",
+      "family_title": "Sanitation, waste, and street cleanliness",
+      "horizon": "multi-year",
+      "implementation_status": "reference-implemented",
+      "primary_outcome": "expected sanitation service failure and overflow burden",
+      "prohibited_claims": [
+        "Do not report modeled cleanliness or service gains as observed outcomes.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "asset",
+      "suite": "public-service-operations",
+      "title": "Prioritize sanitation assets and service improvements"
+    },
+    {
+      "analysis_modes": [
+        "simulation",
+        "optimization"
+      ],
+      "binding_constraint": "The sanitation, waste, and street cleanliness site must respect declared land control, accessibility, permitting, safety, and operating feasibility.",
+      "content_hash": "sha256:a90cbc36a244666a3162e7a35728181781a28010bea9cfc0baa38eebd4cbaacb",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Where should operations and public facilities improve access while limiting traffic and environmental burdens?",
+      "decision_type": "site",
+      "design_id": "scenario.public-service.sanitation.sanitation-facilities.v1",
+      "design_order": 156,
+      "evidence_gate": "legal-authority",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "family_id": "public-service.sanitation",
+      "family_title": "Sanitation, waste, and street cleanliness",
+      "horizon": "multi-year",
+      "implementation_status": "design-only",
+      "primary_outcome": "service demand beyond feasible sanitation facility coverage",
+      "prohibited_claims": [
+        "Do not call a screened sanitation site permitted, safe, accepted, or built.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "facility",
+      "suite": "public-service-operations",
+      "title": "Site sanitation depots, public bins, and drop-off facilities"
+    },
+    {
+      "analysis_modes": [
+        "simulation",
+        "optimization"
+      ],
+      "binding_constraint": "The sanitation, waste, and street cleanliness allocate must respect declared minimum service, eligibility, capacity, and distributional safeguards.",
+      "content_hash": "sha256:835a1afecd986e7dd3c93d3aaaad084b48ff3e3e289ad62929dabc6a7ce3afb6",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "How should crews, vehicles, inspectors, containers, and outreach be distributed across service areas?",
+      "decision_type": "allocate",
+      "design_id": "scenario.public-service.sanitation.sanitation-crews-fleet.v1",
+      "design_order": 157,
+      "evidence_gate": "equity-measurement",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "family_id": "public-service.sanitation",
+      "family_title": "Sanitation, waste, and street cleanliness",
+      "horizon": "weeks",
+      "implementation_status": "design-only",
+      "primary_outcome": "priority sanitation workload without assigned capacity",
+      "prohibited_claims": [
+        "Do not report assigned crews or vehicles as completed collection, cleaning, or prevention.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "network",
+      "suite": "public-service-operations",
+      "title": "Allocate sanitation crews, fleet, and prevention capacity"
+    },
+    {
+      "analysis_modes": [
+        "forecast",
+        "optimization"
+      ],
+      "binding_constraint": "The sanitation, waste, and street cleanliness schedule must respect declared labor, access, sequencing, notice, and completion windows.",
+      "content_hash": "sha256:1e1ddf13328bb3f0aac2278e8b0d7c54fbb554f51ce516b340a6cfd86ce16bce",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "When should routes, inspections, container service, and fleet maintenance occur?",
+      "decision_type": "schedule",
+      "design_id": "scenario.public-service.sanitation.collection-cleaning-routes.v1",
+      "design_order": 158,
+      "evidence_gate": "temporal-alignment",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed"
+      ],
+      "family_id": "public-service.sanitation",
+      "family_title": "Sanitation, waste, and street cleanliness",
+      "horizon": "weeks",
+      "implementation_status": "design-only",
+      "primary_outcome": "priority service-hours outside collection and cleaning targets",
+      "prohibited_claims": [
+        "Do not call a generated route driven or a scheduled task verified complete.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "network",
+      "suite": "public-service-operations",
+      "title": "Schedule collection, cleaning, inspection, and maintenance routes"
+    },
+    {
+      "analysis_modes": [
+        "forecast",
+        "simulation",
+        "optimization"
+      ],
+      "binding_constraint": "The sanitation, waste, and street cleanliness stress test must respect declared minimum continuity and safety thresholds across severe scenarios.",
+      "content_hash": "sha256:883ab87d2544acd20fe57096eb0e7fbd9f5e277f5d579470bd754039080a8230",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Which operating plan sustains essential collection during weather, fleet, facility, workforce, and market failures?",
+      "decision_type": "stress-test",
+      "design_id": "scenario.public-service.sanitation.waste-continuity.v1",
+      "design_order": 159,
+      "evidence_gate": "external-validation",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "family_id": "public-service.sanitation",
+      "family_title": "Sanitation, waste, and street cleanliness",
+      "horizon": "seasonal",
+      "implementation_status": "design-only",
+      "primary_outcome": "scenario-weighted essential collection left unserved",
+      "prohibited_claims": [
+        "Do not present synthetic waste, outages, or unserved routes as observed events.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "network",
+      "suite": "public-service-operations",
+      "title": "Stress-test sanitation continuity under compound disruption"
+    },
+    {
+      "analysis_modes": [
+        "descriptive",
+        "causal"
+      ],
+      "binding_constraint": "The sanitation, waste, and street cleanliness evaluate must respect declared pre-specified assignment, comparison, outcome, spillover, and subgroup rules.",
+      "content_hash": "sha256:89e991b828281d4b857322642a60f83a03d0724cf9ed139d3cd54771bd215377",
+      "current_readiness": "blocked-multiple-gates",
+      "decision_question": "Did phased route, container, enforcement, or outreach changes reduce verified overflow and contamination?",
+      "decision_type": "evaluate",
+      "design_id": "scenario.public-service.sanitation.waste-prevention-effect.v1",
+      "design_order": 160,
+      "evidence_gate": "causal-identification",
+      "evidence_types": [
+        "causal",
+        "estimated",
+        "observed",
+        "proposed"
+      ],
+      "family_id": "public-service.sanitation",
+      "family_title": "Sanitation, waste, and street cleanliness",
+      "horizon": "multi-year",
+      "implementation_status": "design-only",
+      "primary_outcome": "change in verified overflow, contamination, and missed collection",
+      "prohibited_claims": [
+        "Do not infer causal cleanliness, behavior, or environmental benefits from requests alone.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "service-area",
+      "suite": "public-service-operations",
+      "title": "Evaluate waste prevention and collection redesign"
+    }
+  ],
+  "family": {
+    "affected_system": "waste collection, recycling, street cleaning, illegal-dumping, and sanitation response",
+    "claim_boundary": [
+      "Service requests measure reported workload, not verified incidents, need, harm, or resolution.",
+      "Assignments and schedules are proposed operations, not completed work or public outcomes.",
+      "Design records do not establish agency adoption, deployment, productivity, or resident impact."
+    ],
+    "common_source_roles": [
+      "asset-inventory",
+      "municipal-demand",
+      "transport-network"
+    ],
+    "decision_owner": "sanitation commissioner and waste operations chief",
+    "decision_types": [
+      "diagnose",
+      "forecast",
+      "prioritize",
+      "site",
+      "allocate",
+      "schedule",
+      "stress-test",
+      "evaluate"
+    ],
+    "description": "Eight decisions for sanitation signal diagnosis, workload forecasting, asset investment, facility siting, crew allocation, route scheduling, disruption stress, and intervention evaluation.",
+    "design_refs": [
+      "scenario.public-service.sanitation.sanitation-workload.v1",
+      "scenario.public-service.sanitation.waste-service-demand.v1",
+      "scenario.public-service.sanitation.sanitation-improvements.v1",
+      "scenario.public-service.sanitation.sanitation-facilities.v1",
+      "scenario.public-service.sanitation.sanitation-crews-fleet.v1",
+      "scenario.public-service.sanitation.collection-cleaning-routes.v1",
+      "scenario.public-service.sanitation.waste-continuity.v1",
+      "scenario.public-service.sanitation.waste-prevention-effect.v1"
+    ],
+    "design_signatures": [
+      "sha256:f90b12a5eaa3ab801a7e9a5f91d66afe8ce36c63c21dd985d53cab8c53710a46",
+      "sha256:013c459e7a7b8c3a71e0d57c824ffe23f24e1776023a5358911424a9b3799cc8",
+      "sha256:e87ee60f13fca2bace5aa7e8317f2313d9bd2b7d78a4c1ea1ed8bb41b3dcdd9a",
+      "sha256:60572d60ec4c926e70dbc020014d586a699cdef9fb859c32b37a4fe7de96ec57",
+      "sha256:6ac9d73c1fed502eb8f8e20ff440901568b9a314b40e83570c77cbc1d0523e4d",
+      "sha256:e56d624f0f82ec79b4ec57010dc37048044f8101dfdae4a7e40872edb4a5e287",
+      "sha256:fe3efa15456e090a7e535e1b44b5797959b863ee8f9e540f5469e4d2c1d20318",
+      "sha256:bb1921577a391c0274ed6dbceb65b80e2c97e300cf74727dfd4722747b3ca6fb"
+    ],
+    "family_id": "public-service.sanitation",
+    "family_order": 20,
+    "schema_version": "1.0.0",
+    "suite": "public-service-operations",
+    "title": "Sanitation, waste, and street cleanliness"
+  },
+  "library_claim_boundary": [
+    "The catalog contains 240 decision designs, not 240 city executions.",
+    "Exactly twelve designs map to existing Tier-D reference templates; 228 remain design-only.",
+    "A reference implementation can be an explicit negative release and does not imply impact.",
+    "No record claims a city binding, new method, deployment, adoption, or real-user outcome.",
+    "Future execution requires source binding, gate passage, and domain, legal, community, and operational review."
+  ]
+}

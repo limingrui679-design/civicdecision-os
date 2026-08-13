@@ -1,0 +1,133 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "artifact_set_hash": {
+      "pattern": "^sha256:[0-9a-f]{64}$",
+      "title": "Artifact Set Hash",
+      "type": "string"
+    },
+    "audit_passed": {
+      "title": "Audit Passed",
+      "type": "boolean"
+    },
+    "city_bound_executions_counted": {
+      "minimum": 0,
+      "title": "City Bound Executions Counted",
+      "type": "integer"
+    },
+    "claim_boundary": {
+      "items": {
+        "type": "string"
+      },
+      "minItems": 4,
+      "title": "Claim Boundary",
+      "type": "array"
+    },
+    "design_count": {
+      "minimum": 0,
+      "title": "Design Count",
+      "type": "integer"
+    },
+    "design_only_scenarios": {
+      "minimum": 0,
+      "title": "Design Only Scenarios",
+      "type": "integer"
+    },
+    "duplicate_question_count": {
+      "minimum": 0,
+      "title": "Duplicate Question Count",
+      "type": "integer"
+    },
+    "duplicate_title_count": {
+      "minimum": 0,
+      "title": "Duplicate Title Count",
+      "type": "integer"
+    },
+    "exact_signature_collision_count": {
+      "minimum": 0,
+      "title": "Exact Signature Collision Count",
+      "type": "integer"
+    },
+    "family_count": {
+      "minimum": 0,
+      "title": "Family Count",
+      "type": "integer"
+    },
+    "high_similarity_pair_count": {
+      "minimum": 0,
+      "title": "High Similarity Pair Count",
+      "type": "integer"
+    },
+    "high_similarity_threshold": {
+      "exclusiveMinimum": 0,
+      "maximum": 1,
+      "title": "High Similarity Threshold",
+      "type": "number"
+    },
+    "invariants": {
+      "items": {
+        "type": "string"
+      },
+      "minItems": 8,
+      "title": "Invariants",
+      "type": "array"
+    },
+    "library_content_hash": {
+      "pattern": "^sha256:[0-9a-f]{64}$",
+      "title": "Library Content Hash",
+      "type": "string"
+    },
+    "limitations": {
+      "items": {
+        "type": "string"
+      },
+      "minItems": 3,
+      "title": "Limitations",
+      "type": "array"
+    },
+    "maximum_pairwise_similarity": {
+      "maximum": 1,
+      "minimum": 0,
+      "title": "Maximum Pairwise Similarity",
+      "type": "number"
+    },
+    "methods_claimed": {
+      "minimum": 0,
+      "title": "Methods Claimed",
+      "type": "integer"
+    },
+    "reference_implemented_designs": {
+      "minimum": 0,
+      "title": "Reference Implemented Designs",
+      "type": "integer"
+    },
+    "schema_version": {
+      "const": "1.0.0",
+      "default": "1.0.0",
+      "title": "Schema Version",
+      "type": "string"
+    }
+  },
+  "required": [
+    "design_count",
+    "family_count",
+    "reference_implemented_designs",
+    "design_only_scenarios",
+    "city_bound_executions_counted",
+    "methods_claimed",
+    "audit_passed",
+    "high_similarity_threshold",
+    "maximum_pairwise_similarity",
+    "high_similarity_pair_count",
+    "exact_signature_collision_count",
+    "duplicate_title_count",
+    "duplicate_question_count",
+    "artifact_set_hash",
+    "library_content_hash",
+    "claim_boundary",
+    "invariants",
+    "limitations"
+  ],
+  "title": "ScenarioLibraryEvidence",
+  "type": "object"
+}

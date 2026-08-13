@@ -1,0 +1,334 @@
+{
+  "designs": [
+    {
+      "analysis_modes": [
+        "descriptive"
+      ],
+      "binding_constraint": "The road and bridge asset management diagnose must respect declared measurement resolution and classification uncertainty.",
+      "content_hash": "sha256:23d2e245cbf4ec698f1213c4860432668b3ccc131135dd1d32bdffe40f525e20",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Which inspected assets show verified deterioration, repeated defects, dependency risk, or data inconsistency?",
+      "decision_type": "diagnose",
+      "design_id": "scenario.infrastructure.roads-bridges.asset-condition-failure.v1",
+      "design_order": 177,
+      "evidence_gate": "geographic-alignment",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "proposed"
+      ],
+      "family_id": "infrastructure.roads-bridges",
+      "family_title": "Road and bridge asset management",
+      "horizon": "annual",
+      "implementation_status": "design-only",
+      "primary_outcome": "high-consequence assets with unresolved verified defects",
+      "prohibited_claims": [
+        "Do not convert infrastructure request labels into engineering condition or safety findings.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "asset",
+      "suite": "infrastructure-finance-asset-risk",
+      "title": "Diagnose roadway and bridge condition and failure patterns"
+    },
+    {
+      "analysis_modes": [
+        "forecast"
+      ],
+      "binding_constraint": "The road and bridge asset management forecast must respect declared validated operational capacity and forecast uncertainty.",
+      "content_hash": "sha256:0fef9c0bede2eddddb295fa8292b07e890c56918326eec3e95559f2e51f3c300",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "What probabilistic condition, defect, restriction, and maintenance workload should asset managers prepare for?",
+      "decision_type": "forecast",
+      "design_id": "scenario.infrastructure.roads-bridges.asset-deterioration.v1",
+      "design_order": 178,
+      "evidence_gate": "model-calibration",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "proposed"
+      ],
+      "family_id": "infrastructure.roads-bridges",
+      "family_title": "Road and bridge asset management",
+      "horizon": "weeks",
+      "implementation_status": "design-only",
+      "primary_outcome": "lane- and asset-days below condition targets",
+      "prohibited_claims": [
+        "Do not present modeled deterioration as an inspection, failure, closure, or safety prediction.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "asset",
+      "suite": "infrastructure-finance-asset-risk",
+      "title": "Forecast road and bridge deterioration and work demand"
+    },
+    {
+      "analysis_modes": [
+        "descriptive",
+        "optimization"
+      ],
+      "binding_constraint": "The road and bridge asset management prioritize must respect declared capital, operating, maintenance, and delivery budgets.",
+      "content_hash": "sha256:e9302539d29e32df17e699ddf749511212d72aec24c75840a4b3a6541734aa57",
+      "current_readiness": "reference-implemented",
+      "decision_question": "Which preventive, rehabilitative, safety, accessibility, and replacement projects should be funded?",
+      "decision_type": "prioritize",
+      "design_id": "scenario.infrastructure.roads-bridges.maintenance-renewal.v1",
+      "design_order": 179,
+      "evidence_gate": "cost-capacity",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed"
+      ],
+      "existing_template_ref": "deep.infrastructure.maintenance-portfolio.v1",
+      "family_id": "infrastructure.roads-bridges",
+      "family_title": "Road and bridge asset management",
+      "horizon": "multi-year",
+      "implementation_status": "reference-implemented",
+      "primary_outcome": "expected risk-adjusted deficient asset-years",
+      "prohibited_claims": [
+        "Do not report request-based prioritization as engineering design, capital approval, or completed work.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "asset",
+      "suite": "infrastructure-finance-asset-risk",
+      "title": "Prioritize road and bridge maintenance and renewal"
+    },
+    {
+      "analysis_modes": [
+        "simulation",
+        "optimization"
+      ],
+      "binding_constraint": "The road and bridge asset management site must respect declared land control, accessibility, permitting, safety, and operating feasibility.",
+      "content_hash": "sha256:519c30a4ead065b51d29d2ebcdb7dfd31fed4db8651ee5696b296ed32d1bf081",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Where should depots, materials, equipment, and emergency staging improve resilient network coverage?",
+      "decision_type": "site",
+      "design_id": "scenario.infrastructure.roads-bridges.maintenance-depots.v1",
+      "design_order": 180,
+      "evidence_gate": "legal-authority",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "family_id": "infrastructure.roads-bridges",
+      "family_title": "Road and bridge asset management",
+      "horizon": "multi-year",
+      "implementation_status": "design-only",
+      "primary_outcome": "high-consequence assets beyond feasible maintenance response",
+      "prohibited_claims": [
+        "Do not call a candidate depot permitted, safe, acquired, accepted, or operational.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "facility",
+      "suite": "infrastructure-finance-asset-risk",
+      "title": "Site maintenance depots and material staging"
+    },
+    {
+      "analysis_modes": [
+        "simulation",
+        "optimization"
+      ],
+      "binding_constraint": "The road and bridge asset management allocate must respect declared minimum service, eligibility, capacity, and distributional safeguards.",
+      "content_hash": "sha256:65cdab80d43fd4359c8248df50b0d34e9d3c89e067ca74661543e253966e503f",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "How should qualified crews, specialty equipment, materials, and inspection capacity be assigned?",
+      "decision_type": "allocate",
+      "design_id": "scenario.infrastructure.roads-bridges.maintenance-crews-equipment.v1",
+      "design_order": 181,
+      "evidence_gate": "equity-measurement",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "family_id": "infrastructure.roads-bridges",
+      "family_title": "Road and bridge asset management",
+      "horizon": "weeks",
+      "implementation_status": "design-only",
+      "primary_outcome": "high-consequence work without assigned qualified capacity",
+      "prohibited_claims": [
+        "Do not report assigned resources as inspected, repaired, reopened, or safe assets.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "network",
+      "suite": "infrastructure-finance-asset-risk",
+      "title": "Allocate maintenance crews, equipment, and materials"
+    },
+    {
+      "analysis_modes": [
+        "forecast",
+        "optimization"
+      ],
+      "binding_constraint": "The road and bridge asset management schedule must respect declared labor, access, sequencing, notice, and completion windows.",
+      "content_hash": "sha256:5963f6c5a67bd535ba39778f9a580ef3c95d951d8de4f21398fa84ad29d780b7",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "When should inspections and treatments occur given condition, traffic, weather, dependencies, and permits?",
+      "decision_type": "schedule",
+      "design_id": "scenario.infrastructure.roads-bridges.maintenance-construction.v1",
+      "design_order": 182,
+      "evidence_gate": "temporal-alignment",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed"
+      ],
+      "family_id": "infrastructure.roads-bridges",
+      "family_title": "Road and bridge asset management",
+      "horizon": "weeks",
+      "implementation_status": "design-only",
+      "primary_outcome": "high-consequence asset-days beyond treatment thresholds",
+      "prohibited_claims": [
+        "Do not call a scheduled inspection or treatment completed or the asset safe.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "network",
+      "suite": "infrastructure-finance-asset-risk",
+      "title": "Schedule inspections, maintenance, and construction windows"
+    },
+    {
+      "analysis_modes": [
+        "forecast",
+        "simulation",
+        "optimization"
+      ],
+      "binding_constraint": "The road and bridge asset management stress test must respect declared minimum continuity and safety thresholds across severe scenarios.",
+      "content_hash": "sha256:cc1d255a79007452c6fe82297726ecd56c399ebcdc7cb602b8614107f0ac9969",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Which maintenance and continuity strategy preserves essential access under asset, hazard, supply, and crew failures?",
+      "decision_type": "stress-test",
+      "design_id": "scenario.infrastructure.roads-bridges.transport-asset-failure.v1",
+      "design_order": 183,
+      "evidence_gate": "external-validation",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "family_id": "infrastructure.roads-bridges",
+      "family_title": "Road and bridge asset management",
+      "horizon": "seasonal",
+      "implementation_status": "design-only",
+      "primary_outcome": "scenario-weighted essential trips disconnected",
+      "prohibited_claims": [
+        "Do not present synthetic defects, closures, or disconnected trips as observed events.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "network",
+      "suite": "infrastructure-finance-asset-risk",
+      "title": "Stress-test transport infrastructure under compound failure"
+    },
+    {
+      "analysis_modes": [
+        "descriptive",
+        "causal"
+      ],
+      "binding_constraint": "The road and bridge asset management evaluate must respect declared pre-specified assignment, comparison, outcome, spillover, and subgroup rules.",
+      "content_hash": "sha256:7f1669490e7b0581034f9beefa2d2b809e629e0c7b8f5156c5b27d4b1558a6bc",
+      "current_readiness": "blocked-multiple-gates",
+      "decision_question": "Did phased preventive treatments extend verified asset condition and reduce unplanned service loss?",
+      "decision_type": "evaluate",
+      "design_id": "scenario.infrastructure.roads-bridges.preventive-maintenance-effect.v1",
+      "design_order": 184,
+      "evidence_gate": "causal-identification",
+      "evidence_types": [
+        "causal",
+        "estimated",
+        "observed",
+        "proposed"
+      ],
+      "family_id": "infrastructure.roads-bridges",
+      "family_title": "Road and bridge asset management",
+      "horizon": "multi-year",
+      "implementation_status": "design-only",
+      "primary_outcome": "change in verified condition life and unplanned restriction days",
+      "prohibited_claims": [
+        "Do not infer structural safety or causal lifecycle value without comparable inspections and treatment assignment.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "asset",
+      "suite": "infrastructure-finance-asset-risk",
+      "title": "Evaluate preventive maintenance and treatment strategies"
+    }
+  ],
+  "family": {
+    "affected_system": "roadway, bridge, sidewalk, signal, and public right-of-way asset network",
+    "claim_boundary": [
+      "Requests and proxy indicators do not replace engineering inspection, accounting, or legal review.",
+      "Selected projects and schedules are planning outputs, not appropriations, designs, contracts, or construction.",
+      "Modeled lifecycle, emissions, reliability, and fiscal effects are not realized outcomes."
+    ],
+    "common_source_roles": [
+      "asset-condition",
+      "asset-inventory",
+      "geographic-identity"
+    ],
+    "decision_owner": "public works asset manager and chief infrastructure engineer",
+    "decision_types": [
+      "diagnose",
+      "forecast",
+      "prioritize",
+      "site",
+      "allocate",
+      "schedule",
+      "stress-test",
+      "evaluate"
+    ],
+    "description": "Eight decisions for condition diagnosis, failure forecasting, maintenance portfolios, depot siting, crew allocation, work scheduling, network stress, and treatment evaluation.",
+    "design_refs": [
+      "scenario.infrastructure.roads-bridges.asset-condition-failure.v1",
+      "scenario.infrastructure.roads-bridges.asset-deterioration.v1",
+      "scenario.infrastructure.roads-bridges.maintenance-renewal.v1",
+      "scenario.infrastructure.roads-bridges.maintenance-depots.v1",
+      "scenario.infrastructure.roads-bridges.maintenance-crews-equipment.v1",
+      "scenario.infrastructure.roads-bridges.maintenance-construction.v1",
+      "scenario.infrastructure.roads-bridges.transport-asset-failure.v1",
+      "scenario.infrastructure.roads-bridges.preventive-maintenance-effect.v1"
+    ],
+    "design_signatures": [
+      "sha256:a5c660144ab5e285d9ec2a3415aa7deb68f5bc95501ef1c7c7cab1a3b939038a",
+      "sha256:def90bcc24f8fd64b2c219ab9aa08a1af3fb39fd6e65f9c86f2e8b8a273ad26f",
+      "sha256:d2e07bee1ab0a4f304e0486d722c85e4b3ce6ba2eb2680d7b977d978d1bc750c",
+      "sha256:c6669b12d428e7bdb7656081882641b771c67e084325243eb8994c09338d9730",
+      "sha256:44c75b2d042e14a62c1452e07b9e153be1f5cf91100544015ca4e72343542b2b",
+      "sha256:b564534d6bf70b70b13b9187c5ebdc4b7fbf56db52789a4e1e102f1cedd36eda",
+      "sha256:f411b99614d6cc6e70621508361b2fe94c6d3db23fb24b8ceb1485533d0e85a1",
+      "sha256:291748e867e2ea1acffbca454fb917e653d583010f8111ae478b92d129aa18c5"
+    ],
+    "family_id": "infrastructure.roads-bridges",
+    "family_order": 23,
+    "schema_version": "1.0.0",
+    "suite": "infrastructure-finance-asset-risk",
+    "title": "Road and bridge asset management"
+  },
+  "library_claim_boundary": [
+    "The catalog contains 240 decision designs, not 240 city executions.",
+    "Exactly twelve designs map to existing Tier-D reference templates; 228 remain design-only.",
+    "A reference implementation can be an explicit negative release and does not imply impact.",
+    "No record claims a city binding, new method, deployment, adoption, or real-user outcome.",
+    "Future execution requires source binding, gate passage, and domain, legal, community, and operational review."
+  ]
+}

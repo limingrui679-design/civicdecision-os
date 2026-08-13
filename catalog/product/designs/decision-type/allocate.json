@@ -1,0 +1,1060 @@
+{
+  "claim_boundary": "Design records are not city executions, deployments, adoptions, or impacts.",
+  "items": [
+    {
+      "analysis_modes": [
+        "simulation",
+        "optimization"
+      ],
+      "binding_constraint": "No high-vulnerability service area may fall below the declared minimum response coverage.",
+      "content_hash": "sha256:9e855c482459fe8366c5c65d70a22dc9d3af7c57ddd25d7df64dddfcdce0a77a",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "How should limited outreach teams, transport slots, and cooling supplies be distributed during a heat emergency?",
+      "decision_type": "allocate",
+      "design_id": "scenario.climate.extreme-heat.heat-response-resources.v1",
+      "design_order": 5,
+      "evidence_gate": "equity-measurement",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "family_id": "climate.extreme-heat",
+      "family_title": "Extreme heat exposure and response",
+      "horizon": "days",
+      "implementation_status": "design-only",
+      "primary_outcome": "high-risk residents without assigned heat-response capacity",
+      "prohibited_claims": [
+        "Do not describe an optimized allocation as delivered services or reduced mortality.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "service-area",
+      "suite": "climate-disaster-resilience",
+      "title": "Allocate heat-response teams and cooling supplies"
+    },
+    {
+      "analysis_modes": [
+        "simulation",
+        "optimization"
+      ],
+      "binding_constraint": "Travel, setup, relocation, and crew-safety times must fit the forecast lead-time window.",
+      "content_hash": "sha256:d9c63bf4e078aa15ce9d3326dc75e159a19daf5b4e113144dbc6299f59c4a142",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "How should mobile pumps, barriers, and response teams be assigned as observed conditions change?",
+      "decision_type": "allocate",
+      "design_id": "scenario.climate.flood-stormwater.flood-response-assets.v1",
+      "design_order": 13,
+      "evidence_gate": "temporal-alignment",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "family_id": "climate.flood-stormwater",
+      "family_title": "Flood and stormwater resilience",
+      "horizon": "real-time",
+      "implementation_status": "design-only",
+      "primary_outcome": "critical locations without timely flood-response coverage",
+      "prohibited_claims": [
+        "Do not call a modeled dispatch plan an executed emergency response.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "network",
+      "suite": "climate-disaster-resilience",
+      "title": "Allocate pumps, barriers, and flood-response crews"
+    },
+    {
+      "analysis_modes": [
+        "simulation",
+        "optimization"
+      ],
+      "binding_constraint": "Minimum protection shares for high-risk groups must be satisfied before residual allocation.",
+      "content_hash": "sha256:63be4d8da45e7fd5dd780ef8c6f3226fb46e519893262801f6333899dbd2c56c",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "How should limited filtration units, calibrated monitors, and outreach capacity be distributed?",
+      "decision_type": "allocate",
+      "design_id": "scenario.climate.wildfire-smoke.filters-monitors-outreach.v1",
+      "design_order": 21,
+      "evidence_gate": "equity-measurement",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "family_id": "climate.wildfire-smoke",
+      "family_title": "Wildfire smoke and air-quality resilience",
+      "horizon": "weeks",
+      "implementation_status": "design-only",
+      "primary_outcome": "high-risk households without assigned protection capacity",
+      "prohibited_claims": [
+        "Do not report allocated equipment as installed, used correctly, or clinically effective.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "population-group",
+      "suite": "climate-disaster-resilience",
+      "title": "Allocate filters, monitors, and smoke outreach"
+    },
+    {
+      "analysis_modes": [
+        "simulation",
+        "optimization"
+      ],
+      "binding_constraint": "Allocation must honor water rights, public-health minimums, environmental flows, and adopted drought rules.",
+      "content_hash": "sha256:f0989d4744da33baf448b0ce6227a3bf9e12506562f781af3c288d71bae5ef8d",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "How should constrained supply be allocated while protecting essential, environmental, and equity requirements?",
+      "decision_type": "allocate",
+      "design_id": "scenario.climate.drought-water.scarce-water-allocation.v1",
+      "design_order": 29,
+      "evidence_gate": "legal-authority",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "family_id": "climate.drought-water",
+      "family_title": "Drought and urban water security",
+      "horizon": "weeks",
+      "implementation_status": "design-only",
+      "primary_outcome": "essential demand left unmet",
+      "prohibited_claims": [
+        "Do not present a modeled scarcity allocation as a lawful order or delivered volume.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "service-area",
+      "suite": "climate-disaster-resilience",
+      "title": "Allocate scarce water across essential uses"
+    },
+    {
+      "analysis_modes": [
+        "forecast",
+        "simulation",
+        "optimization"
+      ],
+      "binding_constraint": "Staging, travel, loading, crew-safety, and evacuation-clearance times must fit the landfall window.",
+      "content_hash": "sha256:65b84446a665a852ff7421fd4bedd7863f32774850bf24f1d03a2efe5ecc5354",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "How should accessible transport, rescue assets, generators, and supplies be staged before landfall?",
+      "decision_type": "allocate",
+      "design_id": "scenario.climate.coastal-storms.coastal-emergency-resources.v1",
+      "design_order": 37,
+      "evidence_gate": "temporal-alignment",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "family_id": "climate.coastal-storms",
+      "family_title": "Coastal storms and sea-level adaptation",
+      "horizon": "days",
+      "implementation_status": "design-only",
+      "primary_outcome": "high-risk residents and critical sites without assigned support",
+      "prohibited_claims": [
+        "Do not report a staged resource plan as completed evacuation or delivered assistance.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "network",
+      "suite": "climate-disaster-resilience",
+      "title": "Allocate coastal emergency transport and supplies"
+    },
+    {
+      "analysis_modes": [
+        "simulation",
+        "optimization"
+      ],
+      "binding_constraint": "The transit reliability and passenger continuity allocate must respect declared minimum service, eligibility, capacity, and distributional safeguards.",
+      "content_hash": "sha256:e45400ecba3f9aaa620908d13b4e2d0cb654bd65b9121dc6920e285404650612",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "How should vehicles, operators, and spare capacity be assigned across routes and depots?",
+      "decision_type": "allocate",
+      "design_id": "scenario.mobility.transit-reliability.fleet-spares.v1",
+      "design_order": 45,
+      "evidence_gate": "equity-measurement",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "family_id": "mobility.transit-reliability",
+      "family_title": "Transit reliability and passenger continuity",
+      "horizon": "weeks",
+      "implementation_status": "design-only",
+      "primary_outcome": "passenger demand without scheduled reliable capacity",
+      "prohibited_claims": [
+        "Do not describe a vehicle and operator assignment as delivered service.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "network",
+      "suite": "mobility-accessibility-operations",
+      "title": "Allocate fleet, operators, and recovery capacity"
+    },
+    {
+      "analysis_modes": [
+        "simulation",
+        "optimization"
+      ],
+      "binding_constraint": "The pedestrian safety and universal accessibility allocate must respect declared minimum service, eligibility, capacity, and distributional safeguards.",
+      "content_hash": "sha256:d041b7a23fdbb6d3bff0959f02fe8df219b38ab7b53f3fab54113f66aa1d58b4",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "How should inspectors, temporary barriers, signal crews, and accessibility repairs be distributed?",
+      "decision_type": "allocate",
+      "design_id": "scenario.mobility.pedestrian-safety.inspection-quick-build.v1",
+      "design_order": 53,
+      "evidence_gate": "equity-measurement",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "family_id": "mobility.pedestrian-safety",
+      "family_title": "Pedestrian safety and universal accessibility",
+      "horizon": "weeks",
+      "implementation_status": "design-only",
+      "primary_outcome": "verified high-consequence barriers without assigned response",
+      "prohibited_claims": [
+        "Do not report assigned crews as completed repairs or verified compliance.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "service-area",
+      "suite": "mobility-accessibility-operations",
+      "title": "Allocate inspections and quick-build safety resources"
+    },
+    {
+      "analysis_modes": [
+        "simulation",
+        "optimization"
+      ],
+      "binding_constraint": "The urban freight and curb operations allocate must respect declared minimum service, eligibility, capacity, and distributional safeguards.",
+      "content_hash": "sha256:425ae895a02e72c2bfbfd76e8825b1d39f30eee3b76a7806b7e62dbda03ea9d8",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "How should finite curb frontage be divided among loading, access, transit, parking, and public space?",
+      "decision_type": "allocate",
+      "design_id": "scenario.mobility.freight-curb.curb-space.v1",
+      "design_order": 61,
+      "evidence_gate": "equity-measurement",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "family_id": "mobility.freight-curb",
+      "family_title": "Urban freight and curb operations",
+      "horizon": "weeks",
+      "implementation_status": "design-only",
+      "primary_outcome": "priority curb demand left unserved",
+      "prohibited_claims": [
+        "Do not call an optimized curb allocation enacted regulation or public consensus.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "corridor",
+      "suite": "mobility-accessibility-operations",
+      "title": "Allocate curb space across freight and public uses"
+    },
+    {
+      "analysis_modes": [
+        "simulation",
+        "optimization"
+      ],
+      "binding_constraint": "The evacuation and emergency mobility allocate must respect declared minimum service, eligibility, capacity, and distributional safeguards.",
+      "content_hash": "sha256:bc1fe71578c7ec2ab246840181ad1df4abe86063d432f55916b459e9cb6e4833",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "How should accessible vehicles, drivers, escorts, and medical transport slots be assigned?",
+      "decision_type": "allocate",
+      "design_id": "scenario.mobility.emergency-mobility.assisted-transport.v1",
+      "design_order": 69,
+      "evidence_gate": "equity-measurement",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "family_id": "mobility.emergency-mobility",
+      "family_title": "Evacuation and emergency mobility",
+      "horizon": "weeks",
+      "implementation_status": "design-only",
+      "primary_outcome": "eligible evacuation needs without assigned transport",
+      "prohibited_claims": [
+        "Do not report assigned transport as passenger contact, pickup, or safe arrival.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "network",
+      "suite": "mobility-accessibility-operations",
+      "title": "Allocate accessible vehicles and emergency mobility teams"
+    },
+    {
+      "analysis_modes": [
+        "simulation",
+        "optimization"
+      ],
+      "binding_constraint": "The active mobility network and micromobility allocate must respect declared minimum service, eligibility, capacity, and distributional safeguards.",
+      "content_hash": "sha256:95a3e46988632d5fff57bded1cca054a24800b83d89530949a38fbc46c897e9b",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "How should vehicles, adaptive devices, docks, and charging capacity be distributed?",
+      "decision_type": "allocate",
+      "design_id": "scenario.mobility.active-mobility.shared-fleet.v1",
+      "design_order": 77,
+      "evidence_gate": "equity-measurement",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "family_id": "mobility.active-mobility",
+      "family_title": "Active mobility network and micromobility",
+      "horizon": "weeks",
+      "implementation_status": "design-only",
+      "primary_outcome": "forecast trips without an available suitable vehicle",
+      "prohibited_claims": [
+        "Do not report vehicle allocation as availability at use time or completed equitable access.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "facility",
+      "suite": "mobility-accessibility-operations",
+      "title": "Allocate shared bicycles, devices, and charging capacity"
+    },
+    {
+      "analysis_modes": [
+        "simulation",
+        "optimization"
+      ],
+      "binding_constraint": "The heat-health surveillance and prevention allocate must respect declared minimum service, eligibility, capacity, and distributional safeguards.",
+      "content_hash": "sha256:0764ac776c8c0f41ed913c1fa0c2dbd277a90df47b41bdf3bb560768a2918ea6",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "How should community health workers, call capacity, transport, and clinical surge slots be distributed?",
+      "decision_type": "allocate",
+      "design_id": "scenario.health.heat-health.heat-health-outreach.v1",
+      "design_order": 85,
+      "evidence_gate": "equity-measurement",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "family_id": "health.heat-health",
+      "family_title": "Heat-health surveillance and prevention",
+      "horizon": "weeks",
+      "implementation_status": "design-only",
+      "primary_outcome": "high-risk people without assigned support capacity",
+      "prohibited_claims": [
+        "Do not report assigned support as contacted patients, completed visits, or improved health.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "population-group",
+      "suite": "population-health-environmental-exposure",
+      "title": "Allocate heat-health outreach and clinical surge support"
+    },
+    {
+      "analysis_modes": [
+        "simulation",
+        "optimization"
+      ],
+      "binding_constraint": "The air-quality exposure and respiratory health allocate must respect declared minimum service, eligibility, capacity, and distributional safeguards.",
+      "content_hash": "sha256:5d63dda3f899818bf5e9c6d522269f1fc612f3d58ee4ccf6f89ae40a54d48ead",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "How should filters, masks, clinical navigation, and outreach be distributed during pollution episodes?",
+      "decision_type": "allocate",
+      "design_id": "scenario.health.air-quality.respiratory-protection.v1",
+      "design_order": 93,
+      "evidence_gate": "equity-measurement",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "family_id": "health.air-quality",
+      "family_title": "Air-quality exposure and respiratory health",
+      "horizon": "weeks",
+      "implementation_status": "design-only",
+      "primary_outcome": "high-risk people without assigned protection support",
+      "prohibited_claims": [
+        "Do not report distributed supplies as used correctly or clinically effective.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "population-group",
+      "suite": "population-health-environmental-exposure",
+      "title": "Allocate respiratory protection and outreach resources"
+    },
+    {
+      "analysis_modes": [
+        "simulation",
+        "optimization"
+      ],
+      "binding_constraint": "The infectious-disease public-health operations allocate must respect declared minimum service, eligibility, capacity, and distributional safeguards.",
+      "content_hash": "sha256:babf3782c979a09aeeaf2ec2b3e99e78fbaf46d9a8db9ae1a2c1e848ca51962b",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "How should constrained supplies and service capacity be allocated under clinical and equity priorities?",
+      "decision_type": "allocate",
+      "design_id": "scenario.health.infectious-operations.vaccines-tests-treatment.v1",
+      "design_order": 101,
+      "evidence_gate": "equity-measurement",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "family_id": "health.infectious-operations",
+      "family_title": "Infectious-disease public-health operations",
+      "horizon": "weeks",
+      "implementation_status": "design-only",
+      "primary_outcome": "eligible need without assigned service capacity",
+      "prohibited_claims": [
+        "Do not report allocated doses or slots as administered treatment or health benefit.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "population-group",
+      "suite": "population-health-environmental-exposure",
+      "title": "Allocate vaccines, tests, treatment, and outreach"
+    },
+    {
+      "analysis_modes": [
+        "simulation",
+        "optimization"
+      ],
+      "binding_constraint": "The food access and environmental health allocate must respect declared minimum service, eligibility, capacity, and distributional safeguards.",
+      "content_hash": "sha256:10039af612ee0bfdaa5f6535cbc243356be17e7bed1f4d336f44aff935b840c3",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "How should inspectors, sampling, emergency food, refrigeration, and navigation capacity be distributed?",
+      "decision_type": "allocate",
+      "design_id": "scenario.health.food-environment.inspection-assistance-resources.v1",
+      "design_order": 109,
+      "evidence_gate": "equity-measurement",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "family_id": "health.food-environment",
+      "family_title": "Food access and environmental health",
+      "horizon": "weeks",
+      "implementation_status": "design-only",
+      "primary_outcome": "priority cases and eligible demand without assigned capacity",
+      "prohibited_claims": [
+        "Do not report assigned inspections, benefits, or food supplies as completed or received.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "service-area",
+      "suite": "population-health-environmental-exposure",
+      "title": "Allocate inspectors, food support, and field resources"
+    },
+    {
+      "analysis_modes": [
+        "simulation",
+        "optimization"
+      ],
+      "binding_constraint": "The housing habitability and code operations allocate must respect declared minimum service, eligibility, capacity, and distributional safeguards.",
+      "content_hash": "sha256:895ea1081e3288bf15b9252449daa9af09f33ade940a9cf76883c864b6156896",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "How should inspectors, language access, legal navigation, repair grants, and relocation capacity be assigned?",
+      "decision_type": "allocate",
+      "design_id": "scenario.housing.habitability-code.inspectors-repair-support.v1",
+      "design_order": 117,
+      "evidence_gate": "equity-measurement",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "family_id": "housing.habitability-code",
+      "family_title": "Housing habitability and code operations",
+      "horizon": "weeks",
+      "implementation_status": "design-only",
+      "primary_outcome": "verified priority households without assigned response capacity",
+      "prohibited_claims": [
+        "Do not report an assignment as inspection, repair, legal resolution, or safe relocation.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "service-area",
+      "suite": "housing-land-use-regeneration",
+      "title": "Allocate housing inspectors and emergency repair support"
+    },
+    {
+      "analysis_modes": [
+        "simulation",
+        "optimization"
+      ],
+      "binding_constraint": "The homelessness prevention and housing stability allocate must respect declared minimum service, eligibility, capacity, and distributional safeguards.",
+      "content_hash": "sha256:2e2bb9f89b871a63c55a37a7a0afd8418cd70646a5423d7db1b11586d579e275",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "How should limited flexible funds, legal capacity, shelter diversion, and case navigation be assigned?",
+      "decision_type": "allocate",
+      "design_id": "scenario.housing.homelessness-prevention.prevention-assistance.v1",
+      "design_order": 125,
+      "evidence_gate": "equity-measurement",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "family_id": "housing.homelessness-prevention",
+      "family_title": "Homelessness prevention and housing stability",
+      "horizon": "weeks",
+      "implementation_status": "design-only",
+      "primary_outcome": "eligible urgent households without assigned assistance",
+      "prohibited_claims": [
+        "Do not report allocated funds or case capacity as received assistance or stable housing.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "population-group",
+      "suite": "housing-land-use-regeneration",
+      "title": "Allocate rental, legal, diversion, and navigation assistance"
+    },
+    {
+      "analysis_modes": [
+        "simulation",
+        "optimization"
+      ],
+      "binding_constraint": "The affordable housing siting and preservation allocate must respect declared minimum service, eligibility, capacity, and distributional safeguards.",
+      "content_hash": "sha256:0d090e208e9f63261a9b1587cabe62a8cb7bf74ff3747f63ff587351cdc560be",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "How should tax credits, loans, grants, vouchers, and technical capacity be allocated?",
+      "decision_type": "allocate",
+      "design_id": "scenario.housing.affordable-supply.housing-subsidy.v1",
+      "design_order": 133,
+      "evidence_gate": "equity-measurement",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "family_id": "housing.affordable-supply",
+      "family_title": "Affordable housing siting and preservation",
+      "horizon": "weeks",
+      "implementation_status": "design-only",
+      "primary_outcome": "eligible affordable home-years without assigned subsidy",
+      "prohibited_claims": [
+        "Do not report a modeled subsidy allocation as an award, closing, or completed home.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "parcel",
+      "suite": "housing-land-use-regeneration",
+      "title": "Allocate housing subsidy and preservation capacity"
+    },
+    {
+      "analysis_modes": [
+        "simulation",
+        "optimization"
+      ],
+      "binding_constraint": "The land use, regeneration, and neighborhood change allocate must respect declared minimum service, eligibility, capacity, and distributional safeguards.",
+      "content_hash": "sha256:e2838d3d96452a0459b9846b62f7802877e31607b18de5e52639c53bb9b8e54a",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "How should capital, land value, grants, affordable space, jobs, and public benefits be distributed?",
+      "decision_type": "allocate",
+      "design_id": "scenario.housing.land-use-regeneration.regeneration-benefits.v1",
+      "design_order": 141,
+      "evidence_gate": "equity-measurement",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "family_id": "housing.land-use-regeneration",
+      "family_title": "Land use, regeneration, and neighborhood change",
+      "horizon": "weeks",
+      "implementation_status": "design-only",
+      "primary_outcome": "verified community priorities without funded enforceable benefit",
+      "prohibited_claims": [
+        "Do not present modeled allocations as negotiated, legally secured, funded, or delivered benefits.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "neighborhood",
+      "suite": "housing-land-use-regeneration",
+      "title": "Allocate regeneration funds and community benefits"
+    },
+    {
+      "analysis_modes": [
+        "simulation",
+        "optimization"
+      ],
+      "binding_constraint": "The 311 and public-service demand operations allocate must respect declared minimum service, eligibility, capacity, and distributional safeguards.",
+      "content_hash": "sha256:c8150dda0dc01bfc783b8ab75fc5fc75089ca5edd2da8ff9fcb926a4a71a46cd",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "How should cases, language support, supervisors, and field capacity be assigned across queues?",
+      "decision_type": "allocate",
+      "design_id": "scenario.public-service.demand.case-routing-capacity.v1",
+      "design_order": 149,
+      "evidence_gate": "equity-measurement",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "family_id": "public-service.demand",
+      "family_title": "311 and public-service demand operations",
+      "horizon": "weeks",
+      "implementation_status": "design-only",
+      "primary_outcome": "priority requests without assigned qualified capacity",
+      "prohibited_claims": [
+        "Do not report routed cases as contacted residents, completed work, or resolved outcomes.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "service-area",
+      "suite": "public-service-operations",
+      "title": "Allocate service cases and response capacity"
+    },
+    {
+      "analysis_modes": [
+        "simulation",
+        "optimization"
+      ],
+      "binding_constraint": "The sanitation, waste, and street cleanliness allocate must respect declared minimum service, eligibility, capacity, and distributional safeguards.",
+      "content_hash": "sha256:835a1afecd986e7dd3c93d3aaaad084b48ff3e3e289ad62929dabc6a7ce3afb6",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "How should crews, vehicles, inspectors, containers, and outreach be distributed across service areas?",
+      "decision_type": "allocate",
+      "design_id": "scenario.public-service.sanitation.sanitation-crews-fleet.v1",
+      "design_order": 157,
+      "evidence_gate": "equity-measurement",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "family_id": "public-service.sanitation",
+      "family_title": "Sanitation, waste, and street cleanliness",
+      "horizon": "weeks",
+      "implementation_status": "design-only",
+      "primary_outcome": "priority sanitation workload without assigned capacity",
+      "prohibited_claims": [
+        "Do not report assigned crews or vehicles as completed collection, cleaning, or prevention.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "network",
+      "suite": "public-service-operations",
+      "title": "Allocate sanitation crews, fleet, and prevention capacity"
+    },
+    {
+      "analysis_modes": [
+        "simulation",
+        "optimization"
+      ],
+      "binding_constraint": "The emergency response readiness and allocation allocate must respect declared minimum service, eligibility, capacity, and distributional safeguards.",
+      "content_hash": "sha256:677b8d9e44c6cbfe56edebcf9443728603e49ec930d471438793719d58268286",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "How should deployable units, specialist teams, supervisors, and mutual-aid reserves be positioned?",
+      "decision_type": "allocate",
+      "design_id": "scenario.public-service.emergency-response.response-units.v1",
+      "design_order": 165,
+      "evidence_gate": "equity-measurement",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "family_id": "public-service.emergency-response",
+      "family_title": "Emergency response readiness and allocation",
+      "horizon": "weeks",
+      "implementation_status": "design-only",
+      "primary_outcome": "priority demand without resilient unit coverage",
+      "prohibited_claims": [
+        "Do not present a planning allocation as an automated dispatch or completed response.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "network",
+      "suite": "public-service-operations",
+      "title": "Allocate emergency response units and standby capacity"
+    },
+    {
+      "analysis_modes": [
+        "simulation",
+        "optimization"
+      ],
+      "binding_constraint": "The digital public access and administrative service delivery allocate must respect declared minimum service, eligibility, capacity, and distributional safeguards.",
+      "content_hash": "sha256:63658c502d04919d2de5db5ef4f4d5e5e97c0263e5856dd383c70c77cd4b6c18",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "How should navigators, interpreters, accessibility specialists, devices, and appointment capacity be assigned?",
+      "decision_type": "allocate",
+      "design_id": "scenario.public-service.digital-access.navigation-support.v1",
+      "design_order": 173,
+      "evidence_gate": "equity-measurement",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "family_id": "public-service.digital-access",
+      "family_title": "Digital public access and administrative service delivery",
+      "horizon": "weeks",
+      "implementation_status": "design-only",
+      "primary_outcome": "eligible complex journeys without qualified support",
+      "prohibited_claims": [
+        "Do not report assigned support as contact, completed application, eligibility, or benefit receipt.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "population-group",
+      "suite": "public-service-operations",
+      "title": "Allocate navigation, language, and accessibility support"
+    },
+    {
+      "analysis_modes": [
+        "simulation",
+        "optimization"
+      ],
+      "binding_constraint": "The road and bridge asset management allocate must respect declared minimum service, eligibility, capacity, and distributional safeguards.",
+      "content_hash": "sha256:65cdab80d43fd4359c8248df50b0d34e9d3c89e067ca74661543e253966e503f",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "How should qualified crews, specialty equipment, materials, and inspection capacity be assigned?",
+      "decision_type": "allocate",
+      "design_id": "scenario.infrastructure.roads-bridges.maintenance-crews-equipment.v1",
+      "design_order": 181,
+      "evidence_gate": "equity-measurement",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "family_id": "infrastructure.roads-bridges",
+      "family_title": "Road and bridge asset management",
+      "horizon": "weeks",
+      "implementation_status": "design-only",
+      "primary_outcome": "high-consequence work without assigned qualified capacity",
+      "prohibited_claims": [
+        "Do not report assigned resources as inspected, repaired, reopened, or safe assets.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "network",
+      "suite": "infrastructure-finance-asset-risk",
+      "title": "Allocate maintenance crews, equipment, and materials"
+    },
+    {
+      "analysis_modes": [
+        "simulation",
+        "optimization"
+      ],
+      "binding_constraint": "The water and wastewater infrastructure allocate must respect declared minimum service, eligibility, capacity, and distributional safeguards.",
+      "content_hash": "sha256:db9cd60ffe244d2576f98dafbb3344de7b4c0ef3e39287d58af2b45ffa353afb",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "How should qualified crews, laboratory capacity, bypass equipment, parts, and inspectors be assigned?",
+      "decision_type": "allocate",
+      "design_id": "scenario.infrastructure.water-wastewater.utility-repair-capacity.v1",
+      "design_order": 189,
+      "evidence_gate": "equity-measurement",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "family_id": "infrastructure.water-wastewater",
+      "family_title": "Water and wastewater infrastructure",
+      "horizon": "weeks",
+      "implementation_status": "design-only",
+      "primary_outcome": "critical utility work without assigned qualified capacity",
+      "prohibited_claims": [
+        "Do not report an assignment as repair, sampling, restored service, or compliance.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "network",
+      "suite": "infrastructure-finance-asset-risk",
+      "title": "Allocate utility repair, inspection, and emergency capacity"
+    },
+    {
+      "analysis_modes": [
+        "simulation",
+        "optimization"
+      ],
+      "binding_constraint": "The municipal energy and building decarbonization allocate must respect declared minimum service, eligibility, capacity, and distributional safeguards.",
+      "content_hash": "sha256:45b78005b235d6238a043e4b8e50b23f074b37c33604e5bb2e4ac1a2c60a0b3e",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "How should capital, incentives, engineering, procurement, and commissioning capacity be distributed?",
+      "decision_type": "allocate",
+      "design_id": "scenario.infrastructure.energy-buildings.energy-capital-capacity.v1",
+      "design_order": 197,
+      "evidence_gate": "equity-measurement",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "family_id": "infrastructure.energy-buildings",
+      "family_title": "Municipal energy and building decarbonization",
+      "horizon": "weeks",
+      "implementation_status": "design-only",
+      "primary_outcome": "qualified emissions-reduction projects without assigned capacity",
+      "prohibited_claims": [
+        "Do not report allocated capital or staff as a contract, installation, commissioning, or saving.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "asset",
+      "suite": "infrastructure-finance-asset-risk",
+      "title": "Allocate energy capital, incentives, and delivery capacity"
+    },
+    {
+      "analysis_modes": [
+        "simulation",
+        "optimization"
+      ],
+      "binding_constraint": "The capital portfolio and municipal finance allocate must respect declared minimum service, eligibility, capacity, and distributional safeguards.",
+      "content_hash": "sha256:6513387550197da8ffc81b26416b1961964ae9fd35444009c5d7182bda9bd3c4",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "How should pay-as-you-go funds, debt, grants, reserves, and project staff be assigned?",
+      "decision_type": "allocate",
+      "design_id": "scenario.infrastructure.capital-finance.capital-funding.v1",
+      "design_order": 205,
+      "evidence_gate": "equity-measurement",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "family_id": "infrastructure.capital-finance",
+      "family_title": "Capital portfolio and municipal finance",
+      "horizon": "weeks",
+      "implementation_status": "design-only",
+      "primary_outcome": "priority capital need without assigned affordable capacity",
+      "prohibited_claims": [
+        "Do not report a modeled allocation as an appropriation, bond issuance, grant, or expenditure.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "asset",
+      "suite": "infrastructure-finance-asset-risk",
+      "title": "Allocate capital funding and delivery capacity"
+    },
+    {
+      "analysis_modes": [
+        "simulation",
+        "optimization"
+      ],
+      "binding_constraint": "The distributional public-service equity allocate must respect declared minimum service, eligibility, capacity, and distributional safeguards.",
+      "content_hash": "sha256:cd683b13933e790c14cf1ceab2ffaf677de38bbd0b6ac83159f7194829e1d613",
+      "current_readiness": "reference-implemented",
+      "decision_question": "How should staff, funds, appointments, language, and field capacity be distributed across groups and areas?",
+      "decision_type": "allocate",
+      "design_id": "scenario.equity.distributional-service.minimum-service-capacity.v1",
+      "design_order": 213,
+      "evidence_gate": "equity-measurement",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "existing_template_ref": "deep.equity.area-balance.v1",
+      "family_id": "equity.distributional-service",
+      "family_title": "Distributional public-service equity",
+      "horizon": "weeks",
+      "implementation_status": "reference-implemented",
+      "primary_outcome": "eligible population below minimum service coverage",
+      "prohibited_claims": [
+        "Do not call area-balanced request capacity demographic equity, delivered service, or improved outcomes.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "population-group",
+      "suite": "behavioral-policy-equity",
+      "title": "Allocate capacity under minimum equitable service guarantees"
+    },
+    {
+      "analysis_modes": [
+        "simulation",
+        "optimization"
+      ],
+      "binding_constraint": "The public participation and risk communication allocate must respect declared minimum service, eligibility, capacity, and distributional safeguards.",
+      "content_hash": "sha256:55e621e3e783112eeafd05da74325997f92c6f2d5f792d4c85750b3f89eaaec0",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "How should outreach, interpreters, accessibility support, stipends, facilitation, and response capacity be assigned?",
+      "decision_type": "allocate",
+      "design_id": "scenario.equity.participation-communication.engagement-support.v1",
+      "design_order": 221,
+      "evidence_gate": "equity-measurement",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "family_id": "equity.participation-communication",
+      "family_title": "Public participation and risk communication",
+      "horizon": "weeks",
+      "implementation_status": "design-only",
+      "primary_outcome": "affected engagement needs without assigned usable support",
+      "prohibited_claims": [
+        "Do not report allocated support as participation, representation, agreement, or influence.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "population-group",
+      "suite": "behavioral-policy-equity",
+      "title": "Allocate engagement, translation, and participation support"
+    },
+    {
+      "analysis_modes": [
+        "simulation",
+        "optimization"
+      ],
+      "binding_constraint": "The compliance, incentives, and behavioral policy allocate must respect declared minimum service, eligibility, capacity, and distributional safeguards.",
+      "content_hash": "sha256:c78321aa452d6c8f59f8eae9f3e04a551dc8af03c1ef70c181417bd6723d3770",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "How should navigators, technical aid, incentives, inspectors, language, and appeal support be assigned?",
+      "decision_type": "allocate",
+      "design_id": "scenario.equity.compliance-incentives.assistance-enforcement-capacity.v1",
+      "design_order": 229,
+      "evidence_gate": "equity-measurement",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "family_id": "equity.compliance-incentives",
+      "family_title": "Compliance, incentives, and behavioral policy",
+      "horizon": "weeks",
+      "implementation_status": "design-only",
+      "primary_outcome": "priority cases without qualified assistance or review capacity",
+      "prohibited_claims": [
+        "Do not report assigned assistance or inspection as contact, compliance, violation, sanction, or resolution.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "population-group",
+      "suite": "behavioral-policy-equity",
+      "title": "Allocate compliance assistance and inspection capacity"
+    },
+    {
+      "analysis_modes": [
+        "simulation",
+        "optimization"
+      ],
+      "binding_constraint": "The algorithmic decision support and governance allocate must respect declared minimum service, eligibility, capacity, and distributional safeguards.",
+      "content_hash": "sha256:79151e6cbc395474d96114bdc7914709d8ba7d386dc69e6c4a7bd345efd8bb76",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "How should reviewers, auditors, advocates, incident responders, and domain experts be assigned?",
+      "decision_type": "allocate",
+      "design_id": "scenario.equity.algorithmic-governance.oversight-capacity.v1",
+      "design_order": 237,
+      "evidence_gate": "equity-measurement",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "family_id": "equity.algorithmic-governance",
+      "family_title": "Algorithmic decision support and governance",
+      "horizon": "weeks",
+      "implementation_status": "design-only",
+      "primary_outcome": "high-impact decisions without qualified independent review capacity",
+      "prohibited_claims": [
+        "Do not report assigned review as completed, independent, correct, accepted, or remedied.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "service-area",
+      "suite": "behavioral-policy-equity",
+      "title": "Allocate human review and oversight capacity"
+    }
+  ],
+  "kind": "scenario-designs.decision-type.allocate",
+  "record_count": 30,
+  "schema_version": "1.0.0"
+}

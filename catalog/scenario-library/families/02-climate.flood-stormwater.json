@@ -1,0 +1,50 @@
+{
+  "affected_system": "urban drainage, stormwater, and flood-response system",
+  "claim_boundary": [
+    "Hazard observations and modeled exposure do not establish individual harm or causation.",
+    "Proposed adaptations are planning alternatives, not adopted policy or engineered designs.",
+    "A design-only record is not a city execution, validated forecast, or impact result."
+  ],
+  "common_source_roles": [
+    "asset-inventory",
+    "climate-hazard",
+    "geographic-identity"
+  ],
+  "decision_owner": "stormwater utility director and emergency-management lead",
+  "decision_types": [
+    "diagnose",
+    "forecast",
+    "prioritize",
+    "site",
+    "allocate",
+    "schedule",
+    "stress-test",
+    "evaluate"
+  ],
+  "description": "Decision designs for drainage diagnosis, rainfall-runoff workload, green infrastructure, response deployment, maintenance timing, compound flooding, and causal evaluation.",
+  "design_refs": [
+    "scenario.climate.flood-stormwater.drainage-failure-patterns.v1",
+    "scenario.climate.flood-stormwater.runoff-response-demand.v1",
+    "scenario.climate.flood-stormwater.drainage-renewal.v1",
+    "scenario.climate.flood-stormwater.retention-storage-sites.v1",
+    "scenario.climate.flood-stormwater.flood-response-assets.v1",
+    "scenario.climate.flood-stormwater.drainage-maintenance-window.v1",
+    "scenario.climate.flood-stormwater.compound-rainfall-continuity.v1",
+    "scenario.climate.flood-stormwater.green-infrastructure-effect.v1"
+  ],
+  "design_signatures": [
+    "sha256:3e690451937d44944964788821dd81db5c76564cae502625d6564fe54df56c03",
+    "sha256:b432a1d79a55b59e2a09d71b8a4150a46f50f73fb0250fce2d5ef158573ff597",
+    "sha256:b47d97eba11c2c9cf654c592bc46b5c4755a2787128dd2302604a591bc8069dc",
+    "sha256:8947e8a1525c35a4f5a6f7174b9c6a9508cf58ed52fbc320cceef56e0851daa1",
+    "sha256:94c04ca69e3bbec0b3158d8eb70f1b64d797171f68e95244098e1c2980468ca2",
+    "sha256:22e1cb8b28c3c0a1a14a9ec9ec66eb1642b5c81cc278362b57b863683caedc30",
+    "sha256:6a5a10a362e35491600e55adee92f8796afaf7efeaaad074cc99e288a65e161f",
+    "sha256:d6c9efb68622fdeb67d1c63083c2b0e25dbfdb9515c128a25ab466f6e0ea8f28"
+  ],
+  "family_id": "climate.flood-stormwater",
+  "family_order": 2,
+  "schema_version": "1.0.0",
+  "suite": "climate-disaster-resilience",
+  "title": "Flood and stormwater resilience"
+}

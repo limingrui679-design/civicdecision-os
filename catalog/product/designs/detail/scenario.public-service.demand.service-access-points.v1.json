@@ -1,0 +1,225 @@
+{
+  "audit_maximum_pairwise_similarity": 0.646154,
+  "design": {
+    "affected_system": "multichannel public-service intake, triage, dispatch, and resolution workflow",
+    "alternatives": [
+      "screen feasible locations against the largest access gaps for multilingual public-service access locations",
+      "co-optimize distributed and high-capacity locations for multilingual public-service access locations",
+      "pair channel-gap, travel, language, privacy, and capacity-aware siting with an explicit stop, review, and escalation rule"
+    ],
+    "analysis_modes": [
+      "simulation",
+      "optimization"
+    ],
+    "assumptions": [
+      "Requests, contacts, duplicates, service categories, assignments, work orders, and outcomes remain distinct.",
+      "Channel and area comparisons account for taxonomy, access, publication, and reporting differences.",
+      "All alternatives, capacities, costs, effects, thresholds, and failure scenarios are proposed until bound to evidence."
+    ],
+    "baseline": "retain only existing approved locations for multilingual public-service access locations.",
+    "city_bindings": [],
+    "constraints": [
+      {
+        "binding": true,
+        "constraint_id": "scenario.public-service.demand.service-access-points.v1.constraint.binding",
+        "description": "The 311 and public-service demand operations site must respect declared land control, accessibility, permitting, safety, and operating feasibility.",
+        "hard": true,
+        "kind": "regulatory",
+        "required_source_roles": [
+          "equity-attribute",
+          "facility-inventory",
+          "geographic-identity",
+          "municipal-demand",
+          "operating-capacity",
+          "transport-network"
+        ]
+      },
+      {
+        "binding": false,
+        "constraint_id": "scenario.public-service.demand.service-access-points.v1.constraint.evidence-scope",
+        "description": "Every released metric must retain evidence type, source lineage, geography, time, assumptions, and uncertainty.",
+        "hard": true,
+        "kind": "technical",
+        "required_source_roles": [
+          "equity-attribute"
+        ]
+      },
+      {
+        "binding": false,
+        "constraint_id": "scenario.public-service.demand.service-access-points.v1.constraint.decision-authority",
+        "description": "No analytical output may bypass lawful authority, accountable human review, or an applicable appeal process.",
+        "hard": true,
+        "kind": "regulatory",
+        "required_source_roles": [
+          "equity-attribute"
+        ]
+      }
+    ],
+    "current_readiness": "blocked-missing-source",
+    "decision_cadence": "recompiled at each planning cycle and after material evidence change",
+    "decision_owner": "chief service officer and 311 operations director",
+    "decision_question": "Where should in-person, mobile, kiosk, and partner-assisted access fill verified channel gaps?",
+    "decision_type": "site",
+    "design_id": "scenario.public-service.demand.service-access-points.v1",
+    "design_order": 148,
+    "design_signature": "sha256:6b6a3b089caad8a5c356a54af2cdc1c2f9528451a1dd50a296d9b25943ea37e4",
+    "evidence_requirements": [
+      "estimated",
+      "observed",
+      "optimized",
+      "proposed",
+      "simulated"
+    ],
+    "family_id": "public-service.demand",
+    "family_title": "311 and public-service demand operations",
+    "horizon": "multi-year",
+    "implementation_status": "design-only",
+    "independence_key": {
+      "binding_constraint": "The 311 and public-service demand operations site must respect declared land control, accessibility, permitting, safety, and operating feasibility.",
+      "decision_object": "multilingual public-service access locations",
+      "evidence_gate": "Evidence for multilingual public-service access locations passes documented checks for parcel control, legal authority, environmental review, access, capacity, and operator responsibility.",
+      "horizon": "multi-year",
+      "intervention_mechanism": "channel-gap, travel, language, privacy, and capacity-aware siting",
+      "primary_outcome": "residents beyond usable public-service access",
+      "spatial_unit": "facility"
+    },
+    "intended_claim": "A versioned site design for comparing declared alternatives affecting multilingual public-service access locations, conditional on its evidence gate.",
+    "limitations": [
+      "This library record has no city binding and therefore reports no local input, output, or recommendation.",
+      "Readiness describes explicit source and method gates; it does not certify implementation feasibility.",
+      "External domain, legal, community, security, and operational review remains outside this design artifact."
+    ],
+    "method_claimed": false,
+    "objectives": [
+      {
+        "evidence_type": "estimated",
+        "metric": "residents beyond usable public-service access",
+        "objective_id": "scenario.public-service.demand.service-access-points.v1.objective.primary",
+        "primary": true,
+        "sense": "minimize",
+        "unit": "people"
+      },
+      {
+        "evidence_type": "estimated",
+        "metric": "distributional gap in residents beyond usable public-service access",
+        "objective_id": "scenario.public-service.demand.service-access-points.v1.objective.equity",
+        "primary": false,
+        "sense": "minimize",
+        "unit": "people"
+      },
+      {
+        "evidence_type": "observed",
+        "metric": "decision claims with complete evidence lineage",
+        "objective_id": "scenario.public-service.demand.service-access-points.v1.objective.traceability",
+        "primary": false,
+        "sense": "maximize",
+        "unit": "percent"
+      }
+    ],
+    "prohibited_claims": [
+      "Do not call a candidate access point usable, trusted, staffed, or accessible without user evidence.",
+      "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+      "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+      "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+    ],
+    "release_gate": {
+      "failure_release": "Release an explicit insufficient-evidence record naming missing sources, failed diagnostics, prohibited claims, and the next validation action.",
+      "failure_status": "insufficient-evidence",
+      "gate_id": "scenario.public-service.demand.service-access-points.v1.gate.release",
+      "gate_type": "legal-authority",
+      "pass_condition": "Evidence for multilingual public-service access locations passes documented checks for parcel control, legal authority, environmental review, access, capacity, and operator responsibility.",
+      "required_evidence_types": [
+        "observed",
+        "proposed"
+      ],
+      "required_source_roles": [
+        "equity-attribute",
+        "facility-inventory",
+        "geographic-identity",
+        "municipal-demand",
+        "operating-capacity",
+        "transport-network"
+      ]
+    },
+    "required_source_roles": [
+      "equity-attribute",
+      "facility-inventory",
+      "geographic-identity",
+      "municipal-demand",
+      "operating-capacity",
+      "transport-network"
+    ],
+    "schema_version": "1.0.0",
+    "spatial_unit": "facility",
+    "suite": "public-service-operations",
+    "tags": [
+      "design-only",
+      "public-service-operations",
+      "public-service.demand",
+      "scenario-library",
+      "site"
+    ],
+    "title": "Site multilingual public-service access points",
+    "transportability_risks": [
+      "Service taxonomies, channels, SLAs, agency ownership, reporting, and publication rules differ.",
+      "Observed demand reflects both conditions and ability or willingness to report."
+    ]
+  },
+  "family": {
+    "affected_system": "multichannel public-service intake, triage, dispatch, and resolution workflow",
+    "claim_boundary": [
+      "Service requests measure reported workload, not verified incidents, need, harm, or resolution.",
+      "Assignments and schedules are proposed operations, not completed work or public outcomes.",
+      "Design records do not establish agency adoption, deployment, productivity, or resident impact."
+    ],
+    "common_source_roles": [
+      "geographic-identity",
+      "municipal-demand",
+      "operating-capacity"
+    ],
+    "decision_owner": "chief service officer and 311 operations director",
+    "decision_types": [
+      "diagnose",
+      "forecast",
+      "prioritize",
+      "site",
+      "allocate",
+      "schedule",
+      "stress-test",
+      "evaluate"
+    ],
+    "description": "Eight decisions for intake-pattern diagnosis, workload forecasting, service improvement, access siting, case allocation, staffing schedules, demand stress, and channel evaluation.",
+    "design_refs": [
+      "scenario.public-service.demand.request-workload.v1",
+      "scenario.public-service.demand.service-workload.v1",
+      "scenario.public-service.demand.service-improvement-portfolio.v1",
+      "scenario.public-service.demand.service-access-points.v1",
+      "scenario.public-service.demand.case-routing-capacity.v1",
+      "scenario.public-service.demand.seasonal-service-staffing.v1",
+      "scenario.public-service.demand.service-demand-surge.v1",
+      "scenario.public-service.demand.channel-redesign-effect.v1"
+    ],
+    "design_signatures": [
+      "sha256:24bc68b9382f16a8873ca47ff7b8d180dc019b18eae92a43f1e34780a2c9b448",
+      "sha256:4f7078643ac840978d301e0515129a99312574a98ca361ec4c902937cb29bc9a",
+      "sha256:01b3dc98d336ce7bc0c3d2860e29b8505e028250d350a02184012c42d8043039",
+      "sha256:6b6a3b089caad8a5c356a54af2cdc1c2f9528451a1dd50a296d9b25943ea37e4",
+      "sha256:f670e56583514ab85e41d89ad1b60faee717cb81d2714106b875ede7fcdb2c78",
+      "sha256:da0c166fd88e805d5fb6a4687d4830fa2ee213bd14b31d23c9625cf6a5dcf357",
+      "sha256:1bcd7ac4bf15391258a8ef99fadebc4c15a3a42292f7a4f4c947891be020cef3",
+      "sha256:edf7a7aa89bdba1b0135e840b4d872887739efca9c91107bd5377393bcdf8bb4"
+    ],
+    "family_id": "public-service.demand",
+    "family_order": 19,
+    "schema_version": "1.0.0",
+    "suite": "public-service-operations",
+    "title": "311 and public-service demand operations"
+  },
+  "library_claim_boundary": [
+    "The catalog contains 240 decision designs, not 240 city executions.",
+    "Exactly twelve designs map to existing Tier-D reference templates; 228 remain design-only.",
+    "A reference implementation can be an explicit negative release and does not imply impact.",
+    "No record claims a city binding, new method, deployment, adoption, or real-user outcome.",
+    "Future execution requires source binding, gate passage, and domain, legal, community, and operational review."
+  ]
+}

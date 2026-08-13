@@ -1,0 +1,167 @@
+{
+  "affected_system": "commercial curb, loading, delivery, and urban freight network",
+  "alternatives": [
+    "compare eligible treated and credible untreated units for phased dynamic curb and loading reservation policy",
+    "estimate pre-specified overall and distributional effects of phased dynamic curb and loading reservation policy",
+    "pair matched block-time policy evaluation with spillover zones with an explicit stop, review, and escalation rule"
+  ],
+  "analysis_modes": [
+    "descriptive",
+    "causal"
+  ],
+  "assumptions": [
+    "Curb regulations, occupancy, deliveries, violations, and travel effects have consistent timestamps and locations.",
+    "Observed platform or sensor activity represents only its measured market and street coverage.",
+    "All alternatives, capacities, costs, effects, thresholds, and failure scenarios are proposed until bound to evidence."
+  ],
+  "baseline": "retain pre-intervention conditions for phased dynamic curb and loading reservation policy.",
+  "city_bindings": [],
+  "constraints": [
+    {
+      "binding": true,
+      "constraint_id": "scenario.mobility.freight-curb.dynamic-curb-effect.v1.constraint.binding",
+      "description": "The urban freight and curb operations evaluate must respect declared pre-specified assignment, comparison, outcome, spillover, and subgroup rules.",
+      "hard": true,
+      "kind": "equity",
+      "required_source_roles": [
+        "equity-attribute",
+        "geographic-identity",
+        "intervention-assignment",
+        "legal-regulatory",
+        "outcome-panel",
+        "real-time-state",
+        "transport-network"
+      ]
+    },
+    {
+      "binding": false,
+      "constraint_id": "scenario.mobility.freight-curb.dynamic-curb-effect.v1.constraint.evidence-scope",
+      "description": "Every released metric must retain evidence type, source lineage, geography, time, assumptions, and uncertainty.",
+      "hard": true,
+      "kind": "technical",
+      "required_source_roles": [
+        "equity-attribute"
+      ]
+    },
+    {
+      "binding": false,
+      "constraint_id": "scenario.mobility.freight-curb.dynamic-curb-effect.v1.constraint.decision-authority",
+      "description": "No analytical output may bypass lawful authority, accountable human review, or an applicable appeal process.",
+      "hard": true,
+      "kind": "regulatory",
+      "required_source_roles": [
+        "equity-attribute"
+      ]
+    }
+  ],
+  "current_readiness": "blocked-multiple-gates",
+  "decision_cadence": "recompiled at each planning cycle and after material evidence change",
+  "decision_owner": "curb-management director and city freight coordinator",
+  "decision_question": "Did phased reservations or dynamic curb rules reduce verified conflict and delay without shifting harm?",
+  "decision_type": "evaluate",
+  "design_id": "scenario.mobility.freight-curb.dynamic-curb-effect.v1",
+  "design_order": 64,
+  "design_signature": "sha256:f926023a6bbd41afc6f7220190747f639b2b83cdab92a97ef23a96e5adaddf0c",
+  "evidence_requirements": [
+    "causal",
+    "estimated",
+    "observed",
+    "proposed"
+  ],
+  "family_id": "mobility.freight-curb",
+  "family_title": "Urban freight and curb operations",
+  "horizon": "multi-year",
+  "implementation_status": "design-only",
+  "independence_key": {
+    "binding_constraint": "The urban freight and curb operations evaluate must respect declared pre-specified assignment, comparison, outcome, spillover, and subgroup rules.",
+    "decision_object": "phased dynamic curb and loading reservation policy",
+    "evidence_gate": "Evidence for phased dynamic curb and loading reservation policy passes documented checks for dated assignment, comparison validity, pre-trends, outcome panels, attrition, spillovers, and falsification tests.",
+    "horizon": "multi-year",
+    "intervention_mechanism": "matched block-time policy evaluation with spillover zones",
+    "primary_outcome": "change in legal loading success and conflict time",
+    "spatial_unit": "corridor"
+  },
+  "intended_claim": "A versioned evaluate design for comparing declared alternatives affecting phased dynamic curb and loading reservation policy, conditional on its evidence gate.",
+  "limitations": [
+    "This library record has no city binding and therefore reports no local input, output, or recommendation.",
+    "Readiness describes explicit source and method gates; it does not certify implementation feasibility.",
+    "External domain, legal, community, security, and operational review remains outside this design artifact."
+  ],
+  "method_claimed": false,
+  "objectives": [
+    {
+      "evidence_type": "estimated",
+      "metric": "change in legal loading success and conflict time",
+      "objective_id": "scenario.mobility.freight-curb.dynamic-curb-effect.v1.objective.primary",
+      "primary": true,
+      "sense": "minimize",
+      "unit": "percentage points"
+    },
+    {
+      "evidence_type": "estimated",
+      "metric": "distributional gap in change in legal loading success and conflict time",
+      "objective_id": "scenario.mobility.freight-curb.dynamic-curb-effect.v1.objective.equity",
+      "primary": false,
+      "sense": "minimize",
+      "unit": "percentage points"
+    },
+    {
+      "evidence_type": "observed",
+      "metric": "decision claims with complete evidence lineage",
+      "objective_id": "scenario.mobility.freight-curb.dynamic-curb-effect.v1.objective.traceability",
+      "primary": false,
+      "sense": "maximize",
+      "unit": "percent"
+    }
+  ],
+  "prohibited_claims": [
+    "Do not infer causal freight or safety effects without measuring enforcement, substitution, and spillovers.",
+    "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+    "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+    "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+  ],
+  "release_gate": {
+    "failure_release": "Release an explicit insufficient-evidence record naming missing sources, failed diagnostics, prohibited claims, and the next validation action.",
+    "failure_status": "insufficient-evidence",
+    "gate_id": "scenario.mobility.freight-curb.dynamic-curb-effect.v1.gate.release",
+    "gate_type": "causal-identification",
+    "pass_condition": "Evidence for phased dynamic curb and loading reservation policy passes documented checks for dated assignment, comparison validity, pre-trends, outcome panels, attrition, spillovers, and falsification tests.",
+    "required_evidence_types": [
+      "causal",
+      "observed"
+    ],
+    "required_source_roles": [
+      "equity-attribute",
+      "geographic-identity",
+      "intervention-assignment",
+      "legal-regulatory",
+      "outcome-panel",
+      "real-time-state",
+      "transport-network"
+    ]
+  },
+  "required_source_roles": [
+    "equity-attribute",
+    "geographic-identity",
+    "intervention-assignment",
+    "legal-regulatory",
+    "outcome-panel",
+    "real-time-state",
+    "transport-network"
+  ],
+  "schema_version": "1.0.0",
+  "spatial_unit": "corridor",
+  "suite": "mobility-accessibility-operations",
+  "tags": [
+    "design-only",
+    "evaluate",
+    "mobility-accessibility-operations",
+    "mobility.freight-curb",
+    "scenario-library"
+  ],
+  "title": "Evaluate dynamic curb management",
+  "transportability_risks": [
+    "Delivery markets, curb law, enforcement, land use, vehicle mix, and sensor coverage differ.",
+    "Platform data may omit independent carriers and informal loading behavior."
+  ]
+}

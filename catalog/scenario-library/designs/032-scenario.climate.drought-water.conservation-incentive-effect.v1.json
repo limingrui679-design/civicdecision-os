@@ -1,0 +1,167 @@
+{
+  "affected_system": "urban water supply, distribution, and conservation system",
+  "alternatives": [
+    "compare phased eligible and not-yet-treated accounts",
+    "separate price, rebate, and technical-assistance components",
+    "estimate demand and affordability effects by baseline use group"
+  ],
+  "analysis_modes": [
+    "descriptive",
+    "causal"
+  ],
+  "assumptions": [
+    "Supply, demand, leakage, and storage balances use reconciled units and meter coverage.",
+    "Restriction response and climate sequences are observed inputs or labeled scenarios.",
+    "All alternatives, capacities, costs, effects, thresholds, and failure scenarios are proposed until bound to evidence."
+  ],
+  "baseline": "Eligible accounts retain the pre-program tariff and assistance conditions.",
+  "city_bindings": [],
+  "constraints": [
+    {
+      "binding": true,
+      "constraint_id": "scenario.climate.drought-water.conservation-incentive-effect.v1.constraint.binding",
+      "description": "Essential-use floors, affordability, treatment timing, and heterogeneous effects must be pre-specified.",
+      "hard": true,
+      "kind": "equity",
+      "required_source_roles": [
+        "asset-inventory",
+        "climate-hazard",
+        "equity-attribute",
+        "financial-cost",
+        "intervention-assignment",
+        "operating-capacity",
+        "outcome-panel"
+      ]
+    },
+    {
+      "binding": false,
+      "constraint_id": "scenario.climate.drought-water.conservation-incentive-effect.v1.constraint.evidence-scope",
+      "description": "Every released metric must retain evidence type, source lineage, geography, time, assumptions, and uncertainty.",
+      "hard": true,
+      "kind": "technical",
+      "required_source_roles": [
+        "asset-inventory"
+      ]
+    },
+    {
+      "binding": false,
+      "constraint_id": "scenario.climate.drought-water.conservation-incentive-effect.v1.constraint.decision-authority",
+      "description": "No analytical output may bypass lawful authority, accountable human review, or an applicable appeal process.",
+      "hard": true,
+      "kind": "regulatory",
+      "required_source_roles": [
+        "asset-inventory"
+      ]
+    }
+  ],
+  "current_readiness": "blocked-multiple-gates",
+  "decision_cadence": "recompiled at each planning cycle and after material evidence change",
+  "decision_owner": "water utility general manager and drought-response lead",
+  "decision_question": "Did a phased conservation incentive reduce discretionary demand without burdening essential use?",
+  "decision_type": "evaluate",
+  "design_id": "scenario.climate.drought-water.conservation-incentive-effect.v1",
+  "design_order": 32,
+  "design_signature": "sha256:3e2bf11381862a5fe59e42c07610614395f32639b35bdce6cee5694eebd11134",
+  "evidence_requirements": [
+    "causal",
+    "estimated",
+    "observed",
+    "proposed"
+  ],
+  "family_id": "climate.drought-water",
+  "family_title": "Drought and urban water security",
+  "horizon": "annual",
+  "implementation_status": "design-only",
+  "independence_key": {
+    "binding_constraint": "Essential-use floors, affordability, treatment timing, and heterogeneous effects must be pre-specified.",
+    "decision_object": "phased water-conservation pricing and assistance program",
+    "evidence_gate": "Dated eligibility, meter panels, comparable accounts, pre-trends, weather controls, spillovers, and billing changes are verified.",
+    "horizon": "annual",
+    "intervention_mechanism": "staggered policy causal evaluation with meter panels",
+    "primary_outcome": "change in weather-normalized discretionary water demand",
+    "spatial_unit": "population-group"
+  },
+  "intended_claim": "A versioned evaluate design for comparing declared alternatives affecting phased water-conservation pricing and assistance program, conditional on its evidence gate.",
+  "limitations": [
+    "This library record has no city binding and therefore reports no local input, output, or recommendation.",
+    "Readiness describes explicit source and method gates; it does not certify implementation feasibility.",
+    "External domain, legal, community, security, and operational review remains outside this design artifact."
+  ],
+  "method_claimed": false,
+  "objectives": [
+    {
+      "evidence_type": "estimated",
+      "metric": "change in weather-normalized discretionary water demand",
+      "objective_id": "scenario.climate.drought-water.conservation-incentive-effect.v1.objective.primary",
+      "primary": true,
+      "sense": "minimize",
+      "unit": "liters per account-day"
+    },
+    {
+      "evidence_type": "estimated",
+      "metric": "distributional gap in change in weather-normalized discretionary water demand",
+      "objective_id": "scenario.climate.drought-water.conservation-incentive-effect.v1.objective.equity",
+      "primary": false,
+      "sense": "minimize",
+      "unit": "liters per account-day"
+    },
+    {
+      "evidence_type": "observed",
+      "metric": "decision claims with complete evidence lineage",
+      "objective_id": "scenario.climate.drought-water.conservation-incentive-effect.v1.objective.traceability",
+      "primary": false,
+      "sense": "maximize",
+      "unit": "percent"
+    }
+  ],
+  "prohibited_claims": [
+    "Do not infer welfare gains from lower consumption or causal effects from simple before-after billing totals.",
+    "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+    "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+    "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+  ],
+  "release_gate": {
+    "failure_release": "Release an explicit insufficient-evidence record naming missing sources, failed diagnostics, prohibited claims, and the next validation action.",
+    "failure_status": "insufficient-evidence",
+    "gate_id": "scenario.climate.drought-water.conservation-incentive-effect.v1.gate.release",
+    "gate_type": "causal-identification",
+    "pass_condition": "Dated eligibility, meter panels, comparable accounts, pre-trends, weather controls, spillovers, and billing changes are verified.",
+    "required_evidence_types": [
+      "causal",
+      "observed"
+    ],
+    "required_source_roles": [
+      "asset-inventory",
+      "climate-hazard",
+      "equity-attribute",
+      "financial-cost",
+      "intervention-assignment",
+      "operating-capacity",
+      "outcome-panel"
+    ]
+  },
+  "required_source_roles": [
+    "asset-inventory",
+    "climate-hazard",
+    "equity-attribute",
+    "financial-cost",
+    "intervention-assignment",
+    "operating-capacity",
+    "outcome-panel"
+  ],
+  "schema_version": "1.0.0",
+  "spatial_unit": "population-group",
+  "suite": "climate-disaster-resilience",
+  "tags": [
+    "climate-disaster-resilience",
+    "climate.drought-water",
+    "design-only",
+    "evaluate",
+    "scenario-library"
+  ],
+  "title": "Evaluate conservation pricing and assistance effects",
+  "transportability_risks": [
+    "Water rights, source portfolios, pricing, metering, leakage, and climate regimes differ.",
+    "Household conservation behavior may not transfer across tariff and tenure systems."
+  ]
+}

@@ -1,0 +1,162 @@
+{
+  "affected_system": "commercial curb, loading, delivery, and urban freight network",
+  "alternatives": [
+    "activate a bounded reserve from forecast risk bands for block-time freight loading demand and curb occupancy",
+    "use rolling forecasts and conservative capacity triggers for block-time freight loading demand and curb occupancy",
+    "pair land-use and event-conditioned curb demand forecasting with an explicit stop, review, and escalation rule"
+  ],
+  "analysis_modes": [
+    "forecast"
+  ],
+  "assumptions": [
+    "Curb regulations, occupancy, deliveries, violations, and travel effects have consistent timestamps and locations.",
+    "Observed platform or sensor activity represents only its measured market and street coverage.",
+    "All alternatives, capacities, costs, effects, thresholds, and failure scenarios are proposed until bound to evidence."
+  ],
+  "baseline": "continue ordinary capacity planning for block-time freight loading demand and curb occupancy.",
+  "city_bindings": [],
+  "constraints": [
+    {
+      "binding": true,
+      "constraint_id": "scenario.mobility.freight-curb.loading-demand.v1.constraint.binding",
+      "description": "The urban freight and curb operations forecast must respect declared validated operational capacity and forecast uncertainty.",
+      "hard": true,
+      "kind": "capacity",
+      "required_source_roles": [
+        "geographic-identity",
+        "land-parcel",
+        "operating-capacity",
+        "real-time-state",
+        "service-schedule",
+        "transport-network"
+      ]
+    },
+    {
+      "binding": false,
+      "constraint_id": "scenario.mobility.freight-curb.loading-demand.v1.constraint.evidence-scope",
+      "description": "Every released metric must retain evidence type, source lineage, geography, time, assumptions, and uncertainty.",
+      "hard": true,
+      "kind": "technical",
+      "required_source_roles": [
+        "geographic-identity"
+      ]
+    },
+    {
+      "binding": false,
+      "constraint_id": "scenario.mobility.freight-curb.loading-demand.v1.constraint.decision-authority",
+      "description": "No analytical output may bypass lawful authority, accountable human review, or an applicable appeal process.",
+      "hard": true,
+      "kind": "regulatory",
+      "required_source_roles": [
+        "geographic-identity"
+      ]
+    }
+  ],
+  "current_readiness": "blocked-missing-source",
+  "decision_cadence": "recompiled at each planning cycle and after material evidence change",
+  "decision_owner": "curb-management director and city freight coordinator",
+  "decision_question": "What block-time loading and occupancy range should dynamic curb operations prepare for?",
+  "decision_type": "forecast",
+  "design_id": "scenario.mobility.freight-curb.loading-demand.v1",
+  "design_order": 58,
+  "design_signature": "sha256:19981a3aa0b82411b6b2d50b8efef822cd1e29c0df66ac7f97c76de0dbac9cce",
+  "evidence_requirements": [
+    "estimated",
+    "observed",
+    "proposed"
+  ],
+  "family_id": "mobility.freight-curb",
+  "family_title": "Urban freight and curb operations",
+  "horizon": "weeks",
+  "implementation_status": "design-only",
+  "independence_key": {
+    "binding_constraint": "The urban freight and curb operations forecast must respect declared validated operational capacity and forecast uncertainty.",
+    "decision_object": "block-time freight loading demand and curb occupancy",
+    "evidence_gate": "Evidence for block-time freight loading demand and curb occupancy passes documented checks for held-out error, interval coverage, event detection, drift, and baseline comparison.",
+    "horizon": "weeks",
+    "intervention_mechanism": "land-use and event-conditioned curb demand forecasting",
+    "primary_outcome": "delivery-minutes without legal loading capacity",
+    "spatial_unit": "corridor"
+  },
+  "intended_claim": "A versioned forecast design for comparing declared alternatives affecting block-time freight loading demand and curb occupancy, conditional on its evidence gate.",
+  "limitations": [
+    "This library record has no city binding and therefore reports no local input, output, or recommendation.",
+    "Readiness describes explicit source and method gates; it does not certify implementation feasibility.",
+    "External domain, legal, community, security, and operational review remains outside this design artifact."
+  ],
+  "method_claimed": false,
+  "objectives": [
+    {
+      "evidence_type": "estimated",
+      "metric": "delivery-minutes without legal loading capacity",
+      "objective_id": "scenario.mobility.freight-curb.loading-demand.v1.objective.primary",
+      "primary": true,
+      "sense": "minimize",
+      "unit": "vehicle-minutes"
+    },
+    {
+      "evidence_type": "estimated",
+      "metric": "distributional gap in delivery-minutes without legal loading capacity",
+      "objective_id": "scenario.mobility.freight-curb.loading-demand.v1.objective.equity",
+      "primary": false,
+      "sense": "minimize",
+      "unit": "vehicle-minutes"
+    },
+    {
+      "evidence_type": "observed",
+      "metric": "decision claims with complete evidence lineage",
+      "objective_id": "scenario.mobility.freight-curb.loading-demand.v1.objective.traceability",
+      "primary": false,
+      "sense": "maximize",
+      "unit": "percent"
+    }
+  ],
+  "prohibited_claims": [
+    "Do not call forecast occupancy observed obstruction or illegal behavior.",
+    "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+    "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+    "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+  ],
+  "release_gate": {
+    "failure_release": "Release an explicit insufficient-evidence record naming missing sources, failed diagnostics, prohibited claims, and the next validation action.",
+    "failure_status": "insufficient-evidence",
+    "gate_id": "scenario.mobility.freight-curb.loading-demand.v1.gate.release",
+    "gate_type": "model-calibration",
+    "pass_condition": "Evidence for block-time freight loading demand and curb occupancy passes documented checks for held-out error, interval coverage, event detection, drift, and baseline comparison.",
+    "required_evidence_types": [
+      "estimated",
+      "observed"
+    ],
+    "required_source_roles": [
+      "geographic-identity",
+      "land-parcel",
+      "operating-capacity",
+      "real-time-state",
+      "service-schedule",
+      "transport-network"
+    ]
+  },
+  "required_source_roles": [
+    "geographic-identity",
+    "land-parcel",
+    "operating-capacity",
+    "real-time-state",
+    "service-schedule",
+    "transport-network"
+  ],
+  "schema_version": "1.0.0",
+  "spatial_unit": "corridor",
+  "suite": "mobility-accessibility-operations",
+  "tags": [
+    "design-only",
+    "forecast",
+    "mobility-accessibility-operations",
+    "mobility.freight-curb",
+    "scenario-library"
+  ],
+  "title": "Forecast loading demand and curb occupancy",
+  "transportability_risks": [
+    "Delivery markets, curb law, enforcement, land use, vehicle mix, and sensor coverage differ.",
+    "Platform data may omit independent carriers and informal loading behavior."
+  ]
+}

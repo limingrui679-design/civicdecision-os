@@ -1,0 +1,164 @@
+{
+  "affected_system": "urban smoke exposure and clean-air protection system",
+  "alternatives": [
+    "cancel activities at conservative measured thresholds",
+    "move vulnerable participants indoors before general cancellation",
+    "use rolling forecasts and exposure budgets to reschedule activities"
+  ],
+  "analysis_modes": [
+    "forecast",
+    "optimization"
+  ],
+  "assumptions": [
+    "Air-quality observations carry calibration, siting, and temporal metadata.",
+    "Indoor infiltration and filtration effects are measured locally or labeled assumptions.",
+    "All alternatives, capacities, costs, effects, thresholds, and failure scenarios are proposed until bound to evidence."
+  ],
+  "baseline": "Activities follow their ordinary calendar with existing threshold guidance.",
+  "city_bindings": [],
+  "constraints": [
+    {
+      "binding": true,
+      "constraint_id": "scenario.climate.wildfire-smoke.smoke-safe-activities.v1.constraint.binding",
+      "description": "Schedules must comply with occupational, school, accessibility, and emergency communication rules.",
+      "hard": true,
+      "kind": "regulatory",
+      "required_source_roles": [
+        "climate-hazard",
+        "environmental-exposure",
+        "geographic-identity",
+        "legal-regulatory",
+        "real-time-state",
+        "service-schedule"
+      ]
+    },
+    {
+      "binding": false,
+      "constraint_id": "scenario.climate.wildfire-smoke.smoke-safe-activities.v1.constraint.evidence-scope",
+      "description": "Every released metric must retain evidence type, source lineage, geography, time, assumptions, and uncertainty.",
+      "hard": true,
+      "kind": "technical",
+      "required_source_roles": [
+        "climate-hazard"
+      ]
+    },
+    {
+      "binding": false,
+      "constraint_id": "scenario.climate.wildfire-smoke.smoke-safe-activities.v1.constraint.decision-authority",
+      "description": "No analytical output may bypass lawful authority, accountable human review, or an applicable appeal process.",
+      "hard": true,
+      "kind": "regulatory",
+      "required_source_roles": [
+        "climate-hazard"
+      ]
+    }
+  ],
+  "current_readiness": "blocked-missing-source",
+  "decision_cadence": "event-triggered and reviewed at the stated decision horizon",
+  "decision_owner": "air-quality response coordinator and public-health director",
+  "decision_question": "When should outdoor activities shift, shorten, move indoors, or resume as air quality changes?",
+  "decision_type": "schedule",
+  "design_id": "scenario.climate.wildfire-smoke.smoke-safe-activities.v1",
+  "design_order": 22,
+  "design_signature": "sha256:207a87e723b37e30b7fcec140ffb3ba7ba2ed75db87768fc37e9122cbb92268e",
+  "evidence_requirements": [
+    "estimated",
+    "observed",
+    "optimized",
+    "proposed"
+  ],
+  "family_id": "climate.wildfire-smoke",
+  "family_title": "Wildfire smoke and air-quality resilience",
+  "horizon": "days",
+  "implementation_status": "design-only",
+  "independence_key": {
+    "binding_constraint": "Schedules must comply with occupational, school, accessibility, and emergency communication rules.",
+    "decision_object": "smoke-responsive activity and workforce schedule",
+    "evidence_gate": "Air-quality issue times, local monitors, forecasts, activity calendars, and notification lead times align.",
+    "horizon": "days",
+    "intervention_mechanism": "forecast-threshold scheduling with exposure budgets",
+    "primary_outcome": "scheduled participant-hours above exposure limits",
+    "spatial_unit": "facility"
+  },
+  "intended_claim": "A versioned schedule design for comparing declared alternatives affecting smoke-responsive activity and workforce schedule, conditional on its evidence gate.",
+  "limitations": [
+    "This library record has no city binding and therefore reports no local input, output, or recommendation.",
+    "Readiness describes explicit source and method gates; it does not certify implementation feasibility.",
+    "External domain, legal, community, security, and operational review remains outside this design artifact."
+  ],
+  "method_claimed": false,
+  "objectives": [
+    {
+      "evidence_type": "estimated",
+      "metric": "scheduled participant-hours above exposure limits",
+      "objective_id": "scenario.climate.wildfire-smoke.smoke-safe-activities.v1.objective.primary",
+      "primary": true,
+      "sense": "minimize",
+      "unit": "participant-hours"
+    },
+    {
+      "evidence_type": "estimated",
+      "metric": "distributional gap in scheduled participant-hours above exposure limits",
+      "objective_id": "scenario.climate.wildfire-smoke.smoke-safe-activities.v1.objective.equity",
+      "primary": false,
+      "sense": "minimize",
+      "unit": "participant-hours"
+    },
+    {
+      "evidence_type": "observed",
+      "metric": "decision claims with complete evidence lineage",
+      "objective_id": "scenario.climate.wildfire-smoke.smoke-safe-activities.v1.objective.traceability",
+      "primary": false,
+      "sense": "maximize",
+      "unit": "percent"
+    }
+  ],
+  "prohibited_claims": [
+    "Do not treat a schedule rule as proof of participant exposure or compliance.",
+    "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+    "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+    "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+  ],
+  "release_gate": {
+    "failure_release": "Release an explicit insufficient-evidence record naming missing sources, failed diagnostics, prohibited claims, and the next validation action.",
+    "failure_status": "insufficient-evidence",
+    "gate_id": "scenario.climate.wildfire-smoke.smoke-safe-activities.v1.gate.release",
+    "gate_type": "temporal-alignment",
+    "pass_condition": "Air-quality issue times, local monitors, forecasts, activity calendars, and notification lead times align.",
+    "required_evidence_types": [
+      "observed",
+      "proposed"
+    ],
+    "required_source_roles": [
+      "climate-hazard",
+      "environmental-exposure",
+      "geographic-identity",
+      "legal-regulatory",
+      "real-time-state",
+      "service-schedule"
+    ]
+  },
+  "required_source_roles": [
+    "climate-hazard",
+    "environmental-exposure",
+    "geographic-identity",
+    "legal-regulatory",
+    "real-time-state",
+    "service-schedule"
+  ],
+  "schema_version": "1.0.0",
+  "spatial_unit": "facility",
+  "suite": "climate-disaster-resilience",
+  "tags": [
+    "climate-disaster-resilience",
+    "climate.wildfire-smoke",
+    "design-only",
+    "scenario-library",
+    "schedule"
+  ],
+  "title": "Schedule outdoor work, school, and public activities during smoke",
+  "transportability_risks": [
+    "Smoke chemistry, building leakage, monitor density, and household behavior differ.",
+    "Regional forecasts and satellite products may have city-specific resolution limits."
+  ]
+}

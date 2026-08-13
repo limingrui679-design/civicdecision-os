@@ -1,0 +1,292 @@
+{
+  "$defs": {
+    "CurrentReadiness": {
+      "enum": [
+        "reference-implemented",
+        "uncompiled-current-inputs",
+        "blocked-missing-source",
+        "blocked-method",
+        "blocked-multiple-gates"
+      ],
+      "title": "CurrentReadiness",
+      "type": "string"
+    },
+    "DecisionHorizon": {
+      "enum": [
+        "real-time",
+        "days",
+        "weeks",
+        "seasonal",
+        "annual",
+        "multi-year"
+      ],
+      "title": "DecisionHorizon",
+      "type": "string"
+    },
+    "DecisionType": {
+      "enum": [
+        "diagnose",
+        "forecast",
+        "prioritize",
+        "site",
+        "allocate",
+        "schedule",
+        "stress-test",
+        "evaluate"
+      ],
+      "title": "DecisionType",
+      "type": "string"
+    },
+    "EvidenceGateType": {
+      "enum": [
+        "data-completeness",
+        "source-lineage",
+        "temporal-alignment",
+        "geographic-alignment",
+        "network-readiness",
+        "causal-identification",
+        "model-calibration",
+        "cost-capacity",
+        "legal-authority",
+        "equity-measurement",
+        "external-validation"
+      ],
+      "title": "EvidenceGateType",
+      "type": "string"
+    },
+    "EvidenceType": {
+      "enum": [
+        "observed",
+        "estimated",
+        "causal",
+        "simulated",
+        "optimized",
+        "proposed"
+      ],
+      "title": "EvidenceType",
+      "type": "string"
+    },
+    "ImplementationStatus": {
+      "enum": [
+        "reference-implemented",
+        "design-only"
+      ],
+      "title": "ImplementationStatus",
+      "type": "string"
+    },
+    "Pagination": {
+      "additionalProperties": false,
+      "properties": {
+        "limit": {
+          "maximum": 100,
+          "minimum": 1,
+          "title": "Limit",
+          "type": "integer"
+        },
+        "next_offset": {
+          "anyOf": [
+            {
+              "minimum": 0,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Next Offset"
+        },
+        "offset": {
+          "minimum": 0,
+          "title": "Offset",
+          "type": "integer"
+        },
+        "returned": {
+          "minimum": 0,
+          "title": "Returned",
+          "type": "integer"
+        },
+        "total": {
+          "minimum": 0,
+          "title": "Total",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "total",
+        "limit",
+        "offset",
+        "returned"
+      ],
+      "title": "Pagination",
+      "type": "object"
+    },
+    "ScenarioDesignSummary": {
+      "additionalProperties": false,
+      "properties": {
+        "analysis_modes": {
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1,
+          "title": "Analysis Modes",
+          "type": "array"
+        },
+        "binding_constraint": {
+          "minLength": 5,
+          "title": "Binding Constraint",
+          "type": "string"
+        },
+        "content_hash": {
+          "pattern": "^sha256:[0-9a-f]{64}$",
+          "title": "Content Hash",
+          "type": "string"
+        },
+        "current_readiness": {
+          "$ref": "#/$defs/CurrentReadiness"
+        },
+        "decision_question": {
+          "minLength": 12,
+          "title": "Decision Question",
+          "type": "string"
+        },
+        "decision_type": {
+          "$ref": "#/$defs/DecisionType"
+        },
+        "design_id": {
+          "pattern": "^[a-z0-9]+(?:[._-][a-z0-9]+)*$",
+          "title": "Design Id",
+          "type": "string"
+        },
+        "design_order": {
+          "minimum": 1,
+          "title": "Design Order",
+          "type": "integer"
+        },
+        "evidence_gate": {
+          "$ref": "#/$defs/EvidenceGateType"
+        },
+        "evidence_types": {
+          "items": {
+            "$ref": "#/$defs/EvidenceType"
+          },
+          "minItems": 1,
+          "title": "Evidence Types",
+          "type": "array"
+        },
+        "existing_template_ref": {
+          "anyOf": [
+            {
+              "pattern": "^[a-z0-9]+(?:[._-][a-z0-9]+)*$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Existing Template Ref"
+        },
+        "family_id": {
+          "pattern": "^[a-z0-9]+(?:[._-][a-z0-9]+)*$",
+          "title": "Family Id",
+          "type": "string"
+        },
+        "family_title": {
+          "minLength": 3,
+          "title": "Family Title",
+          "type": "string"
+        },
+        "horizon": {
+          "$ref": "#/$defs/DecisionHorizon"
+        },
+        "implementation_status": {
+          "$ref": "#/$defs/ImplementationStatus"
+        },
+        "primary_outcome": {
+          "minLength": 5,
+          "title": "Primary Outcome",
+          "type": "string"
+        },
+        "prohibited_claims": {
+          "items": {
+            "type": "string"
+          },
+          "minItems": 2,
+          "title": "Prohibited Claims",
+          "type": "array"
+        },
+        "spatial_unit": {
+          "$ref": "#/$defs/SpatialUnit"
+        },
+        "suite": {
+          "minLength": 1,
+          "title": "Suite",
+          "type": "string"
+        },
+        "title": {
+          "minLength": 5,
+          "title": "Title",
+          "type": "string"
+        }
+      },
+      "required": [
+        "design_order",
+        "design_id",
+        "family_id",
+        "suite",
+        "family_title",
+        "title",
+        "decision_question",
+        "decision_type",
+        "horizon",
+        "spatial_unit",
+        "primary_outcome",
+        "binding_constraint",
+        "evidence_gate",
+        "implementation_status",
+        "current_readiness",
+        "analysis_modes",
+        "evidence_types",
+        "prohibited_claims",
+        "content_hash"
+      ],
+      "title": "ScenarioDesignSummary",
+      "type": "object"
+    },
+    "SpatialUnit": {
+      "enum": [
+        "facility",
+        "asset",
+        "parcel",
+        "corridor",
+        "network",
+        "service-area",
+        "neighborhood",
+        "citywide",
+        "population-group"
+      ],
+      "title": "SpatialUnit",
+      "type": "string"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "items": {
+      "items": {
+        "$ref": "#/$defs/ScenarioDesignSummary"
+      },
+      "title": "Items",
+      "type": "array"
+    },
+    "pagination": {
+      "$ref": "#/$defs/Pagination"
+    }
+  },
+  "required": [
+    "pagination",
+    "items"
+  ],
+  "title": "ScenarioDesignPage",
+  "type": "object"
+}

@@ -1,0 +1,50 @@
+{
+  "affected_system": "housing-stability, eviction prevention, shelter diversion, and support coordination",
+  "claim_boundary": [
+    "Requests, listings, parcels, and administrative records do not alone verify conditions or need.",
+    "Screened sites and portfolios are not permits, acquisitions, adopted plans, or completed housing.",
+    "Displacement, affordability, habitability, and program effects require direct outcomes and identification."
+  ],
+  "common_source_roles": [
+    "demographic-context",
+    "housing-market",
+    "operating-capacity"
+  ],
+  "decision_owner": "homelessness response director and housing-stability administrator",
+  "decision_types": [
+    "diagnose",
+    "forecast",
+    "prioritize",
+    "site",
+    "allocate",
+    "schedule",
+    "stress-test",
+    "evaluate"
+  ],
+  "description": "Eight decisions for instability diagnosis, service-demand forecasting, prevention portfolios, access siting, assistance allocation, case scheduling, surge stress, and program evaluation.",
+  "design_refs": [
+    "scenario.housing.homelessness-prevention.stability-service-gaps.v1",
+    "scenario.housing.homelessness-prevention.prevention-service-demand.v1",
+    "scenario.housing.homelessness-prevention.stability-program-portfolio.v1",
+    "scenario.housing.homelessness-prevention.stability-access-hubs.v1",
+    "scenario.housing.homelessness-prevention.prevention-assistance.v1",
+    "scenario.housing.homelessness-prevention.prevention-caseflow.v1",
+    "scenario.housing.homelessness-prevention.housing-stability-surge.v1",
+    "scenario.housing.homelessness-prevention.rental-assistance-effect.v1"
+  ],
+  "design_signatures": [
+    "sha256:6643213efc97b1501fca35c46adab303242abd3e74a025f9f010bcf784b59cf9",
+    "sha256:df018b88f441f1d21f20d84f6b09cf18eea25b37fcc311d0936949af6da6c5f4",
+    "sha256:78d27da969d67ca86ea94ba1a1c48a2880120a7d5b4476bfc2ab769ad718718c",
+    "sha256:c0be006aaa4be62be63146fe4a68729e4c2a1bc44eae87151ae01f35cd02ffe1",
+    "sha256:ad107b0d623299486366a231ab2bcca97898d7bbc0167669d2cd8f436c1bbf2d",
+    "sha256:bd94d65e7570735a31022732f08fa7b684faa66fdc5d8d86cd085808ab8e7b57",
+    "sha256:c762f6009ac1fc64348d1371a3d3635b580099c197049853bc8bb18fe6ec1ffe",
+    "sha256:07dcec67b9fbebf418a097121c9f68a3920ba79887144b98dbf6fd4b7efb35b8"
+  ],
+  "family_id": "housing.homelessness-prevention",
+  "family_order": 16,
+  "schema_version": "1.0.0",
+  "suite": "housing-land-use-regeneration",
+  "title": "Homelessness prevention and housing stability"
+}

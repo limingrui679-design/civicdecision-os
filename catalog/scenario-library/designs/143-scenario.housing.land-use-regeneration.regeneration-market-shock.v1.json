@@ -1,0 +1,166 @@
+{
+  "affected_system": "land-use planning, public investment, regeneration, and community-benefit system",
+  "alternatives": [
+    "add targeted redundancy around the largest failure modes in inclusive regeneration plan under market and delivery shock",
+    "select an adaptive robust portfolio across severe scenarios for inclusive regeneration plan under market and delivery shock",
+    "pair parcel, finance, displacement, infrastructure, and hazard simulation with an explicit stop, review, and escalation rule"
+  ],
+  "analysis_modes": [
+    "forecast",
+    "simulation",
+    "optimization"
+  ],
+  "assumptions": [
+    "Parcels, zoning, ownership, development, business, housing, public assets, and population use dated versions.",
+    "Scenario capacity and market response are not treated as approved projects or inevitable change.",
+    "All alternatives, capacities, costs, effects, thresholds, and failure scenarios are proposed until bound to evidence."
+  ],
+  "baseline": "apply current continuity provisions to inclusive regeneration plan under market and delivery shock.",
+  "city_bindings": [],
+  "constraints": [
+    {
+      "binding": true,
+      "constraint_id": "scenario.housing.land-use-regeneration.regeneration-market-shock.v1.constraint.binding",
+      "description": "The land use, regeneration, and neighborhood change stress test must respect declared minimum continuity and safety thresholds across severe scenarios.",
+      "hard": true,
+      "kind": "risk",
+      "required_source_roles": [
+        "climate-hazard",
+        "financial-cost",
+        "geographic-identity",
+        "housing-market",
+        "land-parcel",
+        "operating-capacity"
+      ]
+    },
+    {
+      "binding": false,
+      "constraint_id": "scenario.housing.land-use-regeneration.regeneration-market-shock.v1.constraint.evidence-scope",
+      "description": "Every released metric must retain evidence type, source lineage, geography, time, assumptions, and uncertainty.",
+      "hard": true,
+      "kind": "technical",
+      "required_source_roles": [
+        "climate-hazard"
+      ]
+    },
+    {
+      "binding": false,
+      "constraint_id": "scenario.housing.land-use-regeneration.regeneration-market-shock.v1.constraint.decision-authority",
+      "description": "No analytical output may bypass lawful authority, accountable human review, or an applicable appeal process.",
+      "hard": true,
+      "kind": "regulatory",
+      "required_source_roles": [
+        "climate-hazard"
+      ]
+    }
+  ],
+  "current_readiness": "blocked-missing-source",
+  "decision_cadence": "recompiled at each planning cycle and after material evidence change",
+  "decision_owner": "planning director and neighborhood regeneration commissioner",
+  "decision_question": "Which plan preserves affordability and public benefits across cost, finance, demand, delay, and climate shocks?",
+  "decision_type": "stress-test",
+  "design_id": "scenario.housing.land-use-regeneration.regeneration-market-shock.v1",
+  "design_order": 143,
+  "design_signature": "sha256:db7e5c72b1979318d51c1c13f0c720a5198d58f3b0ef52e90bea5de275c3222c",
+  "evidence_requirements": [
+    "estimated",
+    "observed",
+    "optimized",
+    "proposed",
+    "simulated"
+  ],
+  "family_id": "housing.land-use-regeneration",
+  "family_title": "Land use, regeneration, and neighborhood change",
+  "horizon": "seasonal",
+  "implementation_status": "design-only",
+  "independence_key": {
+    "binding_constraint": "The land use, regeneration, and neighborhood change stress test must respect declared minimum continuity and safety thresholds across severe scenarios.",
+    "decision_object": "inclusive regeneration plan under market and delivery shock",
+    "evidence_gate": "Evidence for inclusive regeneration plan under market and delivery shock passes documented checks for scenario ranges, dependence, failure rates, recovery, intervention performance, and sensitivity.",
+    "horizon": "seasonal",
+    "intervention_mechanism": "parcel, finance, displacement, infrastructure, and hazard simulation",
+    "primary_outcome": "scenario-weighted loss of protected housing, businesses, and public benefits",
+    "spatial_unit": "neighborhood"
+  },
+  "intended_claim": "A versioned stress-test design for comparing declared alternatives affecting inclusive regeneration plan under market and delivery shock, conditional on its evidence gate.",
+  "limitations": [
+    "This library record has no city binding and therefore reports no local input, output, or recommendation.",
+    "Readiness describes explicit source and method gates; it does not certify implementation feasibility.",
+    "External domain, legal, community, security, and operational review remains outside this design artifact."
+  ],
+  "method_claimed": false,
+  "objectives": [
+    {
+      "evidence_type": "estimated",
+      "metric": "scenario-weighted loss of protected housing, businesses, and public benefits",
+      "objective_id": "scenario.housing.land-use-regeneration.regeneration-market-shock.v1.objective.primary",
+      "primary": true,
+      "sense": "minimize",
+      "unit": "protected-unit years"
+    },
+    {
+      "evidence_type": "estimated",
+      "metric": "distributional gap in scenario-weighted loss of protected housing, businesses, and public benefits",
+      "objective_id": "scenario.housing.land-use-regeneration.regeneration-market-shock.v1.objective.equity",
+      "primary": false,
+      "sense": "minimize",
+      "unit": "protected-unit years"
+    },
+    {
+      "evidence_type": "observed",
+      "metric": "decision claims with complete evidence lineage",
+      "objective_id": "scenario.housing.land-use-regeneration.regeneration-market-shock.v1.objective.traceability",
+      "primary": false,
+      "sense": "maximize",
+      "unit": "percent"
+    }
+  ],
+  "prohibited_claims": [
+    "Do not present synthetic market paths as forecasts or modeled protections as secured rights.",
+    "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+    "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+    "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+  ],
+  "release_gate": {
+    "failure_release": "Release an explicit insufficient-evidence record naming missing sources, failed diagnostics, prohibited claims, and the next validation action.",
+    "failure_status": "insufficient-evidence",
+    "gate_id": "scenario.housing.land-use-regeneration.regeneration-market-shock.v1.gate.release",
+    "gate_type": "external-validation",
+    "pass_condition": "Evidence for inclusive regeneration plan under market and delivery shock passes documented checks for scenario ranges, dependence, failure rates, recovery, intervention performance, and sensitivity.",
+    "required_evidence_types": [
+      "estimated",
+      "observed"
+    ],
+    "required_source_roles": [
+      "climate-hazard",
+      "financial-cost",
+      "geographic-identity",
+      "housing-market",
+      "land-parcel",
+      "operating-capacity"
+    ]
+  },
+  "required_source_roles": [
+    "climate-hazard",
+    "financial-cost",
+    "geographic-identity",
+    "housing-market",
+    "land-parcel",
+    "operating-capacity"
+  ],
+  "schema_version": "1.0.0",
+  "spatial_unit": "neighborhood",
+  "suite": "housing-land-use-regeneration",
+  "tags": [
+    "design-only",
+    "housing-land-use-regeneration",
+    "housing.land-use-regeneration",
+    "scenario-library",
+    "stress-test"
+  ],
+  "title": "Stress-test regeneration under market and delivery shocks",
+  "transportability_risks": [
+    "Planning law, property rights, finance, markets, institutions, and community priorities differ.",
+    "Parcel and transaction data may miss informal tenure, businesses, and cultural assets."
+  ]
+}

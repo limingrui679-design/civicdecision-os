@@ -1,0 +1,166 @@
+{
+  "affected_system": "fixed-route public transit service and passenger connections",
+  "alternatives": [
+    "add targeted redundancy around the largest failure modes in transit network disruption and continuity strategy",
+    "select an adaptive robust portfolio across severe scenarios for transit network disruption and continuity strategy",
+    "pair correlated fleet-network-demand disruption simulation with an explicit stop, review, and escalation rule"
+  ],
+  "analysis_modes": [
+    "forecast",
+    "simulation",
+    "optimization"
+  ],
+  "assumptions": [
+    "Trips, stops, vehicle observations, disruptions, and calendars share a versioned service day.",
+    "Passenger loads and transfer behavior are measured or represented as bounded assumptions.",
+    "All alternatives, capacities, costs, effects, thresholds, and failure scenarios are proposed until bound to evidence."
+  ],
+  "baseline": "apply current continuity provisions to transit network disruption and continuity strategy.",
+  "city_bindings": [],
+  "constraints": [
+    {
+      "binding": true,
+      "constraint_id": "scenario.mobility.transit-reliability.network-disruption.v1.constraint.binding",
+      "description": "The transit reliability and passenger continuity stress test must respect declared minimum continuity and safety thresholds across severe scenarios.",
+      "hard": true,
+      "kind": "risk",
+      "required_source_roles": [
+        "asset-condition",
+        "climate-hazard",
+        "geographic-identity",
+        "operating-capacity",
+        "service-schedule",
+        "transport-network"
+      ]
+    },
+    {
+      "binding": false,
+      "constraint_id": "scenario.mobility.transit-reliability.network-disruption.v1.constraint.evidence-scope",
+      "description": "Every released metric must retain evidence type, source lineage, geography, time, assumptions, and uncertainty.",
+      "hard": true,
+      "kind": "technical",
+      "required_source_roles": [
+        "asset-condition"
+      ]
+    },
+    {
+      "binding": false,
+      "constraint_id": "scenario.mobility.transit-reliability.network-disruption.v1.constraint.decision-authority",
+      "description": "No analytical output may bypass lawful authority, accountable human review, or an applicable appeal process.",
+      "hard": true,
+      "kind": "regulatory",
+      "required_source_roles": [
+        "asset-condition"
+      ]
+    }
+  ],
+  "current_readiness": "blocked-missing-source",
+  "decision_cadence": "recompiled at each planning cycle and after material evidence change",
+  "decision_owner": "transit chief operating officer and service-planning director",
+  "decision_question": "Which operating plan preserves essential access under vehicle, infrastructure, weather, and staffing failures?",
+  "decision_type": "stress-test",
+  "design_id": "scenario.mobility.transit-reliability.network-disruption.v1",
+  "design_order": 47,
+  "design_signature": "sha256:b156ae73d54af48924496e57b62e4851fba7644af4a229e3caa9fdd6441836ad",
+  "evidence_requirements": [
+    "estimated",
+    "observed",
+    "optimized",
+    "proposed",
+    "simulated"
+  ],
+  "family_id": "mobility.transit-reliability",
+  "family_title": "Transit reliability and passenger continuity",
+  "horizon": "seasonal",
+  "implementation_status": "design-only",
+  "independence_key": {
+    "binding_constraint": "The transit reliability and passenger continuity stress test must respect declared minimum continuity and safety thresholds across severe scenarios.",
+    "decision_object": "transit network disruption and continuity strategy",
+    "evidence_gate": "Evidence for transit network disruption and continuity strategy passes documented checks for scenario ranges, dependence, failure rates, recovery, intervention performance, and sensitivity.",
+    "horizon": "seasonal",
+    "intervention_mechanism": "correlated fleet-network-demand disruption simulation",
+    "primary_outcome": "essential passenger-trips left without viable service",
+    "spatial_unit": "network"
+  },
+  "intended_claim": "A versioned stress-test design for comparing declared alternatives affecting transit network disruption and continuity strategy, conditional on its evidence gate.",
+  "limitations": [
+    "This library record has no city binding and therefore reports no local input, output, or recommendation.",
+    "Readiness describes explicit source and method gates; it does not certify implementation feasibility.",
+    "External domain, legal, community, security, and operational review remains outside this design artifact."
+  ],
+  "method_claimed": false,
+  "objectives": [
+    {
+      "evidence_type": "estimated",
+      "metric": "essential passenger-trips left without viable service",
+      "objective_id": "scenario.mobility.transit-reliability.network-disruption.v1.objective.primary",
+      "primary": true,
+      "sense": "minimize",
+      "unit": "passenger-trips"
+    },
+    {
+      "evidence_type": "estimated",
+      "metric": "distributional gap in essential passenger-trips left without viable service",
+      "objective_id": "scenario.mobility.transit-reliability.network-disruption.v1.objective.equity",
+      "primary": false,
+      "sense": "minimize",
+      "unit": "passenger-trips"
+    },
+    {
+      "evidence_type": "observed",
+      "metric": "decision claims with complete evidence lineage",
+      "objective_id": "scenario.mobility.transit-reliability.network-disruption.v1.objective.traceability",
+      "primary": false,
+      "sense": "maximize",
+      "unit": "percent"
+    }
+  ],
+  "prohibited_claims": [
+    "Do not present synthetic failures as predicted disruptions or simulated access as completed trips.",
+    "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+    "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+    "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+  ],
+  "release_gate": {
+    "failure_release": "Release an explicit insufficient-evidence record naming missing sources, failed diagnostics, prohibited claims, and the next validation action.",
+    "failure_status": "insufficient-evidence",
+    "gate_id": "scenario.mobility.transit-reliability.network-disruption.v1.gate.release",
+    "gate_type": "external-validation",
+    "pass_condition": "Evidence for transit network disruption and continuity strategy passes documented checks for scenario ranges, dependence, failure rates, recovery, intervention performance, and sensitivity.",
+    "required_evidence_types": [
+      "estimated",
+      "observed"
+    ],
+    "required_source_roles": [
+      "asset-condition",
+      "climate-hazard",
+      "geographic-identity",
+      "operating-capacity",
+      "service-schedule",
+      "transport-network"
+    ]
+  },
+  "required_source_roles": [
+    "asset-condition",
+    "climate-hazard",
+    "geographic-identity",
+    "operating-capacity",
+    "service-schedule",
+    "transport-network"
+  ],
+  "schema_version": "1.0.0",
+  "spatial_unit": "network",
+  "suite": "mobility-accessibility-operations",
+  "tags": [
+    "design-only",
+    "mobility-accessibility-operations",
+    "mobility.transit-reliability",
+    "scenario-library",
+    "stress-test"
+  ],
+  "title": "Stress-test transit continuity under network disruption",
+  "transportability_risks": [
+    "Fare policy, headways, fleet, labor rules, topology, and passenger behavior vary by operator.",
+    "Reliability metrics may not transfer between schedule-based and frequency-based service."
+  ]
+}

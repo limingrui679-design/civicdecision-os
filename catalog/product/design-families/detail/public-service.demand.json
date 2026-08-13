@@ -1,0 +1,335 @@
+{
+  "designs": [
+    {
+      "analysis_modes": [
+        "descriptive"
+      ],
+      "binding_constraint": "The 311 and public-service demand operations diagnose must respect declared measurement resolution and classification uncertainty.",
+      "content_hash": "sha256:e1e0033d585327fefc7760cf24f544276884faa9711364354bdb3f19686a7367",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Which categories, channels, places, and handoffs produce persistent demand, duplication, delay, or rework?",
+      "decision_type": "diagnose",
+      "design_id": "scenario.public-service.demand.request-workload.v1",
+      "design_order": 145,
+      "evidence_gate": "geographic-alignment",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "proposed"
+      ],
+      "family_id": "public-service.demand",
+      "family_title": "311 and public-service demand operations",
+      "horizon": "annual",
+      "implementation_status": "design-only",
+      "primary_outcome": "requests with unresolved routing or repeated workflow transitions",
+      "prohibited_claims": [
+        "Do not call requests verified incidents, unresolved harms, or failed service delivery.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "service-area",
+      "suite": "public-service-operations",
+      "title": "Diagnose public-service request workload and workflow friction"
+    },
+    {
+      "analysis_modes": [
+        "forecast"
+      ],
+      "binding_constraint": "The 311 and public-service demand operations forecast must respect declared validated operational capacity and forecast uncertainty.",
+      "content_hash": "sha256:27e9df2aea3d91a86fe68b3a4346e9a50ea51772c661f5822e61b78eec23b553",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "What category, channel, area, and time-specific demand range should service operations prepare for?",
+      "decision_type": "forecast",
+      "design_id": "scenario.public-service.demand.service-workload.v1",
+      "design_order": 146,
+      "evidence_gate": "model-calibration",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "proposed"
+      ],
+      "family_id": "public-service.demand",
+      "family_title": "311 and public-service demand operations",
+      "horizon": "weeks",
+      "implementation_status": "design-only",
+      "primary_outcome": "request workload above verified handling capacity",
+      "prohibited_claims": [
+        "Do not present forecast requests as incidents, verified need, or service failures.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "service-area",
+      "suite": "public-service-operations",
+      "title": "Forecast multichannel public-service workload"
+    },
+    {
+      "analysis_modes": [
+        "descriptive",
+        "optimization"
+      ],
+      "binding_constraint": "The 311 and public-service demand operations prioritize must respect declared capital, operating, maintenance, and delivery budgets.",
+      "content_hash": "sha256:d0442f9578fd6c926c7393de00bc6bcf5ff82a9eeacf47c611bf374ed145f95d",
+      "current_readiness": "reference-implemented",
+      "decision_question": "Which intake, routing, self-service, field, translation, and quality improvements should be funded?",
+      "decision_type": "prioritize",
+      "design_id": "scenario.public-service.demand.service-improvement-portfolio.v1",
+      "design_order": 147,
+      "evidence_gate": "cost-capacity",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed"
+      ],
+      "existing_template_ref": "deep.public-service.total-demand.v1",
+      "family_id": "public-service.demand",
+      "family_title": "311 and public-service demand operations",
+      "horizon": "multi-year",
+      "implementation_status": "reference-implemented",
+      "primary_outcome": "expected avoidable request handling and resident effort",
+      "prohibited_claims": [
+        "Do not report modeled handling savings as realized productivity or resident satisfaction.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "asset",
+      "suite": "public-service-operations",
+      "title": "Prioritize public-service workflow improvements"
+    },
+    {
+      "analysis_modes": [
+        "simulation",
+        "optimization"
+      ],
+      "binding_constraint": "The 311 and public-service demand operations site must respect declared land control, accessibility, permitting, safety, and operating feasibility.",
+      "content_hash": "sha256:d69b1ed6f964c962ec016e72d05ef1a9220e972c73e76b1e1ad67201de07c850",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Where should in-person, mobile, kiosk, and partner-assisted access fill verified channel gaps?",
+      "decision_type": "site",
+      "design_id": "scenario.public-service.demand.service-access-points.v1",
+      "design_order": 148,
+      "evidence_gate": "legal-authority",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "family_id": "public-service.demand",
+      "family_title": "311 and public-service demand operations",
+      "horizon": "multi-year",
+      "implementation_status": "design-only",
+      "primary_outcome": "residents beyond usable public-service access",
+      "prohibited_claims": [
+        "Do not call a candidate access point usable, trusted, staffed, or accessible without user evidence.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "facility",
+      "suite": "public-service-operations",
+      "title": "Site multilingual public-service access points"
+    },
+    {
+      "analysis_modes": [
+        "simulation",
+        "optimization"
+      ],
+      "binding_constraint": "The 311 and public-service demand operations allocate must respect declared minimum service, eligibility, capacity, and distributional safeguards.",
+      "content_hash": "sha256:c8150dda0dc01bfc783b8ab75fc5fc75089ca5edd2da8ff9fcb926a4a71a46cd",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "How should cases, language support, supervisors, and field capacity be assigned across queues?",
+      "decision_type": "allocate",
+      "design_id": "scenario.public-service.demand.case-routing-capacity.v1",
+      "design_order": 149,
+      "evidence_gate": "equity-measurement",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "family_id": "public-service.demand",
+      "family_title": "311 and public-service demand operations",
+      "horizon": "weeks",
+      "implementation_status": "design-only",
+      "primary_outcome": "priority requests without assigned qualified capacity",
+      "prohibited_claims": [
+        "Do not report routed cases as contacted residents, completed work, or resolved outcomes.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "service-area",
+      "suite": "public-service-operations",
+      "title": "Allocate service cases and response capacity"
+    },
+    {
+      "analysis_modes": [
+        "forecast",
+        "optimization"
+      ],
+      "binding_constraint": "The 311 and public-service demand operations schedule must respect declared labor, access, sequencing, notice, and completion windows.",
+      "content_hash": "sha256:57c241c3aafb2dc622c24b41da4cf040c5ac6d23d4d996179ba8f9f18a18a78f",
+      "current_readiness": "reference-implemented",
+      "decision_question": "When should channel, supervisor, specialist, and field capacity expand or shift with demand?",
+      "decision_type": "schedule",
+      "design_id": "scenario.public-service.demand.seasonal-service-staffing.v1",
+      "design_order": 150,
+      "evidence_gate": "temporal-alignment",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed"
+      ],
+      "existing_template_ref": "deep.public-service.seasonal-staffing.v1",
+      "family_id": "public-service.demand",
+      "family_title": "311 and public-service demand operations",
+      "horizon": "weeks",
+      "implementation_status": "reference-implemented",
+      "primary_outcome": "request-hours above qualified handling capacity",
+      "prohibited_claims": [
+        "Do not call a proposed staffing roster adopted, worked, productive, or sufficient.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "citywide",
+      "suite": "public-service-operations",
+      "title": "Schedule seasonal public-service staffing"
+    },
+    {
+      "analysis_modes": [
+        "forecast",
+        "simulation",
+        "optimization"
+      ],
+      "binding_constraint": "The 311 and public-service demand operations stress test must respect declared minimum continuity and safety thresholds across severe scenarios.",
+      "content_hash": "sha256:e865a57b41f2b2086930fec6a6ed5c2fe159c164c9cf9375de8496e43d72ca4e",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Which intake and field-response plan sustains priority services during event, outage, absence, and channel surges?",
+      "decision_type": "stress-test",
+      "design_id": "scenario.public-service.demand.service-demand-surge.v1",
+      "design_order": 151,
+      "evidence_gate": "external-validation",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "family_id": "public-service.demand",
+      "family_title": "311 and public-service demand operations",
+      "horizon": "seasonal",
+      "implementation_status": "design-only",
+      "primary_outcome": "scenario-weighted priority requests beyond response targets",
+      "prohibited_claims": [
+        "Do not present synthetic requests, failures, or response times as observed service performance.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "network",
+      "suite": "public-service-operations",
+      "title": "Stress-test public-service continuity under demand surge"
+    },
+    {
+      "analysis_modes": [
+        "descriptive",
+        "causal"
+      ],
+      "binding_constraint": "The 311 and public-service demand operations evaluate must respect declared pre-specified assignment, comparison, outcome, spillover, and subgroup rules.",
+      "content_hash": "sha256:b54f48d389d4a64f2451b755a921c4abcfdfd5a5a4df7a61a3290b2f1be60a58",
+      "current_readiness": "blocked-multiple-gates",
+      "decision_question": "Did phased channel and routing changes reduce verified resident effort and workflow delay without exclusion?",
+      "decision_type": "evaluate",
+      "design_id": "scenario.public-service.demand.channel-redesign-effect.v1",
+      "design_order": 152,
+      "evidence_gate": "causal-identification",
+      "evidence_types": [
+        "causal",
+        "estimated",
+        "observed",
+        "proposed"
+      ],
+      "family_id": "public-service.demand",
+      "family_title": "311 and public-service demand operations",
+      "horizon": "multi-year",
+      "implementation_status": "design-only",
+      "primary_outcome": "change in verified end-to-end handling time and repeat contact",
+      "prohibited_claims": [
+        "Do not infer resident welfare, satisfaction, or causal resolution from closure codes alone.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "service-area",
+      "suite": "public-service-operations",
+      "title": "Evaluate service intake and routing redesign"
+    }
+  ],
+  "family": {
+    "affected_system": "multichannel public-service intake, triage, dispatch, and resolution workflow",
+    "claim_boundary": [
+      "Service requests measure reported workload, not verified incidents, need, harm, or resolution.",
+      "Assignments and schedules are proposed operations, not completed work or public outcomes.",
+      "Design records do not establish agency adoption, deployment, productivity, or resident impact."
+    ],
+    "common_source_roles": [
+      "geographic-identity",
+      "municipal-demand",
+      "operating-capacity"
+    ],
+    "decision_owner": "chief service officer and 311 operations director",
+    "decision_types": [
+      "diagnose",
+      "forecast",
+      "prioritize",
+      "site",
+      "allocate",
+      "schedule",
+      "stress-test",
+      "evaluate"
+    ],
+    "description": "Eight decisions for intake-pattern diagnosis, workload forecasting, service improvement, access siting, case allocation, staffing schedules, demand stress, and channel evaluation.",
+    "design_refs": [
+      "scenario.public-service.demand.request-workload.v1",
+      "scenario.public-service.demand.service-workload.v1",
+      "scenario.public-service.demand.service-improvement-portfolio.v1",
+      "scenario.public-service.demand.service-access-points.v1",
+      "scenario.public-service.demand.case-routing-capacity.v1",
+      "scenario.public-service.demand.seasonal-service-staffing.v1",
+      "scenario.public-service.demand.service-demand-surge.v1",
+      "scenario.public-service.demand.channel-redesign-effect.v1"
+    ],
+    "design_signatures": [
+      "sha256:24bc68b9382f16a8873ca47ff7b8d180dc019b18eae92a43f1e34780a2c9b448",
+      "sha256:4f7078643ac840978d301e0515129a99312574a98ca361ec4c902937cb29bc9a",
+      "sha256:01b3dc98d336ce7bc0c3d2860e29b8505e028250d350a02184012c42d8043039",
+      "sha256:6b6a3b089caad8a5c356a54af2cdc1c2f9528451a1dd50a296d9b25943ea37e4",
+      "sha256:f670e56583514ab85e41d89ad1b60faee717cb81d2714106b875ede7fcdb2c78",
+      "sha256:da0c166fd88e805d5fb6a4687d4830fa2ee213bd14b31d23c9625cf6a5dcf357",
+      "sha256:1bcd7ac4bf15391258a8ef99fadebc4c15a3a42292f7a4f4c947891be020cef3",
+      "sha256:edf7a7aa89bdba1b0135e840b4d872887739efca9c91107bd5377393bcdf8bb4"
+    ],
+    "family_id": "public-service.demand",
+    "family_order": 19,
+    "schema_version": "1.0.0",
+    "suite": "public-service-operations",
+    "title": "311 and public-service demand operations"
+  },
+  "library_claim_boundary": [
+    "The catalog contains 240 decision designs, not 240 city executions.",
+    "Exactly twelve designs map to existing Tier-D reference templates; 228 remain design-only.",
+    "A reference implementation can be an explicit negative release and does not imply impact.",
+    "No record claims a city binding, new method, deployment, adoption, or real-user outcome.",
+    "Future execution requires source binding, gate passage, and domain, legal, community, and operational review."
+  ]
+}

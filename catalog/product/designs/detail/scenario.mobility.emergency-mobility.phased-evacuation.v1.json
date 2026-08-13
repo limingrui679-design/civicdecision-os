@@ -1,0 +1,226 @@
+{
+  "audit_maximum_pairwise_similarity": 0.646154,
+  "design": {
+    "affected_system": "multimodal evacuation, assisted transport, and emergency access network",
+    "alternatives": [
+      "advance high-risk work within verified feasible windows for phased multimodal evacuation and responder-access schedule",
+      "use rolling risk and capacity updates to reschedule phased multimodal evacuation and responder-access schedule",
+      "pair clearance-time scheduling with protected responder flows with an explicit stop, review, and escalation rule"
+    ],
+    "analysis_modes": [
+      "forecast",
+      "optimization"
+    ],
+    "assumptions": [
+      "Evacuation demand, assistance eligibility, vehicle capacity, route state, and hazard timing are versioned.",
+      "Compliance, household departure, and network degradation remain observed inputs or bounded scenarios.",
+      "All alternatives, capacities, costs, effects, thresholds, and failure scenarios are proposed until bound to evidence."
+    ],
+    "baseline": "continue the fixed operating calendar for phased multimodal evacuation and responder-access schedule.",
+    "city_bindings": [],
+    "constraints": [
+      {
+        "binding": true,
+        "constraint_id": "scenario.mobility.emergency-mobility.phased-evacuation.v1.constraint.binding",
+        "description": "The evacuation and emergency mobility schedule must respect declared labor, access, sequencing, notice, and completion windows.",
+        "hard": true,
+        "kind": "time",
+        "required_source_roles": [
+          "climate-hazard",
+          "geographic-identity",
+          "operating-capacity",
+          "real-time-state",
+          "service-schedule",
+          "transport-network"
+        ]
+      },
+      {
+        "binding": false,
+        "constraint_id": "scenario.mobility.emergency-mobility.phased-evacuation.v1.constraint.evidence-scope",
+        "description": "Every released metric must retain evidence type, source lineage, geography, time, assumptions, and uncertainty.",
+        "hard": true,
+        "kind": "technical",
+        "required_source_roles": [
+          "climate-hazard"
+        ]
+      },
+      {
+        "binding": false,
+        "constraint_id": "scenario.mobility.emergency-mobility.phased-evacuation.v1.constraint.decision-authority",
+        "description": "No analytical output may bypass lawful authority, accountable human review, or an applicable appeal process.",
+        "hard": true,
+        "kind": "regulatory",
+        "required_source_roles": [
+          "climate-hazard"
+        ]
+      }
+    ],
+    "current_readiness": "reference-implemented",
+    "decision_cadence": "recompiled at each planning cycle and after material evidence change",
+    "decision_owner": "emergency transportation coordinator and incident commander",
+    "decision_question": "When should zones, transit, assisted transport, control points, and responder routes activate?",
+    "decision_type": "schedule",
+    "design_id": "scenario.mobility.emergency-mobility.phased-evacuation.v1",
+    "design_order": 70,
+    "design_signature": "sha256:d70dcaab56f58605def4bac6f27d87d353799cee6fe9a4fd52a5972e8965f03d",
+    "evidence_requirements": [
+      "estimated",
+      "observed",
+      "optimized",
+      "proposed"
+    ],
+    "existing_template_ref": "deep.mobility.real-time-reroute.v1",
+    "family_id": "mobility.emergency-mobility",
+    "family_title": "Evacuation and emergency mobility",
+    "horizon": "weeks",
+    "implementation_status": "reference-implemented",
+    "independence_key": {
+      "binding_constraint": "The evacuation and emergency mobility schedule must respect declared labor, access, sequencing, notice, and completion windows.",
+      "decision_object": "phased multimodal evacuation and responder-access schedule",
+      "evidence_gate": "Evidence for phased multimodal evacuation and responder-access schedule passes documented checks for effective dates, time zones, calendars, lead times, completion semantics, and update cadence.",
+      "horizon": "weeks",
+      "intervention_mechanism": "clearance-time scheduling with protected responder flows",
+      "primary_outcome": "people uncleared when route safety thresholds are crossed",
+      "spatial_unit": "network"
+    },
+    "intended_claim": "A versioned schedule design for comparing declared alternatives affecting phased multimodal evacuation and responder-access schedule, conditional on its evidence gate.",
+    "limitations": [
+      "This library record has no city binding and therefore reports no local input, output, or recommendation.",
+      "Readiness describes explicit source and method gates; it does not certify implementation feasibility.",
+      "External domain, legal, community, security, and operational review remains outside this design artifact."
+    ],
+    "method_claimed": false,
+    "objectives": [
+      {
+        "evidence_type": "estimated",
+        "metric": "people uncleared when route safety thresholds are crossed",
+        "objective_id": "scenario.mobility.emergency-mobility.phased-evacuation.v1.objective.primary",
+        "primary": true,
+        "sense": "minimize",
+        "unit": "people"
+      },
+      {
+        "evidence_type": "estimated",
+        "metric": "distributional gap in people uncleared when route safety thresholds are crossed",
+        "objective_id": "scenario.mobility.emergency-mobility.phased-evacuation.v1.objective.equity",
+        "primary": false,
+        "sense": "minimize",
+        "unit": "people"
+      },
+      {
+        "evidence_type": "observed",
+        "metric": "decision claims with complete evidence lineage",
+        "objective_id": "scenario.mobility.emergency-mobility.phased-evacuation.v1.objective.traceability",
+        "primary": false,
+        "sense": "maximize",
+        "unit": "percent"
+      }
+    ],
+    "prohibited_claims": [
+      "Do not call an optimized evacuation timetable an issued order or completed movement.",
+      "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+      "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+      "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+    ],
+    "reference_implementation_note": "Tier-D template deep.mobility.real-time-reroute.v1 (Real-time multimodal rerouting gate) supplies a bounded reference workflow for this design axis. The mapping does not establish complete city-specific inputs, external validity, deployment, adoption, or impact.",
+    "release_gate": {
+      "failure_release": "Release an explicit insufficient-evidence record naming missing sources, failed diagnostics, prohibited claims, and the next validation action.",
+      "failure_status": "insufficient-evidence",
+      "gate_id": "scenario.mobility.emergency-mobility.phased-evacuation.v1.gate.release",
+      "gate_type": "temporal-alignment",
+      "pass_condition": "Evidence for phased multimodal evacuation and responder-access schedule passes documented checks for effective dates, time zones, calendars, lead times, completion semantics, and update cadence.",
+      "required_evidence_types": [
+        "observed",
+        "proposed"
+      ],
+      "required_source_roles": [
+        "climate-hazard",
+        "geographic-identity",
+        "operating-capacity",
+        "real-time-state",
+        "service-schedule",
+        "transport-network"
+      ]
+    },
+    "required_source_roles": [
+      "climate-hazard",
+      "geographic-identity",
+      "operating-capacity",
+      "real-time-state",
+      "service-schedule",
+      "transport-network"
+    ],
+    "schema_version": "1.0.0",
+    "spatial_unit": "network",
+    "suite": "mobility-accessibility-operations",
+    "tags": [
+      "mobility-accessibility-operations",
+      "mobility.emergency-mobility",
+      "reference-implemented",
+      "scenario-library",
+      "schedule"
+    ],
+    "title": "Schedule phased multimodal evacuation",
+    "transportability_risks": [
+      "Hazards, vehicle ownership, disability access, road topology, trust, and compliance differ.",
+      "Registration systems may undercount people needing assistance."
+    ]
+  },
+  "family": {
+    "affected_system": "multimodal evacuation, assisted transport, and emergency access network",
+    "claim_boundary": [
+      "Network, request, and schedule records do not establish individual travel behavior or harm.",
+      "Optimized routes and allocations are planning outputs, not dispatched or completed trips.",
+      "Design-only records do not claim current city data, implementation, compliance, or impact."
+    ],
+    "common_source_roles": [
+      "geographic-identity",
+      "operating-capacity",
+      "transport-network"
+    ],
+    "decision_owner": "emergency transportation coordinator and incident commander",
+    "decision_types": [
+      "diagnose",
+      "forecast",
+      "prioritize",
+      "site",
+      "allocate",
+      "schedule",
+      "stress-test",
+      "evaluate"
+    ],
+    "description": "Eight decisions for mobility-needs diagnosis, clearance forecasting, network upgrades, pickup siting, vehicle allocation, evacuation schedules, failure stress, and exercise evaluation.",
+    "design_refs": [
+      "scenario.mobility.emergency-mobility.evacuation-access-gaps.v1",
+      "scenario.mobility.emergency-mobility.clearance-demand.v1",
+      "scenario.mobility.emergency-mobility.evacuation-readiness.v1",
+      "scenario.mobility.emergency-mobility.pickup-transfer-points.v1",
+      "scenario.mobility.emergency-mobility.assisted-transport.v1",
+      "scenario.mobility.emergency-mobility.phased-evacuation.v1",
+      "scenario.mobility.emergency-mobility.evacuation-network-failure.v1",
+      "scenario.mobility.emergency-mobility.evacuation-exercise-effect.v1"
+    ],
+    "design_signatures": [
+      "sha256:bd0107a37a85a3d260e7af95aed16dfc590bee0066e6105d3d6f44740844e79c",
+      "sha256:ce42127e1af46ad72ca368855e6bfd49a59915c1b76f49a33f156531d3912128",
+      "sha256:5cac7071082c4f2aa5cdb786915e1934cab53196f73ab90f2f5ad7cb7fff1598",
+      "sha256:8207358a1a03a8be66cb28c9bac622bab1597a0ceafe03f947ceeec01126c043",
+      "sha256:b7988d08647a02dcc8d668ef31b0699218e27fc2aa748ba268eec20d36d546ab",
+      "sha256:d70dcaab56f58605def4bac6f27d87d353799cee6fe9a4fd52a5972e8965f03d",
+      "sha256:f90751b9e5785a69173a2678221875c6a842130a421529752e1cd5c5a293deb8",
+      "sha256:3cf956c70ec03918e5ee6a16988c784068eaa596662facb219ca4955b3a88046"
+    ],
+    "family_id": "mobility.emergency-mobility",
+    "family_order": 9,
+    "schema_version": "1.0.0",
+    "suite": "mobility-accessibility-operations",
+    "title": "Evacuation and emergency mobility"
+  },
+  "library_claim_boundary": [
+    "The catalog contains 240 decision designs, not 240 city executions.",
+    "Exactly twelve designs map to existing Tier-D reference templates; 228 remain design-only.",
+    "A reference implementation can be an explicit negative release and does not imply impact.",
+    "No record claims a city binding, new method, deployment, adoption, or real-user outcome.",
+    "Future execution requires source binding, gate passage, and domain, legal, community, and operational review."
+  ]
+}

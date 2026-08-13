@@ -1,0 +1,167 @@
+{
+  "affected_system": "heat-health surveillance, prevention, and care coordination",
+  "alternatives": [
+    "compare eligible treated and credible untreated units for phased proactive heat-health outreach program",
+    "estimate pre-specified overall and distributional effects of phased proactive heat-health outreach program",
+    "pair randomized encouragement or staggered rollout evaluation with an explicit stop, review, and escalation rule"
+  ],
+  "analysis_modes": [
+    "descriptive",
+    "causal"
+  ],
+  "assumptions": [
+    "Health records are privacy-preserving, population-defined, timely, and separated from service-request proxies.",
+    "Heat exposure, care seeking, reporting, and intervention effects remain distinct constructs.",
+    "All alternatives, capacities, costs, effects, thresholds, and failure scenarios are proposed until bound to evidence."
+  ],
+  "baseline": "retain pre-intervention conditions for phased proactive heat-health outreach program.",
+  "city_bindings": [],
+  "constraints": [
+    {
+      "binding": true,
+      "constraint_id": "scenario.health.heat-health.heat-outreach-effect.v1.constraint.binding",
+      "description": "The heat-health surveillance and prevention evaluate must respect declared pre-specified assignment, comparison, outcome, spillover, and subgroup rules.",
+      "hard": true,
+      "kind": "equity",
+      "required_source_roles": [
+        "climate-hazard",
+        "community-input",
+        "demographic-context",
+        "equity-attribute",
+        "health-outcome",
+        "intervention-assignment",
+        "outcome-panel"
+      ]
+    },
+    {
+      "binding": false,
+      "constraint_id": "scenario.health.heat-health.heat-outreach-effect.v1.constraint.evidence-scope",
+      "description": "Every released metric must retain evidence type, source lineage, geography, time, assumptions, and uncertainty.",
+      "hard": true,
+      "kind": "technical",
+      "required_source_roles": [
+        "climate-hazard"
+      ]
+    },
+    {
+      "binding": false,
+      "constraint_id": "scenario.health.heat-health.heat-outreach-effect.v1.constraint.decision-authority",
+      "description": "No analytical output may bypass lawful authority, accountable human review, or an applicable appeal process.",
+      "hard": true,
+      "kind": "regulatory",
+      "required_source_roles": [
+        "climate-hazard"
+      ]
+    }
+  ],
+  "current_readiness": "blocked-multiple-gates",
+  "decision_cadence": "recompiled at each planning cycle and after material evidence change",
+  "decision_owner": "public-health preparedness director and emergency medical services lead",
+  "decision_question": "Did phased proactive outreach reduce verified emergency heat-health events without unequal exclusion?",
+  "decision_type": "evaluate",
+  "design_id": "scenario.health.heat-health.heat-outreach-effect.v1",
+  "design_order": 88,
+  "design_signature": "sha256:a9e0b268163ef500f3a564a1e624cb2a2726d76d589b61ec480763756305e530",
+  "evidence_requirements": [
+    "causal",
+    "estimated",
+    "observed",
+    "proposed"
+  ],
+  "family_id": "health.heat-health",
+  "family_title": "Heat-health surveillance and prevention",
+  "horizon": "multi-year",
+  "implementation_status": "design-only",
+  "independence_key": {
+    "binding_constraint": "The heat-health surveillance and prevention evaluate must respect declared pre-specified assignment, comparison, outcome, spillover, and subgroup rules.",
+    "decision_object": "phased proactive heat-health outreach program",
+    "evidence_gate": "Evidence for phased proactive heat-health outreach program passes documented checks for dated assignment, comparison validity, pre-trends, outcome panels, attrition, spillovers, and falsification tests.",
+    "horizon": "multi-year",
+    "intervention_mechanism": "randomized encouragement or staggered rollout evaluation",
+    "primary_outcome": "change in verified heat-related emergency encounters",
+    "spatial_unit": "population-group"
+  },
+  "intended_claim": "A versioned evaluate design for comparing declared alternatives affecting phased proactive heat-health outreach program, conditional on its evidence gate.",
+  "limitations": [
+    "This library record has no city binding and therefore reports no local input, output, or recommendation.",
+    "Readiness describes explicit source and method gates; it does not certify implementation feasibility.",
+    "External domain, legal, community, security, and operational review remains outside this design artifact."
+  ],
+  "method_claimed": false,
+  "objectives": [
+    {
+      "evidence_type": "estimated",
+      "metric": "change in verified heat-related emergency encounters",
+      "objective_id": "scenario.health.heat-health.heat-outreach-effect.v1.objective.primary",
+      "primary": true,
+      "sense": "minimize",
+      "unit": "encounters per ten thousand people"
+    },
+    {
+      "evidence_type": "estimated",
+      "metric": "distributional gap in change in verified heat-related emergency encounters",
+      "objective_id": "scenario.health.heat-health.heat-outreach-effect.v1.objective.equity",
+      "primary": false,
+      "sense": "minimize",
+      "unit": "encounters per ten thousand people"
+    },
+    {
+      "evidence_type": "observed",
+      "metric": "decision claims with complete evidence lineage",
+      "objective_id": "scenario.health.heat-health.heat-outreach-effect.v1.objective.traceability",
+      "primary": false,
+      "sense": "maximize",
+      "unit": "percent"
+    }
+  ],
+  "prohibited_claims": [
+    "Do not infer mortality or causal protection without validated outcomes and assignment diagnostics.",
+    "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+    "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+    "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+  ],
+  "release_gate": {
+    "failure_release": "Release an explicit insufficient-evidence record naming missing sources, failed diagnostics, prohibited claims, and the next validation action.",
+    "failure_status": "insufficient-evidence",
+    "gate_id": "scenario.health.heat-health.heat-outreach-effect.v1.gate.release",
+    "gate_type": "causal-identification",
+    "pass_condition": "Evidence for phased proactive heat-health outreach program passes documented checks for dated assignment, comparison validity, pre-trends, outcome panels, attrition, spillovers, and falsification tests.",
+    "required_evidence_types": [
+      "causal",
+      "observed"
+    ],
+    "required_source_roles": [
+      "climate-hazard",
+      "community-input",
+      "demographic-context",
+      "equity-attribute",
+      "health-outcome",
+      "intervention-assignment",
+      "outcome-panel"
+    ]
+  },
+  "required_source_roles": [
+    "climate-hazard",
+    "community-input",
+    "demographic-context",
+    "equity-attribute",
+    "health-outcome",
+    "intervention-assignment",
+    "outcome-panel"
+  ],
+  "schema_version": "1.0.0",
+  "spatial_unit": "population-group",
+  "suite": "population-health-environmental-exposure",
+  "tags": [
+    "design-only",
+    "evaluate",
+    "health.heat-health",
+    "population-health-environmental-exposure",
+    "scenario-library"
+  ],
+  "title": "Evaluate targeted heat-health outreach",
+  "transportability_risks": [
+    "Clinical coding, surveillance coverage, acclimatization, housing, and care access vary.",
+    "Small-area health estimates may be unstable or disclosure-sensitive."
+  ]
+}

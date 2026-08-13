@@ -1,0 +1,98 @@
+{
+  "$defs": {
+    "ScenarioLibraryArtifactEntry": {
+      "additionalProperties": false,
+      "properties": {
+        "byte_count": {
+          "minimum": 1,
+          "title": "Byte Count",
+          "type": "integer"
+        },
+        "content_hash": {
+          "pattern": "^sha256:[0-9a-f]{64}$",
+          "title": "Content Hash",
+          "type": "string"
+        },
+        "media_type": {
+          "minLength": 3,
+          "title": "Media Type",
+          "type": "string"
+        },
+        "path": {
+          "title": "Path",
+          "type": "string"
+        },
+        "record_count": {
+          "anyOf": [
+            {
+              "minimum": 0,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Record Count"
+        }
+      },
+      "required": [
+        "path",
+        "media_type",
+        "byte_count",
+        "content_hash"
+      ],
+      "title": "ScenarioLibraryArtifactEntry",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "artifact_count": {
+      "minimum": 1,
+      "title": "Artifact Count",
+      "type": "integer"
+    },
+    "artifacts": {
+      "items": {
+        "$ref": "#/$defs/ScenarioLibraryArtifactEntry"
+      },
+      "minItems": 1,
+      "title": "Artifacts",
+      "type": "array"
+    },
+    "claim_boundary": {
+      "items": {
+        "type": "string"
+      },
+      "minItems": 4,
+      "title": "Claim Boundary",
+      "type": "array"
+    },
+    "library_content_hash": {
+      "pattern": "^sha256:[0-9a-f]{64}$",
+      "title": "Library Content Hash",
+      "type": "string"
+    },
+    "published_at": {
+      "format": "date-time",
+      "title": "Published At",
+      "type": "string"
+    },
+    "schema_version": {
+      "const": "1.0.0",
+      "default": "1.0.0",
+      "title": "Schema Version",
+      "type": "string"
+    }
+  },
+  "required": [
+    "published_at",
+    "library_content_hash",
+    "artifact_count",
+    "artifacts",
+    "claim_boundary"
+  ],
+  "title": "ScenarioLibraryManifest",
+  "type": "object"
+}

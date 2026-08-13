@@ -4,14 +4,14 @@ Updated: 2026-08-13
 
 ## Current milestone
 
-Milestone 6—the shared product projection, REST API, Python SDK, CLI, evidence explorer, and
-data-only plugin layer—is verified locally. The next implementation milestone expands the twelve
-deep templates toward the 240 non-duplicative scenario target without counting repeated city
-bindings as new designs.
+Milestone 7—the audited 240-design scenario library and its integration across the shared store,
+REST API, Python SDK, CLI, static product projection, and evidence explorer—is implemented and
+repository-wide verified. The library preserves the earlier twelve Tier-D templates as bounded
+reference implementations without counting their repeated city bindings as new designs.
 
 ## Verified now
 
-- Twenty-two deterministic versioned JSON Schemas regenerate byte-for-byte.
+- Twenty-seven deterministic domain/compiler/library JSON Schemas regenerate byte-for-byte.
 - Six evidence types have type-specific positive and rejection tests.
 - Completed DecisionPacks require formal reversal tests and value-of-information guidance.
 - Failed, insufficient-evidence, infeasible, and timed-out statuses validate as negative releases.
@@ -89,47 +89,66 @@ bindings as new designs.
 - All 707 committed Tier-D files validate against contracts and hashes. The verifier rebuilds the
   entire tree from the 49 committed source artifacts in a temporary directory and requires exact
   byte equality.
+- The scenario library contains 240 strict designs in 30 families, with diagnose, forecast,
+  prioritize, site, allocate, schedule, stress-test, and evaluate represented exactly once in
+  every family.
+- Every design declares at least three alternatives, three objectives, one binding constraint,
+  typed source and evidence requirements, a negative release gate, assumptions, limitations,
+  prohibited claims, and transportability risks.
+- The anti-duplication audit checks all 28,680 unordered pairs. It reports zero substantive
+  signature collisions, zero normalized-title or normalized-question duplicates, zero pairs at
+  or above the fixed 0.90 threshold, and a maximum token Jaccard of 0.646154.
+- Twelve designs map one-to-one to the twelve existing Tier-D templates; 228 remain design-only.
+  Library schemas enforce zero city bindings and literal false for new-method claims.
+- The scenario-library tree contains exactly 282 files: 240 designs, 30 families, registry,
+  audit, coverage CSV, two reports, five Schemas, a 280-entry manifest, and portable checksums.
+  An isolated build reproduces every path and byte.
 - One fail-closed artifact store reconciles 258 highest-tier city records, 288 tier assignments,
-  90 source artifacts, 188 scenario executions, 98 DecisionPacks, seven suites, and 145 benchmark
-  runs before exposing any product view.
-- The product builder commits 35 deterministic files: 33 manifest-indexed JSON artifacts, one
-  artifact manifest, and one portable checksum file. The tree includes 17 product/plugin Schemas,
-  a 14-path OpenAPI contract, four hashed web assets, and complete city, scenario, source, suite,
-  benchmark, and Tier-D evidence projections.
+  90 source artifacts, 240 designs, 30 design families, 188 scenario executions, 98
+  DecisionPacks, seven suites, and 145 benchmark runs before exposing any product view.
+- The product builder commits 338 deterministic files: 336 manifest-indexed artifacts, one
+  artifact manifest, and one portable checksum file. The tree includes 28 product/plugin/library
+  Schemas, a 19-path OpenAPI contract, four hashed web assets, 240 design details, 30 family
+  details, segmented design indexes, and complete city, execution, source, suite, benchmark, and
+  evidence projections.
 - The read-only API implements bounded filters and pagination, closed status enums, RFC-style
-  problem details, request correlation, ETags, conditional GET after route resolution, gzip,
-  security headers, and no mutation routes. Unknown routes remain 404 even when sent a matching
-  catalog ETag.
+  problem details, request correlation, representation-scoped ETags, conditional GET after route
+  resolution, gzip, security headers, and no mutation routes. ETags bind software version, path,
+  and normalized query pairs; an ETag from one resource or filter cannot suppress another.
+  Unknown routes remain 404 even when sent a matching ETag.
 - Local, synchronous HTTP, and asynchronous HTTP Python clients validate every response against
   the shared product models. Repository entry points accept both strings and `Path` objects.
-- The CLI browses every product resource family, exports deterministic OpenAPI, rebuilds the full
-  product projection, validates/scaffolds data-only plugins, and refuses non-loopback serving
-  without explicit acknowledgement.
+- The CLI browses every product resource family, including design/family collection and detail
+  commands plus scenario-library evidence; it exports deterministic OpenAPI, rebuilds both
+  library and product projections, validates/scaffolds data-only plugins, and refuses non-loopback
+  serving without explicit acknowledgement.
 - The data-only plugin SDK rejects code, unmanifested files, symlinks, unsafe paths, oversized
   documents, hash drift, duplicate identities, registry overlap, and non-allowlisted plugin IDs;
   validation never imports or executes plugin code.
 - The dependency-free evidence explorer renders the same API snapshot, preserves negative
-  releases, and has no third-party runtime assets. Local browser inspection passed at 1280×720 and
-  390×844, including Austin Tier-D details, a withheld-recommendation scenario, mobile navigation,
-  zero horizontal overflow, and zero browser warnings/errors.
-- 800 automated tests pass. Coverage is 96.798% for statements, 89.401% for branches, and 95.369%
+  releases, and has no third-party runtime assets. The design library adds six audit indicators,
+  30 family selectors, five compound filter dimensions, paginated design cards, complete
+  objective/constraint/gate drawers, family details, and anti-duplication evidence.
+- Current local browser inspection passed at the default desktop viewport and 390×844, including
+  family-to-eight-design filtering, compound search, design and audit drawers, mobile navigation,
+  zero horizontal scroll, and zero browser warnings/errors.
+- 800 automated tests pass. Coverage is 96.989% for statements, 90.250% for branches, and 95.696%
   under coverage.py's combined line-and-branch measure; strict mypy, Ruff lint, Ruff format, web
   JavaScript syntax, and whitespace-integrity checks pass locally.
-- A 229,951-byte wheel (`879e974d12e65380cb1d1e5c60161d6323ef4c3071e6fbba9ec335dd546c5843`)
-  passes ZIP integrity, installs with API dependencies in a fresh Python 3.12.13 environment,
-  imports from `site-packages`, runs CLI/API/SDK/plugin smoke tests, and exactly rebuilds all 35
-  product files. It is current-worktree evidence, not a tagged or signed release.
+- The previous Milestone-6 wheel passed its isolated install and 35-file product smoke tests. It
+  does not cover the new library and 338-file projection; a fresh Milestone-7 wheel is a pending
+  release gate and will not inherit the older result.
 
 ## Implementing next
 
-- Expand twelve explicit Tier-D designs toward 240 non-duplicative scenarios, with independent
-  scenario intent, evidence requirements, negative gates, and execution evidence.
 - Broader connector registry, licensing metadata, paging, caching, and 25–35 source families.
 - Normalized network and policy semantics on top of the verified geography, time, measure,
   observation, facility, event, and graph contracts.
 - Network routing, scalable solver interfaces, and deep-city engine orchestration.
-- The remaining non-duplicative scenario library, figure/view manifests, and transportability
-  tests required by the flagship scope.
+- City-specific compilation pilots, external domain review, transportability review, and
+  independently checkable execution evidence for selected design-only records.
+- Performance budgets, dependency/security audit, fresh wheel/sdist smoke tests, release notes,
+  signed checksums, and a reproducible release candidate for the enlarged product.
 - CI/security workflows require a real remote run before their results can be called verified.
 
 ## Explicitly not complete
@@ -137,8 +156,8 @@ bindings as new designs.
 - A production-scale urban knowledge graph. The current seed graph has 494 nodes and 250 edges.
 - Externally credible causal studies, city-calibrated intervention simulations, or live forecast
   performance. Tier-D action effects, costs, capacities, and risks remain hypothetical.
-- The full 240 non-duplicative scenario target. The historical replay and optimization-task
-  minimums are complete, and the twelve Tier-D templates are counted once rather than 96 times.
+- City-bound execution for the 228 design-only records. Their presence in the library establishes
+  authored contracts and audited separation only.
 - Public hosted demo, production authentication/authorization, independent accessibility and
   penetration testing, signed release artifacts, and remote-CI verification.
 - External review, real users, municipal adoption, or real-world impact.

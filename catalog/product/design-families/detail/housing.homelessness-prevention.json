@@ -1,0 +1,333 @@
+{
+  "designs": [
+    {
+      "analysis_modes": [
+        "descriptive"
+      ],
+      "binding_constraint": "The homelessness prevention and housing stability diagnose must respect declared measurement resolution and classification uncertainty.",
+      "content_hash": "sha256:05e2832778af2ac6014c81cba41f7517fdacaa3fb9a78e121008d8cbcc0cb83e",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Where do rent burden, court filings, shelter entry, benefit loss, and service access reveal preventable system gaps?",
+      "decision_type": "diagnose",
+      "design_id": "scenario.housing.homelessness-prevention.stability-service-gaps.v1",
+      "design_order": 121,
+      "evidence_gate": "geographic-alignment",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "proposed"
+      ],
+      "family_id": "housing.homelessness-prevention",
+      "family_title": "Homelessness prevention and housing stability",
+      "horizon": "annual",
+      "implementation_status": "design-only",
+      "primary_outcome": "eligible households entering crisis without prior prevention access",
+      "prohibited_claims": [
+        "Do not label a household homeless, likely to be evicted, or noncompliant from proxy variables.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "population-group",
+      "suite": "housing-land-use-regeneration",
+      "title": "Diagnose housing-instability and prevention-service gaps"
+    },
+    {
+      "analysis_modes": [
+        "forecast"
+      ],
+      "binding_constraint": "The homelessness prevention and housing stability forecast must respect declared validated operational capacity and forecast uncertainty.",
+      "content_hash": "sha256:06911aa4b44d6cd0ae627df6bc1336c8bd5fff024b61bdb65aebe10690d651c6",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "What range of legal, rental, diversion, outreach, and shelter demand should the system prepare for?",
+      "decision_type": "forecast",
+      "design_id": "scenario.housing.homelessness-prevention.prevention-service-demand.v1",
+      "design_order": 122,
+      "evidence_gate": "model-calibration",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "proposed"
+      ],
+      "family_id": "housing.homelessness-prevention",
+      "family_title": "Homelessness prevention and housing stability",
+      "horizon": "weeks",
+      "implementation_status": "design-only",
+      "primary_outcome": "priority household demand above prevention capacity",
+      "prohibited_claims": [
+        "Do not call forecast service demand evictions, homelessness entries, or individual risk.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "service-area",
+      "suite": "housing-land-use-regeneration",
+      "title": "Forecast housing-stability service demand"
+    },
+    {
+      "analysis_modes": [
+        "descriptive",
+        "optimization"
+      ],
+      "binding_constraint": "The homelessness prevention and housing stability prioritize must respect declared capital, operating, maintenance, and delivery budgets.",
+      "content_hash": "sha256:d09a7b553c8d2c2f70a139c5209a107a28fb0ef2948a35b249e576b08c519903",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Which legal aid, rental support, mediation, navigation, and diversion measures should be expanded?",
+      "decision_type": "prioritize",
+      "design_id": "scenario.housing.homelessness-prevention.stability-program-portfolio.v1",
+      "design_order": 123,
+      "evidence_gate": "cost-capacity",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed"
+      ],
+      "family_id": "housing.homelessness-prevention",
+      "family_title": "Homelessness prevention and housing stability",
+      "horizon": "multi-year",
+      "implementation_status": "design-only",
+      "primary_outcome": "expected unresolved housing-stability crises",
+      "prohibited_claims": [
+        "Do not report modeled crisis reduction as prevented eviction or homelessness.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "service-area",
+      "suite": "housing-land-use-regeneration",
+      "title": "Prioritize housing-stability prevention programs"
+    },
+    {
+      "analysis_modes": [
+        "simulation",
+        "optimization"
+      ],
+      "binding_constraint": "The homelessness prevention and housing stability site must respect declared land control, accessibility, permitting, safety, and operating feasibility.",
+      "content_hash": "sha256:f15d194fc2a70bb291de951ce6084d00427cf2baf6b7b7fc13157b35dfb19f13",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Where should legal, benefits, diversion, document, and housing-navigation services be co-located?",
+      "decision_type": "site",
+      "design_id": "scenario.housing.homelessness-prevention.stability-access-hubs.v1",
+      "design_order": 124,
+      "evidence_gate": "legal-authority",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "family_id": "housing.homelessness-prevention",
+      "family_title": "Homelessness prevention and housing stability",
+      "horizon": "multi-year",
+      "implementation_status": "design-only",
+      "primary_outcome": "eligible households beyond timely prevention access",
+      "prohibited_claims": [
+        "Do not call a candidate site trusted, low-barrier, accessible, or effective without user evidence.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "facility",
+      "suite": "housing-land-use-regeneration",
+      "title": "Site low-barrier housing-stability access hubs"
+    },
+    {
+      "analysis_modes": [
+        "simulation",
+        "optimization"
+      ],
+      "binding_constraint": "The homelessness prevention and housing stability allocate must respect declared minimum service, eligibility, capacity, and distributional safeguards.",
+      "content_hash": "sha256:2e2bb9f89b871a63c55a37a7a0afd8418cd70646a5423d7db1b11586d579e275",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "How should limited flexible funds, legal capacity, shelter diversion, and case navigation be assigned?",
+      "decision_type": "allocate",
+      "design_id": "scenario.housing.homelessness-prevention.prevention-assistance.v1",
+      "design_order": 125,
+      "evidence_gate": "equity-measurement",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "family_id": "housing.homelessness-prevention",
+      "family_title": "Homelessness prevention and housing stability",
+      "horizon": "weeks",
+      "implementation_status": "design-only",
+      "primary_outcome": "eligible urgent households without assigned assistance",
+      "prohibited_claims": [
+        "Do not report allocated funds or case capacity as received assistance or stable housing.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "population-group",
+      "suite": "housing-land-use-regeneration",
+      "title": "Allocate rental, legal, diversion, and navigation assistance"
+    },
+    {
+      "analysis_modes": [
+        "forecast",
+        "optimization"
+      ],
+      "binding_constraint": "The homelessness prevention and housing stability schedule must respect declared labor, access, sequencing, notice, and completion windows.",
+      "content_hash": "sha256:d74b686ac65ee96890ffd01d59f6226c93c35c3d7cf828d296330fc4fe1b3df4",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "When should intake, document recovery, legal action, payment, mediation, and follow-up occur?",
+      "decision_type": "schedule",
+      "design_id": "scenario.housing.homelessness-prevention.prevention-caseflow.v1",
+      "design_order": 126,
+      "evidence_gate": "temporal-alignment",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed"
+      ],
+      "family_id": "housing.homelessness-prevention",
+      "family_title": "Homelessness prevention and housing stability",
+      "horizon": "weeks",
+      "implementation_status": "design-only",
+      "primary_outcome": "urgent household-days beyond actionable deadlines",
+      "prohibited_claims": [
+        "Do not call scheduled case actions completed, legally sufficient, or successful.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "service-area",
+      "suite": "housing-land-use-regeneration",
+      "title": "Schedule prevention casework and legal deadlines"
+    },
+    {
+      "analysis_modes": [
+        "forecast",
+        "simulation",
+        "optimization"
+      ],
+      "binding_constraint": "The homelessness prevention and housing stability stress test must respect declared minimum continuity and safety thresholds across severe scenarios.",
+      "content_hash": "sha256:d55535a9ad7f02d081a4e40d25aacff26afc964e43a695629222d9aa3628efbf",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Which prevention strategy preserves minimum support during rent, income, disaster, and shelter-capacity shocks?",
+      "decision_type": "stress-test",
+      "design_id": "scenario.housing.homelessness-prevention.housing-stability-surge.v1",
+      "design_order": 127,
+      "evidence_gate": "external-validation",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "family_id": "housing.homelessness-prevention",
+      "family_title": "Homelessness prevention and housing stability",
+      "horizon": "seasonal",
+      "implementation_status": "design-only",
+      "primary_outcome": "scenario-weighted urgent households without timely prevention",
+      "prohibited_claims": [
+        "Do not present synthetic housing shocks or household pathways as forecasts or observed crises.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "network",
+      "suite": "housing-land-use-regeneration",
+      "title": "Stress-test housing-stability capacity under market shock"
+    },
+    {
+      "analysis_modes": [
+        "descriptive",
+        "causal"
+      ],
+      "binding_constraint": "The homelessness prevention and housing stability evaluate must respect declared pre-specified assignment, comparison, outcome, spillover, and subgroup rules.",
+      "content_hash": "sha256:c3ff331d9a822fbe5a8ef6555cd33f22ed9bd66fd599eed00f6b49c66462f106",
+      "current_readiness": "blocked-multiple-gates",
+      "decision_question": "Did phased prevention support improve verified housing stability without exclusion or delayed harm?",
+      "decision_type": "evaluate",
+      "design_id": "scenario.housing.homelessness-prevention.rental-assistance-effect.v1",
+      "design_order": 128,
+      "evidence_gate": "causal-identification",
+      "evidence_types": [
+        "causal",
+        "estimated",
+        "observed",
+        "proposed"
+      ],
+      "family_id": "housing.homelessness-prevention",
+      "family_title": "Homelessness prevention and housing stability",
+      "horizon": "multi-year",
+      "implementation_status": "design-only",
+      "primary_outcome": "change in verified stable housing retention",
+      "prohibited_claims": [
+        "Do not infer long-term stability, well-being, or causal impact from payment issuance alone.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "population-group",
+      "suite": "housing-land-use-regeneration",
+      "title": "Evaluate rental assistance and legal support"
+    }
+  ],
+  "family": {
+    "affected_system": "housing-stability, eviction prevention, shelter diversion, and support coordination",
+    "claim_boundary": [
+      "Requests, listings, parcels, and administrative records do not alone verify conditions or need.",
+      "Screened sites and portfolios are not permits, acquisitions, adopted plans, or completed housing.",
+      "Displacement, affordability, habitability, and program effects require direct outcomes and identification."
+    ],
+    "common_source_roles": [
+      "demographic-context",
+      "housing-market",
+      "operating-capacity"
+    ],
+    "decision_owner": "homelessness response director and housing-stability administrator",
+    "decision_types": [
+      "diagnose",
+      "forecast",
+      "prioritize",
+      "site",
+      "allocate",
+      "schedule",
+      "stress-test",
+      "evaluate"
+    ],
+    "description": "Eight decisions for instability diagnosis, service-demand forecasting, prevention portfolios, access siting, assistance allocation, case scheduling, surge stress, and program evaluation.",
+    "design_refs": [
+      "scenario.housing.homelessness-prevention.stability-service-gaps.v1",
+      "scenario.housing.homelessness-prevention.prevention-service-demand.v1",
+      "scenario.housing.homelessness-prevention.stability-program-portfolio.v1",
+      "scenario.housing.homelessness-prevention.stability-access-hubs.v1",
+      "scenario.housing.homelessness-prevention.prevention-assistance.v1",
+      "scenario.housing.homelessness-prevention.prevention-caseflow.v1",
+      "scenario.housing.homelessness-prevention.housing-stability-surge.v1",
+      "scenario.housing.homelessness-prevention.rental-assistance-effect.v1"
+    ],
+    "design_signatures": [
+      "sha256:6643213efc97b1501fca35c46adab303242abd3e74a025f9f010bcf784b59cf9",
+      "sha256:df018b88f441f1d21f20d84f6b09cf18eea25b37fcc311d0936949af6da6c5f4",
+      "sha256:78d27da969d67ca86ea94ba1a1c48a2880120a7d5b4476bfc2ab769ad718718c",
+      "sha256:c0be006aaa4be62be63146fe4a68729e4c2a1bc44eae87151ae01f35cd02ffe1",
+      "sha256:ad107b0d623299486366a231ab2bcca97898d7bbc0167669d2cd8f436c1bbf2d",
+      "sha256:bd94d65e7570735a31022732f08fa7b684faa66fdc5d8d86cd085808ab8e7b57",
+      "sha256:c762f6009ac1fc64348d1371a3d3635b580099c197049853bc8bb18fe6ec1ffe",
+      "sha256:07dcec67b9fbebf418a097121c9f68a3920ba79887144b98dbf6fd4b7efb35b8"
+    ],
+    "family_id": "housing.homelessness-prevention",
+    "family_order": 16,
+    "schema_version": "1.0.0",
+    "suite": "housing-land-use-regeneration",
+    "title": "Homelessness prevention and housing stability"
+  },
+  "library_claim_boundary": [
+    "The catalog contains 240 decision designs, not 240 city executions.",
+    "Exactly twelve designs map to existing Tier-D reference templates; 228 remain design-only.",
+    "A reference implementation can be an explicit negative release and does not imply impact.",
+    "No record claims a city binding, new method, deployment, adoption, or real-user outcome.",
+    "Future execution requires source binding, gate passage, and domain, legal, community, and operational review."
+  ]
+}

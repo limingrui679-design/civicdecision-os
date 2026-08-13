@@ -1,0 +1,165 @@
+{
+  "affected_system": "urban drainage, stormwater, and flood-response system",
+  "alternatives": [
+    "use publicly controlled parcels in overloaded catchments",
+    "incentivize private parcels with high runoff-reduction potential",
+    "combine regional storage with distributed neighborhood retention"
+  ],
+  "analysis_modes": [
+    "simulation",
+    "optimization"
+  ],
+  "assumptions": [
+    "Rainfall, terrain, drainage, and complaint records use explicit spatial and temporal supports.",
+    "Hydraulic capacities and intervention effects remain measured inputs or labeled assumptions.",
+    "All alternatives, capacities, costs, effects, thresholds, and failure scenarios are proposed until bound to evidence."
+  ],
+  "baseline": "No new distributed retention sites are acquired.",
+  "city_bindings": [],
+  "constraints": [
+    {
+      "binding": true,
+      "constraint_id": "scenario.climate.flood-stormwater.retention-storage-sites.v1.constraint.binding",
+      "description": "Sites must avoid protected habitat, contaminated land, displacement risk, and infeasible subsurface conditions.",
+      "hard": true,
+      "kind": "environmental",
+      "required_source_roles": [
+        "asset-inventory",
+        "climate-hazard",
+        "financial-cost",
+        "geographic-identity",
+        "land-parcel",
+        "legal-regulatory"
+      ]
+    },
+    {
+      "binding": false,
+      "constraint_id": "scenario.climate.flood-stormwater.retention-storage-sites.v1.constraint.evidence-scope",
+      "description": "Every released metric must retain evidence type, source lineage, geography, time, assumptions, and uncertainty.",
+      "hard": true,
+      "kind": "technical",
+      "required_source_roles": [
+        "asset-inventory"
+      ]
+    },
+    {
+      "binding": false,
+      "constraint_id": "scenario.climate.flood-stormwater.retention-storage-sites.v1.constraint.decision-authority",
+      "description": "No analytical output may bypass lawful authority, accountable human review, or an applicable appeal process.",
+      "hard": true,
+      "kind": "regulatory",
+      "required_source_roles": [
+        "asset-inventory"
+      ]
+    }
+  ],
+  "current_readiness": "blocked-missing-source",
+  "decision_cadence": "recompiled at each planning cycle and after material evidence change",
+  "decision_owner": "stormwater utility director and emergency-management lead",
+  "decision_question": "Which parcels can host retention while reducing runoff and avoiding displacement or environmental harm?",
+  "decision_type": "site",
+  "design_id": "scenario.climate.flood-stormwater.retention-storage-sites.v1",
+  "design_order": 12,
+  "design_signature": "sha256:8947e8a1525c35a4f5a6f7174b9c6a9508cf58ed52fbc320cceef56e0851daa1",
+  "evidence_requirements": [
+    "estimated",
+    "observed",
+    "optimized",
+    "proposed",
+    "simulated"
+  ],
+  "family_id": "climate.flood-stormwater",
+  "family_title": "Flood and stormwater resilience",
+  "horizon": "multi-year",
+  "implementation_status": "design-only",
+  "independence_key": {
+    "binding_constraint": "Sites must avoid protected habitat, contaminated land, displacement risk, and infeasible subsurface conditions.",
+    "decision_object": "stormwater retention and temporary-storage sites",
+    "evidence_gate": "Parcel control, permitting authority, environmental screening, and maintenance responsibility are documented.",
+    "horizon": "multi-year",
+    "intervention_mechanism": "parcel-constrained hydrologic facility-location analysis",
+    "primary_outcome": "unmanaged design-storm runoff volume",
+    "spatial_unit": "parcel"
+  },
+  "intended_claim": "A versioned site design for comparing declared alternatives affecting stormwater retention and temporary-storage sites, conditional on its evidence gate.",
+  "limitations": [
+    "This library record has no city binding and therefore reports no local input, output, or recommendation.",
+    "Readiness describes explicit source and method gates; it does not certify implementation feasibility.",
+    "External domain, legal, community, security, and operational review remains outside this design artifact."
+  ],
+  "method_claimed": false,
+  "objectives": [
+    {
+      "evidence_type": "estimated",
+      "metric": "unmanaged design-storm runoff volume",
+      "objective_id": "scenario.climate.flood-stormwater.retention-storage-sites.v1.objective.primary",
+      "primary": true,
+      "sense": "minimize",
+      "unit": "cubic meters"
+    },
+    {
+      "evidence_type": "estimated",
+      "metric": "distributional gap in unmanaged design-storm runoff volume",
+      "objective_id": "scenario.climate.flood-stormwater.retention-storage-sites.v1.objective.equity",
+      "primary": false,
+      "sense": "minimize",
+      "unit": "cubic meters"
+    },
+    {
+      "evidence_type": "observed",
+      "metric": "decision claims with complete evidence lineage",
+      "objective_id": "scenario.climate.flood-stormwater.retention-storage-sites.v1.objective.traceability",
+      "primary": false,
+      "sense": "maximize",
+      "unit": "percent"
+    }
+  ],
+  "prohibited_claims": [
+    "Do not treat a screened parcel as acquired, permitted, or hydraulically designed.",
+    "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+    "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+    "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+  ],
+  "release_gate": {
+    "failure_release": "Release an explicit insufficient-evidence record naming missing sources, failed diagnostics, prohibited claims, and the next validation action.",
+    "failure_status": "insufficient-evidence",
+    "gate_id": "scenario.climate.flood-stormwater.retention-storage-sites.v1.gate.release",
+    "gate_type": "legal-authority",
+    "pass_condition": "Parcel control, permitting authority, environmental screening, and maintenance responsibility are documented.",
+    "required_evidence_types": [
+      "observed",
+      "proposed"
+    ],
+    "required_source_roles": [
+      "asset-inventory",
+      "climate-hazard",
+      "financial-cost",
+      "geographic-identity",
+      "land-parcel",
+      "legal-regulatory"
+    ]
+  },
+  "required_source_roles": [
+    "asset-inventory",
+    "climate-hazard",
+    "financial-cost",
+    "geographic-identity",
+    "land-parcel",
+    "legal-regulatory"
+  ],
+  "schema_version": "1.0.0",
+  "spatial_unit": "parcel",
+  "suite": "climate-disaster-resilience",
+  "tags": [
+    "climate-disaster-resilience",
+    "climate.flood-stormwater",
+    "design-only",
+    "scenario-library",
+    "site"
+  ],
+  "title": "Site distributed stormwater retention and storage",
+  "transportability_risks": [
+    "Drainage standards, imperviousness, topography, tides, and maintenance regimes differ.",
+    "Complaint density may reflect reporting access rather than flood incidence."
+  ]
+}

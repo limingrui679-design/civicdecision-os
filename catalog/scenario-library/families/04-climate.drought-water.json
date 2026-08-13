@@ -1,0 +1,50 @@
+{
+  "affected_system": "urban water supply, distribution, and conservation system",
+  "claim_boundary": [
+    "Hazard observations and modeled exposure do not establish individual harm or causation.",
+    "Proposed adaptations are planning alternatives, not adopted policy or engineered designs.",
+    "A design-only record is not a city execution, validated forecast, or impact result."
+  ],
+  "common_source_roles": [
+    "asset-inventory",
+    "climate-hazard",
+    "operating-capacity"
+  ],
+  "decision_owner": "water utility general manager and drought-response lead",
+  "decision_types": [
+    "diagnose",
+    "forecast",
+    "prioritize",
+    "site",
+    "allocate",
+    "schedule",
+    "stress-test",
+    "evaluate"
+  ],
+  "description": "Decision designs for water loss diagnosis, demand and supply forecasting, renewal and reuse investment, distribution, scheduling, multi-year stress, and conservation evaluation.",
+  "design_refs": [
+    "scenario.climate.drought-water.water-loss-balance.v1",
+    "scenario.climate.drought-water.drought-supply-demand.v1",
+    "scenario.climate.drought-water.water-security-portfolio.v1",
+    "scenario.climate.drought-water.reuse-storage-facilities.v1",
+    "scenario.climate.drought-water.scarce-water-allocation.v1",
+    "scenario.climate.drought-water.drought-operations.v1",
+    "scenario.climate.drought-water.multi-year-water-security.v1",
+    "scenario.climate.drought-water.conservation-incentive-effect.v1"
+  ],
+  "design_signatures": [
+    "sha256:274661ad42cd719fff91903c41a5fc5de38c41625251eb5496393c8733bbefe8",
+    "sha256:92b4877b1b2b04dfc3d3e1081424393e5fa7219d70a945d3675fc294c7077b76",
+    "sha256:ad3a2d4bb5a289c1822828cc40023db1ef667a7f4b5fbb250e2d5842deb10dc0",
+    "sha256:f3a8bda57b5562167861cdcf9ae08299f48df63a76581200183b31f89aace17b",
+    "sha256:5a76735690066a1a9a88866996f3afe837e5713eff72b8cca31fc246a69fc904",
+    "sha256:d2530bc18af28eb610f7b80fb1f1543aeb535fc7ea4141b08ccb1ccace45b8b5",
+    "sha256:af9db0182aa83a7b3d504410f06d7d2aaa61c56c118e9b2b0b6ab29d5897e36c",
+    "sha256:3e2bf11381862a5fe59e42c07610614395f32639b35bdce6cee5694eebd11134"
+  ],
+  "family_id": "climate.drought-water",
+  "family_order": 4,
+  "schema_version": "1.0.0",
+  "suite": "climate-disaster-resilience",
+  "title": "Drought and urban water security"
+}

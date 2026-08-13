@@ -1,0 +1,164 @@
+{
+  "affected_system": "privacy-preserving infectious-disease surveillance and response operations",
+  "alternatives": [
+    "advance high-risk work within verified feasible windows for infectious-disease clinic, laboratory, and outreach schedule",
+    "use rolling risk and capacity updates to reschedule infectious-disease clinic, laboratory, and outreach schedule",
+    "pair demand-, cold-chain-, and turnaround-constrained scheduling with an explicit stop, review, and escalation rule"
+  ],
+  "analysis_modes": [
+    "forecast",
+    "optimization"
+  ],
+  "assumptions": [
+    "Case, syndrome, testing, wastewater, vaccination, and care records have explicit definitions and delays.",
+    "No individual identity or protected health information enters public release artifacts.",
+    "All alternatives, capacities, costs, effects, thresholds, and failure scenarios are proposed until bound to evidence."
+  ],
+  "baseline": "continue the fixed operating calendar for infectious-disease clinic, laboratory, and outreach schedule.",
+  "city_bindings": [],
+  "constraints": [
+    {
+      "binding": true,
+      "constraint_id": "scenario.health.infectious-operations.clinic-lab-calendar.v1.constraint.binding",
+      "description": "The infectious-disease public-health operations schedule must respect declared labor, access, sequencing, notice, and completion windows.",
+      "hard": true,
+      "kind": "time",
+      "required_source_roles": [
+        "facility-inventory",
+        "geographic-identity",
+        "health-outcome",
+        "operating-capacity",
+        "real-time-state",
+        "service-schedule"
+      ]
+    },
+    {
+      "binding": false,
+      "constraint_id": "scenario.health.infectious-operations.clinic-lab-calendar.v1.constraint.evidence-scope",
+      "description": "Every released metric must retain evidence type, source lineage, geography, time, assumptions, and uncertainty.",
+      "hard": true,
+      "kind": "technical",
+      "required_source_roles": [
+        "facility-inventory"
+      ]
+    },
+    {
+      "binding": false,
+      "constraint_id": "scenario.health.infectious-operations.clinic-lab-calendar.v1.constraint.decision-authority",
+      "description": "No analytical output may bypass lawful authority, accountable human review, or an applicable appeal process.",
+      "hard": true,
+      "kind": "regulatory",
+      "required_source_roles": [
+        "facility-inventory"
+      ]
+    }
+  ],
+  "current_readiness": "blocked-missing-source",
+  "decision_cadence": "recompiled at each planning cycle and after material evidence change",
+  "decision_owner": "communicable-disease director and public-health operations chief",
+  "decision_question": "When should appointments, mobile services, laboratory batches, and outreach shifts operate?",
+  "decision_type": "schedule",
+  "design_id": "scenario.health.infectious-operations.clinic-lab-calendar.v1",
+  "design_order": 102,
+  "design_signature": "sha256:518d041a74190cfc7a55436cc6bbba865bd6827c96678e5de45c808c1745b0b1",
+  "evidence_requirements": [
+    "estimated",
+    "observed",
+    "optimized",
+    "proposed"
+  ],
+  "family_id": "health.infectious-operations",
+  "family_title": "Infectious-disease public-health operations",
+  "horizon": "weeks",
+  "implementation_status": "design-only",
+  "independence_key": {
+    "binding_constraint": "The infectious-disease public-health operations schedule must respect declared labor, access, sequencing, notice, and completion windows.",
+    "decision_object": "infectious-disease clinic, laboratory, and outreach schedule",
+    "evidence_gate": "Evidence for infectious-disease clinic, laboratory, and outreach schedule passes documented checks for effective dates, time zones, calendars, lead times, completion semantics, and update cadence.",
+    "horizon": "weeks",
+    "intervention_mechanism": "demand-, cold-chain-, and turnaround-constrained scheduling",
+    "primary_outcome": "priority demand outside service and turnaround targets",
+    "spatial_unit": "network"
+  },
+  "intended_claim": "A versioned schedule design for comparing declared alternatives affecting infectious-disease clinic, laboratory, and outreach schedule, conditional on its evidence gate.",
+  "limitations": [
+    "This library record has no city binding and therefore reports no local input, output, or recommendation.",
+    "Readiness describes explicit source and method gates; it does not certify implementation feasibility.",
+    "External domain, legal, community, security, and operational review remains outside this design artifact."
+  ],
+  "method_claimed": false,
+  "objectives": [
+    {
+      "evidence_type": "estimated",
+      "metric": "priority demand outside service and turnaround targets",
+      "objective_id": "scenario.health.infectious-operations.clinic-lab-calendar.v1.objective.primary",
+      "primary": true,
+      "sense": "minimize",
+      "unit": "person-hours"
+    },
+    {
+      "evidence_type": "estimated",
+      "metric": "distributional gap in priority demand outside service and turnaround targets",
+      "objective_id": "scenario.health.infectious-operations.clinic-lab-calendar.v1.objective.equity",
+      "primary": false,
+      "sense": "minimize",
+      "unit": "person-hours"
+    },
+    {
+      "evidence_type": "observed",
+      "metric": "decision claims with complete evidence lineage",
+      "objective_id": "scenario.health.infectious-operations.clinic-lab-calendar.v1.objective.traceability",
+      "primary": false,
+      "sense": "maximize",
+      "unit": "percent"
+    }
+  ],
+  "prohibited_claims": [
+    "Do not call a schedule operated, appointments completed, or specimens processed.",
+    "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+    "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+    "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+  ],
+  "release_gate": {
+    "failure_release": "Release an explicit insufficient-evidence record naming missing sources, failed diagnostics, prohibited claims, and the next validation action.",
+    "failure_status": "insufficient-evidence",
+    "gate_id": "scenario.health.infectious-operations.clinic-lab-calendar.v1.gate.release",
+    "gate_type": "temporal-alignment",
+    "pass_condition": "Evidence for infectious-disease clinic, laboratory, and outreach schedule passes documented checks for effective dates, time zones, calendars, lead times, completion semantics, and update cadence.",
+    "required_evidence_types": [
+      "observed",
+      "proposed"
+    ],
+    "required_source_roles": [
+      "facility-inventory",
+      "geographic-identity",
+      "health-outcome",
+      "operating-capacity",
+      "real-time-state",
+      "service-schedule"
+    ]
+  },
+  "required_source_roles": [
+    "facility-inventory",
+    "geographic-identity",
+    "health-outcome",
+    "operating-capacity",
+    "real-time-state",
+    "service-schedule"
+  ],
+  "schema_version": "1.0.0",
+  "spatial_unit": "network",
+  "suite": "population-health-environmental-exposure",
+  "tags": [
+    "design-only",
+    "health.infectious-operations",
+    "population-health-environmental-exposure",
+    "scenario-library",
+    "schedule"
+  ],
+  "title": "Schedule clinics, laboratories, and outreach teams",
+  "transportability_risks": [
+    "Pathogens, immunity, clinical practice, reporting, testing, and public behavior differ.",
+    "Surveillance changes can mimic epidemiological changes."
+  ]
+}

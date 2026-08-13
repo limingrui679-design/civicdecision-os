@@ -1,0 +1,166 @@
+{
+  "affected_system": "roadway, bridge, sidewalk, signal, and public right-of-way asset network",
+  "alternatives": [
+    "add targeted redundancy around the largest failure modes in road and bridge network continuity under compound failure",
+    "select an adaptive robust portfolio across severe scenarios for road and bridge network continuity under compound failure",
+    "pair asset deterioration, network closure, material, workforce, and hazard simulation with an explicit stop, review, and escalation rule"
+  ],
+  "analysis_modes": [
+    "forecast",
+    "simulation",
+    "optimization"
+  ],
+  "assumptions": [
+    "Assets, inspections, defects, work orders, costs, traffic, restrictions, and completion are reconciled.",
+    "Engineering thresholds and deterioration models are locally reviewed and versioned.",
+    "All alternatives, capacities, costs, effects, thresholds, and failure scenarios are proposed until bound to evidence."
+  ],
+  "baseline": "apply current continuity provisions to road and bridge network continuity under compound failure.",
+  "city_bindings": [],
+  "constraints": [
+    {
+      "binding": true,
+      "constraint_id": "scenario.infrastructure.roads-bridges.transport-asset-failure.v1.constraint.binding",
+      "description": "The road and bridge asset management stress test must respect declared minimum continuity and safety thresholds across severe scenarios.",
+      "hard": true,
+      "kind": "risk",
+      "required_source_roles": [
+        "asset-condition",
+        "asset-inventory",
+        "climate-hazard",
+        "geographic-identity",
+        "operating-capacity",
+        "transport-network"
+      ]
+    },
+    {
+      "binding": false,
+      "constraint_id": "scenario.infrastructure.roads-bridges.transport-asset-failure.v1.constraint.evidence-scope",
+      "description": "Every released metric must retain evidence type, source lineage, geography, time, assumptions, and uncertainty.",
+      "hard": true,
+      "kind": "technical",
+      "required_source_roles": [
+        "asset-condition"
+      ]
+    },
+    {
+      "binding": false,
+      "constraint_id": "scenario.infrastructure.roads-bridges.transport-asset-failure.v1.constraint.decision-authority",
+      "description": "No analytical output may bypass lawful authority, accountable human review, or an applicable appeal process.",
+      "hard": true,
+      "kind": "regulatory",
+      "required_source_roles": [
+        "asset-condition"
+      ]
+    }
+  ],
+  "current_readiness": "blocked-missing-source",
+  "decision_cadence": "recompiled at each planning cycle and after material evidence change",
+  "decision_owner": "public works asset manager and chief infrastructure engineer",
+  "decision_question": "Which maintenance and continuity strategy preserves essential access under asset, hazard, supply, and crew failures?",
+  "decision_type": "stress-test",
+  "design_id": "scenario.infrastructure.roads-bridges.transport-asset-failure.v1",
+  "design_order": 183,
+  "design_signature": "sha256:f411b99614d6cc6e70621508361b2fe94c6d3db23fb24b8ceb1485533d0e85a1",
+  "evidence_requirements": [
+    "estimated",
+    "observed",
+    "optimized",
+    "proposed",
+    "simulated"
+  ],
+  "family_id": "infrastructure.roads-bridges",
+  "family_title": "Road and bridge asset management",
+  "horizon": "seasonal",
+  "implementation_status": "design-only",
+  "independence_key": {
+    "binding_constraint": "The road and bridge asset management stress test must respect declared minimum continuity and safety thresholds across severe scenarios.",
+    "decision_object": "road and bridge network continuity under compound failure",
+    "evidence_gate": "Evidence for road and bridge network continuity under compound failure passes documented checks for scenario ranges, dependence, failure rates, recovery, intervention performance, and sensitivity.",
+    "horizon": "seasonal",
+    "intervention_mechanism": "asset deterioration, network closure, material, workforce, and hazard simulation",
+    "primary_outcome": "scenario-weighted essential trips disconnected",
+    "spatial_unit": "network"
+  },
+  "intended_claim": "A versioned stress-test design for comparing declared alternatives affecting road and bridge network continuity under compound failure, conditional on its evidence gate.",
+  "limitations": [
+    "This library record has no city binding and therefore reports no local input, output, or recommendation.",
+    "Readiness describes explicit source and method gates; it does not certify implementation feasibility.",
+    "External domain, legal, community, security, and operational review remains outside this design artifact."
+  ],
+  "method_claimed": false,
+  "objectives": [
+    {
+      "evidence_type": "estimated",
+      "metric": "scenario-weighted essential trips disconnected",
+      "objective_id": "scenario.infrastructure.roads-bridges.transport-asset-failure.v1.objective.primary",
+      "primary": true,
+      "sense": "minimize",
+      "unit": "origin-destination pairs"
+    },
+    {
+      "evidence_type": "estimated",
+      "metric": "distributional gap in scenario-weighted essential trips disconnected",
+      "objective_id": "scenario.infrastructure.roads-bridges.transport-asset-failure.v1.objective.equity",
+      "primary": false,
+      "sense": "minimize",
+      "unit": "origin-destination pairs"
+    },
+    {
+      "evidence_type": "observed",
+      "metric": "decision claims with complete evidence lineage",
+      "objective_id": "scenario.infrastructure.roads-bridges.transport-asset-failure.v1.objective.traceability",
+      "primary": false,
+      "sense": "maximize",
+      "unit": "percent"
+    }
+  ],
+  "prohibited_claims": [
+    "Do not present synthetic defects, closures, or disconnected trips as observed events.",
+    "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+    "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+    "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+  ],
+  "release_gate": {
+    "failure_release": "Release an explicit insufficient-evidence record naming missing sources, failed diagnostics, prohibited claims, and the next validation action.",
+    "failure_status": "insufficient-evidence",
+    "gate_id": "scenario.infrastructure.roads-bridges.transport-asset-failure.v1.gate.release",
+    "gate_type": "external-validation",
+    "pass_condition": "Evidence for road and bridge network continuity under compound failure passes documented checks for scenario ranges, dependence, failure rates, recovery, intervention performance, and sensitivity.",
+    "required_evidence_types": [
+      "estimated",
+      "observed"
+    ],
+    "required_source_roles": [
+      "asset-condition",
+      "asset-inventory",
+      "climate-hazard",
+      "geographic-identity",
+      "operating-capacity",
+      "transport-network"
+    ]
+  },
+  "required_source_roles": [
+    "asset-condition",
+    "asset-inventory",
+    "climate-hazard",
+    "geographic-identity",
+    "operating-capacity",
+    "transport-network"
+  ],
+  "schema_version": "1.0.0",
+  "spatial_unit": "network",
+  "suite": "infrastructure-finance-asset-risk",
+  "tags": [
+    "design-only",
+    "infrastructure-finance-asset-risk",
+    "infrastructure.roads-bridges",
+    "scenario-library",
+    "stress-test"
+  ],
+  "title": "Stress-test transport infrastructure under compound failure",
+  "transportability_risks": [
+    "Materials, climate, loading, standards, inspection, procurement, and unit costs differ.",
+    "Service requests can reveal workload but not structural condition or safety."
+  ]
+}

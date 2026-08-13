@@ -1,0 +1,333 @@
+{
+  "designs": [
+    {
+      "analysis_modes": [
+        "descriptive"
+      ],
+      "binding_constraint": "The public participation and risk communication diagnose must respect declared measurement resolution and classification uncertainty.",
+      "content_hash": "sha256:f761e2aa079b49ab71109729e1bbb862eef8070c9583ec4684dbcb57c811025c",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Which affected groups and issues are missing across invitation, access, participation, response, and closure stages?",
+      "decision_type": "diagnose",
+      "design_id": "scenario.equity.participation-communication.participation-gaps.v1",
+      "design_order": 217,
+      "evidence_gate": "geographic-alignment",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "proposed"
+      ],
+      "family_id": "equity.participation-communication",
+      "family_title": "Public participation and risk communication",
+      "horizon": "annual",
+      "implementation_status": "design-only",
+      "primary_outcome": "affected people without usable participation and feedback access",
+      "prohibited_claims": [
+        "Do not label nonparticipation apathy, opposition, consent, satisfaction, or lack of concern.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "population-group",
+      "suite": "behavioral-policy-equity",
+      "title": "Diagnose participation, representation, and feedback gaps"
+    },
+    {
+      "analysis_modes": [
+        "forecast"
+      ],
+      "binding_constraint": "The public participation and risk communication forecast must respect declared validated operational capacity and forecast uncertainty.",
+      "content_hash": "sha256:29314d589f08fc6a06a5eddab88023b893c04878fe06472aecb6f3e05a82078f",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "What issue, language, channel, time, and accessibility demand should engagement operations prepare for?",
+      "decision_type": "forecast",
+      "design_id": "scenario.equity.participation-communication.engagement-demand.v1",
+      "design_order": 218,
+      "evidence_gate": "model-calibration",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "proposed"
+      ],
+      "family_id": "equity.participation-communication",
+      "family_title": "Public participation and risk communication",
+      "horizon": "weeks",
+      "implementation_status": "design-only",
+      "primary_outcome": "affected participation demand above usable channel capacity",
+      "prohibited_claims": [
+        "Do not call forecast engagement actual participation, agreement, trust, or public sentiment.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "population-group",
+      "suite": "behavioral-policy-equity",
+      "title": "Forecast participation and communication demand"
+    },
+    {
+      "analysis_modes": [
+        "descriptive",
+        "optimization"
+      ],
+      "binding_constraint": "The public participation and risk communication prioritize must respect declared capital, operating, maintenance, and delivery budgets.",
+      "content_hash": "sha256:c2e139aee90cc2cdeecea064c994f33e161a466eaf186f85009a16abd46bcd71",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Which language, accessibility, facilitation, compensation, channel, and feedback reforms should be funded?",
+      "decision_type": "prioritize",
+      "design_id": "scenario.equity.participation-communication.inclusive-engagement-portfolio.v1",
+      "design_order": 219,
+      "evidence_gate": "cost-capacity",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed"
+      ],
+      "family_id": "equity.participation-communication",
+      "family_title": "Public participation and risk communication",
+      "horizon": "multi-year",
+      "implementation_status": "design-only",
+      "primary_outcome": "affected-population participation and feedback access gap",
+      "prohibited_claims": [
+        "Do not report modeled inclusion as representative participation, consent, trust, or influence.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "service-area",
+      "suite": "behavioral-policy-equity",
+      "title": "Prioritize inclusive participation and communication improvements"
+    },
+    {
+      "analysis_modes": [
+        "simulation",
+        "optimization"
+      ],
+      "binding_constraint": "The public participation and risk communication site must respect declared land control, accessibility, permitting, safety, and operating feasibility.",
+      "content_hash": "sha256:1ee4296fb7137ac80bd9567d6fcea8d15f28cbab5be6e6e6aa368b8f9bfbc919",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Where should in-person, mobile, partner, and digital access support close verified engagement barriers?",
+      "decision_type": "site",
+      "design_id": "scenario.equity.participation-communication.engagement-venues.v1",
+      "design_order": 220,
+      "evidence_gate": "legal-authority",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "family_id": "equity.participation-communication",
+      "family_title": "Public participation and risk communication",
+      "horizon": "multi-year",
+      "implementation_status": "design-only",
+      "primary_outcome": "affected people beyond usable participation access",
+      "prohibited_claims": [
+        "Do not call a candidate venue accessible, neutral, trusted, safe, or representative.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "facility",
+      "suite": "behavioral-policy-equity",
+      "title": "Site accessible participation and communication venues"
+    },
+    {
+      "analysis_modes": [
+        "simulation",
+        "optimization"
+      ],
+      "binding_constraint": "The public participation and risk communication allocate must respect declared minimum service, eligibility, capacity, and distributional safeguards.",
+      "content_hash": "sha256:55e621e3e783112eeafd05da74325997f92c6f2d5f792d4c85750b3f89eaaec0",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "How should outreach, interpreters, accessibility support, stipends, facilitation, and response capacity be assigned?",
+      "decision_type": "allocate",
+      "design_id": "scenario.equity.participation-communication.engagement-support.v1",
+      "design_order": 221,
+      "evidence_gate": "equity-measurement",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "family_id": "equity.participation-communication",
+      "family_title": "Public participation and risk communication",
+      "horizon": "weeks",
+      "implementation_status": "design-only",
+      "primary_outcome": "affected engagement needs without assigned usable support",
+      "prohibited_claims": [
+        "Do not report allocated support as participation, representation, agreement, or influence.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "population-group",
+      "suite": "behavioral-policy-equity",
+      "title": "Allocate engagement, translation, and participation support"
+    },
+    {
+      "analysis_modes": [
+        "forecast",
+        "optimization"
+      ],
+      "binding_constraint": "The public participation and risk communication schedule must respect declared labor, access, sequencing, notice, and completion windows.",
+      "content_hash": "sha256:9f2d3441212ed9d9b9ed9f33b00a464029bf17b70721314edfbd4dfe0a800ef2",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "When should notice, translation, deliberation, response, revision, decision, and follow-up occur?",
+      "decision_type": "schedule",
+      "design_id": "scenario.equity.participation-communication.engagement-feedback-cycle.v1",
+      "design_order": 222,
+      "evidence_gate": "temporal-alignment",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed"
+      ],
+      "family_id": "equity.participation-communication",
+      "family_title": "Public participation and risk communication",
+      "horizon": "weeks",
+      "implementation_status": "design-only",
+      "primary_outcome": "affected person-days without timely participation or response",
+      "prohibited_claims": [
+        "Do not call a scheduled consultation conducted, representative, considered, or closed.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "citywide",
+      "suite": "behavioral-policy-equity",
+      "title": "Schedule participation, communication, and feedback closure"
+    },
+    {
+      "analysis_modes": [
+        "forecast",
+        "simulation",
+        "optimization"
+      ],
+      "binding_constraint": "The public participation and risk communication stress test must respect declared minimum continuity and safety thresholds across severe scenarios.",
+      "content_hash": "sha256:6e619930571f49866a964704bfeb3782af5a1f77e91a45e32fca0bc3da4f2e3e",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Which multilingual strategy preserves accurate usable communication under uncertainty, outage, rumor, and capacity loss?",
+      "decision_type": "stress-test",
+      "design_id": "scenario.equity.participation-communication.communication-failure.v1",
+      "design_order": 223,
+      "evidence_gate": "external-validation",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "family_id": "equity.participation-communication",
+      "family_title": "Public participation and risk communication",
+      "horizon": "seasonal",
+      "implementation_status": "design-only",
+      "primary_outcome": "scenario-weighted affected people without timely usable information",
+      "prohibited_claims": [
+        "Do not present simulated message reach, understanding, trust, or behavior as observed.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "network",
+      "suite": "behavioral-policy-equity",
+      "title": "Stress-test public communication under crisis and channel failure"
+    },
+    {
+      "analysis_modes": [
+        "descriptive",
+        "causal"
+      ],
+      "binding_constraint": "The public participation and risk communication evaluate must respect declared pre-specified assignment, comparison, outcome, spillover, and subgroup rules.",
+      "content_hash": "sha256:341d5a51b32ac4b08e92fc01cd0b00111fa498f6138d8283d15ccf0a9fd4161e",
+      "current_readiness": "blocked-multiple-gates",
+      "decision_question": "Did phased language, access, deliberation, or feedback changes improve verified participation and understanding?",
+      "decision_type": "evaluate",
+      "design_id": "scenario.equity.participation-communication.engagement-design-effect.v1",
+      "design_order": 224,
+      "evidence_gate": "causal-identification",
+      "evidence_types": [
+        "causal",
+        "estimated",
+        "observed",
+        "proposed"
+      ],
+      "family_id": "equity.participation-communication",
+      "family_title": "Public participation and risk communication",
+      "horizon": "multi-year",
+      "implementation_status": "design-only",
+      "primary_outcome": "change in verified usable participation and comprehension",
+      "prohibited_claims": [
+        "Do not infer trust, consent, legitimacy, behavior, or policy influence from attendance alone.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "population-group",
+      "suite": "behavioral-policy-equity",
+      "title": "Evaluate inclusive engagement and risk communication"
+    }
+  ],
+  "family": {
+    "affected_system": "public participation, multilingual communication, consultation, and feedback closure",
+    "claim_boundary": [
+      "Area and administrative differences do not establish discrimination, preferences, or individual behavior.",
+      "Behavioral and allocation designs require rights, accessibility, privacy, and non-coercion review.",
+      "Causal, fairness, adoption, and welfare claims require direct outcomes and independent governance evidence."
+    ],
+    "common_source_roles": [
+      "community-input",
+      "demographic-context",
+      "geographic-identity"
+    ],
+    "decision_owner": "public engagement director and risk communications lead",
+    "decision_types": [
+      "diagnose",
+      "forecast",
+      "prioritize",
+      "site",
+      "allocate",
+      "schedule",
+      "stress-test",
+      "evaluate"
+    ],
+    "description": "Eight decisions for participation-gap diagnosis, engagement forecasting, inclusion portfolios, venue siting, outreach allocation, communication schedules, misinformation stress, and evaluation.",
+    "design_refs": [
+      "scenario.equity.participation-communication.participation-gaps.v1",
+      "scenario.equity.participation-communication.engagement-demand.v1",
+      "scenario.equity.participation-communication.inclusive-engagement-portfolio.v1",
+      "scenario.equity.participation-communication.engagement-venues.v1",
+      "scenario.equity.participation-communication.engagement-support.v1",
+      "scenario.equity.participation-communication.engagement-feedback-cycle.v1",
+      "scenario.equity.participation-communication.communication-failure.v1",
+      "scenario.equity.participation-communication.engagement-design-effect.v1"
+    ],
+    "design_signatures": [
+      "sha256:dd90b82eddafb39689ca36731e6b70866120cf0b5f06b904a037b3098daa1da7",
+      "sha256:325e1d6f90ebf9299f0f23bc7430645c80d4e357123d7253074fe63c856759b0",
+      "sha256:702b1ad4e8352969d6f546eb9443c3e77e82b04f97150424a1db8b979207e34c",
+      "sha256:ed75351786e8b4864798079caa007e771d24a26fcc310e17415b1446dc3273ef",
+      "sha256:348d8647e5a4860756ecd76bb106e7926847c4db55a811999b3abd6c776820b0",
+      "sha256:311ba3b78c817461894ab41fd18223203cea725961a61a224f2520e224874143",
+      "sha256:01737cf89380ebac0ee0c696dd25da28f8815b1d6f5b61016790e44e0b1b164c",
+      "sha256:786b7f127313e020b5aa8a6ae3f41a9e61fe9fea22594e52ad75538cc3836195"
+    ],
+    "family_id": "equity.participation-communication",
+    "family_order": 28,
+    "schema_version": "1.0.0",
+    "suite": "behavioral-policy-equity",
+    "title": "Public participation and risk communication"
+  },
+  "library_claim_boundary": [
+    "The catalog contains 240 decision designs, not 240 city executions.",
+    "Exactly twelve designs map to existing Tier-D reference templates; 228 remain design-only.",
+    "A reference implementation can be an explicit negative release and does not imply impact.",
+    "No record claims a city binding, new method, deployment, adoption, or real-user outcome.",
+    "Future execution requires source binding, gate passage, and domain, legal, community, and operational review."
+  ]
+}

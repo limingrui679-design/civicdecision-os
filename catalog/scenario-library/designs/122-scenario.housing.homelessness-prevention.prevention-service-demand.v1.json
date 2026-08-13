@@ -1,0 +1,162 @@
+{
+  "affected_system": "housing-stability, eviction prevention, shelter diversion, and support coordination",
+  "alternatives": [
+    "activate a bounded reserve from forecast risk bands for housing-stability and homelessness-prevention demand",
+    "use rolling forecasts and conservative capacity triggers for housing-stability and homelessness-prevention demand",
+    "pair market, court, season, and service-flow forecasting with an explicit stop, review, and escalation rule"
+  ],
+  "analysis_modes": [
+    "forecast"
+  ],
+  "assumptions": [
+    "Court, assistance, shelter, outreach, housing, and service records use privacy-preserving linkage.",
+    "Risk models support outreach only and never determine legal rights or automatic denial.",
+    "All alternatives, capacities, costs, effects, thresholds, and failure scenarios are proposed until bound to evidence."
+  ],
+  "baseline": "continue ordinary capacity planning for housing-stability and homelessness-prevention demand.",
+  "city_bindings": [],
+  "constraints": [
+    {
+      "binding": true,
+      "constraint_id": "scenario.housing.homelessness-prevention.prevention-service-demand.v1.constraint.binding",
+      "description": "The homelessness prevention and housing stability forecast must respect declared validated operational capacity and forecast uncertainty.",
+      "hard": true,
+      "kind": "capacity",
+      "required_source_roles": [
+        "demographic-context",
+        "housing-market",
+        "municipal-demand",
+        "operating-capacity",
+        "real-time-state",
+        "service-schedule"
+      ]
+    },
+    {
+      "binding": false,
+      "constraint_id": "scenario.housing.homelessness-prevention.prevention-service-demand.v1.constraint.evidence-scope",
+      "description": "Every released metric must retain evidence type, source lineage, geography, time, assumptions, and uncertainty.",
+      "hard": true,
+      "kind": "technical",
+      "required_source_roles": [
+        "demographic-context"
+      ]
+    },
+    {
+      "binding": false,
+      "constraint_id": "scenario.housing.homelessness-prevention.prevention-service-demand.v1.constraint.decision-authority",
+      "description": "No analytical output may bypass lawful authority, accountable human review, or an applicable appeal process.",
+      "hard": true,
+      "kind": "regulatory",
+      "required_source_roles": [
+        "demographic-context"
+      ]
+    }
+  ],
+  "current_readiness": "blocked-missing-source",
+  "decision_cadence": "recompiled at each planning cycle and after material evidence change",
+  "decision_owner": "homelessness response director and housing-stability administrator",
+  "decision_question": "What range of legal, rental, diversion, outreach, and shelter demand should the system prepare for?",
+  "decision_type": "forecast",
+  "design_id": "scenario.housing.homelessness-prevention.prevention-service-demand.v1",
+  "design_order": 122,
+  "design_signature": "sha256:df018b88f441f1d21f20d84f6b09cf18eea25b37fcc311d0936949af6da6c5f4",
+  "evidence_requirements": [
+    "estimated",
+    "observed",
+    "proposed"
+  ],
+  "family_id": "housing.homelessness-prevention",
+  "family_title": "Homelessness prevention and housing stability",
+  "horizon": "weeks",
+  "implementation_status": "design-only",
+  "independence_key": {
+    "binding_constraint": "The homelessness prevention and housing stability forecast must respect declared validated operational capacity and forecast uncertainty.",
+    "decision_object": "housing-stability and homelessness-prevention demand",
+    "evidence_gate": "Evidence for housing-stability and homelessness-prevention demand passes documented checks for held-out error, interval coverage, event detection, drift, and baseline comparison.",
+    "horizon": "weeks",
+    "intervention_mechanism": "market, court, season, and service-flow forecasting",
+    "primary_outcome": "priority household demand above prevention capacity",
+    "spatial_unit": "service-area"
+  },
+  "intended_claim": "A versioned forecast design for comparing declared alternatives affecting housing-stability and homelessness-prevention demand, conditional on its evidence gate.",
+  "limitations": [
+    "This library record has no city binding and therefore reports no local input, output, or recommendation.",
+    "Readiness describes explicit source and method gates; it does not certify implementation feasibility.",
+    "External domain, legal, community, security, and operational review remains outside this design artifact."
+  ],
+  "method_claimed": false,
+  "objectives": [
+    {
+      "evidence_type": "estimated",
+      "metric": "priority household demand above prevention capacity",
+      "objective_id": "scenario.housing.homelessness-prevention.prevention-service-demand.v1.objective.primary",
+      "primary": true,
+      "sense": "minimize",
+      "unit": "households per month"
+    },
+    {
+      "evidence_type": "estimated",
+      "metric": "distributional gap in priority household demand above prevention capacity",
+      "objective_id": "scenario.housing.homelessness-prevention.prevention-service-demand.v1.objective.equity",
+      "primary": false,
+      "sense": "minimize",
+      "unit": "households per month"
+    },
+    {
+      "evidence_type": "observed",
+      "metric": "decision claims with complete evidence lineage",
+      "objective_id": "scenario.housing.homelessness-prevention.prevention-service-demand.v1.objective.traceability",
+      "primary": false,
+      "sense": "maximize",
+      "unit": "percent"
+    }
+  ],
+  "prohibited_claims": [
+    "Do not call forecast service demand evictions, homelessness entries, or individual risk.",
+    "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+    "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+    "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+  ],
+  "release_gate": {
+    "failure_release": "Release an explicit insufficient-evidence record naming missing sources, failed diagnostics, prohibited claims, and the next validation action.",
+    "failure_status": "insufficient-evidence",
+    "gate_id": "scenario.housing.homelessness-prevention.prevention-service-demand.v1.gate.release",
+    "gate_type": "model-calibration",
+    "pass_condition": "Evidence for housing-stability and homelessness-prevention demand passes documented checks for held-out error, interval coverage, event detection, drift, and baseline comparison.",
+    "required_evidence_types": [
+      "estimated",
+      "observed"
+    ],
+    "required_source_roles": [
+      "demographic-context",
+      "housing-market",
+      "municipal-demand",
+      "operating-capacity",
+      "real-time-state",
+      "service-schedule"
+    ]
+  },
+  "required_source_roles": [
+    "demographic-context",
+    "housing-market",
+    "municipal-demand",
+    "operating-capacity",
+    "real-time-state",
+    "service-schedule"
+  ],
+  "schema_version": "1.0.0",
+  "spatial_unit": "service-area",
+  "suite": "housing-land-use-regeneration",
+  "tags": [
+    "design-only",
+    "forecast",
+    "housing-land-use-regeneration",
+    "housing.homelessness-prevention",
+    "scenario-library"
+  ],
+  "title": "Forecast housing-stability service demand",
+  "transportability_risks": [
+    "Eviction law, rents, benefits, shelter systems, informal displacement, and data linkage differ.",
+    "Administrative records omit people who do not seek or cannot access services."
+  ]
+}

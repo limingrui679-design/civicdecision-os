@@ -83,22 +83,21 @@ def test_tier_d_registry_declares_exact_scale_and_anti_inflation(
     assert evidence_summary.completed_scenarios + evidence_summary.negative_scenarios == 96
 
 
-@pytest.mark.parametrize("template", DEEP_SCENARIO_TEMPLATES, ids=TEMPLATE_IDS)
-def test_deep_scenario_template_contract(template: object) -> None:
-    typed = next(item for item in DEEP_SCENARIO_TEMPLATES if item is template)
-    assert typed.template_order in range(1, 13)
-    assert typed.intended_claim
-    assert typed.prohibited_claims
-    assert typed.assumptions
-    assert typed.limitations
-    assert typed.required_source_roles
-    assert len(typed.evidence_requirements) == len(set(typed.evidence_requirements))
-    if typed.completion_strategy is ScenarioCompletionStrategy.CATEGORY_DEMAND:
-        assert typed.category_keywords == sorted(set(typed.category_keywords))
-        assert typed.minimum_matching_requests > 0
-    else:
-        assert typed.category_keywords == []
-        assert typed.minimum_matching_requests == 0
+def test_deep_scenario_template_contract() -> None:
+    for typed in DEEP_SCENARIO_TEMPLATES:
+        assert typed.template_order in range(1, 13)
+        assert typed.intended_claim
+        assert typed.prohibited_claims
+        assert typed.assumptions
+        assert typed.limitations
+        assert typed.required_source_roles
+        assert len(typed.evidence_requirements) == len(set(typed.evidence_requirements))
+        if typed.completion_strategy is ScenarioCompletionStrategy.CATEGORY_DEMAND:
+            assert typed.category_keywords == sorted(set(typed.category_keywords))
+            assert typed.minimum_matching_requests > 0
+        else:
+            assert typed.category_keywords == []
+            assert typed.minimum_matching_requests == 0
 
 
 @pytest.mark.parametrize("city_id", CITY_IDS)

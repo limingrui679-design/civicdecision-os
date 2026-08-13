@@ -1,0 +1,225 @@
+{
+  "audit_maximum_pairwise_similarity": 0.646154,
+  "design": {
+    "affected_system": "rights-preserving compliance assistance, incentives, inspections, and enforcement",
+    "alternatives": [
+      "screen feasible locations against the largest access gaps for compliance assistance and technical-support locations",
+      "co-optimize distributed and high-capacity locations for compliance assistance and technical-support locations",
+      "pair access, privacy, language, neutrality, skill, and capacity-aware siting with an explicit stop, review, and escalation rule"
+    ],
+    "analysis_modes": [
+      "simulation",
+      "optimization"
+    ],
+    "assumptions": [
+      "Eligibility, notice, awareness, capability, action, inspection, violation, sanction, and outcome remain distinct.",
+      "No behavioral score automatically triggers enforcement, benefit denial, or coercive action.",
+      "All alternatives, capacities, costs, effects, thresholds, and failure scenarios are proposed until bound to evidence."
+    ],
+    "baseline": "retain only existing approved locations for compliance assistance and technical-support locations.",
+    "city_bindings": [],
+    "constraints": [
+      {
+        "binding": true,
+        "constraint_id": "scenario.equity.compliance-incentives.compliance-assistance-access.v1.constraint.binding",
+        "description": "The compliance, incentives, and behavioral policy site must respect declared land control, accessibility, permitting, safety, and operating feasibility.",
+        "hard": true,
+        "kind": "regulatory",
+        "required_source_roles": [
+          "demographic-context",
+          "equity-attribute",
+          "facility-inventory",
+          "legal-regulatory",
+          "municipal-demand",
+          "transport-network"
+        ]
+      },
+      {
+        "binding": false,
+        "constraint_id": "scenario.equity.compliance-incentives.compliance-assistance-access.v1.constraint.evidence-scope",
+        "description": "Every released metric must retain evidence type, source lineage, geography, time, assumptions, and uncertainty.",
+        "hard": true,
+        "kind": "technical",
+        "required_source_roles": [
+          "demographic-context"
+        ]
+      },
+      {
+        "binding": false,
+        "constraint_id": "scenario.equity.compliance-incentives.compliance-assistance-access.v1.constraint.decision-authority",
+        "description": "No analytical output may bypass lawful authority, accountable human review, or an applicable appeal process.",
+        "hard": true,
+        "kind": "regulatory",
+        "required_source_roles": [
+          "demographic-context"
+        ]
+      }
+    ],
+    "current_readiness": "blocked-missing-source",
+    "decision_cadence": "recompiled at each planning cycle and after material evidence change",
+    "decision_owner": "regulatory operations director and behavioral insights lead",
+    "decision_question": "Where should non-enforcement assistance, document, inspection, and technical services reduce verified barriers?",
+    "decision_type": "site",
+    "design_id": "scenario.equity.compliance-incentives.compliance-assistance-access.v1",
+    "design_order": 228,
+    "design_signature": "sha256:9ac750bf7eabecbe4ac20e0c5617b72db324f46279619066c151355431fe7183",
+    "evidence_requirements": [
+      "estimated",
+      "observed",
+      "optimized",
+      "proposed",
+      "simulated"
+    ],
+    "family_id": "equity.compliance-incentives",
+    "family_title": "Compliance, incentives, and behavioral policy",
+    "horizon": "multi-year",
+    "implementation_status": "design-only",
+    "independence_key": {
+      "binding_constraint": "The compliance, incentives, and behavioral policy site must respect declared land control, accessibility, permitting, safety, and operating feasibility.",
+      "decision_object": "compliance assistance and technical-support locations",
+      "evidence_gate": "Evidence for compliance assistance and technical-support locations passes documented checks for parcel control, legal authority, environmental review, access, capacity, and operator responsibility.",
+      "horizon": "multi-year",
+      "intervention_mechanism": "access, privacy, language, neutrality, skill, and capacity-aware siting",
+      "primary_outcome": "eligible cases beyond usable qualified assistance",
+      "spatial_unit": "facility"
+    },
+    "intended_claim": "A versioned site design for comparing declared alternatives affecting compliance assistance and technical-support locations, conditional on its evidence gate.",
+    "limitations": [
+      "This library record has no city binding and therefore reports no local input, output, or recommendation.",
+      "Readiness describes explicit source and method gates; it does not certify implementation feasibility.",
+      "External domain, legal, community, security, and operational review remains outside this design artifact."
+    ],
+    "method_claimed": false,
+    "objectives": [
+      {
+        "evidence_type": "estimated",
+        "metric": "eligible cases beyond usable qualified assistance",
+        "objective_id": "scenario.equity.compliance-incentives.compliance-assistance-access.v1.objective.primary",
+        "primary": true,
+        "sense": "minimize",
+        "unit": "cases"
+      },
+      {
+        "evidence_type": "estimated",
+        "metric": "distributional gap in eligible cases beyond usable qualified assistance",
+        "objective_id": "scenario.equity.compliance-incentives.compliance-assistance-access.v1.objective.equity",
+        "primary": false,
+        "sense": "minimize",
+        "unit": "cases"
+      },
+      {
+        "evidence_type": "observed",
+        "metric": "decision claims with complete evidence lineage",
+        "objective_id": "scenario.equity.compliance-incentives.compliance-assistance-access.v1.objective.traceability",
+        "primary": false,
+        "sense": "maximize",
+        "unit": "percent"
+      }
+    ],
+    "prohibited_claims": [
+      "Do not call a candidate assistance site trusted, neutral, accessible, qualified, or used.",
+      "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+      "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+      "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+    ],
+    "release_gate": {
+      "failure_release": "Release an explicit insufficient-evidence record naming missing sources, failed diagnostics, prohibited claims, and the next validation action.",
+      "failure_status": "insufficient-evidence",
+      "gate_id": "scenario.equity.compliance-incentives.compliance-assistance-access.v1.gate.release",
+      "gate_type": "legal-authority",
+      "pass_condition": "Evidence for compliance assistance and technical-support locations passes documented checks for parcel control, legal authority, environmental review, access, capacity, and operator responsibility.",
+      "required_evidence_types": [
+        "observed",
+        "proposed"
+      ],
+      "required_source_roles": [
+        "demographic-context",
+        "equity-attribute",
+        "facility-inventory",
+        "legal-regulatory",
+        "municipal-demand",
+        "transport-network"
+      ]
+    },
+    "required_source_roles": [
+      "demographic-context",
+      "equity-attribute",
+      "facility-inventory",
+      "legal-regulatory",
+      "municipal-demand",
+      "transport-network"
+    ],
+    "schema_version": "1.0.0",
+    "spatial_unit": "facility",
+    "suite": "behavioral-policy-equity",
+    "tags": [
+      "behavioral-policy-equity",
+      "design-only",
+      "equity.compliance-incentives",
+      "scenario-library",
+      "site"
+    ],
+    "title": "Site compliance assistance and technical-support access",
+    "transportability_risks": [
+      "Law, administrative burden, trust, incentives, capability, enforcement, and baseline behavior differ.",
+      "Observed compliance may reflect detection and documentation rather than underlying behavior."
+    ]
+  },
+  "family": {
+    "affected_system": "rights-preserving compliance assistance, incentives, inspections, and enforcement",
+    "claim_boundary": [
+      "Area and administrative differences do not establish discrimination, preferences, or individual behavior.",
+      "Behavioral and allocation designs require rights, accessibility, privacy, and non-coercion review.",
+      "Causal, fairness, adoption, and welfare claims require direct outcomes and independent governance evidence."
+    ],
+    "common_source_roles": [
+      "demographic-context",
+      "legal-regulatory",
+      "municipal-demand"
+    ],
+    "decision_owner": "regulatory operations director and behavioral insights lead",
+    "decision_types": [
+      "diagnose",
+      "forecast",
+      "prioritize",
+      "site",
+      "allocate",
+      "schedule",
+      "stress-test",
+      "evaluate"
+    ],
+    "description": "Eight decisions for process diagnosis, workload forecasting, policy portfolios, service siting, support allocation, contact scheduling, behavior stress, and incentive evaluation.",
+    "design_refs": [
+      "scenario.equity.compliance-incentives.compliance-process-friction.v1",
+      "scenario.equity.compliance-incentives.assistance-inspection-demand.v1",
+      "scenario.equity.compliance-incentives.compliance-policy-portfolio.v1",
+      "scenario.equity.compliance-incentives.compliance-assistance-access.v1",
+      "scenario.equity.compliance-incentives.assistance-enforcement-capacity.v1",
+      "scenario.equity.compliance-incentives.notice-assistance-inspection.v1",
+      "scenario.equity.compliance-incentives.policy-response-uncertainty.v1",
+      "scenario.equity.compliance-incentives.assistance-incentive-effect.v1"
+    ],
+    "design_signatures": [
+      "sha256:e122996843b38fc5546ca38bc2d6a13061fb233a64c9e4da2b673a70091dbaa3",
+      "sha256:3ac4d9a3edb49589e9ca83435acddf37a03c1fe2d070484456303724ca882617",
+      "sha256:e56cc51f81b9a9b79cd3abf88e0c655d8d4e2bafe879746057bbeca0ed457a97",
+      "sha256:9ac750bf7eabecbe4ac20e0c5617b72db324f46279619066c151355431fe7183",
+      "sha256:b453ebd29c0c874a77e6085ea54f391993602ce21d72cddd06b67c834448bf2a",
+      "sha256:09cc835fd6fc1447adbce974896f166b735e52d6d01d5d80d80111f7517391bb",
+      "sha256:0bedb113f76c72445c01cd0f985a2cb1e718462fba53b574f379296a48e0f192",
+      "sha256:e66e7f146adcf8b23e68ad057633d1f0c31e335ba3b009a1da59df3af01a0dbc"
+    ],
+    "family_id": "equity.compliance-incentives",
+    "family_order": 29,
+    "schema_version": "1.0.0",
+    "suite": "behavioral-policy-equity",
+    "title": "Compliance, incentives, and behavioral policy"
+  },
+  "library_claim_boundary": [
+    "The catalog contains 240 decision designs, not 240 city executions.",
+    "Exactly twelve designs map to existing Tier-D reference templates; 228 remain design-only.",
+    "A reference implementation can be an explicit negative release and does not imply impact.",
+    "No record claims a city binding, new method, deployment, adoption, or real-user outcome.",
+    "Future execution requires source binding, gate passage, and domain, legal, community, and operational review."
+  ]
+}

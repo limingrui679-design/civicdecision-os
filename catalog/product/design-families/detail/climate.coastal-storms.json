@@ -1,0 +1,339 @@
+{
+  "designs": [
+    {
+      "analysis_modes": [
+        "descriptive"
+      ],
+      "binding_constraint": "Exposure findings require verified elevation, protection, asset function, and dependency records.",
+      "content_hash": "sha256:6e269a3422ab34f1dd57602822262518ccaac6dedd8a3dbd1c406836a3bca555",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Which critical services depend on coastal assets exposed across surge and sea-level pathways?",
+      "decision_type": "diagnose",
+      "design_id": "scenario.climate.coastal-storms.coastal-dependency-exposure.v1",
+      "design_order": 33,
+      "evidence_gate": "geographic-alignment",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "proposed"
+      ],
+      "family_id": "climate.coastal-storms",
+      "family_title": "Coastal storms and sea-level adaptation",
+      "horizon": "multi-year",
+      "implementation_status": "design-only",
+      "primary_outcome": "critical service dependencies exposed to coastal flooding",
+      "prohibited_claims": [
+        "Do not equate mapped inundation exposure with observed damage or failure.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "network",
+      "suite": "climate-disaster-resilience",
+      "title": "Diagnose coastal asset exposure and service dependencies"
+    },
+    {
+      "analysis_modes": [
+        "forecast",
+        "simulation"
+      ],
+      "binding_constraint": "Operational forecasts must retain uncertainty from storm track, tide, protection state, and damage translation.",
+      "content_hash": "sha256:d1ba8609e4d4d7f27cd5c33567b8c774d3b2d8e84ef2315c87741592c0786e17",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "What probabilistic surge, access, outage, and response-demand envelope should operations use?",
+      "decision_type": "forecast",
+      "design_id": "scenario.climate.coastal-storms.storm-surge-operations.v1",
+      "design_order": 34,
+      "evidence_gate": "model-calibration",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "proposed",
+        "simulated"
+      ],
+      "family_id": "climate.coastal-storms",
+      "family_title": "Coastal storms and sea-level adaptation",
+      "horizon": "days",
+      "implementation_status": "design-only",
+      "primary_outcome": "critical service demand above operable capacity",
+      "prohibited_claims": [
+        "Do not present forecast inundation or outage as an observed impact.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "citywide",
+      "suite": "climate-disaster-resilience",
+      "title": "Forecast coastal storm operational impacts"
+    },
+    {
+      "analysis_modes": [
+        "simulation",
+        "optimization"
+      ],
+      "binding_constraint": "The portfolio must fit capital, maintenance, acquisition, financing, and delivery constraints by phase.",
+      "content_hash": "sha256:a1655cbd2853d1cada48fe6a69531328742c7f07fee2bdc645f563ef4537f608",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Which phased adaptation portfolio best preserves services and equity under uncertain sea-level pathways?",
+      "decision_type": "prioritize",
+      "design_id": "scenario.climate.coastal-storms.coastal-adaptation-portfolio.v1",
+      "design_order": 35,
+      "evidence_gate": "cost-capacity",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "family_id": "climate.coastal-storms",
+      "family_title": "Coastal storms and sea-level adaptation",
+      "horizon": "multi-year",
+      "implementation_status": "design-only",
+      "primary_outcome": "expected critical-service disruption across sea-level pathways",
+      "prohibited_claims": [
+        "Do not call modeled avoided loss a realized benefit or a pathway an adopted land policy.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "asset",
+      "suite": "climate-disaster-resilience",
+      "title": "Prioritize coastal protection, accommodation, and retreat"
+    },
+    {
+      "analysis_modes": [
+        "simulation",
+        "optimization"
+      ],
+      "binding_constraint": "Candidate sites must remain operable under design surge, wind, access, power, and supply scenarios.",
+      "content_hash": "sha256:5171a90211c0e0d5960c6ae9e57ea33fe47d24209302242754e4e3b74bf3498f",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Where should shelters and logistics hubs remain accessible outside compound surge, wind, and outage exposure?",
+      "decision_type": "site",
+      "design_id": "scenario.climate.coastal-storms.coastal-shelter-logistics.v1",
+      "design_order": 36,
+      "evidence_gate": "network-readiness",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "family_id": "climate.coastal-storms",
+      "family_title": "Coastal storms and sea-level adaptation",
+      "horizon": "multi-year",
+      "implementation_status": "design-only",
+      "primary_outcome": "at-risk population beyond safe shelter capacity",
+      "prohibited_claims": [
+        "Do not label a candidate facility safe without structural, access, and continuity verification.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "facility",
+      "suite": "climate-disaster-resilience",
+      "title": "Site coastal shelters and resilient logistics hubs"
+    },
+    {
+      "analysis_modes": [
+        "forecast",
+        "simulation",
+        "optimization"
+      ],
+      "binding_constraint": "Staging, travel, loading, crew-safety, and evacuation-clearance times must fit the landfall window.",
+      "content_hash": "sha256:65b84446a665a852ff7421fd4bedd7863f32774850bf24f1d03a2efe5ecc5354",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "How should accessible transport, rescue assets, generators, and supplies be staged before landfall?",
+      "decision_type": "allocate",
+      "design_id": "scenario.climate.coastal-storms.coastal-emergency-resources.v1",
+      "design_order": 37,
+      "evidence_gate": "temporal-alignment",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "family_id": "climate.coastal-storms",
+      "family_title": "Coastal storms and sea-level adaptation",
+      "horizon": "days",
+      "implementation_status": "design-only",
+      "primary_outcome": "high-risk residents and critical sites without assigned support",
+      "prohibited_claims": [
+        "Do not report a staged resource plan as completed evacuation or delivered assistance.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "network",
+      "suite": "climate-disaster-resilience",
+      "title": "Allocate coastal emergency transport and supplies"
+    },
+    {
+      "analysis_modes": [
+        "forecast",
+        "simulation",
+        "optimization"
+      ],
+      "binding_constraint": "Each phase must satisfy clearance time, transport capacity, worker safety, and public-notice lead time.",
+      "content_hash": "sha256:29f405a613b3625a6894cdb73055a8d6a7e5da9c475d516b5e1263cf781f9201",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "When should ports, roads, services, and evacuation zones transition before a coastal storm?",
+      "decision_type": "schedule",
+      "design_id": "scenario.climate.coastal-storms.coastal-closure-evacuation.v1",
+      "design_order": 38,
+      "evidence_gate": "network-readiness",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "family_id": "climate.coastal-storms",
+      "family_title": "Coastal storms and sea-level adaptation",
+      "horizon": "days",
+      "implementation_status": "design-only",
+      "primary_outcome": "population remaining in risk zones at unsafe conditions",
+      "prohibited_claims": [
+        "Do not call simulated clearance an actual evacuation result or assume universal compliance.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "network",
+      "suite": "climate-disaster-resilience",
+      "title": "Schedule coastal closures and phased evacuation"
+    },
+    {
+      "analysis_modes": [
+        "forecast",
+        "simulation",
+        "optimization"
+      ],
+      "binding_constraint": "Life-safety and critical-service thresholds must hold under severe correlated failure scenarios.",
+      "content_hash": "sha256:9cbd1f90fb7ce0f609ae8bff881184840709e3ad7b3ff7ccbdc654d25b63aa96",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Which adaptation and continuity strategy survives surge, rain, wind, power, access, and supply-chain failures?",
+      "decision_type": "stress-test",
+      "design_id": "scenario.climate.coastal-storms.compound-coastal-failure.v1",
+      "design_order": 39,
+      "evidence_gate": "external-validation",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "family_id": "climate.coastal-storms",
+      "family_title": "Coastal storms and sea-level adaptation",
+      "horizon": "weeks",
+      "implementation_status": "design-only",
+      "primary_outcome": "scenario-weighted critical service outage duration",
+      "prohibited_claims": [
+        "Do not describe synthetic compound failures as forecast probabilities without calibrated dependence evidence.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "network",
+      "suite": "climate-disaster-resilience",
+      "title": "Stress-test coastal systems under compound failure"
+    },
+    {
+      "analysis_modes": [
+        "descriptive",
+        "causal"
+      ],
+      "binding_constraint": "Selection, insurance, mobility, spillovers, attrition, and displacement outcomes must be pre-specified and observed.",
+      "content_hash": "sha256:3227ec339d24dc1c4ee91b0ac6f46385af5d032a4c01c0138cc276e80fab6c3a",
+      "current_readiness": "blocked-multiple-gates",
+      "decision_question": "Did phased elevation or voluntary acquisition reduce verified loss and displacement burden?",
+      "decision_type": "evaluate",
+      "design_id": "scenario.climate.coastal-storms.coastal-adaptation-effect.v1",
+      "design_order": 40,
+      "evidence_gate": "causal-identification",
+      "evidence_types": [
+        "causal",
+        "estimated",
+        "observed",
+        "proposed"
+      ],
+      "family_id": "climate.coastal-storms",
+      "family_title": "Coastal storms and sea-level adaptation",
+      "horizon": "multi-year",
+      "implementation_status": "design-only",
+      "primary_outcome": "change in event-related verified loss",
+      "prohibited_claims": [
+        "Do not infer causal protection or equitable relocation from selected participant outcomes alone.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "parcel",
+      "suite": "climate-disaster-resilience",
+      "title": "Evaluate property-level coastal adaptation effects"
+    }
+  ],
+  "family": {
+    "affected_system": "coastal protection, evacuation, and long-term adaptation system",
+    "claim_boundary": [
+      "Hazard observations and modeled exposure do not establish individual harm or causation.",
+      "Proposed adaptations are planning alternatives, not adopted policy or engineered designs.",
+      "A design-only record is not a city execution, validated forecast, or impact result."
+    ],
+    "common_source_roles": [
+      "asset-inventory",
+      "climate-hazard",
+      "geographic-identity"
+    ],
+    "decision_owner": "coastal resilience director and emergency-management commissioner",
+    "decision_types": [
+      "diagnose",
+      "forecast",
+      "prioritize",
+      "site",
+      "allocate",
+      "schedule",
+      "stress-test",
+      "evaluate"
+    ],
+    "description": "Decision designs for coastal exposure diagnosis, surge forecasting, adaptation portfolios, protective siting, emergency allocation, closure timing, compound stress, and evaluation.",
+    "design_refs": [
+      "scenario.climate.coastal-storms.coastal-dependency-exposure.v1",
+      "scenario.climate.coastal-storms.storm-surge-operations.v1",
+      "scenario.climate.coastal-storms.coastal-adaptation-portfolio.v1",
+      "scenario.climate.coastal-storms.coastal-shelter-logistics.v1",
+      "scenario.climate.coastal-storms.coastal-emergency-resources.v1",
+      "scenario.climate.coastal-storms.coastal-closure-evacuation.v1",
+      "scenario.climate.coastal-storms.compound-coastal-failure.v1",
+      "scenario.climate.coastal-storms.coastal-adaptation-effect.v1"
+    ],
+    "design_signatures": [
+      "sha256:15238f45da74dfc8dc6cd35c266002563fad7530acf7c11ba70f27e4b6bfc929",
+      "sha256:4767ba34af4bdd68a85871ec7b31c91a5f17c371e3961a7766d4469238cd4934",
+      "sha256:8ba00fc5c5c54857a3f18bbdf2da65113a70f1c4bc95ea463b860cb51cdb9f88",
+      "sha256:f0a78c4f5696c8816a0e01915c680f329afa3a8ea1ab971205a1bfccbd57f264",
+      "sha256:a0a1c06f0cdbd3836d31084f55d63811abf2c3538193b8776fe9a54260de5b8f",
+      "sha256:2b881f1919d571a1abde072c7806340e7ecc093256bf1ef7582bd62dbdfc244c",
+      "sha256:59fd4094acd8ab9869c6f5c3515f33ef4638d8f7bf0381034a4494b19e9254cb",
+      "sha256:3929cec2ff6ba4949a96e7ee3441b8b8031babd89a68eeddd66f9a2baa81bf66"
+    ],
+    "family_id": "climate.coastal-storms",
+    "family_order": 5,
+    "schema_version": "1.0.0",
+    "suite": "climate-disaster-resilience",
+    "title": "Coastal storms and sea-level adaptation"
+  },
+  "library_claim_boundary": [
+    "The catalog contains 240 decision designs, not 240 city executions.",
+    "Exactly twelve designs map to existing Tier-D reference templates; 228 remain design-only.",
+    "A reference implementation can be an explicit negative release and does not imply impact.",
+    "No record claims a city binding, new method, deployment, adoption, or real-user outcome.",
+    "Future execution requires source binding, gate passage, and domain, legal, community, and operational review."
+  ]
+}

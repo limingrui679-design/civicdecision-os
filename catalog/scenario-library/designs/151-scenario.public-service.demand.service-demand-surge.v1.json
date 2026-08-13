@@ -1,0 +1,166 @@
+{
+  "affected_system": "multichannel public-service intake, triage, dispatch, and resolution workflow",
+  "alternatives": [
+    "add targeted redundancy around the largest failure modes in public-service continuity under multichannel demand surge",
+    "select an adaptive robust portfolio across severe scenarios for public-service continuity under multichannel demand surge",
+    "pair arrival, channel, workforce, system, and field-capacity simulation with an explicit stop, review, and escalation rule"
+  ],
+  "analysis_modes": [
+    "forecast",
+    "simulation",
+    "optimization"
+  ],
+  "assumptions": [
+    "Requests, contacts, duplicates, service categories, assignments, work orders, and outcomes remain distinct.",
+    "Channel and area comparisons account for taxonomy, access, publication, and reporting differences.",
+    "All alternatives, capacities, costs, effects, thresholds, and failure scenarios are proposed until bound to evidence."
+  ],
+  "baseline": "apply current continuity provisions to public-service continuity under multichannel demand surge.",
+  "city_bindings": [],
+  "constraints": [
+    {
+      "binding": true,
+      "constraint_id": "scenario.public-service.demand.service-demand-surge.v1.constraint.binding",
+      "description": "The 311 and public-service demand operations stress test must respect declared minimum continuity and safety thresholds across severe scenarios.",
+      "hard": true,
+      "kind": "risk",
+      "required_source_roles": [
+        "asset-condition",
+        "climate-hazard",
+        "geographic-identity",
+        "municipal-demand",
+        "operating-capacity",
+        "real-time-state"
+      ]
+    },
+    {
+      "binding": false,
+      "constraint_id": "scenario.public-service.demand.service-demand-surge.v1.constraint.evidence-scope",
+      "description": "Every released metric must retain evidence type, source lineage, geography, time, assumptions, and uncertainty.",
+      "hard": true,
+      "kind": "technical",
+      "required_source_roles": [
+        "asset-condition"
+      ]
+    },
+    {
+      "binding": false,
+      "constraint_id": "scenario.public-service.demand.service-demand-surge.v1.constraint.decision-authority",
+      "description": "No analytical output may bypass lawful authority, accountable human review, or an applicable appeal process.",
+      "hard": true,
+      "kind": "regulatory",
+      "required_source_roles": [
+        "asset-condition"
+      ]
+    }
+  ],
+  "current_readiness": "blocked-missing-source",
+  "decision_cadence": "recompiled at each planning cycle and after material evidence change",
+  "decision_owner": "chief service officer and 311 operations director",
+  "decision_question": "Which intake and field-response plan sustains priority services during event, outage, absence, and channel surges?",
+  "decision_type": "stress-test",
+  "design_id": "scenario.public-service.demand.service-demand-surge.v1",
+  "design_order": 151,
+  "design_signature": "sha256:1bcd7ac4bf15391258a8ef99fadebc4c15a3a42292f7a4f4c947891be020cef3",
+  "evidence_requirements": [
+    "estimated",
+    "observed",
+    "optimized",
+    "proposed",
+    "simulated"
+  ],
+  "family_id": "public-service.demand",
+  "family_title": "311 and public-service demand operations",
+  "horizon": "seasonal",
+  "implementation_status": "design-only",
+  "independence_key": {
+    "binding_constraint": "The 311 and public-service demand operations stress test must respect declared minimum continuity and safety thresholds across severe scenarios.",
+    "decision_object": "public-service continuity under multichannel demand surge",
+    "evidence_gate": "Evidence for public-service continuity under multichannel demand surge passes documented checks for scenario ranges, dependence, failure rates, recovery, intervention performance, and sensitivity.",
+    "horizon": "seasonal",
+    "intervention_mechanism": "arrival, channel, workforce, system, and field-capacity simulation",
+    "primary_outcome": "scenario-weighted priority requests beyond response targets",
+    "spatial_unit": "network"
+  },
+  "intended_claim": "A versioned stress-test design for comparing declared alternatives affecting public-service continuity under multichannel demand surge, conditional on its evidence gate.",
+  "limitations": [
+    "This library record has no city binding and therefore reports no local input, output, or recommendation.",
+    "Readiness describes explicit source and method gates; it does not certify implementation feasibility.",
+    "External domain, legal, community, security, and operational review remains outside this design artifact."
+  ],
+  "method_claimed": false,
+  "objectives": [
+    {
+      "evidence_type": "estimated",
+      "metric": "scenario-weighted priority requests beyond response targets",
+      "objective_id": "scenario.public-service.demand.service-demand-surge.v1.objective.primary",
+      "primary": true,
+      "sense": "minimize",
+      "unit": "requests"
+    },
+    {
+      "evidence_type": "estimated",
+      "metric": "distributional gap in scenario-weighted priority requests beyond response targets",
+      "objective_id": "scenario.public-service.demand.service-demand-surge.v1.objective.equity",
+      "primary": false,
+      "sense": "minimize",
+      "unit": "requests"
+    },
+    {
+      "evidence_type": "observed",
+      "metric": "decision claims with complete evidence lineage",
+      "objective_id": "scenario.public-service.demand.service-demand-surge.v1.objective.traceability",
+      "primary": false,
+      "sense": "maximize",
+      "unit": "percent"
+    }
+  ],
+  "prohibited_claims": [
+    "Do not present synthetic requests, failures, or response times as observed service performance.",
+    "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+    "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+    "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+  ],
+  "release_gate": {
+    "failure_release": "Release an explicit insufficient-evidence record naming missing sources, failed diagnostics, prohibited claims, and the next validation action.",
+    "failure_status": "insufficient-evidence",
+    "gate_id": "scenario.public-service.demand.service-demand-surge.v1.gate.release",
+    "gate_type": "external-validation",
+    "pass_condition": "Evidence for public-service continuity under multichannel demand surge passes documented checks for scenario ranges, dependence, failure rates, recovery, intervention performance, and sensitivity.",
+    "required_evidence_types": [
+      "estimated",
+      "observed"
+    ],
+    "required_source_roles": [
+      "asset-condition",
+      "climate-hazard",
+      "geographic-identity",
+      "municipal-demand",
+      "operating-capacity",
+      "real-time-state"
+    ]
+  },
+  "required_source_roles": [
+    "asset-condition",
+    "climate-hazard",
+    "geographic-identity",
+    "municipal-demand",
+    "operating-capacity",
+    "real-time-state"
+  ],
+  "schema_version": "1.0.0",
+  "spatial_unit": "network",
+  "suite": "public-service-operations",
+  "tags": [
+    "design-only",
+    "public-service-operations",
+    "public-service.demand",
+    "scenario-library",
+    "stress-test"
+  ],
+  "title": "Stress-test public-service continuity under demand surge",
+  "transportability_risks": [
+    "Service taxonomies, channels, SLAs, agency ownership, reporting, and publication rules differ.",
+    "Observed demand reflects both conditions and ability or willingness to report."
+  ]
+}

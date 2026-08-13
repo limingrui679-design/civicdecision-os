@@ -1,0 +1,162 @@
+{
+  "affected_system": "air-quality surveillance, exposure reduction, and respiratory-health response",
+  "alternatives": [
+    "activate a bounded reserve from forecast risk bands for daily pollution alert and respiratory service demand",
+    "use rolling forecasts and conservative capacity triggers for daily pollution alert and respiratory service demand",
+    "pair weather-source and lag-conditioned joint forecasting with an explicit stop, review, and escalation rule"
+  ],
+  "analysis_modes": [
+    "forecast"
+  ],
+  "assumptions": [
+    "Monitor data retain calibration, siting, uptime, and spatial-representativeness metadata.",
+    "Exposure, diagnosis, care use, and service complaints are not interchangeable outcomes.",
+    "All alternatives, capacities, costs, effects, thresholds, and failure scenarios are proposed until bound to evidence."
+  ],
+  "baseline": "continue ordinary capacity planning for daily pollution alert and respiratory service demand.",
+  "city_bindings": [],
+  "constraints": [
+    {
+      "binding": true,
+      "constraint_id": "scenario.health.air-quality.respiratory-demand.v1.constraint.binding",
+      "description": "The air-quality exposure and respiratory health forecast must respect declared validated operational capacity and forecast uncertainty.",
+      "hard": true,
+      "kind": "capacity",
+      "required_source_roles": [
+        "climate-hazard",
+        "environmental-exposure",
+        "geographic-identity",
+        "health-outcome",
+        "operating-capacity",
+        "real-time-state"
+      ]
+    },
+    {
+      "binding": false,
+      "constraint_id": "scenario.health.air-quality.respiratory-demand.v1.constraint.evidence-scope",
+      "description": "Every released metric must retain evidence type, source lineage, geography, time, assumptions, and uncertainty.",
+      "hard": true,
+      "kind": "technical",
+      "required_source_roles": [
+        "climate-hazard"
+      ]
+    },
+    {
+      "binding": false,
+      "constraint_id": "scenario.health.air-quality.respiratory-demand.v1.constraint.decision-authority",
+      "description": "No analytical output may bypass lawful authority, accountable human review, or an applicable appeal process.",
+      "hard": true,
+      "kind": "regulatory",
+      "required_source_roles": [
+        "climate-hazard"
+      ]
+    }
+  ],
+  "current_readiness": "blocked-missing-source",
+  "decision_cadence": "recompiled at each planning cycle and after material evidence change",
+  "decision_owner": "environmental health director and air-quality program lead",
+  "decision_question": "What pollutant and respiratory-service workload envelope should public-health operations prepare for?",
+  "decision_type": "forecast",
+  "design_id": "scenario.health.air-quality.respiratory-demand.v1",
+  "design_order": 90,
+  "design_signature": "sha256:007b91f73e42467c300f80699ecbc913719d8deada285e9cbedb86ceb19a6762",
+  "evidence_requirements": [
+    "estimated",
+    "observed",
+    "proposed"
+  ],
+  "family_id": "health.air-quality",
+  "family_title": "Air-quality exposure and respiratory health",
+  "horizon": "weeks",
+  "implementation_status": "design-only",
+  "independence_key": {
+    "binding_constraint": "The air-quality exposure and respiratory health forecast must respect declared validated operational capacity and forecast uncertainty.",
+    "decision_object": "daily pollution alert and respiratory service demand",
+    "evidence_gate": "Evidence for daily pollution alert and respiratory service demand passes documented checks for held-out error, interval coverage, event detection, drift, and baseline comparison.",
+    "horizon": "weeks",
+    "intervention_mechanism": "weather-source and lag-conditioned joint forecasting",
+    "primary_outcome": "respiratory response demand above available capacity",
+    "spatial_unit": "service-area"
+  },
+  "intended_claim": "A versioned forecast design for comparing declared alternatives affecting daily pollution alert and respiratory service demand, conditional on its evidence gate.",
+  "limitations": [
+    "This library record has no city binding and therefore reports no local input, output, or recommendation.",
+    "Readiness describes explicit source and method gates; it does not certify implementation feasibility.",
+    "External domain, legal, community, security, and operational review remains outside this design artifact."
+  ],
+  "method_claimed": false,
+  "objectives": [
+    {
+      "evidence_type": "estimated",
+      "metric": "respiratory response demand above available capacity",
+      "objective_id": "scenario.health.air-quality.respiratory-demand.v1.objective.primary",
+      "primary": true,
+      "sense": "minimize",
+      "unit": "encounters per day"
+    },
+    {
+      "evidence_type": "estimated",
+      "metric": "distributional gap in respiratory response demand above available capacity",
+      "objective_id": "scenario.health.air-quality.respiratory-demand.v1.objective.equity",
+      "primary": false,
+      "sense": "minimize",
+      "unit": "encounters per day"
+    },
+    {
+      "evidence_type": "observed",
+      "metric": "decision claims with complete evidence lineage",
+      "objective_id": "scenario.health.air-quality.respiratory-demand.v1.objective.traceability",
+      "primary": false,
+      "sense": "maximize",
+      "unit": "percent"
+    }
+  ],
+  "prohibited_claims": [
+    "Do not call forecast service demand diagnosed disease or pollutant-attributable illness.",
+    "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+    "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+    "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+  ],
+  "release_gate": {
+    "failure_release": "Release an explicit insufficient-evidence record naming missing sources, failed diagnostics, prohibited claims, and the next validation action.",
+    "failure_status": "insufficient-evidence",
+    "gate_id": "scenario.health.air-quality.respiratory-demand.v1.gate.release",
+    "gate_type": "model-calibration",
+    "pass_condition": "Evidence for daily pollution alert and respiratory service demand passes documented checks for held-out error, interval coverage, event detection, drift, and baseline comparison.",
+    "required_evidence_types": [
+      "estimated",
+      "observed"
+    ],
+    "required_source_roles": [
+      "climate-hazard",
+      "environmental-exposure",
+      "geographic-identity",
+      "health-outcome",
+      "operating-capacity",
+      "real-time-state"
+    ]
+  },
+  "required_source_roles": [
+    "climate-hazard",
+    "environmental-exposure",
+    "geographic-identity",
+    "health-outcome",
+    "operating-capacity",
+    "real-time-state"
+  ],
+  "schema_version": "1.0.0",
+  "spatial_unit": "service-area",
+  "suite": "population-health-environmental-exposure",
+  "tags": [
+    "design-only",
+    "forecast",
+    "health.air-quality",
+    "population-health-environmental-exposure",
+    "scenario-library"
+  ],
+  "title": "Forecast air-quality alerts and respiratory service demand",
+  "transportability_risks": [
+    "Pollutant mixtures, indoor infiltration, source profiles, coding, and monitor coverage differ.",
+    "Modeled concentration may not represent personal exposure."
+  ]
+}

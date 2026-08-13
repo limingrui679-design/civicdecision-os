@@ -1,0 +1,1032 @@
+{
+  "claim_boundary": "Design records are not city executions, deployments, adoptions, or impacts.",
+  "items": [
+    {
+      "analysis_modes": [
+        "forecast",
+        "optimization"
+      ],
+      "binding_constraint": "Schedules must respect labor rest rules, facility opening constraints, and activation lead times.",
+      "content_hash": "sha256:9a5167e340b6ee34a0cac4c07790b2dd75c5ab03e45ee4d96cc86ea828abfcf9",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "When should staff shifts, cooling-center hours, and welfare checks expand across a multi-day heat event?",
+      "decision_type": "schedule",
+      "design_id": "scenario.climate.extreme-heat.heat-operations-calendar.v1",
+      "design_order": 6,
+      "evidence_gate": "temporal-alignment",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed"
+      ],
+      "family_id": "climate.extreme-heat",
+      "family_title": "Extreme heat exposure and response",
+      "horizon": "days",
+      "implementation_status": "design-only",
+      "primary_outcome": "hours of forecast demand above staffed capacity",
+      "prohibited_claims": [
+        "Do not treat a proposed roster as an implemented labor plan or verified response time.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "citywide",
+      "suite": "climate-disaster-resilience",
+      "title": "Schedule heat-response shifts and facility hours"
+    },
+    {
+      "analysis_modes": [
+        "forecast",
+        "optimization"
+      ],
+      "binding_constraint": "The schedule must respect crew skills, access permits, traffic windows, and equipment availability.",
+      "content_hash": "sha256:de1a89d3fddfe4b9a136697793d00b34443e3b7d5b155b424e983ffb6abf84dc",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "When should catch basins, culverts, and pumps be inspected or cleared before forecast wet periods?",
+      "decision_type": "schedule",
+      "design_id": "scenario.climate.flood-stormwater.drainage-maintenance-window.v1",
+      "design_order": 14,
+      "evidence_gate": "temporal-alignment",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed"
+      ],
+      "family_id": "climate.flood-stormwater",
+      "family_title": "Flood and stormwater resilience",
+      "horizon": "weeks",
+      "implementation_status": "design-only",
+      "primary_outcome": "high-risk asset-days overdue before major rainfall",
+      "prohibited_claims": [
+        "Do not equate a service request closure with verified maintenance completion.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "asset",
+      "suite": "climate-disaster-resilience",
+      "title": "Schedule drainage inspection and maintenance windows"
+    },
+    {
+      "analysis_modes": [
+        "forecast",
+        "optimization"
+      ],
+      "binding_constraint": "Schedules must comply with occupational, school, accessibility, and emergency communication rules.",
+      "content_hash": "sha256:ce0af3cad9ae12e05b3a01c0db51b788c118c31b93b3aa3d2ad794b304b7e68e",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "When should outdoor activities shift, shorten, move indoors, or resume as air quality changes?",
+      "decision_type": "schedule",
+      "design_id": "scenario.climate.wildfire-smoke.smoke-safe-activities.v1",
+      "design_order": 22,
+      "evidence_gate": "temporal-alignment",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed"
+      ],
+      "family_id": "climate.wildfire-smoke",
+      "family_title": "Wildfire smoke and air-quality resilience",
+      "horizon": "days",
+      "implementation_status": "design-only",
+      "primary_outcome": "scheduled participant-hours above exposure limits",
+      "prohibited_claims": [
+        "Do not treat a schedule rule as proof of participant exposure or compliance.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "facility",
+      "suite": "climate-disaster-resilience",
+      "title": "Schedule outdoor work, school, and public activities during smoke"
+    },
+    {
+      "analysis_modes": [
+        "forecast",
+        "optimization"
+      ],
+      "binding_constraint": "Treatment, conveyance, maintenance, notice, and restriction lead times must be respected.",
+      "content_hash": "sha256:9971f99e71a3b46b51549a8582360ab4838201288faf1128984ce8664991c2b1",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "When should source switching, maintenance, irrigation limits, and restriction stages occur?",
+      "decision_type": "schedule",
+      "design_id": "scenario.climate.drought-water.drought-operations.v1",
+      "design_order": 30,
+      "evidence_gate": "temporal-alignment",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed"
+      ],
+      "family_id": "climate.drought-water",
+      "family_title": "Drought and urban water security",
+      "horizon": "seasonal",
+      "implementation_status": "design-only",
+      "primary_outcome": "days below emergency storage reserve",
+      "prohibited_claims": [
+        "Do not call an optimized calendar an adopted restriction or completed maintenance plan.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "citywide",
+      "suite": "climate-disaster-resilience",
+      "title": "Schedule drought operations, maintenance, and restrictions"
+    },
+    {
+      "analysis_modes": [
+        "forecast",
+        "simulation",
+        "optimization"
+      ],
+      "binding_constraint": "Each phase must satisfy clearance time, transport capacity, worker safety, and public-notice lead time.",
+      "content_hash": "sha256:29f405a613b3625a6894cdb73055a8d6a7e5da9c475d516b5e1263cf781f9201",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "When should ports, roads, services, and evacuation zones transition before a coastal storm?",
+      "decision_type": "schedule",
+      "design_id": "scenario.climate.coastal-storms.coastal-closure-evacuation.v1",
+      "design_order": 38,
+      "evidence_gate": "network-readiness",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "family_id": "climate.coastal-storms",
+      "family_title": "Coastal storms and sea-level adaptation",
+      "horizon": "days",
+      "implementation_status": "design-only",
+      "primary_outcome": "population remaining in risk zones at unsafe conditions",
+      "prohibited_claims": [
+        "Do not call simulated clearance an actual evacuation result or assume universal compliance.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "network",
+      "suite": "climate-disaster-resilience",
+      "title": "Schedule coastal closures and phased evacuation"
+    },
+    {
+      "analysis_modes": [
+        "forecast",
+        "optimization"
+      ],
+      "binding_constraint": "The transit reliability and passenger continuity schedule must respect declared labor, access, sequencing, notice, and completion windows.",
+      "content_hash": "sha256:333b4ad7e23ed6806e1366986fd44ede916bf10a05a841474681edf30557a0ac",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "How should trips and recovery time be scheduled to balance reliability, transfers, and operator rules?",
+      "decision_type": "schedule",
+      "design_id": "scenario.mobility.transit-reliability.timetable-connections.v1",
+      "design_order": 46,
+      "evidence_gate": "temporal-alignment",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed"
+      ],
+      "family_id": "mobility.transit-reliability",
+      "family_title": "Transit reliability and passenger continuity",
+      "horizon": "weeks",
+      "implementation_status": "design-only",
+      "primary_outcome": "passenger-weighted excess wait and missed-connection time",
+      "prohibited_claims": [
+        "Do not call an optimized timetable published, staffed, or operated.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "network",
+      "suite": "mobility-accessibility-operations",
+      "title": "Schedule headways, recovery time, and timed connections"
+    },
+    {
+      "analysis_modes": [
+        "forecast",
+        "optimization"
+      ],
+      "binding_constraint": "The pedestrian safety and universal accessibility schedule must respect declared labor, access, sequencing, notice, and completion windows.",
+      "content_hash": "sha256:58e54b6e6eeb8cf7463036162d87100639f19481d7a6270a4b70c5cf490fa0ee",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "When should inspections and repairs occur to minimize access disruption and coordinate dependencies?",
+      "decision_type": "schedule",
+      "design_id": "scenario.mobility.pedestrian-safety.right-of-way-work.v1",
+      "design_order": 54,
+      "evidence_gate": "temporal-alignment",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed"
+      ],
+      "family_id": "mobility.pedestrian-safety",
+      "family_title": "Pedestrian safety and universal accessibility",
+      "horizon": "weeks",
+      "implementation_status": "design-only",
+      "primary_outcome": "high-consequence barrier-days awaiting verified completion",
+      "prohibited_claims": [
+        "Do not infer repair completion from work-order closure alone.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "asset",
+      "suite": "mobility-accessibility-operations",
+      "title": "Schedule sidewalk, crossing, and signal work"
+    },
+    {
+      "analysis_modes": [
+        "forecast",
+        "optimization"
+      ],
+      "binding_constraint": "The urban freight and curb operations schedule must respect declared labor, access, sequencing, notice, and completion windows.",
+      "content_hash": "sha256:881b750019d6dbd871c4e934364c3f0f2e00fb69c9792bcfcb5a36284115903f",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "When should curb segments switch uses and reserve loading windows across the day?",
+      "decision_type": "schedule",
+      "design_id": "scenario.mobility.freight-curb.loading-reservations.v1",
+      "design_order": 62,
+      "evidence_gate": "temporal-alignment",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed"
+      ],
+      "family_id": "mobility.freight-curb",
+      "family_title": "Urban freight and curb operations",
+      "horizon": "weeks",
+      "implementation_status": "design-only",
+      "primary_outcome": "unserved priority loading and access time",
+      "prohibited_claims": [
+        "Do not describe a generated reservation schedule as adopted, enforced, or used.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "corridor",
+      "suite": "mobility-accessibility-operations",
+      "title": "Schedule loading reservations and curb regimes"
+    },
+    {
+      "analysis_modes": [
+        "forecast",
+        "optimization"
+      ],
+      "binding_constraint": "The evacuation and emergency mobility schedule must respect declared labor, access, sequencing, notice, and completion windows.",
+      "content_hash": "sha256:b78921e1ed4a51e29624ff131bbf966e43adaf9d958ee987d60a39aed96d267b",
+      "current_readiness": "reference-implemented",
+      "decision_question": "When should zones, transit, assisted transport, control points, and responder routes activate?",
+      "decision_type": "schedule",
+      "design_id": "scenario.mobility.emergency-mobility.phased-evacuation.v1",
+      "design_order": 70,
+      "evidence_gate": "temporal-alignment",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed"
+      ],
+      "existing_template_ref": "deep.mobility.real-time-reroute.v1",
+      "family_id": "mobility.emergency-mobility",
+      "family_title": "Evacuation and emergency mobility",
+      "horizon": "weeks",
+      "implementation_status": "reference-implemented",
+      "primary_outcome": "people uncleared when route safety thresholds are crossed",
+      "prohibited_claims": [
+        "Do not call an optimized evacuation timetable an issued order or completed movement.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "network",
+      "suite": "mobility-accessibility-operations",
+      "title": "Schedule phased multimodal evacuation"
+    },
+    {
+      "analysis_modes": [
+        "forecast",
+        "optimization"
+      ],
+      "binding_constraint": "The active mobility network and micromobility schedule must respect declared labor, access, sequencing, notice, and completion windows.",
+      "content_hash": "sha256:2ef24b3a1075886605c188ac65f04e749e220d8360b3e362f79b0883bd1f57a6",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "When should vehicles be rebalanced, charged, inspected, and returned to service?",
+      "decision_type": "schedule",
+      "design_id": "scenario.mobility.active-mobility.fleet-rebalancing.v1",
+      "design_order": 78,
+      "evidence_gate": "temporal-alignment",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed"
+      ],
+      "family_id": "mobility.active-mobility",
+      "family_title": "Active mobility network and micromobility",
+      "horizon": "weeks",
+      "implementation_status": "design-only",
+      "primary_outcome": "station-hours outside vehicle availability targets",
+      "prohibited_claims": [
+        "Do not call an optimized rebalancing route executed or a work order verified complete.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "network",
+      "suite": "mobility-accessibility-operations",
+      "title": "Schedule shared-mobility rebalancing and maintenance"
+    },
+    {
+      "analysis_modes": [
+        "forecast",
+        "optimization"
+      ],
+      "binding_constraint": "The heat-health surveillance and prevention schedule must respect declared labor, access, sequencing, notice, and completion windows.",
+      "content_hash": "sha256:12609f39c3e55ef7ac249920634bfea34fca359d2a0343e4ad5ff11d91b5f097",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "When should surveillance refresh, outreach, clinical staffing, and escalation thresholds activate?",
+      "decision_type": "schedule",
+      "design_id": "scenario.health.heat-health.heat-health-surveillance.v1",
+      "design_order": 86,
+      "evidence_gate": "temporal-alignment",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed"
+      ],
+      "family_id": "health.heat-health",
+      "family_title": "Heat-health surveillance and prevention",
+      "horizon": "weeks",
+      "implementation_status": "design-only",
+      "primary_outcome": "hours of high-risk conditions without active health response",
+      "prohibited_claims": [
+        "Do not call an escalation schedule activated or a health response delivered.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "citywide",
+      "suite": "population-health-environmental-exposure",
+      "title": "Schedule heat-health surveillance and response escalation"
+    },
+    {
+      "analysis_modes": [
+        "forecast",
+        "optimization"
+      ],
+      "binding_constraint": "The air-quality exposure and respiratory health schedule must respect declared labor, access, sequencing, notice, and completion windows.",
+      "content_hash": "sha256:663e6cb1a54f8d5cb9e303d3164449f65592fba13ec75c2abc83956bf57407e3",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "When should monitoring review, alerts, outreach, indoor protection, and clinical surge activate?",
+      "decision_type": "schedule",
+      "design_id": "scenario.health.air-quality.air-health-response.v1",
+      "design_order": 94,
+      "evidence_gate": "temporal-alignment",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed"
+      ],
+      "family_id": "health.air-quality",
+      "family_title": "Air-quality exposure and respiratory health",
+      "horizon": "weeks",
+      "implementation_status": "design-only",
+      "primary_outcome": "high-exposure hours without active protection measures",
+      "prohibited_claims": [
+        "Do not call an alert schedule issued, received, understood, or acted upon.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "citywide",
+      "suite": "population-health-environmental-exposure",
+      "title": "Schedule air-quality alerts and health response"
+    },
+    {
+      "analysis_modes": [
+        "forecast",
+        "optimization"
+      ],
+      "binding_constraint": "The infectious-disease public-health operations schedule must respect declared labor, access, sequencing, notice, and completion windows.",
+      "content_hash": "sha256:3c329019d78f38abc595af9a0f35b2d77aefe4e1916eabca9787cce53015e866",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "When should appointments, mobile services, laboratory batches, and outreach shifts operate?",
+      "decision_type": "schedule",
+      "design_id": "scenario.health.infectious-operations.clinic-lab-calendar.v1",
+      "design_order": 102,
+      "evidence_gate": "temporal-alignment",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed"
+      ],
+      "family_id": "health.infectious-operations",
+      "family_title": "Infectious-disease public-health operations",
+      "horizon": "weeks",
+      "implementation_status": "design-only",
+      "primary_outcome": "priority demand outside service and turnaround targets",
+      "prohibited_claims": [
+        "Do not call a schedule operated, appointments completed, or specimens processed.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "network",
+      "suite": "population-health-environmental-exposure",
+      "title": "Schedule clinics, laboratories, and outreach teams"
+    },
+    {
+      "analysis_modes": [
+        "forecast",
+        "optimization"
+      ],
+      "binding_constraint": "The food access and environmental health schedule must respect declared labor, access, sequencing, notice, and completion windows.",
+      "content_hash": "sha256:c04c8654520d3bb2ce418a87fe720e062c08856f164033fad4427c3c4f997794",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "When should risk-based inspections, follow-ups, mobile markets, and benefit navigation operate?",
+      "decision_type": "schedule",
+      "design_id": "scenario.health.food-environment.inspection-mobile-service.v1",
+      "design_order": 110,
+      "evidence_gate": "temporal-alignment",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed"
+      ],
+      "family_id": "health.food-environment",
+      "family_title": "Food access and environmental health",
+      "horizon": "weeks",
+      "implementation_status": "design-only",
+      "primary_outcome": "priority case-days outside response targets",
+      "prohibited_claims": [
+        "Do not call a scheduled visit completed, a violation confirmed, or assistance received.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "network",
+      "suite": "population-health-environmental-exposure",
+      "title": "Schedule inspections and mobile food services"
+    },
+    {
+      "analysis_modes": [
+        "forecast",
+        "optimization"
+      ],
+      "binding_constraint": "The housing habitability and code operations schedule must respect declared labor, access, sequencing, notice, and completion windows.",
+      "content_hash": "sha256:25e171b007038c833d002bb5fc676b5ffd233defbcc07b5e01a5d1cc95a57f58",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "When should initial inspections, rechecks, legal notices, repairs, and tenant support occur?",
+      "decision_type": "schedule",
+      "design_id": "scenario.housing.habitability-code.inspection-enforcement-calendar.v1",
+      "design_order": 118,
+      "evidence_gate": "temporal-alignment",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed"
+      ],
+      "family_id": "housing.habitability-code",
+      "family_title": "Housing habitability and code operations",
+      "horizon": "weeks",
+      "implementation_status": "design-only",
+      "primary_outcome": "priority case-days beyond lawful response deadlines",
+      "prohibited_claims": [
+        "Do not infer completed inspection, notice, repair, or safe occupancy from a scheduled task.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "asset",
+      "suite": "housing-land-use-regeneration",
+      "title": "Schedule housing inspections, follow-ups, and repairs"
+    },
+    {
+      "analysis_modes": [
+        "forecast",
+        "optimization"
+      ],
+      "binding_constraint": "The homelessness prevention and housing stability schedule must respect declared labor, access, sequencing, notice, and completion windows.",
+      "content_hash": "sha256:d74b686ac65ee96890ffd01d59f6226c93c35c3d7cf828d296330fc4fe1b3df4",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "When should intake, document recovery, legal action, payment, mediation, and follow-up occur?",
+      "decision_type": "schedule",
+      "design_id": "scenario.housing.homelessness-prevention.prevention-caseflow.v1",
+      "design_order": 126,
+      "evidence_gate": "temporal-alignment",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed"
+      ],
+      "family_id": "housing.homelessness-prevention",
+      "family_title": "Homelessness prevention and housing stability",
+      "horizon": "weeks",
+      "implementation_status": "design-only",
+      "primary_outcome": "urgent household-days beyond actionable deadlines",
+      "prohibited_claims": [
+        "Do not call scheduled case actions completed, legally sufficient, or successful.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "service-area",
+      "suite": "housing-land-use-regeneration",
+      "title": "Schedule prevention casework and legal deadlines"
+    },
+    {
+      "analysis_modes": [
+        "forecast",
+        "optimization"
+      ],
+      "binding_constraint": "The affordable housing siting and preservation schedule must respect declared labor, access, sequencing, notice, and completion windows.",
+      "content_hash": "sha256:ecd3df03fc37a6946797e4e3b122fec540b807215aee00ed5882105c91bdee57",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "When should acquisition, resident protection, design, entitlement, finance, construction, and compliance actions occur?",
+      "decision_type": "schedule",
+      "design_id": "scenario.housing.affordable-supply.housing-pipeline-sequence.v1",
+      "design_order": 134,
+      "evidence_gate": "temporal-alignment",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed"
+      ],
+      "family_id": "housing.affordable-supply",
+      "family_title": "Affordable housing siting and preservation",
+      "horizon": "weeks",
+      "implementation_status": "design-only",
+      "primary_outcome": "affordable home-years lost to avoidable project delay",
+      "prohibited_claims": [
+        "Do not call a project schedule approved, financed, under construction, or complete.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "parcel",
+      "suite": "housing-land-use-regeneration",
+      "title": "Schedule affordable-housing pipeline and preservation actions"
+    },
+    {
+      "analysis_modes": [
+        "forecast",
+        "optimization"
+      ],
+      "binding_constraint": "The land use, regeneration, and neighborhood change schedule must respect declared labor, access, sequencing, notice, and completion windows.",
+      "content_hash": "sha256:f99da621858b01ccb965df0472aa52b46d575eff4e72cdc8d1ad26b3cca1c684",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "When should tenant protections, infrastructure, affordable space, construction, and public assets be delivered?",
+      "decision_type": "schedule",
+      "design_id": "scenario.housing.land-use-regeneration.regeneration-phasing.v1",
+      "design_order": 142,
+      "evidence_gate": "temporal-alignment",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed"
+      ],
+      "family_id": "housing.land-use-regeneration",
+      "family_title": "Land use, regeneration, and neighborhood change",
+      "horizon": "weeks",
+      "implementation_status": "design-only",
+      "primary_outcome": "resident- and business-days exposed before required protections",
+      "prohibited_claims": [
+        "Do not call a proposed phase funded, permitted, contractually secured, or completed.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "neighborhood",
+      "suite": "housing-land-use-regeneration",
+      "title": "Schedule regeneration infrastructure and protections"
+    },
+    {
+      "analysis_modes": [
+        "forecast",
+        "optimization"
+      ],
+      "binding_constraint": "The 311 and public-service demand operations schedule must respect declared labor, access, sequencing, notice, and completion windows.",
+      "content_hash": "sha256:57c241c3aafb2dc622c24b41da4cf040c5ac6d23d4d996179ba8f9f18a18a78f",
+      "current_readiness": "reference-implemented",
+      "decision_question": "When should channel, supervisor, specialist, and field capacity expand or shift with demand?",
+      "decision_type": "schedule",
+      "design_id": "scenario.public-service.demand.seasonal-service-staffing.v1",
+      "design_order": 150,
+      "evidence_gate": "temporal-alignment",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed"
+      ],
+      "existing_template_ref": "deep.public-service.seasonal-staffing.v1",
+      "family_id": "public-service.demand",
+      "family_title": "311 and public-service demand operations",
+      "horizon": "weeks",
+      "implementation_status": "reference-implemented",
+      "primary_outcome": "request-hours above qualified handling capacity",
+      "prohibited_claims": [
+        "Do not call a proposed staffing roster adopted, worked, productive, or sufficient.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "citywide",
+      "suite": "public-service-operations",
+      "title": "Schedule seasonal public-service staffing"
+    },
+    {
+      "analysis_modes": [
+        "forecast",
+        "optimization"
+      ],
+      "binding_constraint": "The sanitation, waste, and street cleanliness schedule must respect declared labor, access, sequencing, notice, and completion windows.",
+      "content_hash": "sha256:1e1ddf13328bb3f0aac2278e8b0d7c54fbb554f51ce516b340a6cfd86ce16bce",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "When should routes, inspections, container service, and fleet maintenance occur?",
+      "decision_type": "schedule",
+      "design_id": "scenario.public-service.sanitation.collection-cleaning-routes.v1",
+      "design_order": 158,
+      "evidence_gate": "temporal-alignment",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed"
+      ],
+      "family_id": "public-service.sanitation",
+      "family_title": "Sanitation, waste, and street cleanliness",
+      "horizon": "weeks",
+      "implementation_status": "design-only",
+      "primary_outcome": "priority service-hours outside collection and cleaning targets",
+      "prohibited_claims": [
+        "Do not call a generated route driven or a scheduled task verified complete.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "network",
+      "suite": "public-service-operations",
+      "title": "Schedule collection, cleaning, inspection, and maintenance routes"
+    },
+    {
+      "analysis_modes": [
+        "forecast",
+        "optimization"
+      ],
+      "binding_constraint": "The emergency response readiness and allocation schedule must respect declared labor, access, sequencing, notice, and completion windows.",
+      "content_hash": "sha256:a66d889dfe5ebb9613d869d6ccb136bcaf2a2b228918dd5775b15aa376322c65",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "When should shifts, standby posts, maintenance, training, and mutual-aid coverage operate?",
+      "decision_type": "schedule",
+      "design_id": "scenario.public-service.emergency-response.readiness-coverage.v1",
+      "design_order": 166,
+      "evidence_gate": "temporal-alignment",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed"
+      ],
+      "family_id": "public-service.emergency-response",
+      "family_title": "Emergency response readiness and allocation",
+      "horizon": "weeks",
+      "implementation_status": "design-only",
+      "primary_outcome": "priority demand-hours below minimum deployable coverage",
+      "prohibited_claims": [
+        "Do not call a proposed readiness roster staffed, safe, negotiated, or operated.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "network",
+      "suite": "public-service-operations",
+      "title": "Schedule emergency readiness and coverage"
+    },
+    {
+      "analysis_modes": [
+        "forecast",
+        "optimization"
+      ],
+      "binding_constraint": "The digital public access and administrative service delivery schedule must respect declared labor, access, sequencing, notice, and completion windows.",
+      "content_hash": "sha256:091b71de68dc36dea39d7a00370761f76d5f8ebeba40934ae3ce97851d37f347",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "When should appointments, callbacks, interpreters, specialists, and assisted access operate?",
+      "decision_type": "schedule",
+      "design_id": "scenario.public-service.digital-access.appointments-support.v1",
+      "design_order": 174,
+      "evidence_gate": "temporal-alignment",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed"
+      ],
+      "family_id": "public-service.digital-access",
+      "family_title": "Digital public access and administrative service delivery",
+      "horizon": "weeks",
+      "implementation_status": "design-only",
+      "primary_outcome": "eligible journey-hours outside service targets",
+      "prohibited_claims": [
+        "Do not call a scheduled appointment attended, completed, eligible, or successful.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "service-area",
+      "suite": "public-service-operations",
+      "title": "Schedule appointments and multichannel support"
+    },
+    {
+      "analysis_modes": [
+        "forecast",
+        "optimization"
+      ],
+      "binding_constraint": "The road and bridge asset management schedule must respect declared labor, access, sequencing, notice, and completion windows.",
+      "content_hash": "sha256:5963f6c5a67bd535ba39778f9a580ef3c95d951d8de4f21398fa84ad29d780b7",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "When should inspections and treatments occur given condition, traffic, weather, dependencies, and permits?",
+      "decision_type": "schedule",
+      "design_id": "scenario.infrastructure.roads-bridges.maintenance-construction.v1",
+      "design_order": 182,
+      "evidence_gate": "temporal-alignment",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed"
+      ],
+      "family_id": "infrastructure.roads-bridges",
+      "family_title": "Road and bridge asset management",
+      "horizon": "weeks",
+      "implementation_status": "design-only",
+      "primary_outcome": "high-consequence asset-days beyond treatment thresholds",
+      "prohibited_claims": [
+        "Do not call a scheduled inspection or treatment completed or the asset safe.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "network",
+      "suite": "infrastructure-finance-asset-risk",
+      "title": "Schedule inspections, maintenance, and construction windows"
+    },
+    {
+      "analysis_modes": [
+        "forecast",
+        "optimization"
+      ],
+      "binding_constraint": "The water and wastewater infrastructure schedule must respect declared labor, access, sequencing, notice, and completion windows.",
+      "content_hash": "sha256:6cde2fb7e25945357ce11b99043874d86a8e69cfb49bed348d7da6c4431990c7",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "When should isolation, inspection, cleaning, repair, renewal, sampling, and process work occur?",
+      "decision_type": "schedule",
+      "design_id": "scenario.infrastructure.water-wastewater.utility-maintenance.v1",
+      "design_order": 190,
+      "evidence_gate": "temporal-alignment",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed"
+      ],
+      "family_id": "infrastructure.water-wastewater",
+      "family_title": "Water and wastewater infrastructure",
+      "horizon": "weeks",
+      "implementation_status": "design-only",
+      "primary_outcome": "critical asset-days beyond maintenance and compliance windows",
+      "prohibited_claims": [
+        "Do not call scheduled utility work complete, compliant, or safe.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "network",
+      "suite": "infrastructure-finance-asset-risk",
+      "title": "Schedule utility inspection, maintenance, and renewal"
+    },
+    {
+      "analysis_modes": [
+        "forecast",
+        "optimization"
+      ],
+      "binding_constraint": "The municipal energy and building decarbonization schedule must respect declared labor, access, sequencing, notice, and completion windows.",
+      "content_hash": "sha256:81848ed7f779eabf3c3168799644afdf67da238090feff08c982ac589dd6db9e",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "When should audits, design, procurement, shutdowns, installation, commissioning, and measurement occur?",
+      "decision_type": "schedule",
+      "design_id": "scenario.infrastructure.energy-buildings.decarbonization-projects.v1",
+      "design_order": 198,
+      "evidence_gate": "temporal-alignment",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed"
+      ],
+      "family_id": "infrastructure.energy-buildings",
+      "family_title": "Municipal energy and building decarbonization",
+      "horizon": "weeks",
+      "implementation_status": "design-only",
+      "primary_outcome": "project-days beyond feasible emissions-reduction milestones",
+      "prohibited_claims": [
+        "Do not call a scheduled project procured, installed, commissioned, or operational.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "asset",
+      "suite": "infrastructure-finance-asset-risk",
+      "title": "Schedule building decarbonization and commissioning"
+    },
+    {
+      "analysis_modes": [
+        "forecast",
+        "optimization"
+      ],
+      "binding_constraint": "The capital portfolio and municipal finance schedule must respect declared labor, access, sequencing, notice, and completion windows.",
+      "content_hash": "sha256:dff72abe16f76f38d7a1b04f8919976907d8ce27f8d173d2a6d12971b85b99da",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "When should design, permitting, procurement, utility coordination, construction, and commissioning occur?",
+      "decision_type": "schedule",
+      "design_id": "scenario.infrastructure.capital-finance.capital-delivery.v1",
+      "design_order": 206,
+      "evidence_gate": "temporal-alignment",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed"
+      ],
+      "family_id": "infrastructure.capital-finance",
+      "family_title": "Capital portfolio and municipal finance",
+      "horizon": "weeks",
+      "implementation_status": "design-only",
+      "primary_outcome": "priority project-days beyond service and compliance milestones",
+      "prohibited_claims": [
+        "Do not call a project schedule authorized, contracted, under construction, or complete.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "asset",
+      "suite": "infrastructure-finance-asset-risk",
+      "title": "Schedule capital procurement and delivery"
+    },
+    {
+      "analysis_modes": [
+        "forecast",
+        "optimization"
+      ],
+      "binding_constraint": "The distributional public-service equity schedule must respect declared labor, access, sequencing, notice, and completion windows.",
+      "content_hash": "sha256:b9ca7873d3c718e475b018112b4919840f21f57cee8c8b14f4c04bcd0907ac74",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "When should access repairs, outreach, translation, staffing, audits, and follow-up milestones occur?",
+      "decision_type": "schedule",
+      "design_id": "scenario.equity.distributional-service.equity-remediation.v1",
+      "design_order": 214,
+      "evidence_gate": "temporal-alignment",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed"
+      ],
+      "family_id": "equity.distributional-service",
+      "family_title": "Distributional public-service equity",
+      "horizon": "weeks",
+      "implementation_status": "design-only",
+      "primary_outcome": "person-days below verified minimum service standards",
+      "prohibited_claims": [
+        "Do not call scheduled remediation implemented, compliant, accepted, or effective.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "service-area",
+      "suite": "behavioral-policy-equity",
+      "title": "Schedule equity remediation and service reviews"
+    },
+    {
+      "analysis_modes": [
+        "forecast",
+        "optimization"
+      ],
+      "binding_constraint": "The public participation and risk communication schedule must respect declared labor, access, sequencing, notice, and completion windows.",
+      "content_hash": "sha256:9f2d3441212ed9d9b9ed9f33b00a464029bf17b70721314edfbd4dfe0a800ef2",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "When should notice, translation, deliberation, response, revision, decision, and follow-up occur?",
+      "decision_type": "schedule",
+      "design_id": "scenario.equity.participation-communication.engagement-feedback-cycle.v1",
+      "design_order": 222,
+      "evidence_gate": "temporal-alignment",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed"
+      ],
+      "family_id": "equity.participation-communication",
+      "family_title": "Public participation and risk communication",
+      "horizon": "weeks",
+      "implementation_status": "design-only",
+      "primary_outcome": "affected person-days without timely participation or response",
+      "prohibited_claims": [
+        "Do not call a scheduled consultation conducted, representative, considered, or closed.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "citywide",
+      "suite": "behavioral-policy-equity",
+      "title": "Schedule participation, communication, and feedback closure"
+    },
+    {
+      "analysis_modes": [
+        "forecast",
+        "optimization"
+      ],
+      "binding_constraint": "The compliance, incentives, and behavioral policy schedule must respect declared labor, access, sequencing, notice, and completion windows.",
+      "content_hash": "sha256:0fa695875a333d25662c95db41e7cefe4e0305451a7b1314028453b9d0468839",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "When should notice, support, cure periods, inspection, decision, appeal, and follow-up occur?",
+      "decision_type": "schedule",
+      "design_id": "scenario.equity.compliance-incentives.notice-assistance-inspection.v1",
+      "design_order": 230,
+      "evidence_gate": "temporal-alignment",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed"
+      ],
+      "family_id": "equity.compliance-incentives",
+      "family_title": "Compliance, incentives, and behavioral policy",
+      "horizon": "weeks",
+      "implementation_status": "design-only",
+      "primary_outcome": "case-days outside lawful notice, assistance, and review windows",
+      "prohibited_claims": [
+        "Do not call scheduled notice delivered, understood, lawful, cured, inspected, or adjudicated.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "service-area",
+      "suite": "behavioral-policy-equity",
+      "title": "Schedule notices, assistance, inspections, and appeals"
+    },
+    {
+      "analysis_modes": [
+        "forecast",
+        "optimization"
+      ],
+      "binding_constraint": "The algorithmic decision support and governance schedule must respect declared labor, access, sequencing, notice, and completion windows.",
+      "content_hash": "sha256:bf9a862d2ef185fd79c9ed798badd00d01d6c19c2eb2db5c42175848f25af3a5",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "When should pre-deployment review, monitoring, drift checks, incident response, recertification, and sunset occur?",
+      "decision_type": "schedule",
+      "design_id": "scenario.equity.algorithmic-governance.audit-monitoring-cycle.v1",
+      "design_order": 238,
+      "evidence_gate": "temporal-alignment",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed"
+      ],
+      "family_id": "equity.algorithmic-governance",
+      "family_title": "Algorithmic decision support and governance",
+      "horizon": "weeks",
+      "implementation_status": "design-only",
+      "primary_outcome": "high-impact system-days outside verified governance controls",
+      "prohibited_claims": [
+        "Do not call a scheduled audit performed, independent, passed, certified, or remediated.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "asset",
+      "suite": "behavioral-policy-equity",
+      "title": "Schedule algorithmic audit, monitoring, review, and sunset"
+    }
+  ],
+  "kind": "scenario-designs.decision-type.schedule",
+  "record_count": 30,
+  "schema_version": "1.0.0"
+}

@@ -1,0 +1,164 @@
+{
+  "affected_system": "urban water supply, distribution, and conservation system",
+  "alternatives": [
+    "advance planned maintenance before low-storage periods",
+    "trigger restrictions from conservative storage bands",
+    "jointly schedule sources, maintenance, and staged conservation"
+  ],
+  "analysis_modes": [
+    "forecast",
+    "optimization"
+  ],
+  "assumptions": [
+    "Supply, demand, leakage, and storage balances use reconciled units and meter coverage.",
+    "Restriction response and climate sequences are observed inputs or labeled scenarios.",
+    "All alternatives, capacities, costs, effects, thresholds, and failure scenarios are proposed until bound to evidence."
+  ],
+  "baseline": "The utility follows its ordinary seasonal operations calendar.",
+  "city_bindings": [],
+  "constraints": [
+    {
+      "binding": true,
+      "constraint_id": "scenario.climate.drought-water.drought-operations.v1.constraint.binding",
+      "description": "Treatment, conveyance, maintenance, notice, and restriction lead times must be respected.",
+      "hard": true,
+      "kind": "time",
+      "required_source_roles": [
+        "asset-inventory",
+        "climate-hazard",
+        "legal-regulatory",
+        "operating-capacity",
+        "real-time-state",
+        "service-schedule"
+      ]
+    },
+    {
+      "binding": false,
+      "constraint_id": "scenario.climate.drought-water.drought-operations.v1.constraint.evidence-scope",
+      "description": "Every released metric must retain evidence type, source lineage, geography, time, assumptions, and uncertainty.",
+      "hard": true,
+      "kind": "technical",
+      "required_source_roles": [
+        "asset-inventory"
+      ]
+    },
+    {
+      "binding": false,
+      "constraint_id": "scenario.climate.drought-water.drought-operations.v1.constraint.decision-authority",
+      "description": "No analytical output may bypass lawful authority, accountable human review, or an applicable appeal process.",
+      "hard": true,
+      "kind": "regulatory",
+      "required_source_roles": [
+        "asset-inventory"
+      ]
+    }
+  ],
+  "current_readiness": "blocked-missing-source",
+  "decision_cadence": "recompiled at each planning cycle and after material evidence change",
+  "decision_owner": "water utility general manager and drought-response lead",
+  "decision_question": "When should source switching, maintenance, irrigation limits, and restriction stages occur?",
+  "decision_type": "schedule",
+  "design_id": "scenario.climate.drought-water.drought-operations.v1",
+  "design_order": 30,
+  "design_signature": "sha256:d2530bc18af28eb610f7b80fb1f1543aeb535fc7ea4141b08ccb1ccace45b8b5",
+  "evidence_requirements": [
+    "estimated",
+    "observed",
+    "optimized",
+    "proposed"
+  ],
+  "family_id": "climate.drought-water",
+  "family_title": "Drought and urban water security",
+  "horizon": "seasonal",
+  "implementation_status": "design-only",
+  "independence_key": {
+    "binding_constraint": "Treatment, conveyance, maintenance, notice, and restriction lead times must be respected.",
+    "decision_object": "drought operating and restriction calendar",
+    "evidence_gate": "Storage, inflow, demand, maintenance, legal notice, and restriction records share effective dates and update cadence.",
+    "horizon": "seasonal",
+    "intervention_mechanism": "storage-triggered multi-period operations scheduling",
+    "primary_outcome": "days below emergency storage reserve",
+    "spatial_unit": "citywide"
+  },
+  "intended_claim": "A versioned schedule design for comparing declared alternatives affecting drought operating and restriction calendar, conditional on its evidence gate.",
+  "limitations": [
+    "This library record has no city binding and therefore reports no local input, output, or recommendation.",
+    "Readiness describes explicit source and method gates; it does not certify implementation feasibility.",
+    "External domain, legal, community, security, and operational review remains outside this design artifact."
+  ],
+  "method_claimed": false,
+  "objectives": [
+    {
+      "evidence_type": "estimated",
+      "metric": "days below emergency storage reserve",
+      "objective_id": "scenario.climate.drought-water.drought-operations.v1.objective.primary",
+      "primary": true,
+      "sense": "minimize",
+      "unit": "days"
+    },
+    {
+      "evidence_type": "estimated",
+      "metric": "distributional gap in days below emergency storage reserve",
+      "objective_id": "scenario.climate.drought-water.drought-operations.v1.objective.equity",
+      "primary": false,
+      "sense": "minimize",
+      "unit": "days"
+    },
+    {
+      "evidence_type": "observed",
+      "metric": "decision claims with complete evidence lineage",
+      "objective_id": "scenario.climate.drought-water.drought-operations.v1.objective.traceability",
+      "primary": false,
+      "sense": "maximize",
+      "unit": "percent"
+    }
+  ],
+  "prohibited_claims": [
+    "Do not call an optimized calendar an adopted restriction or completed maintenance plan.",
+    "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+    "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+    "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+  ],
+  "release_gate": {
+    "failure_release": "Release an explicit insufficient-evidence record naming missing sources, failed diagnostics, prohibited claims, and the next validation action.",
+    "failure_status": "insufficient-evidence",
+    "gate_id": "scenario.climate.drought-water.drought-operations.v1.gate.release",
+    "gate_type": "temporal-alignment",
+    "pass_condition": "Storage, inflow, demand, maintenance, legal notice, and restriction records share effective dates and update cadence.",
+    "required_evidence_types": [
+      "observed",
+      "proposed"
+    ],
+    "required_source_roles": [
+      "asset-inventory",
+      "climate-hazard",
+      "legal-regulatory",
+      "operating-capacity",
+      "real-time-state",
+      "service-schedule"
+    ]
+  },
+  "required_source_roles": [
+    "asset-inventory",
+    "climate-hazard",
+    "legal-regulatory",
+    "operating-capacity",
+    "real-time-state",
+    "service-schedule"
+  ],
+  "schema_version": "1.0.0",
+  "spatial_unit": "citywide",
+  "suite": "climate-disaster-resilience",
+  "tags": [
+    "climate-disaster-resilience",
+    "climate.drought-water",
+    "design-only",
+    "scenario-library",
+    "schedule"
+  ],
+  "title": "Schedule drought operations, maintenance, and restrictions",
+  "transportability_risks": [
+    "Water rights, source portfolios, pricing, metering, leakage, and climate regimes differ.",
+    "Household conservation behavior may not transfer across tariff and tenure systems."
+  ]
+}

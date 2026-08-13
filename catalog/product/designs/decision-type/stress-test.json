@@ -1,0 +1,1089 @@
+{
+  "claim_boundary": "Design records are not city executions, deployments, adoptions, or impacts.",
+  "items": [
+    {
+      "analysis_modes": [
+        "forecast",
+        "simulation",
+        "optimization"
+      ],
+      "binding_constraint": "Critical cooling and welfare-check functions must remain above the declared minimum continuity level.",
+      "content_hash": "sha256:ab71f9c6b07d04e466da5895d08e6b90c6065eb00fe52e628230435e9caafc33",
+      "current_readiness": "reference-implemented",
+      "decision_question": "Which continuity portfolio remains feasible under prolonged heat, power loss, and service-demand surge assumptions?",
+      "decision_type": "stress-test",
+      "design_id": "scenario.climate.extreme-heat.compound-heat-continuity.v1",
+      "design_order": 7,
+      "evidence_gate": "source-lineage",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "existing_template_ref": "deep.climate.heat-service-surge.v1",
+      "family_id": "climate.extreme-heat",
+      "family_title": "Extreme heat exposure and response",
+      "horizon": "weeks",
+      "implementation_status": "reference-implemented",
+      "primary_outcome": "scenario-weighted hours of critical service interruption",
+      "prohibited_claims": [
+        "Do not claim that simulated outages caused observed requests or that a stress test predicts an actual disaster.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "citywide",
+      "suite": "climate-disaster-resilience",
+      "title": "Stress-test service continuity during compound heat"
+    },
+    {
+      "analysis_modes": [
+        "forecast",
+        "simulation",
+        "optimization"
+      ],
+      "binding_constraint": "Critical drainage and emergency functions must stay above the minimum continuity threshold in severe scenarios.",
+      "content_hash": "sha256:f4bad65682f30a9d689692063173bbee44e2ef205839f23ab8165dc5ccc761f2",
+      "current_readiness": "reference-implemented",
+      "decision_question": "Which continuity strategy remains viable across rainfall, tide, blockage, outage, and demand-surge scenarios?",
+      "decision_type": "stress-test",
+      "design_id": "scenario.climate.flood-stormwater.compound-rainfall-continuity.v1",
+      "design_order": 15,
+      "evidence_gate": "source-lineage",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "existing_template_ref": "deep.climate.rainfall-continuity.v1",
+      "family_id": "climate.flood-stormwater",
+      "family_title": "Flood and stormwater resilience",
+      "horizon": "weeks",
+      "implementation_status": "reference-implemented",
+      "primary_outcome": "scenario-weighted critical service interruption",
+      "prohibited_claims": [
+        "Do not claim precipitation caused observed requests or that assumed flood losses were observed.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "citywide",
+      "suite": "climate-disaster-resilience",
+      "title": "Stress-test continuity under compound rainfall and outage"
+    },
+    {
+      "analysis_modes": [
+        "simulation",
+        "optimization"
+      ],
+      "binding_constraint": "Minimum clean-air coverage for high-risk populations must hold under supply and facility failure scenarios.",
+      "content_hash": "sha256:7d5691c58e5217d6802854e7cf92675dbb9d4945e96d189c8163ddc7b8e754fc",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Can clean-air facilities, filters, staff, and communications sustain a multi-week smoke episode?",
+      "decision_type": "stress-test",
+      "design_id": "scenario.climate.wildfire-smoke.prolonged-smoke-continuity.v1",
+      "design_order": 23,
+      "evidence_gate": "external-validation",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "family_id": "climate.wildfire-smoke",
+      "family_title": "Wildfire smoke and air-quality resilience",
+      "horizon": "weeks",
+      "implementation_status": "design-only",
+      "primary_outcome": "scenario-weighted days below minimum clean-air coverage",
+      "prohibited_claims": [
+        "Do not present assumed smoke duration or equipment failure as a forecast event.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "citywide",
+      "suite": "climate-disaster-resilience",
+      "title": "Stress-test prolonged smoke-response continuity"
+    },
+    {
+      "analysis_modes": [
+        "forecast",
+        "simulation",
+        "optimization"
+      ],
+      "binding_constraint": "Essential-service reliability must exceed the declared threshold across severe climate and asset-failure scenarios.",
+      "content_hash": "sha256:d2929161406d7f42dd93b55908281b58b7767ace0ee4e4c1acc5dfaf00a6e861",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Which portfolio sustains essential supply across prolonged drought, infrastructure failure, and demand uncertainty?",
+      "decision_type": "stress-test",
+      "design_id": "scenario.climate.drought-water.multi-year-water-security.v1",
+      "design_order": 31,
+      "evidence_gate": "external-validation",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "family_id": "climate.drought-water",
+      "family_title": "Drought and urban water security",
+      "horizon": "multi-year",
+      "implementation_status": "design-only",
+      "primary_outcome": "scenario-weighted essential shortage volume",
+      "prohibited_claims": [
+        "Do not present synthetic drought sequences as forecasts or assumed project yield as observed supply.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "citywide",
+      "suite": "climate-disaster-resilience",
+      "title": "Stress-test multi-year urban water security"
+    },
+    {
+      "analysis_modes": [
+        "forecast",
+        "simulation",
+        "optimization"
+      ],
+      "binding_constraint": "Life-safety and critical-service thresholds must hold under severe correlated failure scenarios.",
+      "content_hash": "sha256:9cbd1f90fb7ce0f609ae8bff881184840709e3ad7b3ff7ccbdc654d25b63aa96",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Which adaptation and continuity strategy survives surge, rain, wind, power, access, and supply-chain failures?",
+      "decision_type": "stress-test",
+      "design_id": "scenario.climate.coastal-storms.compound-coastal-failure.v1",
+      "design_order": 39,
+      "evidence_gate": "external-validation",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "family_id": "climate.coastal-storms",
+      "family_title": "Coastal storms and sea-level adaptation",
+      "horizon": "weeks",
+      "implementation_status": "design-only",
+      "primary_outcome": "scenario-weighted critical service outage duration",
+      "prohibited_claims": [
+        "Do not describe synthetic compound failures as forecast probabilities without calibrated dependence evidence.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "network",
+      "suite": "climate-disaster-resilience",
+      "title": "Stress-test coastal systems under compound failure"
+    },
+    {
+      "analysis_modes": [
+        "forecast",
+        "simulation",
+        "optimization"
+      ],
+      "binding_constraint": "The transit reliability and passenger continuity stress test must respect declared minimum continuity and safety thresholds across severe scenarios.",
+      "content_hash": "sha256:e36a2cf7d656573958c8d2d4d4d8f5e273f75faffa417f7e589be7668143d248",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Which operating plan preserves essential access under vehicle, infrastructure, weather, and staffing failures?",
+      "decision_type": "stress-test",
+      "design_id": "scenario.mobility.transit-reliability.network-disruption.v1",
+      "design_order": 47,
+      "evidence_gate": "external-validation",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "family_id": "mobility.transit-reliability",
+      "family_title": "Transit reliability and passenger continuity",
+      "horizon": "seasonal",
+      "implementation_status": "design-only",
+      "primary_outcome": "essential passenger-trips left without viable service",
+      "prohibited_claims": [
+        "Do not present synthetic failures as predicted disruptions or simulated access as completed trips.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "network",
+      "suite": "mobility-accessibility-operations",
+      "title": "Stress-test transit continuity under network disruption"
+    },
+    {
+      "analysis_modes": [
+        "forecast",
+        "simulation",
+        "optimization"
+      ],
+      "binding_constraint": "The pedestrian safety and universal accessibility stress test must respect declared minimum continuity and safety thresholds across severe scenarios.",
+      "content_hash": "sha256:bff4c61046267e5240079d2b5356246f1a7de717d45f610f9e0b5d75ebd6bcc6",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Which detour and continuity plan preserves accessible essential trips during street, weather, or facility closures?",
+      "decision_type": "stress-test",
+      "design_id": "scenario.mobility.pedestrian-safety.accessible-detours.v1",
+      "design_order": 55,
+      "evidence_gate": "external-validation",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "family_id": "mobility.pedestrian-safety",
+      "family_title": "Pedestrian safety and universal accessibility",
+      "horizon": "seasonal",
+      "implementation_status": "design-only",
+      "primary_outcome": "essential destinations unreachable by an accessible detour",
+      "prohibited_claims": [
+        "Do not describe simulated accessible detours as field-verified or universally usable.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "network",
+      "suite": "mobility-accessibility-operations",
+      "title": "Stress-test accessible routes during closures and hazards"
+    },
+    {
+      "analysis_modes": [
+        "forecast",
+        "simulation",
+        "optimization"
+      ],
+      "binding_constraint": "The urban freight and curb operations stress test must respect declared minimum continuity and safety thresholds across severe scenarios.",
+      "content_hash": "sha256:e7488e7fad3c3df41bd5e39546fa908fde965e695c1c70c5ac8224251d250279",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Which curb and consolidation strategy sustains essential deliveries during closures, surges, and fleet constraints?",
+      "decision_type": "stress-test",
+      "design_id": "scenario.mobility.freight-curb.freight-disruption.v1",
+      "design_order": 63,
+      "evidence_gate": "external-validation",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "family_id": "mobility.freight-curb",
+      "family_title": "Urban freight and curb operations",
+      "horizon": "seasonal",
+      "implementation_status": "design-only",
+      "primary_outcome": "essential deliveries outside feasible time windows",
+      "prohibited_claims": [
+        "Do not present synthetic delivery failures as forecasts or modeled completion as observed service.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "network",
+      "suite": "mobility-accessibility-operations",
+      "title": "Stress-test urban freight under curb and network disruption"
+    },
+    {
+      "analysis_modes": [
+        "forecast",
+        "simulation",
+        "optimization"
+      ],
+      "binding_constraint": "The evacuation and emergency mobility stress test must respect declared minimum continuity and safety thresholds across severe scenarios.",
+      "content_hash": "sha256:61566b2563a7bc12cd26e4153027a9022dee7c89387b089a976a149a19d71362",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Which plan preserves clearance and responder access under blocked links, outages, fleet loss, and demand surge?",
+      "decision_type": "stress-test",
+      "design_id": "scenario.mobility.emergency-mobility.evacuation-network-failure.v1",
+      "design_order": 71,
+      "evidence_gate": "external-validation",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "family_id": "mobility.emergency-mobility",
+      "family_title": "Evacuation and emergency mobility",
+      "horizon": "seasonal",
+      "implementation_status": "design-only",
+      "primary_outcome": "scenario-weighted people beyond safe clearance",
+      "prohibited_claims": [
+        "Do not treat synthetic network failures or compliance assumptions as predicted events.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "network",
+      "suite": "mobility-accessibility-operations",
+      "title": "Stress-test evacuation under correlated network failure"
+    },
+    {
+      "analysis_modes": [
+        "forecast",
+        "simulation",
+        "optimization"
+      ],
+      "binding_constraint": "The active mobility network and micromobility stress test must respect declared minimum continuity and safety thresholds across severe scenarios.",
+      "content_hash": "sha256:188cf7e30b8b594c85c167fd46d21341973b1484e2c4427581415aad347a4302",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Which detours and operating plan preserve low-stress access during closures, weather, and fleet outages?",
+      "decision_type": "stress-test",
+      "design_id": "scenario.mobility.active-mobility.active-network-continuity.v1",
+      "design_order": 79,
+      "evidence_gate": "external-validation",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "family_id": "mobility.active-mobility",
+      "family_title": "Active mobility network and micromobility",
+      "horizon": "seasonal",
+      "implementation_status": "design-only",
+      "primary_outcome": "essential trips without a low-stress feasible alternative",
+      "prohibited_claims": [
+        "Do not describe a modeled detour as field-verified safe or an assumed trip as observed.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "network",
+      "suite": "mobility-accessibility-operations",
+      "title": "Stress-test active-mobility network continuity"
+    },
+    {
+      "analysis_modes": [
+        "forecast",
+        "simulation",
+        "optimization"
+      ],
+      "binding_constraint": "The heat-health surveillance and prevention stress test must respect declared minimum continuity and safety thresholds across severe scenarios.",
+      "content_hash": "sha256:774405c02113fdd6686a3df5a188e305bbc364bd9b6ae38427ee639013afe9e3",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Which prevention and care strategy preserves essential capacity during prolonged heat, outages, and staff loss?",
+      "decision_type": "stress-test",
+      "design_id": "scenario.health.heat-health.heat-health-surge.v1",
+      "design_order": 87,
+      "evidence_gate": "external-validation",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "family_id": "health.heat-health",
+      "family_title": "Heat-health surveillance and prevention",
+      "horizon": "seasonal",
+      "implementation_status": "design-only",
+      "primary_outcome": "scenario-weighted unmet critical heat-health demand",
+      "prohibited_claims": [
+        "Do not present simulated patient loads or failures as an epidemic forecast or observed harm.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "network",
+      "suite": "population-health-environmental-exposure",
+      "title": "Stress-test heat-health surge capacity"
+    },
+    {
+      "analysis_modes": [
+        "forecast",
+        "simulation",
+        "optimization"
+      ],
+      "binding_constraint": "The air-quality exposure and respiratory health stress test must respect declared minimum continuity and safety thresholds across severe scenarios.",
+      "content_hash": "sha256:fc73d5d070d067e6e2f6df6cfb637589b719281b04713e6e6c06bafd0852eda8",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Which response strategy preserves clean-air and care capacity across prolonged pollution and facility failures?",
+      "decision_type": "stress-test",
+      "design_id": "scenario.health.air-quality.pollution-health-continuity.v1",
+      "design_order": 95,
+      "evidence_gate": "external-validation",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "family_id": "health.air-quality",
+      "family_title": "Air-quality exposure and respiratory health",
+      "horizon": "seasonal",
+      "implementation_status": "design-only",
+      "primary_outcome": "scenario-weighted unmet respiratory protection and care demand",
+      "prohibited_claims": [
+        "Do not present synthetic episodes or care demand as forecasts or observed health burden.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "network",
+      "suite": "population-health-environmental-exposure",
+      "title": "Stress-test respiratory-health continuity during pollution episodes"
+    },
+    {
+      "analysis_modes": [
+        "forecast",
+        "simulation",
+        "optimization"
+      ],
+      "binding_constraint": "The infectious-disease public-health operations stress test must respect declared minimum continuity and safety thresholds across severe scenarios.",
+      "content_hash": "sha256:078730a0c2068b2c02d89aa2f1d138d380caae5bc6999245e1d11da224f6c99d",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Which capacity strategy preserves essential surveillance, testing, care, and communication under correlated surge?",
+      "decision_type": "stress-test",
+      "design_id": "scenario.health.infectious-operations.multi-pathogen-surge.v1",
+      "design_order": 103,
+      "evidence_gate": "external-validation",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "family_id": "health.infectious-operations",
+      "family_title": "Infectious-disease public-health operations",
+      "horizon": "seasonal",
+      "implementation_status": "design-only",
+      "primary_outcome": "scenario-weighted unmet priority health-service demand",
+      "prohibited_claims": [
+        "Do not present synthetic pathogen or demand scenarios as epidemiological forecasts.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "network",
+      "suite": "population-health-environmental-exposure",
+      "title": "Stress-test public-health operations under multi-pathogen surge"
+    },
+    {
+      "analysis_modes": [
+        "forecast",
+        "simulation",
+        "optimization"
+      ],
+      "binding_constraint": "The food access and environmental health stress test must respect declared minimum continuity and safety thresholds across severe scenarios.",
+      "content_hash": "sha256:516db67611b4f7003f7e9fdb597118aaeb6cfa2f0d6890a1f4bc909476fcebf4",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Which response portfolio preserves safe food access during power, supply, climate, and facility disruptions?",
+      "decision_type": "stress-test",
+      "design_id": "scenario.health.food-environment.food-system-disruption.v1",
+      "design_order": 111,
+      "evidence_gate": "external-validation",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "family_id": "health.food-environment",
+      "family_title": "Food access and environmental health",
+      "horizon": "seasonal",
+      "implementation_status": "design-only",
+      "primary_outcome": "scenario-weighted people below minimum safe food access",
+      "prohibited_claims": [
+        "Do not present synthetic shortages, contamination, or facility failures as observed events.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "network",
+      "suite": "population-health-environmental-exposure",
+      "title": "Stress-test food and environmental-health continuity"
+    },
+    {
+      "analysis_modes": [
+        "forecast",
+        "simulation",
+        "optimization"
+      ],
+      "binding_constraint": "The housing habitability and code operations stress test must respect declared minimum continuity and safety thresholds across severe scenarios.",
+      "content_hash": "sha256:4affd18cfedb9b28d20671b0d342ab2acaa7b1a23bcd1d1cd057fb9d53d46707",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Which plan preserves inspection, repair, shelter, and tenant support during heat, cold, flood, or outage surges?",
+      "decision_type": "stress-test",
+      "design_id": "scenario.housing.habitability-code.housing-emergency-surge.v1",
+      "design_order": 119,
+      "evidence_gate": "external-validation",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "family_id": "housing.habitability-code",
+      "family_title": "Housing habitability and code operations",
+      "horizon": "seasonal",
+      "implementation_status": "design-only",
+      "primary_outcome": "scenario-weighted priority households without timely protection",
+      "prohibited_claims": [
+        "Do not present synthetic conditions or households as observed violations or displacement.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "network",
+      "suite": "housing-land-use-regeneration",
+      "title": "Stress-test housing response during extreme-condition surges"
+    },
+    {
+      "analysis_modes": [
+        "forecast",
+        "simulation",
+        "optimization"
+      ],
+      "binding_constraint": "The homelessness prevention and housing stability stress test must respect declared minimum continuity and safety thresholds across severe scenarios.",
+      "content_hash": "sha256:d55535a9ad7f02d081a4e40d25aacff26afc964e43a695629222d9aa3628efbf",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Which prevention strategy preserves minimum support during rent, income, disaster, and shelter-capacity shocks?",
+      "decision_type": "stress-test",
+      "design_id": "scenario.housing.homelessness-prevention.housing-stability-surge.v1",
+      "design_order": 127,
+      "evidence_gate": "external-validation",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "family_id": "housing.homelessness-prevention",
+      "family_title": "Homelessness prevention and housing stability",
+      "horizon": "seasonal",
+      "implementation_status": "design-only",
+      "primary_outcome": "scenario-weighted urgent households without timely prevention",
+      "prohibited_claims": [
+        "Do not present synthetic housing shocks or household pathways as forecasts or observed crises.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "network",
+      "suite": "housing-land-use-regeneration",
+      "title": "Stress-test housing-stability capacity under market shock"
+    },
+    {
+      "analysis_modes": [
+        "forecast",
+        "simulation",
+        "optimization"
+      ],
+      "binding_constraint": "The affordable housing siting and preservation stress test must respect declared minimum continuity and safety thresholds across severe scenarios.",
+      "content_hash": "sha256:485a1da96a7f264a694d1200fd5d12e1208165a8599b8bc8ce5e3dd2998d2004",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Which preservation and production strategy sustains affordability across rate, cost, subsidy, and market shocks?",
+      "decision_type": "stress-test",
+      "design_id": "scenario.housing.affordable-supply.housing-finance-shock.v1",
+      "design_order": 135,
+      "evidence_gate": "external-validation",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "family_id": "housing.affordable-supply",
+      "family_title": "Affordable housing siting and preservation",
+      "horizon": "seasonal",
+      "implementation_status": "design-only",
+      "primary_outcome": "scenario-weighted affordable home-years not delivered or preserved",
+      "prohibited_claims": [
+        "Do not present synthetic financing failures or modeled units as observed outcomes.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "citywide",
+      "suite": "housing-land-use-regeneration",
+      "title": "Stress-test affordable-housing delivery under finance and cost shocks"
+    },
+    {
+      "analysis_modes": [
+        "forecast",
+        "simulation",
+        "optimization"
+      ],
+      "binding_constraint": "The land use, regeneration, and neighborhood change stress test must respect declared minimum continuity and safety thresholds across severe scenarios.",
+      "content_hash": "sha256:e56ee4a1eb09b897ed081301c7143fd6e51d082d77b6701d9612622896e14f62",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Which plan preserves affordability and public benefits across cost, finance, demand, delay, and climate shocks?",
+      "decision_type": "stress-test",
+      "design_id": "scenario.housing.land-use-regeneration.regeneration-market-shock.v1",
+      "design_order": 143,
+      "evidence_gate": "external-validation",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "family_id": "housing.land-use-regeneration",
+      "family_title": "Land use, regeneration, and neighborhood change",
+      "horizon": "seasonal",
+      "implementation_status": "design-only",
+      "primary_outcome": "scenario-weighted loss of protected housing, businesses, and public benefits",
+      "prohibited_claims": [
+        "Do not present synthetic market paths as forecasts or modeled protections as secured rights.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "neighborhood",
+      "suite": "housing-land-use-regeneration",
+      "title": "Stress-test regeneration under market and delivery shocks"
+    },
+    {
+      "analysis_modes": [
+        "forecast",
+        "simulation",
+        "optimization"
+      ],
+      "binding_constraint": "The 311 and public-service demand operations stress test must respect declared minimum continuity and safety thresholds across severe scenarios.",
+      "content_hash": "sha256:e865a57b41f2b2086930fec6a6ed5c2fe159c164c9cf9375de8496e43d72ca4e",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Which intake and field-response plan sustains priority services during event, outage, absence, and channel surges?",
+      "decision_type": "stress-test",
+      "design_id": "scenario.public-service.demand.service-demand-surge.v1",
+      "design_order": 151,
+      "evidence_gate": "external-validation",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "family_id": "public-service.demand",
+      "family_title": "311 and public-service demand operations",
+      "horizon": "seasonal",
+      "implementation_status": "design-only",
+      "primary_outcome": "scenario-weighted priority requests beyond response targets",
+      "prohibited_claims": [
+        "Do not present synthetic requests, failures, or response times as observed service performance.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "network",
+      "suite": "public-service-operations",
+      "title": "Stress-test public-service continuity under demand surge"
+    },
+    {
+      "analysis_modes": [
+        "forecast",
+        "simulation",
+        "optimization"
+      ],
+      "binding_constraint": "The sanitation, waste, and street cleanliness stress test must respect declared minimum continuity and safety thresholds across severe scenarios.",
+      "content_hash": "sha256:883ab87d2544acd20fe57096eb0e7fbd9f5e277f5d579470bd754039080a8230",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Which operating plan sustains essential collection during weather, fleet, facility, workforce, and market failures?",
+      "decision_type": "stress-test",
+      "design_id": "scenario.public-service.sanitation.waste-continuity.v1",
+      "design_order": 159,
+      "evidence_gate": "external-validation",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "family_id": "public-service.sanitation",
+      "family_title": "Sanitation, waste, and street cleanliness",
+      "horizon": "seasonal",
+      "implementation_status": "design-only",
+      "primary_outcome": "scenario-weighted essential collection left unserved",
+      "prohibited_claims": [
+        "Do not present synthetic waste, outages, or unserved routes as observed events.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "network",
+      "suite": "public-service-operations",
+      "title": "Stress-test sanitation continuity under compound disruption"
+    },
+    {
+      "analysis_modes": [
+        "forecast",
+        "simulation",
+        "optimization"
+      ],
+      "binding_constraint": "The emergency response readiness and allocation stress test must respect declared minimum continuity and safety thresholds across severe scenarios.",
+      "content_hash": "sha256:265069abf8f80e351795f491b5f49ec822399146cb2316011bc24ab0a2da8459",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Which readiness strategy preserves priority coverage during concurrent incidents, outages, access loss, and staff absence?",
+      "decision_type": "stress-test",
+      "design_id": "scenario.public-service.emergency-response.multi-incident-surge.v1",
+      "design_order": 167,
+      "evidence_gate": "external-validation",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "family_id": "public-service.emergency-response",
+      "family_title": "Emergency response readiness and allocation",
+      "horizon": "seasonal",
+      "implementation_status": "design-only",
+      "primary_outcome": "scenario-weighted priority incidents without timely unit coverage",
+      "prohibited_claims": [
+        "Do not present synthetic incidents, response times, or outcomes as forecasts or observed performance.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "network",
+      "suite": "public-service-operations",
+      "title": "Stress-test emergency response under correlated surge"
+    },
+    {
+      "analysis_modes": [
+        "forecast",
+        "simulation",
+        "optimization"
+      ],
+      "binding_constraint": "The digital public access and administrative service delivery stress test must respect declared minimum continuity and safety thresholds across severe scenarios.",
+      "content_hash": "sha256:c1daac7efd433ac0cf0dfb2fad82f9aca5358119d015d8472b5a144949b9d61a",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Which fallback strategy preserves lawful accessible service during identity, platform, network, vendor, and staffing failures?",
+      "decision_type": "stress-test",
+      "design_id": "scenario.public-service.digital-access.digital-service-continuity.v1",
+      "design_order": 175,
+      "evidence_gate": "external-validation",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "family_id": "public-service.digital-access",
+      "family_title": "Digital public access and administrative service delivery",
+      "horizon": "seasonal",
+      "implementation_status": "design-only",
+      "primary_outcome": "scenario-weighted eligible journeys without lawful service path",
+      "prohibited_claims": [
+        "Do not present synthetic outages or modeled fallback completions as observed incidents.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "network",
+      "suite": "public-service-operations",
+      "title": "Stress-test public-service continuity during digital outage"
+    },
+    {
+      "analysis_modes": [
+        "forecast",
+        "simulation",
+        "optimization"
+      ],
+      "binding_constraint": "The road and bridge asset management stress test must respect declared minimum continuity and safety thresholds across severe scenarios.",
+      "content_hash": "sha256:cc1d255a79007452c6fe82297726ecd56c399ebcdc7cb602b8614107f0ac9969",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Which maintenance and continuity strategy preserves essential access under asset, hazard, supply, and crew failures?",
+      "decision_type": "stress-test",
+      "design_id": "scenario.infrastructure.roads-bridges.transport-asset-failure.v1",
+      "design_order": 183,
+      "evidence_gate": "external-validation",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "family_id": "infrastructure.roads-bridges",
+      "family_title": "Road and bridge asset management",
+      "horizon": "seasonal",
+      "implementation_status": "design-only",
+      "primary_outcome": "scenario-weighted essential trips disconnected",
+      "prohibited_claims": [
+        "Do not present synthetic defects, closures, or disconnected trips as observed events.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "network",
+      "suite": "infrastructure-finance-asset-risk",
+      "title": "Stress-test transport infrastructure under compound failure"
+    },
+    {
+      "analysis_modes": [
+        "forecast",
+        "simulation",
+        "optimization"
+      ],
+      "binding_constraint": "The water and wastewater infrastructure stress test must respect declared minimum continuity and safety thresholds across severe scenarios.",
+      "content_hash": "sha256:d35d691e8b0adf08cbf6ae04f36b1e28efb903fd96a43af2b6a935d2c0e9884c",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Which renewal and operations strategy preserves essential service under drought, flood, outage, contamination, and asset failure?",
+      "decision_type": "stress-test",
+      "design_id": "scenario.infrastructure.water-wastewater.utility-continuity.v1",
+      "design_order": 191,
+      "evidence_gate": "external-validation",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "family_id": "infrastructure.water-wastewater",
+      "family_title": "Water and wastewater infrastructure",
+      "horizon": "seasonal",
+      "implementation_status": "design-only",
+      "primary_outcome": "scenario-weighted essential service interruption",
+      "prohibited_claims": [
+        "Do not present synthetic contamination, failure, or service interruption as observed.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "network",
+      "suite": "infrastructure-finance-asset-risk",
+      "title": "Stress-test water and wastewater continuity"
+    },
+    {
+      "analysis_modes": [
+        "forecast",
+        "simulation",
+        "optimization"
+      ],
+      "binding_constraint": "The municipal energy and building decarbonization stress test must respect declared minimum continuity and safety thresholds across severe scenarios.",
+      "content_hash": "sha256:0a1156f20895693116875c3883d3b0c4500a2d88de3434764a94eadc4e11141b",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Which electrification and resilience strategy preserves critical services under peak, outage, weather, and equipment failures?",
+      "decision_type": "stress-test",
+      "design_id": "scenario.infrastructure.energy-buildings.building-grid-stress.v1",
+      "design_order": 199,
+      "evidence_gate": "external-validation",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "family_id": "infrastructure.energy-buildings",
+      "family_title": "Municipal energy and building decarbonization",
+      "horizon": "seasonal",
+      "implementation_status": "design-only",
+      "primary_outcome": "scenario-weighted critical-load service interruption",
+      "prohibited_claims": [
+        "Do not present synthetic load, outage, or backup performance as observed events.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "network",
+      "suite": "infrastructure-finance-asset-risk",
+      "title": "Stress-test municipal buildings under grid and climate stress"
+    },
+    {
+      "analysis_modes": [
+        "forecast",
+        "simulation",
+        "optimization"
+      ],
+      "binding_constraint": "The capital portfolio and municipal finance stress test must respect declared minimum continuity and safety thresholds across severe scenarios.",
+      "content_hash": "sha256:d5068cde2e166454f5e239425498f67e19ec330952a991dc7e5a7764d5df379e",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Which portfolio remains affordable and service-protective under revenue, rate, cost, delay, failure, and disaster shocks?",
+      "decision_type": "stress-test",
+      "design_id": "scenario.infrastructure.capital-finance.fiscal-capital-shock.v1",
+      "design_order": 207,
+      "evidence_gate": "external-validation",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "family_id": "infrastructure.capital-finance",
+      "family_title": "Capital portfolio and municipal finance",
+      "horizon": "seasonal",
+      "implementation_status": "design-only",
+      "primary_outcome": "scenario-weighted critical service and fiscal threshold breach",
+      "prohibited_claims": [
+        "Do not present synthetic fiscal paths as audited forecasts, ratings, defaults, or observed losses.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "citywide",
+      "suite": "infrastructure-finance-asset-risk",
+      "title": "Stress-test the capital plan under fiscal and delivery shocks"
+    },
+    {
+      "analysis_modes": [
+        "forecast",
+        "simulation",
+        "optimization"
+      ],
+      "binding_constraint": "The distributional public-service equity stress test must respect declared minimum continuity and safety thresholds across severe scenarios.",
+      "content_hash": "sha256:7f46eba5545f9b7aaf9aa0084af9bab0ca0a34cb3be4ee8f1c07f541049871b1",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Which continuity plan preserves minimum access across outages, hazards, demand surges, and staff losses?",
+      "decision_type": "stress-test",
+      "design_id": "scenario.equity.distributional-service.equity-under-disruption.v1",
+      "design_order": 215,
+      "evidence_gate": "external-validation",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "family_id": "equity.distributional-service",
+      "family_title": "Distributional public-service equity",
+      "horizon": "seasonal",
+      "implementation_status": "design-only",
+      "primary_outcome": "scenario-weighted people below minimum service guarantees",
+      "prohibited_claims": [
+        "Do not present synthetic group outcomes, service failures, or disparities as observed.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "network",
+      "suite": "behavioral-policy-equity",
+      "title": "Stress-test equitable service under disruption"
+    },
+    {
+      "analysis_modes": [
+        "forecast",
+        "simulation",
+        "optimization"
+      ],
+      "binding_constraint": "The public participation and risk communication stress test must respect declared minimum continuity and safety thresholds across severe scenarios.",
+      "content_hash": "sha256:6e619930571f49866a964704bfeb3782af5a1f77e91a45e32fca0bc3da4f2e3e",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Which multilingual strategy preserves accurate usable communication under uncertainty, outage, rumor, and capacity loss?",
+      "decision_type": "stress-test",
+      "design_id": "scenario.equity.participation-communication.communication-failure.v1",
+      "design_order": 223,
+      "evidence_gate": "external-validation",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "family_id": "equity.participation-communication",
+      "family_title": "Public participation and risk communication",
+      "horizon": "seasonal",
+      "implementation_status": "design-only",
+      "primary_outcome": "scenario-weighted affected people without timely usable information",
+      "prohibited_claims": [
+        "Do not present simulated message reach, understanding, trust, or behavior as observed.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "network",
+      "suite": "behavioral-policy-equity",
+      "title": "Stress-test public communication under crisis and channel failure"
+    },
+    {
+      "analysis_modes": [
+        "forecast",
+        "simulation",
+        "optimization"
+      ],
+      "binding_constraint": "The compliance, incentives, and behavioral policy stress test must respect declared minimum continuity and safety thresholds across severe scenarios.",
+      "content_hash": "sha256:4f538030c0c823bd51c35ad14e9022ed5f0ad4cc1f545624c01eebe46f4276ed",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Which assistance and incentive strategy remains rights-preserving across uptake, substitution, burden, and enforcement scenarios?",
+      "decision_type": "stress-test",
+      "design_id": "scenario.equity.compliance-incentives.policy-response-uncertainty.v1",
+      "design_order": 231,
+      "evidence_gate": "external-validation",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "family_id": "equity.compliance-incentives",
+      "family_title": "Compliance, incentives, and behavioral policy",
+      "horizon": "seasonal",
+      "implementation_status": "design-only",
+      "primary_outcome": "scenario-weighted unresolved harm and administrative burden",
+      "prohibited_claims": [
+        "Do not present simulated preferences, responses, compliance, or welfare as observed behavior.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "population-group",
+      "suite": "behavioral-policy-equity",
+      "title": "Stress-test behavioral policy under heterogeneous response"
+    },
+    {
+      "analysis_modes": [
+        "forecast",
+        "simulation",
+        "optimization"
+      ],
+      "binding_constraint": "The algorithmic decision support and governance stress test must respect declared minimum continuity and safety thresholds across severe scenarios.",
+      "content_hash": "sha256:1dc142a28a267efaa23ac073fbe2313e77dabd3dc0e94280a65e3d04c07b0af8",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Which controls preserve lawful service under drift, missingness, manipulation, outage, override, and demand surge?",
+      "decision_type": "stress-test",
+      "design_id": "scenario.equity.algorithmic-governance.algorithmic-failure.v1",
+      "design_order": 239,
+      "evidence_gate": "external-validation",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "family_id": "equity.algorithmic-governance",
+      "family_title": "Algorithmic decision support and governance",
+      "horizon": "seasonal",
+      "implementation_status": "design-only",
+      "primary_outcome": "scenario-weighted high-impact decisions outside safe fallback",
+      "prohibited_claims": [
+        "Do not present synthetic failures, decisions, affected people, or harms as observed incidents.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "network",
+      "suite": "behavioral-policy-equity",
+      "title": "Stress-test algorithmic systems and human fallback"
+    }
+  ],
+  "kind": "scenario-designs.decision-type.stress-test",
+  "record_count": 30,
+  "schema_version": "1.0.0"
+}

@@ -1,0 +1,333 @@
+{
+  "designs": [
+    {
+      "analysis_modes": [
+        "descriptive"
+      ],
+      "binding_constraint": "The transit reliability and passenger continuity diagnose must respect declared measurement resolution and classification uncertainty.",
+      "content_hash": "sha256:2fddb23d90507f595f15cb538014cb60501f5cd53131cfbb86539f04a6b79344",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Which route segments and transfer nodes repeatedly propagate delay into passenger connection failures?",
+      "decision_type": "diagnose",
+      "design_id": "scenario.mobility.transit-reliability.delay-propagation.v1",
+      "design_order": 41,
+      "evidence_gate": "geographic-alignment",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "proposed"
+      ],
+      "family_id": "mobility.transit-reliability",
+      "family_title": "Transit reliability and passenger continuity",
+      "horizon": "annual",
+      "implementation_status": "design-only",
+      "primary_outcome": "passenger-weighted missed connections",
+      "prohibited_claims": [
+        "Do not infer passenger experience from vehicle delay without validated load and transfer evidence.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "network",
+      "suite": "mobility-accessibility-operations",
+      "title": "Diagnose transit delay propagation and missed connections"
+    },
+    {
+      "analysis_modes": [
+        "forecast"
+      ],
+      "binding_constraint": "The transit reliability and passenger continuity forecast must respect declared validated operational capacity and forecast uncertainty.",
+      "content_hash": "sha256:75e5797f2686b49463b2c5e1f2308168171b3a3971eb733767cf220013c4d1eb",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "What route- and time-specific crowding and delay envelope should dispatch prepare for?",
+      "decision_type": "forecast",
+      "design_id": "scenario.mobility.transit-reliability.crowding-delay-load.v1",
+      "design_order": 42,
+      "evidence_gate": "model-calibration",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "proposed"
+      ],
+      "family_id": "mobility.transit-reliability",
+      "family_title": "Transit reliability and passenger continuity",
+      "horizon": "weeks",
+      "implementation_status": "design-only",
+      "primary_outcome": "passenger-minutes above crowding and delay thresholds",
+      "prohibited_claims": [
+        "Do not present forecast passenger loads or delays as observed service outcomes.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "corridor",
+      "suite": "mobility-accessibility-operations",
+      "title": "Forecast transit crowding and delay load"
+    },
+    {
+      "analysis_modes": [
+        "descriptive",
+        "optimization"
+      ],
+      "binding_constraint": "The transit reliability and passenger continuity prioritize must respect declared capital, operating, maintenance, and delivery budgets.",
+      "content_hash": "sha256:df8f3e81b9b5f330114ecb8c3f26008a387aa7f7d1ec428eebfbc049714a4871",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Which signal, lane, stop, fleet, and operations projects best reduce passenger delay within lifecycle budgets?",
+      "decision_type": "prioritize",
+      "design_id": "scenario.mobility.transit-reliability.reliability-investments.v1",
+      "design_order": 43,
+      "evidence_gate": "cost-capacity",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed"
+      ],
+      "family_id": "mobility.transit-reliability",
+      "family_title": "Transit reliability and passenger continuity",
+      "horizon": "multi-year",
+      "implementation_status": "design-only",
+      "primary_outcome": "expected passenger-hours of unreliable service",
+      "prohibited_claims": [
+        "Do not report modeled passenger delay reduction as a realized project benefit.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "asset",
+      "suite": "mobility-accessibility-operations",
+      "title": "Prioritize transit reliability investments"
+    },
+    {
+      "analysis_modes": [
+        "simulation",
+        "optimization"
+      ],
+      "binding_constraint": "The transit reliability and passenger continuity site must respect declared land control, accessibility, permitting, safety, and operating feasibility.",
+      "content_hash": "sha256:cbd420196326beaf86c8c0fa4d7065d7845344c93679ebe0dc2607d1fd2a547f",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Where should timed-transfer, layover, charging, and passenger-recovery capacity be located?",
+      "decision_type": "site",
+      "design_id": "scenario.mobility.transit-reliability.transfer-hubs.v1",
+      "design_order": 44,
+      "evidence_gate": "legal-authority",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "family_id": "mobility.transit-reliability",
+      "family_title": "Transit reliability and passenger continuity",
+      "horizon": "multi-year",
+      "implementation_status": "design-only",
+      "primary_outcome": "passengers beyond a reliable accessible transfer",
+      "prohibited_claims": [
+        "Do not call a candidate hub accessible, permitted, or operationally feasible without verification.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "facility",
+      "suite": "mobility-accessibility-operations",
+      "title": "Site accessible transfer and recovery hubs"
+    },
+    {
+      "analysis_modes": [
+        "simulation",
+        "optimization"
+      ],
+      "binding_constraint": "The transit reliability and passenger continuity allocate must respect declared minimum service, eligibility, capacity, and distributional safeguards.",
+      "content_hash": "sha256:e45400ecba3f9aaa620908d13b4e2d0cb654bd65b9121dc6920e285404650612",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "How should vehicles, operators, and spare capacity be assigned across routes and depots?",
+      "decision_type": "allocate",
+      "design_id": "scenario.mobility.transit-reliability.fleet-spares.v1",
+      "design_order": 45,
+      "evidence_gate": "equity-measurement",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "family_id": "mobility.transit-reliability",
+      "family_title": "Transit reliability and passenger continuity",
+      "horizon": "weeks",
+      "implementation_status": "design-only",
+      "primary_outcome": "passenger demand without scheduled reliable capacity",
+      "prohibited_claims": [
+        "Do not describe a vehicle and operator assignment as delivered service.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "network",
+      "suite": "mobility-accessibility-operations",
+      "title": "Allocate fleet, operators, and recovery capacity"
+    },
+    {
+      "analysis_modes": [
+        "forecast",
+        "optimization"
+      ],
+      "binding_constraint": "The transit reliability and passenger continuity schedule must respect declared labor, access, sequencing, notice, and completion windows.",
+      "content_hash": "sha256:333b4ad7e23ed6806e1366986fd44ede916bf10a05a841474681edf30557a0ac",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "How should trips and recovery time be scheduled to balance reliability, transfers, and operator rules?",
+      "decision_type": "schedule",
+      "design_id": "scenario.mobility.transit-reliability.timetable-connections.v1",
+      "design_order": 46,
+      "evidence_gate": "temporal-alignment",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed"
+      ],
+      "family_id": "mobility.transit-reliability",
+      "family_title": "Transit reliability and passenger continuity",
+      "horizon": "weeks",
+      "implementation_status": "design-only",
+      "primary_outcome": "passenger-weighted excess wait and missed-connection time",
+      "prohibited_claims": [
+        "Do not call an optimized timetable published, staffed, or operated.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "network",
+      "suite": "mobility-accessibility-operations",
+      "title": "Schedule headways, recovery time, and timed connections"
+    },
+    {
+      "analysis_modes": [
+        "forecast",
+        "simulation",
+        "optimization"
+      ],
+      "binding_constraint": "The transit reliability and passenger continuity stress test must respect declared minimum continuity and safety thresholds across severe scenarios.",
+      "content_hash": "sha256:e36a2cf7d656573958c8d2d4d4d8f5e273f75faffa417f7e589be7668143d248",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Which operating plan preserves essential access under vehicle, infrastructure, weather, and staffing failures?",
+      "decision_type": "stress-test",
+      "design_id": "scenario.mobility.transit-reliability.network-disruption.v1",
+      "design_order": 47,
+      "evidence_gate": "external-validation",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "family_id": "mobility.transit-reliability",
+      "family_title": "Transit reliability and passenger continuity",
+      "horizon": "seasonal",
+      "implementation_status": "design-only",
+      "primary_outcome": "essential passenger-trips left without viable service",
+      "prohibited_claims": [
+        "Do not present synthetic failures as predicted disruptions or simulated access as completed trips.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "network",
+      "suite": "mobility-accessibility-operations",
+      "title": "Stress-test transit continuity under network disruption"
+    },
+    {
+      "analysis_modes": [
+        "descriptive",
+        "causal"
+      ],
+      "binding_constraint": "The transit reliability and passenger continuity evaluate must respect declared pre-specified assignment, comparison, outcome, spillover, and subgroup rules.",
+      "content_hash": "sha256:b6007173c84598f4aa412ce2ab59d3820d44a3466716254daeddb9e1fe8af843",
+      "current_readiness": "blocked-multiple-gates",
+      "decision_question": "Did phased transit-priority and timetable changes improve reliable passenger travel without displacement?",
+      "decision_type": "evaluate",
+      "design_id": "scenario.mobility.transit-reliability.priority-lane-effect.v1",
+      "design_order": 48,
+      "evidence_gate": "causal-identification",
+      "evidence_types": [
+        "causal",
+        "estimated",
+        "observed",
+        "proposed"
+      ],
+      "family_id": "mobility.transit-reliability",
+      "family_title": "Transit reliability and passenger continuity",
+      "horizon": "multi-year",
+      "implementation_status": "design-only",
+      "primary_outcome": "change in passenger-weighted reliable travel time",
+      "prohibited_claims": [
+        "Do not infer causal passenger benefits from simple before-after vehicle speed.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "corridor",
+      "suite": "mobility-accessibility-operations",
+      "title": "Evaluate transit priority and schedule redesign"
+    }
+  ],
+  "family": {
+    "affected_system": "fixed-route public transit service and passenger connections",
+    "claim_boundary": [
+      "Network, request, and schedule records do not establish individual travel behavior or harm.",
+      "Optimized routes and allocations are planning outputs, not dispatched or completed trips.",
+      "Design-only records do not claim current city data, implementation, compliance, or impact."
+    ],
+    "common_source_roles": [
+      "geographic-identity",
+      "service-schedule",
+      "transport-network"
+    ],
+    "decision_owner": "transit chief operating officer and service-planning director",
+    "decision_types": [
+      "diagnose",
+      "forecast",
+      "prioritize",
+      "site",
+      "allocate",
+      "schedule",
+      "stress-test",
+      "evaluate"
+    ],
+    "description": "Eight decisions covering reliability diagnosis, demand and delay forecasting, corridor investment, transfer siting, vehicle allocation, timetable design, disruption stress, and service-change evaluation.",
+    "design_refs": [
+      "scenario.mobility.transit-reliability.delay-propagation.v1",
+      "scenario.mobility.transit-reliability.crowding-delay-load.v1",
+      "scenario.mobility.transit-reliability.reliability-investments.v1",
+      "scenario.mobility.transit-reliability.transfer-hubs.v1",
+      "scenario.mobility.transit-reliability.fleet-spares.v1",
+      "scenario.mobility.transit-reliability.timetable-connections.v1",
+      "scenario.mobility.transit-reliability.network-disruption.v1",
+      "scenario.mobility.transit-reliability.priority-lane-effect.v1"
+    ],
+    "design_signatures": [
+      "sha256:e450dd04e00b629646de410c76417da8b7f06ac85b6e5b50c4f5f55fbded654f",
+      "sha256:f5ab1f1524f4129405c8bd3c12817b61ee2d12258de8e345c2f14d72bf1ed64a",
+      "sha256:ce04d2a3520ed1aae204d06ef3898963274f90b4b81f567f22a534a5a50a4f50",
+      "sha256:70c27057b255536ab7da8d68244d618f9607b1f82c0fff62311e6c002c813ed1",
+      "sha256:0c47243dfa9458660e917b7748dd7805e1ee9d7a701ef21fb275399f3d798438",
+      "sha256:95b7d1198730788a32e60e4c7ebc7c3106503a74a4c87a75808bf196625261be",
+      "sha256:b156ae73d54af48924496e57b62e4851fba7644af4a229e3caa9fdd6441836ad",
+      "sha256:54d7486501d89644390ec2e912e54383e7c2d506bcef72913eca5d99f2d30aa9"
+    ],
+    "family_id": "mobility.transit-reliability",
+    "family_order": 6,
+    "schema_version": "1.0.0",
+    "suite": "mobility-accessibility-operations",
+    "title": "Transit reliability and passenger continuity"
+  },
+  "library_claim_boundary": [
+    "The catalog contains 240 decision designs, not 240 city executions.",
+    "Exactly twelve designs map to existing Tier-D reference templates; 228 remain design-only.",
+    "A reference implementation can be an explicit negative release and does not imply impact.",
+    "No record claims a city binding, new method, deployment, adoption, or real-user outcome.",
+    "Future execution requires source binding, gate passage, and domain, legal, community, and operational review."
+  ]
+}

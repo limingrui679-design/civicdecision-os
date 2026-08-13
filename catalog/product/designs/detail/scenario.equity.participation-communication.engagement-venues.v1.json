@@ -1,0 +1,225 @@
+{
+  "audit_maximum_pairwise_similarity": 0.646154,
+  "design": {
+    "affected_system": "public participation, multilingual communication, consultation, and feedback closure",
+    "alternatives": [
+      "screen feasible locations against the largest access gaps for accessible participation and communication locations",
+      "co-optimize distributed and high-capacity locations for accessible participation and communication locations",
+      "pair travel, language, accessibility, privacy, trust, and capacity-aware siting with an explicit stop, review, and escalation rule"
+    ],
+    "analysis_modes": [
+      "simulation",
+      "optimization"
+    ],
+    "assumptions": [
+      "Invitation, exposure, participation, contribution, response, decision, and trust remain distinct.",
+      "Participation records preserve consent, privacy, language, accessibility, and channel provenance.",
+      "All alternatives, capacities, costs, effects, thresholds, and failure scenarios are proposed until bound to evidence."
+    ],
+    "baseline": "retain only existing approved locations for accessible participation and communication locations.",
+    "city_bindings": [],
+    "constraints": [
+      {
+        "binding": true,
+        "constraint_id": "scenario.equity.participation-communication.engagement-venues.v1.constraint.binding",
+        "description": "The public participation and risk communication site must respect declared land control, accessibility, permitting, safety, and operating feasibility.",
+        "hard": true,
+        "kind": "regulatory",
+        "required_source_roles": [
+          "community-input",
+          "demographic-context",
+          "equity-attribute",
+          "facility-inventory",
+          "geographic-identity",
+          "transport-network"
+        ]
+      },
+      {
+        "binding": false,
+        "constraint_id": "scenario.equity.participation-communication.engagement-venues.v1.constraint.evidence-scope",
+        "description": "Every released metric must retain evidence type, source lineage, geography, time, assumptions, and uncertainty.",
+        "hard": true,
+        "kind": "technical",
+        "required_source_roles": [
+          "community-input"
+        ]
+      },
+      {
+        "binding": false,
+        "constraint_id": "scenario.equity.participation-communication.engagement-venues.v1.constraint.decision-authority",
+        "description": "No analytical output may bypass lawful authority, accountable human review, or an applicable appeal process.",
+        "hard": true,
+        "kind": "regulatory",
+        "required_source_roles": [
+          "community-input"
+        ]
+      }
+    ],
+    "current_readiness": "blocked-missing-source",
+    "decision_cadence": "recompiled at each planning cycle and after material evidence change",
+    "decision_owner": "public engagement director and risk communications lead",
+    "decision_question": "Where should in-person, mobile, partner, and digital access support close verified engagement barriers?",
+    "decision_type": "site",
+    "design_id": "scenario.equity.participation-communication.engagement-venues.v1",
+    "design_order": 220,
+    "design_signature": "sha256:ed75351786e8b4864798079caa007e771d24a26fcc310e17415b1446dc3273ef",
+    "evidence_requirements": [
+      "estimated",
+      "observed",
+      "optimized",
+      "proposed",
+      "simulated"
+    ],
+    "family_id": "equity.participation-communication",
+    "family_title": "Public participation and risk communication",
+    "horizon": "multi-year",
+    "implementation_status": "design-only",
+    "independence_key": {
+      "binding_constraint": "The public participation and risk communication site must respect declared land control, accessibility, permitting, safety, and operating feasibility.",
+      "decision_object": "accessible participation and communication locations",
+      "evidence_gate": "Evidence for accessible participation and communication locations passes documented checks for parcel control, legal authority, environmental review, access, capacity, and operator responsibility.",
+      "horizon": "multi-year",
+      "intervention_mechanism": "travel, language, accessibility, privacy, trust, and capacity-aware siting",
+      "primary_outcome": "affected people beyond usable participation access",
+      "spatial_unit": "facility"
+    },
+    "intended_claim": "A versioned site design for comparing declared alternatives affecting accessible participation and communication locations, conditional on its evidence gate.",
+    "limitations": [
+      "This library record has no city binding and therefore reports no local input, output, or recommendation.",
+      "Readiness describes explicit source and method gates; it does not certify implementation feasibility.",
+      "External domain, legal, community, security, and operational review remains outside this design artifact."
+    ],
+    "method_claimed": false,
+    "objectives": [
+      {
+        "evidence_type": "estimated",
+        "metric": "affected people beyond usable participation access",
+        "objective_id": "scenario.equity.participation-communication.engagement-venues.v1.objective.primary",
+        "primary": true,
+        "sense": "minimize",
+        "unit": "people"
+      },
+      {
+        "evidence_type": "estimated",
+        "metric": "distributional gap in affected people beyond usable participation access",
+        "objective_id": "scenario.equity.participation-communication.engagement-venues.v1.objective.equity",
+        "primary": false,
+        "sense": "minimize",
+        "unit": "people"
+      },
+      {
+        "evidence_type": "observed",
+        "metric": "decision claims with complete evidence lineage",
+        "objective_id": "scenario.equity.participation-communication.engagement-venues.v1.objective.traceability",
+        "primary": false,
+        "sense": "maximize",
+        "unit": "percent"
+      }
+    ],
+    "prohibited_claims": [
+      "Do not call a candidate venue accessible, neutral, trusted, safe, or representative.",
+      "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+      "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+      "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+    ],
+    "release_gate": {
+      "failure_release": "Release an explicit insufficient-evidence record naming missing sources, failed diagnostics, prohibited claims, and the next validation action.",
+      "failure_status": "insufficient-evidence",
+      "gate_id": "scenario.equity.participation-communication.engagement-venues.v1.gate.release",
+      "gate_type": "legal-authority",
+      "pass_condition": "Evidence for accessible participation and communication locations passes documented checks for parcel control, legal authority, environmental review, access, capacity, and operator responsibility.",
+      "required_evidence_types": [
+        "observed",
+        "proposed"
+      ],
+      "required_source_roles": [
+        "community-input",
+        "demographic-context",
+        "equity-attribute",
+        "facility-inventory",
+        "geographic-identity",
+        "transport-network"
+      ]
+    },
+    "required_source_roles": [
+      "community-input",
+      "demographic-context",
+      "equity-attribute",
+      "facility-inventory",
+      "geographic-identity",
+      "transport-network"
+    ],
+    "schema_version": "1.0.0",
+    "spatial_unit": "facility",
+    "suite": "behavioral-policy-equity",
+    "tags": [
+      "behavioral-policy-equity",
+      "design-only",
+      "equity.participation-communication",
+      "scenario-library",
+      "site"
+    ],
+    "title": "Site accessible participation and communication venues",
+    "transportability_risks": [
+      "Trust, language, civic institutions, digital access, deliberation norms, and risk salience differ.",
+      "Participants are not automatically representative of affected populations."
+    ]
+  },
+  "family": {
+    "affected_system": "public participation, multilingual communication, consultation, and feedback closure",
+    "claim_boundary": [
+      "Area and administrative differences do not establish discrimination, preferences, or individual behavior.",
+      "Behavioral and allocation designs require rights, accessibility, privacy, and non-coercion review.",
+      "Causal, fairness, adoption, and welfare claims require direct outcomes and independent governance evidence."
+    ],
+    "common_source_roles": [
+      "community-input",
+      "demographic-context",
+      "geographic-identity"
+    ],
+    "decision_owner": "public engagement director and risk communications lead",
+    "decision_types": [
+      "diagnose",
+      "forecast",
+      "prioritize",
+      "site",
+      "allocate",
+      "schedule",
+      "stress-test",
+      "evaluate"
+    ],
+    "description": "Eight decisions for participation-gap diagnosis, engagement forecasting, inclusion portfolios, venue siting, outreach allocation, communication schedules, misinformation stress, and evaluation.",
+    "design_refs": [
+      "scenario.equity.participation-communication.participation-gaps.v1",
+      "scenario.equity.participation-communication.engagement-demand.v1",
+      "scenario.equity.participation-communication.inclusive-engagement-portfolio.v1",
+      "scenario.equity.participation-communication.engagement-venues.v1",
+      "scenario.equity.participation-communication.engagement-support.v1",
+      "scenario.equity.participation-communication.engagement-feedback-cycle.v1",
+      "scenario.equity.participation-communication.communication-failure.v1",
+      "scenario.equity.participation-communication.engagement-design-effect.v1"
+    ],
+    "design_signatures": [
+      "sha256:dd90b82eddafb39689ca36731e6b70866120cf0b5f06b904a037b3098daa1da7",
+      "sha256:325e1d6f90ebf9299f0f23bc7430645c80d4e357123d7253074fe63c856759b0",
+      "sha256:702b1ad4e8352969d6f546eb9443c3e77e82b04f97150424a1db8b979207e34c",
+      "sha256:ed75351786e8b4864798079caa007e771d24a26fcc310e17415b1446dc3273ef",
+      "sha256:348d8647e5a4860756ecd76bb106e7926847c4db55a811999b3abd6c776820b0",
+      "sha256:311ba3b78c817461894ab41fd18223203cea725961a61a224f2520e224874143",
+      "sha256:01737cf89380ebac0ee0c696dd25da28f8815b1d6f5b61016790e44e0b1b164c",
+      "sha256:786b7f127313e020b5aa8a6ae3f41a9e61fe9fea22594e52ad75538cc3836195"
+    ],
+    "family_id": "equity.participation-communication",
+    "family_order": 28,
+    "schema_version": "1.0.0",
+    "suite": "behavioral-policy-equity",
+    "title": "Public participation and risk communication"
+  },
+  "library_claim_boundary": [
+    "The catalog contains 240 decision designs, not 240 city executions.",
+    "Exactly twelve designs map to existing Tier-D reference templates; 228 remain design-only.",
+    "A reference implementation can be an explicit negative release and does not imply impact.",
+    "No record claims a city binding, new method, deployment, adoption, or real-user outcome.",
+    "Future execution requires source binding, gate passage, and domain, legal, community, and operational review."
+  ]
+}

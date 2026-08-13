@@ -1,0 +1,333 @@
+{
+  "designs": [
+    {
+      "analysis_modes": [
+        "descriptive"
+      ],
+      "binding_constraint": "The capital portfolio and municipal finance diagnose must respect declared measurement resolution and classification uncertainty.",
+      "content_hash": "sha256:495bb10adc88498c508e083b56f79bdc282aeb1ac1287cafebfbb3286ad91859",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Which assets and projects show reconciled condition need, cost growth, delay, funding gap, or delivery risk?",
+      "decision_type": "diagnose",
+      "design_id": "scenario.infrastructure.capital-finance.capital-obligation-friction.v1",
+      "design_order": 201,
+      "evidence_gate": "geographic-alignment",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "proposed"
+      ],
+      "family_id": "infrastructure.capital-finance",
+      "family_title": "Capital portfolio and municipal finance",
+      "horizon": "annual",
+      "implementation_status": "design-only",
+      "primary_outcome": "verified high-consequence unfunded or delayed obligations",
+      "prohibited_claims": [
+        "Do not call a request, estimate, or plan an audited liability, appropriation, or expenditure.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "asset",
+      "suite": "infrastructure-finance-asset-risk",
+      "title": "Diagnose capital obligations, backlog, and delivery friction"
+    },
+    {
+      "analysis_modes": [
+        "forecast"
+      ],
+      "binding_constraint": "The capital portfolio and municipal finance forecast must respect declared validated operational capacity and forecast uncertainty.",
+      "content_hash": "sha256:c5ca3eee0cccd673067cdaed5fd5e9d136e8790a83f562830dbc8462f6fdf1b0",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "What range of costs, revenues, grants, debt service, cash flow, and completion should planning use?",
+      "decision_type": "forecast",
+      "design_id": "scenario.infrastructure.capital-finance.capital-fiscal-outlook.v1",
+      "design_order": 202,
+      "evidence_gate": "model-calibration",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "proposed"
+      ],
+      "family_id": "infrastructure.capital-finance",
+      "family_title": "Capital portfolio and municipal finance",
+      "horizon": "weeks",
+      "implementation_status": "design-only",
+      "primary_outcome": "capital obligation above affordable deliverable capacity",
+      "prohibited_claims": [
+        "Do not present a fiscal scenario as an audited forecast, rating opinion, or promised project completion.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "citywide",
+      "suite": "infrastructure-finance-asset-risk",
+      "title": "Forecast capital cost, revenue, debt, and delivery capacity"
+    },
+    {
+      "analysis_modes": [
+        "descriptive",
+        "optimization"
+      ],
+      "binding_constraint": "The capital portfolio and municipal finance prioritize must respect declared capital, operating, maintenance, and delivery budgets.",
+      "content_hash": "sha256:0333f081879c843af4b177bc8d5499bb78237594f806a200a2a31cc7e47e66b8",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Which renewal, resilience, service, compliance, and growth projects should enter the constrained plan?",
+      "decision_type": "prioritize",
+      "design_id": "scenario.infrastructure.capital-finance.capital-investment-portfolio.v1",
+      "design_order": 203,
+      "evidence_gate": "cost-capacity",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed"
+      ],
+      "family_id": "infrastructure.capital-finance",
+      "family_title": "Capital portfolio and municipal finance",
+      "horizon": "multi-year",
+      "implementation_status": "design-only",
+      "primary_outcome": "expected risk-adjusted unmet capital-service need",
+      "prohibited_claims": [
+        "Do not call a selected project appropriated, financed, procured, constructed, or beneficial.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "asset",
+      "suite": "infrastructure-finance-asset-risk",
+      "title": "Prioritize the municipal capital investment portfolio"
+    },
+    {
+      "analysis_modes": [
+        "simulation",
+        "optimization"
+      ],
+      "binding_constraint": "The capital portfolio and municipal finance site must respect declared land control, accessibility, permitting, safety, and operating feasibility.",
+      "content_hash": "sha256:4a5b612f29956962822e4e1d5489d80301f52f0887234ea9699b903c53bfe0d5",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Where should shared depots, reserves, equipment, and continuity assets reduce portfolio-wide risk?",
+      "decision_type": "site",
+      "design_id": "scenario.infrastructure.capital-finance.capital-reserve-assets.v1",
+      "design_order": 204,
+      "evidence_gate": "legal-authority",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "family_id": "infrastructure.capital-finance",
+      "family_title": "Capital portfolio and municipal finance",
+      "horizon": "multi-year",
+      "implementation_status": "design-only",
+      "primary_outcome": "critical municipal services beyond resilient reserve coverage",
+      "prohibited_claims": [
+        "Do not call a screened site acquired, appropriated, permitted, or operational.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "facility",
+      "suite": "infrastructure-finance-asset-risk",
+      "title": "Site strategic reserve and shared municipal assets"
+    },
+    {
+      "analysis_modes": [
+        "simulation",
+        "optimization"
+      ],
+      "binding_constraint": "The capital portfolio and municipal finance allocate must respect declared minimum service, eligibility, capacity, and distributional safeguards.",
+      "content_hash": "sha256:6513387550197da8ffc81b26416b1961964ae9fd35444009c5d7182bda9bd3c4",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "How should pay-as-you-go funds, debt, grants, reserves, and project staff be assigned?",
+      "decision_type": "allocate",
+      "design_id": "scenario.infrastructure.capital-finance.capital-funding.v1",
+      "design_order": 205,
+      "evidence_gate": "equity-measurement",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "family_id": "infrastructure.capital-finance",
+      "family_title": "Capital portfolio and municipal finance",
+      "horizon": "weeks",
+      "implementation_status": "design-only",
+      "primary_outcome": "priority capital need without assigned affordable capacity",
+      "prohibited_claims": [
+        "Do not report a modeled allocation as an appropriation, bond issuance, grant, or expenditure.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "asset",
+      "suite": "infrastructure-finance-asset-risk",
+      "title": "Allocate capital funding and delivery capacity"
+    },
+    {
+      "analysis_modes": [
+        "forecast",
+        "optimization"
+      ],
+      "binding_constraint": "The capital portfolio and municipal finance schedule must respect declared labor, access, sequencing, notice, and completion windows.",
+      "content_hash": "sha256:dff72abe16f76f38d7a1b04f8919976907d8ce27f8d173d2a6d12971b85b99da",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "When should design, permitting, procurement, utility coordination, construction, and commissioning occur?",
+      "decision_type": "schedule",
+      "design_id": "scenario.infrastructure.capital-finance.capital-delivery.v1",
+      "design_order": 206,
+      "evidence_gate": "temporal-alignment",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed"
+      ],
+      "family_id": "infrastructure.capital-finance",
+      "family_title": "Capital portfolio and municipal finance",
+      "horizon": "weeks",
+      "implementation_status": "design-only",
+      "primary_outcome": "priority project-days beyond service and compliance milestones",
+      "prohibited_claims": [
+        "Do not call a project schedule authorized, contracted, under construction, or complete.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "asset",
+      "suite": "infrastructure-finance-asset-risk",
+      "title": "Schedule capital procurement and delivery"
+    },
+    {
+      "analysis_modes": [
+        "forecast",
+        "simulation",
+        "optimization"
+      ],
+      "binding_constraint": "The capital portfolio and municipal finance stress test must respect declared minimum continuity and safety thresholds across severe scenarios.",
+      "content_hash": "sha256:d5068cde2e166454f5e239425498f67e19ec330952a991dc7e5a7764d5df379e",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Which portfolio remains affordable and service-protective under revenue, rate, cost, delay, failure, and disaster shocks?",
+      "decision_type": "stress-test",
+      "design_id": "scenario.infrastructure.capital-finance.fiscal-capital-shock.v1",
+      "design_order": 207,
+      "evidence_gate": "external-validation",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "family_id": "infrastructure.capital-finance",
+      "family_title": "Capital portfolio and municipal finance",
+      "horizon": "seasonal",
+      "implementation_status": "design-only",
+      "primary_outcome": "scenario-weighted critical service and fiscal threshold breach",
+      "prohibited_claims": [
+        "Do not present synthetic fiscal paths as audited forecasts, ratings, defaults, or observed losses.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "citywide",
+      "suite": "infrastructure-finance-asset-risk",
+      "title": "Stress-test the capital plan under fiscal and delivery shocks"
+    },
+    {
+      "analysis_modes": [
+        "descriptive",
+        "causal"
+      ],
+      "binding_constraint": "The capital portfolio and municipal finance evaluate must respect declared pre-specified assignment, comparison, outcome, spillover, and subgroup rules.",
+      "content_hash": "sha256:fd200cdeba92ad3f5499556043300dae9770cfefb4b6b9353294a75e55e4a5cf",
+      "current_readiness": "blocked-multiple-gates",
+      "decision_question": "Did phased procurement, bundling, funding, or delivery reforms improve verified cost and schedule performance?",
+      "decision_type": "evaluate",
+      "design_id": "scenario.infrastructure.capital-finance.delivery-reform-effect.v1",
+      "design_order": 208,
+      "evidence_gate": "causal-identification",
+      "evidence_types": [
+        "causal",
+        "estimated",
+        "observed",
+        "proposed"
+      ],
+      "family_id": "infrastructure.capital-finance",
+      "family_title": "Capital portfolio and municipal finance",
+      "horizon": "multi-year",
+      "implementation_status": "design-only",
+      "primary_outcome": "change in scope-adjusted cost and delivery variance",
+      "prohibited_claims": [
+        "Do not infer causal public value, quality, or fiscal health from cost and schedule variance alone.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "asset",
+      "suite": "infrastructure-finance-asset-risk",
+      "title": "Evaluate capital delivery and financing reforms"
+    }
+  ],
+  "family": {
+    "affected_system": "municipal capital planning, debt, grants, reserves, procurement, and asset delivery",
+    "claim_boundary": [
+      "Requests and proxy indicators do not replace engineering inspection, accounting, or legal review.",
+      "Selected projects and schedules are planning outputs, not appropriations, designs, contracts, or construction.",
+      "Modeled lifecycle, emissions, reliability, and fiscal effects are not realized outcomes."
+    ],
+    "common_source_roles": [
+      "asset-inventory",
+      "financial-cost",
+      "operating-capacity"
+    ],
+    "decision_owner": "chief financial officer and capital planning director",
+    "decision_types": [
+      "diagnose",
+      "forecast",
+      "prioritize",
+      "site",
+      "allocate",
+      "schedule",
+      "stress-test",
+      "evaluate"
+    ],
+    "description": "Eight decisions for obligation diagnosis, fiscal forecasting, portfolio selection, reserve siting, funding allocation, delivery scheduling, fiscal stress, and financing evaluation.",
+    "design_refs": [
+      "scenario.infrastructure.capital-finance.capital-obligation-friction.v1",
+      "scenario.infrastructure.capital-finance.capital-fiscal-outlook.v1",
+      "scenario.infrastructure.capital-finance.capital-investment-portfolio.v1",
+      "scenario.infrastructure.capital-finance.capital-reserve-assets.v1",
+      "scenario.infrastructure.capital-finance.capital-funding.v1",
+      "scenario.infrastructure.capital-finance.capital-delivery.v1",
+      "scenario.infrastructure.capital-finance.fiscal-capital-shock.v1",
+      "scenario.infrastructure.capital-finance.delivery-reform-effect.v1"
+    ],
+    "design_signatures": [
+      "sha256:c1fa35ac874c80f312edc0baa61dc774ea886868148d0112efd96d958ed3de7e",
+      "sha256:df8912da2b7c363790ea7263f08e82dfc65fc42a5605ca8c45c830b314a73bbe",
+      "sha256:371ba2bb2077c43ac2e3c2943cdeb378ab0eb63cf1d37ea2082634ecb1be96eb",
+      "sha256:92dc6b3fbf03e32ff42c95f5d8dbdfcae02b40845450834143c12571a4d07946",
+      "sha256:9e87c155a83ba4e74ede6f47f767869ad076dcf121401b417b1467741bd7675e",
+      "sha256:49ffdda0614777e50fd6f9222c6bf4ed77cddb58d265739c0c949f4a757bc8a7",
+      "sha256:1052ffda34586418d4958d1f3d6991950ffe7eafffcd7c82f4b89efbc6992b85",
+      "sha256:46f48a8a654b7e65c4f72b8b12b65dc2360e6089e0d8d95075c90dae88212c1c"
+    ],
+    "family_id": "infrastructure.capital-finance",
+    "family_order": 26,
+    "schema_version": "1.0.0",
+    "suite": "infrastructure-finance-asset-risk",
+    "title": "Capital portfolio and municipal finance"
+  },
+  "library_claim_boundary": [
+    "The catalog contains 240 decision designs, not 240 city executions.",
+    "Exactly twelve designs map to existing Tier-D reference templates; 228 remain design-only.",
+    "A reference implementation can be an explicit negative release and does not imply impact.",
+    "No record claims a city binding, new method, deployment, adoption, or real-user outcome.",
+    "Future execution requires source binding, gate passage, and domain, legal, community, and operational review."
+  ]
+}

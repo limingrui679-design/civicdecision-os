@@ -1,0 +1,334 @@
+{
+  "designs": [
+    {
+      "analysis_modes": [
+        "descriptive"
+      ],
+      "binding_constraint": "The pedestrian safety and universal accessibility diagnose must respect declared measurement resolution and classification uncertainty.",
+      "content_hash": "sha256:496e0e0ddd7f8c5fb2f52916b168542ef6bf7d737dadf6dbc80bddb2faa0791a",
+      "current_readiness": "reference-implemented",
+      "decision_question": "Where do verified barriers, crossings, conflicts, speeds, and destinations break continuous safe access?",
+      "decision_type": "diagnose",
+      "design_id": "scenario.mobility.pedestrian-safety.accessible-route-breaks.v1",
+      "design_order": 49,
+      "evidence_gate": "geographic-alignment",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "proposed"
+      ],
+      "existing_template_ref": "deep.mobility.accessibility-request.v1",
+      "family_id": "mobility.pedestrian-safety",
+      "family_title": "Pedestrian safety and universal accessibility",
+      "horizon": "annual",
+      "implementation_status": "reference-implemented",
+      "primary_outcome": "essential destinations without a continuous safe accessible route",
+      "prohibited_claims": [
+        "Do not equate request keywords or mapped sidewalks with verified accessible routes.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "network",
+      "suite": "mobility-accessibility-operations",
+      "title": "Diagnose pedestrian safety and accessible-route breaks"
+    },
+    {
+      "analysis_modes": [
+        "forecast"
+      ],
+      "binding_constraint": "The pedestrian safety and universal accessibility forecast must respect declared validated operational capacity and forecast uncertainty.",
+      "content_hash": "sha256:e54a8696e30cd0971ba59ec79db92714c5149f2edce178a8c5d8da1f44a21a72",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "What corridor-time risk envelope should guide temporary safety and inspection readiness?",
+      "decision_type": "forecast",
+      "design_id": "scenario.mobility.pedestrian-safety.pedestrian-conflict-risk.v1",
+      "design_order": 50,
+      "evidence_gate": "model-calibration",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "proposed"
+      ],
+      "family_id": "mobility.pedestrian-safety",
+      "family_title": "Pedestrian safety and universal accessibility",
+      "horizon": "weeks",
+      "implementation_status": "design-only",
+      "primary_outcome": "high-risk pedestrian-hours without preventive coverage",
+      "prohibited_claims": [
+        "Do not call predicted conflicts crashes or infer exposure from population alone.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "corridor",
+      "suite": "mobility-accessibility-operations",
+      "title": "Forecast pedestrian conflict and barrier demand"
+    },
+    {
+      "analysis_modes": [
+        "descriptive",
+        "optimization"
+      ],
+      "binding_constraint": "The pedestrian safety and universal accessibility prioritize must respect declared capital, operating, maintenance, and delivery budgets.",
+      "content_hash": "sha256:d814b47fe4f80f6f9480b0be428adb268ef3f71360fe0dfa6c6cbcb4956c23be",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Which crossing, signal, curb-ramp, sidewalk, lighting, and speed treatments should be funded first?",
+      "decision_type": "prioritize",
+      "design_id": "scenario.mobility.pedestrian-safety.safety-accessibility-treatments.v1",
+      "design_order": 51,
+      "evidence_gate": "cost-capacity",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed"
+      ],
+      "family_id": "mobility.pedestrian-safety",
+      "family_title": "Pedestrian safety and universal accessibility",
+      "horizon": "multi-year",
+      "implementation_status": "design-only",
+      "primary_outcome": "expected severe conflict and inaccessible-route burden",
+      "prohibited_claims": [
+        "Do not present modeled risk reduction as prevented injuries.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "asset",
+      "suite": "mobility-accessibility-operations",
+      "title": "Prioritize pedestrian safety and accessibility treatments"
+    },
+    {
+      "analysis_modes": [
+        "simulation",
+        "optimization"
+      ],
+      "binding_constraint": "The pedestrian safety and universal accessibility site must respect declared land control, accessibility, permitting, safety, and operating feasibility.",
+      "content_hash": "sha256:4e24256ea1f887e6bc6d9115e73301151b53e7073538d2cde8cf179572bfeee6",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Where should new crossings and route connections close verified network gaps?",
+      "decision_type": "site",
+      "design_id": "scenario.mobility.pedestrian-safety.safe-crossings.v1",
+      "design_order": 52,
+      "evidence_gate": "legal-authority",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "family_id": "mobility.pedestrian-safety",
+      "family_title": "Pedestrian safety and universal accessibility",
+      "horizon": "multi-year",
+      "implementation_status": "design-only",
+      "primary_outcome": "high-demand crossings without a safe accessible connection",
+      "prohibited_claims": [
+        "Do not call a screened crossing compliant or safe without engineering review.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "corridor",
+      "suite": "mobility-accessibility-operations",
+      "title": "Site safe crossings and accessible route connections"
+    },
+    {
+      "analysis_modes": [
+        "simulation",
+        "optimization"
+      ],
+      "binding_constraint": "The pedestrian safety and universal accessibility allocate must respect declared minimum service, eligibility, capacity, and distributional safeguards.",
+      "content_hash": "sha256:d041b7a23fdbb6d3bff0959f02fe8df219b38ab7b53f3fab54113f66aa1d58b4",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "How should inspectors, temporary barriers, signal crews, and accessibility repairs be distributed?",
+      "decision_type": "allocate",
+      "design_id": "scenario.mobility.pedestrian-safety.inspection-quick-build.v1",
+      "design_order": 53,
+      "evidence_gate": "equity-measurement",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "family_id": "mobility.pedestrian-safety",
+      "family_title": "Pedestrian safety and universal accessibility",
+      "horizon": "weeks",
+      "implementation_status": "design-only",
+      "primary_outcome": "verified high-consequence barriers without assigned response",
+      "prohibited_claims": [
+        "Do not report assigned crews as completed repairs or verified compliance.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "service-area",
+      "suite": "mobility-accessibility-operations",
+      "title": "Allocate inspections and quick-build safety resources"
+    },
+    {
+      "analysis_modes": [
+        "forecast",
+        "optimization"
+      ],
+      "binding_constraint": "The pedestrian safety and universal accessibility schedule must respect declared labor, access, sequencing, notice, and completion windows.",
+      "content_hash": "sha256:58e54b6e6eeb8cf7463036162d87100639f19481d7a6270a4b70c5cf490fa0ee",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "When should inspections and repairs occur to minimize access disruption and coordinate dependencies?",
+      "decision_type": "schedule",
+      "design_id": "scenario.mobility.pedestrian-safety.right-of-way-work.v1",
+      "design_order": 54,
+      "evidence_gate": "temporal-alignment",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed"
+      ],
+      "family_id": "mobility.pedestrian-safety",
+      "family_title": "Pedestrian safety and universal accessibility",
+      "horizon": "weeks",
+      "implementation_status": "design-only",
+      "primary_outcome": "high-consequence barrier-days awaiting verified completion",
+      "prohibited_claims": [
+        "Do not infer repair completion from work-order closure alone.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "asset",
+      "suite": "mobility-accessibility-operations",
+      "title": "Schedule sidewalk, crossing, and signal work"
+    },
+    {
+      "analysis_modes": [
+        "forecast",
+        "simulation",
+        "optimization"
+      ],
+      "binding_constraint": "The pedestrian safety and universal accessibility stress test must respect declared minimum continuity and safety thresholds across severe scenarios.",
+      "content_hash": "sha256:bff4c61046267e5240079d2b5356246f1a7de717d45f610f9e0b5d75ebd6bcc6",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Which detour and continuity plan preserves accessible essential trips during street, weather, or facility closures?",
+      "decision_type": "stress-test",
+      "design_id": "scenario.mobility.pedestrian-safety.accessible-detours.v1",
+      "design_order": 55,
+      "evidence_gate": "external-validation",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "family_id": "mobility.pedestrian-safety",
+      "family_title": "Pedestrian safety and universal accessibility",
+      "horizon": "seasonal",
+      "implementation_status": "design-only",
+      "primary_outcome": "essential destinations unreachable by an accessible detour",
+      "prohibited_claims": [
+        "Do not describe simulated accessible detours as field-verified or universally usable.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "network",
+      "suite": "mobility-accessibility-operations",
+      "title": "Stress-test accessible routes during closures and hazards"
+    },
+    {
+      "analysis_modes": [
+        "descriptive",
+        "causal"
+      ],
+      "binding_constraint": "The pedestrian safety and universal accessibility evaluate must respect declared pre-specified assignment, comparison, outcome, spillover, and subgroup rules.",
+      "content_hash": "sha256:1abe6c9486cd690155c143ea8abbe992f8f4acdf3bb2ded68c4b8b742080a857",
+      "current_readiness": "blocked-multiple-gates",
+      "decision_question": "Did phased quick-build treatments reduce measured conflicts and improve accessible crossing performance?",
+      "decision_type": "evaluate",
+      "design_id": "scenario.mobility.pedestrian-safety.quick-build-safety-effect.v1",
+      "design_order": 56,
+      "evidence_gate": "causal-identification",
+      "evidence_types": [
+        "causal",
+        "estimated",
+        "observed",
+        "proposed"
+      ],
+      "family_id": "mobility.pedestrian-safety",
+      "family_title": "Pedestrian safety and universal accessibility",
+      "horizon": "multi-year",
+      "implementation_status": "design-only",
+      "primary_outcome": "change in exposure-normalized severe pedestrian conflicts",
+      "prohibited_claims": [
+        "Do not infer injury prevention from unvalidated conflict detection or uncontrolled before-after counts.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "corridor",
+      "suite": "mobility-accessibility-operations",
+      "title": "Evaluate quick-build pedestrian safety treatments"
+    }
+  ],
+  "family": {
+    "affected_system": "pedestrian right-of-way, crossings, sidewalks, and accessible routes",
+    "claim_boundary": [
+      "Network, request, and schedule records do not establish individual travel behavior or harm.",
+      "Optimized routes and allocations are planning outputs, not dispatched or completed trips.",
+      "Design-only records do not claim current city data, implementation, compliance, or impact."
+    ],
+    "common_source_roles": [
+      "asset-inventory",
+      "geographic-identity",
+      "transport-network"
+    ],
+    "decision_owner": "vision-zero director and accessibility compliance officer",
+    "decision_types": [
+      "diagnose",
+      "forecast",
+      "prioritize",
+      "site",
+      "allocate",
+      "schedule",
+      "stress-test",
+      "evaluate"
+    ],
+    "description": "Eight decisions spanning barrier diagnosis, risk forecasting, treatment portfolios, crossing siting, inspection allocation, work scheduling, closure stress, and evaluation.",
+    "design_refs": [
+      "scenario.mobility.pedestrian-safety.accessible-route-breaks.v1",
+      "scenario.mobility.pedestrian-safety.pedestrian-conflict-risk.v1",
+      "scenario.mobility.pedestrian-safety.safety-accessibility-treatments.v1",
+      "scenario.mobility.pedestrian-safety.safe-crossings.v1",
+      "scenario.mobility.pedestrian-safety.inspection-quick-build.v1",
+      "scenario.mobility.pedestrian-safety.right-of-way-work.v1",
+      "scenario.mobility.pedestrian-safety.accessible-detours.v1",
+      "scenario.mobility.pedestrian-safety.quick-build-safety-effect.v1"
+    ],
+    "design_signatures": [
+      "sha256:91e6adc8fd7662d1cd9c51da94e51bd88e9c05f5307d33404993a83f4d1b9151",
+      "sha256:ebff7d55f6cf7d09b45c831bfc135b618aadc63e7e0e48ab289736ffeb69af1f",
+      "sha256:5880945af8bf186f803fe54229eeedae1ce94f0f1c5a23ad1a6353fc28ceadd2",
+      "sha256:7945e8610e9cc8595911204489e02fe8676ee8bfb3fe7cd0f8ad85abef4c015a",
+      "sha256:cdaa7a19032fd3b386282cffff84154f86a326d0903afe2d9b58cc521e8d2df9",
+      "sha256:e4a5062b83dc51a27b9279ba45a97f7d19c8a1d915ef00ac4d18a93331155746",
+      "sha256:0ccef0fa2c71952b1d9c9eefb78362832c20ca75efa933574812860d2489469e",
+      "sha256:4b908d30edc8319223e493f9a932e42549668281d985178a910b4dcdec575c0f"
+    ],
+    "family_id": "mobility.pedestrian-safety",
+    "family_order": 7,
+    "schema_version": "1.0.0",
+    "suite": "mobility-accessibility-operations",
+    "title": "Pedestrian safety and universal accessibility"
+  },
+  "library_claim_boundary": [
+    "The catalog contains 240 decision designs, not 240 city executions.",
+    "Exactly twelve designs map to existing Tier-D reference templates; 228 remain design-only.",
+    "A reference implementation can be an explicit negative release and does not imply impact.",
+    "No record claims a city binding, new method, deployment, adoption, or real-user outcome.",
+    "Future execution requires source binding, gate passage, and domain, legal, community, and operational review."
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "affected_system": "waste collection, recycling, street cleaning, illegal-dumping, and sanitation response",
+  "claim_boundary": [
+    "Service requests measure reported workload, not verified incidents, need, harm, or resolution.",
+    "Assignments and schedules are proposed operations, not completed work or public outcomes.",
+    "Design records do not establish agency adoption, deployment, productivity, or resident impact."
+  ],
+  "common_source_roles": [
+    "asset-inventory",
+    "municipal-demand",
+    "transport-network"
+  ],
+  "decision_owner": "sanitation commissioner and waste operations chief",
+  "decision_types": [
+    "diagnose",
+    "forecast",
+    "prioritize",
+    "site",
+    "allocate",
+    "schedule",
+    "stress-test",
+    "evaluate"
+  ],
+  "description": "Eight decisions for sanitation signal diagnosis, workload forecasting, asset investment, facility siting, crew allocation, route scheduling, disruption stress, and intervention evaluation.",
+  "design_refs": [
+    "scenario.public-service.sanitation.sanitation-workload.v1",
+    "scenario.public-service.sanitation.waste-service-demand.v1",
+    "scenario.public-service.sanitation.sanitation-improvements.v1",
+    "scenario.public-service.sanitation.sanitation-facilities.v1",
+    "scenario.public-service.sanitation.sanitation-crews-fleet.v1",
+    "scenario.public-service.sanitation.collection-cleaning-routes.v1",
+    "scenario.public-service.sanitation.waste-continuity.v1",
+    "scenario.public-service.sanitation.waste-prevention-effect.v1"
+  ],
+  "design_signatures": [
+    "sha256:f90b12a5eaa3ab801a7e9a5f91d66afe8ce36c63c21dd985d53cab8c53710a46",
+    "sha256:013c459e7a7b8c3a71e0d57c824ffe23f24e1776023a5358911424a9b3799cc8",
+    "sha256:e87ee60f13fca2bace5aa7e8317f2313d9bd2b7d78a4c1ea1ed8bb41b3dcdd9a",
+    "sha256:60572d60ec4c926e70dbc020014d586a699cdef9fb859c32b37a4fe7de96ec57",
+    "sha256:6ac9d73c1fed502eb8f8e20ff440901568b9a314b40e83570c77cbc1d0523e4d",
+    "sha256:e56d624f0f82ec79b4ec57010dc37048044f8101dfdae4a7e40872edb4a5e287",
+    "sha256:fe3efa15456e090a7e535e1b44b5797959b863ee8f9e540f5469e4d2c1d20318",
+    "sha256:bb1921577a391c0274ed6dbceb65b80e2c97e300cf74727dfd4722747b3ca6fb"
+  ],
+  "family_id": "public-service.sanitation",
+  "family_order": 20,
+  "schema_version": "1.0.0",
+  "suite": "public-service-operations",
+  "title": "Sanitation, waste, and street cleanliness"
+}

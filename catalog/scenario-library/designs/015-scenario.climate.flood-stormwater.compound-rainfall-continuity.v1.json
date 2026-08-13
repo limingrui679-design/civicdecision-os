@@ -1,0 +1,165 @@
+{
+  "affected_system": "urban drainage, stormwater, and flood-response system",
+  "alternatives": [
+    "add backup power to critical pumps",
+    "pre-clear bottlenecks and stage mobile response capacity",
+    "select a robust mixed continuity portfolio across severe scenarios"
+  ],
+  "analysis_modes": [
+    "forecast",
+    "simulation",
+    "optimization"
+  ],
+  "assumptions": [
+    "Rainfall, terrain, drainage, and complaint records use explicit spatial and temporal supports.",
+    "Hydraulic capacities and intervention effects remain measured inputs or labeled assumptions.",
+    "All alternatives, capacities, costs, effects, thresholds, and failure scenarios are proposed until bound to evidence."
+  ],
+  "baseline": "Existing drainage capacity and response protocols face compound rainfall without added redundancy.",
+  "city_bindings": [],
+  "constraints": [
+    {
+      "binding": true,
+      "constraint_id": "scenario.climate.flood-stormwater.compound-rainfall-continuity.v1.constraint.binding",
+      "description": "Critical drainage and emergency functions must stay above the minimum continuity threshold in severe scenarios.",
+      "hard": true,
+      "kind": "risk",
+      "required_source_roles": [
+        "asset-inventory",
+        "climate-hazard",
+        "geographic-identity",
+        "municipal-demand",
+        "operating-capacity"
+      ]
+    },
+    {
+      "binding": false,
+      "constraint_id": "scenario.climate.flood-stormwater.compound-rainfall-continuity.v1.constraint.evidence-scope",
+      "description": "Every released metric must retain evidence type, source lineage, geography, time, assumptions, and uncertainty.",
+      "hard": true,
+      "kind": "technical",
+      "required_source_roles": [
+        "asset-inventory"
+      ]
+    },
+    {
+      "binding": false,
+      "constraint_id": "scenario.climate.flood-stormwater.compound-rainfall-continuity.v1.constraint.decision-authority",
+      "description": "No analytical output may bypass lawful authority, accountable human review, or an applicable appeal process.",
+      "hard": true,
+      "kind": "regulatory",
+      "required_source_roles": [
+        "asset-inventory"
+      ]
+    }
+  ],
+  "current_readiness": "reference-implemented",
+  "decision_cadence": "recompiled at each planning cycle and after material evidence change",
+  "decision_owner": "stormwater utility director and emergency-management lead",
+  "decision_question": "Which continuity strategy remains viable across rainfall, tide, blockage, outage, and demand-surge scenarios?",
+  "decision_type": "stress-test",
+  "design_id": "scenario.climate.flood-stormwater.compound-rainfall-continuity.v1",
+  "design_order": 15,
+  "design_signature": "sha256:6a5a10a362e35491600e55adee92f8796afaf7efeaaad074cc99e288a65e161f",
+  "evidence_requirements": [
+    "estimated",
+    "observed",
+    "optimized",
+    "proposed",
+    "simulated"
+  ],
+  "existing_template_ref": "deep.climate.rainfall-continuity.v1",
+  "family_id": "climate.flood-stormwater",
+  "family_title": "Flood and stormwater resilience",
+  "horizon": "weeks",
+  "implementation_status": "reference-implemented",
+  "independence_key": {
+    "binding_constraint": "Critical drainage and emergency functions must stay above the minimum continuity threshold in severe scenarios.",
+    "decision_object": "compound-flood service-continuity strategy",
+    "evidence_gate": "Observed rainfall and request inputs retain lineage while tide, blockage, outage, and response effects remain explicit assumptions.",
+    "horizon": "weeks",
+    "intervention_mechanism": "joint rainfall-tide-blockage-outage scenario simulation",
+    "primary_outcome": "scenario-weighted critical service interruption",
+    "spatial_unit": "citywide"
+  },
+  "intended_claim": "A versioned stress-test design for comparing declared alternatives affecting compound-flood service-continuity strategy, conditional on its evidence gate.",
+  "limitations": [
+    "This library record has no city binding and therefore reports no local input, output, or recommendation.",
+    "Readiness describes explicit source and method gates; it does not certify implementation feasibility.",
+    "External domain, legal, community, security, and operational review remains outside this design artifact."
+  ],
+  "method_claimed": false,
+  "objectives": [
+    {
+      "evidence_type": "estimated",
+      "metric": "scenario-weighted critical service interruption",
+      "objective_id": "scenario.climate.flood-stormwater.compound-rainfall-continuity.v1.objective.primary",
+      "primary": true,
+      "sense": "minimize",
+      "unit": "service-hours"
+    },
+    {
+      "evidence_type": "estimated",
+      "metric": "distributional gap in scenario-weighted critical service interruption",
+      "objective_id": "scenario.climate.flood-stormwater.compound-rainfall-continuity.v1.objective.equity",
+      "primary": false,
+      "sense": "minimize",
+      "unit": "service-hours"
+    },
+    {
+      "evidence_type": "observed",
+      "metric": "decision claims with complete evidence lineage",
+      "objective_id": "scenario.climate.flood-stormwater.compound-rainfall-continuity.v1.objective.traceability",
+      "primary": false,
+      "sense": "maximize",
+      "unit": "percent"
+    }
+  ],
+  "prohibited_claims": [
+    "Do not claim precipitation caused observed requests or that assumed flood losses were observed.",
+    "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+    "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+    "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+  ],
+  "reference_implementation_note": "Tier-D template deep.climate.rainfall-continuity.v1 (Rainfall-context service continuity) supplies a bounded reference workflow for this design axis. The mapping does not establish complete city-specific inputs, external validity, deployment, adoption, or impact.",
+  "release_gate": {
+    "failure_release": "Release an explicit insufficient-evidence record naming missing sources, failed diagnostics, prohibited claims, and the next validation action.",
+    "failure_status": "insufficient-evidence",
+    "gate_id": "scenario.climate.flood-stormwater.compound-rainfall-continuity.v1.gate.release",
+    "gate_type": "source-lineage",
+    "pass_condition": "Observed rainfall and request inputs retain lineage while tide, blockage, outage, and response effects remain explicit assumptions.",
+    "required_evidence_types": [
+      "observed",
+      "proposed"
+    ],
+    "required_source_roles": [
+      "asset-inventory",
+      "climate-hazard",
+      "geographic-identity",
+      "municipal-demand",
+      "operating-capacity"
+    ]
+  },
+  "required_source_roles": [
+    "asset-inventory",
+    "climate-hazard",
+    "geographic-identity",
+    "municipal-demand",
+    "operating-capacity"
+  ],
+  "schema_version": "1.0.0",
+  "spatial_unit": "citywide",
+  "suite": "climate-disaster-resilience",
+  "tags": [
+    "climate-disaster-resilience",
+    "climate.flood-stormwater",
+    "reference-implemented",
+    "scenario-library",
+    "stress-test"
+  ],
+  "title": "Stress-test continuity under compound rainfall and outage",
+  "transportability_risks": [
+    "Drainage standards, imperviousness, topography, tides, and maintenance regimes differ.",
+    "Complaint density may reflect reporting access rather than flood incidence."
+  ]
+}

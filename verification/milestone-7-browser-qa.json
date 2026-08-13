@@ -1,0 +1,112 @@
+{
+  "schema_version": "1.0.0",
+  "checked_at": "2026-08-13",
+  "target": "http://127.0.0.1:8765/",
+  "inspection_mode": "local in-app browser",
+  "catalog_fingerprint": "sha256:cebf4dc6f8a1735905d1583a66b97f274ce488e5e8fcc7841cd11fdb4fc83890",
+  "checks": [
+    {
+      "id": "browser.desktop.render",
+      "status": "passed",
+      "viewport": {
+        "width": 1280,
+        "height": 720,
+        "document_scroll_width": 1280,
+        "document_client_width": 1280,
+        "horizontal_overflow": false
+      },
+      "observed": "The explorer rendered catalog identity, the 240-design and 30-family library, audit evidence, city tiers, execution ledger, sources, benchmarks, and explicit claim boundaries."
+    },
+    {
+      "id": "browser.scenario-library.headline",
+      "status": "passed",
+      "observed": {
+        "scenario_designs": 240,
+        "scenario_families": 30,
+        "reference_implemented": 12,
+        "design_only": 228,
+        "city_bindings": 0,
+        "methods_claimed": 0,
+        "maximum_pairwise_similarity": 0.646154,
+        "audit_status": "PASS"
+      }
+    },
+    {
+      "id": "browser.scenario-library.family-navigation",
+      "status": "passed",
+      "observed": {
+        "family_id": "climate.extreme-heat",
+        "family_count_visible": 30,
+        "selected_family_designs": 8,
+        "decision_types": 8
+      }
+    },
+    {
+      "id": "browser.scenario-library.compound-filter",
+      "status": "passed",
+      "observed": "Suite, family, decision type, implementation status, readiness, and normalized free-text search composed without dropping active constraints."
+    },
+    {
+      "id": "browser.scenario-library.normalized-search",
+      "status": "passed",
+      "observed": {
+        "query": "cool roof",
+        "matched_title": "Evaluate a cool-roof and household-cooling program",
+        "result_count": 1
+      }
+    },
+    {
+      "id": "browser.scenario-library.design-detail",
+      "status": "passed",
+      "observed": {
+        "decision_question_visible": true,
+        "alternatives_visible": true,
+        "objectives_visible": 3,
+        "constraints_visible": 3,
+        "evidence_gate_visible": true,
+        "source_roles_visible": true,
+        "assumptions_visible": true,
+        "limitations_visible": true,
+        "transportability_risks_visible": true,
+        "prohibited_claims_visible": true,
+        "implementation_boundary_visible": true
+      }
+    },
+    {
+      "id": "browser.scenario-library.audit-drawer",
+      "status": "passed",
+      "observed": {
+        "pairwise_comparisons": 28680,
+        "high_similarity_threshold": 0.9,
+        "high_similarity_pairs": 0,
+        "exact_signature_collisions": 0,
+        "duplicate_titles": 0,
+        "duplicate_questions": 0,
+        "limitations_visible": true
+      }
+    },
+    {
+      "id": "browser.mobile.layout",
+      "status": "passed",
+      "viewport": {
+        "width": 390,
+        "height": 844,
+        "document_scroll_width": 390,
+        "document_client_width": 390,
+        "horizontal_overflow": false
+      },
+      "observed": "The mobile navigation opened, aria-expanded changed from false to true, the responsive layout retained its controls, and no horizontal overflow was present."
+    },
+    {
+      "id": "browser.runtime.logs",
+      "status": "passed",
+      "errors_or_warnings": []
+    }
+  ],
+  "boundary": [
+    "This is a local functional and responsive inspection, not evidence of public availability.",
+    "The inspection is not a formal accessibility certification, cross-browser matrix, performance audit, penetration test, or external domain review.",
+    "The 240 records are evidence-gated decision designs; only twelve map to bounded repository reference implementations and none counts a city binding, deployment, adoption, real user, or policy impact.",
+    "Rendering an audit result does not establish academic novelty, legal authority, feasibility, causal validity, or real-world effectiveness."
+  ]
+}

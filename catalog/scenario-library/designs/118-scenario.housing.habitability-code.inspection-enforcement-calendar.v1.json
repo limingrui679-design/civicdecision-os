@@ -1,0 +1,164 @@
+{
+  "affected_system": "housing inspection, code enforcement, repair, and tenant-support system",
+  "alternatives": [
+    "advance high-risk work within verified feasible windows for housing inspection, enforcement, and repair schedule",
+    "use rolling risk and capacity updates to reschedule housing inspection, enforcement, and repair schedule",
+    "pair severity-, dependency-, and statutory-deadline scheduling with an explicit stop, review, and escalation rule"
+  ],
+  "analysis_modes": [
+    "forecast",
+    "optimization"
+  ],
+  "assumptions": [
+    "Complaints, inspections, violations, ownership, repair, and closure records retain distinct semantics.",
+    "Tenant vulnerability and building condition are measured only from authorized, documented sources.",
+    "All alternatives, capacities, costs, effects, thresholds, and failure scenarios are proposed until bound to evidence."
+  ],
+  "baseline": "continue the fixed operating calendar for housing inspection, enforcement, and repair schedule.",
+  "city_bindings": [],
+  "constraints": [
+    {
+      "binding": true,
+      "constraint_id": "scenario.housing.habitability-code.inspection-enforcement-calendar.v1.constraint.binding",
+      "description": "The housing habitability and code operations schedule must respect declared labor, access, sequencing, notice, and completion windows.",
+      "hard": true,
+      "kind": "time",
+      "required_source_roles": [
+        "geographic-identity",
+        "housing-market",
+        "legal-regulatory",
+        "municipal-demand",
+        "operating-capacity",
+        "service-schedule"
+      ]
+    },
+    {
+      "binding": false,
+      "constraint_id": "scenario.housing.habitability-code.inspection-enforcement-calendar.v1.constraint.evidence-scope",
+      "description": "Every released metric must retain evidence type, source lineage, geography, time, assumptions, and uncertainty.",
+      "hard": true,
+      "kind": "technical",
+      "required_source_roles": [
+        "geographic-identity"
+      ]
+    },
+    {
+      "binding": false,
+      "constraint_id": "scenario.housing.habitability-code.inspection-enforcement-calendar.v1.constraint.decision-authority",
+      "description": "No analytical output may bypass lawful authority, accountable human review, or an applicable appeal process.",
+      "hard": true,
+      "kind": "regulatory",
+      "required_source_roles": [
+        "geographic-identity"
+      ]
+    }
+  ],
+  "current_readiness": "blocked-missing-source",
+  "decision_cadence": "recompiled at each planning cycle and after material evidence change",
+  "decision_owner": "housing-code commissioner and tenant-protection director",
+  "decision_question": "When should initial inspections, rechecks, legal notices, repairs, and tenant support occur?",
+  "decision_type": "schedule",
+  "design_id": "scenario.housing.habitability-code.inspection-enforcement-calendar.v1",
+  "design_order": 118,
+  "design_signature": "sha256:43c17446cd04c07c3c8c5f3197af35a55fe529db27f18e996a1bc72827a89716",
+  "evidence_requirements": [
+    "estimated",
+    "observed",
+    "optimized",
+    "proposed"
+  ],
+  "family_id": "housing.habitability-code",
+  "family_title": "Housing habitability and code operations",
+  "horizon": "weeks",
+  "implementation_status": "design-only",
+  "independence_key": {
+    "binding_constraint": "The housing habitability and code operations schedule must respect declared labor, access, sequencing, notice, and completion windows.",
+    "decision_object": "housing inspection, enforcement, and repair schedule",
+    "evidence_gate": "Evidence for housing inspection, enforcement, and repair schedule passes documented checks for effective dates, time zones, calendars, lead times, completion semantics, and update cadence.",
+    "horizon": "weeks",
+    "intervention_mechanism": "severity-, dependency-, and statutory-deadline scheduling",
+    "primary_outcome": "priority case-days beyond lawful response deadlines",
+    "spatial_unit": "asset"
+  },
+  "intended_claim": "A versioned schedule design for comparing declared alternatives affecting housing inspection, enforcement, and repair schedule, conditional on its evidence gate.",
+  "limitations": [
+    "This library record has no city binding and therefore reports no local input, output, or recommendation.",
+    "Readiness describes explicit source and method gates; it does not certify implementation feasibility.",
+    "External domain, legal, community, security, and operational review remains outside this design artifact."
+  ],
+  "method_claimed": false,
+  "objectives": [
+    {
+      "evidence_type": "estimated",
+      "metric": "priority case-days beyond lawful response deadlines",
+      "objective_id": "scenario.housing.habitability-code.inspection-enforcement-calendar.v1.objective.primary",
+      "primary": true,
+      "sense": "minimize",
+      "unit": "case-days"
+    },
+    {
+      "evidence_type": "estimated",
+      "metric": "distributional gap in priority case-days beyond lawful response deadlines",
+      "objective_id": "scenario.housing.habitability-code.inspection-enforcement-calendar.v1.objective.equity",
+      "primary": false,
+      "sense": "minimize",
+      "unit": "case-days"
+    },
+    {
+      "evidence_type": "observed",
+      "metric": "decision claims with complete evidence lineage",
+      "objective_id": "scenario.housing.habitability-code.inspection-enforcement-calendar.v1.objective.traceability",
+      "primary": false,
+      "sense": "maximize",
+      "unit": "percent"
+    }
+  ],
+  "prohibited_claims": [
+    "Do not infer completed inspection, notice, repair, or safe occupancy from a scheduled task.",
+    "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+    "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+    "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+  ],
+  "release_gate": {
+    "failure_release": "Release an explicit insufficient-evidence record naming missing sources, failed diagnostics, prohibited claims, and the next validation action.",
+    "failure_status": "insufficient-evidence",
+    "gate_id": "scenario.housing.habitability-code.inspection-enforcement-calendar.v1.gate.release",
+    "gate_type": "temporal-alignment",
+    "pass_condition": "Evidence for housing inspection, enforcement, and repair schedule passes documented checks for effective dates, time zones, calendars, lead times, completion semantics, and update cadence.",
+    "required_evidence_types": [
+      "observed",
+      "proposed"
+    ],
+    "required_source_roles": [
+      "geographic-identity",
+      "housing-market",
+      "legal-regulatory",
+      "municipal-demand",
+      "operating-capacity",
+      "service-schedule"
+    ]
+  },
+  "required_source_roles": [
+    "geographic-identity",
+    "housing-market",
+    "legal-regulatory",
+    "municipal-demand",
+    "operating-capacity",
+    "service-schedule"
+  ],
+  "schema_version": "1.0.0",
+  "spatial_unit": "asset",
+  "suite": "housing-land-use-regeneration",
+  "tags": [
+    "design-only",
+    "housing-land-use-regeneration",
+    "housing.habitability-code",
+    "scenario-library",
+    "schedule"
+  ],
+  "title": "Schedule housing inspections, follow-ups, and repairs",
+  "transportability_risks": [
+    "Housing law, tenure, building age, complaint access, inspection practice, and enforcement differ.",
+    "Complaint records may over- or under-represent physical conditions and retaliation risk."
+  ]
+}

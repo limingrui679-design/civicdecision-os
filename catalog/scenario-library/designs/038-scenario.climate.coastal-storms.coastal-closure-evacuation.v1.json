@@ -1,0 +1,169 @@
+{
+  "affected_system": "coastal protection, evacuation, and long-term adaptation system",
+  "alternatives": [
+    "phase evacuation by official risk zone",
+    "prioritize carless and assisted populations before general departure",
+    "adapt closure and evacuation timing to ensemble tracks and observed network state"
+  ],
+  "analysis_modes": [
+    "forecast",
+    "simulation",
+    "optimization"
+  ],
+  "assumptions": [
+    "Elevation, surge, shoreline, asset, and population layers share documented vertical and horizontal datums.",
+    "Sea-level pathways, damage functions, and adaptation performance remain explicit scenarios.",
+    "All alternatives, capacities, costs, effects, thresholds, and failure scenarios are proposed until bound to evidence."
+  ],
+  "baseline": "Current fixed evacuation and closure triggers remain in effect.",
+  "city_bindings": [],
+  "constraints": [
+    {
+      "binding": true,
+      "constraint_id": "scenario.climate.coastal-storms.coastal-closure-evacuation.v1.constraint.binding",
+      "description": "Each phase must satisfy clearance time, transport capacity, worker safety, and public-notice lead time.",
+      "hard": true,
+      "kind": "time",
+      "required_source_roles": [
+        "asset-inventory",
+        "climate-hazard",
+        "geographic-identity",
+        "legal-regulatory",
+        "real-time-state",
+        "service-schedule",
+        "transport-network"
+      ]
+    },
+    {
+      "binding": false,
+      "constraint_id": "scenario.climate.coastal-storms.coastal-closure-evacuation.v1.constraint.evidence-scope",
+      "description": "Every released metric must retain evidence type, source lineage, geography, time, assumptions, and uncertainty.",
+      "hard": true,
+      "kind": "technical",
+      "required_source_roles": [
+        "asset-inventory"
+      ]
+    },
+    {
+      "binding": false,
+      "constraint_id": "scenario.climate.coastal-storms.coastal-closure-evacuation.v1.constraint.decision-authority",
+      "description": "No analytical output may bypass lawful authority, accountable human review, or an applicable appeal process.",
+      "hard": true,
+      "kind": "regulatory",
+      "required_source_roles": [
+        "asset-inventory"
+      ]
+    }
+  ],
+  "current_readiness": "blocked-missing-source",
+  "decision_cadence": "event-triggered and reviewed at the stated decision horizon",
+  "decision_owner": "coastal resilience director and emergency-management commissioner",
+  "decision_question": "When should ports, roads, services, and evacuation zones transition before a coastal storm?",
+  "decision_type": "schedule",
+  "design_id": "scenario.climate.coastal-storms.coastal-closure-evacuation.v1",
+  "design_order": 38,
+  "design_signature": "sha256:2b881f1919d571a1abde072c7806340e7ecc093256bf1ef7582bd62dbdfc244c",
+  "evidence_requirements": [
+    "estimated",
+    "observed",
+    "optimized",
+    "proposed",
+    "simulated"
+  ],
+  "family_id": "climate.coastal-storms",
+  "family_title": "Coastal storms and sea-level adaptation",
+  "horizon": "days",
+  "implementation_status": "design-only",
+  "independence_key": {
+    "binding_constraint": "Each phase must satisfy clearance time, transport capacity, worker safety, and public-notice lead time.",
+    "decision_object": "phased coastal closure and evacuation timetable",
+    "evidence_gate": "Validated demand, route capacity, transit schedules, control points, and disruption states support clearance estimates.",
+    "horizon": "days",
+    "intervention_mechanism": "clearance-time and forecast-trigger scheduling",
+    "primary_outcome": "population remaining in risk zones at unsafe conditions",
+    "spatial_unit": "network"
+  },
+  "intended_claim": "A versioned schedule design for comparing declared alternatives affecting phased coastal closure and evacuation timetable, conditional on its evidence gate.",
+  "limitations": [
+    "This library record has no city binding and therefore reports no local input, output, or recommendation.",
+    "Readiness describes explicit source and method gates; it does not certify implementation feasibility.",
+    "External domain, legal, community, security, and operational review remains outside this design artifact."
+  ],
+  "method_claimed": false,
+  "objectives": [
+    {
+      "evidence_type": "estimated",
+      "metric": "population remaining in risk zones at unsafe conditions",
+      "objective_id": "scenario.climate.coastal-storms.coastal-closure-evacuation.v1.objective.primary",
+      "primary": true,
+      "sense": "minimize",
+      "unit": "people"
+    },
+    {
+      "evidence_type": "estimated",
+      "metric": "distributional gap in population remaining in risk zones at unsafe conditions",
+      "objective_id": "scenario.climate.coastal-storms.coastal-closure-evacuation.v1.objective.equity",
+      "primary": false,
+      "sense": "minimize",
+      "unit": "people"
+    },
+    {
+      "evidence_type": "observed",
+      "metric": "decision claims with complete evidence lineage",
+      "objective_id": "scenario.climate.coastal-storms.coastal-closure-evacuation.v1.objective.traceability",
+      "primary": false,
+      "sense": "maximize",
+      "unit": "percent"
+    }
+  ],
+  "prohibited_claims": [
+    "Do not call simulated clearance an actual evacuation result or assume universal compliance.",
+    "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+    "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+    "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+  ],
+  "release_gate": {
+    "failure_release": "Release an explicit insufficient-evidence record naming missing sources, failed diagnostics, prohibited claims, and the next validation action.",
+    "failure_status": "insufficient-evidence",
+    "gate_id": "scenario.climate.coastal-storms.coastal-closure-evacuation.v1.gate.release",
+    "gate_type": "network-readiness",
+    "pass_condition": "Validated demand, route capacity, transit schedules, control points, and disruption states support clearance estimates.",
+    "required_evidence_types": [
+      "observed",
+      "proposed"
+    ],
+    "required_source_roles": [
+      "asset-inventory",
+      "climate-hazard",
+      "geographic-identity",
+      "legal-regulatory",
+      "real-time-state",
+      "service-schedule",
+      "transport-network"
+    ]
+  },
+  "required_source_roles": [
+    "asset-inventory",
+    "climate-hazard",
+    "geographic-identity",
+    "legal-regulatory",
+    "real-time-state",
+    "service-schedule",
+    "transport-network"
+  ],
+  "schema_version": "1.0.0",
+  "spatial_unit": "network",
+  "suite": "climate-disaster-resilience",
+  "tags": [
+    "climate-disaster-resilience",
+    "climate.coastal-storms",
+    "design-only",
+    "scenario-library",
+    "schedule"
+  ],
+  "title": "Schedule coastal closures and phased evacuation",
+  "transportability_risks": [
+    "Coastal morphology, tides, subsidence, protection standards, and evacuation behavior differ.",
+    "Long-horizon adaptation values depend on local finance, land tenure, and legal authority."
+  ]
+}

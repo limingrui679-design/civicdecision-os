@@ -1,0 +1,166 @@
+{
+  "affected_system": "housing inspection, code enforcement, repair, and tenant-support system",
+  "alternatives": [
+    "add targeted redundancy around the largest failure modes in housing habitability response under extreme-condition surge",
+    "select an adaptive robust portfolio across severe scenarios for housing habitability response under extreme-condition surge",
+    "pair case, facility, contractor, and relocation-capacity failure simulation with an explicit stop, review, and escalation rule"
+  ],
+  "analysis_modes": [
+    "forecast",
+    "simulation",
+    "optimization"
+  ],
+  "assumptions": [
+    "Complaints, inspections, violations, ownership, repair, and closure records retain distinct semantics.",
+    "Tenant vulnerability and building condition are measured only from authorized, documented sources.",
+    "All alternatives, capacities, costs, effects, thresholds, and failure scenarios are proposed until bound to evidence."
+  ],
+  "baseline": "apply current continuity provisions to housing habitability response under extreme-condition surge.",
+  "city_bindings": [],
+  "constraints": [
+    {
+      "binding": true,
+      "constraint_id": "scenario.housing.habitability-code.housing-emergency-surge.v1.constraint.binding",
+      "description": "The housing habitability and code operations stress test must respect declared minimum continuity and safety thresholds across severe scenarios.",
+      "hard": true,
+      "kind": "risk",
+      "required_source_roles": [
+        "climate-hazard",
+        "facility-inventory",
+        "geographic-identity",
+        "housing-market",
+        "municipal-demand",
+        "operating-capacity"
+      ]
+    },
+    {
+      "binding": false,
+      "constraint_id": "scenario.housing.habitability-code.housing-emergency-surge.v1.constraint.evidence-scope",
+      "description": "Every released metric must retain evidence type, source lineage, geography, time, assumptions, and uncertainty.",
+      "hard": true,
+      "kind": "technical",
+      "required_source_roles": [
+        "climate-hazard"
+      ]
+    },
+    {
+      "binding": false,
+      "constraint_id": "scenario.housing.habitability-code.housing-emergency-surge.v1.constraint.decision-authority",
+      "description": "No analytical output may bypass lawful authority, accountable human review, or an applicable appeal process.",
+      "hard": true,
+      "kind": "regulatory",
+      "required_source_roles": [
+        "climate-hazard"
+      ]
+    }
+  ],
+  "current_readiness": "blocked-missing-source",
+  "decision_cadence": "recompiled at each planning cycle and after material evidence change",
+  "decision_owner": "housing-code commissioner and tenant-protection director",
+  "decision_question": "Which plan preserves inspection, repair, shelter, and tenant support during heat, cold, flood, or outage surges?",
+  "decision_type": "stress-test",
+  "design_id": "scenario.housing.habitability-code.housing-emergency-surge.v1",
+  "design_order": 119,
+  "design_signature": "sha256:bb8dfcb8d9757995324b66ba048f0ba5a2dd5cc61c7557962584e3a44181e4c7",
+  "evidence_requirements": [
+    "estimated",
+    "observed",
+    "optimized",
+    "proposed",
+    "simulated"
+  ],
+  "family_id": "housing.habitability-code",
+  "family_title": "Housing habitability and code operations",
+  "horizon": "seasonal",
+  "implementation_status": "design-only",
+  "independence_key": {
+    "binding_constraint": "The housing habitability and code operations stress test must respect declared minimum continuity and safety thresholds across severe scenarios.",
+    "decision_object": "housing habitability response under extreme-condition surge",
+    "evidence_gate": "Evidence for housing habitability response under extreme-condition surge passes documented checks for scenario ranges, dependence, failure rates, recovery, intervention performance, and sensitivity.",
+    "horizon": "seasonal",
+    "intervention_mechanism": "case, facility, contractor, and relocation-capacity failure simulation",
+    "primary_outcome": "scenario-weighted priority households without timely protection",
+    "spatial_unit": "network"
+  },
+  "intended_claim": "A versioned stress-test design for comparing declared alternatives affecting housing habitability response under extreme-condition surge, conditional on its evidence gate.",
+  "limitations": [
+    "This library record has no city binding and therefore reports no local input, output, or recommendation.",
+    "Readiness describes explicit source and method gates; it does not certify implementation feasibility.",
+    "External domain, legal, community, security, and operational review remains outside this design artifact."
+  ],
+  "method_claimed": false,
+  "objectives": [
+    {
+      "evidence_type": "estimated",
+      "metric": "scenario-weighted priority households without timely protection",
+      "objective_id": "scenario.housing.habitability-code.housing-emergency-surge.v1.objective.primary",
+      "primary": true,
+      "sense": "minimize",
+      "unit": "household-days"
+    },
+    {
+      "evidence_type": "estimated",
+      "metric": "distributional gap in scenario-weighted priority households without timely protection",
+      "objective_id": "scenario.housing.habitability-code.housing-emergency-surge.v1.objective.equity",
+      "primary": false,
+      "sense": "minimize",
+      "unit": "household-days"
+    },
+    {
+      "evidence_type": "observed",
+      "metric": "decision claims with complete evidence lineage",
+      "objective_id": "scenario.housing.habitability-code.housing-emergency-surge.v1.objective.traceability",
+      "primary": false,
+      "sense": "maximize",
+      "unit": "percent"
+    }
+  ],
+  "prohibited_claims": [
+    "Do not present synthetic conditions or households as observed violations or displacement.",
+    "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+    "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+    "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+  ],
+  "release_gate": {
+    "failure_release": "Release an explicit insufficient-evidence record naming missing sources, failed diagnostics, prohibited claims, and the next validation action.",
+    "failure_status": "insufficient-evidence",
+    "gate_id": "scenario.housing.habitability-code.housing-emergency-surge.v1.gate.release",
+    "gate_type": "external-validation",
+    "pass_condition": "Evidence for housing habitability response under extreme-condition surge passes documented checks for scenario ranges, dependence, failure rates, recovery, intervention performance, and sensitivity.",
+    "required_evidence_types": [
+      "estimated",
+      "observed"
+    ],
+    "required_source_roles": [
+      "climate-hazard",
+      "facility-inventory",
+      "geographic-identity",
+      "housing-market",
+      "municipal-demand",
+      "operating-capacity"
+    ]
+  },
+  "required_source_roles": [
+    "climate-hazard",
+    "facility-inventory",
+    "geographic-identity",
+    "housing-market",
+    "municipal-demand",
+    "operating-capacity"
+  ],
+  "schema_version": "1.0.0",
+  "spatial_unit": "network",
+  "suite": "housing-land-use-regeneration",
+  "tags": [
+    "design-only",
+    "housing-land-use-regeneration",
+    "housing.habitability-code",
+    "scenario-library",
+    "stress-test"
+  ],
+  "title": "Stress-test housing response during extreme-condition surges",
+  "transportability_risks": [
+    "Housing law, tenure, building age, complaint access, inspection practice, and enforcement differ.",
+    "Complaint records may over- or under-represent physical conditions and retaliation risk."
+  ]
+}

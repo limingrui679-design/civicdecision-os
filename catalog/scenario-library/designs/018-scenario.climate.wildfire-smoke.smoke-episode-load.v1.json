@@ -1,0 +1,162 @@
+{
+  "affected_system": "urban smoke exposure and clean-air protection system",
+  "alternatives": [
+    "activate communications from monitored thresholds",
+    "stage clean-air operations from ensemble risk bands",
+    "reserve capacity using upper prediction bounds for vulnerable groups"
+  ],
+  "analysis_modes": [
+    "forecast"
+  ],
+  "assumptions": [
+    "Air-quality observations carry calibration, siting, and temporal metadata.",
+    "Indoor infiltration and filtration effects are measured locally or labeled assumptions.",
+    "All alternatives, capacities, costs, effects, thresholds, and failure scenarios are proposed until bound to evidence."
+  ],
+  "baseline": "Ordinary air-quality communication and facility operations continue.",
+  "city_bindings": [],
+  "constraints": [
+    {
+      "binding": true,
+      "constraint_id": "scenario.climate.wildfire-smoke.smoke-episode-load.v1.constraint.binding",
+      "description": "Activation forecasts must expose uncertainty and cannot exceed the spatial resolution of validated inputs.",
+      "hard": true,
+      "kind": "capacity",
+      "required_source_roles": [
+        "climate-hazard",
+        "environmental-exposure",
+        "geographic-identity",
+        "municipal-demand",
+        "operating-capacity",
+        "real-time-state"
+      ]
+    },
+    {
+      "binding": false,
+      "constraint_id": "scenario.climate.wildfire-smoke.smoke-episode-load.v1.constraint.evidence-scope",
+      "description": "Every released metric must retain evidence type, source lineage, geography, time, assumptions, and uncertainty.",
+      "hard": true,
+      "kind": "technical",
+      "required_source_roles": [
+        "climate-hazard"
+      ]
+    },
+    {
+      "binding": false,
+      "constraint_id": "scenario.climate.wildfire-smoke.smoke-episode-load.v1.constraint.decision-authority",
+      "description": "No analytical output may bypass lawful authority, accountable human review, or an applicable appeal process.",
+      "hard": true,
+      "kind": "regulatory",
+      "required_source_roles": [
+        "climate-hazard"
+      ]
+    }
+  ],
+  "current_readiness": "blocked-missing-source",
+  "decision_cadence": "event-triggered and reviewed at the stated decision horizon",
+  "decision_owner": "air-quality response coordinator and public-health director",
+  "decision_question": "What probabilistic smoke and assistance-demand envelope should local operations prepare for?",
+  "decision_type": "forecast",
+  "design_id": "scenario.climate.wildfire-smoke.smoke-episode-load.v1",
+  "design_order": 18,
+  "design_signature": "sha256:c977d3abc70e7ed5932cb09a1302af06aa45393605345674d770863ac1226363",
+  "evidence_requirements": [
+    "estimated",
+    "observed",
+    "proposed"
+  ],
+  "family_id": "climate.wildfire-smoke",
+  "family_title": "Wildfire smoke and air-quality resilience",
+  "horizon": "days",
+  "implementation_status": "design-only",
+  "independence_key": {
+    "binding_constraint": "Activation forecasts must expose uncertainty and cannot exceed the spatial resolution of validated inputs.",
+    "decision_object": "daily smoke episode and assistance load",
+    "evidence_gate": "Held-out episodes meet particulate concentration, threshold-event, timing, and interval-coverage criteria.",
+    "horizon": "days",
+    "intervention_mechanism": "ensemble smoke-transport and demand forecasting",
+    "primary_outcome": "service demand above clean-air response capacity",
+    "spatial_unit": "citywide"
+  },
+  "intended_claim": "A versioned forecast design for comparing declared alternatives affecting daily smoke episode and assistance load, conditional on its evidence gate.",
+  "limitations": [
+    "This library record has no city binding and therefore reports no local input, output, or recommendation.",
+    "Readiness describes explicit source and method gates; it does not certify implementation feasibility.",
+    "External domain, legal, community, security, and operational review remains outside this design artifact."
+  ],
+  "method_claimed": false,
+  "objectives": [
+    {
+      "evidence_type": "estimated",
+      "metric": "service demand above clean-air response capacity",
+      "objective_id": "scenario.climate.wildfire-smoke.smoke-episode-load.v1.objective.primary",
+      "primary": true,
+      "sense": "minimize",
+      "unit": "requests per day"
+    },
+    {
+      "evidence_type": "estimated",
+      "metric": "distributional gap in service demand above clean-air response capacity",
+      "objective_id": "scenario.climate.wildfire-smoke.smoke-episode-load.v1.objective.equity",
+      "primary": false,
+      "sense": "minimize",
+      "unit": "requests per day"
+    },
+    {
+      "evidence_type": "observed",
+      "metric": "decision claims with complete evidence lineage",
+      "objective_id": "scenario.climate.wildfire-smoke.smoke-episode-load.v1.objective.traceability",
+      "primary": false,
+      "sense": "maximize",
+      "unit": "percent"
+    }
+  ],
+  "prohibited_claims": [
+    "Do not present regional smoke forecasts as measured neighborhood exposure.",
+    "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+    "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+    "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+  ],
+  "release_gate": {
+    "failure_release": "Release an explicit insufficient-evidence record naming missing sources, failed diagnostics, prohibited claims, and the next validation action.",
+    "failure_status": "insufficient-evidence",
+    "gate_id": "scenario.climate.wildfire-smoke.smoke-episode-load.v1.gate.release",
+    "gate_type": "model-calibration",
+    "pass_condition": "Held-out episodes meet particulate concentration, threshold-event, timing, and interval-coverage criteria.",
+    "required_evidence_types": [
+      "estimated",
+      "observed"
+    ],
+    "required_source_roles": [
+      "climate-hazard",
+      "environmental-exposure",
+      "geographic-identity",
+      "municipal-demand",
+      "operating-capacity",
+      "real-time-state"
+    ]
+  },
+  "required_source_roles": [
+    "climate-hazard",
+    "environmental-exposure",
+    "geographic-identity",
+    "municipal-demand",
+    "operating-capacity",
+    "real-time-state"
+  ],
+  "schema_version": "1.0.0",
+  "spatial_unit": "citywide",
+  "suite": "climate-disaster-resilience",
+  "tags": [
+    "climate-disaster-resilience",
+    "climate.wildfire-smoke",
+    "design-only",
+    "forecast",
+    "scenario-library"
+  ],
+  "title": "Forecast smoke episode intensity and service load",
+  "transportability_risks": [
+    "Smoke chemistry, building leakage, monitor density, and household behavior differ.",
+    "Regional forecasts and satellite products may have city-specific resolution limits."
+  ]
+}

@@ -1,0 +1,165 @@
+{
+  "affected_system": "public participation, multilingual communication, consultation, and feedback closure",
+  "alternatives": [
+    "protect minimum coverage before needs-based allocation of public participation and communication support resources",
+    "adapt allocations using observed demand, uptake, and capacity for public participation and communication support resources",
+    "pair affected-population and minimum-access allocation with an explicit stop, review, and escalation rule"
+  ],
+  "analysis_modes": [
+    "simulation",
+    "optimization"
+  ],
+  "assumptions": [
+    "Invitation, exposure, participation, contribution, response, decision, and trust remain distinct.",
+    "Participation records preserve consent, privacy, language, accessibility, and channel provenance.",
+    "All alternatives, capacities, costs, effects, thresholds, and failure scenarios are proposed until bound to evidence."
+  ],
+  "baseline": "retain the current distribution rule for public participation and communication support resources.",
+  "city_bindings": [],
+  "constraints": [
+    {
+      "binding": true,
+      "constraint_id": "scenario.equity.participation-communication.engagement-support.v1.constraint.binding",
+      "description": "The public participation and risk communication allocate must respect declared minimum service, eligibility, capacity, and distributional safeguards.",
+      "hard": true,
+      "kind": "equity",
+      "required_source_roles": [
+        "community-input",
+        "demographic-context",
+        "equity-attribute",
+        "geographic-identity",
+        "operating-capacity",
+        "service-schedule"
+      ]
+    },
+    {
+      "binding": false,
+      "constraint_id": "scenario.equity.participation-communication.engagement-support.v1.constraint.evidence-scope",
+      "description": "Every released metric must retain evidence type, source lineage, geography, time, assumptions, and uncertainty.",
+      "hard": true,
+      "kind": "technical",
+      "required_source_roles": [
+        "community-input"
+      ]
+    },
+    {
+      "binding": false,
+      "constraint_id": "scenario.equity.participation-communication.engagement-support.v1.constraint.decision-authority",
+      "description": "No analytical output may bypass lawful authority, accountable human review, or an applicable appeal process.",
+      "hard": true,
+      "kind": "regulatory",
+      "required_source_roles": [
+        "community-input"
+      ]
+    }
+  ],
+  "current_readiness": "blocked-missing-source",
+  "decision_cadence": "recompiled at each planning cycle and after material evidence change",
+  "decision_owner": "public engagement director and risk communications lead",
+  "decision_question": "How should outreach, interpreters, accessibility support, stipends, facilitation, and response capacity be assigned?",
+  "decision_type": "allocate",
+  "design_id": "scenario.equity.participation-communication.engagement-support.v1",
+  "design_order": 221,
+  "design_signature": "sha256:348d8647e5a4860756ecd76bb106e7926847c4db55a811999b3abd6c776820b0",
+  "evidence_requirements": [
+    "estimated",
+    "observed",
+    "optimized",
+    "proposed",
+    "simulated"
+  ],
+  "family_id": "equity.participation-communication",
+  "family_title": "Public participation and risk communication",
+  "horizon": "weeks",
+  "implementation_status": "design-only",
+  "independence_key": {
+    "binding_constraint": "The public participation and risk communication allocate must respect declared minimum service, eligibility, capacity, and distributional safeguards.",
+    "decision_object": "public participation and communication support resources",
+    "evidence_gate": "Evidence for public participation and communication support resources passes documented checks for eligible denominators, group attributes, inventory, minimum-service rules, and allocation records.",
+    "horizon": "weeks",
+    "intervention_mechanism": "affected-population and minimum-access allocation",
+    "primary_outcome": "affected engagement needs without assigned usable support",
+    "spatial_unit": "population-group"
+  },
+  "intended_claim": "A versioned allocate design for comparing declared alternatives affecting public participation and communication support resources, conditional on its evidence gate.",
+  "limitations": [
+    "This library record has no city binding and therefore reports no local input, output, or recommendation.",
+    "Readiness describes explicit source and method gates; it does not certify implementation feasibility.",
+    "External domain, legal, community, security, and operational review remains outside this design artifact."
+  ],
+  "method_claimed": false,
+  "objectives": [
+    {
+      "evidence_type": "estimated",
+      "metric": "affected engagement needs without assigned usable support",
+      "objective_id": "scenario.equity.participation-communication.engagement-support.v1.objective.primary",
+      "primary": true,
+      "sense": "minimize",
+      "unit": "engagements"
+    },
+    {
+      "evidence_type": "estimated",
+      "metric": "distributional gap in affected engagement needs without assigned usable support",
+      "objective_id": "scenario.equity.participation-communication.engagement-support.v1.objective.equity",
+      "primary": false,
+      "sense": "minimize",
+      "unit": "engagements"
+    },
+    {
+      "evidence_type": "observed",
+      "metric": "decision claims with complete evidence lineage",
+      "objective_id": "scenario.equity.participation-communication.engagement-support.v1.objective.traceability",
+      "primary": false,
+      "sense": "maximize",
+      "unit": "percent"
+    }
+  ],
+  "prohibited_claims": [
+    "Do not report allocated support as participation, representation, agreement, or influence.",
+    "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+    "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+    "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+  ],
+  "release_gate": {
+    "failure_release": "Release an explicit insufficient-evidence record naming missing sources, failed diagnostics, prohibited claims, and the next validation action.",
+    "failure_status": "insufficient-evidence",
+    "gate_id": "scenario.equity.participation-communication.engagement-support.v1.gate.release",
+    "gate_type": "equity-measurement",
+    "pass_condition": "Evidence for public participation and communication support resources passes documented checks for eligible denominators, group attributes, inventory, minimum-service rules, and allocation records.",
+    "required_evidence_types": [
+      "observed",
+      "proposed"
+    ],
+    "required_source_roles": [
+      "community-input",
+      "demographic-context",
+      "equity-attribute",
+      "geographic-identity",
+      "operating-capacity",
+      "service-schedule"
+    ]
+  },
+  "required_source_roles": [
+    "community-input",
+    "demographic-context",
+    "equity-attribute",
+    "geographic-identity",
+    "operating-capacity",
+    "service-schedule"
+  ],
+  "schema_version": "1.0.0",
+  "spatial_unit": "population-group",
+  "suite": "behavioral-policy-equity",
+  "tags": [
+    "allocate",
+    "behavioral-policy-equity",
+    "design-only",
+    "equity.participation-communication",
+    "scenario-library"
+  ],
+  "title": "Allocate engagement, translation, and participation support",
+  "transportability_risks": [
+    "Trust, language, civic institutions, digital access, deliberation norms, and risk salience differ.",
+    "Participants are not automatically representative of affected populations."
+  ]
+}

@@ -1,0 +1,333 @@
+{
+  "designs": [
+    {
+      "analysis_modes": [
+        "descriptive"
+      ],
+      "binding_constraint": "The heat-health surveillance and prevention diagnose must respect declared measurement resolution and classification uncertainty.",
+      "content_hash": "sha256:0722914b8a70835cd41125a89b95eed0095dcc1ee66f81cbf935f702842e5fa3",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Where and when do verified heat-related syndromes diverge from expected seasonal and reporting patterns?",
+      "decision_type": "diagnose",
+      "design_id": "scenario.health.heat-health.heat-illness-patterns.v1",
+      "design_order": 81,
+      "evidence_gate": "geographic-alignment",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "proposed"
+      ],
+      "family_id": "health.heat-health",
+      "family_title": "Heat-health surveillance and prevention",
+      "horizon": "annual",
+      "implementation_status": "design-only",
+      "primary_outcome": "unexplained excess heat-related health events",
+      "prohibited_claims": [
+        "Do not diagnose individuals or attribute events to heat from aggregate temporal overlap.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "population-group",
+      "suite": "population-health-environmental-exposure",
+      "title": "Diagnose heat-health surveillance patterns"
+    },
+    {
+      "analysis_modes": [
+        "forecast"
+      ],
+      "binding_constraint": "The heat-health surveillance and prevention forecast must respect declared validated operational capacity and forecast uncertainty.",
+      "content_hash": "sha256:85dfd602c32496feb933d05093ac1e14b36079bf23f8b2c659a5448eaa30d937",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "What probabilistic emergency, call-center, and outreach workload should health operations prepare for?",
+      "decision_type": "forecast",
+      "design_id": "scenario.health.heat-health.heat-care-demand.v1",
+      "design_order": 82,
+      "evidence_gate": "model-calibration",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "proposed"
+      ],
+      "family_id": "health.heat-health",
+      "family_title": "Heat-health surveillance and prevention",
+      "horizon": "weeks",
+      "implementation_status": "design-only",
+      "primary_outcome": "health-response demand above staffed capacity",
+      "prohibited_claims": [
+        "Do not present forecast encounters as illnesses, admissions, or deaths.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "service-area",
+      "suite": "population-health-environmental-exposure",
+      "title": "Forecast heat-related care and outreach demand"
+    },
+    {
+      "analysis_modes": [
+        "descriptive",
+        "optimization"
+      ],
+      "binding_constraint": "The heat-health surveillance and prevention prioritize must respect declared capital, operating, maintenance, and delivery budgets.",
+      "content_hash": "sha256:0de0268e9859e2b304324175014589bcbbdd9e6c00ed076c210860abb886125d",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Which surveillance, housing, clinical, outreach, and cooling measures should enter the prevention portfolio?",
+      "decision_type": "prioritize",
+      "design_id": "scenario.health.heat-health.heat-prevention-portfolio.v1",
+      "design_order": 83,
+      "evidence_gate": "cost-capacity",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed"
+      ],
+      "family_id": "health.heat-health",
+      "family_title": "Heat-health surveillance and prevention",
+      "horizon": "multi-year",
+      "implementation_status": "design-only",
+      "primary_outcome": "expected preventable heat-health burden",
+      "prohibited_claims": [
+        "Do not report modeled preventable burden as avoided illness or mortality.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "asset",
+      "suite": "population-health-environmental-exposure",
+      "title": "Prioritize heat-health prevention investments"
+    },
+    {
+      "analysis_modes": [
+        "simulation",
+        "optimization"
+      ],
+      "binding_constraint": "The heat-health surveillance and prevention site must respect declared land control, accessibility, permitting, safety, and operating feasibility.",
+      "content_hash": "sha256:8b22fc56cc7b39d9ea6689dcc9b6c3125a7f480cba7c0bcce6cc9f81c0dfbdd0",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Where should non-emergency assessment, respite, and referral sites operate during heat events?",
+      "decision_type": "site",
+      "design_id": "scenario.health.heat-health.heat-health-access-points.v1",
+      "design_order": 84,
+      "evidence_gate": "legal-authority",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "family_id": "health.heat-health",
+      "family_title": "Heat-health surveillance and prevention",
+      "horizon": "multi-year",
+      "implementation_status": "design-only",
+      "primary_outcome": "high-risk residents beyond timely heat-health support",
+      "prohibited_claims": [
+        "Do not call a community facility a clinical site or safe respite without qualification.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "facility",
+      "suite": "population-health-environmental-exposure",
+      "title": "Site heat-health assessment and respite access points"
+    },
+    {
+      "analysis_modes": [
+        "simulation",
+        "optimization"
+      ],
+      "binding_constraint": "The heat-health surveillance and prevention allocate must respect declared minimum service, eligibility, capacity, and distributional safeguards.",
+      "content_hash": "sha256:0764ac776c8c0f41ed913c1fa0c2dbd277a90df47b41bdf3bb560768a2918ea6",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "How should community health workers, call capacity, transport, and clinical surge slots be distributed?",
+      "decision_type": "allocate",
+      "design_id": "scenario.health.heat-health.heat-health-outreach.v1",
+      "design_order": 85,
+      "evidence_gate": "equity-measurement",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "family_id": "health.heat-health",
+      "family_title": "Heat-health surveillance and prevention",
+      "horizon": "weeks",
+      "implementation_status": "design-only",
+      "primary_outcome": "high-risk people without assigned support capacity",
+      "prohibited_claims": [
+        "Do not report assigned support as contacted patients, completed visits, or improved health.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "population-group",
+      "suite": "population-health-environmental-exposure",
+      "title": "Allocate heat-health outreach and clinical surge support"
+    },
+    {
+      "analysis_modes": [
+        "forecast",
+        "optimization"
+      ],
+      "binding_constraint": "The heat-health surveillance and prevention schedule must respect declared labor, access, sequencing, notice, and completion windows.",
+      "content_hash": "sha256:12609f39c3e55ef7ac249920634bfea34fca359d2a0343e4ad5ff11d91b5f097",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "When should surveillance refresh, outreach, clinical staffing, and escalation thresholds activate?",
+      "decision_type": "schedule",
+      "design_id": "scenario.health.heat-health.heat-health-surveillance.v1",
+      "design_order": 86,
+      "evidence_gate": "temporal-alignment",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed"
+      ],
+      "family_id": "health.heat-health",
+      "family_title": "Heat-health surveillance and prevention",
+      "horizon": "weeks",
+      "implementation_status": "design-only",
+      "primary_outcome": "hours of high-risk conditions without active health response",
+      "prohibited_claims": [
+        "Do not call an escalation schedule activated or a health response delivered.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "citywide",
+      "suite": "population-health-environmental-exposure",
+      "title": "Schedule heat-health surveillance and response escalation"
+    },
+    {
+      "analysis_modes": [
+        "forecast",
+        "simulation",
+        "optimization"
+      ],
+      "binding_constraint": "The heat-health surveillance and prevention stress test must respect declared minimum continuity and safety thresholds across severe scenarios.",
+      "content_hash": "sha256:774405c02113fdd6686a3df5a188e305bbc364bd9b6ae38427ee639013afe9e3",
+      "current_readiness": "blocked-missing-source",
+      "decision_question": "Which prevention and care strategy preserves essential capacity during prolonged heat, outages, and staff loss?",
+      "decision_type": "stress-test",
+      "design_id": "scenario.health.heat-health.heat-health-surge.v1",
+      "design_order": 87,
+      "evidence_gate": "external-validation",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "family_id": "health.heat-health",
+      "family_title": "Heat-health surveillance and prevention",
+      "horizon": "seasonal",
+      "implementation_status": "design-only",
+      "primary_outcome": "scenario-weighted unmet critical heat-health demand",
+      "prohibited_claims": [
+        "Do not present simulated patient loads or failures as an epidemic forecast or observed harm.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "network",
+      "suite": "population-health-environmental-exposure",
+      "title": "Stress-test heat-health surge capacity"
+    },
+    {
+      "analysis_modes": [
+        "descriptive",
+        "causal"
+      ],
+      "binding_constraint": "The heat-health surveillance and prevention evaluate must respect declared pre-specified assignment, comparison, outcome, spillover, and subgroup rules.",
+      "content_hash": "sha256:824181e67fafde09655e56b4eaf676fbfa24a33e03b498455518e934a400d040",
+      "current_readiness": "blocked-multiple-gates",
+      "decision_question": "Did phased proactive outreach reduce verified emergency heat-health events without unequal exclusion?",
+      "decision_type": "evaluate",
+      "design_id": "scenario.health.heat-health.heat-outreach-effect.v1",
+      "design_order": 88,
+      "evidence_gate": "causal-identification",
+      "evidence_types": [
+        "causal",
+        "estimated",
+        "observed",
+        "proposed"
+      ],
+      "family_id": "health.heat-health",
+      "family_title": "Heat-health surveillance and prevention",
+      "horizon": "multi-year",
+      "implementation_status": "design-only",
+      "primary_outcome": "change in verified heat-related emergency encounters",
+      "prohibited_claims": [
+        "Do not infer mortality or causal protection without validated outcomes and assignment diagnostics.",
+        "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+        "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+        "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+      ],
+      "spatial_unit": "population-group",
+      "suite": "population-health-environmental-exposure",
+      "title": "Evaluate targeted heat-health outreach"
+    }
+  ],
+  "family": {
+    "affected_system": "heat-health surveillance, prevention, and care coordination",
+    "claim_boundary": [
+      "Area exposure, service, and vulnerability records do not diagnose individuals or prove harm.",
+      "Operational allocations are proposed planning outputs, not delivered clinical or social services.",
+      "Health-effect claims require outcome panels, identification, privacy, and external review."
+    ],
+    "common_source_roles": [
+      "climate-hazard",
+      "demographic-context",
+      "health-outcome"
+    ],
+    "decision_owner": "public-health preparedness director and emergency medical services lead",
+    "decision_types": [
+      "diagnose",
+      "forecast",
+      "prioritize",
+      "site",
+      "allocate",
+      "schedule",
+      "stress-test",
+      "evaluate"
+    ],
+    "description": "Eight health-centered decisions for syndrome diagnosis, demand forecasting, prevention investment, care access, outreach allocation, surveillance timing, surge stress, and evaluation.",
+    "design_refs": [
+      "scenario.health.heat-health.heat-illness-patterns.v1",
+      "scenario.health.heat-health.heat-care-demand.v1",
+      "scenario.health.heat-health.heat-prevention-portfolio.v1",
+      "scenario.health.heat-health.heat-health-access-points.v1",
+      "scenario.health.heat-health.heat-health-outreach.v1",
+      "scenario.health.heat-health.heat-health-surveillance.v1",
+      "scenario.health.heat-health.heat-health-surge.v1",
+      "scenario.health.heat-health.heat-outreach-effect.v1"
+    ],
+    "design_signatures": [
+      "sha256:02c92b6e09d163d7513bc9d9ff672ebe2217671096fe947674e1e66bd4659ce1",
+      "sha256:334fdff29da8e5d0e7c6dbae972baccfea865b2c6e1dcdfb7859ad81940446c7",
+      "sha256:80b5a3d699cd25ef2da1a1c70188fe91dd3225df3ac8f0a525d3875ce39a73c5",
+      "sha256:5fec244d6c7bc006687d0db8f52d3ea440a269b76274c5cc1eb4a186d95b4912",
+      "sha256:57fe8719e6a2e0f50a7267ff6c27bf27bd27261523bca385a803a7feec12c52e",
+      "sha256:a7ee187056b3e0a9d1f511b17f4755f93607e74a3fd22ed7724920d1ae72b36e",
+      "sha256:5b25be1dd9afac13ec771f70313ac463edcc72f263f9f8706f5a882139ab71aa",
+      "sha256:a9e0b268163ef500f3a564a1e624cb2a2726d76d589b61ec480763756305e530"
+    ],
+    "family_id": "health.heat-health",
+    "family_order": 11,
+    "schema_version": "1.0.0",
+    "suite": "population-health-environmental-exposure",
+    "title": "Heat-health surveillance and prevention"
+  },
+  "library_claim_boundary": [
+    "The catalog contains 240 decision designs, not 240 city executions.",
+    "Exactly twelve designs map to existing Tier-D reference templates; 228 remain design-only.",
+    "A reference implementation can be an explicit negative release and does not imply impact.",
+    "No record claims a city binding, new method, deployment, adoption, or real-user outcome.",
+    "Future execution requires source binding, gate passage, and domain, legal, community, and operational review."
+  ]
+}

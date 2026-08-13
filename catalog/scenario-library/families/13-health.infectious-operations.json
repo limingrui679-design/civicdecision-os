@@ -1,0 +1,50 @@
+{
+  "affected_system": "privacy-preserving infectious-disease surveillance and response operations",
+  "claim_boundary": [
+    "Area exposure, service, and vulnerability records do not diagnose individuals or prove harm.",
+    "Operational allocations are proposed planning outputs, not delivered clinical or social services.",
+    "Health-effect claims require outcome panels, identification, privacy, and external review."
+  ],
+  "common_source_roles": [
+    "geographic-identity",
+    "health-outcome",
+    "operating-capacity"
+  ],
+  "decision_owner": "communicable-disease director and public-health operations chief",
+  "decision_types": [
+    "diagnose",
+    "forecast",
+    "prioritize",
+    "site",
+    "allocate",
+    "schedule",
+    "stress-test",
+    "evaluate"
+  ],
+  "description": "Eight operational decisions for surveillance diagnosis, workload forecasting, preparedness investment, service siting, supply allocation, clinic scheduling, surge stress, and evaluation.",
+  "design_refs": [
+    "scenario.health.infectious-operations.surveillance-discordance.v1",
+    "scenario.health.infectious-operations.care-testing-demand.v1",
+    "scenario.health.infectious-operations.preparedness-portfolio.v1",
+    "scenario.health.infectious-operations.testing-vaccination-sites.v1",
+    "scenario.health.infectious-operations.vaccines-tests-treatment.v1",
+    "scenario.health.infectious-operations.clinic-lab-calendar.v1",
+    "scenario.health.infectious-operations.multi-pathogen-surge.v1",
+    "scenario.health.infectious-operations.outreach-access-effect.v1"
+  ],
+  "design_signatures": [
+    "sha256:188f99c226b5d251b2b1f03ca1e881e9290bf3c6e7a9194ca0169df00c08f664",
+    "sha256:1d3961a3a8a7866c3bbd50f4845c5091657b78db7f0d4249d70cf2ef8cd47acd",
+    "sha256:87ed6ee7be4fd134892ee4bdbb6c72b8f705bb64990656a14cef786e8f42761e",
+    "sha256:a7e6acd6efe63b4193a03dd2b7cf2876582921b810c4d82c158359a22a226798",
+    "sha256:38f0d39b29d77cef38ec24b127aaa5fbaf9032fd7635601ab7be0503db0c9bf1",
+    "sha256:518d041a74190cfc7a55436cc6bbba865bd6827c96678e5de45c808c1745b0b1",
+    "sha256:114d4756f8f007d6eb0c2b7f3542eb588e85e63cdec251098f68cec9ea77a274",
+    "sha256:bc2453f7e0a068dd2ed86aa2fc21dfca43b6237f0e24b1eca7aa834ada42e304"
+  ],
+  "family_id": "health.infectious-operations",
+  "family_order": 13,
+  "schema_version": "1.0.0",
+  "suite": "population-health-environmental-exposure",
+  "title": "Infectious-disease public-health operations"
+}

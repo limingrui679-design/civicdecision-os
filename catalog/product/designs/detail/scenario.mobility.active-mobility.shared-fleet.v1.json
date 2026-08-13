@@ -1,0 +1,225 @@
+{
+  "audit_maximum_pairwise_similarity": 0.646154,
+  "design": {
+    "affected_system": "walking, cycling, and shared micromobility network",
+    "alternatives": [
+      "protect minimum coverage before needs-based allocation of shared-mobility fleet and charging capacity",
+      "adapt allocations using observed demand, uptake, and capacity for shared-mobility fleet and charging capacity",
+      "pair minimum-access and demand-responsive fleet allocation with an explicit stop, review, and escalation rule"
+    ],
+    "analysis_modes": [
+      "simulation",
+      "optimization"
+    ],
+    "assumptions": [
+      "Trips, counts, facilities, stress levels, barriers, and shared-vehicle states use documented coverage.",
+      "Observed shared-system trips do not represent all walking and cycling demand.",
+      "All alternatives, capacities, costs, effects, thresholds, and failure scenarios are proposed until bound to evidence."
+    ],
+    "baseline": "retain the current distribution rule for shared-mobility fleet and charging capacity.",
+    "city_bindings": [],
+    "constraints": [
+      {
+        "binding": true,
+        "constraint_id": "scenario.mobility.active-mobility.shared-fleet.v1.constraint.binding",
+        "description": "The active mobility network and micromobility allocate must respect declared minimum service, eligibility, capacity, and distributional safeguards.",
+        "hard": true,
+        "kind": "equity",
+        "required_source_roles": [
+          "asset-inventory",
+          "equity-attribute",
+          "geographic-identity",
+          "operating-capacity",
+          "real-time-state",
+          "transport-network"
+        ]
+      },
+      {
+        "binding": false,
+        "constraint_id": "scenario.mobility.active-mobility.shared-fleet.v1.constraint.evidence-scope",
+        "description": "Every released metric must retain evidence type, source lineage, geography, time, assumptions, and uncertainty.",
+        "hard": true,
+        "kind": "technical",
+        "required_source_roles": [
+          "asset-inventory"
+        ]
+      },
+      {
+        "binding": false,
+        "constraint_id": "scenario.mobility.active-mobility.shared-fleet.v1.constraint.decision-authority",
+        "description": "No analytical output may bypass lawful authority, accountable human review, or an applicable appeal process.",
+        "hard": true,
+        "kind": "regulatory",
+        "required_source_roles": [
+          "asset-inventory"
+        ]
+      }
+    ],
+    "current_readiness": "blocked-missing-source",
+    "decision_cadence": "recompiled at each planning cycle and after material evidence change",
+    "decision_owner": "active transportation director and shared-mobility program manager",
+    "decision_question": "How should vehicles, adaptive devices, docks, and charging capacity be distributed?",
+    "decision_type": "allocate",
+    "design_id": "scenario.mobility.active-mobility.shared-fleet.v1",
+    "design_order": 77,
+    "design_signature": "sha256:49fe1419b72d2b9f8bfbf9ab5cc32b43a1f7047c9a37f9ab7d74107015d52d07",
+    "evidence_requirements": [
+      "estimated",
+      "observed",
+      "optimized",
+      "proposed",
+      "simulated"
+    ],
+    "family_id": "mobility.active-mobility",
+    "family_title": "Active mobility network and micromobility",
+    "horizon": "weeks",
+    "implementation_status": "design-only",
+    "independence_key": {
+      "binding_constraint": "The active mobility network and micromobility allocate must respect declared minimum service, eligibility, capacity, and distributional safeguards.",
+      "decision_object": "shared-mobility fleet and charging capacity",
+      "evidence_gate": "Evidence for shared-mobility fleet and charging capacity passes documented checks for eligible denominators, group attributes, inventory, minimum-service rules, and allocation records.",
+      "horizon": "weeks",
+      "intervention_mechanism": "minimum-access and demand-responsive fleet allocation",
+      "primary_outcome": "forecast trips without an available suitable vehicle",
+      "spatial_unit": "facility"
+    },
+    "intended_claim": "A versioned allocate design for comparing declared alternatives affecting shared-mobility fleet and charging capacity, conditional on its evidence gate.",
+    "limitations": [
+      "This library record has no city binding and therefore reports no local input, output, or recommendation.",
+      "Readiness describes explicit source and method gates; it does not certify implementation feasibility.",
+      "External domain, legal, community, security, and operational review remains outside this design artifact."
+    ],
+    "method_claimed": false,
+    "objectives": [
+      {
+        "evidence_type": "estimated",
+        "metric": "forecast trips without an available suitable vehicle",
+        "objective_id": "scenario.mobility.active-mobility.shared-fleet.v1.objective.primary",
+        "primary": true,
+        "sense": "minimize",
+        "unit": "trips"
+      },
+      {
+        "evidence_type": "estimated",
+        "metric": "distributional gap in forecast trips without an available suitable vehicle",
+        "objective_id": "scenario.mobility.active-mobility.shared-fleet.v1.objective.equity",
+        "primary": false,
+        "sense": "minimize",
+        "unit": "trips"
+      },
+      {
+        "evidence_type": "observed",
+        "metric": "decision claims with complete evidence lineage",
+        "objective_id": "scenario.mobility.active-mobility.shared-fleet.v1.objective.traceability",
+        "primary": false,
+        "sense": "maximize",
+        "unit": "percent"
+      }
+    ],
+    "prohibited_claims": [
+      "Do not report vehicle allocation as availability at use time or completed equitable access.",
+      "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+      "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+      "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+    ],
+    "release_gate": {
+      "failure_release": "Release an explicit insufficient-evidence record naming missing sources, failed diagnostics, prohibited claims, and the next validation action.",
+      "failure_status": "insufficient-evidence",
+      "gate_id": "scenario.mobility.active-mobility.shared-fleet.v1.gate.release",
+      "gate_type": "equity-measurement",
+      "pass_condition": "Evidence for shared-mobility fleet and charging capacity passes documented checks for eligible denominators, group attributes, inventory, minimum-service rules, and allocation records.",
+      "required_evidence_types": [
+        "observed",
+        "proposed"
+      ],
+      "required_source_roles": [
+        "asset-inventory",
+        "equity-attribute",
+        "geographic-identity",
+        "operating-capacity",
+        "real-time-state",
+        "transport-network"
+      ]
+    },
+    "required_source_roles": [
+      "asset-inventory",
+      "equity-attribute",
+      "geographic-identity",
+      "operating-capacity",
+      "real-time-state",
+      "transport-network"
+    ],
+    "schema_version": "1.0.0",
+    "spatial_unit": "facility",
+    "suite": "mobility-accessibility-operations",
+    "tags": [
+      "allocate",
+      "design-only",
+      "mobility-accessibility-operations",
+      "mobility.active-mobility",
+      "scenario-library"
+    ],
+    "title": "Allocate shared bicycles, devices, and charging capacity",
+    "transportability_risks": [
+      "Topography, climate, street stress, vehicle access, pricing, and safety perceptions vary.",
+      "Platform data can exclude private bicycles, pedestrians, and non-users."
+    ]
+  },
+  "family": {
+    "affected_system": "walking, cycling, and shared micromobility network",
+    "claim_boundary": [
+      "Network, request, and schedule records do not establish individual travel behavior or harm.",
+      "Optimized routes and allocations are planning outputs, not dispatched or completed trips.",
+      "Design-only records do not claim current city data, implementation, compliance, or impact."
+    ],
+    "common_source_roles": [
+      "asset-inventory",
+      "geographic-identity",
+      "transport-network"
+    ],
+    "decision_owner": "active transportation director and shared-mobility program manager",
+    "decision_types": [
+      "diagnose",
+      "forecast",
+      "prioritize",
+      "site",
+      "allocate",
+      "schedule",
+      "stress-test",
+      "evaluate"
+    ],
+    "description": "Eight decisions for network-gap diagnosis, demand forecasting, project selection, station siting, fleet allocation, rebalancing schedules, network stress, and infrastructure evaluation.",
+    "design_refs": [
+      "scenario.mobility.active-mobility.low-stress-network-gaps.v1",
+      "scenario.mobility.active-mobility.active-trip-demand.v1",
+      "scenario.mobility.active-mobility.active-network-projects.v1",
+      "scenario.mobility.active-mobility.shared-mobility-stations.v1",
+      "scenario.mobility.active-mobility.shared-fleet.v1",
+      "scenario.mobility.active-mobility.fleet-rebalancing.v1",
+      "scenario.mobility.active-mobility.active-network-continuity.v1",
+      "scenario.mobility.active-mobility.protected-network-effect.v1"
+    ],
+    "design_signatures": [
+      "sha256:7fb0f73534c061f37be2f058e67180ba3b1e6990a8ca454e64bbfcc7fc17b33c",
+      "sha256:1518a542f9c8e1e9e00bc3f22a67f8dbccfb5e39ab1f4ddc3c2ca7c7380b2334",
+      "sha256:1cdbc5be28d47395ef25bf4293720bc2b93a6f10575aabbf618f8aaaff6b4a8a",
+      "sha256:e3a249fffa740fbf07f61c5527bd4dd9a1c235e77f0bd158389e214484a96d6a",
+      "sha256:49fe1419b72d2b9f8bfbf9ab5cc32b43a1f7047c9a37f9ab7d74107015d52d07",
+      "sha256:6db5877219dfcda854affce9fd7c30768d9b5ced11b1085b09b4f3657aed5774",
+      "sha256:320fb477cef10f68ad6b546588bae694c1483f18480397c9e02de0dad55a77c3",
+      "sha256:51607909ed55f628835927a9bea52d419a8b4cf899b1315be0467c58bdf0e580"
+    ],
+    "family_id": "mobility.active-mobility",
+    "family_order": 10,
+    "schema_version": "1.0.0",
+    "suite": "mobility-accessibility-operations",
+    "title": "Active mobility network and micromobility"
+  },
+  "library_claim_boundary": [
+    "The catalog contains 240 decision designs, not 240 city executions.",
+    "Exactly twelve designs map to existing Tier-D reference templates; 228 remain design-only.",
+    "A reference implementation can be an explicit negative release and does not imply impact.",
+    "No record claims a city binding, new method, deployment, adoption, or real-user outcome.",
+    "Future execution requires source binding, gate passage, and domain, legal, community, and operational review."
+  ]
+}

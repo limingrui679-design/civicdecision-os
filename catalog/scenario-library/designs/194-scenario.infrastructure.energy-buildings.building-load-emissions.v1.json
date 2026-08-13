@@ -1,0 +1,162 @@
+{
+  "affected_system": "municipal buildings, distributed energy, electrification, and emissions management",
+  "alternatives": [
+    "activate a bounded reserve from forecast risk bands for municipal building energy load, cost, and emissions",
+    "use rolling forecasts and conservative capacity triggers for municipal building energy load, cost, and emissions",
+    "pair weather, occupancy, tariff, and project-conditioned load forecasting with an explicit stop, review, and escalation rule"
+  ],
+  "analysis_modes": [
+    "forecast"
+  ],
+  "assumptions": [
+    "Meters, fuels, tariffs, weather, occupancy, equipment, projects, and emissions factors are versioned.",
+    "Modeled energy and carbon savings remain distinct from measured post-project performance.",
+    "All alternatives, capacities, costs, effects, thresholds, and failure scenarios are proposed until bound to evidence."
+  ],
+  "baseline": "continue ordinary capacity planning for municipal building energy load, cost, and emissions.",
+  "city_bindings": [],
+  "constraints": [
+    {
+      "binding": true,
+      "constraint_id": "scenario.infrastructure.energy-buildings.building-load-emissions.v1.constraint.binding",
+      "description": "The municipal energy and building decarbonization forecast must respect declared validated operational capacity and forecast uncertainty.",
+      "hard": true,
+      "kind": "capacity",
+      "required_source_roles": [
+        "asset-inventory",
+        "climate-hazard",
+        "environmental-exposure",
+        "financial-cost",
+        "operating-capacity",
+        "real-time-state"
+      ]
+    },
+    {
+      "binding": false,
+      "constraint_id": "scenario.infrastructure.energy-buildings.building-load-emissions.v1.constraint.evidence-scope",
+      "description": "Every released metric must retain evidence type, source lineage, geography, time, assumptions, and uncertainty.",
+      "hard": true,
+      "kind": "technical",
+      "required_source_roles": [
+        "asset-inventory"
+      ]
+    },
+    {
+      "binding": false,
+      "constraint_id": "scenario.infrastructure.energy-buildings.building-load-emissions.v1.constraint.decision-authority",
+      "description": "No analytical output may bypass lawful authority, accountable human review, or an applicable appeal process.",
+      "hard": true,
+      "kind": "regulatory",
+      "required_source_roles": [
+        "asset-inventory"
+      ]
+    }
+  ],
+  "current_readiness": "blocked-missing-source",
+  "decision_cadence": "recompiled at each planning cycle and after material evidence change",
+  "decision_owner": "municipal energy director and public-building portfolio manager",
+  "decision_question": "What interval of electric, thermal, peak, cost, and emissions load should portfolio operations prepare for?",
+  "decision_type": "forecast",
+  "design_id": "scenario.infrastructure.energy-buildings.building-load-emissions.v1",
+  "design_order": 194,
+  "design_signature": "sha256:c55b9161e0e571cd459c7416a615b4da1df1f1ba0343f9c8bcff89556c019ae8",
+  "evidence_requirements": [
+    "estimated",
+    "observed",
+    "proposed"
+  ],
+  "family_id": "infrastructure.energy-buildings",
+  "family_title": "Municipal energy and building decarbonization",
+  "horizon": "weeks",
+  "implementation_status": "design-only",
+  "independence_key": {
+    "binding_constraint": "The municipal energy and building decarbonization forecast must respect declared validated operational capacity and forecast uncertainty.",
+    "decision_object": "municipal building energy load, cost, and emissions",
+    "evidence_gate": "Evidence for municipal building energy load, cost, and emissions passes documented checks for held-out error, interval coverage, event detection, drift, and baseline comparison.",
+    "horizon": "weeks",
+    "intervention_mechanism": "weather, occupancy, tariff, and project-conditioned load forecasting",
+    "primary_outcome": "energy demand above contracted and resilient capacity",
+    "spatial_unit": "asset"
+  },
+  "intended_claim": "A versioned forecast design for comparing declared alternatives affecting municipal building energy load, cost, and emissions, conditional on its evidence gate.",
+  "limitations": [
+    "This library record has no city binding and therefore reports no local input, output, or recommendation.",
+    "Readiness describes explicit source and method gates; it does not certify implementation feasibility.",
+    "External domain, legal, community, security, and operational review remains outside this design artifact."
+  ],
+  "method_claimed": false,
+  "objectives": [
+    {
+      "evidence_type": "estimated",
+      "metric": "energy demand above contracted and resilient capacity",
+      "objective_id": "scenario.infrastructure.energy-buildings.building-load-emissions.v1.objective.primary",
+      "primary": true,
+      "sense": "minimize",
+      "unit": "megawatt-hours"
+    },
+    {
+      "evidence_type": "estimated",
+      "metric": "distributional gap in energy demand above contracted and resilient capacity",
+      "objective_id": "scenario.infrastructure.energy-buildings.building-load-emissions.v1.objective.equity",
+      "primary": false,
+      "sense": "minimize",
+      "unit": "megawatt-hours"
+    },
+    {
+      "evidence_type": "observed",
+      "metric": "decision claims with complete evidence lineage",
+      "objective_id": "scenario.infrastructure.energy-buildings.building-load-emissions.v1.objective.traceability",
+      "primary": false,
+      "sense": "maximize",
+      "unit": "percent"
+    }
+  ],
+  "prohibited_claims": [
+    "Do not present forecast energy, cost, or emissions as metered performance.",
+    "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+    "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+    "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+  ],
+  "release_gate": {
+    "failure_release": "Release an explicit insufficient-evidence record naming missing sources, failed diagnostics, prohibited claims, and the next validation action.",
+    "failure_status": "insufficient-evidence",
+    "gate_id": "scenario.infrastructure.energy-buildings.building-load-emissions.v1.gate.release",
+    "gate_type": "model-calibration",
+    "pass_condition": "Evidence for municipal building energy load, cost, and emissions passes documented checks for held-out error, interval coverage, event detection, drift, and baseline comparison.",
+    "required_evidence_types": [
+      "estimated",
+      "observed"
+    ],
+    "required_source_roles": [
+      "asset-inventory",
+      "climate-hazard",
+      "environmental-exposure",
+      "financial-cost",
+      "operating-capacity",
+      "real-time-state"
+    ]
+  },
+  "required_source_roles": [
+    "asset-inventory",
+    "climate-hazard",
+    "environmental-exposure",
+    "financial-cost",
+    "operating-capacity",
+    "real-time-state"
+  ],
+  "schema_version": "1.0.0",
+  "spatial_unit": "asset",
+  "suite": "infrastructure-finance-asset-risk",
+  "tags": [
+    "design-only",
+    "forecast",
+    "infrastructure-finance-asset-risk",
+    "infrastructure.energy-buildings",
+    "scenario-library"
+  ],
+  "title": "Forecast municipal building load, cost, and emissions",
+  "transportability_risks": [
+    "Climate, grids, tariffs, fuels, building codes, stock, occupancy, and finance differ.",
+    "Operational changes can confound retrofit performance comparisons."
+  ]
+}

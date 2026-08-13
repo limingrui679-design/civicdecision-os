@@ -1,0 +1,170 @@
+{
+  "affected_system": "housing inspection, code enforcement, repair, and tenant-support system",
+  "alternatives": [
+    "compare eligible treated and credible untreated units for phased proactive inspection and repair-support program",
+    "estimate pre-specified overall and distributional effects of phased proactive inspection and repair-support program",
+    "pair staggered building-level evaluation with tenant outcome panels with an explicit stop, review, and escalation rule"
+  ],
+  "analysis_modes": [
+    "descriptive",
+    "causal"
+  ],
+  "assumptions": [
+    "Complaints, inspections, violations, ownership, repair, and closure records retain distinct semantics.",
+    "Tenant vulnerability and building condition are measured only from authorized, documented sources.",
+    "All alternatives, capacities, costs, effects, thresholds, and failure scenarios are proposed until bound to evidence."
+  ],
+  "baseline": "retain pre-intervention conditions for phased proactive inspection and repair-support program.",
+  "city_bindings": [],
+  "constraints": [
+    {
+      "binding": true,
+      "constraint_id": "scenario.housing.habitability-code.proactive-inspection-effect.v1.constraint.binding",
+      "description": "The housing habitability and code operations evaluate must respect declared pre-specified assignment, comparison, outcome, spillover, and subgroup rules.",
+      "hard": true,
+      "kind": "equity",
+      "required_source_roles": [
+        "asset-condition",
+        "equity-attribute",
+        "geographic-identity",
+        "housing-market",
+        "intervention-assignment",
+        "legal-regulatory",
+        "municipal-demand",
+        "outcome-panel"
+      ]
+    },
+    {
+      "binding": false,
+      "constraint_id": "scenario.housing.habitability-code.proactive-inspection-effect.v1.constraint.evidence-scope",
+      "description": "Every released metric must retain evidence type, source lineage, geography, time, assumptions, and uncertainty.",
+      "hard": true,
+      "kind": "technical",
+      "required_source_roles": [
+        "asset-condition"
+      ]
+    },
+    {
+      "binding": false,
+      "constraint_id": "scenario.housing.habitability-code.proactive-inspection-effect.v1.constraint.decision-authority",
+      "description": "No analytical output may bypass lawful authority, accountable human review, or an applicable appeal process.",
+      "hard": true,
+      "kind": "regulatory",
+      "required_source_roles": [
+        "asset-condition"
+      ]
+    }
+  ],
+  "current_readiness": "blocked-multiple-gates",
+  "decision_cadence": "recompiled at each planning cycle and after material evidence change",
+  "decision_owner": "housing-code commissioner and tenant-protection director",
+  "decision_question": "Did phased proactive inspection reduce verified severe conditions without displacement or selective enforcement?",
+  "decision_type": "evaluate",
+  "design_id": "scenario.housing.habitability-code.proactive-inspection-effect.v1",
+  "design_order": 120,
+  "design_signature": "sha256:10e33d5d17b777a89b28b1aad4e40743507c740e80decd7f596aa1ad59fdfb54",
+  "evidence_requirements": [
+    "causal",
+    "estimated",
+    "observed",
+    "proposed"
+  ],
+  "family_id": "housing.habitability-code",
+  "family_title": "Housing habitability and code operations",
+  "horizon": "multi-year",
+  "implementation_status": "design-only",
+  "independence_key": {
+    "binding_constraint": "The housing habitability and code operations evaluate must respect declared pre-specified assignment, comparison, outcome, spillover, and subgroup rules.",
+    "decision_object": "phased proactive inspection and repair-support program",
+    "evidence_gate": "Evidence for phased proactive inspection and repair-support program passes documented checks for dated assignment, comparison validity, pre-trends, outcome panels, attrition, spillovers, and falsification tests.",
+    "horizon": "multi-year",
+    "intervention_mechanism": "staggered building-level evaluation with tenant outcome panels",
+    "primary_outcome": "change in verified severe condition duration",
+    "spatial_unit": "asset"
+  },
+  "intended_claim": "A versioned evaluate design for comparing declared alternatives affecting phased proactive inspection and repair-support program, conditional on its evidence gate.",
+  "limitations": [
+    "This library record has no city binding and therefore reports no local input, output, or recommendation.",
+    "Readiness describes explicit source and method gates; it does not certify implementation feasibility.",
+    "External domain, legal, community, security, and operational review remains outside this design artifact."
+  ],
+  "method_claimed": false,
+  "objectives": [
+    {
+      "evidence_type": "estimated",
+      "metric": "change in verified severe condition duration",
+      "objective_id": "scenario.housing.habitability-code.proactive-inspection-effect.v1.objective.primary",
+      "primary": true,
+      "sense": "minimize",
+      "unit": "days per building"
+    },
+    {
+      "evidence_type": "estimated",
+      "metric": "distributional gap in change in verified severe condition duration",
+      "objective_id": "scenario.housing.habitability-code.proactive-inspection-effect.v1.objective.equity",
+      "primary": false,
+      "sense": "minimize",
+      "unit": "days per building"
+    },
+    {
+      "evidence_type": "observed",
+      "metric": "decision claims with complete evidence lineage",
+      "objective_id": "scenario.housing.habitability-code.proactive-inspection-effect.v1.objective.traceability",
+      "primary": false,
+      "sense": "maximize",
+      "unit": "percent"
+    }
+  ],
+  "prohibited_claims": [
+    "Do not infer causal habitability, health, or displacement effects from complaint closure alone.",
+    "Do not describe a design-only record as a city execution, deployment, adopted policy, or impact result.",
+    "Do not relabel proposed, estimated, simulated, optimized, or causal evidence as observed evidence.",
+    "Do not infer individual behavior, protected status, harm, or entitlement from aggregate records."
+  ],
+  "release_gate": {
+    "failure_release": "Release an explicit insufficient-evidence record naming missing sources, failed diagnostics, prohibited claims, and the next validation action.",
+    "failure_status": "insufficient-evidence",
+    "gate_id": "scenario.housing.habitability-code.proactive-inspection-effect.v1.gate.release",
+    "gate_type": "causal-identification",
+    "pass_condition": "Evidence for phased proactive inspection and repair-support program passes documented checks for dated assignment, comparison validity, pre-trends, outcome panels, attrition, spillovers, and falsification tests.",
+    "required_evidence_types": [
+      "causal",
+      "observed"
+    ],
+    "required_source_roles": [
+      "asset-condition",
+      "equity-attribute",
+      "geographic-identity",
+      "housing-market",
+      "intervention-assignment",
+      "legal-regulatory",
+      "municipal-demand",
+      "outcome-panel"
+    ]
+  },
+  "required_source_roles": [
+    "asset-condition",
+    "equity-attribute",
+    "geographic-identity",
+    "housing-market",
+    "intervention-assignment",
+    "legal-regulatory",
+    "municipal-demand",
+    "outcome-panel"
+  ],
+  "schema_version": "1.0.0",
+  "spatial_unit": "asset",
+  "suite": "housing-land-use-regeneration",
+  "tags": [
+    "design-only",
+    "evaluate",
+    "housing-land-use-regeneration",
+    "housing.habitability-code",
+    "scenario-library"
+  ],
+  "title": "Evaluate proactive housing inspection and repair support",
+  "transportability_risks": [
+    "Housing law, tenure, building age, complaint access, inspection practice, and enforcement differ.",
+    "Complaint records may over- or under-represent physical conditions and retaliation risk."
+  ]
+}
