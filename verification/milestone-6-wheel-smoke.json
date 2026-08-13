@@ -1,0 +1,88 @@
+{
+  "schema_version": "1.0.0",
+  "checked_at": "2026-08-13",
+  "artifact": {
+    "filename": "civicdecision-0.1.0-py3-none-any.whl",
+    "byte_count": 229951,
+    "sha256": "879e974d12e65380cb1d1e5c60161d6323ef4c3071e6fbba9ec335dd546c5843",
+    "archive_members": 77,
+    "zip_integrity": "passed"
+  },
+  "environment": {
+    "python": "3.12.13",
+    "install_mode": "fresh virtual environment from built wheel with api extra",
+    "import_origin": "site-packages",
+    "selected_installed_versions": {
+      "fastapi": "0.141.1",
+      "httpx": "0.28.1",
+      "pydantic": "2.13.4",
+      "typer": "0.27.1",
+      "uvicorn": "0.52.1"
+    }
+  },
+  "packaged_product_assets": [
+    "civicdecision/web/index.html",
+    "civicdecision/web/favicon.svg",
+    "civicdecision/web/assets/app.css",
+    "civicdecision/web/assets/app.js"
+  ],
+  "checks": [
+    {
+      "id": "wheel.cli.version",
+      "status": "passed",
+      "observed": "0.1.0"
+    },
+    {
+      "id": "wheel.catalog.summary",
+      "status": "passed",
+      "observed": {
+        "distinct_city_records": 258,
+        "source_artifacts": 90,
+        "decision_packs": 98,
+        "benchmark_run_artifacts": 145
+      }
+    },
+    {
+      "id": "wheel.product.exact-rebuild",
+      "status": "passed",
+      "observed": "The installed CLI rebuilt 35 product files and a recursive comparison found no path or byte differences from catalog/product."
+    },
+    {
+      "id": "wheel.api.asgi-smoke",
+      "status": "passed",
+      "observed": {
+        "openapi_paths": 14,
+        "health_status": 200,
+        "unknown_route_status": 404,
+        "negative_release_preserved": true
+      }
+    },
+    {
+      "id": "wheel.sdk.local-string-path",
+      "status": "passed",
+      "observed": {
+        "string_repository_path_supported": true,
+        "distinct_city_records": 258,
+        "decision_packs": 98
+      }
+    },
+    {
+      "id": "wheel.plugin.data-only",
+      "status": "passed",
+      "observed": {
+        "starter_files": 2,
+        "validated_city_adapters": 1,
+        "code_executed": false
+      }
+    }
+  ],
+  "remediation_during_smoke": {
+    "initial_finding": "The first fresh-install smoke showed that CivicDecisionSDK.open accepted pathlib.Path at runtime but failed when given a string repository path.",
+    "fix": "ArtifactStore, CivicDecisionSDK.open, and create_app now accept str or pathlib.Path and normalize through pathlib.Path.",
+    "regression_evidence": "Existing tests were extended without increasing the 800-test collection, type and lint checks passed, the wheel was rebuilt with a new hash, and the complete fresh-environment smoke passed."
+  },
+  "boundary": [
+    "This is current-worktree packaging and installation evidence, not a tagged or signed release.",
+    "It does not establish remote CI, public hosting, external review, adoption, users, or policy impact."
+  ]
+}

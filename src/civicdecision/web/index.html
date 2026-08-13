@@ -1,0 +1,277 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Explore the reproducible, evidence-typed CivicDecision OS artifact catalog.">
+    <meta name="theme-color" content="#102b32">
+    <title>CivicDecision OS · Evidence Explorer</title>
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="/assets/app.css">
+    <script src="/assets/app.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to evidence explorer</a>
+    <header class="site-header" data-header>
+      <a class="brand" href="#top" aria-label="CivicDecision OS home">
+        <svg class="brand-mark" viewBox="0 0 44 44" aria-hidden="true">
+          <path d="M7 12.5 22 4l15 8.5v19L22 40 7 31.5Z"/>
+          <circle cx="22" cy="22" r="5.6"/>
+          <path d="m14 29 8-7 8 7"/>
+        </svg>
+        <span><strong>CivicDecision</strong><small>Evidence OS</small></span>
+      </a>
+      <button class="menu-button" type="button" aria-expanded="false" aria-controls="site-navigation" data-menu>
+        <span class="sr-only">Toggle navigation</span>
+        <span></span><span></span>
+      </button>
+      <nav id="site-navigation" class="site-nav" aria-label="Primary navigation" data-nav>
+        <a href="#coverage">Coverage</a>
+        <a href="#scenarios">Scenarios</a>
+        <a href="#evidence">Evidence</a>
+        <a href="#methods">Boundaries</a>
+        <a class="nav-api" href="/api/openapi.json">OpenAPI</a>
+      </nav>
+      <div class="system-state" aria-live="polite">
+        <span class="status-dot" data-status-dot></span>
+        <span data-system-status>Checking catalog</span>
+      </div>
+    </header>
+
+    <main id="main">
+      <section id="top" class="hero section-shell">
+        <div class="hero-copy reveal">
+          <p class="eyebrow"><span>Public evidence</span><span>Versioned methods</span><span>Auditable decisions</span></p>
+          <h1>Urban decisions,<br><em>with an evidence trail.</em></h1>
+          <p class="hero-lede">A reproducible operating layer for discovering cities, screening interventions, testing analytical methods, and releasing recommendations only when the evidence gate is satisfied.</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#scenarios">Inspect decision work</a>
+            <a class="button button-quiet" href="#coverage">Explore city coverage <span aria-hidden="true">↘</span></a>
+          </div>
+          <dl class="catalog-stamp">
+            <div><dt>Catalog fingerprint</dt><dd data-fingerprint>Loading…</dd></div>
+            <div><dt>Latest source retrieval</dt><dd data-latest-source>Loading…</dd></div>
+          </dl>
+        </div>
+        <div class="hero-visual reveal reveal-delay">
+          <div class="orbit orbit-one"></div>
+          <div class="orbit orbit-two"></div>
+          <div class="signal-card signal-primary">
+            <span class="signal-label">Evidence gate</span>
+            <strong data-completion-rate>—</strong>
+            <small>deep analyses completed</small>
+          </div>
+          <div class="signal-card signal-secondary">
+            <span class="signal-label">Catalog</span>
+            <strong data-city-total>—</strong>
+            <small>distinct city records</small>
+          </div>
+          <svg class="hero-network" viewBox="0 0 620 620" aria-hidden="true">
+            <defs>
+              <radialGradient id="pulse" cx="50%" cy="50%" r="50%">
+                <stop offset="0" stop-color="#ed765e" stop-opacity=".9"/>
+                <stop offset="1" stop-color="#ed765e" stop-opacity="0"/>
+              </radialGradient>
+            </defs>
+            <g class="network-lines">
+              <path d="M110 320 210 155 360 120 505 210 510 390 360 505 175 475Z"/>
+              <path d="m110 320 250-200 150 270-335 85 35-320 300 55-130 295Z"/>
+            </g>
+            <g class="network-nodes">
+              <circle cx="110" cy="320" r="8"/><circle cx="210" cy="155" r="8"/>
+              <circle cx="360" cy="120" r="8"/><circle cx="505" cy="210" r="8"/>
+              <circle cx="510" cy="390" r="8"/><circle cx="360" cy="505" r="8"/>
+              <circle cx="175" cy="475" r="8"/><circle cx="310" cy="310" r="19"/>
+              <circle class="pulse" cx="310" cy="310" r="66"/>
+            </g>
+          </svg>
+          <p class="visual-caption"><span>G</span> discovery <span>S</span> standardized screening <span>D</span> deep evidence</p>
+        </div>
+      </section>
+
+      <section class="metric-band" aria-label="Verified catalog scale">
+        <div class="metric-grid section-shell">
+          <article><strong data-kpi="tier_assignments">—</strong><span>tier assignments</span><small>G + S + D coverage</small></article>
+          <article><strong data-kpi="source_artifacts">—</strong><span>source artifacts</span><small>hash-verified inputs</small></article>
+          <article><strong data-kpi="standard_scenario_screens">—</strong><span>standard screens</span><small>descriptive only</small></article>
+          <article><strong data-kpi="deep_scenario_executions">—</strong><span>deep executions</span><small>including negative releases</small></article>
+          <article><strong data-kpi="benchmark_run_artifacts">—</strong><span>benchmark artifacts</span><small>reproducible method tests</small></article>
+        </div>
+      </section>
+
+      <aside class="boundary-ribbon" aria-label="Evidence boundary">
+        <div class="section-shell boundary-inner">
+          <span class="boundary-icon" aria-hidden="true">i</span>
+          <p><strong>Evidence boundary:</strong> catalog coverage, public-data analysis, and reproducibility are not claims of deployment, adoption, external validation, or causal impact.</p>
+          <button type="button" data-scroll-boundaries>Read all boundaries</button>
+        </div>
+      </aside>
+
+      <section id="coverage" class="coverage-section section-shell section-pad">
+        <div class="section-heading reveal">
+          <div><p class="section-kicker">01 / Geographic evidence</p><h2>One catalog.<br><em>Three depths of proof.</em></h2></div>
+          <p>Start with global discovery, move through comparable public indicators, then enter eight municipal evidence environments with traceable source artifacts and decision gates.</p>
+        </div>
+        <div class="tier-legend" role="list" aria-label="Evidence tiers">
+          <button class="tier-card active" type="button" data-tier="all" aria-pressed="true">
+            <span class="tier-symbol">∑</span><span><strong>Highest available</strong><small data-tier-count="all">— distinct cities</small></span>
+          </button>
+          <button class="tier-card" type="button" data-tier="G" aria-pressed="false">
+            <span class="tier-symbol tier-g">G</span><span><strong>Global discovery</strong><small data-tier-count="G">— cities</small></span>
+          </button>
+          <button class="tier-card" type="button" data-tier="S" aria-pressed="false">
+            <span class="tier-symbol tier-s">S</span><span><strong>Standardized screening</strong><small data-tier-count="S">— cities</small></span>
+          </button>
+          <button class="tier-card" type="button" data-tier="D" aria-pressed="false">
+            <span class="tier-symbol tier-d">D</span><span><strong>Deep evidence</strong><small data-tier-count="D">— cities</small></span>
+          </button>
+        </div>
+        <div class="coverage-workspace">
+          <article class="map-panel panel reveal">
+            <div class="panel-header">
+              <div><p class="panel-label">Interactive coverage</p><h3>Evidence depth by city</h3></div>
+              <div class="map-key"><span><i class="dot dot-g"></i>G</span><span><i class="dot dot-s"></i>S</span><span><i class="dot dot-d"></i>D</span></div>
+            </div>
+            <div class="world-map" data-map role="img" aria-label="World map of catalog cities">
+              <svg viewBox="0 0 1000 500" preserveAspectRatio="xMidYMid meet">
+                <path class="land" d="M60 109 99 76l89 2 31 21 70-10 35 39-20 31-51 15-37 61-41 11-19-35-64-24-37-42Zm184 167 44 4 37 51-8 60-31 76-25-43 4-69-29-47Zm244-164 42-36 110 4 52 22 74-13 92 34 42 42-18 42-67 12-21 38-64-3-29 46-51-4-27-44-46-19-22-51-52-29Zm160 218 51 8 47 48-20 51-62 10-50-41 6-48Zm245 75 41-18 37 20-12 34-49 7-35-19Z"/>
+                <path class="grid-line" d="M0 125h1000M0 250h1000M0 375h1000M250 0v500M500 0v500M750 0v500"/>
+                <g data-map-points></g>
+              </svg>
+              <div class="map-tooltip" data-map-tooltip hidden></div>
+            </div>
+            <p class="map-note">Coordinates locate catalog records; markers do not imply administrative boundary coverage.</p>
+          </article>
+          <aside class="city-browser panel reveal reveal-delay">
+            <div class="panel-header compact"><div><p class="panel-label">Catalog browser</p><h3 data-city-browser-title>Highest available tier</h3></div></div>
+            <label class="search-control"><span class="sr-only">Search cities</span><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.8"/><path d="m16 16 5 5"/></svg><input type="search" placeholder="Search city, code, country…" data-city-search></label>
+            <div class="city-list" data-city-list aria-live="polite"><div class="skeleton-list" aria-label="Loading cities"><span></span><span></span><span></span><span></span></div></div>
+            <div class="pager"><button type="button" data-city-prev disabled>Previous</button><span data-city-page>—</span><button type="button" data-city-next disabled>Next</button></div>
+          </aside>
+        </div>
+      </section>
+
+      <section id="scenarios" class="scenario-section section-pad">
+        <div class="section-shell">
+          <div class="section-heading inverse reveal">
+            <div><p class="section-kicker">02 / Decision work</p><h2>Every result includes<br><em>the right to say no.</em></h2></div>
+            <p>A negative evidence release is a valid output. When provenance, completeness, support, or decision separation fails, the system preserves diagnostics and withholds a recommendation.</p>
+          </div>
+          <div class="decision-overview">
+            <div class="decision-ring" aria-label="Deep scenario completion ratio">
+              <svg viewBox="0 0 180 180" aria-hidden="true"><circle class="ring-track" cx="90" cy="90" r="70"/><circle class="ring-value" cx="90" cy="90" r="70" data-ring/></svg>
+              <div><strong data-deep-completed>—</strong><span>completed</span></div>
+            </div>
+            <div class="decision-stat"><span>Completed deep executions</span><strong data-deep-completed-count>—</strong><small>recommendation gate satisfied</small></div>
+            <div class="decision-stat negative"><span>Negative deep releases</span><strong data-deep-negative-count>—</strong><small>recommendation withheld</small></div>
+            <div class="decision-stat"><span>DecisionPack artifacts</span><strong data-decision-packs>—</strong><small>reference + deep outputs</small></div>
+          </div>
+
+          <div class="suite-grid" data-suite-grid aria-live="polite"></div>
+
+          <article class="scenario-browser panel-dark">
+            <div class="scenario-toolbar">
+              <div><p class="panel-label">Artifact index</p><h3>Scenario executions</h3></div>
+              <label class="search-control dark"><span class="sr-only">Search scenarios</span><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.8"/><path d="m16 16 5 5"/></svg><input type="search" placeholder="Search title, city, suite…" data-scenario-search></label>
+            </div>
+            <div class="filter-row" role="group" aria-label="Scenario filters">
+              <button class="filter-pill active" type="button" data-kind="all" aria-pressed="true">All executions</button>
+              <button class="filter-pill" type="button" data-kind="standard-screen" aria-pressed="false">Standard screens</button>
+              <button class="filter-pill" type="button" data-kind="deep-pack" aria-pressed="false">Deep packs</button>
+              <button class="filter-pill" type="button" data-kind="reference-pack" aria-pressed="false">Reference packs</button>
+              <select data-scenario-status aria-label="Filter scenario status"><option value="">All statuses</option><option value="completed">Completed</option><option value="insufficient-evidence">Insufficient evidence</option><option value="infeasible">Infeasible</option><option value="screened">Screened</option></select>
+            </div>
+            <div class="table-scroll">
+              <table class="scenario-table">
+                <thead><tr><th scope="col">Execution</th><th scope="col">City</th><th scope="col">Suite</th><th scope="col">Evidence</th><th scope="col">Status</th><th scope="col"><span class="sr-only">Open</span></th></tr></thead>
+                <tbody data-scenario-body><tr><td colspan="6"><div class="table-loading">Loading auditable executions…</div></td></tr></tbody>
+              </table>
+            </div>
+            <div class="pager dark"><button type="button" data-scenario-prev disabled>Previous</button><span data-scenario-page>—</span><button type="button" data-scenario-next disabled>Next</button></div>
+          </article>
+        </div>
+      </section>
+
+      <section id="evidence" class="evidence-section section-shell section-pad">
+        <div class="section-heading reveal">
+          <div><p class="section-kicker">03 / Provenance library</p><h2>Inputs you can inspect.<br><em>Runs you can repeat.</em></h2></div>
+          <p>Source manifests record retrieval time, license, record count, geographic and temporal scope, content digest, and explicit limitations. Benchmarks remain separate from municipal outcomes.</p>
+        </div>
+        <div class="evidence-layout">
+          <article class="source-library panel reveal">
+            <div class="panel-header">
+              <div><p class="panel-label">Verified source manifests</p><h3>Public evidence inventory</h3></div>
+              <strong class="panel-total" data-source-total>—</strong>
+            </div>
+            <label class="search-control"><span class="sr-only">Search sources</span><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.8"/><path d="m16 16 5 5"/></svg><input type="search" placeholder="Search source or publisher…" data-source-search></label>
+            <div class="source-list" data-source-list><div class="skeleton-list"><span></span><span></span><span></span></div></div>
+            <div class="pager"><button type="button" data-source-prev disabled>Previous</button><span data-source-page>—</span><button type="button" data-source-next disabled>Next</button></div>
+          </article>
+          <aside class="benchmark-card reveal reveal-delay">
+            <p class="panel-label">Analytical benchmark layer</p>
+            <h3>Methods are tested before they are narrated.</h3>
+            <div class="benchmark-number"><strong data-benchmark-runs>—</strong><span>run artifacts</span></div>
+            <dl class="benchmark-list">
+              <div><dt>Historical replays</dt><dd data-replays>—</dd></div>
+              <div><dt>Optimization benchmarks</dt><dd data-optimizations>—</dd></div>
+              <div><dt>Forecast comparisons</dt><dd data-forecasts>—</dd></div>
+              <div><dt>Simulation draws</dt><dd data-simulations>—</dd></div>
+            </dl>
+            <button class="text-button" type="button" data-open-benchmark>Inspect benchmark evidence <span aria-hidden="true">→</span></button>
+            <p class="benchmark-boundary">Benchmarks establish reproducibility on declared fixtures—not external validation or real-world impact.</p>
+          </aside>
+        </div>
+      </section>
+
+      <section class="surface-section">
+        <div class="section-shell section-pad">
+          <div class="section-heading compact reveal">
+            <div><p class="section-kicker">04 / One validated core</p><h2>Five ways in.<br><em>One claim boundary.</em></h2></div>
+          </div>
+          <div class="surface-grid">
+            <article><span class="surface-index">01</span><h3>Evidence explorer</h3><p>This responsive interface reads the same typed catalog as every other client.</p><code>GET /</code></article>
+            <article><span class="surface-index">02</span><h3>REST API</h3><p>Versioned, read-only resources with OpenAPI, ETags, problem details, and security headers.</p><a href="/api/openapi.json">Open specification</a></article>
+            <article><span class="surface-index">03</span><h3>Python SDK</h3><p>Local, synchronous HTTP, and asynchronous HTTP clients validate every response model.</p><code>CivicDecisionSDK.open(root)</code></article>
+            <article><span class="surface-index">04</span><h3>Command line</h3><p>Catalog discovery, source verification, artifact generation, and local serving for reproducible review.</p><code>civicdecision catalog summary</code></article>
+            <article><span class="surface-index">05</span><h3>Adapter plugins</h3><p>A constrained protocol validates third-party city adapters without silently widening evidence claims.</p><code>civicdecision plugins validate</code></article>
+          </div>
+        </div>
+      </section>
+
+      <section id="methods" class="methods-section section-shell section-pad">
+        <div class="section-heading reveal">
+          <div><p class="section-kicker">05 / Interpretation contract</p><h2>What this system proves—<br><em>and what it does not.</em></h2></div>
+          <p>Scale is reported as artifact counts, city assignments, source units, scenario executions, and reproducible runs. Those numbers are meaningful only alongside their scope and limitations.</p>
+        </div>
+        <div class="boundary-columns">
+          <article class="proves reveal"><span class="boundary-tag">Supported</span><h3>Claims the repository can substantiate</h3><ul data-supported-boundaries><li>Versioned public artifacts can be hash-verified.</li><li>Typed models reject inconsistent catalog states.</li><li>Declared analytical runs can be reproduced.</li></ul></article>
+          <article class="does-not reveal reveal-delay"><span class="boundary-tag">Not claimed</span><h3>Claims deliberately withheld</h3><ul><li>No assertion of production deployment or institutional adoption.</li><li>No assertion of external peer review, certified governance, or real users.</li><li>No causal effect claim from descriptive public-data cases.</li><li>No conversion of national or grid-point context into local truth.</li></ul></article>
+        </div>
+        <div class="method-flow reveal" aria-label="Decision compiler stages">
+          <div><span>01</span><strong>Source</strong><small>retrieve + hash</small></div><i></i>
+          <div><span>02</span><strong>Normalize</strong><small>type + reconcile</small></div><i></i>
+          <div><span>03</span><strong>Analyze</strong><small>forecast + simulate</small></div><i></i>
+          <div><span>04</span><strong>Gate</strong><small>test evidence</small></div><i></i>
+          <div><span>05</span><strong>Release</strong><small>recommend or withhold</small></div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="section-shell footer-inner">
+        <div><a class="brand footer-brand" href="#top"><strong>CivicDecision</strong><small>Evidence OS</small></a><p>Reproducible public-data decision infrastructure.</p></div>
+        <div class="footer-meta"><span data-footer-version>Version —</span><span>MIT License</span><span>Read-only explorer</span></div>
+        <nav aria-label="Footer navigation"><a href="/api/openapi.json">OpenAPI</a><a href="/healthz">Health</a><a href="#methods">Claim boundaries</a></nav>
+      </div>
+    </footer>
+
+    <div class="drawer-backdrop" data-drawer-backdrop hidden></div>
+    <aside class="detail-drawer" data-drawer aria-hidden="true" aria-labelledby="drawer-title">
+      <div class="drawer-header"><div><p class="panel-label" data-drawer-kicker>Artifact detail</p><h2 id="drawer-title" data-drawer-title>Evidence record</h2></div><button type="button" class="drawer-close" data-drawer-close aria-label="Close details">×</button></div>
+      <div class="drawer-body" data-drawer-body></div>
+    </aside>
+
+    <div class="toast" role="status" aria-live="polite" data-toast hidden></div>
+    <noscript><div class="noscript">This evidence explorer needs JavaScript to query the local read-only API. The OpenAPI document remains available at <a href="/api/openapi.json">/api/openapi.json</a>.</div></noscript>
+  </body>
+</html>

@@ -1,0 +1,119 @@
+{
+  "$defs": {
+    "PluginCapability": {
+      "description": "Capabilities that may be declared without executing third-party code.",
+      "enum": [
+        "city-adapter",
+        "source-binding",
+        "semantic-mapping"
+      ],
+      "title": "PluginCapability",
+      "type": "string"
+    }
+  },
+  "additionalProperties": false,
+  "description": "Signed-shape descriptor for one portable, data-only plugin directory.",
+  "properties": {
+    "adapter_paths": {
+      "items": {
+        "type": "string"
+      },
+      "maxItems": 250,
+      "minItems": 1,
+      "title": "Adapter Paths",
+      "type": "array"
+    },
+    "api_version": {
+      "const": "1",
+      "default": "1",
+      "title": "Api Version",
+      "type": "string"
+    },
+    "artifact_hashes": {
+      "additionalProperties": {
+        "type": "string"
+      },
+      "maxProperties": 250,
+      "minProperties": 1,
+      "title": "Artifact Hashes",
+      "type": "object"
+    },
+    "author": {
+      "maxLength": 120,
+      "minLength": 1,
+      "title": "Author",
+      "type": "string"
+    },
+    "capabilities": {
+      "items": {
+        "$ref": "#/$defs/PluginCapability"
+      },
+      "minItems": 1,
+      "title": "Capabilities",
+      "type": "array"
+    },
+    "description": {
+      "maxLength": 500,
+      "minLength": 1,
+      "title": "Description",
+      "type": "string"
+    },
+    "enabled_by_default": {
+      "const": false,
+      "default": false,
+      "title": "Enabled By Default",
+      "type": "boolean"
+    },
+    "evidence_boundary": {
+      "items": {
+        "type": "string"
+      },
+      "maxItems": 20,
+      "minItems": 1,
+      "title": "Evidence Boundary",
+      "type": "array"
+    },
+    "license": {
+      "maxLength": 80,
+      "minLength": 1,
+      "title": "License",
+      "type": "string"
+    },
+    "name": {
+      "maxLength": 120,
+      "minLength": 1,
+      "title": "Name",
+      "type": "string"
+    },
+    "plugin_id": {
+      "pattern": "^[a-z0-9]+(?:[._-][a-z0-9]+)*$",
+      "title": "Plugin Id",
+      "type": "string"
+    },
+    "schema_version": {
+      "const": "1.0.0",
+      "default": "1.0.0",
+      "title": "Schema Version",
+      "type": "string"
+    },
+    "version": {
+      "pattern": "^(?:0|[1-9][0-9]*)\\.(?:0|[1-9][0-9]*)\\.(?:0|[1-9][0-9]*)(?:[-+][0-9A-Za-z.-]+)?$",
+      "title": "Version",
+      "type": "string"
+    }
+  },
+  "required": [
+    "plugin_id",
+    "name",
+    "version",
+    "description",
+    "author",
+    "license",
+    "capabilities",
+    "adapter_paths",
+    "artifact_hashes",
+    "evidence_boundary"
+  ],
+  "title": "PluginManifest",
+  "type": "object"
+}

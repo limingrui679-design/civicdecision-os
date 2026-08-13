@@ -1,0 +1,150 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "benchmark_run_artifacts": {
+      "minimum": 0,
+      "title": "Benchmark Run Artifacts",
+      "type": "integer"
+    },
+    "catalog_fingerprint": {
+      "pattern": "^sha256:[0-9a-f]{64}$",
+      "title": "Catalog Fingerprint",
+      "type": "string"
+    },
+    "claim_boundary": {
+      "items": {
+        "type": "string"
+      },
+      "minItems": 1,
+      "title": "Claim Boundary",
+      "type": "array"
+    },
+    "completed_decision_packs": {
+      "minimum": 0,
+      "title": "Completed Decision Packs",
+      "type": "integer"
+    },
+    "completed_deep_executions": {
+      "minimum": 0,
+      "title": "Completed Deep Executions",
+      "type": "integer"
+    },
+    "decision_packs": {
+      "minimum": 0,
+      "title": "Decision Packs",
+      "type": "integer"
+    },
+    "declared_source_units": {
+      "minimum": 0,
+      "title": "Declared Source Units",
+      "type": "integer"
+    },
+    "deep_scenario_executions": {
+      "minimum": 0,
+      "title": "Deep Scenario Executions",
+      "type": "integer"
+    },
+    "exposed_city_records": {
+      "minimum": 0,
+      "title": "Exposed City Records",
+      "type": "integer"
+    },
+    "generated_from_latest_source_at": {
+      "format": "date-time",
+      "title": "Generated From Latest Source At",
+      "type": "string"
+    },
+    "historical_replays": {
+      "minimum": 0,
+      "title": "Historical Replays",
+      "type": "integer"
+    },
+    "negative_decision_packs": {
+      "minimum": 0,
+      "title": "Negative Decision Packs",
+      "type": "integer"
+    },
+    "negative_deep_executions": {
+      "minimum": 0,
+      "title": "Negative Deep Executions",
+      "type": "integer"
+    },
+    "nonduplicative_deep_designs": {
+      "minimum": 0,
+      "title": "Nonduplicative Deep Designs",
+      "type": "integer"
+    },
+    "optimization_benchmarks": {
+      "minimum": 0,
+      "title": "Optimization Benchmarks",
+      "type": "integer"
+    },
+    "schema_version": {
+      "const": "1.0.0",
+      "default": "1.0.0",
+      "title": "Schema Version",
+      "type": "string"
+    },
+    "software_version": {
+      "minLength": 1,
+      "title": "Software Version",
+      "type": "string"
+    },
+    "source_artifacts": {
+      "minimum": 0,
+      "title": "Source Artifacts",
+      "type": "integer"
+    },
+    "standard_scenario_screens": {
+      "minimum": 0,
+      "title": "Standard Scenario Screens",
+      "type": "integer"
+    },
+    "tier_assignments": {
+      "minimum": 0,
+      "title": "Tier Assignments",
+      "type": "integer"
+    },
+    "tier_d_cities": {
+      "minimum": 0,
+      "title": "Tier D Cities",
+      "type": "integer"
+    },
+    "tier_g_cities": {
+      "minimum": 0,
+      "title": "Tier G Cities",
+      "type": "integer"
+    },
+    "tier_s_cities": {
+      "minimum": 0,
+      "title": "Tier S Cities",
+      "type": "integer"
+    }
+  },
+  "required": [
+    "software_version",
+    "catalog_fingerprint",
+    "generated_from_latest_source_at",
+    "tier_g_cities",
+    "tier_s_cities",
+    "tier_d_cities",
+    "exposed_city_records",
+    "tier_assignments",
+    "source_artifacts",
+    "declared_source_units",
+    "standard_scenario_screens",
+    "nonduplicative_deep_designs",
+    "deep_scenario_executions",
+    "completed_deep_executions",
+    "negative_deep_executions",
+    "decision_packs",
+    "completed_decision_packs",
+    "negative_decision_packs",
+    "benchmark_run_artifacts",
+    "historical_replays",
+    "optimization_benchmarks",
+    "claim_boundary"
+  ],
+  "title": "CatalogSummary",
+  "type": "object"
+}

@@ -1,0 +1,608 @@
+{
+  "claim_boundary": "Tier labels describe evidence readiness, not deployment or impact.",
+  "items": [
+    {
+      "city_id": "geonames.1796236",
+      "completed_scenarios": 2,
+      "country_code": "CN",
+      "latitude": 31.22222,
+      "limitations": [
+        "Tier-S outputs are descriptive screens and cannot issue recommendations.",
+        "Country indicators remain national context and climate remains one grid point."
+      ],
+      "longitude": 121.45806,
+      "name": "Shanghai",
+      "negative_scenarios": 1,
+      "quality_status": "pass",
+      "readiness": "standardized-descriptive-screening",
+      "scenario_count": 3,
+      "source_artifact_count": 5,
+      "source_population": 24874500,
+      "tier": "S",
+      "timezone": "Asia/Shanghai"
+    },
+    {
+      "city_id": "geonames.2314302",
+      "completed_scenarios": 2,
+      "country_code": "CD",
+      "latitude": -4.32758,
+      "limitations": [
+        "Tier-S outputs are descriptive screens and cannot issue recommendations.",
+        "Country indicators remain national context and climate remains one grid point."
+      ],
+      "longitude": 15.31357,
+      "name": "Kinshasa",
+      "negative_scenarios": 1,
+      "quality_status": "pass",
+      "readiness": "standardized-descriptive-screening",
+      "scenario_count": 3,
+      "source_artifact_count": 5,
+      "source_population": 16000000,
+      "tier": "S",
+      "timezone": "Africa/Kinshasa"
+    },
+    {
+      "city_id": "geonames.745044",
+      "completed_scenarios": 2,
+      "country_code": "TR",
+      "latitude": 41.01384,
+      "limitations": [
+        "Tier-S outputs are descriptive screens and cannot issue recommendations.",
+        "Country indicators remain national context and climate remains one grid point."
+      ],
+      "longitude": 28.94966,
+      "name": "Istanbul",
+      "negative_scenarios": 1,
+      "quality_status": "pass",
+      "readiness": "standardized-descriptive-screening",
+      "scenario_count": 3,
+      "source_artifact_count": 5,
+      "source_population": 15701602,
+      "tier": "S",
+      "timezone": "Europe/Istanbul"
+    },
+    {
+      "city_id": "geonames.2332459",
+      "completed_scenarios": 2,
+      "country_code": "NG",
+      "latitude": 6.45407,
+      "limitations": [
+        "Tier-S outputs are descriptive screens and cannot issue recommendations.",
+        "Country indicators remain national context and climate remains one grid point."
+      ],
+      "longitude": 3.39467,
+      "name": "Lagos",
+      "negative_scenarios": 1,
+      "quality_status": "pass",
+      "readiness": "standardized-descriptive-screening",
+      "scenario_count": 3,
+      "source_artifact_count": 5,
+      "source_population": 15388000,
+      "tier": "S",
+      "timezone": "Africa/Lagos"
+    },
+    {
+      "city_id": "geonames.1566083",
+      "completed_scenarios": 2,
+      "country_code": "VN",
+      "latitude": 10.82302,
+      "limitations": [
+        "Tier-S outputs are descriptive screens and cannot issue recommendations.",
+        "Country indicators remain national context and climate remains one grid point."
+      ],
+      "longitude": 106.62965,
+      "name": "Ho Chi Minh City",
+      "negative_scenarios": 1,
+      "quality_status": "pass",
+      "readiness": "standardized-descriptive-screening",
+      "scenario_count": 3,
+      "source_artifact_count": 5,
+      "source_population": 14002598,
+      "tier": "S",
+      "timezone": "Asia/Ho_Chi_Minh"
+    },
+    {
+      "city_id": "geonames.1172451",
+      "completed_scenarios": 2,
+      "country_code": "PK",
+      "latitude": 31.558,
+      "limitations": [
+        "Tier-S outputs are descriptive screens and cannot issue recommendations.",
+        "Country indicators remain national context and climate remains one grid point."
+      ],
+      "longitude": 74.35071,
+      "name": "Lahore",
+      "negative_scenarios": 1,
+      "quality_status": "pass",
+      "readiness": "standardized-descriptive-screening",
+      "scenario_count": 3,
+      "source_artifact_count": 5,
+      "source_population": 13004135,
+      "tier": "S",
+      "timezone": "Asia/Karachi"
+    },
+    {
+      "city_id": "geonames.1275339",
+      "completed_scenarios": 2,
+      "country_code": "IN",
+      "latitude": 19.07283,
+      "limitations": [
+        "Tier-S outputs are descriptive screens and cannot issue recommendations.",
+        "Country indicators remain national context and climate remains one grid point."
+      ],
+      "longitude": 72.88261,
+      "name": "Mumbai",
+      "negative_scenarios": 1,
+      "quality_status": "pass",
+      "readiness": "standardized-descriptive-screening",
+      "scenario_count": 3,
+      "source_artifact_count": 5,
+      "source_population": 12691836,
+      "tier": "S",
+      "timezone": "Asia/Kolkata"
+    },
+    {
+      "city_id": "geonames.3448439",
+      "completed_scenarios": 2,
+      "country_code": "BR",
+      "latitude": -23.5475,
+      "limitations": [
+        "Tier-S outputs are descriptive screens and cannot issue recommendations.",
+        "Country indicators remain national context and climate remains one grid point."
+      ],
+      "longitude": -46.63611,
+      "name": "São Paulo",
+      "negative_scenarios": 1,
+      "quality_status": "pass",
+      "readiness": "standardized-descriptive-screening",
+      "scenario_count": 3,
+      "source_artifact_count": 5,
+      "source_population": 12400232,
+      "tier": "S",
+      "timezone": "America/Sao_Paulo"
+    },
+    {
+      "city_id": "geonames.3530597",
+      "completed_scenarios": 2,
+      "country_code": "MX",
+      "latitude": 19.42847,
+      "limitations": [
+        "Tier-S outputs are descriptive screens and cannot issue recommendations.",
+        "Country indicators remain national context and climate remains one grid point."
+      ],
+      "longitude": -99.12766,
+      "name": "Mexico City",
+      "negative_scenarios": 1,
+      "quality_status": "pass",
+      "readiness": "standardized-descriptive-screening",
+      "scenario_count": 3,
+      "source_artifact_count": 5,
+      "source_population": 12294193,
+      "tier": "S",
+      "timezone": "America/Mexico_City"
+    },
+    {
+      "city_id": "geonames.524901",
+      "completed_scenarios": 2,
+      "country_code": "RU",
+      "latitude": 55.75204,
+      "limitations": [
+        "Tier-S outputs are descriptive screens and cannot issue recommendations.",
+        "Country indicators remain national context and climate remains one grid point."
+      ],
+      "longitude": 37.61781,
+      "name": "Moscow",
+      "negative_scenarios": 1,
+      "quality_status": "pass",
+      "readiness": "standardized-descriptive-screening",
+      "scenario_count": 3,
+      "source_artifact_count": 5,
+      "source_population": 10381222,
+      "tier": "S",
+      "timezone": "Europe/Moscow"
+    },
+    {
+      "city_id": "geonames.1185241",
+      "completed_scenarios": 2,
+      "country_code": "BD",
+      "latitude": 23.7104,
+      "limitations": [
+        "Tier-S outputs are descriptive screens and cannot issue recommendations.",
+        "Country indicators remain national context and climate remains one grid point."
+      ],
+      "longitude": 90.40744,
+      "name": "Dhaka",
+      "negative_scenarios": 1,
+      "quality_status": "pass",
+      "readiness": "standardized-descriptive-screening",
+      "scenario_count": 3,
+      "source_artifact_count": 5,
+      "source_population": 10356500,
+      "tier": "S",
+      "timezone": "Asia/Dhaka"
+    },
+    {
+      "city_id": "geonames.1835848",
+      "completed_scenarios": 2,
+      "country_code": "KR",
+      "latitude": 37.566,
+      "limitations": [
+        "Tier-S outputs are descriptive screens and cannot issue recommendations.",
+        "Country indicators remain national context and climate remains one grid point."
+      ],
+      "longitude": 126.9784,
+      "name": "Seoul",
+      "negative_scenarios": 1,
+      "quality_status": "pass",
+      "readiness": "standardized-descriptive-screening",
+      "scenario_count": 3,
+      "source_artifact_count": 5,
+      "source_population": 10349312,
+      "tier": "S",
+      "timezone": "Asia/Seoul"
+    },
+    {
+      "city_id": "geonames.1850147",
+      "completed_scenarios": 2,
+      "country_code": "JP",
+      "latitude": 35.6895,
+      "limitations": [
+        "Tier-S outputs are descriptive screens and cannot issue recommendations.",
+        "Country indicators remain national context and climate remains one grid point."
+      ],
+      "longitude": 139.69171,
+      "name": "Tokyo",
+      "negative_scenarios": 1,
+      "quality_status": "pass",
+      "readiness": "standardized-descriptive-screening",
+      "scenario_count": 3,
+      "source_artifact_count": 5,
+      "source_population": 9733276,
+      "tier": "S",
+      "timezone": "Asia/Tokyo"
+    },
+    {
+      "city_id": "geonames.360630",
+      "completed_scenarios": 2,
+      "country_code": "EG",
+      "latitude": 30.06263,
+      "limitations": [
+        "Tier-S outputs are descriptive screens and cannot issue recommendations.",
+        "Country indicators remain national context and climate remains one grid point."
+      ],
+      "longitude": 31.24967,
+      "name": "Cairo",
+      "negative_scenarios": 1,
+      "quality_status": "pass",
+      "readiness": "standardized-descriptive-screening",
+      "scenario_count": 3,
+      "source_artifact_count": 5,
+      "source_population": 9606916,
+      "tier": "S",
+      "timezone": "Africa/Cairo"
+    },
+    {
+      "city_id": "geonames.993800",
+      "completed_scenarios": 2,
+      "country_code": "ZA",
+      "latitude": -26.20227,
+      "limitations": [
+        "Tier-S outputs are descriptive screens and cannot issue recommendations.",
+        "Country indicators remain national context and climate remains one grid point."
+      ],
+      "longitude": 28.04363,
+      "name": "Johannesburg",
+      "negative_scenarios": 1,
+      "quality_status": "pass",
+      "readiness": "standardized-descriptive-screening",
+      "scenario_count": 3,
+      "source_artifact_count": 5,
+      "source_population": 9418183,
+      "tier": "S",
+      "timezone": "Africa/Johannesburg"
+    },
+    {
+      "city_id": "geonames.2643743",
+      "completed_scenarios": 2,
+      "country_code": "GB",
+      "latitude": 51.50853,
+      "limitations": [
+        "Tier-S outputs are descriptive screens and cannot issue recommendations.",
+        "Country indicators remain national context and climate remains one grid point."
+      ],
+      "longitude": -0.12574,
+      "name": "London",
+      "negative_scenarios": 1,
+      "quality_status": "pass",
+      "readiness": "standardized-descriptive-screening",
+      "scenario_count": 3,
+      "source_artifact_count": 5,
+      "source_population": 8961989,
+      "tier": "S",
+      "timezone": "Europe/London"
+    },
+    {
+      "city_id": "geonames.5128581",
+      "completed_scenarios": 2,
+      "country_code": "US",
+      "latitude": 40.71427,
+      "limitations": [
+        "Tier-S outputs are descriptive screens and cannot issue recommendations.",
+        "Country indicators remain national context and climate remains one grid point."
+      ],
+      "longitude": -74.00597,
+      "name": "New York City",
+      "negative_scenarios": 1,
+      "quality_status": "pass",
+      "readiness": "standardized-descriptive-screening",
+      "scenario_count": 3,
+      "source_artifact_count": 5,
+      "source_population": 8804190,
+      "tier": "S",
+      "timezone": "America/New_York"
+    },
+    {
+      "city_id": "geonames.1642911",
+      "completed_scenarios": 2,
+      "country_code": "ID",
+      "latitude": -6.21462,
+      "limitations": [
+        "Tier-S outputs are descriptive screens and cannot issue recommendations.",
+        "Country indicators remain national context and climate remains one grid point."
+      ],
+      "longitude": 106.84513,
+      "name": "Jakarta",
+      "negative_scenarios": 1,
+      "quality_status": "pass",
+      "readiness": "standardized-descriptive-screening",
+      "scenario_count": 3,
+      "source_artifact_count": 5,
+      "source_population": 8540121,
+      "tier": "S",
+      "timezone": "Asia/Jakarta"
+    },
+    {
+      "city_id": "geonames.3936456",
+      "completed_scenarios": 2,
+      "country_code": "PE",
+      "latitude": -12.04318,
+      "limitations": [
+        "Tier-S outputs are descriptive screens and cannot issue recommendations.",
+        "Country indicators remain national context and climate remains one grid point."
+      ],
+      "longitude": -77.02824,
+      "name": "Lima",
+      "negative_scenarios": 1,
+      "quality_status": "pass",
+      "readiness": "standardized-descriptive-screening",
+      "scenario_count": 3,
+      "source_artifact_count": 5,
+      "source_population": 7737002,
+      "tier": "S",
+      "timezone": "America/Lima"
+    },
+    {
+      "city_id": "geonames.3688689",
+      "completed_scenarios": 2,
+      "country_code": "CO",
+      "latitude": 4.60971,
+      "limitations": [
+        "Tier-S outputs are descriptive screens and cannot issue recommendations.",
+        "Country indicators remain national context and climate remains one grid point."
+      ],
+      "longitude": -74.08175,
+      "name": "Bogotá",
+      "negative_scenarios": 1,
+      "quality_status": "pass",
+      "readiness": "standardized-descriptive-screening",
+      "scenario_count": 3,
+      "source_artifact_count": 5,
+      "source_population": 7674366,
+      "tier": "S",
+      "timezone": "America/Bogota"
+    },
+    {
+      "city_id": "geonames.1819729",
+      "completed_scenarios": 2,
+      "country_code": "HK",
+      "latitude": 22.27832,
+      "limitations": [
+        "Tier-S outputs are descriptive screens and cannot issue recommendations.",
+        "Country indicators remain national context and climate remains one grid point."
+      ],
+      "longitude": 114.17469,
+      "name": "Hong Kong",
+      "negative_scenarios": 1,
+      "quality_status": "pass",
+      "readiness": "standardized-descriptive-screening",
+      "scenario_count": 3,
+      "source_artifact_count": 5,
+      "source_population": 7396076,
+      "tier": "S",
+      "timezone": "Asia/Hong_Kong"
+    },
+    {
+      "city_id": "geonames.98182",
+      "completed_scenarios": 2,
+      "country_code": "IQ",
+      "latitude": 33.34058,
+      "limitations": [
+        "Tier-S outputs are descriptive screens and cannot issue recommendations.",
+        "Country indicators remain national context and climate remains one grid point."
+      ],
+      "longitude": 44.40088,
+      "name": "Baghdad",
+      "negative_scenarios": 1,
+      "quality_status": "pass",
+      "readiness": "standardized-descriptive-screening",
+      "scenario_count": 3,
+      "source_artifact_count": 5,
+      "source_population": 7216000,
+      "tier": "S",
+      "timezone": "Asia/Baghdad"
+    },
+    {
+      "city_id": "geonames.112931",
+      "completed_scenarios": 2,
+      "country_code": "IR",
+      "latitude": 35.69439,
+      "limitations": [
+        "Tier-S outputs are descriptive screens and cannot issue recommendations.",
+        "Country indicators remain national context and climate remains one grid point."
+      ],
+      "longitude": 51.42151,
+      "name": "Tehran",
+      "negative_scenarios": 1,
+      "quality_status": "pass",
+      "readiness": "standardized-descriptive-screening",
+      "scenario_count": 3,
+      "source_artifact_count": 5,
+      "source_population": 7153309,
+      "tier": "S",
+      "timezone": "Asia/Tehran"
+    },
+    {
+      "city_id": "geonames.2293538",
+      "completed_scenarios": 2,
+      "country_code": "CI",
+      "latitude": 5.35444,
+      "limitations": [
+        "Tier-S outputs are descriptive screens and cannot issue recommendations.",
+        "Country indicators remain national context and climate remains one grid point."
+      ],
+      "longitude": -4.00167,
+      "name": "Abidjan",
+      "negative_scenarios": 1,
+      "quality_status": "pass",
+      "readiness": "standardized-descriptive-screening",
+      "scenario_count": 3,
+      "source_artifact_count": 5,
+      "source_population": 6321017,
+      "tier": "S",
+      "timezone": "Africa/Abidjan"
+    },
+    {
+      "city_id": "geonames.2147714",
+      "completed_scenarios": 2,
+      "country_code": "AU",
+      "latitude": -33.86785,
+      "limitations": [
+        "Tier-S outputs are descriptive screens and cannot issue recommendations.",
+        "Country indicators remain national context and climate remains one grid point."
+      ],
+      "longitude": 151.20732,
+      "name": "Sydney",
+      "negative_scenarios": 1,
+      "quality_status": "pass",
+      "readiness": "standardized-descriptive-screening",
+      "scenario_count": 3,
+      "source_artifact_count": 5,
+      "source_population": 5638830,
+      "tier": "S",
+      "timezone": "Australia/Sydney"
+    },
+    {
+      "city_id": "geonames.1880252",
+      "completed_scenarios": 2,
+      "country_code": "SG",
+      "latitude": 1.28967,
+      "limitations": [
+        "Tier-S outputs are descriptive screens and cannot issue recommendations.",
+        "Country indicators remain national context and climate remains one grid point."
+      ],
+      "longitude": 103.85007,
+      "name": "Singapore",
+      "negative_scenarios": 1,
+      "quality_status": "pass",
+      "readiness": "standardized-descriptive-screening",
+      "scenario_count": 3,
+      "source_artifact_count": 5,
+      "source_population": 5638700,
+      "tier": "S",
+      "timezone": "Asia/Singapore"
+    },
+    {
+      "city_id": "geonames.160263",
+      "completed_scenarios": 2,
+      "country_code": "TZ",
+      "latitude": -6.82349,
+      "limitations": [
+        "Tier-S outputs are descriptive screens and cannot issue recommendations.",
+        "Country indicators remain national context and climate remains one grid point."
+      ],
+      "longitude": 39.26951,
+      "name": "Dar es Salaam",
+      "negative_scenarios": 1,
+      "quality_status": "pass",
+      "readiness": "standardized-descriptive-screening",
+      "scenario_count": 3,
+      "source_artifact_count": 5,
+      "source_population": 5383728,
+      "tier": "S",
+      "timezone": "Africa/Dar_es_Salaam"
+    },
+    {
+      "city_id": "geonames.1609350",
+      "completed_scenarios": 2,
+      "country_code": "TH",
+      "latitude": 13.75398,
+      "limitations": [
+        "Tier-S outputs are descriptive screens and cannot issue recommendations.",
+        "Country indicators remain national context and climate remains one grid point."
+      ],
+      "longitude": 100.50144,
+      "name": "Bangkok",
+      "negative_scenarios": 1,
+      "quality_status": "pass",
+      "readiness": "standardized-descriptive-screening",
+      "scenario_count": 3,
+      "source_artifact_count": 5,
+      "source_population": 5104476,
+      "tier": "S",
+      "timezone": "Asia/Bangkok"
+    },
+    {
+      "city_id": "geonames.3871336",
+      "completed_scenarios": 2,
+      "country_code": "CL",
+      "latitude": -33.45694,
+      "limitations": [
+        "Tier-S outputs are descriptive screens and cannot issue recommendations.",
+        "Country indicators remain national context and climate remains one grid point."
+      ],
+      "longitude": -70.64827,
+      "name": "Santiago",
+      "negative_scenarios": 1,
+      "quality_status": "pass",
+      "readiness": "standardized-descriptive-screening",
+      "scenario_count": 3,
+      "source_artifact_count": 5,
+      "source_population": 4837295,
+      "tier": "S",
+      "timezone": "America/Santiago"
+    },
+    {
+      "city_id": "geonames.105343",
+      "completed_scenarios": 2,
+      "country_code": "SA",
+      "latitude": 21.49012,
+      "limitations": [
+        "Tier-S outputs are descriptive screens and cannot issue recommendations.",
+        "Country indicators remain national context and climate remains one grid point."
+      ],
+      "longitude": 39.18624,
+      "name": "Jeddah",
+      "negative_scenarios": 1,
+      "quality_status": "pass",
+      "readiness": "standardized-descriptive-screening",
+      "scenario_count": 3,
+      "source_artifact_count": 5,
+      "source_population": 4697000,
+      "tier": "S",
+      "timezone": "Asia/Riyadh"
+    }
+  ],
+  "kind": "cities.tier-s",
+  "record_count": 30,
+  "schema_version": "1.0.0"
+}

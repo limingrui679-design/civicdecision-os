@@ -1,0 +1,29 @@
+{
+  "artifact_set_hash": "sha256:0079bbd5f3b9e7645431a8e6e371efdfc7a7e7f9629be0d0850bc2489444ce89",
+  "engine_qualification_runs": 5,
+  "historical_replays": 40,
+  "limitations": [
+    "Replay metrics summarize held-out public point-series tasks, not live service-level performance.",
+    "Optimization totals summarize synthetic finite search spaces and cannot be treated as real interventions or benefits.",
+    "Qualification rows establish typed engine behavior, not external validity or impact."
+  ],
+  "method_counts": {
+    "drift": 2,
+    "moving-average": 19,
+    "naive": 13,
+    "seasonal-naive": 6
+  },
+  "optimization_evaluated_plans": 21710,
+  "optimization_feasible_plans": 4333,
+  "optimization_search_space": 24000,
+  "optimization_tasks": 100,
+  "replay_holdout_values": 1200,
+  "replay_training_values": 13440,
+  "run_artifacts": 145,
+  "status_counts": {
+    "infeasible": 20,
+    "optimal": 70,
+    "search-limited": 10
+  },
+  "summary_id": "milestone-4-analytical-engine-evidence.v1"
+}

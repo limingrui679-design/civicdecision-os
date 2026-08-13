@@ -20,13 +20,34 @@ intervention definition
 
 This repository is an early implementation. The global scale described in the project blueprint is a target, not a completed result. Current, verified capabilities are listed in [`docs/STATUS.md`](docs/STATUS.md); the complete requirement-to-evidence matrix is in [`docs/REQUIREMENTS.md`](docs/REQUIREMENTS.md).
 
-The fifth implementation milestone establishes 22 generated public contracts, the evidence type
+The sixth implementation milestone establishes 22 generated core contracts, the evidence type
 system, deterministic validation, ten loadable public-data connectors, a reproducible Tier-G
 catalog of 250 city points, 30 Tier-S standardized descriptive bundles, five transparent
-analytical engines, 40 held-out historical replays, 100 bounded benchmark optimization tasks, and
-eight Tier-D city adapters with 96 evidence-gated scenario packs. Tier D means a deeper,
-source-bound reference workflow; it still does not mean production deployment, municipal
-adoption, policy validity, or real-world impact.
+analytical engines, 40 held-out historical replays, 100 bounded benchmark optimization tasks,
+eight Tier-D city adapters with 96 evidence-gated scenario packs, and five read-only product
+surfaces over one validated artifact store. Tier D and product visibility still do not mean
+production deployment, municipal adoption, policy validity, or real-world impact.
+
+## One validated product core, five surfaces
+
+The local product layer exposes the same immutable snapshot through a responsive evidence
+explorer, versioned REST API, local/synchronous/asynchronous Python SDKs, CLI, and data-only
+adapter plugin SDK. The shared store reconciles 258 highest-available city records, 288 tier
+assignments, 90 source artifacts, 188 scenario executions, 98 DecisionPacks, seven application
+suites, and 145 analytical benchmark runs before any surface can return them.
+
+The committed [`catalog/product/`](catalog/product/) projection contains 35 files: 33
+manifest-indexed JSON artifacts, one artifact manifest, and one portable checksum file. It
+includes 17 product/plugin Schemas, a deterministic 14-path OpenAPI document, four hashed web
+assets, city/source/scenario/suite indexes, benchmark evidence, and the catalog-wide claim
+boundary. The entire tree rebuilds path-for-path and byte-for-byte.
+
+Negative releases remain first-class. The product snapshot contains 77 completed and 21 negative
+DecisionPacks; Tier-S screens are never promoted into DecisionPacks, and the browser, API, SDK,
+and CLI all preserve a withheld recommendation as withheld. See
+[`docs/PRODUCT_SURFACES.md`](docs/PRODUCT_SURFACES.md), [`docs/API.md`](docs/API.md),
+[`docs/SDK.md`](docs/SDK.md), [`docs/WEB_EXPLORER.md`](docs/WEB_EXPLORER.md), and
+[`docs/PLUGIN_SDK.md`](docs/PLUGIN_SDK.md).
 
 ## Verified reference workflow
 
@@ -41,10 +62,13 @@ radius is not travel time, the population proxy is not individual demand, and th
 is not a municipal recommendation.
 
 Current local quality evidence is recorded in
-[`verification/milestone-5-deep-cities.json`](verification/milestone-5-deep-cities.json). The
+[`verification/milestone-6-product-surfaces.json`](verification/milestone-6-product-surfaces.json),
+[`verification/milestone-6-coverage.json`](verification/milestone-6-coverage.json),
+[`verification/milestone-6-wheel-smoke.json`](verification/milestone-6-wheel-smoke.json), and
+[`verification/milestone-6-browser-qa.json`](verification/milestone-6-browser-qa.json). The
 independent verifier regenerates Schemas, both earlier reference outputs, all four global-city
-artifacts, the complete standardized-city and analytical-benchmark trees, and all 707 Tier-D
-artifacts in a temporary directory and requires exact bytes.
+artifacts, the complete standardized-city and analytical-benchmark trees, all 707 Tier-D
+artifacts, and the 35-file product projection in a temporary directory and requires exact bytes.
 
 The current source catalog contains ten loadable connector implementations across eight source
 families, plus eight audited municipal dataset configurations used by the generic aggregate
@@ -180,6 +204,12 @@ claim boundaries.
 22. `tier-d-evidence-summary.schema.json` — source, scenario, forecast, simulation, optimization,
     uncertainty, and anti-inflation workload ledger.
 
+The product projection adds 17 generated review contracts for health and catalog summaries, city,
+scenario, source, suite, and benchmark projections, plugin manifests/packages, artifact manifests,
+and their paginated collection models. These live under
+[`catalog/product/schemas/`](catalog/product/schemas/) and are intentionally separate from the 22
+domain/compiler protocols above.
+
 ## Evidence types
 
 Every analytical output must be typed as one of:
@@ -242,6 +272,13 @@ civicdecision deep fetch-context --output examples/data/tier-d
 civicdecision deep build \
   --source-directory examples/data/tier-d \
   --output-directory catalog/deep-cities
+
+civicdecision catalog build-product \
+  --root . \
+  --output catalog/product
+
+civicdecision catalog summary --root .
+civicdecision serve --root . --host 127.0.0.1 --port 8000
 ```
 
 Verify a downloaded artifact and compile the committed reference workflow:
@@ -259,6 +296,11 @@ civicdecision demo heat-access \
 python scripts/verify_repository.py
 ```
 
+The local explorer opens at `http://127.0.0.1:8000/`; the versioned API is under
+`/api/v1`, and the deterministic OpenAPI document is available at `/api/openapi.json`. A
+non-loopback server bind requires the explicit `--allow-network` acknowledgement, which does not
+add production authentication, TLS, quotas, or authorization.
+
 ## Repository map
 
 - `src/civicdecision/protocols/` — public contracts and evidence gates.
@@ -269,6 +311,16 @@ python scripts/verify_repository.py
   evidence-ledger builders.
 - `src/civicdecision/deep/` — audited city specifications, acquisition, evidence reconciliation,
   twelve scenario templates, compilation, ledgers, and exact-rebuild output.
+- `src/civicdecision/product/` — fail-closed artifact store, typed product models, and deterministic
+  35-file projection builder.
+- `src/civicdecision/api/` — versioned read-only REST resources, problem details, ETags, and
+  browser security headers.
+- `src/civicdecision/sdk/` — local, synchronous HTTP, and asynchronous HTTP clients over the same
+  typed models.
+- `src/civicdecision/plugins/` — exact-allowlist, hash-checked, data-only adapter package contract;
+  no plugin code is imported or executed.
+- `src/civicdecision/web/` — dependency-free responsive evidence explorer with no third-party
+  runtime assets.
 - `src/civicdecision/demos/` — end-to-end reference compilers.
 - `schemas/` — generated versioned JSON Schemas.
 - `examples/data/` — small public fixtures plus manifests.
@@ -278,6 +330,8 @@ python scripts/verify_repository.py
 - `benchmarks/` — complete runs, row-level evidence ledgers, reports, and portable hashes.
 - `catalog/deep-cities/` — 8 city bundles, 96 scenario packs, 96 briefs, evidence ledgers, and
   anti-inflation audit.
+- `catalog/product/` — committed API/web/SDK/CLI projection, product/plugin Schemas, OpenAPI,
+  artifact manifest, and portable checksums.
 
 ## Scope and claim boundary
 

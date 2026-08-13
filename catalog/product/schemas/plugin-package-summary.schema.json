@@ -1,0 +1,79 @@
+{
+  "$defs": {
+    "PluginCapability": {
+      "description": "Capabilities that may be declared without executing third-party code.",
+      "enum": [
+        "city-adapter",
+        "source-binding",
+        "semantic-mapping"
+      ],
+      "title": "PluginCapability",
+      "type": "string"
+    }
+  },
+  "additionalProperties": false,
+  "description": "Safe registry view that does not expose a filesystem path.",
+  "properties": {
+    "capabilities": {
+      "items": {
+        "$ref": "#/$defs/PluginCapability"
+      },
+      "minItems": 1,
+      "title": "Capabilities",
+      "type": "array"
+    },
+    "city_adapters": {
+      "minimum": 1,
+      "title": "City Adapters",
+      "type": "integer"
+    },
+    "city_ids": {
+      "items": {
+        "type": "string"
+      },
+      "minItems": 1,
+      "title": "City Ids",
+      "type": "array"
+    },
+    "evidence_boundary": {
+      "items": {
+        "type": "string"
+      },
+      "minItems": 1,
+      "title": "Evidence Boundary",
+      "type": "array"
+    },
+    "name": {
+      "minLength": 1,
+      "title": "Name",
+      "type": "string"
+    },
+    "package_hash": {
+      "pattern": "^sha256:[0-9a-f]{64}$",
+      "title": "Package Hash",
+      "type": "string"
+    },
+    "plugin_id": {
+      "pattern": "^[a-z0-9]+(?:[._-][a-z0-9]+)*$",
+      "title": "Plugin Id",
+      "type": "string"
+    },
+    "version": {
+      "minLength": 1,
+      "title": "Version",
+      "type": "string"
+    }
+  },
+  "required": [
+    "plugin_id",
+    "name",
+    "version",
+    "capabilities",
+    "city_adapters",
+    "city_ids",
+    "package_hash",
+    "evidence_boundary"
+  ],
+  "title": "PluginPackageSummary",
+  "type": "object"
+}

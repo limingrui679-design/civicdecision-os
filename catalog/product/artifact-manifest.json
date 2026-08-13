@@ -1,0 +1,225 @@
+{
+  "artifact_count": 33,
+  "artifacts": [
+    {
+      "byte_count": 1008,
+      "content_hash": "sha256:0fb719361ba03ab691472f86634f5915bfe1a2c583a0856f5b455cecfc00507e",
+      "media_type": "application/json",
+      "path": "benchmarks/overview.json"
+    },
+    {
+      "byte_count": 1146,
+      "content_hash": "sha256:aa2cc26c88bbbbce3e58c3182c180cb53e6bb4ed0a16d8b9694b78ea11cecf96",
+      "media_type": "application/json",
+      "path": "catalog-summary.json"
+    },
+    {
+      "byte_count": 177997,
+      "content_hash": "sha256:644cc5c76b4bcc83474cc286a8cf50b8ae08cfb5203439fbe14002c8667f6588",
+      "media_type": "application/json",
+      "path": "cities/highest-available.json",
+      "record_count": 258
+    },
+    {
+      "byte_count": 7559,
+      "content_hash": "sha256:ff81ed393310472603776db53366a4270df18a51d7fe0ecc1a47c7b352a4cc4b",
+      "media_type": "application/json",
+      "path": "cities/tier-d.json",
+      "record_count": 8
+    },
+    {
+      "byte_count": 171064,
+      "content_hash": "sha256:c8cec54233fe001b3b065e0c449339bde5099fd2c8792236194290156a1ec636",
+      "media_type": "application/json",
+      "path": "cities/tier-g.json",
+      "record_count": 250
+    },
+    {
+      "byte_count": 20251,
+      "content_hash": "sha256:f406c9c5fd923d420e851f4ea6de69d269ceec3a83a4384000f5334db5f6438c",
+      "media_type": "application/json",
+      "path": "cities/tier-s.json",
+      "record_count": 30
+    },
+    {
+      "byte_count": 141276,
+      "content_hash": "sha256:485ee6ea4451b16d1b535dc5ff216e4629debd2595510825d408aa6489173d27",
+      "media_type": "application/json",
+      "path": "evidence/tier-d-summary.json",
+      "record_count": 96
+    },
+    {
+      "byte_count": 77462,
+      "content_hash": "sha256:158a582b30ba0f11167dc5e33ab1d9c84536db36862ea82c093ebfbcf2617d43",
+      "media_type": "application/json",
+      "path": "openapi-v1.json"
+    },
+    {
+      "byte_count": 251940,
+      "content_hash": "sha256:0e50da614c0d995b80e602531c27580fb837a6befa61825c977cc45bb539d4b7",
+      "media_type": "application/json",
+      "path": "scenarios/all.json",
+      "record_count": 188
+    },
+    {
+      "byte_count": 152904,
+      "content_hash": "sha256:db7d007a7a76f506efd7f4dc8a45d9cc8af26867260928e33724c27a5d17b3c4",
+      "media_type": "application/json",
+      "path": "scenarios/decision-pack.json",
+      "record_count": 98
+    },
+    {
+      "byte_count": 150918,
+      "content_hash": "sha256:4b346ab7acb2d5a36d2408a0aa670366a1b92a3d846f8f32791ded7ebfee36af",
+      "media_type": "application/json",
+      "path": "scenarios/deep-pack.json",
+      "record_count": 96
+    },
+    {
+      "byte_count": 2188,
+      "content_hash": "sha256:f6f06afa4841c0f28e58d1cefbc53844165060979897188cb73336630a8e4836",
+      "media_type": "application/json",
+      "path": "scenarios/reference-pack.json",
+      "record_count": 2
+    },
+    {
+      "byte_count": 99253,
+      "content_hash": "sha256:52152e999dfac0fd7d91caacb5da970e74ca25fe75789ba9594d705bad735a51",
+      "media_type": "application/json",
+      "path": "scenarios/standard-screen.json",
+      "record_count": 90
+    },
+    {
+      "byte_count": 2338,
+      "content_hash": "sha256:45daf3a19d5cfdfedc1de15ed909aed2228ee5bbbbb418d91f14d7eeaf9d2667",
+      "media_type": "application/schema+json",
+      "path": "schemas/benchmark-overview.schema.json"
+    },
+    {
+      "byte_count": 3606,
+      "content_hash": "sha256:76757b19a524b0abfdbc3b92fa5531e1bafad834445de3ae21f5d7ee0a08c33f",
+      "media_type": "application/schema+json",
+      "path": "schemas/catalog-summary.schema.json"
+    },
+    {
+      "byte_count": 7359,
+      "content_hash": "sha256:188ee4dbd761c64fe95c8797dae663fe81b4e93b0668ffa3a58e5745e377e38d",
+      "media_type": "application/schema+json",
+      "path": "schemas/city-detail.schema.json"
+    },
+    {
+      "byte_count": 4228,
+      "content_hash": "sha256:f3819a2644f17c71585851065164820c5e0ef360ecc9a84beafaa1881195dbc5",
+      "media_type": "application/schema+json",
+      "path": "schemas/city-page.schema.json"
+    },
+    {
+      "byte_count": 2410,
+      "content_hash": "sha256:fcb7acd836bea097bfa9e7470e9f886ce8139cbc050ddaa3ec6ad4fb3c026b83",
+      "media_type": "application/schema+json",
+      "path": "schemas/city-summary.schema.json"
+    },
+    {
+      "byte_count": 2629,
+      "content_hash": "sha256:34ca7b1d2e0cda66ccae11e0e9556d523b8e3930027469d507b3d1e0355145ec",
+      "media_type": "application/schema+json",
+      "path": "schemas/plugin-manifest.schema.json"
+    },
+    {
+      "byte_count": 1687,
+      "content_hash": "sha256:ec7dc88345dff5df1e82902f3f42cdb4727c171ec773df0057f4119c164351bf",
+      "media_type": "application/schema+json",
+      "path": "schemas/plugin-package-summary.schema.json"
+    },
+    {
+      "byte_count": 7169,
+      "content_hash": "sha256:b071800a2672589aa30e12552bc4383f28458c4ff988082b67d234cdf88666aa",
+      "media_type": "application/schema+json",
+      "path": "schemas/plugin-package.schema.json"
+    },
+    {
+      "byte_count": 864,
+      "content_hash": "sha256:253656de4ff03818bb293732fb458741b3c508c5ca0ecf48a827644a331d4123",
+      "media_type": "application/schema+json",
+      "path": "schemas/product-artifact-entry.schema.json"
+    },
+    {
+      "byte_count": 2139,
+      "content_hash": "sha256:f6eeae25f50aed034ab0e069f98da630e1afc423a82273f1fb352adfe2db1d5d",
+      "media_type": "application/schema+json",
+      "path": "schemas/product-artifact-manifest.schema.json"
+    },
+    {
+      "byte_count": 672,
+      "content_hash": "sha256:b25ac36386f747675511785170dafb4217081d610b5e7e4e3720b1d24ea160e5",
+      "media_type": "application/schema+json",
+      "path": "schemas/product-health.schema.json"
+    },
+    {
+      "byte_count": 5105,
+      "content_hash": "sha256:962887bc7d2ae57cfb6e8035e177964cc61a3604717841a03eb89e28204e46d9",
+      "media_type": "application/schema+json",
+      "path": "schemas/scenario-detail.schema.json"
+    },
+    {
+      "byte_count": 5546,
+      "content_hash": "sha256:22acc7be328719522ce0a5d15c125c485cc968c3641c45aafd5dcfe3d873fe15",
+      "media_type": "application/schema+json",
+      "path": "schemas/scenario-page.schema.json"
+    },
+    {
+      "byte_count": 3592,
+      "content_hash": "sha256:bf7e9bff5c6c182c9a903e7cb1d247449d31464b46705d718bdd47bfa72b8ef1",
+      "media_type": "application/schema+json",
+      "path": "schemas/scenario-summary.schema.json"
+    },
+    {
+      "byte_count": 3282,
+      "content_hash": "sha256:63919c18b0763aed3c399c2d02fa1d027398ff2f92ef4d548ad24c671928fad5",
+      "media_type": "application/schema+json",
+      "path": "schemas/source-page.schema.json"
+    },
+    {
+      "byte_count": 1589,
+      "content_hash": "sha256:99e0b7863cf42543aca5f79053fe80fad3ce312221d9f58702a67407be07fff2",
+      "media_type": "application/schema+json",
+      "path": "schemas/source-summary.schema.json"
+    },
+    {
+      "byte_count": 993,
+      "content_hash": "sha256:570066020a3f65112f9c302dfef8e7b95949f72f5a955eb98e1f9a4e2afbf2ca",
+      "media_type": "application/schema+json",
+      "path": "schemas/suite-overview.schema.json"
+    },
+    {
+      "byte_count": 87976,
+      "content_hash": "sha256:212b41ed74b31595dc92666556f7431af5cfd94891089f93183e746db4651a88",
+      "media_type": "application/json",
+      "path": "sources/index.json",
+      "record_count": 90
+    },
+    {
+      "byte_count": 2627,
+      "content_hash": "sha256:49f366addbd0c24e78ce0306553669aca0b1a68401939880bf131f396a26b0e1",
+      "media_type": "application/json",
+      "path": "suites/index.json",
+      "record_count": 7
+    },
+    {
+      "byte_count": 863,
+      "content_hash": "sha256:30cbd4ed3548376d8fb72d00d8e6d0da870f21d75cc6977f29f0e67e3ed13b72",
+      "media_type": "application/json",
+      "path": "web-assets.json",
+      "record_count": 4
+    }
+  ],
+  "catalog_fingerprint": "sha256:c44212b9fa9f2f7796a9e209a7fe20826aaa3dcdcef682ad58d4e32209a8aa68",
+  "claim_boundary": [
+    "Public data and deterministic software runs are not client work or field deployment.",
+    "Simulation and optimization are not observed impact or institutional adoption.",
+    "Repeated city bindings are not counted as independent scenario designs.",
+    "Negative and insufficient-evidence releases remain visible and selectable."
+  ],
+  "schema_version": "1.0.0",
+  "software_version": "0.1.0"
+}

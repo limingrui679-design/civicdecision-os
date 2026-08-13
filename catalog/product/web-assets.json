@@ -1,0 +1,27 @@
+{
+  "asset_count": 4,
+  "assets": [
+    {
+      "byte_count": 21007,
+      "content_hash": "sha256:cbcfe0243c334049e1ea9ccce604d738b840d336a337c9045ccbe74115474f5e",
+      "path": "index.html"
+    },
+    {
+      "byte_count": 440,
+      "content_hash": "sha256:56970036e11f010630f3acc4beb92a23e7132eb92481262cc45123878fa9e01c",
+      "path": "favicon.svg"
+    },
+    {
+      "byte_count": 44785,
+      "content_hash": "sha256:cb8d6ebf199d257aae650a79b19ebd910444a00c3a2b0294d7ca3885a4353896",
+      "path": "assets/app.css"
+    },
+    {
+      "byte_count": 34644,
+      "content_hash": "sha256:d63928ef524626bd055eb02385439c4c3685fe5797b1c0c41e6ed7da24ee5712",
+      "path": "assets/app.js"
+    }
+  ],
+  "schema_version": "1.0.0",
+  "security_boundary": "The packaged explorer has no third-party runtime assets and consumes only the same-origin read-only API."
+}

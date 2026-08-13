@@ -10,6 +10,7 @@ from pathlib import Path
 from typing import Annotated
 
 import typer
+from pydantic import BaseModel
 from rich.console import Console
 from rich.table import Table
 
@@ -52,6 +53,8 @@ from civicdecision.demos.heat_access import (
 )
 from civicdecision.errors import CivicDecisionError
 from civicdecision.io import validate_document
+from civicdecision.plugins import load_plugin_package, scaffold_plugin
+from civicdecision.product import ArtifactStore, ProductTier, ScenarioKind, ScenarioStatus
 from civicdecision.protocols.city import CityAdapterManifest
 from civicdecision.protocols.decision import DecisionPack
 from civicdecision.protocols.scenario import PolicyScenario
@@ -71,6 +74,9 @@ demo_app = typer.Typer(no_args_is_help=True)
 cities_app = typer.Typer(no_args_is_help=True)
 benchmarks_app = typer.Typer(no_args_is_help=True)
 deep_app = typer.Typer(no_args_is_help=True)
+catalog_app = typer.Typer(no_args_is_help=True)
+api_app = typer.Typer(no_args_is_help=True)
+plugins_app = typer.Typer(no_args_is_help=True)
 app.add_typer(schemas_app, name="schemas")
 app.add_typer(protocol_app, name="protocol")
 app.add_typer(sources_app, name="sources")
@@ -78,6 +84,9 @@ app.add_typer(demo_app, name="demo")
 app.add_typer(cities_app, name="cities")
 app.add_typer(benchmarks_app, name="benchmarks")
 app.add_typer(deep_app, name="deep")
+app.add_typer(catalog_app, name="catalog")
+app.add_typer(api_app, name="api")
+app.add_typer(plugins_app, name="plugins")
 console = Console()
 
 
@@ -693,6 +702,330 @@ def demo_heat_access(
     table.add_row("brief", str(artifacts.brief_path))
     table.add_row("content hash", artifacts.content_hash)
     console.print(table)
+
+
+def _catalog_store(root: Path, verify_sources: bool) -> ArtifactStore:
+    try:
+        return ArtifactStore(root, verify_sources=verify_sources)
+    except CivicDecisionError as exc:
+        console.print(f"[red]catalog integrity failure[/red] {exc}")
+        raise typer.Exit(code=2) from exc
+
+
+def _print_json_model(document: BaseModel) -> None:
+    payload = document.model_dump(mode="json")
+    console.print_json(json.dumps(payload, ensure_ascii=False, sort_keys=True))
+
+
+@catalog_app.command("summary")
+def catalog_summary(
+    root: Annotated[Path, typer.Option("--root")] = Path("."),
+    verify_sources: Annotated[bool, typer.Option("--verify-sources/--skip-source-hashes")] = True,
+    json_output: Annotated[bool, typer.Option("--json")] = False,
+) -> None:
+    """Validate and summarize the complete product catalog."""
+
+    store = _catalog_store(root, verify_sources)
+    summary = store.summary
+    if json_output:
+        _print_json_model(summary)
+        return
+    table = Table(title="CivicDecision validated product catalog")
+    table.add_column("Field")
+    table.add_column("Verified value", justify="right")
+    rows = (
+        ("catalog fingerprint", summary.catalog_fingerprint),
+        ("distinct city records", f"{summary.exposed_city_records:,}"),
+        ("tier assignments", f"{summary.tier_assignments:,}"),
+        ("source artifacts", f"{summary.source_artifacts:,}"),
+        ("declared source units", f"{summary.declared_source_units:,}"),
+        ("scenario executions", f"{len(store.all_scenario_summaries):,}"),
+        ("DecisionPacks", f"{summary.decision_packs:,}"),
+        ("benchmark run artifacts", f"{summary.benchmark_run_artifacts:,}"),
+    )
+    for label, value in rows:
+        table.add_row(label, value)
+    console.print(table)
+
+
+@catalog_app.command("build-product")
+def catalog_build_product(
+    root: Annotated[Path, typer.Option("--root")] = Path("."),
+    output: Annotated[Path, typer.Option("--output", "-o")] = Path("catalog/product"),
+) -> None:
+    """Build the deterministic API, SDK, CLI, web, and plugin projection."""
+
+    try:
+        from civicdecision.product.build import build_product_artifacts
+
+        result = build_product_artifacts(root, output)
+    except (CivicDecisionError, ImportError, OSError) as exc:
+        console.print(f"[red]product artifact build failed safely[/red] {exc}")
+        raise typer.Exit(code=2) from exc
+    console.print(
+        f"[green]created[/green] {len(result.artifact_paths):,} product files in "
+        f"{result.output_directory}"
+    )
+
+
+@catalog_app.command("cities")
+def catalog_cities(
+    root: Annotated[Path, typer.Option("--root")] = Path("."),
+    tier: Annotated[ProductTier | None, typer.Option("--tier")] = None,
+    query: Annotated[str | None, typer.Option("--query", "-q")] = None,
+    country_code: Annotated[str | None, typer.Option("--country")] = None,
+    limit: Annotated[int, typer.Option("--limit", min=1, max=100)] = 50,
+    offset: Annotated[int, typer.Option("--offset", min=0)] = 0,
+    json_output: Annotated[bool, typer.Option("--json")] = False,
+) -> None:
+    """Browse the highest available or tier-specific city catalog."""
+
+    page = _catalog_store(root, True).list_cities(
+        tier=tier,
+        query=query,
+        country_code=country_code,
+        limit=limit,
+        offset=offset,
+    )
+    if json_output:
+        _print_json_model(page)
+        return
+    table = Table(
+        title=f"Cities {offset + 1}-{offset + page.pagination.returned} of {page.pagination.total}"
+    )
+    table.add_column("Tier")
+    table.add_column("City")
+    table.add_column("Country")
+    table.add_column("Sources", justify="right")
+    table.add_column("Work items", justify="right")
+    table.add_column("Readiness")
+    for city in page.items:
+        table.add_row(
+            city.tier.value,
+            f"{city.name}\n[dim]{city.city_id}[/dim]",
+            city.country_code,
+            str(city.source_artifact_count),
+            str(city.scenario_count),
+            city.readiness,
+        )
+    console.print(table)
+
+
+@catalog_app.command("city")
+def catalog_city(
+    city_id: Annotated[str, typer.Argument()],
+    root: Annotated[Path, typer.Option("--root")] = Path("."),
+) -> None:
+    """Print one validated highest-tier city projection as JSON."""
+
+    try:
+        detail = _catalog_store(root, True).city_detail(city_id)
+    except CivicDecisionError as exc:
+        console.print(f"[red]city lookup failed[/red] {exc}")
+        raise typer.Exit(code=2) from exc
+    _print_json_model(detail)
+
+
+@catalog_app.command("scenarios")
+def catalog_scenarios(
+    root: Annotated[Path, typer.Option("--root")] = Path("."),
+    kind: Annotated[ScenarioKind | None, typer.Option("--kind")] = None,
+    city_id: Annotated[str | None, typer.Option("--city-id")] = None,
+    suite: Annotated[str | None, typer.Option("--suite")] = None,
+    status: Annotated[ScenarioStatus | None, typer.Option("--status")] = None,
+    query: Annotated[str | None, typer.Option("--query", "-q")] = None,
+    limit: Annotated[int, typer.Option("--limit", min=1, max=100)] = 50,
+    offset: Annotated[int, typer.Option("--offset", min=0)] = 0,
+    json_output: Annotated[bool, typer.Option("--json")] = False,
+) -> None:
+    """Browse standard screens, deep packs, and reference packs."""
+
+    page = _catalog_store(root, True).list_scenarios(
+        kind=kind,
+        city_id=city_id,
+        suite=suite,
+        status=status,
+        query=query,
+        limit=limit,
+        offset=offset,
+    )
+    if json_output:
+        _print_json_model(page)
+        return
+    table = Table(title=f"Scenario executions: {page.pagination.total}")
+    table.add_column("Execution")
+    table.add_column("City")
+    table.add_column("Kind")
+    table.add_column("Suite")
+    table.add_column("Status")
+    table.add_column("Recommendation")
+    for scenario in page.items:
+        table.add_row(
+            scenario.execution_id,
+            scenario.city_name,
+            scenario.kind.value,
+            scenario.suite,
+            scenario.status,
+            scenario.selected_option_id or "withheld",
+        )
+    console.print(table)
+
+
+@catalog_app.command("scenario")
+def catalog_scenario(
+    execution_id: Annotated[str, typer.Argument()],
+    root: Annotated[Path, typer.Option("--root")] = Path("."),
+) -> None:
+    """Print one validated scenario execution and claim boundary as JSON."""
+
+    try:
+        detail = _catalog_store(root, True).scenario_detail(execution_id)
+    except CivicDecisionError as exc:
+        console.print(f"[red]scenario lookup failed[/red] {exc}")
+        raise typer.Exit(code=2) from exc
+    _print_json_model(detail)
+
+
+@catalog_app.command("sources")
+def catalog_sources(
+    root: Annotated[Path, typer.Option("--root")] = Path("."),
+    query: Annotated[str | None, typer.Option("--query", "-q")] = None,
+    limit: Annotated[int, typer.Option("--limit", min=1, max=100)] = 50,
+    offset: Annotated[int, typer.Option("--offset", min=0)] = 0,
+    json_output: Annotated[bool, typer.Option("--json")] = False,
+) -> None:
+    """Browse verified source manifests and declared record counts."""
+
+    page = _catalog_store(root, True).list_sources(query=query, limit=limit, offset=offset)
+    if json_output:
+        _print_json_model(page)
+        return
+    table = Table(title=f"Verified source artifacts: {page.pagination.total}")
+    table.add_column("Artifact")
+    table.add_column("Publisher")
+    table.add_column("Scope")
+    table.add_column("Records", justify="right")
+    table.add_column("Retrieved")
+    for source in page.items:
+        table.add_row(
+            f"{source.name}\n[dim]{source.artifact_id}[/dim]",
+            source.publisher,
+            source.geographic_scope,
+            f"{source.record_count:,}",
+            source.retrieved_at.date().isoformat(),
+        )
+    console.print(table)
+
+
+@catalog_app.command("benchmarks")
+def catalog_benchmarks(
+    root: Annotated[Path, typer.Option("--root")] = Path("."),
+) -> None:
+    """Print the validated analytical benchmark projection as JSON."""
+
+    _print_json_model(_catalog_store(root, True).benchmark_overview())
+
+
+@api_app.command("export-openapi")
+def api_export_openapi(
+    output: Annotated[Path, typer.Option("--output", "-o")] = Path("schemas/openapi-v1.json"),
+    root: Annotated[Path, typer.Option("--root")] = Path("."),
+) -> None:
+    """Export the deterministic OpenAPI 3 document for the validated catalog."""
+
+    try:
+        from civicdecision.api import create_app
+
+        document = create_app(root).openapi()
+        payload = (
+            json.dumps(
+                document,
+                ensure_ascii=False,
+                indent=2,
+                sort_keys=True,
+            ).encode("utf-8")
+            + b"\n"
+        )
+        atomic_write(output, payload)
+    except (CivicDecisionError, OSError) as exc:
+        console.print(f"[red]OpenAPI export failed[/red] {exc}")
+        raise typer.Exit(code=2) from exc
+    console.print(f"[green]created[/green] {output} ({len(payload):,} bytes)")
+
+
+@plugins_app.command("scaffold")
+def plugins_scaffold(
+    output: Annotated[Path, typer.Option("--output", "-o")],
+    plugin_id: Annotated[str, typer.Option("--plugin-id")],
+    name: Annotated[str, typer.Option("--name")],
+    author: Annotated[str, typer.Option("--author")],
+) -> None:
+    """Create a non-overwriting, valid data-only city-adapter starter."""
+
+    try:
+        paths = scaffold_plugin(output, plugin_id=plugin_id, name=name, author=author)
+    except (CivicDecisionError, OSError, ValueError) as exc:
+        console.print(f"[red]plugin scaffold failed safely[/red] {exc}")
+        raise typer.Exit(code=2) from exc
+    for path in paths:
+        console.print(f"[green]created[/green] {path}")
+
+
+@plugins_app.command("validate")
+def plugins_validate(
+    directory: Annotated[Path, typer.Argument()],
+    expected_plugin_id: Annotated[str, typer.Option("--expected-plugin-id")],
+) -> None:
+    """Hash-check and validate an exactly allowlisted data-only plugin directory."""
+
+    try:
+        package = load_plugin_package(
+            directory,
+            allowlisted_plugin_ids={expected_plugin_id},
+        )
+    except CivicDecisionError as exc:
+        console.print(f"[red]plugin validation failed safely[/red] {exc}")
+        raise typer.Exit(code=2) from exc
+    table = Table(title="Validated data-only plugin package")
+    table.add_column("Field")
+    table.add_column("Value")
+    table.add_row("plugin", package.manifest.plugin_id)
+    table.add_row("version", package.manifest.version)
+    table.add_row("city adapters", str(len(package.adapters)))
+    table.add_row("package hash", package.package_hash)
+    table.add_row("code executed", "no")
+    console.print(table)
+
+
+@app.command("serve")
+def serve(
+    root: Annotated[Path, typer.Option("--root")] = Path("."),
+    host: Annotated[str, typer.Option("--host")] = "127.0.0.1",
+    port: Annotated[int, typer.Option("--port", min=1, max=65535)] = 8000,
+    allow_network: Annotated[bool, typer.Option("--allow-network")] = False,
+    verify_sources: Annotated[bool, typer.Option("--verify-sources/--skip-source-hashes")] = True,
+) -> None:
+    """Serve the read-only API and evidence explorer after catalog validation."""
+
+    if host not in {"127.0.0.1", "::1", "localhost"} and not allow_network:
+        console.print("[red]refusing network-exposed host[/red]; pass --allow-network explicitly")
+        raise typer.Exit(code=2)
+    try:
+        import uvicorn
+
+        from civicdecision.api import create_app
+
+        application = create_app(root, verify_sources=verify_sources)
+    except (ImportError, CivicDecisionError) as exc:
+        console.print(f"[red]server startup failed[/red] {exc}")
+        raise typer.Exit(code=2) from exc
+    uvicorn.run(
+        application,
+        host=host,
+        port=port,
+        access_log=True,
+        server_header=False,
+    )
 
 
 if __name__ == "__main__":

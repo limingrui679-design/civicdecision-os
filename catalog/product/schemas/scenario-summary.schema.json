@@ -1,0 +1,179 @@
+{
+  "$defs": {
+    "EvidenceType": {
+      "enum": [
+        "observed",
+        "estimated",
+        "causal",
+        "simulated",
+        "optimized",
+        "proposed"
+      ],
+      "title": "EvidenceType",
+      "type": "string"
+    },
+    "ScenarioKind": {
+      "enum": [
+        "standard-screen",
+        "deep-pack",
+        "reference-pack"
+      ],
+      "title": "ScenarioKind",
+      "type": "string"
+    },
+    "ScenarioStatus": {
+      "enum": [
+        "completed",
+        "screened",
+        "insufficient-evidence",
+        "infeasible"
+      ],
+      "title": "ScenarioStatus",
+      "type": "string"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "analysis_modes": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Analysis Modes",
+      "type": "array"
+    },
+    "artifact_count": {
+      "minimum": 0,
+      "title": "Artifact Count",
+      "type": "integer"
+    },
+    "city_id": {
+      "pattern": "^[a-z0-9]+(?:[._-][a-z0-9]+)*$",
+      "title": "City Id",
+      "type": "string"
+    },
+    "city_name": {
+      "minLength": 1,
+      "title": "City Name",
+      "type": "string"
+    },
+    "content_hash": {
+      "pattern": "^sha256:[0-9a-f]{64}$",
+      "title": "Content Hash",
+      "type": "string"
+    },
+    "evidence_types": {
+      "items": {
+        "$ref": "#/$defs/EvidenceType"
+      },
+      "title": "Evidence Types",
+      "type": "array"
+    },
+    "execution_id": {
+      "pattern": "^[a-z0-9]+(?:[._-][a-z0-9]+)*$",
+      "title": "Execution Id",
+      "type": "string"
+    },
+    "kind": {
+      "$ref": "#/$defs/ScenarioKind"
+    },
+    "limitations": {
+      "items": {
+        "type": "string"
+      },
+      "minItems": 1,
+      "title": "Limitations",
+      "type": "array"
+    },
+    "observed_request_count": {
+      "anyOf": [
+        {
+          "minimum": 0,
+          "type": "integer"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Observed Request Count"
+    },
+    "readiness": {
+      "minLength": 1,
+      "title": "Readiness",
+      "type": "string"
+    },
+    "recommendation_issued": {
+      "title": "Recommendation Issued",
+      "type": "boolean"
+    },
+    "scenario_id": {
+      "pattern": "^[a-z0-9]+(?:[._-][a-z0-9]+)*$",
+      "title": "Scenario Id",
+      "type": "string"
+    },
+    "selected_option_id": {
+      "anyOf": [
+        {
+          "pattern": "^[a-z0-9]+(?:[._-][a-z0-9]+)*$",
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Selected Option Id"
+    },
+    "source_count": {
+      "minimum": 0,
+      "title": "Source Count",
+      "type": "integer"
+    },
+    "status": {
+      "$ref": "#/$defs/ScenarioStatus"
+    },
+    "suite": {
+      "minLength": 1,
+      "title": "Suite",
+      "type": "string"
+    },
+    "template_id": {
+      "anyOf": [
+        {
+          "pattern": "^[a-z0-9]+(?:[._-][a-z0-9]+)*$",
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Template Id"
+    },
+    "title": {
+      "minLength": 1,
+      "title": "Title",
+      "type": "string"
+    }
+  },
+  "required": [
+    "execution_id",
+    "scenario_id",
+    "kind",
+    "city_id",
+    "city_name",
+    "suite",
+    "title",
+    "status",
+    "readiness",
+    "recommendation_issued",
+    "source_count",
+    "artifact_count",
+    "analysis_modes",
+    "evidence_types",
+    "content_hash",
+    "limitations"
+  ],
+  "title": "ScenarioSummary",
+  "type": "object"
+}

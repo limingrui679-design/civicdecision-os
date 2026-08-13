@@ -133,9 +133,33 @@ expected value of perfect information.
 
 ### 5. Product surfaces
 
-CLI, REST API, Python SDK, web UI, and adapter SDK are projections over the same protocols.
-No surface may invent a stronger claim than the underlying pack. Human briefs are generated
-from the validated JSON and are verified against deterministic golden artifacts.
+`ArtifactStore` is the single product read model. At construction it validates the Tier-G,
+Tier-S, Tier-D, reference-workflow, source-manifest, and benchmark registries; reconciles identities,
+hashes, counts, scenario kinds, negative statuses, and DecisionPack eligibility; and computes one
+catalog fingerprint and strong ETag. API parameters are never interpreted as filesystem paths.
+
+Five product surfaces project from that store:
+
+- the CLI offers typed catalog browsing, OpenAPI export, exact product rebuild, guarded local
+  serving, and plugin validation;
+- the REST API offers 14 versioned read-only paths with bounded pagination, closed filters,
+  problem details, request IDs, conditional caching, compression, and browser security headers;
+- the Python SDK offers local, synchronous HTTP, and asynchronous HTTP clients that validate the
+  same Pydantic response models;
+- the dependency-free browser explorer retrieves same-origin resources and computes no new
+  recommendation in JavaScript; and
+- the adapter plugin SDK validates exact-allowlist, data-only packages without importing or
+  executing third-party code.
+
+No surface may invent a stronger claim than the underlying pack. A Tier-S screen cannot become a
+DecisionPack, and a negative DecisionPack remains retrievable with no selected option. Human
+briefs are generated from validated JSON and verified against deterministic golden artifacts.
+
+The committed product projection is a separate immutable review surface: 33 manifest-indexed
+JSON artifacts, one artifact manifest, and one portable checksum inventory. Its 35 files include
+17 product/plugin Schemas, the deterministic OpenAPI document, web-asset hashes, and complete
+collection indexes. The plugin registry remains separate from the live catalog: validating a
+package never installs, enables, or merges it automatically.
 
 ## Scale architecture
 
@@ -158,7 +182,8 @@ run artifact, evidence summary, and DecisionPack has a SHA-256 content hash. Ref
 use fixed inputs, explicit parameters, and fixed seeds. `scripts/verify_repository.py` rebuilds
 Schemas, DecisionPacks, the Tier-G and Tier-S layers, all 145 analytical benchmark artifacts, and
 the complete 707-file Tier-D tree plus evidence ledgers in a temporary directory and requires
-byte-for-byte equality.
+byte-for-byte equality. It also rebuilds the 35-file product projection and compares every path
+and byte, including its 17 Schemas, 14-path OpenAPI document, manifest, and checksums.
 
 ## Current limits
 
@@ -167,6 +192,8 @@ standardized descriptive bundles, five analytical engine families, 40 public-dat
 replays, 100 synthetic optimization tasks, five synthetic engine qualifications, and eight
 deep-city reference bundles with legal geometries and local public request evidence. Tier-D action
 parameters are still hypothetical, and its climate input remains a point rather than an exposure
-surface. Production network routing, externally credible causal studies, city-calibrated
-intervention effects, API, web UI, hosted demo, production security controls, external review,
-real users, and policy impact remain incomplete.
+surface. The local API, SDK, CLI, web explorer, and data-only plugin validator are implemented and
+packaging-tested, but they are not a public deployment. Production network routing, externally
+credible causal studies, city-calibrated intervention effects, hosted-demo operations,
+authentication/authorization, quotas, production observability, external security/accessibility
+review, real users, and policy impact remain incomplete.

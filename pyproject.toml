@@ -43,6 +43,7 @@ graph = ["networkx>=3.3,<4"]
 optimization = ["scipy>=1.14,<2", "ortools>=9.11,<10"]
 api = ["fastapi>=0.115,<1", "uvicorn>=0.34,<1"]
 dev = [
+  "fastapi>=0.115,<1",
   "hatchling>=1.27",
   "mypy>=1.14,<2",
   "pytest>=8.3,<10",
@@ -51,6 +52,7 @@ dev = [
   "respx>=0.22,<1",
   "ruff>=0.9,<1",
   "types-PyYAML>=6.0,<7",
+  "uvicorn>=0.34,<1",
 ]
 all = [
   "duckdb>=1.2,<2",

@@ -1,0 +1,51 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "cities": {
+      "minimum": 0,
+      "title": "Cities",
+      "type": "integer"
+    },
+    "claim_boundary": {
+      "minLength": 1,
+      "title": "Claim Boundary",
+      "type": "string"
+    },
+    "completed_count": {
+      "minimum": 0,
+      "title": "Completed Count",
+      "type": "integer"
+    },
+    "execution_count": {
+      "minimum": 0,
+      "title": "Execution Count",
+      "type": "integer"
+    },
+    "negative_count": {
+      "minimum": 0,
+      "title": "Negative Count",
+      "type": "integer"
+    },
+    "suite": {
+      "minLength": 1,
+      "title": "Suite",
+      "type": "string"
+    },
+    "template_count": {
+      "minimum": 0,
+      "title": "Template Count",
+      "type": "integer"
+    }
+  },
+  "required": [
+    "suite",
+    "template_count",
+    "execution_count",
+    "completed_count",
+    "negative_count",
+    "cities",
+    "claim_boundary"
+  ],
+  "title": "SuiteOverview",
+  "type": "object"
+}

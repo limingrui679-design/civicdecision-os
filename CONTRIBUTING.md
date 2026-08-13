@@ -24,8 +24,22 @@ python -m pip install -e '.[dev]'
 make check
 ```
 
-The branch-coverage floor is 90%. New analytical or connector code must add positive,
-negative, integrity, and boundary tests. Do not reduce the floor to make a change pass.
+The configured coverage.py combined line-and-branch floor is 90%. New analytical, connector, or
+product-surface code must add positive, negative, integrity, and boundary tests. Do not reduce the
+floor to make a change pass, and report statement and branch coverage separately rather than
+calling the combined percentage either one.
+
+Changes that affect product projections must also run:
+
+```bash
+civicdecision catalog build-product --root . --output catalog/product
+python scripts/verify_repository.py
+node --check src/civicdecision/web/assets/app.js
+```
+
+The product build is accepted only when the committed 35-file tree, artifact manifest, OpenAPI
+document, web hashes, and portable checksums rebuild exactly. Browser changes require desktop and
+mobile interaction inspection; a screenshot alone is not functional evidence.
 
 ## Add a public source
 
@@ -42,6 +56,17 @@ negative, integrity, and boundary tests. Do not reduce the floor to make a chang
 3. Retain infeasible and insufficient-evidence outcomes.
 4. Include reversal tests and value-of-information guidance for completed DecisionPacks.
 5. Generate human-readable output from the same validated DecisionPack, never a separate source.
+
+## Add a data-only adapter plugin
+
+1. Use `civicdecision plugins scaffold`; do not add executable plugin code to the version-1
+   package contract.
+2. Declare every adapter file in `plugin.json` with a normalized path, byte count, and SHA-256
+   digest.
+3. Keep `enabled_by_default=false` and validate against one exact plugin-ID allowlist entry.
+4. Do not use symbolic links, absolute/parent paths, unmanifested assets, or overlapping city IDs.
+5. Treat successful package validation as byte-and-contract validation, not proof that a source is
+   true, licensed for every use, analytically ready, deployed, or impactful.
 
 ## Pull-request evidence
 

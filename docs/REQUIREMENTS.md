@@ -19,10 +19,10 @@ Status vocabulary: `planned`, `in_progress`, `implemented_unverified`, `verified
 | SCALE-009 | At least 40 historical replays | verified | 40 complete run artifacts over 20 public city-point sources and two parameters; 13,440 training and 1,200 strictly later holdout values; immutable cutoffs, four training-only baselines, held-out metrics, row ledger, hashes, and exact tree rebuild |
 | SCALE-010 | At least 100 optimization tasks | verified | 100 complete solver records; 24,000 declared / 21,710 evaluated portfolios; 70 optimal with explicit zero-action comparisons, 20 proven infeasible, ten deterministic search-limited negative releases; artifact hashes and exact rebuild |
 | SCALE-011 | Up to 12 identification-gated causal studies | in_progress | Strict DID design/diagnostic/claim-gate contract plus one synthetic pass and one synthetic failed-pretrend qualification exist; real domain studies and external method review remain |
-| SCALE-012 | 500–800 automated checks | in_progress | The 500-test floor is met: 711 local tests pass with 95.64% statement, 89.78% branch, and 94.48% combined line-and-branch coverage. Strict typing, lint, and formatting pass; remote CI and mutation testing remain |
+| SCALE-012 | 500–800 automated checks | verified | Exactly 800 local tests pass with 96.798% statement, 89.401% branch, and 95.369% combined line-and-branch coverage. The collection exercises positive, negative, tamper, exact-rebuild, API, SDK, CLI, plugin, and product-package behavior; strict typing, lint, formatting, and JavaScript syntax checks also pass. Remote CI and mutation testing remain separate release-hardening work |
 | SCALE-013 | 500 static figures and 80 interactive views | planned | Generated artifact manifest plus visual inspection report |
 | SCALE-014 | 100 DecisionPacks and human-readable briefs | in_progress | 96 Tier-D plus 2 earlier reference DecisionPacks and same-source briefs validate and exactly rebuild; two additional non-duplicative packs remain for the 100-pack floor |
-| SCALE-015 | Web, REST API, Python SDK, CLI and adapter/plugin SDK | in_progress | Clean installs, contracts, browser/API tests, package and public demo |
+| SCALE-015 | Web, REST API, Python SDK, CLI and adapter/plugin SDK | verified | One validated artifact store projects 258 cities, 188 executions, 98 DecisionPacks, 90 sources, seven suites, and 145 benchmark runs through a responsive browser, 14-path read-only API, local/sync/async Python SDKs, CLI, and exact-allowlist data-only plugin SDK. The 35-file product tree exactly rebuilds, browser/API/SDK/CLI/plugin tests pass, and a fresh wheel smoke passes; public hosting remains the separate RELEASE-003 gate |
 
 ## Product protocols and evidence invariants
 
@@ -34,7 +34,7 @@ Status vocabulary: `planned`, `in_progress`, `implemented_unverified`, `verified
 | CORE-004 | Six evidence types remain distinct | verified | Model invariants and positive/rejection tests, including explicit absence of causal evidence in the demo |
 | CORE-005 | Failed, infeasible, timed-out and insufficient-evidence runs are releasable | verified | Four negative status tests plus an end-to-end infeasible golden DecisionPack |
 | CORE-006 | Every source artifact has version, query, license, hash and record count | verified | 90 real public source manifests covering 258,478 declared heterogeneous source units, CLI verification, attribution audit, tamper/path/archive/shape tests, and deterministic registry/specification audit |
-| CORE-007 | Deterministic canonical serialization and content hashes | verified | Exact temporary-directory rebuild of Schemas, earlier references, Tier G, Tier S, 145 analytical benchmarks, and all 707 Tier-D files |
+| CORE-007 | Deterministic canonical serialization and content hashes | verified | Exact temporary-directory rebuild of 22 core Schemas, earlier references, Tier G, Tier S, 145 analytical benchmarks, all 707 Tier-D files, and the complete 35-file product projection with 17 additional product/plugin Schemas and portable checksums |
 | CORE-008 | Decision reversals and value of information are first-class outputs | verified | Required protocol fields, five-case sensitivity reruns, three ranked evidence gaps, validation tests |
 | CORE-009 | Cross-city transportability failures are preserved | planned | Leave-one-city tasks and negative DecisionPacks |
 | CORE-010 | Natural language cannot bypass Scenario DSL validation | planned | Constrained compiler and adversarial tests |
@@ -62,10 +62,10 @@ Status vocabulary: `planned`, `in_progress`, `implemented_unverified`, `verified
 
 | ID | Requirement | Status | Required completion evidence |
 |---|---|---|---|
-| RELEASE-001 | Clean environment install | in_progress | Current-worktree wheel installs and imports in fresh Python 3.12.13 with recorded hash; repeat from a tagged release archive before verification |
-| RELEASE-002 | Rebuildable public sample | verified | One-command local verifier regenerates both earlier reference DecisionPacks, Tier-G, Tier-S, all 145 analytical runs, and all 707 Tier-D files, ledgers, reports and checksums with exact byte equality |
+| RELEASE-001 | Clean environment install | in_progress | Current-worktree 229,951-byte wheel with SHA-256 `879e974d12e65380cb1d1e5c60161d6323ef4c3071e6fbba9ec335dd546c5843` passes ZIP integrity, installs with API dependencies in fresh Python 3.12.13, imports from site-packages, and runs CLI/API/SDK/plugin/exact-product-build smoke checks. Repeat from a tagged release archive before marking verified |
+| RELEASE-002 | Rebuildable public sample | verified | One-command local verifier regenerates both earlier reference DecisionPacks, Tier-G, Tier-S, all 145 analytical runs, all 707 Tier-D files, and all 35 product files, ledgers, reports and checksums with exact byte equality |
 | RELEASE-003 | Public no-login demo | planned | External browser verification and documented sample boundary |
 | RELEASE-004 | Signed release, checksums and SBOM | planned | GitHub Release assets and independent verification |
 | RELEASE-005 | Security and dependency scanning | in_progress | Workflows are defined; no remote result is claimed until GitHub runs them |
-| RELEASE-006 | Documentation golden paths | in_progress | Reference reproduce path exists; add-city and add-scenario paths remain |
+| RELEASE-006 | Documentation golden paths | in_progress | Reference reproduce, product build, local serving, REST API, Python SDK, web explorer, and data-only plugin paths exist; full add-city and add-scenario contributor paths remain |
 | RELEASE-007 | Claim-language audit | planned | Repository-wide fact audit against code, runs and public state |

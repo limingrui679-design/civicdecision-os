@@ -1,0 +1,36 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "catalog_fingerprint": {
+      "pattern": "^sha256:[0-9a-f]{64}$",
+      "title": "Catalog Fingerprint",
+      "type": "string"
+    },
+    "checked_at": {
+      "format": "date-time",
+      "title": "Checked At",
+      "type": "string"
+    },
+    "status": {
+      "enum": [
+        "ok",
+        "not-ready"
+      ],
+      "title": "Status",
+      "type": "string"
+    },
+    "version": {
+      "minLength": 1,
+      "title": "Version",
+      "type": "string"
+    }
+  },
+  "required": [
+    "status",
+    "version",
+    "catalog_fingerprint",
+    "checked_at"
+  ],
+  "title": "ProductHealth",
+  "type": "object"
+}

@@ -1,6 +1,9 @@
 from __future__ import annotations
 
+import json
 from pathlib import Path
+from types import SimpleNamespace
+from typing import Any
 
 import pytest
 from typer.testing import CliRunner
@@ -8,9 +11,15 @@ from typer.testing import CliRunner
 from civicdecision.cli import app
 from civicdecision.connectors.base import FetchResult
 from civicdecision.connectors.cdc_places import CDCPlacesConnector
+from civicdecision.connectors.eurostat import EurostatStatisticsConnector
 from civicdecision.connectors.geonames import GeoNamesCitiesConnector
+from civicdecision.connectors.nasa_power import NASAPowerDailyConnector
+from civicdecision.connectors.nyc_311 import NYC311Connector
+from civicdecision.connectors.open_fema import OpenFEMADisasterConnector
 from civicdecision.connectors.usgs_earthquakes import USGSEarthquakeConnector
-from civicdecision.errors import ConnectorError
+from civicdecision.connectors.world_bank import WorldBankIndicatorConnector
+from civicdecision.errors import ConnectorError, IntegrityError
+from civicdecision.product.store import ArtifactStore
 from civicdecision.protocols.source import SourceManifest
 
 ROOT = Path(__file__).parents[1]
@@ -375,3 +384,435 @@ def test_cli_demo_failure_is_nonzero(tmp_path: Path) -> None:
     )
     assert result.exit_code == 2
     assert "demo failed safely" in result.output
+
+
+@pytest.fixture
+def injected_product_store(
+    product_store: ArtifactStore, monkeypatch: pytest.MonkeyPatch
+) -> ArtifactStore:
+    monkeypatch.setattr(
+        "civicdecision.cli._catalog_store",
+        lambda root, verify_sources: product_store,
+    )
+    return product_store
+
+
+def test_cli_product_summary_supports_table_and_json(
+    injected_product_store: ArtifactStore,
+) -> None:
+    table = runner.invoke(app, ["catalog", "summary"])
+    structured = runner.invoke(app, ["catalog", "summary", "--json"])
+    assert table.exit_code == structured.exit_code == 0
+    assert "258" in table.output and "catalog fingerprint" in table.output
+    assert json.loads(structured.output)["tier_assignments"] == 288
+
+
+def test_cli_product_city_browsing_and_detail(
+    injected_product_store: ArtifactStore,
+) -> None:
+    listing = runner.invoke(
+        app,
+        ["catalog", "cities", "--tier", "D", "--limit", "2"],
+    )
+    detail = runner.invoke(app, ["catalog", "city", "us.tx.austin"])
+    missing = runner.invoke(app, ["catalog", "city", "unknown.city"])
+    assert listing.exit_code == detail.exit_code == 0
+    assert "Austin" in listing.output and "Boston" in listing.output
+    assert json.loads(detail.output)["city"]["tier"] == "D"
+    assert missing.exit_code == 2 and "lookup failed" in missing.output
+
+
+def test_cli_product_scenario_browsing_and_detail(
+    injected_product_store: ArtifactStore,
+) -> None:
+    listing = runner.invoke(
+        app,
+        [
+            "catalog",
+            "scenarios",
+            "--kind",
+            "deep-pack",
+            "--status",
+            "insufficient-evidence",
+            "--limit",
+            "2",
+            "--json",
+        ],
+    )
+    detail = runner.invoke(app, ["catalog", "scenario", "tierd.us.tx.austin.11"])
+    assert listing.exit_code == detail.exit_code == 0
+    assert json.loads(listing.output)["pagination"]["total"] == 20
+    assert json.loads(detail.output)["scenario"]["recommendation_issued"] is False
+
+
+def test_cli_product_sources_and_benchmarks(
+    injected_product_store: ArtifactStore,
+) -> None:
+    sources = runner.invoke(
+        app,
+        ["catalog", "sources", "--query", "Austin", "--limit", "10"],
+    )
+    benchmark = runner.invoke(app, ["catalog", "benchmarks"])
+    assert sources.exit_code == benchmark.exit_code == 0
+    assert "City of Austin" in sources.output
+    assert json.loads(benchmark.output)["run_artifacts"] == 145
+
+
+def test_cli_exports_deterministic_openapi(tmp_path: Path) -> None:
+    output = tmp_path / "openapi.json"
+    result = runner.invoke(
+        app,
+        ["api", "export-openapi", "--root", str(ROOT), "--output", str(output)],
+    )
+    assert result.exit_code == 0
+    assert output.read_bytes() == (ROOT / "catalog/product/openapi-v1.json").read_bytes()
+
+    product_output = tmp_path / "product"
+    product = runner.invoke(
+        app,
+        [
+            "catalog",
+            "build-product",
+            "--root",
+            str(ROOT),
+            "--output",
+            str(product_output),
+        ],
+    )
+    assert product.exit_code == 0
+    assert "35 product files" in product.output
+    assert {
+        path.relative_to(product_output): path.read_bytes()
+        for path in product_output.rglob("*")
+        if path.is_file()
+    } == {
+        path.relative_to(ROOT / "catalog/product"): path.read_bytes()
+        for path in (ROOT / "catalog/product").rglob("*")
+        if path.is_file()
+    }
+
+
+def test_cli_scaffolds_and_validates_data_only_plugin(tmp_path: Path) -> None:
+    output = tmp_path / "plugin"
+    scaffold = runner.invoke(
+        app,
+        [
+            "plugins",
+            "scaffold",
+            "--output",
+            str(output),
+            "--plugin-id",
+            "review.adapter",
+            "--name",
+            "Review Adapter",
+            "--author",
+            "Reviewer",
+        ],
+    )
+    validation = runner.invoke(
+        app,
+        [
+            "plugins",
+            "validate",
+            str(output),
+            "--expected-plugin-id",
+            "review.adapter",
+        ],
+    )
+    assert scaffold.exit_code == validation.exit_code == 0
+    assert "code executed" in validation.output and "no" in validation.output
+
+
+def test_cli_refuses_network_exposure_without_explicit_flag() -> None:
+    result = runner.invoke(app, ["serve", "--host", "0.0.0.0"])
+    assert result.exit_code == 2
+    assert "refusing network-exposed host" in result.output
+
+
+def test_cli_connector_catalog_supports_table_and_deterministic_file(tmp_path: Path) -> None:
+    table = runner.invoke(app, ["sources", "catalog"])
+    output = tmp_path / "connectors.json"
+    written = runner.invoke(app, ["sources", "catalog", "--output", str(output)])
+    assert table.exit_code == written.exit_code == 0
+    assert "Implemented source connectors" in table.output
+    assert len(json.loads(output.read_text(encoding="utf-8"))) == 10
+
+
+@pytest.mark.parametrize(
+    ("connector_type", "arguments"),
+    [
+        (
+            WorldBankIndicatorConnector,
+            [
+                "world-bank",
+                "--indicator",
+                "SP.POP.TOTL",
+                "--start-year",
+                "2020",
+                "--end-year",
+                "2021",
+            ],
+        ),
+        (
+            NASAPowerDailyConnector,
+            [
+                "nasa-power",
+                "--latitude",
+                "42.36",
+                "--longitude",
+                "-71.06",
+                "--start",
+                "2025-01-01",
+                "--end",
+                "2025-01-02",
+                "--parameters",
+                "T2M,PRECTOTCORR",
+            ],
+        ),
+        (
+            OpenFEMADisasterConnector,
+            [
+                "openfema",
+                "--start",
+                "2020-01-01T00:00:00Z",
+                "--end",
+                "2020-02-01T00:00:00Z",
+                "--state",
+                "MA",
+            ],
+        ),
+        (
+            EurostatStatisticsConnector,
+            ["eurostat", "--dataset", "demo_r_pjanaggr3", "--filter", "geo=US"],
+        ),
+        (
+            NYC311Connector,
+            [
+                "nyc-311",
+                "--start",
+                "2020-01-01T00:00:00Z",
+                "--end",
+                "2020-01-02T00:00:00Z",
+                "--borough",
+                "MANHATTAN",
+            ],
+        ),
+    ],
+)
+def test_cli_fetches_each_extended_connector_with_typed_query(
+    tmp_path: Path,
+    source_manifest: SourceManifest,
+    monkeypatch: pytest.MonkeyPatch,
+    connector_type: type[Any],
+    arguments: list[str],
+) -> None:
+    async def fake_fetch(self: object, query: object, output: Path) -> FetchResult:
+        assert query is not None
+        return fake_fetch_result(tmp_path, source_manifest)
+
+    monkeypatch.setattr(connector_type, "fetch", fake_fetch)
+    result = runner.invoke(
+        app,
+        ["sources", *arguments, "--output", str(tmp_path)],
+    )
+    assert result.exit_code == 0
+    assert "Fetched test-source" in result.output
+
+
+def test_cli_rejects_unsafe_eurostat_filters(tmp_path: Path) -> None:
+    cases = [
+        ["--filter", "missing-separator"],
+        ["--filter", "geo=US", "--filter", "geo=FR"],
+        ["--filter", "=US"],
+    ]
+    for filters in cases:
+        result = runner.invoke(
+            app,
+            [
+                "sources",
+                "eurostat",
+                "--dataset",
+                "fixture",
+                *filters,
+                "--output",
+                str(tmp_path),
+            ],
+        )
+        assert result.exit_code == 2
+        assert "failed safely" in result.output
+
+
+def test_cli_deep_fetch_commands_report_reconciled_counts(
+    tmp_path: Path, monkeypatch: pytest.MonkeyPatch
+) -> None:
+    async def fake_sources(*args: object, **kwargs: object) -> SimpleNamespace:
+        return SimpleNamespace(city_count=8, aggregation_count=32, aggregate_rows=148_836)
+
+    async def fake_context(*args: object, **kwargs: object) -> SimpleNamespace:
+        return SimpleNamespace(city_count=8, artifact_count=24, declared_source_units=8_800)
+
+    monkeypatch.setattr("civicdecision.cli.fetch_tier_d_sources", fake_sources)
+    monkeypatch.setattr("civicdecision.cli.fetch_tier_d_context", fake_context)
+    sources = runner.invoke(app, ["deep", "fetch-sources", "--output", str(tmp_path)])
+    context = runner.invoke(app, ["deep", "fetch-context", "--output", str(tmp_path)])
+    assert sources.exit_code == context.exit_code == 0
+    assert "148,836" in sources.output
+    assert "8,800" in context.output
+
+
+def test_cli_deep_fetch_rejects_invalid_date(tmp_path: Path) -> None:
+    sources = runner.invoke(
+        app,
+        ["deep", "fetch-sources", "--start", "invalid", "--output", str(tmp_path)],
+    )
+    context = runner.invoke(
+        app,
+        ["deep", "fetch-context", "--end-inclusive", "invalid", "--output", str(tmp_path)],
+    )
+    assert sources.exit_code == context.exit_code == 2
+    assert "YYYY-MM-DD" in sources.output and "YYYY-MM-DD" in context.output
+
+
+def test_cli_deep_build_reports_committed_evidence_with_injected_builder(
+    tmp_path: Path, monkeypatch: pytest.MonkeyPatch
+) -> None:
+    artifacts = SimpleNamespace(
+        registry_path=ROOT / "catalog/deep-cities/registry.json",
+        evidence_summary_path=ROOT / "catalog/deep-cities/evidence-summary.json",
+        checksum_path=ROOT / "catalog/deep-cities/SHA256SUMS",
+        artifact_paths=tuple(range(707)),
+    )
+    monkeypatch.setattr("civicdecision.cli.build_tier_d_artifacts", lambda *args: artifacts)
+    result = runner.invoke(
+        app,
+        [
+            "deep",
+            "build",
+            "--source-directory",
+            str(tmp_path),
+            "--output-directory",
+            str(tmp_path / "output"),
+        ],
+    )
+    assert result.exit_code == 0
+    assert "96" in result.output and "4,148,633" in result.output
+
+
+def test_cli_deep_build_failure_is_nonzero(tmp_path: Path, monkeypatch: pytest.MonkeyPatch) -> None:
+    def fail(*args: object) -> None:
+        raise IntegrityError("fixture integrity failure")
+
+    monkeypatch.setattr("civicdecision.cli.build_tier_d_artifacts", fail)
+    result = runner.invoke(
+        app,
+        [
+            "deep",
+            "build",
+            "--source-directory",
+            str(tmp_path),
+            "--output-directory",
+            str(tmp_path / "output"),
+        ],
+    )
+    assert result.exit_code == 2
+    assert "failed safely" in result.output
+
+
+def test_cli_product_collection_alternate_output_branches(
+    injected_product_store: ArtifactStore,
+) -> None:
+    cities = runner.invoke(app, ["catalog", "cities", "--tier", "D", "--limit", "1", "--json"])
+    scenarios = runner.invoke(
+        app, ["catalog", "scenarios", "--kind", "reference-pack", "--limit", "1"]
+    )
+    sources = runner.invoke(app, ["catalog", "sources", "--query", "Austin", "--json"])
+    missing = runner.invoke(app, ["catalog", "scenario", "unknown.scenario"])
+    assert cities.exit_code == scenarios.exit_code == sources.exit_code == 0
+    assert json.loads(cities.output)["pagination"]["total"] == 8
+    assert "Scenario executions: 2" in scenarios.output
+    assert json.loads(sources.output)["pagination"]["total"] == 5
+    assert missing.exit_code == 2 and "lookup failed" in missing.output
+
+
+def test_cli_catalog_integrity_and_openapi_failures_are_nonzero(
+    tmp_path: Path, monkeypatch: pytest.MonkeyPatch
+) -> None:
+    def fail_store(*args: object, **kwargs: object) -> None:
+        raise IntegrityError("fixture catalog failure")
+
+    monkeypatch.setattr("civicdecision.cli.ArtifactStore", fail_store)
+    catalog = runner.invoke(app, ["catalog", "summary"])
+    openapi = runner.invoke(
+        app,
+        ["api", "export-openapi", "--root", str(tmp_path / "missing")],
+    )
+    product = runner.invoke(
+        app,
+        [
+            "catalog",
+            "build-product",
+            "--root",
+            str(tmp_path / "missing"),
+            "--output",
+            str(tmp_path / "product"),
+        ],
+    )
+    assert catalog.exit_code == openapi.exit_code == product.exit_code == 2
+    assert "catalog integrity failure" in catalog.output
+    assert "OpenAPI export failed" in openapi.output
+    assert "product artifact build failed safely" in product.output
+
+
+def test_cli_plugin_failure_paths_are_nonzero(tmp_path: Path) -> None:
+    output = tmp_path / "plugin"
+    output.mkdir()
+    scaffold = runner.invoke(
+        app,
+        [
+            "plugins",
+            "scaffold",
+            "--output",
+            str(output),
+            "--plugin-id",
+            "review.adapter",
+            "--name",
+            "Review",
+            "--author",
+            "Reviewer",
+        ],
+    )
+    validation = runner.invoke(
+        app,
+        [
+            "plugins",
+            "validate",
+            str(output),
+            "--expected-plugin-id",
+            "review.adapter",
+        ],
+    )
+    assert scaffold.exit_code == validation.exit_code == 2
+    assert "failed safely" in scaffold.output and "validation failed safely" in validation.output
+
+
+def test_cli_serve_invokes_local_server_with_hardened_defaults(
+    product_store: ArtifactStore, monkeypatch: pytest.MonkeyPatch
+) -> None:
+    application = object()
+    captured: dict[str, object] = {}
+
+    monkeypatch.setattr("civicdecision.api.create_app", lambda *args, **kwargs: application)
+
+    def fake_run(app_value: object, **kwargs: object) -> None:
+        captured.update(app=app_value, **kwargs)
+
+    monkeypatch.setattr("uvicorn.run", fake_run)
+    result = runner.invoke(app, ["serve", "--root", str(ROOT), "--port", "8765"])
+    assert result.exit_code == 0
+    assert captured == {
+        "app": application,
+        "host": "127.0.0.1",
+        "port": 8765,
+        "access_log": True,
+        "server_header": False,
+    }

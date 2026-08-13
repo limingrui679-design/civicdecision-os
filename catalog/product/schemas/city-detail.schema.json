@@ -1,0 +1,340 @@
+{
+  "$defs": {
+    "CapabilityView": {
+      "additionalProperties": false,
+      "properties": {
+        "diagnostics": {
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1,
+          "title": "Diagnostics",
+          "type": "array"
+        },
+        "evidence_refs": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Evidence Refs",
+          "type": "array"
+        },
+        "id": {
+          "pattern": "^[a-z0-9]+(?:[._-][a-z0-9]+)*$",
+          "title": "Id",
+          "type": "string"
+        },
+        "limitations": {
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1,
+          "title": "Limitations",
+          "type": "array"
+        },
+        "status": {
+          "minLength": 1,
+          "title": "Status",
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "status",
+        "diagnostics",
+        "evidence_refs",
+        "limitations"
+      ],
+      "title": "CapabilityView",
+      "type": "object"
+    },
+    "CitySummary": {
+      "additionalProperties": false,
+      "properties": {
+        "city_id": {
+          "pattern": "^[a-z0-9]+(?:[._-][a-z0-9]+)*$",
+          "title": "City Id",
+          "type": "string"
+        },
+        "completed_scenarios": {
+          "minimum": 0,
+          "title": "Completed Scenarios",
+          "type": "integer"
+        },
+        "country_code": {
+          "pattern": "^[A-Z]{2}$",
+          "title": "Country Code",
+          "type": "string"
+        },
+        "latitude": {
+          "maximum": 90,
+          "minimum": -90,
+          "title": "Latitude",
+          "type": "number"
+        },
+        "limitations": {
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1,
+          "title": "Limitations",
+          "type": "array"
+        },
+        "longitude": {
+          "maximum": 180,
+          "minimum": -180,
+          "title": "Longitude",
+          "type": "number"
+        },
+        "name": {
+          "minLength": 1,
+          "title": "Name",
+          "type": "string"
+        },
+        "negative_scenarios": {
+          "minimum": 0,
+          "title": "Negative Scenarios",
+          "type": "integer"
+        },
+        "quality_status": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Quality Status"
+        },
+        "readiness": {
+          "minLength": 1,
+          "title": "Readiness",
+          "type": "string"
+        },
+        "scenario_count": {
+          "minimum": 0,
+          "title": "Scenario Count",
+          "type": "integer"
+        },
+        "source_artifact_count": {
+          "minimum": 0,
+          "title": "Source Artifact Count",
+          "type": "integer"
+        },
+        "source_population": {
+          "anyOf": [
+            {
+              "minimum": 0,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Source Population"
+        },
+        "tier": {
+          "$ref": "#/$defs/ProductTier"
+        },
+        "timezone": {
+          "minLength": 1,
+          "title": "Timezone",
+          "type": "string"
+        }
+      },
+      "required": [
+        "city_id",
+        "name",
+        "country_code",
+        "tier",
+        "latitude",
+        "longitude",
+        "timezone",
+        "source_artifact_count",
+        "scenario_count",
+        "completed_scenarios",
+        "negative_scenarios",
+        "readiness",
+        "limitations"
+      ],
+      "title": "CitySummary",
+      "type": "object"
+    },
+    "EvidenceType": {
+      "enum": [
+        "observed",
+        "estimated",
+        "causal",
+        "simulated",
+        "optimized",
+        "proposed"
+      ],
+      "title": "EvidenceType",
+      "type": "string"
+    },
+    "JsonValue": {},
+    "MetricView": {
+      "additionalProperties": false,
+      "properties": {
+        "evidence_type": {
+          "$ref": "#/$defs/EvidenceType"
+        },
+        "id": {
+          "pattern": "^[a-z0-9]+(?:[._-][a-z0-9]+)*$",
+          "title": "Id",
+          "type": "string"
+        },
+        "interpretation": {
+          "minLength": 1,
+          "title": "Interpretation",
+          "type": "string"
+        },
+        "limitations": {
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1,
+          "title": "Limitations",
+          "type": "array"
+        },
+        "method": {
+          "minLength": 1,
+          "title": "Method",
+          "type": "string"
+        },
+        "source_refs": {
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1,
+          "title": "Source Refs",
+          "type": "array"
+        },
+        "unit": {
+          "minLength": 1,
+          "title": "Unit",
+          "type": "string"
+        },
+        "value": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "number"
+            },
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Value"
+        }
+      },
+      "required": [
+        "id",
+        "value",
+        "unit",
+        "evidence_type",
+        "method",
+        "source_refs",
+        "interpretation",
+        "limitations"
+      ],
+      "title": "MetricView",
+      "type": "object"
+    },
+    "ProductTier": {
+      "enum": [
+        "G",
+        "S",
+        "D"
+      ],
+      "title": "ProductTier",
+      "type": "string"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "capabilities": {
+      "items": {
+        "$ref": "#/$defs/CapabilityView"
+      },
+      "title": "Capabilities",
+      "type": "array"
+    },
+    "city": {
+      "$ref": "#/$defs/CitySummary"
+    },
+    "data_gaps": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Data Gaps",
+      "type": "array"
+    },
+    "limitations": {
+      "items": {
+        "type": "string"
+      },
+      "minItems": 1,
+      "title": "Limitations",
+      "type": "array"
+    },
+    "metrics": {
+      "items": {
+        "$ref": "#/$defs/MetricView"
+      },
+      "title": "Metrics",
+      "type": "array"
+    },
+    "provenance": {
+      "additionalProperties": {
+        "$ref": "#/$defs/JsonValue"
+      },
+      "minProperties": 1,
+      "title": "Provenance",
+      "type": "object"
+    },
+    "quality_checks": {
+      "additionalProperties": {
+        "type": "string"
+      },
+      "title": "Quality Checks",
+      "type": "object"
+    },
+    "source_artifact_ids": {
+      "items": {
+        "type": "string"
+      },
+      "minItems": 1,
+      "title": "Source Artifact Ids",
+      "type": "array"
+    },
+    "source_ids": {
+      "items": {
+        "type": "string"
+      },
+      "minItems": 1,
+      "title": "Source Ids",
+      "type": "array"
+    }
+  },
+  "required": [
+    "city",
+    "source_ids",
+    "source_artifact_ids",
+    "metrics",
+    "capabilities",
+    "quality_checks",
+    "data_gaps",
+    "provenance",
+    "limitations"
+  ],
+  "title": "CityDetail",
+  "type": "object"
+}

@@ -1,0 +1,98 @@
+{
+  "$defs": {
+    "ProductArtifactEntry": {
+      "additionalProperties": false,
+      "properties": {
+        "byte_count": {
+          "minimum": 1,
+          "title": "Byte Count",
+          "type": "integer"
+        },
+        "content_hash": {
+          "pattern": "^sha256:[0-9a-f]{64}$",
+          "title": "Content Hash",
+          "type": "string"
+        },
+        "media_type": {
+          "minLength": 1,
+          "title": "Media Type",
+          "type": "string"
+        },
+        "path": {
+          "pattern": "^[a-z0-9][a-z0-9._/-]*$",
+          "title": "Path",
+          "type": "string"
+        },
+        "record_count": {
+          "anyOf": [
+            {
+              "minimum": 0,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Record Count"
+        }
+      },
+      "required": [
+        "path",
+        "media_type",
+        "byte_count",
+        "content_hash"
+      ],
+      "title": "ProductArtifactEntry",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "artifact_count": {
+      "minimum": 1,
+      "title": "Artifact Count",
+      "type": "integer"
+    },
+    "artifacts": {
+      "items": {
+        "$ref": "#/$defs/ProductArtifactEntry"
+      },
+      "minItems": 1,
+      "title": "Artifacts",
+      "type": "array"
+    },
+    "catalog_fingerprint": {
+      "pattern": "^sha256:[0-9a-f]{64}$",
+      "title": "Catalog Fingerprint",
+      "type": "string"
+    },
+    "claim_boundary": {
+      "items": {
+        "type": "string"
+      },
+      "minItems": 1,
+      "title": "Claim Boundary",
+      "type": "array"
+    },
+    "schema_version": {
+      "default": "1.0.0",
+      "title": "Schema Version",
+      "type": "string"
+    },
+    "software_version": {
+      "minLength": 1,
+      "title": "Software Version",
+      "type": "string"
+    }
+  },
+  "required": [
+    "software_version",
+    "catalog_fingerprint",
+    "artifact_count",
+    "artifacts",
+    "claim_boundary"
+  ],
+  "title": "ProductArtifactManifest",
+  "type": "object"
+}

@@ -1,0 +1,5184 @@
+{
+  "claim_boundary": "Tier labels describe evidence readiness, not deployment or impact.",
+  "items": [
+    {
+      "city_id": "geonames.2293538",
+      "completed_scenarios": 2,
+      "country_code": "CI",
+      "latitude": 5.35444,
+      "limitations": [
+        "Tier-S outputs are descriptive screens and cannot issue recommendations.",
+        "Country indicators remain national context and climate remains one grid point."
+      ],
+      "longitude": -4.00167,
+      "name": "Abidjan",
+      "negative_scenarios": 1,
+      "quality_status": "pass",
+      "readiness": "standardized-descriptive-screening",
+      "scenario_count": 3,
+      "source_artifact_count": 5,
+      "source_population": 6321017,
+      "tier": "S",
+      "timezone": "Africa/Abidjan"
+    },
+    {
+      "city_id": "geonames.4030723",
+      "completed_scenarios": 0,
+      "country_code": "PN",
+      "latitude": -25.06597,
+      "limitations": [
+        "This is a gazetteer point, not an official municipal boundary.",
+        "Source population values may use different years and definitions.",
+        "Tier G denotes catalog discoverability, not deep analytical readiness."
+      ],
+      "longitude": -130.10147,
+      "name": "Adamstown",
+      "negative_scenarios": 0,
+      "readiness": "catalog-discovery-only",
+      "scenario_count": 0,
+      "source_artifact_count": 1,
+      "source_population": 46,
+      "tier": "G",
+      "timezone": "Pacific/Pitcairn"
+    },
+    {
+      "city_id": "geonames.344979",
+      "completed_scenarios": 0,
+      "country_code": "ET",
+      "latitude": 9.02497,
+      "limitations": [
+        "This is a gazetteer point, not an official municipal boundary.",
+        "Source population values may use different years and definitions.",
+        "Tier G denotes catalog discoverability, not deep analytical readiness."
+      ],
+      "longitude": 38.74689,
+      "name": "Addis Ababa",
+      "negative_scenarios": 0,
+      "readiness": "catalog-discovery-only",
+      "scenario_count": 0,
+      "source_artifact_count": 1,
+      "source_population": 3860000,
+      "tier": "G",
+      "timezone": "Africa/Addis_Ababa"
+    },
+    {
+      "city_id": "geonames.285839",
+      "completed_scenarios": 0,
+      "country_code": "KW",
+      "latitude": 29.07694,
+      "limitations": [
+        "This is a gazetteer point, not an official municipal boundary.",
+        "Source population values may use different years and definitions.",
+        "Tier G denotes catalog discoverability, not deep analytical readiness."
+      ],
+      "longitude": 48.08389,
+      "name": "Al Aḩmadī",
+      "negative_scenarios": 0,
+      "readiness": "catalog-discovery-only",
+      "scenario_count": 0,
+      "source_artifact_count": 1,
+      "source_population": 637411,
+      "tier": "G",
+      "timezone": "Asia/Kuwait"
+    },
+    {
+      "city_id": "geonames.290332",
+      "completed_scenarios": 0,
+      "country_code": "BH",
+      "latitude": 26.25722,
+      "limitations": [
+        "This is a gazetteer point, not an official municipal boundary.",
+        "Source population values may use different years and definitions.",
+        "Tier G denotes catalog discoverability, not deep analytical readiness."
+      ],
+      "longitude": 50.61194,
+      "name": "Al Muharraq",
+      "negative_scenarios": 0,
+      "readiness": "catalog-discovery-only",
+      "scenario_count": 0,
+      "source_artifact_count": 1,
+      "source_population": 176583,
+      "tier": "G",
+      "timezone": "Asia/Bahrain"
+    },
+    {
+      "city_id": "geonames.170063",
+      "completed_scenarios": 0,
+      "country_code": "SY",
+      "latitude": 36.20124,
+      "limitations": [
+        "This is a gazetteer point, not an official municipal boundary.",
+        "Source population values may use different years and definitions.",
+        "Tier G denotes catalog discoverability, not deep analytical readiness."
+      ],
+      "longitude": 37.16117,
+      "name": "Aleppo",
+      "negative_scenarios": 0,
+      "readiness": "catalog-discovery-only",
+      "scenario_count": 0,
+      "source_artifact_count": 1,
+      "source_population": 2098210,
+      "tier": "G",
+      "timezone": "Asia/Damascus"
+    },
+    {
+      "city_id": "geonames.2507480",
+      "completed_scenarios": 0,
+      "country_code": "DZ",
+      "latitude": 36.73225,
+      "limitations": [
+        "This is a gazetteer point, not an official municipal boundary.",
+        "Source population values may use different years and definitions.",
+        "Tier G denotes catalog discoverability, not deep analytical readiness."
+      ],
+      "longitude": 3.08746,
+      "name": "Algiers",
+      "negative_scenarios": 0,
+      "readiness": "catalog-discovery-only",
+      "scenario_count": 0,
+      "source_artifact_count": 1,
+      "source_population": 2364230,
+      "tier": "G",
+      "timezone": "Africa/Algiers"
+    },
+    {
+      "city_id": "geonames.1526384",
+      "completed_scenarios": 0,
+      "country_code": "KZ",
+      "latitude": 43.25249,
+      "limitations": [
+        "This is a gazetteer point, not an official municipal boundary.",
+        "Source population values may use different years and definitions.",
+        "Tier G denotes catalog discoverability, not deep analytical readiness."
+      ],
+      "longitude": 76.9115,
+      "name": "Almaty",
+      "negative_scenarios": 0,
+      "readiness": "catalog-discovery-only",
+      "scenario_count": 0,
+      "source_artifact_count": 1,
+      "source_population": 1977011,
+      "tier": "G",
+      "timezone": "Asia/Almaty"
+    },
+    {
+      "city_id": "geonames.4036284",
+      "completed_scenarios": 0,
+      "country_code": "NU",
+      "latitude": -19.05294,
+      "limitations": [
+        "This is a gazetteer point, not an official municipal boundary.",
+        "Source population values may use different years and definitions.",
+        "Tier G denotes catalog discoverability, not deep analytical readiness."
+      ],
+      "longitude": -169.91957,
+      "name": "Alofi",
+      "negative_scenarios": 0,
+      "readiness": "catalog-discovery-only",
+      "scenario_count": 0,
+      "source_artifact_count": 1,
+      "source_population": 624,
+      "tier": "G",
+      "timezone": "Pacific/Niue"
+    },
+    {
+      "city_id": "geonames.250441",
+      "completed_scenarios": 0,
+      "country_code": "JO",
+      "latitude": 31.95522,
+      "limitations": [
+        "This is a gazetteer point, not an official municipal boundary.",
+        "Source population values may use different years and definitions.",
+        "Tier G denotes catalog discoverability, not deep analytical readiness."
+      ],
+      "longitude": 35.94503,
+      "name": "Amman",
+      "negative_scenarios": 0,
+      "readiness": "catalog-discovery-only",
+      "scenario_count": 0,
+      "source_artifact_count": 1,
+      "source_population": 1275857,
+      "tier": "G",
+      "timezone": "Asia/Amman"
+    },
+    {
+      "city_id": "geonames.3041563",
+      "completed_scenarios": 0,
+      "country_code": "AD",
+      "latitude": 42.50779,
+      "limitations": [
+        "This is a gazetteer point, not an official municipal boundary.",
+        "Source population values may use different years and definitions.",
+        "Tier G denotes catalog discoverability, not deep analytical readiness."
+      ],
+      "longitude": 1.52109,
+      "name": "Andorra la Vella",
+      "negative_scenarios": 0,
+      "readiness": "catalog-discovery-only",
+      "scenario_count": 0,
+      "source_artifact_count": 1,
+      "source_population": 20430,
+      "tier": "G",
+      "timezone": "Europe/Andorra"
+    },
+    {
+      "city_id": "geonames.1070940",
+      "completed_scenarios": 0,
+      "country_code": "MG",
+      "latitude": -18.91368,
+      "limitations": [
+        "This is a gazetteer point, not an official municipal boundary.",
+        "Source population values may use different years and definitions.",
+        "Tier G denotes catalog discoverability, not deep analytical readiness."
+      ],
+      "longitude": 47.53613,
+      "name": "Antananarivo",
+      "negative_scenarios": 0,
+      "readiness": "catalog-discovery-only",
+      "scenario_count": 0,
+      "source_artifact_count": 1,
+      "source_population": 1349501,
+      "tier": "G",
+      "timezone": "Indian/Antananarivo"
+    },
+    {
+      "city_id": "geonames.4035413",
+      "completed_scenarios": 0,
+      "country_code": "WS",
+      "latitude": -13.83333,
+      "limitations": [
+        "This is a gazetteer point, not an official municipal boundary.",
+        "Source population values may use different years and definitions.",
+        "Tier G denotes catalog discoverability, not deep analytical readiness."
+      ],
+      "longitude": -171.76666,
+      "name": "Apia",
+      "negative_scenarios": 0,
+      "readiness": "catalog-discovery-only",
+      "scenario_count": 0,
+      "source_artifact_count": 1,
+      "source_population": 40407,
+      "tier": "G",
+      "timezone": "Pacific/Apia"
+    },
+    {
+      "city_id": "geonames.162183",
+      "completed_scenarios": 0,
+      "country_code": "TM",
+      "latitude": 37.95,
+      "limitations": [
+        "This is a gazetteer point, not an official municipal boundary.",
+        "Source population values may use different years and definitions.",
+        "Tier G denotes catalog discoverability, not deep analytical readiness."
+      ],
+      "longitude": 58.38333,
+      "name": "Ashgabat",
+      "negative_scenarios": 0,
+      "readiness": "catalog-discovery-only",
+      "scenario_count": 0,
+      "source_artifact_count": 1,
+      "source_population": 1030063,
+      "tier": "G",
+      "timezone": "Asia/Ashgabat"
+    },
+    {
+      "city_id": "geonames.343300",
+      "completed_scenarios": 0,
+      "country_code": "ER",
+      "latitude": 15.33805,
+      "limitations": [
+        "This is a gazetteer point, not an official municipal boundary.",
+        "Source population values may use different years and definitions.",
+        "Tier G denotes catalog discoverability, not deep analytical readiness."
+      ],
+      "longitude": 38.93184,
+      "name": "Asmara",
+      "negative_scenarios": 0,
+      "readiness": "catalog-discovery-only",
+      "scenario_count": 0,
+      "source_artifact_count": 1,
+      "source_population": 563930,
+      "tier": "G",
+      "timezone": "Africa/Asmara"
+    },
+    {
+      "city_id": "geonames.3439389",
+      "completed_scenarios": 0,
+      "country_code": "PY",
+      "latitude": -25.28646,
+      "limitations": [
+        "This is a gazetteer point, not an official municipal boundary.",
+        "Source population values may use different years and definitions.",
+        "Tier G denotes catalog discoverability, not deep analytical readiness."
+      ],
+      "longitude": -57.647,
+      "name": "Asunción",
+      "negative_scenarios": 0,
+      "readiness": "catalog-discovery-only",
+      "scenario_count": 0,
+      "source_artifact_count": 1,
+      "source_population": 1482200,
+      "tier": "G",
+      "timezone": "America/Asuncion"
+    },
+    {
+      "city_id": "geonames.264371",
+      "completed_scenarios": 0,
+      "country_code": "GR",
+      "latitude": 37.98376,
+      "limitations": [
+        "This is a gazetteer point, not an official municipal boundary.",
+        "Source population values may use different years and definitions.",
+        "Tier G denotes catalog discoverability, not deep analytical readiness."
+      ],
+      "longitude": 23.72784,
+      "name": "Athens",
+      "negative_scenarios": 0,
+      "readiness": "catalog-discovery-only",
+      "scenario_count": 0,
+      "source_artifact_count": 1,
+      "source_population": 664046,
+      "tier": "G",
+      "timezone": "Europe/Athens"
+    },
+    {
+      "city_id": "geonames.2193733",
+      "completed_scenarios": 0,
+      "country_code": "NZ",
+      "latitude": -36.84853,
+      "limitations": [
+        "This is a gazetteer point, not an official municipal boundary.",
+        "Source population values may use different years and definitions.",
+        "Tier G denotes catalog discoverability, not deep analytical readiness."
+      ],
+      "longitude": 174.76349,
+      "name": "Auckland",
+      "negative_scenarios": 0,
+      "readiness": "catalog-discovery-only",
+      "scenario_count": 0,
+      "source_artifact_count": 1,
+      "source_population": 1547200,
+      "tier": "G",
+      "timezone": "Pacific/Auckland"
+    },
+    {
+      "city_id": "us.tx.austin",
+      "completed_scenarios": 10,
+      "country_code": "US",
+      "latitude": 30.3078,
+      "limitations": [
+        "ZIP codes are postal units and do not align exactly with city boundaries or need.",
+        "Mass-entry requests can be entered after field work and distort creation-time demand.",
+        "Twelve city-bound packs are executions of twelve shared method designs; city bindings are not counted as new non-duplicative designs.",
+        "Planning-support output does not authorize implementation or establish impact."
+      ],
+      "longitude": -97.74995,
+      "name": "Austin",
+      "negative_scenarios": 2,
+      "quality_status": "warn",
+      "readiness": "evidence-gated-planning-support",
+      "scenario_count": 12,
+      "source_artifact_count": 7,
+      "source_population": 979539,
+      "tier": "D",
+      "timezone": "America/Chicago"
+    },
+    {
+      "city_id": "geonames.4035715",
+      "completed_scenarios": 0,
+      "country_code": "CK",
+      "latitude": -21.2075,
+      "limitations": [
+        "This is a gazetteer point, not an official municipal boundary.",
+        "Source population values may use different years and definitions.",
+        "Tier G denotes catalog discoverability, not deep analytical readiness."
+      ],
+      "longitude": -159.77546,
+      "name": "Avarua",
+      "negative_scenarios": 0,
+      "readiness": "catalog-discovery-only",
+      "scenario_count": 0,
+      "source_artifact_count": 1,
+      "source_population": 13373,
+      "tier": "G",
+      "timezone": "Pacific/Rarotonga"
+    },
+    {
+      "city_id": "geonames.98182",
+      "completed_scenarios": 2,
+      "country_code": "IQ",
+      "latitude": 33.34058,
+      "limitations": [
+        "Tier-S outputs are descriptive screens and cannot issue recommendations.",
+        "Country indicators remain national context and climate remains one grid point."
+      ],
+      "longitude": 44.40088,
+      "name": "Baghdad",
+      "negative_scenarios": 1,
+      "quality_status": "pass",
+      "readiness": "standardized-descriptive-screening",
+      "scenario_count": 3,
+      "source_artifact_count": 5,
+      "source_population": 7216000,
+      "tier": "S",
+      "timezone": "Asia/Baghdad"
+    },
+    {
+      "city_id": "geonames.587084",
+      "completed_scenarios": 0,
+      "country_code": "AZ",
+      "latitude": 40.37767,
+      "limitations": [
+        "This is a gazetteer point, not an official municipal boundary.",
+        "Source population values may use different years and definitions.",
+        "Tier G denotes catalog discoverability, not deep analytical readiness."
+      ],
+      "longitude": 49.89201,
+      "name": "Baku",
+      "negative_scenarios": 0,
+      "readiness": "catalog-discovery-only",
+      "scenario_count": 0,
+      "source_artifact_count": 1,
+      "source_population": 2351300,
+      "tier": "G",
+      "timezone": "Asia/Baku"
+    },
+    {
+      "city_id": "geonames.2460596",
+      "completed_scenarios": 0,
+      "country_code": "ML",
+      "latitude": 12.60915,
+      "limitations": [
+        "This is a gazetteer point, not an official municipal boundary.",
+        "Source population values may use different years and definitions.",
+        "Tier G denotes catalog discoverability, not deep analytical readiness."
+      ],
+      "longitude": -7.97522,
+      "name": "Bamako",
+      "negative_scenarios": 0,
+      "readiness": "catalog-discovery-only",
+      "scenario_count": 0,
+      "source_artifact_count": 1,
+      "source_population": 4227569,
+      "tier": "G",
+      "timezone": "Africa/Bamako"
+    },
+    {
+      "city_id": "geonames.1820906",
+      "completed_scenarios": 0,
+      "country_code": "BN",
+      "latitude": 4.89035,
+      "limitations": [
+        "This is a gazetteer point, not an official municipal boundary.",
+        "Source population values may use different years and definitions.",
+        "Tier G denotes catalog discoverability, not deep analytical readiness."
+      ],
+      "longitude": 114.94006,
+      "name": "Bandar Seri Begawan",
+      "negative_scenarios": 0,
+      "readiness": "catalog-discovery-only",
+      "scenario_count": 0,
+      "source_artifact_count": 1,
+      "source_population": 64409,
+      "tier": "G",
+      "timezone": "Asia/Brunei"
+    },
+    {
+      "city_id": "geonames.1609350",
+      "completed_scenarios": 2,
+      "country_code": "TH",
+      "latitude": 13.75398,
+      "limitations": [
+        "Tier-S outputs are descriptive screens and cannot issue recommendations.",
+        "Country indicators remain national context and climate remains one grid point."
+      ],
+      "longitude": 100.50144,
+      "name": "Bangkok",
+      "negative_scenarios": 1,
+      "quality_status": "pass",
+      "readiness": "standardized-descriptive-screening",
+      "scenario_count": 3,
+      "source_artifact_count": 5,
+      "source_population": 5104476,
+      "tier": "S",
+      "timezone": "Asia/Bangkok"
+    },
+    {
+      "city_id": "geonames.2389853",
+      "completed_scenarios": 0,
+      "country_code": "CF",
+      "latitude": 4.36122,
+      "limitations": [
+        "This is a gazetteer point, not an official municipal boundary.",
+        "Source population values may use different years and definitions.",
+        "Tier G denotes catalog discoverability, not deep analytical readiness."
+      ],
+      "longitude": 18.55496,
+      "name": "Bangui",
+      "negative_scenarios": 0,
+      "readiness": "catalog-discovery-only",
+      "scenario_count": 0,
+      "source_artifact_count": 1,
+      "source_population": 812407,
+      "tier": "G",
+      "timezone": "Africa/Bangui"
+    },
+    {
+      "city_id": "geonames.3575551",
+      "completed_scenarios": 0,
+      "country_code": "KN",
+      "latitude": 17.2955,
+      "limitations": [
+        "This is a gazetteer point, not an official municipal boundary.",
+        "Source population values may use different years and definitions.",
+        "Tier G denotes catalog discoverability, not deep analytical readiness."
+      ],
+      "longitude": -62.72499,
+      "name": "Basseterre",
+      "negative_scenarios": 0,
+      "readiness": "catalog-discovery-only",
+      "scenario_count": 0,
+      "source_artifact_count": 1,
+      "source_population": 12920,
+      "tier": "G",
+      "timezone": "America/St_Kitts"
+    },
+    {
+      "city_id": "geonames.2310046",
+      "completed_scenarios": 0,
+      "country_code": "GQ",
+      "latitude": 1.86391,
+      "limitations": [
+        "This is a gazetteer point, not an official municipal boundary.",
+        "Source population values may use different years and definitions.",
+        "Tier G denotes catalog discoverability, not deep analytical readiness."
+      ],
+      "longitude": 9.76582,
+      "name": "Bata",
+      "negative_scenarios": 0,
+      "readiness": "catalog-discovery-only",
+      "scenario_count": 0,
+      "source_artifact_count": 1,
+      "source_population": 173046,
+      "tier": "G",
+      "timezone": "Africa/Malabo"
+    },
+    {
+      "city_id": "geonames.1816670",
+      "completed_scenarios": 0,
+      "country_code": "CN",
+      "latitude": 39.9075,
+      "limitations": [
+        "This is a gazetteer point, not an official municipal boundary.",
+        "Source population values may use different years and definitions.",
+        "Tier G denotes catalog discoverability, not deep analytical readiness."
+      ],
+      "longitude": 116.39723,
+      "name": "Beijing",
+      "negative_scenarios": 0,
+      "readiness": "catalog-discovery-only",
+      "scenario_count": 0,
+      "source_artifact_count": 1,
+      "source_population": 18960744,
+      "tier": "G",
+      "timezone": "Asia/Shanghai"
+    },
+    {
+      "city_id": "geonames.276781",
+      "completed_scenarios": 0,
+      "country_code": "LB",
+      "latitude": 33.89332,
+      "limitations": [
+        "This is a gazetteer point, not an official municipal boundary.",
+        "Source population values may use different years and definitions.",
+        "Tier G denotes catalog discoverability, not deep analytical readiness."
+      ],
+      "longitude": 35.50157,
+      "name": "Beirut",
+      "negative_scenarios": 0,
+      "readiness": "catalog-discovery-only",
+      "scenario_count": 0,
+      "source_artifact_count": 1,
+      "source_population": 1916100,
+      "tier": "G",
+      "timezone": "Asia/Beirut"
+    },
+    {
+      "city_id": "geonames.792680",
+      "completed_scenarios": 0,
+      "country_code": "RS",
+      "latitude": 44.80401,
+      "limitations": [
+        "This is a gazetteer point, not an official municipal boundary.",
+        "Source population values may use different years and definitions.",
+        "Tier G denotes catalog discoverability, not deep analytical readiness."
+      ],
+      "longitude": 20.46513,
+      "name": "Belgrade",
+      "negative_scenarios": 0,
+      "readiness": "catalog-discovery-only",
+      "scenario_count": 0,
+      "source_artifact_count": 1,
+      "source_population": 1273651,
+      "tier": "G",
+      "timezone": "Europe/Belgrade"
+    },
+    {
+      "city_id": "geonames.3582677",
+      "completed_scenarios": 0,
+      "country_code": "BZ",
+      "latitude": 17.49952,
+      "limitations": [
+        "This is a gazetteer point, not an official municipal boundary.",
+        "Source population values may use different years and definitions.",
+        "Tier G denotes catalog discoverability, not deep analytical readiness."
+      ],
+      "longitude": -88.19756,
+      "name": "Belize City",
+      "negative_scenarios": 0,
+      "readiness": "catalog-discovery-only",
+      "scenario_count": 0,
+      "source_artifact_count": 1,
+      "source_population": 65222,
+      "tier": "G",
+      "timezone": "America/Belize"
+    },
+    {
+      "city_id": "geonames.2950159",
+      "completed_scenarios": 0,
+      "country_code": "DE",
+      "latitude": 52.52437,
+      "limitations": [
+        "This is a gazetteer point, not an official municipal boundary.",
+        "Source population values may use different years and definitions.",
+        "Tier G denotes catalog discoverability, not deep analytical readiness."
+      ],
+      "longitude": 13.41053,
+      "name": "Berlin",
+      "negative_scenarios": 0,
+      "readiness": "catalog-discovery-only",
+      "scenario_count": 0,
+      "source_artifact_count": 1,
+      "source_population": 3426354,
+      "tier": "G",
+      "timezone": "Europe/Berlin"
+    },
+    {
+      "city_id": "geonames.1528675",
+      "completed_scenarios": 0,
+      "country_code": "KG",
+      "latitude": 42.87,
+      "limitations": [
+        "This is a gazetteer point, not an official municipal boundary.",
+        "Source population values may use different years and definitions.",
+        "Tier G denotes catalog discoverability, not deep analytical readiness."
+      ],
+      "longitude": 74.59,
+      "name": "Bishkek",
+      "negative_scenarios": 0,
+      "readiness": "catalog-discovery-only",
+      "scenario_count": 0,
+      "source_artifact_count": 1,
+      "source_population": 900000,
+      "tier": "G",
+      "timezone": "Asia/Bishkek"
+    },
+    {
+      "city_id": "geonames.2374775",
+      "completed_scenarios": 0,
+      "country_code": "GW",
+      "latitude": 11.86357,
+      "limitations": [
+        "This is a gazetteer point, not an official municipal boundary.",
+        "Source population values may use different years and definitions.",
+        "Tier G denotes catalog discoverability, not deep analytical readiness."
+      ],
+      "longitude": -15.59767,
+      "name": "Bissau",
+      "negative_scenarios": 0,
+      "readiness": "catalog-discovery-only",
+      "scenario_count": 0,
+      "source_artifact_count": 1,
+      "source_population": 439704,
+      "tier": "G",
+      "timezone": "Africa/Bissau"
+    },
+    {
+      "city_id": "geonames.3688689",
+      "completed_scenarios": 2,
+      "country_code": "CO",
+      "latitude": 4.60971,
+      "limitations": [
+        "Tier-S outputs are descriptive screens and cannot issue recommendations.",
+        "Country indicators remain national context and climate remains one grid point."
+      ],
+      "longitude": -74.08175,
+      "name": "Bogotá",
+      "negative_scenarios": 1,
+      "quality_status": "pass",
+      "readiness": "standardized-descriptive-screening",
+      "scenario_count": 3,
+      "source_artifact_count": 5,
+      "source_population": 7674366,
+      "tier": "S",
+      "timezone": "America/Bogota"
+    },
+    {
+      "city_id": "us.ma.boston",
+      "completed_scenarios": 10,
+      "country_code": "US",
+      "latitude": 42.31435,
+      "limitations": [
+        "Neighborhood labels are operational attributes, not guaranteed official boundaries.",
+        "The legacy and new BOS:311 systems require an explicit future crosswalk.",
+        "Twelve city-bound packs are executions of twelve shared method designs; city bindings are not counted as new non-duplicative designs.",
+        "Planning-support output does not authorize implementation or establish impact."
+      ],
+      "longitude": -71.0566,
+      "name": "Boston",
+      "negative_scenarios": 2,
+      "quality_status": "warn",
+      "readiness": "evidence-gated-planning-support",
+      "scenario_count": 12,
+      "source_artifact_count": 7,
+      "source_population": 666442,
+      "tier": "D",
+      "timezone": "America/New_York"
+    },
+    {
+      "city_id": "geonames.7266440",
+      "completed_scenarios": 0,
+      "country_code": "MS",
+      "latitude": 16.79183,
+      "limitations": [
+        "This is a gazetteer point, not an official municipal boundary.",
+        "Source population values may use different years and definitions.",
+        "Tier G denotes catalog discoverability, not deep analytical readiness."
+      ],
+      "longitude": -62.21058,
+      "name": "Brades",
+      "negative_scenarios": 0,
+      "readiness": "catalog-discovery-only",
+      "scenario_count": 0,
+      "source_artifact_count": 1,
+      "source_population": 1000,
+      "tier": "G",
+      "timezone": "America/Montserrat"
+    },
+    {
+      "city_id": "geonames.3060972",
+      "completed_scenarios": 0,
+      "country_code": "SK",
+      "latitude": 48.14816,
+      "limitations": [
+        "This is a gazetteer point, not an official municipal boundary.",
+        "Source population values may use different years and definitions.",
+        "Tier G denotes catalog discoverability, not deep analytical readiness."
+      ],
+      "longitude": 17.10674,
+      "name": "Bratislava",
+      "negative_scenarios": 0,
+      "readiness": "catalog-discovery-only",
+      "scenario_count": 0,
+      "source_artifact_count": 1,
+      "source_population": 423737,
+      "tier": "G",
+      "timezone": "Europe/Bratislava"
+    },
+    {
+      "city_id": "geonames.2260535",
+      "completed_scenarios": 0,
+      "country_code": "CG",
+      "latitude": -4.26613,
+      "limitations": [
+        "This is a gazetteer point, not an official municipal boundary.",
+        "Source population values may use different years and definitions.",
+        "Tier G denotes catalog discoverability, not deep analytical readiness."
+      ],
+      "longitude": 15.28318,
+      "name": "Brazzaville",
+      "negative_scenarios": 0,
+      "readiness": "catalog-discovery-only",
+      "scenario_count": 0,
+      "source_artifact_count": 1,
+      "source_population": 1982000,
+      "tier": "G",
+      "timezone": "Africa/Brazzaville"
+    },
+    {
+      "city_id": "geonames.3374036",
+      "completed_scenarios": 0,
+      "country_code": "BB",
+      "latitude": 13.10732,
+      "limitations": [
+        "This is a gazetteer point, not an official municipal boundary.",
+        "Source population values may use different years and definitions.",
+        "Tier G denotes catalog discoverability, not deep analytical readiness."
+      ],
+      "longitude": -59.62021,
+      "name": "Bridgetown",
+      "negative_scenarios": 0,
+      "readiness": "catalog-discovery-only",
+      "scenario_count": 0,
+      "source_artifact_count": 1,
+      "source_population": 98511,
+      "tier": "G",
+      "timezone": "America/Barbados"
+    },
+    {
+      "city_id": "geonames.2800866",
+      "completed_scenarios": 0,
+      "country_code": "BE",
+      "latitude": 50.85045,
+      "limitations": [
+        "This is a gazetteer point, not an official municipal boundary.",
+        "Source population values may use different years and definitions.",
+        "Tier G denotes catalog discoverability, not deep analytical readiness."
+      ],
+      "longitude": 4.34878,
+      "name": "Brussels",
+      "negative_scenarios": 0,
+      "readiness": "catalog-discovery-only",
+      "scenario_count": 0,
+      "source_artifact_count": 1,
+      "source_population": 1019022,
+      "tier": "G",
+      "timezone": "Europe/Brussels"
+    },
+    {
+      "city_id": "geonames.683506",
+      "completed_scenarios": 0,
+      "country_code": "RO",
+      "latitude": 44.43225,
+      "limitations": [
+        "This is a gazetteer point, not an official municipal boundary.",
+        "Source population values may use different years and definitions.",
+        "Tier G denotes catalog discoverability, not deep analytical readiness."
+      ],
+      "longitude": 26.10626,
+      "name": "Bucharest",
+      "negative_scenarios": 0,
+      "readiness": "catalog-discovery-only",
+      "scenario_count": 0,
+      "source_artifact_count": 1,
+      "source_population": 1877155,
+      "tier": "G",
+      "timezone": "Europe/Bucharest"
+    },
+    {
+      "city_id": "geonames.3054643",
+      "completed_scenarios": 0,
+      "country_code": "HU",
+      "latitude": 47.49835,
+      "limitations": [
+        "This is a gazetteer point, not an official municipal boundary.",
+        "Source population values may use different years and definitions.",
+        "Tier G denotes catalog discoverability, not deep analytical readiness."
+      ],
+      "longitude": 19.04045,
+      "name": "Budapest",
+      "negative_scenarios": 0,
+      "readiness": "catalog-discovery-only",
+      "scenario_count": 0,
+      "source_artifact_count": 1,
+      "source_population": 1741041,
+      "tier": "G",
+      "timezone": "Europe/Budapest"
+    },
+    {
+      "city_id": "geonames.3435910",
+      "completed_scenarios": 0,
+      "country_code": "AR",
+      "latitude": -34.61315,
+      "limitations": [
+        "This is a gazetteer point, not an official municipal boundary.",
+        "Source population values may use different years and definitions.",
+        "Tier G denotes catalog discoverability, not deep analytical readiness."
+      ],
+      "longitude": -58.37723,
+      "name": "Buenos Aires",
+      "negative_scenarios": 0,
+      "readiness": "catalog-discovery-only",
+      "scenario_count": 0,
+      "source_artifact_count": 1,
+      "source_population": 2891082,
+      "tier": "G",
+      "timezone": "America/Argentina/Buenos_Aires"
+    },
+    {
+      "city_id": "geonames.425378",
+      "completed_scenarios": 0,
+      "country_code": "BI",
+      "latitude": -3.38193,
+      "limitations": [
+        "This is a gazetteer point, not an official municipal boundary.",
+        "Source population values may use different years and definitions.",
+        "Tier G denotes catalog discoverability, not deep analytical readiness."
+      ],
+      "longitude": 29.36142,
+      "name": "Bujumbura",
+      "negative_scenarios": 0,
+      "readiness": "catalog-discovery-only",
+      "scenario_count": 0,
+      "source_artifact_count": 1,
+      "source_population": 769317,
+      "tier": "G",
+      "timezone": "Africa/Bujumbura"
+    },
+    {
+      "city_id": "geonames.360630",
+      "completed_scenarios": 2,
+      "country_code": "EG",
+      "latitude": 30.06263,
+      "limitations": [
+        "Tier-S outputs are descriptive screens and cannot issue recommendations.",
+        "Country indicators remain national context and climate remains one grid point."
+      ],
+      "longitude": 31.24967,
+      "name": "Cairo",
+      "negative_scenarios": 1,
+      "quality_status": "pass",
+      "readiness": "standardized-descriptive-screening",
+      "scenario_count": 3,
+      "source_artifact_count": 5,
+      "source_population": 9606916,
+      "tier": "S",
+      "timezone": "Africa/Cairo"
+    },
+    {
+      "city_id": "geonames.3646738",
+      "completed_scenarios": 0,
+      "country_code": "VE",
+      "latitude": 10.48801,
+      "limitations": [
+        "This is a gazetteer point, not an official municipal boundary.",
+        "Source population values may use different years and definitions.",
+        "Tier G denotes catalog discoverability, not deep analytical readiness."
+      ],
+      "longitude": -66.87919,
+      "name": "Caracas",
+      "negative_scenarios": 0,
+      "readiness": "catalog-discovery-only",
+      "scenario_count": 0,
+      "source_artifact_count": 1,
+      "source_population": 3000000,
+      "tier": "G",
+      "timezone": "America/Caracas"
+    },
+    {
+      "city_id": "geonames.2553604",
+      "completed_scenarios": 0,
+      "country_code": "MA",
+      "latitude": 33.58831,
+      "limitations": [
+        "This is a gazetteer point, not an official municipal boundary.",
+        "Source population values may use different years and definitions.",
+        "Tier G denotes catalog discoverability, not deep analytical readiness."
+      ],
+      "longitude": -7.61138,
+      "name": "Casablanca",
+      "negative_scenarios": 0,
+      "readiness": "catalog-discovery-only",
+      "scenario_count": 0,
+      "source_artifact_count": 1,
+      "source_population": 3665954,
+      "tier": "G",
+      "timezone": "Africa/Casablanca"
+    },
+    {
+      "city_id": "geonames.3382160",
+      "completed_scenarios": 0,
+      "country_code": "GF",
+      "latitude": 4.9381,
+      "limitations": [
+        "This is a gazetteer point, not an official municipal boundary.",
+        "Source population values may use different years and definitions.",
+        "Tier G denotes catalog discoverability, not deep analytical readiness."
+      ],
+      "longitude": -52.33455,
+      "name": "Cayenne",
+      "negative_scenarios": 0,
+      "readiness": "catalog-discovery-only",
+      "scenario_count": 0,
+      "source_artifact_count": 1,
+      "source_population": 61550,
+      "tier": "G",
+      "timezone": "America/Cayenne"
+    },
+    {
+      "city_id": "geonames.3574810",
+      "completed_scenarios": 0,
+      "country_code": "TT",
+      "latitude": 10.51667,
+      "limitations": [
+        "This is a gazetteer point, not an official municipal boundary.",
+        "Source population values may use different years and definitions.",
+        "Tier G denotes catalog discoverability, not deep analytical readiness."
+      ],
+      "longitude": -61.41667,
+      "name": "Chaguanas",
+      "negative_scenarios": 0,
+      "readiness": "catalog-discovery-only",
+      "scenario_count": 0,
+      "source_artifact_count": 1,
+      "source_population": 67433,
+      "tier": "G",
+      "timezone": "America/Port_of_Spain"
+    },
+    {
+      "city_id": "geonames.1815286",
+      "completed_scenarios": 0,
+      "country_code": "CN",
+      "latitude": 30.66667,
+      "limitations": [
+        "This is a gazetteer point, not an official municipal boundary.",
+        "Source population values may use different years and definitions.",
+        "Tier G denotes catalog discoverability, not deep analytical readiness."
+      ],
+      "longitude": 104.06667,
+      "name": "Chengdu",
+      "negative_scenarios": 0,
+      "readiness": "catalog-discovery-only",
+      "scenario_count": 0,
+      "source_artifact_count": 1,
+      "source_population": 13568357,
+      "tier": "G",
+      "timezone": "Asia/Shanghai"
+    },
+    {
+      "city_id": "us.il.chicago",
+      "completed_scenarios": 10,
+      "country_code": "US",
+      "latitude": 41.83375,
+      "limitations": [
+        "Community-area codes require an external geometry crosswalk for mapping.",
+        "Completed request status does not verify that the underlying issue was resolved.",
+        "Twelve city-bound packs are executions of twelve shared method designs; city bindings are not counted as new non-duplicative designs.",
+        "Planning-support output does not authorize implementation or establish impact."
+      ],
+      "longitude": -87.7319,
+      "name": "Chicago",
+      "negative_scenarios": 2,
+      "quality_status": "warn",
+      "readiness": "evidence-gated-planning-support",
+      "scenario_count": 12,
+      "source_artifact_count": 7,
+      "source_population": 2711226,
+      "tier": "D",
+      "timezone": "America/Chicago"
+    },
+    {
+      "city_id": "geonames.618426",
+      "completed_scenarios": 0,
+      "country_code": "MD",
+      "latitude": 47.00902,
+      "limitations": [
+        "This is a gazetteer point, not an official municipal boundary.",
+        "Source population values may use different years and definitions.",
+        "Tier G denotes catalog discoverability, not deep analytical readiness."
+      ],
+      "longitude": 28.85938,
+      "name": "Chisinau",
+      "negative_scenarios": 0,
+      "readiness": "catalog-discovery-only",
+      "scenario_count": 0,
+      "source_artifact_count": 1,
+      "source_population": 635994,
+      "tier": "G",
+      "timezone": "Europe/Chisinau"
+    },
+    {
+      "city_id": "geonames.1248991",
+      "completed_scenarios": 0,
+      "country_code": "LK",
+      "latitude": 6.93548,
+      "limitations": [
+        "This is a gazetteer point, not an official municipal boundary.",
+        "Source population values may use different years and definitions.",
+        "Tier G denotes catalog discoverability, not deep analytical readiness."
+      ],
+      "longitude": 79.84868,
+      "name": "Colombo",
+      "negative_scenarios": 0,
+      "readiness": "catalog-discovery-only",
+      "scenario_count": 0,
+      "source_artifact_count": 1,
+      "source_population": 648034,
+      "tier": "G",
+      "timezone": "Asia/Colombo"
+    },
+    {
+      "city_id": "geonames.2422465",
+      "completed_scenarios": 0,
+      "country_code": "GN",
+      "latitude": 9.53795,
+      "limitations": [
+        "This is a gazetteer point, not an official municipal boundary.",
+        "Source population values may use different years and definitions.",
+        "Tier G denotes catalog discoverability, not deep analytical readiness."
+      ],
+      "longitude": -13.67729,
+      "name": "Conakry",
+      "negative_scenarios": 0,
+      "readiness": "catalog-discovery-only",
+      "scenario_count": 0,
+      "source_artifact_count": 1,
+      "source_population": 1928389,
+      "tier": "G",
+      "timezone": "Africa/Conakry"
+    },
+    {
+      "city_id": "geonames.2618425",
+      "completed_scenarios": 0,
+      "country_code": "DK",
+      "latitude": 55.67594,
+      "limitations": [
+        "This is a gazetteer point, not an official municipal boundary.",
+        "Source population values may use different years and definitions.",
+        "Tier G denotes catalog discoverability, not deep analytical readiness."
+      ],
+      "longitude": 12.56553,
+      "name": "Copenhagen",
+      "negative_scenarios": 0,
+      "readiness": "catalog-discovery-only",
+      "scenario_count": 0,
+      "source_artifact_count": 1,
+      "source_population": 1153615,
+      "tier": "G",
+      "timezone": "Europe/Copenhagen"
+    },
+    {
+      "city_id": "geonames.2394819",
+      "completed_scenarios": 0,
+      "country_code": "BJ",
+      "latitude": 6.36536,
+      "limitations": [
+        "This is a gazetteer point, not an official municipal boundary.",
+        "Source population values may use different years and definitions.",
+        "Tier G denotes catalog discoverability, not deep analytical readiness."
+      ],
+      "longitude": 2.41833,
+      "name": "Cotonou",
+      "negative_scenarios": 0,
+      "readiness": "catalog-discovery-only",
+      "scenario_count": 0,
+      "source_artifact_count": 1,
+      "source_population": 679012,
+      "tier": "G",
+      "timezone": "Africa/Porto-Novo"
+    },
+    {
+      "city_id": "geonames.2253354",
+      "completed_scenarios": 0,
+      "country_code": "SN",
+      "latitude": 14.6937,
+      "limitations": [
+        "This is a gazetteer point, not an official municipal boundary.",
+        "Source population values may use different years and definitions.",
+        "Tier G denotes catalog discoverability, not deep analytical readiness."
+      ],
+      "longitude": -17.44406,
+      "name": "Dakar",
+      "negative_scenarios": 0,
+      "readiness": "catalog-discovery-only",
+      "scenario_count": 0,
+      "source_artifact_count": 1,
+      "source_population": 2646503,
+      "tier": "G",
+      "timezone": "Africa/Dakar"
+    },
+    {
+      "city_id": "geonames.160263",
+      "completed_scenarios": 2,
+      "country_code": "TZ",
+      "latitude": -6.82349,
+      "limitations": [
+        "Tier-S outputs are descriptive screens and cannot issue recommendations.",
+        "Country indicators remain national context and climate remains one grid point."
+      ],
+      "longitude": 39.26951,
+      "name": "Dar es Salaam",
+      "negative_scenarios": 1,
+      "quality_status": "pass",
+      "readiness": "standardized-descriptive-screening",
+      "scenario_count": 3,
+      "source_artifact_count": 5,
+      "source_population": 5383728,
+      "tier": "S",
+      "timezone": "Africa/Dar_es_Salaam"
+    },
+    {
+      "city_id": "geonames.4043909",
+      "completed_scenarios": 0,
+      "country_code": "GU",
+      "latitude": 13.51777,
+      "limitations": [
+        "This is a gazetteer point, not an official municipal boundary.",
+        "Source population values may use different years and definitions.",
+        "Tier G denotes catalog discoverability, not deep analytical readiness."
+      ],
+      "longitude": 144.8391,
+      "name": "Dededo Village",
+      "negative_scenarios": 0,
+      "readiness": "catalog-discovery-only",
+      "scenario_count": 0,
+      "source_artifact_count": 1,
+      "source_population": 44943,
+      "tier": "G",
+      "timezone": "Pacific/Guam"
+    },
+    {
+      "city_id": "geonames.1185241",
+      "completed_scenarios": 2,
+      "country_code": "BD",
+      "latitude": 23.7104,
+      "limitations": [
+        "Tier-S outputs are descriptive screens and cannot issue recommendations.",
+        "Country indicators remain national context and climate remains one grid point."
+      ],
+      "longitude": 90.40744,
+      "name": "Dhaka",
+      "negative_scenarios": 1,
+      "quality_status": "pass",
+      "readiness": "standardized-descriptive-screening",
+      "scenario_count": 3,
+      "source_artifact_count": 5,
+      "source_population": 10356500,
+      "tier": "S",
+      "timezone": "Asia/Dhaka"
+    },
+    {
+      "city_id": "geonames.1645457",
+      "completed_scenarios": 0,
+      "country_code": "TL",
+      "latitude": -8.55861,
+      "limitations": [
+        "This is a gazetteer point, not an official municipal boundary.",
+        "Source population values may use different years and definitions.",
+        "Tier G denotes catalog discoverability, not deep analytical readiness."
+      ],
+      "longitude": 125.57361,
+      "name": "Dili",
+      "negative_scenarios": 0,
+      "readiness": "catalog-discovery-only",
+      "scenario_count": 0,
+      "source_artifact_count": 1,
+      "source_population": 150000,
+      "tier": "G",
+      "timezone": "Asia/Dili"
+    },
+    {
+      "city_id": "geonames.223817",
+      "completed_scenarios": 0,
+      "country_code": "DJ",
+      "latitude": 11.58901,
+      "limitations": [
+        "This is a gazetteer point, not an official municipal boundary.",
+        "Source population values may use different years and definitions.",
+        "Tier G denotes catalog discoverability, not deep analytical readiness."
+      ],
+      "longitude": 43.14503,
+      "name": "Djibouti",
+      "negative_scenarios": 0,
+      "readiness": "catalog-discovery-only",
+      "scenario_count": 0,
+      "source_artifact_count": 1,
+      "source_population": 626512,
+      "tier": "G",
+      "timezone": "Africa/Djibouti"
+    },
+    {
+      "city_id": "geonames.290030",
+      "completed_scenarios": 0,
+      "country_code": "QA",
+      "latitude": 25.28545,
+      "limitations": [
+        "This is a gazetteer point, not an official municipal boundary.",
+        "Source population values may use different years and definitions.",
+        "Tier G denotes catalog discoverability, not deep analytical readiness."
+      ],
+      "longitude": 51.53096,
+      "name": "Doha",
+      "negative_scenarios": 0,
+      "readiness": "catalog-discovery-only",
+      "scenario_count": 0,
+      "source_artifact_count": 1,
+      "source_population": 344939,
+      "tier": "G",
+      "timezone": "Asia/Qatar"
+    },
+    {
+      "city_id": "geonames.2232593",
+      "completed_scenarios": 0,
+      "country_code": "CM",
+      "latitude": 4.04827,
+      "limitations": [
+        "This is a gazetteer point, not an official municipal boundary.",
+        "Source population values may use different years and definitions.",
+        "Tier G denotes catalog discoverability, not deep analytical readiness."
+      ],
+      "longitude": 9.70428,
+      "name": "Douala",
+      "negative_scenarios": 0,
+      "readiness": "catalog-discovery-only",
+      "scenario_count": 0,
+      "source_artifact_count": 1,
+      "source_population": 1338082,
+      "tier": "G",
+      "timezone": "Africa/Douala"
+    },
+    {
+      "city_id": "geonames.3042237",
+      "completed_scenarios": 0,
+      "country_code": "IM",
+      "latitude": 54.15,
+      "limitations": [
+        "This is a gazetteer point, not an official municipal boundary.",
+        "Source population values may use different years and definitions.",
+        "Tier G denotes catalog discoverability, not deep analytical readiness."
+      ],
+      "longitude": -4.48333,
+      "name": "Douglas",
+      "negative_scenarios": 0,
+      "readiness": "catalog-discovery-only",
+      "scenario_count": 0,
+      "source_artifact_count": 1,
+      "source_population": 26218,
+      "tier": "G",
+      "timezone": "Europe/Isle_of_Man"
+    },
+    {
+      "city_id": "geonames.292223",
+      "completed_scenarios": 0,
+      "country_code": "AE",
+      "latitude": 25.07725,
+      "limitations": [
+        "This is a gazetteer point, not an official municipal boundary.",
+        "Source population values may use different years and definitions.",
+        "Tier G denotes catalog discoverability, not deep analytical readiness."
+      ],
+      "longitude": 55.30927,
+      "name": "Dubai",
+      "negative_scenarios": 0,
+      "readiness": "catalog-discovery-only",
+      "scenario_count": 0,
+      "source_artifact_count": 1,
+      "source_population": 3790000,
+      "tier": "G",
+      "timezone": "Asia/Dubai"
+    },
+    {
+      "city_id": "geonames.2964574",
+      "completed_scenarios": 0,
+      "country_code": "IE",
+      "latitude": 53.33306,
+      "limitations": [
+        "This is a gazetteer point, not an official municipal boundary.",
+        "Source population values may use different years and definitions.",
+        "Tier G denotes catalog discoverability, not deep analytical readiness."
+      ],
+      "longitude": -6.24889,
+      "name": "Dublin",
+      "negative_scenarios": 0,
+      "readiness": "catalog-discovery-only",
+      "scenario_count": 0,
+      "source_artifact_count": 1,
+      "source_population": 1024027,
+      "tier": "G",
+      "timezone": "Europe/Dublin"
+    },
+    {
+      "city_id": "geonames.1221874",
+      "completed_scenarios": 0,
+      "country_code": "TJ",
+      "latitude": 38.53575,
+      "limitations": [
+        "This is a gazetteer point, not an official municipal boundary.",
+        "Source population values may use different years and definitions.",
+        "Tier G denotes catalog discoverability, not deep analytical readiness."
+      ],
+      "longitude": 68.77905,
+      "name": "Dushanbe",
+      "negative_scenarios": 0,
+      "readiness": "catalog-discovery-only",
+      "scenario_count": 0,
+      "source_artifact_count": 1,
+      "source_population": 679400,
+      "tier": "G",
+      "timezone": "Asia/Dushanbe"
+    },
+    {
+      "city_id": "geonames.7303419",
+      "completed_scenarios": 0,
+      "country_code": "PS",
+      "latitude": 31.78336,
+      "limitations": [
+        "This is a gazetteer point, not an official municipal boundary.",
+        "Source population values may use different years and definitions.",
+        "Tier G denotes catalog discoverability, not deep analytical readiness."
+      ],
+      "longitude": 35.23388,
+      "name": "East Jerusalem",
+      "negative_scenarios": 0,
+      "readiness": "catalog-discovery-only",
+      "scenario_count": 0,
+      "source_artifact_count": 1,
+      "source_population": 428304,
+      "tier": "G",
+      "timezone": "Asia/Hebron"
+    },
+    {
+      "city_id": "geonames.4034561",
+      "completed_scenarios": 0,
+      "country_code": "PF",
+      "latitude": -17.55933,
+      "limitations": [
+        "This is a gazetteer point, not an official municipal boundary.",
+        "Source population values may use different years and definitions.",
+        "Tier G denotes catalog discoverability, not deep analytical readiness."
+      ],
+      "longitude": -149.60352,
+      "name": "Faaa",
+      "negative_scenarios": 0,
+      "readiness": "catalog-discovery-only",
+      "scenario_count": 0,
+      "source_artifact_count": 1,
+      "source_population": 29851,
+      "tier": "G",
+      "timezone": "Pacific/Tahiti"
+    },
+    {
+      "city_id": "geonames.2078127",
+      "completed_scenarios": 0,
+      "country_code": "CX",
+      "latitude": -10.42172,
+      "limitations": [
+        "This is a gazetteer point, not an official municipal boundary.",
+        "Source population values may use different years and definitions.",
+        "Tier G denotes catalog discoverability, not deep analytical readiness."
+      ],
+      "longitude": 105.67912,
+      "name": "Flying Fish Cove",
+      "negative_scenarios": 0,
+      "readiness": "catalog-discovery-only",
+      "scenario_count": 0,
+      "source_artifact_count": 1,
+      "source_population": 500,
+      "tier": "G",
+      "timezone": "Indian/Christmas"
+    },
+    {
+      "city_id": "geonames.3570675",
+      "completed_scenarios": 0,
+      "country_code": "MQ",
+      "latitude": 14.60365,
+      "limitations": [
+        "This is a gazetteer point, not an official municipal boundary.",
+        "Source population values may use different years and definitions.",
+        "Tier G denotes catalog discoverability, not deep analytical readiness."
+      ],
+      "longitude": -61.07418,
+      "name": "Fort-de-France",
+      "negative_scenarios": 0,
+      "readiness": "catalog-discovery-only",
+      "scenario_count": 0,
+      "source_artifact_count": 1,
+      "source_population": 89995,
+      "tier": "G",
+      "timezone": "America/Martinique"
+    },
+    {
+      "city_id": "geonames.2409306",
+      "completed_scenarios": 0,
+      "country_code": "SL",
+      "latitude": 8.48714,
+      "limitations": [
+        "This is a gazetteer point, not an official municipal boundary.",
+        "Source population values may use different years and definitions.",
+        "Tier G denotes catalog discoverability, not deep analytical readiness."
+      ],
+      "longitude": -13.2356,
+      "name": "Freetown",
+      "negative_scenarios": 0,
+      "readiness": "catalog-discovery-only",
+      "scenario_count": 0,
+      "source_artifact_count": 1,
+      "source_population": 802639,
+      "tier": "G",
+      "timezone": "Africa/Freetown"
+    },
+    {
+      "city_id": "geonames.2110394",
+      "completed_scenarios": 0,
+      "country_code": "TV",
+      "latitude": -8.52425,
+      "limitations": [
+        "This is a gazetteer point, not an official municipal boundary.",
+        "Source population values may use different years and definitions.",
+        "Tier G denotes catalog discoverability, not deep analytical readiness."
+      ],
+      "longitude": 179.19417,
+      "name": "Funafuti",
+      "negative_scenarios": 0,
+      "readiness": "catalog-discovery-only",
+      "scenario_count": 0,
+      "source_artifact_count": 1,
+      "source_population": 6320,
+      "tier": "G",
+      "timezone": "Pacific/Funafuti"
+    },
+    {
+      "city_id": "geonames.933773",
+      "completed_scenarios": 0,
+      "country_code": "BW",
+      "latitude": -24.65451,
+      "limitations": [
+        "This is a gazetteer point, not an official municipal boundary.",
+        "Source population values may use different years and definitions.",
+        "Tier G denotes catalog discoverability, not deep analytical readiness."
+      ],
+      "longitude": 25.90859,
+      "name": "Gaborone",
+      "negative_scenarios": 0,
+      "readiness": "catalog-discovery-only",
+      "scenario_count": 0,
+      "source_artifact_count": 1,
+      "source_population": 246325,
+      "tier": "G",
+      "timezone": "Africa/Gaborone"
+    },
+    {
+      "city_id": "geonames.3580661",
+      "completed_scenarios": 0,
+      "country_code": "KY",
+      "latitude": 19.2866,
+      "limitations": [
+        "This is a gazetteer point, not an official municipal boundary.",
+        "Source population values may use different years and definitions.",
+        "Tier G denotes catalog discoverability, not deep analytical readiness."
+      ],
+      "longitude": -81.37436,
+      "name": "George Town",
+      "negative_scenarios": 0,
+      "readiness": "catalog-discovery-only",
+      "scenario_count": 0,
+      "source_artifact_count": 1,
+      "source_population": 29370,
+      "tier": "G",
+      "timezone": "America/Cayman"
+    },
+    {
+      "city_id": "geonames.3378644",
+      "completed_scenarios": 0,
+      "country_code": "GY",
+      "latitude": 6.80448,
+      "limitations": [
+        "This is a gazetteer point, not an official municipal boundary.",
+        "Source population values may use different years and definitions.",
+        "Tier G denotes catalog discoverability, not deep analytical readiness."
+      ],
+      "longitude": -58.15527,
+      "name": "Georgetown",
+      "negative_scenarios": 0,
+      "readiness": "catalog-discovery-only",
+      "scenario_count": 0,
+      "source_artifact_count": 1,
+      "source_population": 235017,
+      "tier": "G",
+      "timezone": "America/Guyana"
+    },
+    {
+      "city_id": "geonames.2411585",
+      "completed_scenarios": 0,
+      "country_code": "GI",
+      "latitude": 36.14474,
+      "limitations": [
+        "This is a gazetteer point, not an official municipal boundary.",
+        "Source population values may use different years and definitions.",
+        "Tier G denotes catalog discoverability, not deep analytical readiness."
+      ],
+      "longitude": -5.35257,
+      "name": "Gibraltar",
+      "negative_scenarios": 0,
+      "readiness": "catalog-discovery-only",
+      "scenario_count": 0,
+      "source_artifact_count": 1,
+      "source_population": 26544,
+      "tier": "G",
+      "timezone": "Europe/Gibraltar"
+    },
+    {
+      "city_id": "geonames.3576686",
+      "completed_scenarios": 0,
+      "country_code": "LC",
+      "latitude": 14.06667,
+      "limitations": [
+        "This is a gazetteer point, not an official municipal boundary.",
+        "Source population values may use different years and definitions.",
+        "Tier G denotes catalog discoverability, not deep analytical readiness."
+      ],
+      "longitude": -60.95,
+      "name": "Gros Islet",
+      "negative_scenarios": 0,
+      "readiness": "catalog-discovery-only",
+      "scenario_count": 0,
+      "source_artifact_count": 1,
+      "source_population": 25210,
+      "tier": "G",
+      "timezone": "America/St_Lucia"
+    },
+    {
+      "city_id": "geonames.3426466",
+      "completed_scenarios": 0,
+      "country_code": "GS",
+      "latitude": -54.28111,
+      "limitations": [
+        "This is a gazetteer point, not an official municipal boundary.",
+        "Source population values may use different years and definitions.",
+        "Tier G denotes catalog discoverability, not deep analytical readiness."
+      ],
+      "longitude": -36.5092,
+      "name": "Grytviken",
+      "negative_scenarios": 0,
+      "readiness": "catalog-discovery-only",
+      "scenario_count": 0,
+      "source_artifact_count": 1,
+      "source_population": 2,
+      "tier": "G",
+      "timezone": "Atlantic/South_Georgia"
+    },
+    {
+      "city_id": "geonames.1809858",
+      "completed_scenarios": 0,
+      "country_code": "CN",
+      "latitude": 23.11667,
+      "limitations": [
+        "This is a gazetteer point, not an official municipal boundary.",
+        "Source population values may use different years and definitions.",
+        "Tier G denotes catalog discoverability, not deep analytical readiness."
+      ],
+      "longitude": 113.25,
+      "name": "Guangzhou",
+      "negative_scenarios": 0,
+      "readiness": "catalog-discovery-only",
+      "scenario_count": 0,
+      "source_artifact_count": 1,
+      "source_population": 16096724,
+      "tier": "G",
+      "timezone": "Asia/Shanghai"
+    },
+    {
+      "city_id": "geonames.3598132",
+      "completed_scenarios": 0,
+      "country_code": "GT",
+      "latitude": 14.64072,
+      "limitations": [
+        "This is a gazetteer point, not an official municipal boundary.",
+        "Source population values may use different years and definitions.",
+        "Tier G denotes catalog discoverability, not deep analytical readiness."
+      ],
+      "longitude": -90.51327,
+      "name": "Guatemala City",
+      "negative_scenarios": 0,
+      "readiness": "catalog-discovery-only",
+      "scenario_count": 0,
+      "source_artifact_count": 1,
+      "source_population": 994938,
+      "tier": "G",
+      "timezone": "America/Guatemala"
+    },
+    {
+      "city_id": "geonames.3579132",
+      "completed_scenarios": 0,
+      "country_code": "BL",
+      "latitude": 17.89618,
+      "limitations": [
+        "This is a gazetteer point, not an official municipal boundary.",
+        "Source population values may use different years and definitions.",
+        "Tier G denotes catalog discoverability, not deep analytical readiness."
+      ],
+      "longitude": -62.84978,
+      "name": "Gustavia",
+      "negative_scenarios": 0,
+      "readiness": "catalog-discovery-only",
+      "scenario_count": 0,
+      "source_artifact_count": 1,
+      "source_population": 5988,
+      "tier": "G",
+      "timezone": "America/St_Barthelemy"
+    },
+    {
+      "city_id": "geonames.3573197",
+      "completed_scenarios": 0,
+      "country_code": "BM",
+      "latitude": 32.2949,
+      "limitations": [
+        "This is a gazetteer point, not an official municipal boundary.",
+        "Source population values may use different years and definitions.",
+        "Tier G denotes catalog discoverability, not deep analytical readiness."
+      ],
+      "longitude": -64.78303,
+      "name": "Hamilton",
+      "negative_scenarios": 0,
+      "readiness": "catalog-discovery-only",
+      "scenario_count": 0,
+      "source_artifact_count": 1,
+      "source_population": 902,
+      "tier": "G",
+      "timezone": "Atlantic/Bermuda"
+    },
+    {
+      "city_id": "geonames.890299",
+      "completed_scenarios": 0,
+      "country_code": "ZW",
+      "latitude": -17.82772,
+      "limitations": [
+        "This is a gazetteer point, not an official municipal boundary.",
+        "Source population values may use different years and definitions.",
+        "Tier G denotes catalog discoverability, not deep analytical readiness."
+      ],
+      "longitude": 31.05337,
+      "name": "Harare",
+      "negative_scenarios": 0,
+      "readiness": "catalog-discovery-only",
+      "scenario_count": 0,
+      "source_artifact_count": 1,
+      "source_population": 1542813,
+      "tier": "G",
+      "timezone": "Africa/Harare"
+    },
+    {
+      "city_id": "geonames.3553478",
+      "completed_scenarios": 0,
+      "country_code": "CU",
+      "latitude": 23.13302,
+      "limitations": [
+        "This is a gazetteer point, not an official municipal boundary.",
+        "Source population values may use different years and definitions.",
+        "Tier G denotes catalog discoverability, not deep analytical readiness."
+      ],
+      "longitude": -82.38304,
+      "name": "Havana",
+      "negative_scenarios": 0,
+      "readiness": "catalog-discovery-only",
+      "scenario_count": 0,
+      "source_artifact_count": 1,
+      "source_population": 2163824,
+      "tier": "G",
+      "timezone": "America/Havana"
+    },
+    {
+      "city_id": "geonames.658225",
+      "completed_scenarios": 0,
+      "country_code": "FI",
+      "latitude": 60.16952,
+      "limitations": [
+        "This is a gazetteer point, not an official municipal boundary.",
+        "Source population values may use different years and definitions.",
+        "Tier G denotes catalog discoverability, not deep analytical readiness."
+      ],
+      "longitude": 24.93545,
+      "name": "Helsinki",
+      "negative_scenarios": 0,
+      "readiness": "catalog-discovery-only",
+      "scenario_count": 0,
+      "source_artifact_count": 1,
+      "source_population": 658864,
+      "tier": "G",
+      "timezone": "Europe/Helsinki"
+    },
+    {
+      "city_id": "geonames.1566083",
+      "completed_scenarios": 2,
+      "country_code": "VN",
+      "latitude": 10.82302,
+      "limitations": [
+        "Tier-S outputs are descriptive screens and cannot issue recommendations.",
+        "Country indicators remain national context and climate remains one grid point."
+      ],
+      "longitude": 106.62965,
+      "name": "Ho Chi Minh City",
+      "negative_scenarios": 1,
+      "quality_status": "pass",
+      "readiness": "standardized-descriptive-screening",
+      "scenario_count": 3,
+      "source_artifact_count": 5,
+      "source_population": 14002598,
+      "tier": "S",
+      "timezone": "Asia/Ho_Chi_Minh"
+    },
+    {
+      "city_id": "geonames.1819729",
+      "completed_scenarios": 2,
+      "country_code": "HK",
+      "latitude": 22.27832,
+      "limitations": [
+        "Tier-S outputs are descriptive screens and cannot issue recommendations.",
+        "Country indicators remain national context and climate remains one grid point."
+      ],
+      "longitude": 114.17469,
+      "name": "Hong Kong",
+      "negative_scenarios": 1,
+      "quality_status": "pass",
+      "readiness": "standardized-descriptive-screening",
+      "scenario_count": 3,
+      "source_artifact_count": 5,
+      "source_population": 7396076,
+      "tier": "S",
+      "timezone": "Asia/Hong_Kong"
+    },
+    {
+      "city_id": "geonames.2108502",
+      "completed_scenarios": 0,
+      "country_code": "SB",
+      "latitude": -9.43333,
+      "limitations": [
+        "This is a gazetteer point, not an official municipal boundary.",
+        "Source population values may use different years and definitions.",
+        "Tier G denotes catalog discoverability, not deep analytical readiness."
+      ],
+      "longitude": 159.95,
+      "name": "Honiara",
+      "negative_scenarios": 0,
+      "readiness": "catalog-discovery-only",
+      "scenario_count": 0,
+      "source_artifact_count": 1,
+      "source_population": 56298,
+      "tier": "G",
+      "timezone": "Pacific/Guadalcanal"
+    },
+    {
+      "city_id": "geonames.745044",
+      "completed_scenarios": 2,
+      "country_code": "TR",
+      "latitude": 41.01384,
+      "limitations": [
+        "Tier-S outputs are descriptive screens and cannot issue recommendations.",
+        "Country indicators remain national context and climate remains one grid point."
+      ],
+      "longitude": 28.94966,
+      "name": "Istanbul",
+      "negative_scenarios": 1,
+      "quality_status": "pass",
+      "readiness": "standardized-descriptive-screening",
+      "scenario_count": 3,
+      "source_artifact_count": 5,
+      "source_population": 15701602,
+      "tier": "S",
+      "timezone": "Europe/Istanbul"
+    },
+    {
+      "city_id": "geonames.1642911",
+      "completed_scenarios": 2,
+      "country_code": "ID",
+      "latitude": -6.21462,
+      "limitations": [
+        "Tier-S outputs are descriptive screens and cannot issue recommendations.",
+        "Country indicators remain national context and climate remains one grid point."
+      ],
+      "longitude": 106.84513,
+      "name": "Jakarta",
+      "negative_scenarios": 1,
+      "quality_status": "pass",
+      "readiness": "standardized-descriptive-screening",
+      "scenario_count": 3,
+      "source_artifact_count": 5,
+      "source_population": 8540121,
+      "tier": "S",
+      "timezone": "Asia/Jakarta"
+    },
+    {
+      "city_id": "geonames.3370903",
+      "completed_scenarios": 0,
+      "country_code": "SH",
+      "latitude": -15.92488,
+      "limitations": [
+        "This is a gazetteer point, not an official municipal boundary.",
+        "Source population values may use different years and definitions.",
+        "Tier G denotes catalog discoverability, not deep analytical readiness."
+      ],
+      "longitude": -5.71816,
+      "name": "Jamestown",
+      "negative_scenarios": 0,
+      "readiness": "catalog-discovery-only",
+      "scenario_count": 0,
+      "source_artifact_count": 1,
+      "source_population": 637,
+      "tier": "G",
+      "timezone": "Atlantic/St_Helena"
+    },
+    {
+      "city_id": "geonames.105343",
+      "completed_scenarios": 2,
+      "country_code": "SA",
+      "latitude": 21.49012,
+      "limitations": [
+        "Tier-S outputs are descriptive screens and cannot issue recommendations.",
+        "Country indicators remain national context and climate remains one grid point."
+      ],
+      "longitude": 39.18624,
+      "name": "Jeddah",
+      "negative_scenarios": 1,
+      "quality_status": "pass",
+      "readiness": "standardized-descriptive-screening",
+      "scenario_count": 3,
+      "source_artifact_count": 5,
+      "source_population": 4697000,
+      "tier": "S",
+      "timezone": "Asia/Riyadh"
+    },
+    {
+      "city_id": "geonames.281184",
+      "completed_scenarios": 0,
+      "country_code": "IL",
+      "latitude": 31.76904,
+      "limitations": [
+        "This is a gazetteer point, not an official municipal boundary.",
+        "Source population values may use different years and definitions.",
+        "Tier G denotes catalog discoverability, not deep analytical readiness."
+      ],
+      "longitude": 35.21633,
+      "name": "Jerusalem",
+      "negative_scenarios": 0,
+      "readiness": "catalog-discovery-only",
+      "scenario_count": 0,
+      "source_artifact_count": 1,
+      "source_population": 971800,
+      "tier": "G",
+      "timezone": "Asia/Jerusalem"
+    },
+    {
+      "city_id": "geonames.993800",
+      "completed_scenarios": 2,
+      "country_code": "ZA",
+      "latitude": -26.20227,
+      "limitations": [
+        "Tier-S outputs are descriptive screens and cannot issue recommendations.",
+        "Country indicators remain national context and climate remains one grid point."
+      ],
+      "longitude": 28.04363,
+      "name": "Johannesburg",
+      "negative_scenarios": 1,
+      "quality_status": "pass",
+      "readiness": "standardized-descriptive-screening",
+      "scenario_count": 3,
+      "source_artifact_count": 5,
+      "source_population": 9418183,
+      "tier": "S",
+      "timezone": "Africa/Johannesburg"
+    },
+    {
+      "city_id": "geonames.373303",
+      "completed_scenarios": 0,
+      "country_code": "SS",
+      "latitude": 4.85165,
+      "limitations": [
+        "This is a gazetteer point, not an official municipal boundary.",
+        "Source population values may use different years and definitions.",
+        "Tier G denotes catalog discoverability, not deep analytical readiness."
+      ],
+      "longitude": 31.58247,
+      "name": "Juba",
+      "negative_scenarios": 0,
+      "readiness": "catalog-discovery-only",
+      "scenario_count": 0,
+      "source_artifact_count": 1,
+      "source_population": 450000,
+      "tier": "G",
+      "timezone": "Africa/Juba"
+    },
+    {
+      "city_id": "geonames.1138958",
+      "completed_scenarios": 0,
+      "country_code": "AF",
+      "latitude": 34.52813,
+      "limitations": [
+        "This is a gazetteer point, not an official municipal boundary.",
+        "Source population values may use different years and definitions.",
+        "Tier G denotes catalog discoverability, not deep analytical readiness."
+      ],
+      "longitude": 69.17233,
+      "name": "Kabul",
+      "negative_scenarios": 0,
+      "readiness": "catalog-discovery-only",
+      "scenario_count": 0,
+      "source_artifact_count": 1,
+      "source_population": 4434550,
+      "tier": "G",
+      "timezone": "Asia/Kabul"
+    },
+    {
+      "city_id": "geonames.232422",
+      "completed_scenarios": 0,
+      "country_code": "UG",
+      "latitude": 0.31628,
+      "limitations": [
+        "This is a gazetteer point, not an official municipal boundary.",
+        "Source population values may use different years and definitions.",
+        "Tier G denotes catalog discoverability, not deep analytical readiness."
+      ],
+      "longitude": 32.58219,
+      "name": "Kampala",
+      "negative_scenarios": 0,
+      "readiness": "catalog-discovery-only",
+      "scenario_count": 0,
+      "source_artifact_count": 1,
+      "source_population": 1680600,
+      "tier": "G",
+      "timezone": "Africa/Kampala"
+    },
+    {
+      "city_id": "geonames.1174872",
+      "completed_scenarios": 0,
+      "country_code": "PK",
+      "latitude": 24.8608,
+      "limitations": [
+        "This is a gazetteer point, not an official municipal boundary.",
+        "Source population values may use different years and definitions.",
+        "Tier G denotes catalog discoverability, not deep analytical readiness."
+      ],
+      "longitude": 67.0104,
+      "name": "Karachi",
+      "negative_scenarios": 0,
+      "readiness": "catalog-discovery-only",
+      "scenario_count": 0,
+      "source_artifact_count": 1,
+      "source_population": 11624219,
+      "tier": "G",
+      "timezone": "Asia/Karachi"
+    },
+    {
+      "city_id": "geonames.1283240",
+      "completed_scenarios": 0,
+      "country_code": "NP",
+      "latitude": 27.70169,
+      "limitations": [
+        "This is a gazetteer point, not an official municipal boundary.",
+        "Source population values may use different years and definitions.",
+        "Tier G denotes catalog discoverability, not deep analytical readiness."
+      ],
+      "longitude": 85.3206,
+      "name": "Kathmandu",
+      "negative_scenarios": 0,
+      "readiness": "catalog-discovery-only",
+      "scenario_count": 0,
+      "source_artifact_count": 1,
+      "source_population": 1442271,
+      "tier": "G",
+      "timezone": "Asia/Kathmandu"
+    },
+    {
+      "city_id": "geonames.379252",
+      "completed_scenarios": 0,
+      "country_code": "SD",
+      "latitude": 15.55177,
+      "limitations": [
+        "This is a gazetteer point, not an official municipal boundary.",
+        "Source population values may use different years and definitions.",
+        "Tier G denotes catalog discoverability, not deep analytical readiness."
+      ],
+      "longitude": 32.53241,
+      "name": "Khartoum",
+      "negative_scenarios": 0,
+      "readiness": "catalog-discovery-only",
+      "scenario_count": 0,
+      "source_artifact_count": 1,
+      "source_population": 1974647,
+      "tier": "G",
+      "timezone": "Africa/Khartoum"
+    },
+    {
+      "city_id": "geonames.202061",
+      "completed_scenarios": 0,
+      "country_code": "RW",
+      "latitude": -1.94995,
+      "limitations": [
+        "This is a gazetteer point, not an official municipal boundary.",
+        "Source population values may use different years and definitions.",
+        "Tier G denotes catalog discoverability, not deep analytical readiness."
+      ],
+      "longitude": 30.05885,
+      "name": "Kigali",
+      "negative_scenarios": 0,
+      "readiness": "catalog-discovery-only",
+      "scenario_count": 0,
+      "source_artifact_count": 1,
+      "source_population": 1132686,
+      "tier": "G",
+      "timezone": "Africa/Kigali"
+    },
+    {
+      "city_id": "geonames.2161314",
+      "completed_scenarios": 0,
+      "country_code": "NF",
+      "latitude": -29.05459,
+      "limitations": [
+        "This is a gazetteer point, not an official municipal boundary.",
+        "Source population values may use different years and definitions.",
+        "Tier G denotes catalog discoverability, not deep analytical readiness."
+      ],
+      "longitude": 167.96628,
+      "name": "Kingston",
+      "negative_scenarios": 0,
+      "readiness": "catalog-discovery-only",
+      "scenario_count": 0,
+      "source_artifact_count": 1,
+      "source_population": 880,
+      "tier": "G",
+      "timezone": "Pacific/Norfolk"
+    },
+    {
+      "city_id": "geonames.3489854",
+      "completed_scenarios": 0,
+      "country_code": "JM",
+      "latitude": 17.99702,
+      "limitations": [
+        "This is a gazetteer point, not an official municipal boundary.",
+        "Source population values may use different years and definitions.",
+        "Tier G denotes catalog discoverability, not deep analytical readiness."
+      ],
+      "longitude": -76.79358,
+      "name": "Kingston",
+      "negative_scenarios": 0,
+      "readiness": "catalog-discovery-only",
+      "scenario_count": 0,
+      "source_artifact_count": 1,
+      "source_population": 937700,
+      "tier": "G",
+      "timezone": "America/Jamaica"
+    },
+    {
+      "city_id": "geonames.3577887",
+      "completed_scenarios": 0,
+      "country_code": "VC",
+      "latitude": 13.15527,
+      "limitations": [
+        "This is a gazetteer point, not an official municipal boundary.",
+        "Source population values may use different years and definitions.",
+        "Tier G denotes catalog discoverability, not deep analytical readiness."
+      ],
+      "longitude": -61.22742,
+      "name": "Kingstown",
+      "negative_scenarios": 0,
+      "readiness": "catalog-discovery-only",
+      "scenario_count": 0,
+      "source_artifact_count": 1,
+      "source_population": 24518,
+      "tier": "G",
+      "timezone": "America/St_Vincent"
+    },
+    {
+      "city_id": "geonames.2314302",
+      "completed_scenarios": 2,
+      "country_code": "CD",
+      "latitude": -4.32758,
+      "limitations": [
+        "Tier-S outputs are descriptive screens and cannot issue recommendations.",
+        "Country indicators remain national context and climate remains one grid point."
+      ],
+      "longitude": 15.31357,
+      "name": "Kinshasa",
+      "negative_scenarios": 1,
+      "quality_status": "pass",
+      "readiness": "standardized-descriptive-screening",
+      "scenario_count": 3,
+      "source_artifact_count": 5,
+      "source_population": 16000000,
+      "tier": "S",
+      "timezone": "Africa/Kinshasa"
+    },
+    {
+      "city_id": "geonames.3513563",
+      "completed_scenarios": 0,
+      "country_code": "BQ",
+      "latitude": 12.15,
+      "limitations": [
+        "This is a gazetteer point, not an official municipal boundary.",
+        "Source population values may use different years and definitions.",
+        "Tier G denotes catalog discoverability, not deep analytical readiness."
+      ],
+      "longitude": -68.26667,
+      "name": "Kralendijk",
+      "negative_scenarios": 0,
+      "readiness": "catalog-discovery-only",
+      "scenario_count": 0,
+      "source_artifact_count": 1,
+      "source_population": 10620,
+      "tier": "G",
+      "timezone": "America/Kralendijk"
+    },
+    {
+      "city_id": "geonames.1735161",
+      "completed_scenarios": 0,
+      "country_code": "MY",
+      "latitude": 3.1412,
+      "limitations": [
+        "This is a gazetteer point, not an official municipal boundary.",
+        "Source population values may use different years and definitions.",
+        "Tier G denotes catalog discoverability, not deep analytical readiness."
+      ],
+      "longitude": 101.68653,
+      "name": "Kuala Lumpur",
+      "negative_scenarios": 0,
+      "readiness": "catalog-discovery-only",
+      "scenario_count": 0,
+      "source_artifact_count": 1,
+      "source_population": 1453975,
+      "tier": "G",
+      "timezone": "Asia/Kuala_Lumpur"
+    },
+    {
+      "city_id": "geonames.2298890",
+      "completed_scenarios": 0,
+      "country_code": "GH",
+      "latitude": 6.68848,
+      "limitations": [
+        "This is a gazetteer point, not an official municipal boundary.",
+        "Source population values may use different years and definitions.",
+        "Tier G denotes catalog discoverability, not deep analytical readiness."
+      ],
+      "longitude": -1.62443,
+      "name": "Kumasi",
+      "negative_scenarios": 0,
+      "readiness": "catalog-discovery-only",
+      "scenario_count": 0,
+      "source_artifact_count": 1,
+      "source_population": 2544530,
+      "tier": "G",
+      "timezone": "Africa/Accra"
+    },
+    {
+      "city_id": "geonames.703448",
+      "completed_scenarios": 0,
+      "country_code": "UA",
+      "latitude": 50.45466,
+      "limitations": [
+        "This is a gazetteer point, not an official municipal boundary.",
+        "Source population values may use different years and definitions.",
+        "Tier G denotes catalog discoverability, not deep analytical readiness."
+      ],
+      "longitude": 30.5238,
+      "name": "Kyiv",
+      "negative_scenarios": 0,
+      "readiness": "catalog-discovery-only",
+      "scenario_count": 0,
+      "source_artifact_count": 1,
+      "source_population": 2952301,
+      "tier": "G",
+      "timezone": "Europe/Kyiv"
+    },
+    {
+      "city_id": "geonames.3911925",
+      "completed_scenarios": 0,
+      "country_code": "BO",
+      "latitude": -16.5,
+      "limitations": [
+        "This is a gazetteer point, not an official municipal boundary.",
+        "Source population values may use different years and definitions.",
+        "Tier G denotes catalog discoverability, not deep analytical readiness."
+      ],
+      "longitude": -68.15,
+      "name": "La Paz",
+      "negative_scenarios": 0,
+      "readiness": "catalog-discovery-only",
+      "scenario_count": 0,
+      "source_artifact_count": 1,
+      "source_population": 2004652,
+      "tier": "G",
+      "timezone": "America/La_Paz"
+    },
+    {
+      "city_id": "geonames.2462881",
+      "completed_scenarios": 0,
+      "country_code": "EH",
+      "latitude": 27.1418,
+      "limitations": [
+        "This is a gazetteer point, not an official municipal boundary.",
+        "Source population values may use different years and definitions.",
+        "Tier G denotes catalog discoverability, not deep analytical readiness."
+      ],
+      "longitude": -13.18797,
+      "name": "Laayoune",
+      "negative_scenarios": 0,
+      "readiness": "catalog-discovery-only",
+      "scenario_count": 0,
+      "source_artifact_count": 1,
+      "source_population": 196331,
+      "tier": "G",
+      "timezone": "Africa/El_Aaiun"
+    },
+    {
+      "city_id": "geonames.2332459",
+      "completed_scenarios": 2,
+      "country_code": "NG",
+      "latitude": 6.45407,
+      "limitations": [
+        "Tier-S outputs are descriptive screens and cannot issue recommendations.",
+        "Country indicators remain national context and climate remains one grid point."
+      ],
+      "longitude": 3.39467,
+      "name": "Lagos",
+      "negative_scenarios": 1,
+      "quality_status": "pass",
+      "readiness": "standardized-descriptive-screening",
+      "scenario_count": 3,
+      "source_artifact_count": 5,
+      "source_population": 15388000,
+      "tier": "S",
+      "timezone": "Africa/Lagos"
+    },
+    {
+      "city_id": "geonames.1172451",
+      "completed_scenarios": 2,
+      "country_code": "PK",
+      "latitude": 31.558,
+      "limitations": [
+        "Tier-S outputs are descriptive screens and cannot issue recommendations.",
+        "Country indicators remain national context and climate remains one grid point."
+      ],
+      "longitude": 74.35071,
+      "name": "Lahore",
+      "negative_scenarios": 1,
+      "quality_status": "pass",
+      "readiness": "standardized-descriptive-screening",
+      "scenario_count": 3,
+      "source_artifact_count": 5,
+      "source_population": 13004135,
+      "tier": "S",
+      "timezone": "Asia/Karachi"
+    },
+    {
+      "city_id": "geonames.3578959",
+      "completed_scenarios": 0,
+      "country_code": "GP",
+      "latitude": 16.273,
+      "limitations": [
+        "This is a gazetteer point, not an official municipal boundary.",
+        "Source population values may use different years and definitions.",
+        "Tier G denotes catalog discoverability, not deep analytical readiness."
+      ],
+      "longitude": -61.50507,
+      "name": "Les Abymes",
+      "negative_scenarios": 0,
+      "readiness": "catalog-discovery-only",
+      "scenario_count": 0,
+      "source_artifact_count": 1,
+      "source_population": 53514,
+      "tier": "G",
+      "timezone": "America/Guadeloupe"
+    },
+    {
+      "city_id": "geonames.2399697",
+      "completed_scenarios": 0,
+      "country_code": "GA",
+      "latitude": 0.39241,
+      "limitations": [
+        "This is a gazetteer point, not an official municipal boundary.",
+        "Source population values may use different years and definitions.",
+        "Tier G denotes catalog discoverability, not deep analytical readiness."
+      ],
+      "longitude": 9.45356,
+      "name": "Libreville",
+      "negative_scenarios": 0,
+      "readiness": "catalog-discovery-only",
+      "scenario_count": 0,
+      "source_artifact_count": 1,
+      "source_population": 846090,
+      "tier": "G",
+      "timezone": "Africa/Libreville"
+    },
+    {
+      "city_id": "geonames.927967",
+      "completed_scenarios": 0,
+      "country_code": "MW",
+      "latitude": -13.96692,
+      "limitations": [
+        "This is a gazetteer point, not an official municipal boundary.",
+        "Source population values may use different years and definitions.",
+        "Tier G denotes catalog discoverability, not deep analytical readiness."
+      ],
+      "longitude": 33.78725,
+      "name": "Lilongwe",
+      "negative_scenarios": 0,
+      "readiness": "catalog-discovery-only",
+      "scenario_count": 0,
+      "source_artifact_count": 1,
+      "source_population": 1115815,
+      "tier": "G",
+      "timezone": "Africa/Blantyre"
+    },
+    {
+      "city_id": "geonames.3936456",
+      "completed_scenarios": 2,
+      "country_code": "PE",
+      "latitude": -12.04318,
+      "limitations": [
+        "Tier-S outputs are descriptive screens and cannot issue recommendations.",
+        "Country indicators remain national context and climate remains one grid point."
+      ],
+      "longitude": -77.02824,
+      "name": "Lima",
+      "negative_scenarios": 1,
+      "quality_status": "pass",
+      "readiness": "standardized-descriptive-screening",
+      "scenario_count": 3,
+      "source_artifact_count": 5,
+      "source_population": 7737002,
+      "tier": "S",
+      "timezone": "America/Lima"
+    },
+    {
+      "city_id": "geonames.2267057",
+      "completed_scenarios": 0,
+      "country_code": "PT",
+      "latitude": 38.72509,
+      "limitations": [
+        "This is a gazetteer point, not an official municipal boundary.",
+        "Source population values may use different years and definitions.",
+        "Tier G denotes catalog discoverability, not deep analytical readiness."
+      ],
+      "longitude": -9.1498,
+      "name": "Lisbon",
+      "negative_scenarios": 0,
+      "readiness": "catalog-discovery-only",
+      "scenario_count": 0,
+      "source_artifact_count": 1,
+      "source_population": 517802,
+      "tier": "G",
+      "timezone": "Europe/Lisbon"
+    },
+    {
+      "city_id": "geonames.3196359",
+      "completed_scenarios": 0,
+      "country_code": "SI",
+      "latitude": 46.05108,
+      "limitations": [
+        "This is a gazetteer point, not an official municipal boundary.",
+        "Source population values may use different years and definitions.",
+        "Tier G denotes catalog discoverability, not deep analytical readiness."
+      ],
+      "longitude": 14.50513,
+      "name": "Ljubljana",
+      "negative_scenarios": 0,
+      "readiness": "catalog-discovery-only",
+      "scenario_count": 0,
+      "source_artifact_count": 1,
+      "source_population": 272220,
+      "tier": "G",
+      "timezone": "Europe/Ljubljana"
+    },
+    {
+      "city_id": "geonames.2365267",
+      "completed_scenarios": 0,
+      "country_code": "TG",
+      "latitude": 6.12874,
+      "limitations": [
+        "This is a gazetteer point, not an official municipal boundary.",
+        "Source population values may use different years and definitions.",
+        "Tier G denotes catalog discoverability, not deep analytical readiness."
+      ],
+      "longitude": 1.22154,
+      "name": "Lomé",
+      "negative_scenarios": 0,
+      "readiness": "catalog-discovery-only",
+      "scenario_count": 0,
+      "source_artifact_count": 1,
+      "source_population": 2188376,
+      "tier": "G",
+      "timezone": "Africa/Lome"
+    },
+    {
+      "city_id": "geonames.2643743",
+      "completed_scenarios": 2,
+      "country_code": "GB",
+      "latitude": 51.50853,
+      "limitations": [
+        "Tier-S outputs are descriptive screens and cannot issue recommendations.",
+        "Country indicators remain national context and climate remains one grid point."
+      ],
+      "longitude": -0.12574,
+      "name": "London",
+      "negative_scenarios": 1,
+      "quality_status": "pass",
+      "readiness": "standardized-descriptive-screening",
+      "scenario_count": 3,
+      "source_artifact_count": 5,
+      "source_population": 8961989,
+      "tier": "S",
+      "timezone": "Europe/London"
+    },
+    {
+      "city_id": "geonames.2729907",
+      "completed_scenarios": 0,
+      "country_code": "SJ",
+      "latitude": 78.22334,
+      "limitations": [
+        "This is a gazetteer point, not an official municipal boundary.",
+        "Source population values may use different years and definitions.",
+        "Tier G denotes catalog discoverability, not deep analytical readiness."
+      ],
+      "longitude": 15.64689,
+      "name": "Longyearbyen",
+      "negative_scenarios": 0,
+      "readiness": "catalog-discovery-only",
+      "scenario_count": 0,
+      "source_artifact_count": 1,
+      "source_population": 2368,
+      "tier": "G",
+      "timezone": "Arctic/Longyearbyen"
+    },
+    {
+      "city_id": "us.ca.los-angeles",
+      "completed_scenarios": 7,
+      "country_code": "US",
+      "latitude": 34.0205,
+      "limitations": [
+        "The annual resource can be revised and later system migrations require new mappings.",
+        "Blank neighborhood-council values prevent complete within-city allocation analysis.",
+        "Twelve city-bound packs are executions of twelve shared method designs; city bindings are not counted as new non-duplicative designs.",
+        "Planning-support output does not authorize implementation or establish impact."
+      ],
+      "longitude": -118.41175,
+      "name": "Los Angeles",
+      "negative_scenarios": 5,
+      "quality_status": "warn",
+      "readiness": "evidence-gated-planning-support",
+      "scenario_count": 12,
+      "source_artifact_count": 7,
+      "source_population": 3857263,
+      "tier": "D",
+      "timezone": "America/Los_Angeles"
+    },
+    {
+      "city_id": "geonames.2240449",
+      "completed_scenarios": 0,
+      "country_code": "AO",
+      "latitude": -8.83682,
+      "limitations": [
+        "This is a gazetteer point, not an official municipal boundary.",
+        "Source population values may use different years and definitions.",
+        "Tier G denotes catalog discoverability, not deep analytical readiness."
+      ],
+      "longitude": 13.23432,
+      "name": "Luanda",
+      "negative_scenarios": 0,
+      "readiness": "catalog-discovery-only",
+      "scenario_count": 0,
+      "source_artifact_count": 1,
+      "source_population": 2776168,
+      "tier": "G",
+      "timezone": "Africa/Luanda"
+    },
+    {
+      "city_id": "geonames.909137",
+      "completed_scenarios": 0,
+      "country_code": "ZM",
+      "latitude": -15.40669,
+      "limitations": [
+        "This is a gazetteer point, not an official municipal boundary.",
+        "Source population values may use different years and definitions.",
+        "Tier G denotes catalog discoverability, not deep analytical readiness."
+      ],
+      "longitude": 28.28713,
+      "name": "Lusaka",
+      "negative_scenarios": 0,
+      "readiness": "catalog-discovery-only",
+      "scenario_count": 0,
+      "source_artifact_count": 1,
+      "source_population": 2212301,
+      "tier": "G",
+      "timezone": "Africa/Lusaka"
+    },
+    {
+      "city_id": "geonames.2960316",
+      "completed_scenarios": 0,
+      "country_code": "LU",
+      "latitude": 49.60982,
+      "limitations": [
+        "This is a gazetteer point, not an official municipal boundary.",
+        "Source population values may use different years and definitions.",
+        "Tier G denotes catalog discoverability, not deep analytical readiness."
+      ],
+      "longitude": 6.13268,
+      "name": "Luxembourg",
+      "negative_scenarios": 0,
+      "readiness": "catalog-discovery-only",
+      "scenario_count": 0,
+      "source_artifact_count": 1,
+      "source_population": 76684,
+      "tier": "G",
+      "timezone": "Europe/Luxembourg"
+    },
+    {
+      "city_id": "geonames.1821274",
+      "completed_scenarios": 0,
+      "country_code": "MO",
+      "latitude": 22.20056,
+      "limitations": [
+        "This is a gazetteer point, not an official municipal boundary.",
+        "Source population values may use different years and definitions.",
+        "Tier G denotes catalog discoverability, not deep analytical readiness."
+      ],
+      "longitude": 113.54611,
+      "name": "Macau",
+      "negative_scenarios": 0,
+      "readiness": "catalog-discovery-only",
+      "scenario_count": 0,
+      "source_artifact_count": 1,
+      "source_population": 649335,
+      "tier": "G",
+      "timezone": "Asia/Macau"
+    },
+    {
+      "city_id": "geonames.3117735",
+      "completed_scenarios": 0,
+      "country_code": "ES",
+      "latitude": 40.4165,
+      "limitations": [
+        "This is a gazetteer point, not an official municipal boundary.",
+        "Source population values may use different years and definitions.",
+        "Tier G denotes catalog discoverability, not deep analytical readiness."
+      ],
+      "longitude": -3.70256,
+      "name": "Madrid",
+      "negative_scenarios": 0,
+      "readiness": "catalog-discovery-only",
+      "scenario_count": 0,
+      "source_artifact_count": 1,
+      "source_population": 3255944,
+      "tier": "G",
+      "timezone": "Europe/Madrid"
+    },
+    {
+      "city_id": "geonames.2113779",
+      "completed_scenarios": 0,
+      "country_code": "MH",
+      "latitude": 7.08971,
+      "limitations": [
+        "This is a gazetteer point, not an official municipal boundary.",
+        "Source population values may use different years and definitions.",
+        "Tier G denotes catalog discoverability, not deep analytical readiness."
+      ],
+      "longitude": 171.38027,
+      "name": "Majuro",
+      "negative_scenarios": 0,
+      "readiness": "catalog-discovery-only",
+      "scenario_count": 0,
+      "source_artifact_count": 1,
+      "source_population": 25400,
+      "tier": "G",
+      "timezone": "Pacific/Majuro"
+    },
+    {
+      "city_id": "geonames.1282027",
+      "completed_scenarios": 0,
+      "country_code": "MV",
+      "latitude": 4.17521,
+      "limitations": [
+        "This is a gazetteer point, not an official municipal boundary.",
+        "Source population values may use different years and definitions.",
+        "Tier G denotes catalog discoverability, not deep analytical readiness."
+      ],
+      "longitude": 73.50916,
+      "name": "Male",
+      "negative_scenarios": 0,
+      "readiness": "catalog-discovery-only",
+      "scenario_count": 0,
+      "source_artifact_count": 1,
+      "source_population": 103693,
+      "tier": "G",
+      "timezone": "Indian/Maldives"
+    },
+    {
+      "city_id": "geonames.921815",
+      "completed_scenarios": 0,
+      "country_code": "YT",
+      "latitude": -12.78234,
+      "limitations": [
+        "This is a gazetteer point, not an official municipal boundary.",
+        "Source population values may use different years and definitions.",
+        "Tier G denotes catalog discoverability, not deep analytical readiness."
+      ],
+      "longitude": 45.22878,
+      "name": "Mamoudzou",
+      "negative_scenarios": 0,
+      "readiness": "catalog-discovery-only",
+      "scenario_count": 0,
+      "source_artifact_count": 1,
+      "source_population": 54831,
+      "tier": "G",
+      "timezone": "Indian/Mayotte"
+    },
+    {
+      "city_id": "geonames.3617763",
+      "completed_scenarios": 0,
+      "country_code": "NI",
+      "latitude": 12.13282,
+      "limitations": [
+        "This is a gazetteer point, not an official municipal boundary.",
+        "Source population values may use different years and definitions.",
+        "Tier G denotes catalog discoverability, not deep analytical readiness."
+      ],
+      "longitude": -86.2504,
+      "name": "Managua",
+      "negative_scenarios": 0,
+      "readiness": "catalog-discovery-only",
+      "scenario_count": 0,
+      "source_artifact_count": 1,
+      "source_population": 973087,
+      "tier": "G",
+      "timezone": "America/Managua"
+    },
+    {
+      "city_id": "geonames.934995",
+      "completed_scenarios": 0,
+      "country_code": "SZ",
+      "latitude": -26.49884,
+      "limitations": [
+        "This is a gazetteer point, not an official municipal boundary.",
+        "Source population values may use different years and definitions.",
+        "Tier G denotes catalog discoverability, not deep analytical readiness."
+      ],
+      "longitude": 31.38004,
+      "name": "Manzini",
+      "negative_scenarios": 0,
+      "readiness": "catalog-discovery-only",
+      "scenario_count": 0,
+      "source_artifact_count": 1,
+      "source_population": 110537,
+      "tier": "G",
+      "timezone": "Africa/Mbabane"
+    },
+    {
+      "city_id": "geonames.1040652",
+      "completed_scenarios": 0,
+      "country_code": "MZ",
+      "latitude": -25.96553,
+      "limitations": [
+        "This is a gazetteer point, not an official municipal boundary.",
+        "Source population values may use different years and definitions.",
+        "Tier G denotes catalog discoverability, not deep analytical readiness."
+      ],
+      "longitude": 32.58322,
+      "name": "Maputo",
+      "negative_scenarios": 0,
+      "readiness": "catalog-discovery-only",
+      "scenario_count": 0,
+      "source_artifact_count": 1,
+      "source_population": 1254837,
+      "tier": "G",
+      "timezone": "Africa/Maputo"
+    },
+    {
+      "city_id": "geonames.3041732",
+      "completed_scenarios": 0,
+      "country_code": "AX",
+      "latitude": 60.09726,
+      "limitations": [
+        "This is a gazetteer point, not an official municipal boundary.",
+        "Source population values may use different years and definitions.",
+        "Tier G denotes catalog discoverability, not deep analytical readiness."
+      ],
+      "longitude": 19.93481,
+      "name": "Mariehamn",
+      "negative_scenarios": 0,
+      "readiness": "catalog-discovery-only",
+      "scenario_count": 0,
+      "source_artifact_count": 1,
+      "source_population": 10682,
+      "tier": "G",
+      "timezone": "Europe/Mariehamn"
+    },
+    {
+      "city_id": "geonames.3578851",
+      "completed_scenarios": 0,
+      "country_code": "MF",
+      "latitude": 18.06819,
+      "limitations": [
+        "This is a gazetteer point, not an official municipal boundary.",
+        "Source population values may use different years and definitions.",
+        "Tier G denotes catalog discoverability, not deep analytical readiness."
+      ],
+      "longitude": -63.08302,
+      "name": "Marigot",
+      "negative_scenarios": 0,
+      "readiness": "catalog-discovery-only",
+      "scenario_count": 0,
+      "source_artifact_count": 1,
+      "source_population": 5700,
+      "tier": "G",
+      "timezone": "America/Marigot"
+    },
+    {
+      "city_id": "geonames.932505",
+      "completed_scenarios": 0,
+      "country_code": "LS",
+      "latitude": -29.31667,
+      "limitations": [
+        "This is a gazetteer point, not an official municipal boundary.",
+        "Source population values may use different years and definitions.",
+        "Tier G denotes catalog discoverability, not deep analytical readiness."
+      ],
+      "longitude": 27.48333,
+      "name": "Maseru",
+      "negative_scenarios": 0,
+      "readiness": "catalog-discovery-only",
+      "scenario_count": 0,
+      "source_artifact_count": 1,
+      "source_population": 359753,
+      "tier": "G",
+      "timezone": "Africa/Maseru"
+    },
+    {
+      "city_id": "geonames.4034821",
+      "completed_scenarios": 0,
+      "country_code": "WF",
+      "latitude": -13.28163,
+      "limitations": [
+        "This is a gazetteer point, not an official municipal boundary.",
+        "Source population values may use different years and definitions.",
+        "Tier G denotes catalog discoverability, not deep analytical readiness."
+      ],
+      "longitude": -176.17453,
+      "name": "Mata-Utu",
+      "negative_scenarios": 0,
+      "readiness": "catalog-discovery-only",
+      "scenario_count": 0,
+      "source_artifact_count": 1,
+      "source_population": 1200,
+      "tier": "G",
+      "timezone": "Pacific/Wallis"
+    },
+    {
+      "city_id": "geonames.3530597",
+      "completed_scenarios": 2,
+      "country_code": "MX",
+      "latitude": 19.42847,
+      "limitations": [
+        "Tier-S outputs are descriptive screens and cannot issue recommendations.",
+        "Country indicators remain national context and climate remains one grid point."
+      ],
+      "longitude": -99.12766,
+      "name": "Mexico City",
+      "negative_scenarios": 1,
+      "quality_status": "pass",
+      "readiness": "standardized-descriptive-screening",
+      "scenario_count": 3,
+      "source_artifact_count": 5,
+      "source_population": 12294193,
+      "tier": "S",
+      "timezone": "America/Mexico_City"
+    },
+    {
+      "city_id": "geonames.625144",
+      "completed_scenarios": 0,
+      "country_code": "BY",
+      "latitude": 53.90019,
+      "limitations": [
+        "This is a gazetteer point, not an official municipal boundary.",
+        "Source population values may use different years and definitions.",
+        "Tier G denotes catalog discoverability, not deep analytical readiness."
+      ],
+      "longitude": 27.56653,
+      "name": "Minsk",
+      "negative_scenarios": 0,
+      "readiness": "catalog-discovery-only",
+      "scenario_count": 0,
+      "source_artifact_count": 1,
+      "source_population": 1742124,
+      "tier": "G",
+      "timezone": "Europe/Minsk"
+    },
+    {
+      "city_id": "geonames.53654",
+      "completed_scenarios": 0,
+      "country_code": "SO",
+      "latitude": 2.03711,
+      "limitations": [
+        "This is a gazetteer point, not an official municipal boundary.",
+        "Source population values may use different years and definitions.",
+        "Tier G denotes catalog discoverability, not deep analytical readiness."
+      ],
+      "longitude": 45.34375,
+      "name": "Mogadishu",
+      "negative_scenarios": 0,
+      "readiness": "catalog-discovery-only",
+      "scenario_count": 0,
+      "source_artifact_count": 1,
+      "source_population": 2587183,
+      "tier": "G",
+      "timezone": "Africa/Mogadishu"
+    },
+    {
+      "city_id": "geonames.2993458",
+      "completed_scenarios": 0,
+      "country_code": "MC",
+      "latitude": 43.73718,
+      "limitations": [
+        "This is a gazetteer point, not an official municipal boundary.",
+        "Source population values may use different years and definitions.",
+        "Tier G denotes catalog discoverability, not deep analytical readiness."
+      ],
+      "longitude": 7.42145,
+      "name": "Monaco",
+      "negative_scenarios": 0,
+      "readiness": "catalog-discovery-only",
+      "scenario_count": 0,
+      "source_artifact_count": 1,
+      "source_population": 32965,
+      "tier": "G",
+      "timezone": "Europe/Monaco"
+    },
+    {
+      "city_id": "geonames.2274895",
+      "completed_scenarios": 0,
+      "country_code": "LR",
+      "latitude": 6.30054,
+      "limitations": [
+        "This is a gazetteer point, not an official municipal boundary.",
+        "Source population values may use different years and definitions.",
+        "Tier G denotes catalog discoverability, not deep analytical readiness."
+      ],
+      "longitude": -10.7969,
+      "name": "Monrovia",
+      "negative_scenarios": 0,
+      "readiness": "catalog-discovery-only",
+      "scenario_count": 0,
+      "source_artifact_count": 1,
+      "source_population": 1542549,
+      "tier": "G",
+      "timezone": "Africa/Monrovia"
+    },
+    {
+      "city_id": "geonames.3441575",
+      "completed_scenarios": 0,
+      "country_code": "UY",
+      "latitude": -34.90328,
+      "limitations": [
+        "This is a gazetteer point, not an official municipal boundary.",
+        "Source population values may use different years and definitions.",
+        "Tier G denotes catalog discoverability, not deep analytical readiness."
+      ],
+      "longitude": -56.18816,
+      "name": "Montevideo",
+      "negative_scenarios": 0,
+      "readiness": "catalog-discovery-only",
+      "scenario_count": 0,
+      "source_artifact_count": 1,
+      "source_population": 1270737,
+      "tier": "G",
+      "timezone": "America/Montevideo"
+    },
+    {
+      "city_id": "geonames.921772",
+      "completed_scenarios": 0,
+      "country_code": "KM",
+      "latitude": -11.70216,
+      "limitations": [
+        "This is a gazetteer point, not an official municipal boundary.",
+        "Source population values may use different years and definitions.",
+        "Tier G denotes catalog discoverability, not deep analytical readiness."
+      ],
+      "longitude": 43.25506,
+      "name": "Moroni",
+      "negative_scenarios": 0,
+      "readiness": "catalog-discovery-only",
+      "scenario_count": 0,
+      "source_artifact_count": 1,
+      "source_population": 74749,
+      "tier": "G",
+      "timezone": "Indian/Comoro"
+    },
+    {
+      "city_id": "geonames.524901",
+      "completed_scenarios": 2,
+      "country_code": "RU",
+      "latitude": 55.75204,
+      "limitations": [
+        "Tier-S outputs are descriptive screens and cannot issue recommendations.",
+        "Country indicators remain national context and climate remains one grid point."
+      ],
+      "longitude": 37.61781,
+      "name": "Moscow",
+      "negative_scenarios": 1,
+      "quality_status": "pass",
+      "readiness": "standardized-descriptive-screening",
+      "scenario_count": 3,
+      "source_artifact_count": 5,
+      "source_population": 10381222,
+      "tier": "S",
+      "timezone": "Europe/Moscow"
+    },
+    {
+      "city_id": "geonames.1275339",
+      "completed_scenarios": 2,
+      "country_code": "IN",
+      "latitude": 19.07283,
+      "limitations": [
+        "Tier-S outputs are descriptive screens and cannot issue recommendations.",
+        "Country indicators remain national context and climate remains one grid point."
+      ],
+      "longitude": 72.88261,
+      "name": "Mumbai",
+      "negative_scenarios": 1,
+      "quality_status": "pass",
+      "readiness": "standardized-descriptive-screening",
+      "scenario_count": 3,
+      "source_artifact_count": 5,
+      "source_population": 12691836,
+      "tier": "S",
+      "timezone": "Asia/Kolkata"
+    },
+    {
+      "city_id": "geonames.287286",
+      "completed_scenarios": 0,
+      "country_code": "OM",
+      "latitude": 23.58413,
+      "limitations": [
+        "This is a gazetteer point, not an official municipal boundary.",
+        "Source population values may use different years and definitions.",
+        "Tier G denotes catalog discoverability, not deep analytical readiness."
+      ],
+      "longitude": 58.40778,
+      "name": "Muscat",
+      "negative_scenarios": 0,
+      "readiness": "catalog-discovery-only",
+      "scenario_count": 0,
+      "source_artifact_count": 1,
+      "source_population": 797000,
+      "tier": "G",
+      "timezone": "Asia/Muscat"
+    },
+    {
+      "city_id": "geonames.2427123",
+      "completed_scenarios": 0,
+      "country_code": "TD",
+      "latitude": 12.10672,
+      "limitations": [
+        "This is a gazetteer point, not an official municipal boundary.",
+        "Source population values may use different years and definitions.",
+        "Tier G denotes catalog discoverability, not deep analytical readiness."
+      ],
+      "longitude": 15.0444,
+      "name": "N'Djamena",
+      "negative_scenarios": 0,
+      "readiness": "catalog-discovery-only",
+      "scenario_count": 0,
+      "source_artifact_count": 1,
+      "source_population": 1359526,
+      "tier": "G",
+      "timezone": "Africa/Ndjamena"
+    },
+    {
+      "city_id": "geonames.184745",
+      "completed_scenarios": 0,
+      "country_code": "KE",
+      "latitude": -1.28333,
+      "limitations": [
+        "This is a gazetteer point, not an official municipal boundary.",
+        "Source population values may use different years and definitions.",
+        "Tier G denotes catalog discoverability, not deep analytical readiness."
+      ],
+      "longitude": 36.81667,
+      "name": "Nairobi",
+      "negative_scenarios": 0,
+      "readiness": "catalog-discovery-only",
+      "scenario_count": 0,
+      "source_artifact_count": 1,
+      "source_population": 4397073,
+      "tier": "G",
+      "timezone": "Africa/Nairobi"
+    },
+    {
+      "city_id": "geonames.8740209",
+      "completed_scenarios": 0,
+      "country_code": "FJ",
+      "latitude": -18.07051,
+      "limitations": [
+        "This is a gazetteer point, not an official municipal boundary.",
+        "Source population values may use different years and definitions.",
+        "Tier G denotes catalog discoverability, not deep analytical readiness."
+      ],
+      "longitude": 178.51313,
+      "name": "Nasinu",
+      "negative_scenarios": 0,
+      "readiness": "catalog-discovery-only",
+      "scenario_count": 0,
+      "source_artifact_count": 1,
+      "source_population": 92043,
+      "tier": "G",
+      "timezone": "Pacific/Fiji"
+    },
+    {
+      "city_id": "geonames.3571824",
+      "completed_scenarios": 0,
+      "country_code": "BS",
+      "latitude": 25.05823,
+      "limitations": [
+        "This is a gazetteer point, not an official municipal boundary.",
+        "Source population values may use different years and definitions.",
+        "Tier G denotes catalog discoverability, not deep analytical readiness."
+      ],
+      "longitude": -77.34306,
+      "name": "Nassau",
+      "negative_scenarios": 0,
+      "readiness": "catalog-discovery-only",
+      "scenario_count": 0,
+      "source_artifact_count": 1,
+      "source_population": 227940,
+      "tier": "G",
+      "timezone": "America/Nassau"
+    },
+    {
+      "city_id": "geonames.5128581",
+      "completed_scenarios": 2,
+      "country_code": "US",
+      "latitude": 40.71427,
+      "limitations": [
+        "Tier-S outputs are descriptive screens and cannot issue recommendations.",
+        "Country indicators remain national context and climate remains one grid point."
+      ],
+      "longitude": -74.00597,
+      "name": "New York City",
+      "negative_scenarios": 1,
+      "quality_status": "pass",
+      "readiness": "standardized-descriptive-screening",
+      "scenario_count": 3,
+      "source_artifact_count": 5,
+      "source_population": 8804190,
+      "tier": "S",
+      "timezone": "America/New_York"
+    },
+    {
+      "city_id": "us.ny.new-york-city",
+      "completed_scenarios": 10,
+      "country_code": "US",
+      "latitude": 40.697500000000005,
+      "limitations": [
+        "Borough aggregation is too coarse for neighborhood-level equity decisions.",
+        "Complaint types and agency practices can change inside the selected period.",
+        "Twelve city-bound packs are executions of twelve shared method designs; city bindings are not counted as new non-duplicative designs.",
+        "Planning-support output does not authorize implementation or establish impact."
+      ],
+      "longitude": -73.97964999999999,
+      "name": "New York City",
+      "negative_scenarios": 2,
+      "quality_status": "pass",
+      "readiness": "evidence-gated-planning-support",
+      "scenario_count": 12,
+      "source_artifact_count": 7,
+      "source_population": 8483844,
+      "tier": "D",
+      "timezone": "America/New_York"
+    },
+    {
+      "city_id": "geonames.8063361",
+      "completed_scenarios": 0,
+      "country_code": "PW",
+      "latitude": 7.50077,
+      "limitations": [
+        "This is a gazetteer point, not an official municipal boundary.",
+        "Source population values may use different years and definitions.",
+        "Tier G denotes catalog discoverability, not deep analytical readiness."
+      ],
+      "longitude": 134.6238,
+      "name": "Ngerulmud",
+      "negative_scenarios": 0,
+      "readiness": "catalog-discovery-only",
+      "scenario_count": 0,
+      "source_artifact_count": 1,
+      "source_population": 0,
+      "tier": "G",
+      "timezone": "Pacific/Palau"
+    },
+    {
+      "city_id": "geonames.2440485",
+      "completed_scenarios": 0,
+      "country_code": "NE",
+      "latitude": 13.51366,
+      "limitations": [
+        "This is a gazetteer point, not an official municipal boundary.",
+        "Source population values may use different years and definitions.",
+        "Tier G denotes catalog discoverability, not deep analytical readiness."
+      ],
+      "longitude": 2.1098,
+      "name": "Niamey",
+      "negative_scenarios": 0,
+      "readiness": "catalog-discovery-only",
+      "scenario_count": 0,
+      "source_artifact_count": 1,
+      "source_population": 1323691,
+      "tier": "G",
+      "timezone": "Africa/Niamey"
+    },
+    {
+      "city_id": "geonames.146268",
+      "completed_scenarios": 0,
+      "country_code": "CY",
+      "latitude": 35.17284,
+      "limitations": [
+        "This is a gazetteer point, not an official municipal boundary.",
+        "Source population values may use different years and definitions.",
+        "Tier G denotes catalog discoverability, not deep analytical readiness."
+      ],
+      "longitude": 33.35397,
+      "name": "Nicosia",
+      "negative_scenarios": 0,
+      "readiness": "catalog-discovery-only",
+      "scenario_count": 0,
+      "source_artifact_count": 1,
+      "source_population": 200452,
+      "tier": "G",
+      "timezone": "Asia/Nicosia"
+    },
+    {
+      "city_id": "geonames.2377450",
+      "completed_scenarios": 0,
+      "country_code": "MR",
+      "latitude": 18.08581,
+      "limitations": [
+        "This is a gazetteer point, not an official municipal boundary.",
+        "Source population values may use different years and definitions.",
+        "Tier G denotes catalog discoverability, not deep analytical readiness."
+      ],
+      "longitude": -15.9785,
+      "name": "Nouakchott",
+      "negative_scenarios": 0,
+      "readiness": "catalog-discovery-only",
+      "scenario_count": 0,
+      "source_artifact_count": 1,
+      "source_population": 1184530,
+      "tier": "G",
+      "timezone": "Africa/Nouakchott"
+    },
+    {
+      "city_id": "geonames.2139521",
+      "completed_scenarios": 0,
+      "country_code": "NC",
+      "latitude": -22.27407,
+      "limitations": [
+        "This is a gazetteer point, not an official municipal boundary.",
+        "Source population values may use different years and definitions.",
+        "Tier G denotes catalog discoverability, not deep analytical readiness."
+      ],
+      "longitude": 166.44884,
+      "name": "Nouméa",
+      "negative_scenarios": 0,
+      "readiness": "catalog-discovery-only",
+      "scenario_count": 0,
+      "source_artifact_count": 1,
+      "source_population": 93060,
+      "tier": "G",
+      "timezone": "Pacific/Noumea"
+    },
+    {
+      "city_id": "geonames.4032402",
+      "completed_scenarios": 0,
+      "country_code": "TO",
+      "latitude": -21.13683,
+      "limitations": [
+        "This is a gazetteer point, not an official municipal boundary.",
+        "Source population values may use different years and definitions.",
+        "Tier G denotes catalog discoverability, not deep analytical readiness."
+      ],
+      "longitude": -175.20114,
+      "name": "Nuku‘alofa",
+      "negative_scenarios": 0,
+      "readiness": "catalog-discovery-only",
+      "scenario_count": 0,
+      "source_artifact_count": 1,
+      "source_population": 22400,
+      "tier": "G",
+      "timezone": "Pacific/Tongatapu"
+    },
+    {
+      "city_id": "geonames.3421319",
+      "completed_scenarios": 0,
+      "country_code": "GL",
+      "latitude": 64.18347,
+      "limitations": [
+        "This is a gazetteer point, not an official municipal boundary.",
+        "Source population values may use different years and definitions.",
+        "Tier G denotes catalog discoverability, not deep analytical readiness."
+      ],
+      "longitude": -51.72157,
+      "name": "Nuuk",
+      "negative_scenarios": 0,
+      "readiness": "catalog-discovery-only",
+      "scenario_count": 0,
+      "source_artifact_count": 1,
+      "source_population": 14798,
+      "tier": "G",
+      "timezone": "America/Nuuk"
+    },
+    {
+      "city_id": "geonames.3577154",
+      "completed_scenarios": 0,
+      "country_code": "AW",
+      "latitude": 12.52398,
+      "limitations": [
+        "This is a gazetteer point, not an official municipal boundary.",
+        "Source population values may use different years and definitions.",
+        "Tier G denotes catalog discoverability, not deep analytical readiness."
+      ],
+      "longitude": -70.02703,
+      "name": "Oranjestad",
+      "negative_scenarios": 0,
+      "readiness": "catalog-discovery-only",
+      "scenario_count": 0,
+      "source_artifact_count": 1,
+      "source_population": 29998,
+      "tier": "G",
+      "timezone": "America/Aruba"
+    },
+    {
+      "city_id": "geonames.3143244",
+      "completed_scenarios": 0,
+      "country_code": "NO",
+      "latitude": 59.91273,
+      "limitations": [
+        "This is a gazetteer point, not an official municipal boundary.",
+        "Source population values may use different years and definitions.",
+        "Tier G denotes catalog discoverability, not deep analytical readiness."
+      ],
+      "longitude": 10.74609,
+      "name": "Oslo",
+      "negative_scenarios": 0,
+      "readiness": "catalog-discovery-only",
+      "scenario_count": 0,
+      "source_artifact_count": 1,
+      "source_population": 1082575,
+      "tier": "G",
+      "timezone": "Europe/Oslo"
+    },
+    {
+      "city_id": "geonames.2357048",
+      "completed_scenarios": 0,
+      "country_code": "BF",
+      "latitude": 12.36566,
+      "limitations": [
+        "This is a gazetteer point, not an official municipal boundary.",
+        "Source population values may use different years and definitions.",
+        "Tier G denotes catalog discoverability, not deep analytical readiness."
+      ],
+      "longitude": -1.53388,
+      "name": "Ouagadougou",
+      "negative_scenarios": 0,
+      "readiness": "catalog-discovery-only",
+      "scenario_count": 0,
+      "source_artifact_count": 1,
+      "source_population": 2415266,
+      "tier": "G",
+      "timezone": "Africa/Ouagadougou"
+    },
+    {
+      "city_id": "geonames.5881576",
+      "completed_scenarios": 0,
+      "country_code": "AS",
+      "latitude": -14.27806,
+      "limitations": [
+        "This is a gazetteer point, not an official municipal boundary.",
+        "Source population values may use different years and definitions.",
+        "Tier G denotes catalog discoverability, not deep analytical readiness."
+      ],
+      "longitude": -170.7025,
+      "name": "Pago Pago",
+      "negative_scenarios": 0,
+      "readiness": "catalog-discovery-only",
+      "scenario_count": 0,
+      "source_artifact_count": 1,
+      "source_population": 11500,
+      "tier": "G",
+      "timezone": "Pacific/Pago_Pago"
+    },
+    {
+      "city_id": "geonames.2081986",
+      "completed_scenarios": 0,
+      "country_code": "FM",
+      "latitude": 6.92477,
+      "limitations": [
+        "This is a gazetteer point, not an official municipal boundary.",
+        "Source population values may use different years and definitions.",
+        "Tier G denotes catalog discoverability, not deep analytical readiness."
+      ],
+      "longitude": 158.16109,
+      "name": "Palikir",
+      "negative_scenarios": 0,
+      "readiness": "catalog-discovery-only",
+      "scenario_count": 0,
+      "source_artifact_count": 1,
+      "source_population": 6942,
+      "tier": "G",
+      "timezone": "Pacific/Pohnpei"
+    },
+    {
+      "city_id": "geonames.3703443",
+      "completed_scenarios": 0,
+      "country_code": "PA",
+      "latitude": 8.9936,
+      "limitations": [
+        "This is a gazetteer point, not an official municipal boundary.",
+        "Source population values may use different years and definitions.",
+        "Tier G denotes catalog discoverability, not deep analytical readiness."
+      ],
+      "longitude": -79.51973,
+      "name": "Panama City",
+      "negative_scenarios": 0,
+      "readiness": "catalog-discovery-only",
+      "scenario_count": 0,
+      "source_artifact_count": 1,
+      "source_population": 408168,
+      "tier": "G",
+      "timezone": "America/Panama"
+    },
+    {
+      "city_id": "geonames.3383330",
+      "completed_scenarios": 0,
+      "country_code": "SR",
+      "latitude": 5.86638,
+      "limitations": [
+        "This is a gazetteer point, not an official municipal boundary.",
+        "Source population values may use different years and definitions.",
+        "Tier G denotes catalog discoverability, not deep analytical readiness."
+      ],
+      "longitude": -55.16682,
+      "name": "Paramaribo",
+      "negative_scenarios": 0,
+      "readiness": "catalog-discovery-only",
+      "scenario_count": 0,
+      "source_artifact_count": 1,
+      "source_population": 223757,
+      "tier": "G",
+      "timezone": "America/Paramaribo"
+    },
+    {
+      "city_id": "geonames.2988507",
+      "completed_scenarios": 0,
+      "country_code": "FR",
+      "latitude": 48.85341,
+      "limitations": [
+        "This is a gazetteer point, not an official municipal boundary.",
+        "Source population values may use different years and definitions.",
+        "Tier G denotes catalog discoverability, not deep analytical readiness."
+      ],
+      "longitude": 2.3488,
+      "name": "Paris",
+      "negative_scenarios": 0,
+      "readiness": "catalog-discovery-only",
+      "scenario_count": 0,
+      "source_artifact_count": 1,
+      "source_population": 2138551,
+      "tier": "G",
+      "timezone": "Europe/Paris"
+    },
+    {
+      "city_id": "us.pa.philadelphia",
+      "completed_scenarios": 10,
+      "country_code": "US",
+      "latitude": 40.002449999999996,
+      "limitations": [
+        "ZIP-code areas are not neighborhoods and can cross policy-relevant boundaries.",
+        "Information requests should not be interpreted as physical service demand.",
+        "Twelve city-bound packs are executions of twelve shared method designs; city bindings are not counted as new non-duplicative designs.",
+        "Planning-support output does not authorize implementation or establish impact."
+      ],
+      "longitude": -75.11805,
+      "name": "Philadelphia",
+      "negative_scenarios": 2,
+      "quality_status": "warn",
+      "readiness": "evidence-gated-planning-support",
+      "scenario_count": 12,
+      "source_artifact_count": 7,
+      "source_population": 1579706,
+      "tier": "D",
+      "timezone": "America/New_York"
+    },
+    {
+      "city_id": "geonames.3513392",
+      "completed_scenarios": 0,
+      "country_code": "SX",
+      "latitude": 18.026,
+      "limitations": [
+        "This is a gazetteer point, not an official municipal boundary.",
+        "Source population values may use different years and definitions.",
+        "Tier G denotes catalog discoverability, not deep analytical readiness."
+      ],
+      "longitude": -63.04582,
+      "name": "Philipsburg",
+      "negative_scenarios": 0,
+      "readiness": "catalog-discovery-only",
+      "scenario_count": 0,
+      "source_artifact_count": 1,
+      "source_population": 1400,
+      "tier": "G",
+      "timezone": "America/Lower_Princes"
+    },
+    {
+      "city_id": "geonames.1821306",
+      "completed_scenarios": 0,
+      "country_code": "KH",
+      "latitude": 11.56245,
+      "limitations": [
+        "This is a gazetteer point, not an official municipal boundary.",
+        "Source population values may use different years and definitions.",
+        "Tier G denotes catalog discoverability, not deep analytical readiness."
+      ],
+      "longitude": 104.91601,
+      "name": "Phnom Penh",
+      "negative_scenarios": 0,
+      "readiness": "catalog-discovery-only",
+      "scenario_count": 0,
+      "source_artifact_count": 1,
+      "source_population": 1573544,
+      "tier": "G",
+      "timezone": "Asia/Phnom_Penh"
+    },
+    {
+      "city_id": "geonames.3193044",
+      "completed_scenarios": 0,
+      "country_code": "ME",
+      "latitude": 42.44124,
+      "limitations": [
+        "This is a gazetteer point, not an official municipal boundary.",
+        "Source population values may use different years and definitions.",
+        "Tier G denotes catalog discoverability, not deep analytical readiness."
+      ],
+      "longitude": 19.26309,
+      "name": "Podgorica",
+      "negative_scenarios": 0,
+      "readiness": "catalog-discovery-only",
+      "scenario_count": 0,
+      "source_artifact_count": 1,
+      "source_population": 236852,
+      "tier": "G",
+      "timezone": "Europe/Podgorica"
+    },
+    {
+      "city_id": "geonames.934154",
+      "completed_scenarios": 0,
+      "country_code": "MU",
+      "latitude": -20.16194,
+      "limitations": [
+        "This is a gazetteer point, not an official municipal boundary.",
+        "Source population values may use different years and definitions.",
+        "Tier G denotes catalog discoverability, not deep analytical readiness."
+      ],
+      "longitude": 57.49889,
+      "name": "Port Louis",
+      "negative_scenarios": 0,
+      "readiness": "catalog-discovery-only",
+      "scenario_count": 0,
+      "source_artifact_count": 1,
+      "source_population": 155226,
+      "tier": "G",
+      "timezone": "Indian/Mauritius"
+    },
+    {
+      "city_id": "geonames.2088122",
+      "completed_scenarios": 0,
+      "country_code": "PG",
+      "latitude": -9.47723,
+      "limitations": [
+        "This is a gazetteer point, not an official municipal boundary.",
+        "Source population values may use different years and definitions.",
+        "Tier G denotes catalog discoverability, not deep analytical readiness."
+      ],
+      "longitude": 147.15089,
+      "name": "Port Moresby",
+      "negative_scenarios": 0,
+      "readiness": "catalog-discovery-only",
+      "scenario_count": 0,
+      "source_artifact_count": 1,
+      "source_population": 283733,
+      "tier": "G",
+      "timezone": "Pacific/Port_Moresby"
+    },
+    {
+      "city_id": "geonames.3718426",
+      "completed_scenarios": 0,
+      "country_code": "HT",
+      "latitude": 18.54349,
+      "limitations": [
+        "This is a gazetteer point, not an official municipal boundary.",
+        "Source population values may use different years and definitions.",
+        "Tier G denotes catalog discoverability, not deep analytical readiness."
+      ],
+      "longitude": -72.33881,
+      "name": "Port-au-Prince",
+      "negative_scenarios": 0,
+      "readiness": "catalog-discovery-only",
+      "scenario_count": 0,
+      "source_artifact_count": 1,
+      "source_population": 1234742,
+      "tier": "G",
+      "timezone": "America/Port-au-Prince"
+    },
+    {
+      "city_id": "geonames.1546102",
+      "completed_scenarios": 0,
+      "country_code": "TF",
+      "latitude": -49.34916,
+      "limitations": [
+        "This is a gazetteer point, not an official municipal boundary.",
+        "Source population values may use different years and definitions.",
+        "Tier G denotes catalog discoverability, not deep analytical readiness."
+      ],
+      "longitude": 70.21937,
+      "name": "Port-aux-Français",
+      "negative_scenarios": 0,
+      "readiness": "catalog-discovery-only",
+      "scenario_count": 0,
+      "source_artifact_count": 1,
+      "source_population": 45,
+      "tier": "G",
+      "timezone": "Indian/Kerguelen"
+    },
+    {
+      "city_id": "geonames.2135171",
+      "completed_scenarios": 0,
+      "country_code": "VU",
+      "latitude": -17.73648,
+      "limitations": [
+        "This is a gazetteer point, not an official municipal boundary.",
+        "Source population values may use different years and definitions.",
+        "Tier G denotes catalog discoverability, not deep analytical readiness."
+      ],
+      "longitude": 168.31366,
+      "name": "Port-Vila",
+      "negative_scenarios": 0,
+      "readiness": "catalog-discovery-only",
+      "scenario_count": 0,
+      "source_artifact_count": 1,
+      "source_population": 35901,
+      "tier": "G",
+      "timezone": "Pacific/Efate"
+    },
+    {
+      "city_id": "geonames.3067696",
+      "completed_scenarios": 0,
+      "country_code": "CZ",
+      "latitude": 50.08804,
+      "limitations": [
+        "This is a gazetteer point, not an official municipal boundary.",
+        "Source population values may use different years and definitions.",
+        "Tier G denotes catalog discoverability, not deep analytical readiness."
+      ],
+      "longitude": 14.42076,
+      "name": "Prague",
+      "negative_scenarios": 0,
+      "readiness": "catalog-discovery-only",
+      "scenario_count": 0,
+      "source_artifact_count": 1,
+      "source_population": 1165581,
+      "tier": "G",
+      "timezone": "Europe/Prague"
+    },
+    {
+      "city_id": "geonames.3374333",
+      "completed_scenarios": 0,
+      "country_code": "CV",
+      "latitude": 14.93152,
+      "limitations": [
+        "This is a gazetteer point, not an official municipal boundary.",
+        "Source population values may use different years and definitions.",
+        "Tier G denotes catalog discoverability, not deep analytical readiness."
+      ],
+      "longitude": -23.51254,
+      "name": "Praia",
+      "negative_scenarios": 0,
+      "readiness": "catalog-discovery-only",
+      "scenario_count": 0,
+      "source_artifact_count": 1,
+      "source_population": 137868,
+      "tier": "G",
+      "timezone": "Atlantic/Cape_Verde"
+    },
+    {
+      "city_id": "geonames.786714",
+      "completed_scenarios": 0,
+      "country_code": "XK",
+      "latitude": 42.67272,
+      "limitations": [
+        "This is a gazetteer point, not an official municipal boundary.",
+        "Source population values may use different years and definitions.",
+        "Tier G denotes catalog discoverability, not deep analytical readiness."
+      ],
+      "longitude": 21.16688,
+      "name": "Pristina",
+      "negative_scenarios": 0,
+      "readiness": "catalog-discovery-only",
+      "scenario_count": 0,
+      "source_artifact_count": 1,
+      "source_population": 550000,
+      "tier": "G",
+      "timezone": "Europe/Belgrade"
+    },
+    {
+      "city_id": "geonames.11703857",
+      "completed_scenarios": 0,
+      "country_code": "TC",
+      "latitude": 21.78254,
+      "limitations": [
+        "This is a gazetteer point, not an official municipal boundary.",
+        "Source population values may use different years and definitions.",
+        "Tier G denotes catalog discoverability, not deep analytical readiness."
+      ],
+      "longitude": -72.25206,
+      "name": "Providenciales",
+      "negative_scenarios": 0,
+      "readiness": "catalog-discovery-only",
+      "scenario_count": 0,
+      "source_artifact_count": 1,
+      "source_population": 23769,
+      "tier": "G",
+      "timezone": "America/Grand_Turk"
+    },
+    {
+      "city_id": "geonames.1871859",
+      "completed_scenarios": 0,
+      "country_code": "KP",
+      "latitude": 39.03385,
+      "limitations": [
+        "This is a gazetteer point, not an official municipal boundary.",
+        "Source population values may use different years and definitions.",
+        "Tier G denotes catalog discoverability, not deep analytical readiness."
+      ],
+      "longitude": 125.75432,
+      "name": "Pyongyang",
+      "negative_scenarios": 0,
+      "readiness": "catalog-discovery-only",
+      "scenario_count": 0,
+      "source_artifact_count": 1,
+      "source_population": 3222000,
+      "tier": "G",
+      "timezone": "Asia/Pyongyang"
+    },
+    {
+      "city_id": "geonames.1692192",
+      "completed_scenarios": 0,
+      "country_code": "PH",
+      "latitude": 14.6488,
+      "limitations": [
+        "This is a gazetteer point, not an official municipal boundary.",
+        "Source population values may use different years and definitions.",
+        "Tier G denotes catalog discoverability, not deep analytical readiness."
+      ],
+      "longitude": 121.0509,
+      "name": "Quezon City",
+      "negative_scenarios": 0,
+      "readiness": "catalog-discovery-only",
+      "scenario_count": 0,
+      "source_artifact_count": 1,
+      "source_population": 3084270,
+      "tier": "G",
+      "timezone": "Asia/Manila"
+    },
+    {
+      "city_id": "geonames.3652462",
+      "completed_scenarios": 0,
+      "country_code": "EC",
+      "latitude": -0.22985,
+      "limitations": [
+        "This is a gazetteer point, not an official municipal boundary.",
+        "Source population values may use different years and definitions.",
+        "Tier G denotes catalog discoverability, not deep analytical readiness."
+      ],
+      "longitude": -78.52495,
+      "name": "Quito",
+      "negative_scenarios": 0,
+      "readiness": "catalog-discovery-only",
+      "scenario_count": 0,
+      "source_artifact_count": 1,
+      "source_population": 2781641,
+      "tier": "G",
+      "timezone": "America/Guayaquil"
+    },
+    {
+      "city_id": "geonames.3413829",
+      "completed_scenarios": 0,
+      "country_code": "IS",
+      "latitude": 64.13548,
+      "limitations": [
+        "This is a gazetteer point, not an official municipal boundary.",
+        "Source population values may use different years and definitions.",
+        "Tier G denotes catalog discoverability, not deep analytical readiness."
+      ],
+      "longitude": -21.89541,
+      "name": "Reykjavík",
+      "negative_scenarios": 0,
+      "readiness": "catalog-discovery-only",
+      "scenario_count": 0,
+      "source_artifact_count": 1,
+      "source_population": 118918,
+      "tier": "G",
+      "timezone": "Atlantic/Reykjavik"
+    },
+    {
+      "city_id": "geonames.456172",
+      "completed_scenarios": 0,
+      "country_code": "LV",
+      "latitude": 56.946,
+      "limitations": [
+        "This is a gazetteer point, not an official municipal boundary.",
+        "Source population values may use different years and definitions.",
+        "Tier G denotes catalog discoverability, not deep analytical readiness."
+      ],
+      "longitude": 24.10589,
+      "name": "Riga",
+      "negative_scenarios": 0,
+      "readiness": "catalog-discovery-only",
+      "scenario_count": 0,
+      "source_artifact_count": 1,
+      "source_population": 742572,
+      "tier": "G",
+      "timezone": "Europe/Riga"
+    },
+    {
+      "city_id": "geonames.3577430",
+      "completed_scenarios": 0,
+      "country_code": "VG",
+      "latitude": 18.42693,
+      "limitations": [
+        "This is a gazetteer point, not an official municipal boundary.",
+        "Source population values may use different years and definitions.",
+        "Tier G denotes catalog discoverability, not deep analytical readiness."
+      ],
+      "longitude": -64.62079,
+      "name": "Road Town",
+      "negative_scenarios": 0,
+      "readiness": "catalog-discovery-only",
+      "scenario_count": 0,
+      "source_artifact_count": 1,
+      "source_population": 8449,
+      "tier": "G",
+      "timezone": "America/Tortola"
+    },
+    {
+      "city_id": "geonames.3169070",
+      "completed_scenarios": 0,
+      "country_code": "IT",
+      "latitude": 41.89193,
+      "limitations": [
+        "This is a gazetteer point, not an official municipal boundary.",
+        "Source population values may use different years and definitions.",
+        "Tier G denotes catalog discoverability, not deep analytical readiness."
+      ],
+      "longitude": 12.51133,
+      "name": "Rome",
+      "negative_scenarios": 0,
+      "readiness": "catalog-discovery-only",
+      "scenario_count": 0,
+      "source_artifact_count": 1,
+      "source_population": 2318895,
+      "tier": "G",
+      "timezone": "Europe/Rome"
+    },
+    {
+      "city_id": "geonames.3575635",
+      "completed_scenarios": 0,
+      "country_code": "DM",
+      "latitude": 15.30174,
+      "limitations": [
+        "This is a gazetteer point, not an official municipal boundary.",
+        "Source population values may use different years and definitions.",
+        "Tier G denotes catalog discoverability, not deep analytical readiness."
+      ],
+      "longitude": -61.38808,
+      "name": "Roseau",
+      "negative_scenarios": 0,
+      "readiness": "catalog-discovery-only",
+      "scenario_count": 0,
+      "source_artifact_count": 1,
+      "source_population": 16571,
+      "tier": "G",
+      "timezone": "America/Dominica"
+    },
+    {
+      "city_id": "geonames.2747891",
+      "completed_scenarios": 0,
+      "country_code": "NL",
+      "latitude": 51.9225,
+      "limitations": [
+        "This is a gazetteer point, not an official municipal boundary.",
+        "Source population values may use different years and definitions.",
+        "Tier G denotes catalog discoverability, not deep analytical readiness."
+      ],
+      "longitude": 4.47917,
+      "name": "Rotterdam",
+      "negative_scenarios": 0,
+      "readiness": "catalog-discovery-only",
+      "scenario_count": 0,
+      "source_artifact_count": 1,
+      "source_population": 868135,
+      "tier": "G",
+      "timezone": "Europe/Amsterdam"
+    },
+    {
+      "city_id": "geonames.4796512",
+      "completed_scenarios": 0,
+      "country_code": "VI",
+      "latitude": 17.72751,
+      "limitations": [
+        "This is a gazetteer point, not an official municipal boundary.",
+        "Source population values may use different years and definitions.",
+        "Tier G denotes catalog discoverability, not deep analytical readiness."
+      ],
+      "longitude": -64.74698,
+      "name": "Saint Croix",
+      "negative_scenarios": 0,
+      "readiness": "catalog-discovery-only",
+      "scenario_count": 0,
+      "source_artifact_count": 1,
+      "source_population": 50601,
+      "tier": "G",
+      "timezone": "America/St_Thomas"
+    },
+    {
+      "city_id": "geonames.3579925",
+      "completed_scenarios": 0,
+      "country_code": "GD",
+      "latitude": 12.05288,
+      "limitations": [
+        "This is a gazetteer point, not an official municipal boundary.",
+        "Source population values may use different years and definitions.",
+        "Tier G denotes catalog discoverability, not deep analytical readiness."
+      ],
+      "longitude": -61.75226,
+      "name": "Saint George's",
+      "negative_scenarios": 0,
+      "readiness": "catalog-discovery-only",
+      "scenario_count": 0,
+      "source_artifact_count": 1,
+      "source_population": 7500,
+      "tier": "G",
+      "timezone": "America/Grenada"
+    },
+    {
+      "city_id": "geonames.3042091",
+      "completed_scenarios": 0,
+      "country_code": "JE",
+      "latitude": 49.18804,
+      "limitations": [
+        "This is a gazetteer point, not an official municipal boundary.",
+        "Source population values may use different years and definitions.",
+        "Tier G denotes catalog discoverability, not deep analytical readiness."
+      ],
+      "longitude": -2.10491,
+      "name": "Saint Helier",
+      "negative_scenarios": 0,
+      "readiness": "catalog-discovery-only",
+      "scenario_count": 0,
+      "source_artifact_count": 1,
+      "source_population": 28000,
+      "tier": "G",
+      "timezone": "Europe/Jersey"
+    },
+    {
+      "city_id": "geonames.3576022",
+      "completed_scenarios": 0,
+      "country_code": "AG",
+      "latitude": 17.12096,
+      "limitations": [
+        "This is a gazetteer point, not an official municipal boundary.",
+        "Source population values may use different years and definitions.",
+        "Tier G denotes catalog discoverability, not deep analytical readiness."
+      ],
+      "longitude": -61.84329,
+      "name": "Saint John’s",
+      "negative_scenarios": 0,
+      "readiness": "catalog-discovery-only",
+      "scenario_count": 0,
+      "source_artifact_count": 1,
+      "source_population": 51737,
+      "tier": "G",
+      "timezone": "America/Antigua"
+    },
+    {
+      "city_id": "geonames.3042287",
+      "completed_scenarios": 0,
+      "country_code": "GG",
+      "latitude": 49.45981,
+      "limitations": [
+        "This is a gazetteer point, not an official municipal boundary.",
+        "Source population values may use different years and definitions.",
+        "Tier G denotes catalog discoverability, not deep analytical readiness."
+      ],
+      "longitude": -2.53527,
+      "name": "Saint Peter Port",
+      "negative_scenarios": 0,
+      "readiness": "catalog-discovery-only",
+      "scenario_count": 0,
+      "source_artifact_count": 1,
+      "source_population": 16488,
+      "tier": "G",
+      "timezone": "Europe/Guernsey"
+    },
+    {
+      "city_id": "geonames.935264",
+      "completed_scenarios": 0,
+      "country_code": "RE",
+      "latitude": -20.88231,
+      "limitations": [
+        "This is a gazetteer point, not an official municipal boundary.",
+        "Source population values may use different years and definitions.",
+        "Tier G denotes catalog discoverability, not deep analytical readiness."
+      ],
+      "longitude": 55.4504,
+      "name": "Saint-Denis",
+      "negative_scenarios": 0,
+      "readiness": "catalog-discovery-only",
+      "scenario_count": 0,
+      "source_artifact_count": 1,
+      "source_population": 154765,
+      "tier": "G",
+      "timezone": "Indian/Reunion"
+    },
+    {
+      "city_id": "geonames.3424934",
+      "completed_scenarios": 0,
+      "country_code": "PM",
+      "latitude": 46.77914,
+      "limitations": [
+        "This is a gazetteer point, not an official municipal boundary.",
+        "Source population values may use different years and definitions.",
+        "Tier G denotes catalog discoverability, not deep analytical readiness."
+      ],
+      "longitude": -56.1773,
+      "name": "Saint-Pierre",
+      "negative_scenarios": 0,
+      "readiness": "catalog-discovery-only",
+      "scenario_count": 0,
+      "source_artifact_count": 1,
+      "source_population": 6200,
+      "tier": "G",
+      "timezone": "America/Miquelon"
+    },
+    {
+      "city_id": "geonames.7828758",
+      "completed_scenarios": 0,
+      "country_code": "MP",
+      "latitude": 15.21233,
+      "limitations": [
+        "This is a gazetteer point, not an official municipal boundary.",
+        "Source population values may use different years and definitions.",
+        "Tier G denotes catalog discoverability, not deep analytical readiness."
+      ],
+      "longitude": 145.7545,
+      "name": "Saipan",
+      "negative_scenarios": 0,
+      "readiness": "catalog-discovery-only",
+      "scenario_count": 0,
+      "source_artifact_count": 1,
+      "source_population": 48220,
+      "tier": "G",
+      "timezone": "Pacific/Saipan"
+    },
+    {
+      "city_id": "us.ca.san-francisco",
+      "completed_scenarios": 10,
+      "country_code": "US",
+      "latitude": 37.770250000000004,
+      "limitations": [
+        "Analysis neighborhoods are analytical groupings and can mask within-area variation.",
+        "Historical records can be updated after closure and are not immutable event logs.",
+        "Twelve city-bound packs are executions of twelve shared method designs; city bindings are not counted as new non-duplicative designs.",
+        "Planning-support output does not authorize implementation or establish impact."
+      ],
+      "longitude": -122.43594999999999,
+      "name": "San Francisco",
+      "negative_scenarios": 2,
+      "quality_status": "warn",
+      "readiness": "evidence-gated-planning-support",
+      "scenario_count": 12,
+      "source_artifact_count": 7,
+      "source_population": 830235,
+      "tier": "D",
+      "timezone": "America/Los_Angeles"
+    },
+    {
+      "city_id": "geonames.3621849",
+      "completed_scenarios": 0,
+      "country_code": "CR",
+      "latitude": 9.93388,
+      "limitations": [
+        "This is a gazetteer point, not an official municipal boundary.",
+        "Source population values may use different years and definitions.",
+        "Tier G denotes catalog discoverability, not deep analytical readiness."
+      ],
+      "longitude": -84.08489,
+      "name": "San José",
+      "negative_scenarios": 0,
+      "readiness": "catalog-discovery-only",
+      "scenario_count": 0,
+      "source_artifact_count": 1,
+      "source_population": 335007,
+      "tier": "G",
+      "timezone": "America/Costa_Rica"
+    },
+    {
+      "city_id": "geonames.4568127",
+      "completed_scenarios": 0,
+      "country_code": "PR",
+      "latitude": 18.46633,
+      "limitations": [
+        "This is a gazetteer point, not an official municipal boundary.",
+        "Source population values may use different years and definitions.",
+        "Tier G denotes catalog discoverability, not deep analytical readiness."
+      ],
+      "longitude": -66.10572,
+      "name": "San Juan",
+      "negative_scenarios": 0,
+      "readiness": "catalog-discovery-only",
+      "scenario_count": 0,
+      "source_artifact_count": 1,
+      "source_population": 418140,
+      "tier": "G",
+      "timezone": "America/Puerto_Rico"
+    },
+    {
+      "city_id": "geonames.3168070",
+      "completed_scenarios": 0,
+      "country_code": "SM",
+      "latitude": 43.93667,
+      "limitations": [
+        "This is a gazetteer point, not an official municipal boundary.",
+        "Source population values may use different years and definitions.",
+        "Tier G denotes catalog discoverability, not deep analytical readiness."
+      ],
+      "longitude": 12.44639,
+      "name": "San Marino",
+      "negative_scenarios": 0,
+      "readiness": "catalog-discovery-only",
+      "scenario_count": 0,
+      "source_artifact_count": 1,
+      "source_population": 4500,
+      "tier": "G",
+      "timezone": "Europe/San_Marino"
+    },
+    {
+      "city_id": "geonames.2562541",
+      "completed_scenarios": 0,
+      "country_code": "MT",
+      "latitude": 35.95064,
+      "limitations": [
+        "This is a gazetteer point, not an official municipal boundary.",
+        "Source population values may use different years and definitions.",
+        "Tier G denotes catalog discoverability, not deep analytical readiness."
+      ],
+      "longitude": 14.41561,
+      "name": "San Pawl il-Baħar",
+      "negative_scenarios": 0,
+      "readiness": "catalog-discovery-only",
+      "scenario_count": 0,
+      "source_artifact_count": 1,
+      "source_population": 32042,
+      "tier": "G",
+      "timezone": "Europe/Malta"
+    },
+    {
+      "city_id": "geonames.3583361",
+      "completed_scenarios": 0,
+      "country_code": "SV",
+      "latitude": 13.68935,
+      "limitations": [
+        "This is a gazetteer point, not an official municipal boundary.",
+        "Source population values may use different years and definitions.",
+        "Tier G denotes catalog discoverability, not deep analytical readiness."
+      ],
+      "longitude": -89.18718,
+      "name": "San Salvador",
+      "negative_scenarios": 0,
+      "readiness": "catalog-discovery-only",
+      "scenario_count": 0,
+      "source_artifact_count": 1,
+      "source_population": 525990,
+      "tier": "G",
+      "timezone": "America/El_Salvador"
+    },
+    {
+      "city_id": "geonames.71137",
+      "completed_scenarios": 0,
+      "country_code": "YE",
+      "latitude": 15.35452,
+      "limitations": [
+        "This is a gazetteer point, not an official municipal boundary.",
+        "Source population values may use different years and definitions.",
+        "Tier G denotes catalog discoverability, not deep analytical readiness."
+      ],
+      "longitude": 44.20646,
+      "name": "Sanaa",
+      "negative_scenarios": 0,
+      "readiness": "catalog-discovery-only",
+      "scenario_count": 0,
+      "source_artifact_count": 1,
+      "source_population": 1937451,
+      "tier": "G",
+      "timezone": "Asia/Aden"
+    },
+    {
+      "city_id": "geonames.3871336",
+      "completed_scenarios": 2,
+      "country_code": "CL",
+      "latitude": -33.45694,
+      "limitations": [
+        "Tier-S outputs are descriptive screens and cannot issue recommendations.",
+        "Country indicators remain national context and climate remains one grid point."
+      ],
+      "longitude": -70.64827,
+      "name": "Santiago",
+      "negative_scenarios": 1,
+      "quality_status": "pass",
+      "readiness": "standardized-descriptive-screening",
+      "scenario_count": 3,
+      "source_artifact_count": 5,
+      "source_population": 4837295,
+      "tier": "S",
+      "timezone": "America/Santiago"
+    },
+    {
+      "city_id": "geonames.3492908",
+      "completed_scenarios": 0,
+      "country_code": "DO",
+      "latitude": 18.47186,
+      "limitations": [
+        "This is a gazetteer point, not an official municipal boundary.",
+        "Source population values may use different years and definitions.",
+        "Tier G denotes catalog discoverability, not deep analytical readiness."
+      ],
+      "longitude": -69.89232,
+      "name": "Santo Domingo",
+      "negative_scenarios": 0,
+      "readiness": "catalog-discovery-only",
+      "scenario_count": 0,
+      "source_artifact_count": 1,
+      "source_population": 2201941,
+      "tier": "G",
+      "timezone": "America/Santo_Domingo"
+    },
+    {
+      "city_id": "geonames.3191281",
+      "completed_scenarios": 0,
+      "country_code": "BA",
+      "latitude": 43.84864,
+      "limitations": [
+        "This is a gazetteer point, not an official municipal boundary.",
+        "Source population values may use different years and definitions.",
+        "Tier G denotes catalog discoverability, not deep analytical readiness."
+      ],
+      "longitude": 18.35644,
+      "name": "Sarajevo",
+      "negative_scenarios": 0,
+      "readiness": "catalog-discovery-only",
+      "scenario_count": 0,
+      "source_artifact_count": 1,
+      "source_population": 696731,
+      "tier": "G",
+      "timezone": "Europe/Sarajevo"
+    },
+    {
+      "city_id": "us.wa.seattle",
+      "completed_scenarios": 9,
+      "country_code": "US",
+      "latitude": 47.607600000000005,
+      "limitations": [
+        "Published request types are a selected subset, so citywide demand totals are invalid.",
+        "Current status does not contain a complete service-resolution history.",
+        "Twelve city-bound packs are executions of twelve shared method designs; city bindings are not counted as new non-duplicative designs.",
+        "Planning-support output does not authorize implementation or establish impact."
+      ],
+      "longitude": -122.34205,
+      "name": "Seattle",
+      "negative_scenarios": 3,
+      "quality_status": "warn",
+      "readiness": "evidence-gated-planning-support",
+      "scenario_count": 12,
+      "source_artifact_count": 7,
+      "source_population": 754195,
+      "tier": "D",
+      "timezone": "America/Los_Angeles"
+    },
+    {
+      "city_id": "geonames.1835848",
+      "completed_scenarios": 2,
+      "country_code": "KR",
+      "latitude": 37.566,
+      "limitations": [
+        "Tier-S outputs are descriptive screens and cannot issue recommendations.",
+        "Country indicators remain national context and climate remains one grid point."
+      ],
+      "longitude": 126.9784,
+      "name": "Seoul",
+      "negative_scenarios": 1,
+      "quality_status": "pass",
+      "readiness": "standardized-descriptive-screening",
+      "scenario_count": 3,
+      "source_artifact_count": 5,
+      "source_population": 10349312,
+      "tier": "S",
+      "timezone": "Asia/Seoul"
+    },
+    {
+      "city_id": "geonames.2411989",
+      "completed_scenarios": 0,
+      "country_code": "GM",
+      "latitude": 13.43833,
+      "limitations": [
+        "This is a gazetteer point, not an official municipal boundary.",
+        "Source population values may use different years and definitions.",
+        "Tier G denotes catalog discoverability, not deep analytical readiness."
+      ],
+      "longitude": -16.67806,
+      "name": "Serekunda",
+      "negative_scenarios": 0,
+      "readiness": "catalog-discovery-only",
+      "scenario_count": 0,
+      "source_artifact_count": 1,
+      "source_population": 340000,
+      "tier": "G",
+      "timezone": "Africa/Banjul"
+    },
+    {
+      "city_id": "geonames.1796236",
+      "completed_scenarios": 2,
+      "country_code": "CN",
+      "latitude": 31.22222,
+      "limitations": [
+        "Tier-S outputs are descriptive screens and cannot issue recommendations.",
+        "Country indicators remain national context and climate remains one grid point."
+      ],
+      "longitude": 121.45806,
+      "name": "Shanghai",
+      "negative_scenarios": 1,
+      "quality_status": "pass",
+      "readiness": "standardized-descriptive-screening",
+      "scenario_count": 3,
+      "source_artifact_count": 5,
+      "source_population": 24874500,
+      "tier": "S",
+      "timezone": "Asia/Shanghai"
+    },
+    {
+      "city_id": "geonames.1795565",
+      "completed_scenarios": 0,
+      "country_code": "CN",
+      "latitude": 22.54554,
+      "limitations": [
+        "This is a gazetteer point, not an official municipal boundary.",
+        "Source population values may use different years and definitions.",
+        "Tier G denotes catalog discoverability, not deep analytical readiness."
+      ],
+      "longitude": 114.0683,
+      "name": "Shenzhen",
+      "negative_scenarios": 0,
+      "readiness": "catalog-discovery-only",
+      "scenario_count": 0,
+      "source_artifact_count": 1,
+      "source_population": 17494398,
+      "tier": "G",
+      "timezone": "Asia/Shanghai"
+    },
+    {
+      "city_id": "geonames.1880252",
+      "completed_scenarios": 2,
+      "country_code": "SG",
+      "latitude": 1.28967,
+      "limitations": [
+        "Tier-S outputs are descriptive screens and cannot issue recommendations.",
+        "Country indicators remain national context and climate remains one grid point."
+      ],
+      "longitude": 103.85007,
+      "name": "Singapore",
+      "negative_scenarios": 1,
+      "quality_status": "pass",
+      "readiness": "standardized-descriptive-screening",
+      "scenario_count": 3,
+      "source_artifact_count": 5,
+      "source_population": 5638700,
+      "tier": "S",
+      "timezone": "Asia/Singapore"
+    },
+    {
+      "city_id": "geonames.785842",
+      "completed_scenarios": 0,
+      "country_code": "MK",
+      "latitude": 41.99646,
+      "limitations": [
+        "This is a gazetteer point, not an official municipal boundary.",
+        "Source population values may use different years and definitions.",
+        "Tier G denotes catalog discoverability, not deep analytical readiness."
+      ],
+      "longitude": 21.43141,
+      "name": "Skopje",
+      "negative_scenarios": 0,
+      "readiness": "catalog-discovery-only",
+      "scenario_count": 0,
+      "source_artifact_count": 1,
+      "source_population": 474889,
+      "tier": "G",
+      "timezone": "Europe/Skopje"
+    },
+    {
+      "city_id": "geonames.727011",
+      "completed_scenarios": 0,
+      "country_code": "BG",
+      "latitude": 42.69751,
+      "limitations": [
+        "This is a gazetteer point, not an official municipal boundary.",
+        "Source population values may use different years and definitions.",
+        "Tier G denotes catalog discoverability, not deep analytical readiness."
+      ],
+      "longitude": 23.32415,
+      "name": "Sofia",
+      "negative_scenarios": 0,
+      "readiness": "catalog-discovery-only",
+      "scenario_count": 0,
+      "source_artifact_count": 1,
+      "source_population": 1152556,
+      "tier": "G",
+      "timezone": "Europe/Sofia"
+    },
+    {
+      "city_id": "geonames.3426691",
+      "completed_scenarios": 0,
+      "country_code": "FK",
+      "latitude": -51.69382,
+      "limitations": [
+        "This is a gazetteer point, not an official municipal boundary.",
+        "Source population values may use different years and definitions.",
+        "Tier G denotes catalog discoverability, not deep analytical readiness."
+      ],
+      "longitude": -57.85701,
+      "name": "Stanley",
+      "negative_scenarios": 0,
+      "readiness": "catalog-discovery-only",
+      "scenario_count": 0,
+      "source_artifact_count": 1,
+      "source_population": 2213,
+      "tier": "G",
+      "timezone": "Atlantic/Stanley"
+    },
+    {
+      "city_id": "geonames.2673730",
+      "completed_scenarios": 0,
+      "country_code": "SE",
+      "latitude": 59.32938,
+      "limitations": [
+        "This is a gazetteer point, not an official municipal boundary.",
+        "Source population values may use different years and definitions.",
+        "Tier G denotes catalog discoverability, not deep analytical readiness."
+      ],
+      "longitude": 18.06871,
+      "name": "Stockholm",
+      "negative_scenarios": 0,
+      "readiness": "catalog-discovery-only",
+      "scenario_count": 0,
+      "source_artifact_count": 1,
+      "source_population": 1515017,
+      "tier": "G",
+      "timezone": "Europe/Stockholm"
+    },
+    {
+      "city_id": "geonames.2147714",
+      "completed_scenarios": 2,
+      "country_code": "AU",
+      "latitude": -33.86785,
+      "limitations": [
+        "Tier-S outputs are descriptive screens and cannot issue recommendations.",
+        "Country indicators remain national context and climate remains one grid point."
+      ],
+      "longitude": 151.20732,
+      "name": "Sydney",
+      "negative_scenarios": 1,
+      "quality_status": "pass",
+      "readiness": "standardized-descriptive-screening",
+      "scenario_count": 3,
+      "source_artifact_count": 5,
+      "source_population": 5638830,
+      "tier": "S",
+      "timezone": "Australia/Sydney"
+    },
+    {
+      "city_id": "geonames.3448439",
+      "completed_scenarios": 2,
+      "country_code": "BR",
+      "latitude": -23.5475,
+      "limitations": [
+        "Tier-S outputs are descriptive screens and cannot issue recommendations.",
+        "Country indicators remain national context and climate remains one grid point."
+      ],
+      "longitude": -46.63611,
+      "name": "São Paulo",
+      "negative_scenarios": 1,
+      "quality_status": "pass",
+      "readiness": "standardized-descriptive-screening",
+      "scenario_count": 3,
+      "source_artifact_count": 5,
+      "source_population": 12400232,
+      "tier": "S",
+      "timezone": "America/Sao_Paulo"
+    },
+    {
+      "city_id": "geonames.2410763",
+      "completed_scenarios": 0,
+      "country_code": "ST",
+      "latitude": 0.33756,
+      "limitations": [
+        "This is a gazetteer point, not an official municipal boundary.",
+        "Source population values may use different years and definitions.",
+        "Tier G denotes catalog discoverability, not deep analytical readiness."
+      ],
+      "longitude": 6.7299,
+      "name": "São Tomé",
+      "negative_scenarios": 0,
+      "readiness": "catalog-discovery-only",
+      "scenario_count": 0,
+      "source_artifact_count": 1,
+      "source_population": 53300,
+      "tier": "G",
+      "timezone": "Africa/Sao_Tome"
+    },
+    {
+      "city_id": "geonames.1668341",
+      "completed_scenarios": 0,
+      "country_code": "TW",
+      "latitude": 25.05306,
+      "limitations": [
+        "This is a gazetteer point, not an official municipal boundary.",
+        "Source population values may use different years and definitions.",
+        "Tier G denotes catalog discoverability, not deep analytical readiness."
+      ],
+      "longitude": 121.52639,
+      "name": "Taipei",
+      "negative_scenarios": 0,
+      "readiness": "catalog-discovery-only",
+      "scenario_count": 0,
+      "source_artifact_count": 1,
+      "source_population": 7871900,
+      "tier": "G",
+      "timezone": "Asia/Taipei"
+    },
+    {
+      "city_id": "geonames.588409",
+      "completed_scenarios": 0,
+      "country_code": "EE",
+      "latitude": 59.43696,
+      "limitations": [
+        "This is a gazetteer point, not an official municipal boundary.",
+        "Source population values may use different years and definitions.",
+        "Tier G denotes catalog discoverability, not deep analytical readiness."
+      ],
+      "longitude": 24.75353,
+      "name": "Tallinn",
+      "negative_scenarios": 0,
+      "readiness": "catalog-discovery-only",
+      "scenario_count": 0,
+      "source_artifact_count": 1,
+      "source_population": 394024,
+      "tier": "G",
+      "timezone": "Europe/Tallinn"
+    },
+    {
+      "city_id": "geonames.2110257",
+      "completed_scenarios": 0,
+      "country_code": "KI",
+      "latitude": 1.3278,
+      "limitations": [
+        "This is a gazetteer point, not an official municipal boundary.",
+        "Source population values may use different years and definitions.",
+        "Tier G denotes catalog discoverability, not deep analytical readiness."
+      ],
+      "longitude": 172.97696,
+      "name": "Tarawa",
+      "negative_scenarios": 0,
+      "readiness": "catalog-discovery-only",
+      "scenario_count": 0,
+      "source_artifact_count": 1,
+      "source_population": 40311,
+      "tier": "G",
+      "timezone": "Pacific/Tarawa"
+    },
+    {
+      "city_id": "geonames.1512569",
+      "completed_scenarios": 0,
+      "country_code": "UZ",
+      "latitude": 41.26465,
+      "limitations": [
+        "This is a gazetteer point, not an official municipal boundary.",
+        "Source population values may use different years and definitions.",
+        "Tier G denotes catalog discoverability, not deep analytical readiness."
+      ],
+      "longitude": 69.21627,
+      "name": "Tashkent",
+      "negative_scenarios": 0,
+      "readiness": "catalog-discovery-only",
+      "scenario_count": 0,
+      "source_artifact_count": 1,
+      "source_population": 1978028,
+      "tier": "G",
+      "timezone": "Asia/Tashkent"
+    },
+    {
+      "city_id": "geonames.611717",
+      "completed_scenarios": 0,
+      "country_code": "GE",
+      "latitude": 41.69143,
+      "limitations": [
+        "This is a gazetteer point, not an official municipal boundary.",
+        "Source population values may use different years and definitions.",
+        "Tier G denotes catalog discoverability, not deep analytical readiness."
+      ],
+      "longitude": 44.83412,
+      "name": "Tbilisi",
+      "negative_scenarios": 0,
+      "readiness": "catalog-discovery-only",
+      "scenario_count": 0,
+      "source_artifact_count": 1,
+      "source_population": 1049498,
+      "tier": "G",
+      "timezone": "Asia/Tbilisi"
+    },
+    {
+      "city_id": "geonames.3600949",
+      "completed_scenarios": 0,
+      "country_code": "HN",
+      "latitude": 14.0818,
+      "limitations": [
+        "This is a gazetteer point, not an official municipal boundary.",
+        "Source population values may use different years and definitions.",
+        "Tier G denotes catalog discoverability, not deep analytical readiness."
+      ],
+      "longitude": -87.20681,
+      "name": "Tegucigalpa",
+      "negative_scenarios": 0,
+      "readiness": "catalog-discovery-only",
+      "scenario_count": 0,
+      "source_artifact_count": 1,
+      "source_population": 850848,
+      "tier": "G",
+      "timezone": "America/Tegucigalpa"
+    },
+    {
+      "city_id": "geonames.112931",
+      "completed_scenarios": 2,
+      "country_code": "IR",
+      "latitude": 35.69439,
+      "limitations": [
+        "Tier-S outputs are descriptive screens and cannot issue recommendations.",
+        "Country indicators remain national context and climate remains one grid point."
+      ],
+      "longitude": 51.42151,
+      "name": "Tehran",
+      "negative_scenarios": 1,
+      "quality_status": "pass",
+      "readiness": "standardized-descriptive-screening",
+      "scenario_count": 3,
+      "source_artifact_count": 5,
+      "source_population": 7153309,
+      "tier": "S",
+      "timezone": "Asia/Tehran"
+    },
+    {
+      "city_id": "geonames.3573374",
+      "completed_scenarios": 0,
+      "country_code": "AI",
+      "latitude": 18.21704,
+      "limitations": [
+        "This is a gazetteer point, not an official municipal boundary.",
+        "Source population values may use different years and definitions.",
+        "Tier G denotes catalog discoverability, not deep analytical readiness."
+      ],
+      "longitude": -63.05783,
+      "name": "The Valley",
+      "negative_scenarios": 0,
+      "readiness": "catalog-discovery-only",
+      "scenario_count": 0,
+      "source_artifact_count": 1,
+      "source_population": 2035,
+      "tier": "G",
+      "timezone": "America/Anguilla"
+    },
+    {
+      "city_id": "geonames.1252416",
+      "completed_scenarios": 0,
+      "country_code": "BT",
+      "latitude": 27.46609,
+      "limitations": [
+        "This is a gazetteer point, not an official municipal boundary.",
+        "Source population values may use different years and definitions.",
+        "Tier G denotes catalog discoverability, not deep analytical readiness."
+      ],
+      "longitude": 89.64191,
+      "name": "Thimphu",
+      "negative_scenarios": 0,
+      "readiness": "catalog-discovery-only",
+      "scenario_count": 0,
+      "source_artifact_count": 1,
+      "source_population": 98676,
+      "tier": "G",
+      "timezone": "Asia/Thimphu"
+    },
+    {
+      "city_id": "geonames.1792947",
+      "completed_scenarios": 0,
+      "country_code": "CN",
+      "latitude": 39.14222,
+      "limitations": [
+        "This is a gazetteer point, not an official municipal boundary.",
+        "Source population values may use different years and definitions.",
+        "Tier G denotes catalog discoverability, not deep analytical readiness."
+      ],
+      "longitude": 117.17667,
+      "name": "Tianjin",
+      "negative_scenarios": 0,
+      "readiness": "catalog-discovery-only",
+      "scenario_count": 0,
+      "source_artifact_count": 1,
+      "source_population": 11090314,
+      "tier": "G",
+      "timezone": "Asia/Shanghai"
+    },
+    {
+      "city_id": "geonames.3183875",
+      "completed_scenarios": 0,
+      "country_code": "AL",
+      "latitude": 41.32744,
+      "limitations": [
+        "This is a gazetteer point, not an official municipal boundary.",
+        "Source population values may use different years and definitions.",
+        "Tier G denotes catalog discoverability, not deep analytical readiness."
+      ],
+      "longitude": 19.81866,
+      "name": "Tirana",
+      "negative_scenarios": 0,
+      "readiness": "catalog-discovery-only",
+      "scenario_count": 0,
+      "source_artifact_count": 1,
+      "source_population": 418495,
+      "tier": "G",
+      "timezone": "Europe/Tirane"
+    },
+    {
+      "city_id": "geonames.1850147",
+      "completed_scenarios": 2,
+      "country_code": "JP",
+      "latitude": 35.6895,
+      "limitations": [
+        "Tier-S outputs are descriptive screens and cannot issue recommendations.",
+        "Country indicators remain national context and climate remains one grid point."
+      ],
+      "longitude": 139.69171,
+      "name": "Tokyo",
+      "negative_scenarios": 1,
+      "quality_status": "pass",
+      "readiness": "standardized-descriptive-screening",
+      "scenario_count": 3,
+      "source_artifact_count": 5,
+      "source_population": 9733276,
+      "tier": "S",
+      "timezone": "Asia/Tokyo"
+    },
+    {
+      "city_id": "geonames.6167865",
+      "completed_scenarios": 0,
+      "country_code": "CA",
+      "latitude": 43.70643,
+      "limitations": [
+        "This is a gazetteer point, not an official municipal boundary.",
+        "Source population values may use different years and definitions.",
+        "Tier G denotes catalog discoverability, not deep analytical readiness."
+      ],
+      "longitude": -79.39864,
+      "name": "Toronto",
+      "negative_scenarios": 0,
+      "readiness": "catalog-discovery-only",
+      "scenario_count": 0,
+      "source_artifact_count": 1,
+      "source_population": 2794356,
+      "tier": "G",
+      "timezone": "America/Toronto"
+    },
+    {
+      "city_id": "geonames.2210247",
+      "completed_scenarios": 0,
+      "country_code": "LY",
+      "latitude": 32.88743,
+      "limitations": [
+        "This is a gazetteer point, not an official municipal boundary.",
+        "Source population values may use different years and definitions.",
+        "Tier G denotes catalog discoverability, not deep analytical readiness."
+      ],
+      "longitude": 13.18733,
+      "name": "Tripoli",
+      "negative_scenarios": 0,
+      "readiness": "catalog-discovery-only",
+      "scenario_count": 0,
+      "source_artifact_count": 1,
+      "source_population": 1302947,
+      "tier": "G",
+      "timezone": "Africa/Tripoli"
+    },
+    {
+      "city_id": "geonames.2464470",
+      "completed_scenarios": 0,
+      "country_code": "TN",
+      "latitude": 36.81897,
+      "limitations": [
+        "This is a gazetteer point, not an official municipal boundary.",
+        "Source population values may use different years and definitions.",
+        "Tier G denotes catalog discoverability, not deep analytical readiness."
+      ],
+      "longitude": 10.16579,
+      "name": "Tunis",
+      "negative_scenarios": 0,
+      "readiness": "catalog-discovery-only",
+      "scenario_count": 0,
+      "source_artifact_count": 1,
+      "source_population": 693210,
+      "tier": "G",
+      "timezone": "Africa/Tunis"
+    },
+    {
+      "city_id": "geonames.2611396",
+      "completed_scenarios": 0,
+      "country_code": "FO",
+      "latitude": 62.00973,
+      "limitations": [
+        "This is a gazetteer point, not an official municipal boundary.",
+        "Source population values may use different years and definitions.",
+        "Tier G denotes catalog discoverability, not deep analytical readiness."
+      ],
+      "longitude": -6.77164,
+      "name": "Tórshavn",
+      "negative_scenarios": 0,
+      "readiness": "catalog-discovery-only",
+      "scenario_count": 0,
+      "source_artifact_count": 1,
+      "source_population": 13200,
+      "tier": "G",
+      "timezone": "Atlantic/Faroe"
+    },
+    {
+      "city_id": "geonames.2028462",
+      "completed_scenarios": 0,
+      "country_code": "MN",
+      "latitude": 47.90771,
+      "limitations": [
+        "This is a gazetteer point, not an official municipal boundary.",
+        "Source population values may use different years and definitions.",
+        "Tier G denotes catalog discoverability, not deep analytical readiness."
+      ],
+      "longitude": 106.88324,
+      "name": "Ulan Bator",
+      "negative_scenarios": 0,
+      "readiness": "catalog-discovery-only",
+      "scenario_count": 0,
+      "source_artifact_count": 1,
+      "source_population": 844818,
+      "tier": "G",
+      "timezone": "Asia/Ulaanbaatar"
+    },
+    {
+      "city_id": "geonames.3042030",
+      "completed_scenarios": 0,
+      "country_code": "LI",
+      "latitude": 47.14151,
+      "limitations": [
+        "This is a gazetteer point, not an official municipal boundary.",
+        "Source population values may use different years and definitions.",
+        "Tier G denotes catalog discoverability, not deep analytical readiness."
+      ],
+      "longitude": 9.52154,
+      "name": "Vaduz",
+      "negative_scenarios": 0,
+      "readiness": "catalog-discovery-only",
+      "scenario_count": 0,
+      "source_artifact_count": 1,
+      "source_population": 5197,
+      "tier": "G",
+      "timezone": "Europe/Vaduz"
+    },
+    {
+      "city_id": "geonames.6691831",
+      "completed_scenarios": 0,
+      "country_code": "VA",
+      "latitude": 41.90268,
+      "limitations": [
+        "This is a gazetteer point, not an official municipal boundary.",
+        "Source population values may use different years and definitions.",
+        "Tier G denotes catalog discoverability, not deep analytical readiness."
+      ],
+      "longitude": 12.45414,
+      "name": "Vatican City",
+      "negative_scenarios": 0,
+      "readiness": "catalog-discovery-only",
+      "scenario_count": 0,
+      "source_artifact_count": 1,
+      "source_population": 829,
+      "tier": "G",
+      "timezone": "Europe/Vatican"
+    },
+    {
+      "city_id": "geonames.241131",
+      "completed_scenarios": 0,
+      "country_code": "SC",
+      "latitude": -4.62001,
+      "limitations": [
+        "This is a gazetteer point, not an official municipal boundary.",
+        "Source population values may use different years and definitions.",
+        "Tier G denotes catalog discoverability, not deep analytical readiness."
+      ],
+      "longitude": 55.45501,
+      "name": "Victoria",
+      "negative_scenarios": 0,
+      "readiness": "catalog-discovery-only",
+      "scenario_count": 0,
+      "source_artifact_count": 1,
+      "source_population": 22881,
+      "tier": "G",
+      "timezone": "Indian/Mahe"
+    },
+    {
+      "city_id": "geonames.2761369",
+      "completed_scenarios": 0,
+      "country_code": "AT",
+      "latitude": 48.20849,
+      "limitations": [
+        "This is a gazetteer point, not an official municipal boundary.",
+        "Source population values may use different years and definitions.",
+        "Tier G denotes catalog discoverability, not deep analytical readiness."
+      ],
+      "longitude": 16.37208,
+      "name": "Vienna",
+      "negative_scenarios": 0,
+      "readiness": "catalog-discovery-only",
+      "scenario_count": 0,
+      "source_artifact_count": 1,
+      "source_population": 1691468,
+      "tier": "G",
+      "timezone": "Europe/Vienna"
+    },
+    {
+      "city_id": "geonames.1651944",
+      "completed_scenarios": 0,
+      "country_code": "LA",
+      "latitude": 17.96667,
+      "limitations": [
+        "This is a gazetteer point, not an official municipal boundary.",
+        "Source population values may use different years and definitions.",
+        "Tier G denotes catalog discoverability, not deep analytical readiness."
+      ],
+      "longitude": 102.6,
+      "name": "Vientiane",
+      "negative_scenarios": 0,
+      "readiness": "catalog-discovery-only",
+      "scenario_count": 0,
+      "source_artifact_count": 1,
+      "source_population": 840940,
+      "tier": "G",
+      "timezone": "Asia/Vientiane"
+    },
+    {
+      "city_id": "geonames.593116",
+      "completed_scenarios": 0,
+      "country_code": "LT",
+      "latitude": 54.68916,
+      "limitations": [
+        "This is a gazetteer point, not an official municipal boundary.",
+        "Source population values may use different years and definitions.",
+        "Tier G denotes catalog discoverability, not deep analytical readiness."
+      ],
+      "longitude": 25.2798,
+      "name": "Vilnius",
+      "negative_scenarios": 0,
+      "readiness": "catalog-discovery-only",
+      "scenario_count": 0,
+      "source_artifact_count": 1,
+      "source_population": 542366,
+      "tier": "G",
+      "timezone": "Europe/Vilnius"
+    },
+    {
+      "city_id": "geonames.756135",
+      "completed_scenarios": 0,
+      "country_code": "PL",
+      "latitude": 52.22977,
+      "limitations": [
+        "This is a gazetteer point, not an official municipal boundary.",
+        "Source population values may use different years and definitions.",
+        "Tier G denotes catalog discoverability, not deep analytical readiness."
+      ],
+      "longitude": 21.01178,
+      "name": "Warsaw",
+      "negative_scenarios": 0,
+      "readiness": "catalog-discovery-only",
+      "scenario_count": 0,
+      "source_artifact_count": 1,
+      "source_population": 1702139,
+      "tier": "G",
+      "timezone": "Europe/Warsaw"
+    },
+    {
+      "city_id": "geonames.7304591",
+      "completed_scenarios": 0,
+      "country_code": "CC",
+      "latitude": -12.15681,
+      "limitations": [
+        "This is a gazetteer point, not an official municipal boundary.",
+        "Source population values may use different years and definitions.",
+        "Tier G denotes catalog discoverability, not deep analytical readiness."
+      ],
+      "longitude": 96.82251,
+      "name": "West Island",
+      "negative_scenarios": 0,
+      "readiness": "catalog-discovery-only",
+      "scenario_count": 0,
+      "source_artifact_count": 1,
+      "source_population": 120,
+      "tier": "G",
+      "timezone": "Indian/Cocos"
+    },
+    {
+      "city_id": "geonames.3513090",
+      "completed_scenarios": 0,
+      "country_code": "CW",
+      "latitude": 12.12246,
+      "limitations": [
+        "This is a gazetteer point, not an official municipal boundary.",
+        "Source population values may use different years and definitions.",
+        "Tier G denotes catalog discoverability, not deep analytical readiness."
+      ],
+      "longitude": -68.88641,
+      "name": "Willemstad",
+      "negative_scenarios": 0,
+      "readiness": "catalog-discovery-only",
+      "scenario_count": 0,
+      "source_artifact_count": 1,
+      "source_population": 125000,
+      "tier": "G",
+      "timezone": "America/Curacao"
+    },
+    {
+      "city_id": "geonames.3352136",
+      "completed_scenarios": 0,
+      "country_code": "NA",
+      "latitude": -22.55941,
+      "limitations": [
+        "This is a gazetteer point, not an official municipal boundary.",
+        "Source population values may use different years and definitions.",
+        "Tier G denotes catalog discoverability, not deep analytical readiness."
+      ],
+      "longitude": 17.08323,
+      "name": "Windhoek",
+      "negative_scenarios": 0,
+      "readiness": "catalog-discovery-only",
+      "scenario_count": 0,
+      "source_artifact_count": 1,
+      "source_population": 386219,
+      "tier": "G",
+      "timezone": "Africa/Windhoek"
+    },
+    {
+      "city_id": "geonames.1298824",
+      "completed_scenarios": 0,
+      "country_code": "MM",
+      "latitude": 16.80528,
+      "limitations": [
+        "This is a gazetteer point, not an official municipal boundary.",
+        "Source population values may use different years and definitions.",
+        "Tier G denotes catalog discoverability, not deep analytical readiness."
+      ],
+      "longitude": 96.15611,
+      "name": "Yangon",
+      "negative_scenarios": 0,
+      "readiness": "catalog-discovery-only",
+      "scenario_count": 0,
+      "source_artifact_count": 1,
+      "source_population": 4477638,
+      "tier": "G",
+      "timezone": "Asia/Yangon"
+    },
+    {
+      "city_id": "geonames.7626461",
+      "completed_scenarios": 0,
+      "country_code": "NR",
+      "latitude": -0.55085,
+      "limitations": [
+        "This is a gazetteer point, not an official municipal boundary.",
+        "Source population values may use different years and definitions.",
+        "Tier G denotes catalog discoverability, not deep analytical readiness."
+      ],
+      "longitude": 166.9252,
+      "name": "Yaren",
+      "negative_scenarios": 0,
+      "readiness": "catalog-discovery-only",
+      "scenario_count": 0,
+      "source_artifact_count": 1,
+      "source_population": 1100,
+      "tier": "G",
+      "timezone": "Pacific/Nauru"
+    },
+    {
+      "city_id": "geonames.616052",
+      "completed_scenarios": 0,
+      "country_code": "AM",
+      "latitude": 40.17765,
+      "limitations": [
+        "This is a gazetteer point, not an official municipal boundary.",
+        "Source population values may use different years and definitions.",
+        "Tier G denotes catalog discoverability, not deep analytical readiness."
+      ],
+      "longitude": 44.5126,
+      "name": "Yerevan",
+      "negative_scenarios": 0,
+      "readiness": "catalog-discovery-only",
+      "scenario_count": 0,
+      "source_artifact_count": 1,
+      "source_population": 1144700,
+      "tier": "G",
+      "timezone": "Asia/Yerevan"
+    },
+    {
+      "city_id": "geonames.3186886",
+      "completed_scenarios": 0,
+      "country_code": "HR",
+      "latitude": 45.81444,
+      "limitations": [
+        "This is a gazetteer point, not an official municipal boundary.",
+        "Source population values may use different years and definitions.",
+        "Tier G denotes catalog discoverability, not deep analytical readiness."
+      ],
+      "longitude": 15.97798,
+      "name": "Zagreb",
+      "negative_scenarios": 0,
+      "readiness": "catalog-discovery-only",
+      "scenario_count": 0,
+      "source_artifact_count": 1,
+      "source_population": 663592,
+      "tier": "G",
+      "timezone": "Europe/Zagreb"
+    },
+    {
+      "city_id": "geonames.2657896",
+      "completed_scenarios": 0,
+      "country_code": "CH",
+      "latitude": 47.36667,
+      "limitations": [
+        "This is a gazetteer point, not an official municipal boundary.",
+        "Source population values may use different years and definitions.",
+        "Tier G denotes catalog discoverability, not deep analytical readiness."
+      ],
+      "longitude": 8.55,
+      "name": "Zürich",
+      "negative_scenarios": 0,
+      "readiness": "catalog-discovery-only",
+      "scenario_count": 0,
+      "source_artifact_count": 1,
+      "source_population": 415367,
+      "tier": "G",
+      "timezone": "Europe/Zurich"
+    }
+  ],
+  "kind": "cities.highest-available",
+  "record_count": 258,
+  "schema_version": "1.0.0"
+}

@@ -1,0 +1,3528 @@
+{
+  "claim_boundary": "Negative releases and withheld recommendations remain first-class records.",
+  "items": [
+    {
+      "analysis_modes": [
+        "forecast",
+        "simulation",
+        "optimization"
+      ],
+      "artifact_count": 7,
+      "city_id": "us.tx.austin",
+      "city_name": "Austin",
+      "content_hash": "sha256:a8ae019dd15769c9c3b7946fb781df7b6f72d56af3242ef105c29b14539244d9",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "execution_id": "tierd.us.tx.austin.01",
+      "kind": "deep-pack",
+      "limitations": [
+        "Reporting behavior, publication coverage, taxonomy, and workflow differ across cities.",
+        "A transparent baseline can support planning exercises but cannot validate intervention impact.",
+        "Do not call service requests verified incidents, harms, needs, or completed outcomes.",
+        "Do not describe proposed action coefficients as observed or causal effects.",
+        "Do not present a planning-support option as a municipal recommendation or deployment.",
+        "Public data, internal reproducibility, and computational scale do not establish external review, adoption, deployment, users, or real-world impact."
+      ],
+      "observed_request_count": 164333,
+      "readiness": "planning-support",
+      "recommendation_issued": true,
+      "scenario_id": "tierd.us.tx.austin.01",
+      "selected_option_id": "bounded-portfolio",
+      "source_count": 7,
+      "status": "completed",
+      "suite": "public-service-operations",
+      "template_id": "deep.public-service.total-demand.v1",
+      "title": "Citywide service-request workload baseline"
+    },
+    {
+      "analysis_modes": [
+        "forecast",
+        "simulation",
+        "optimization"
+      ],
+      "artifact_count": 7,
+      "city_id": "us.tx.austin",
+      "city_name": "Austin",
+      "content_hash": "sha256:82363f4b954232e5dcb172c6b872cf263909293078825b47d35ada5f05bb26c4",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "execution_id": "tierd.us.tx.austin.02",
+      "kind": "deep-pack",
+      "limitations": [
+        "Reporting behavior, publication coverage, taxonomy, and workflow differ across cities.",
+        "A transparent baseline can support planning exercises but cannot validate intervention impact.",
+        "Do not call service requests verified incidents, harms, needs, or completed outcomes.",
+        "Do not describe proposed action coefficients as observed or causal effects.",
+        "Do not present a planning-support option as a municipal recommendation or deployment.",
+        "Public data, internal reproducibility, and computational scale do not establish external review, adoption, deployment, users, or real-world impact."
+      ],
+      "observed_request_count": 164333,
+      "readiness": "planning-support",
+      "recommendation_issued": true,
+      "scenario_id": "tierd.us.tx.austin.02",
+      "selected_option_id": "bounded-portfolio",
+      "source_count": 7,
+      "status": "completed",
+      "suite": "public-service-operations",
+      "template_id": "deep.public-service.seasonal-staffing.v1",
+      "title": "Seasonal service-capacity planning"
+    },
+    {
+      "analysis_modes": [
+        "forecast",
+        "simulation",
+        "optimization"
+      ],
+      "artifact_count": 7,
+      "city_id": "us.tx.austin",
+      "city_name": "Austin",
+      "content_hash": "sha256:1c5318fdb99139701198e6ca59dd0de6a642b60ec879942a0624b218ac3dee2a",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "execution_id": "tierd.us.tx.austin.03",
+      "kind": "deep-pack",
+      "limitations": [
+        "Reporting behavior, publication coverage, taxonomy, and workflow differ across cities.",
+        "A transparent baseline can support planning exercises but cannot validate intervention impact.",
+        "Do not call service requests verified incidents, harms, needs, or completed outcomes.",
+        "Do not describe proposed action coefficients as observed or causal effects.",
+        "Do not present a planning-support option as a municipal recommendation or deployment.",
+        "Public data, internal reproducibility, and computational scale do not establish external review, adoption, deployment, users, or real-world impact."
+      ],
+      "observed_request_count": 19990,
+      "readiness": "planning-support",
+      "recommendation_issued": true,
+      "scenario_id": "tierd.us.tx.austin.03",
+      "selected_option_id": "bounded-portfolio",
+      "source_count": 7,
+      "status": "completed",
+      "suite": "public-service-operations",
+      "template_id": "deep.public-service.sanitation-workload.v1",
+      "title": "Sanitation-related request workload planning"
+    },
+    {
+      "analysis_modes": [
+        "forecast",
+        "simulation",
+        "optimization"
+      ],
+      "artifact_count": 7,
+      "city_id": "us.tx.austin",
+      "city_name": "Austin",
+      "content_hash": "sha256:a9d0721b861396882c5ece0bedd91ac5a48ef11426c7414f8e8e0494fd1a0b36",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "execution_id": "tierd.us.tx.austin.04",
+      "kind": "deep-pack",
+      "limitations": [
+        "Reporting behavior, publication coverage, taxonomy, and workflow differ across cities.",
+        "A transparent baseline can support planning exercises but cannot validate intervention impact.",
+        "Do not call service requests verified incidents, harms, needs, or completed outcomes.",
+        "Do not describe proposed action coefficients as observed or causal effects.",
+        "Do not present a planning-support option as a municipal recommendation or deployment.",
+        "Public data, internal reproducibility, and computational scale do not establish external review, adoption, deployment, users, or real-world impact."
+      ],
+      "observed_request_count": 164333,
+      "readiness": "planning-support",
+      "recommendation_issued": true,
+      "scenario_id": "tierd.us.tx.austin.04",
+      "selected_option_id": "bounded-portfolio",
+      "source_count": 7,
+      "status": "completed",
+      "suite": "climate-disaster-resilience",
+      "template_id": "deep.climate.heat-service-surge.v1",
+      "title": "Heat-context service continuity"
+    },
+    {
+      "analysis_modes": [
+        "forecast",
+        "simulation",
+        "optimization"
+      ],
+      "artifact_count": 7,
+      "city_id": "us.tx.austin",
+      "city_name": "Austin",
+      "content_hash": "sha256:f05c335c78842f2fe1c0d7448abebb5455d9d2dde4f66b25482429d079be4aa1",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "execution_id": "tierd.us.tx.austin.05",
+      "kind": "deep-pack",
+      "limitations": [
+        "Reporting behavior, publication coverage, taxonomy, and workflow differ across cities.",
+        "A transparent baseline can support planning exercises but cannot validate intervention impact.",
+        "Do not call service requests verified incidents, harms, needs, or completed outcomes.",
+        "Do not describe proposed action coefficients as observed or causal effects.",
+        "Do not present a planning-support option as a municipal recommendation or deployment.",
+        "Public data, internal reproducibility, and computational scale do not establish external review, adoption, deployment, users, or real-world impact."
+      ],
+      "observed_request_count": 164333,
+      "readiness": "planning-support",
+      "recommendation_issued": true,
+      "scenario_id": "tierd.us.tx.austin.05",
+      "selected_option_id": "bounded-portfolio",
+      "source_count": 7,
+      "status": "completed",
+      "suite": "climate-disaster-resilience",
+      "template_id": "deep.climate.rainfall-continuity.v1",
+      "title": "Rainfall-context service continuity"
+    },
+    {
+      "analysis_modes": [
+        "forecast",
+        "simulation",
+        "optimization"
+      ],
+      "artifact_count": 7,
+      "city_id": "us.tx.austin",
+      "city_name": "Austin",
+      "content_hash": "sha256:40a05c8ce50a4a0873cec5b0e1f52e645a115e6bcafffa884918728b4bea79ab",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "execution_id": "tierd.us.tx.austin.06",
+      "kind": "deep-pack",
+      "limitations": [
+        "Reporting behavior, publication coverage, taxonomy, and workflow differ across cities.",
+        "A transparent baseline can support planning exercises but cannot validate intervention impact.",
+        "Do not call service requests verified incidents, harms, needs, or completed outcomes.",
+        "Do not describe proposed action coefficients as observed or causal effects.",
+        "Do not present a planning-support option as a municipal recommendation or deployment.",
+        "Public data, internal reproducibility, and computational scale do not establish external review, adoption, deployment, users, or real-world impact."
+      ],
+      "observed_request_count": 339,
+      "readiness": "planning-support",
+      "recommendation_issued": true,
+      "scenario_id": "tierd.us.tx.austin.06",
+      "selected_option_id": "bounded-portfolio",
+      "source_count": 7,
+      "status": "completed",
+      "suite": "housing-land-use-regeneration",
+      "template_id": "deep.housing.request-triage.v1",
+      "title": "Housing-related request triage"
+    },
+    {
+      "analysis_modes": [
+        "forecast",
+        "simulation",
+        "optimization"
+      ],
+      "artifact_count": 7,
+      "city_id": "us.tx.austin",
+      "city_name": "Austin",
+      "content_hash": "sha256:93b6fe7552b399a32b4b9573fa0f462deeffb5bdc71cdbd652e23a813f7bc385",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "execution_id": "tierd.us.tx.austin.07",
+      "kind": "deep-pack",
+      "limitations": [
+        "Reporting behavior, publication coverage, taxonomy, and workflow differ across cities.",
+        "A transparent baseline can support planning exercises but cannot validate intervention impact.",
+        "Do not call service requests verified incidents, harms, needs, or completed outcomes.",
+        "Do not describe proposed action coefficients as observed or causal effects.",
+        "Do not present a planning-support option as a municipal recommendation or deployment.",
+        "Public data, internal reproducibility, and computational scale do not establish external review, adoption, deployment, users, or real-world impact."
+      ],
+      "observed_request_count": 29294,
+      "readiness": "planning-support",
+      "recommendation_issued": true,
+      "scenario_id": "tierd.us.tx.austin.07",
+      "selected_option_id": "bounded-portfolio",
+      "source_count": 7,
+      "status": "completed",
+      "suite": "population-health-environmental-exposure",
+      "template_id": "deep.health.environmental-request-screen.v1",
+      "title": "Environmental request workload screen"
+    },
+    {
+      "analysis_modes": [
+        "forecast",
+        "simulation",
+        "optimization"
+      ],
+      "artifact_count": 7,
+      "city_id": "us.tx.austin",
+      "city_name": "Austin",
+      "content_hash": "sha256:83f7fcb13e6e41017417f32358a8c0c4892a368836659335451251463d39390f",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "execution_id": "tierd.us.tx.austin.08",
+      "kind": "deep-pack",
+      "limitations": [
+        "Reporting behavior, publication coverage, taxonomy, and workflow differ across cities.",
+        "A transparent baseline can support planning exercises but cannot validate intervention impact.",
+        "Do not call service requests verified incidents, harms, needs, or completed outcomes.",
+        "Do not describe proposed action coefficients as observed or causal effects.",
+        "Do not present a planning-support option as a municipal recommendation or deployment.",
+        "Public data, internal reproducibility, and computational scale do not establish external review, adoption, deployment, users, or real-world impact."
+      ],
+      "observed_request_count": 20971,
+      "readiness": "planning-support",
+      "recommendation_issued": true,
+      "scenario_id": "tierd.us.tx.austin.08",
+      "selected_option_id": "bounded-portfolio",
+      "source_count": 7,
+      "status": "completed",
+      "suite": "infrastructure-finance-asset-risk",
+      "template_id": "deep.infrastructure.maintenance-portfolio.v1",
+      "title": "Infrastructure-maintenance request portfolio"
+    },
+    {
+      "analysis_modes": [
+        "forecast",
+        "simulation",
+        "optimization"
+      ],
+      "artifact_count": 7,
+      "city_id": "us.tx.austin",
+      "city_name": "Austin",
+      "content_hash": "sha256:61ade6ad3959a3cdb0a5893582d383f3ecb51c44db4188c59a0c9a4613b76320",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "execution_id": "tierd.us.tx.austin.09",
+      "kind": "deep-pack",
+      "limitations": [
+        "Reporting behavior, publication coverage, taxonomy, and workflow differ across cities.",
+        "A transparent baseline can support planning exercises but cannot validate intervention impact.",
+        "Do not call service requests verified incidents, harms, needs, or completed outcomes.",
+        "Do not describe proposed action coefficients as observed or causal effects.",
+        "Do not present a planning-support option as a municipal recommendation or deployment.",
+        "Public data, internal reproducibility, and computational scale do not establish external review, adoption, deployment, users, or real-world impact."
+      ],
+      "observed_request_count": 164333,
+      "readiness": "planning-support",
+      "recommendation_issued": true,
+      "scenario_id": "tierd.us.tx.austin.09",
+      "selected_option_id": "bounded-portfolio",
+      "source_count": 7,
+      "status": "completed",
+      "suite": "behavioral-policy-equity",
+      "template_id": "deep.equity.area-balance.v1",
+      "title": "Area-level request balance"
+    },
+    {
+      "analysis_modes": [
+        "forecast",
+        "simulation",
+        "optimization"
+      ],
+      "artifact_count": 7,
+      "city_id": "us.tx.austin",
+      "city_name": "Austin",
+      "content_hash": "sha256:7a2281a058d4021db51482a97ce4c67bbacd10c95ee795e7f4282c2c52653627",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "execution_id": "tierd.us.tx.austin.10",
+      "kind": "deep-pack",
+      "limitations": [
+        "Reporting behavior, publication coverage, taxonomy, and workflow differ across cities.",
+        "A transparent baseline can support planning exercises but cannot validate intervention impact.",
+        "Do not call service requests verified incidents, harms, needs, or completed outcomes.",
+        "Do not describe proposed action coefficients as observed or causal effects.",
+        "Do not present a planning-support option as a municipal recommendation or deployment.",
+        "Public data, internal reproducibility, and computational scale do not establish external review, adoption, deployment, users, or real-world impact."
+      ],
+      "observed_request_count": 1165,
+      "readiness": "planning-support",
+      "recommendation_issued": true,
+      "scenario_id": "tierd.us.tx.austin.10",
+      "selected_option_id": "bounded-portfolio",
+      "source_count": 7,
+      "status": "completed",
+      "suite": "mobility-accessibility-operations",
+      "template_id": "deep.mobility.accessibility-request.v1",
+      "title": "Accessibility-related request planning"
+    },
+    {
+      "analysis_modes": [
+        "descriptive",
+        "causal"
+      ],
+      "artifact_count": 3,
+      "city_id": "us.tx.austin",
+      "city_name": "Austin",
+      "content_hash": "sha256:888dd34bcdd21491d89586d5dd5113f58177f5254125c843e80e8c7d72e2388d",
+      "evidence_types": [
+        "causal",
+        "observed"
+      ],
+      "execution_id": "tierd.us.tx.austin.11",
+      "kind": "deep-pack",
+      "limitations": [
+        "A causal question is retained as a negative evidence-gate test, not silently reduced to an associational claim.",
+        "Do not infer treatment effects from before/after request counts.",
+        "Do not use request status as verified service resolution or welfare impact.",
+        "Public data, internal reproducibility, and computational scale do not establish external review, adoption, deployment, users, or real-world impact."
+      ],
+      "observed_request_count": 164333,
+      "readiness": "insufficient-evidence",
+      "recommendation_issued": false,
+      "scenario_id": "tierd.us.tx.austin.11",
+      "source_count": 7,
+      "status": "insufficient-evidence",
+      "suite": "behavioral-policy-equity",
+      "template_id": "deep.equity.causal-service-effectiveness.v1",
+      "title": "Causal service-effectiveness gate"
+    },
+    {
+      "analysis_modes": [
+        "descriptive",
+        "optimization"
+      ],
+      "artifact_count": 3,
+      "city_id": "us.tx.austin",
+      "city_name": "Austin",
+      "content_hash": "sha256:7f4d070578221144b5be51bd29bc60f97473dc90ab12f2edf2d91c85c95eab9f",
+      "evidence_types": [
+        "observed",
+        "proposed"
+      ],
+      "execution_id": "tierd.us.tx.austin.12",
+      "kind": "deep-pack",
+      "limitations": [
+        "The negative release demonstrates a missing-network gate and does not evaluate actual mobility performance.",
+        "Do not treat city polygons or request-area labels as a routable transport network.",
+        "Do not call a proposed allocation a real-time routing result.",
+        "Public data, internal reproducibility, and computational scale do not establish external review, adoption, deployment, users, or real-world impact."
+      ],
+      "observed_request_count": 164333,
+      "readiness": "insufficient-evidence",
+      "recommendation_issued": false,
+      "scenario_id": "tierd.us.tx.austin.12",
+      "source_count": 7,
+      "status": "insufficient-evidence",
+      "suite": "mobility-accessibility-operations",
+      "template_id": "deep.mobility.real-time-reroute.v1",
+      "title": "Real-time multimodal rerouting gate"
+    },
+    {
+      "analysis_modes": [
+        "forecast",
+        "simulation",
+        "optimization"
+      ],
+      "artifact_count": 7,
+      "city_id": "us.ma.boston",
+      "city_name": "Boston",
+      "content_hash": "sha256:9340a77209b87997d5c1840315b7a373b12ec17b1c50204ae0f435584b4e5025",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "execution_id": "tierd.us.ma.boston.01",
+      "kind": "deep-pack",
+      "limitations": [
+        "Reporting behavior, publication coverage, taxonomy, and workflow differ across cities.",
+        "A transparent baseline can support planning exercises but cannot validate intervention impact.",
+        "Do not call service requests verified incidents, harms, needs, or completed outcomes.",
+        "Do not describe proposed action coefficients as observed or causal effects.",
+        "Do not present a planning-support option as a municipal recommendation or deployment.",
+        "Public data, internal reproducibility, and computational scale do not establish external review, adoption, deployment, users, or real-world impact."
+      ],
+      "observed_request_count": 148160,
+      "readiness": "planning-support",
+      "recommendation_issued": true,
+      "scenario_id": "tierd.us.ma.boston.01",
+      "selected_option_id": "bounded-portfolio",
+      "source_count": 7,
+      "status": "completed",
+      "suite": "public-service-operations",
+      "template_id": "deep.public-service.total-demand.v1",
+      "title": "Citywide service-request workload baseline"
+    },
+    {
+      "analysis_modes": [
+        "forecast",
+        "simulation",
+        "optimization"
+      ],
+      "artifact_count": 7,
+      "city_id": "us.ma.boston",
+      "city_name": "Boston",
+      "content_hash": "sha256:d16cf6143dcf2cc3149a6ab91d957aaecb2fd646db0b126c9ea210d849afdd90",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "execution_id": "tierd.us.ma.boston.02",
+      "kind": "deep-pack",
+      "limitations": [
+        "Reporting behavior, publication coverage, taxonomy, and workflow differ across cities.",
+        "A transparent baseline can support planning exercises but cannot validate intervention impact.",
+        "Do not call service requests verified incidents, harms, needs, or completed outcomes.",
+        "Do not describe proposed action coefficients as observed or causal effects.",
+        "Do not present a planning-support option as a municipal recommendation or deployment.",
+        "Public data, internal reproducibility, and computational scale do not establish external review, adoption, deployment, users, or real-world impact."
+      ],
+      "observed_request_count": 148160,
+      "readiness": "planning-support",
+      "recommendation_issued": true,
+      "scenario_id": "tierd.us.ma.boston.02",
+      "selected_option_id": "bounded-portfolio",
+      "source_count": 7,
+      "status": "completed",
+      "suite": "public-service-operations",
+      "template_id": "deep.public-service.seasonal-staffing.v1",
+      "title": "Seasonal service-capacity planning"
+    },
+    {
+      "analysis_modes": [
+        "forecast",
+        "simulation",
+        "optimization"
+      ],
+      "artifact_count": 7,
+      "city_id": "us.ma.boston",
+      "city_name": "Boston",
+      "content_hash": "sha256:ddd77ac0f8f72854752294451ff5cee3a5edc8fd0767347ff507fa839033510b",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "execution_id": "tierd.us.ma.boston.03",
+      "kind": "deep-pack",
+      "limitations": [
+        "Reporting behavior, publication coverage, taxonomy, and workflow differ across cities.",
+        "A transparent baseline can support planning exercises but cannot validate intervention impact.",
+        "Do not call service requests verified incidents, harms, needs, or completed outcomes.",
+        "Do not describe proposed action coefficients as observed or causal effects.",
+        "Do not present a planning-support option as a municipal recommendation or deployment.",
+        "Public data, internal reproducibility, and computational scale do not establish external review, adoption, deployment, users, or real-world impact."
+      ],
+      "observed_request_count": 37095,
+      "readiness": "planning-support",
+      "recommendation_issued": true,
+      "scenario_id": "tierd.us.ma.boston.03",
+      "selected_option_id": "bounded-portfolio",
+      "source_count": 7,
+      "status": "completed",
+      "suite": "public-service-operations",
+      "template_id": "deep.public-service.sanitation-workload.v1",
+      "title": "Sanitation-related request workload planning"
+    },
+    {
+      "analysis_modes": [
+        "forecast",
+        "simulation",
+        "optimization"
+      ],
+      "artifact_count": 7,
+      "city_id": "us.ma.boston",
+      "city_name": "Boston",
+      "content_hash": "sha256:5478ce929aa675cdfb12914ce32b6e9fd32f3b54d68e366a74c7a45cbf53978a",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "execution_id": "tierd.us.ma.boston.04",
+      "kind": "deep-pack",
+      "limitations": [
+        "Reporting behavior, publication coverage, taxonomy, and workflow differ across cities.",
+        "A transparent baseline can support planning exercises but cannot validate intervention impact.",
+        "Do not call service requests verified incidents, harms, needs, or completed outcomes.",
+        "Do not describe proposed action coefficients as observed or causal effects.",
+        "Do not present a planning-support option as a municipal recommendation or deployment.",
+        "Public data, internal reproducibility, and computational scale do not establish external review, adoption, deployment, users, or real-world impact."
+      ],
+      "observed_request_count": 148160,
+      "readiness": "planning-support",
+      "recommendation_issued": true,
+      "scenario_id": "tierd.us.ma.boston.04",
+      "selected_option_id": "bounded-portfolio",
+      "source_count": 7,
+      "status": "completed",
+      "suite": "climate-disaster-resilience",
+      "template_id": "deep.climate.heat-service-surge.v1",
+      "title": "Heat-context service continuity"
+    },
+    {
+      "analysis_modes": [
+        "forecast",
+        "simulation",
+        "optimization"
+      ],
+      "artifact_count": 7,
+      "city_id": "us.ma.boston",
+      "city_name": "Boston",
+      "content_hash": "sha256:85c64b9e1fc28bc63344177aa17d78123bc250f0e70dc43c10e74425a2475828",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "execution_id": "tierd.us.ma.boston.05",
+      "kind": "deep-pack",
+      "limitations": [
+        "Reporting behavior, publication coverage, taxonomy, and workflow differ across cities.",
+        "A transparent baseline can support planning exercises but cannot validate intervention impact.",
+        "Do not call service requests verified incidents, harms, needs, or completed outcomes.",
+        "Do not describe proposed action coefficients as observed or causal effects.",
+        "Do not present a planning-support option as a municipal recommendation or deployment.",
+        "Public data, internal reproducibility, and computational scale do not establish external review, adoption, deployment, users, or real-world impact."
+      ],
+      "observed_request_count": 148160,
+      "readiness": "planning-support",
+      "recommendation_issued": true,
+      "scenario_id": "tierd.us.ma.boston.05",
+      "selected_option_id": "bounded-portfolio",
+      "source_count": 7,
+      "status": "completed",
+      "suite": "climate-disaster-resilience",
+      "template_id": "deep.climate.rainfall-continuity.v1",
+      "title": "Rainfall-context service continuity"
+    },
+    {
+      "analysis_modes": [
+        "forecast",
+        "simulation",
+        "optimization"
+      ],
+      "artifact_count": 7,
+      "city_id": "us.ma.boston",
+      "city_name": "Boston",
+      "content_hash": "sha256:9ea0964a539b569e96f0a8ceca32a3777d7e5a6bdc7d2b91fdda7cd06b89611a",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "execution_id": "tierd.us.ma.boston.06",
+      "kind": "deep-pack",
+      "limitations": [
+        "Reporting behavior, publication coverage, taxonomy, and workflow differ across cities.",
+        "A transparent baseline can support planning exercises but cannot validate intervention impact.",
+        "Do not call service requests verified incidents, harms, needs, or completed outcomes.",
+        "Do not describe proposed action coefficients as observed or causal effects.",
+        "Do not present a planning-support option as a municipal recommendation or deployment.",
+        "Public data, internal reproducibility, and computational scale do not establish external review, adoption, deployment, users, or real-world impact."
+      ],
+      "observed_request_count": 2333,
+      "readiness": "planning-support",
+      "recommendation_issued": true,
+      "scenario_id": "tierd.us.ma.boston.06",
+      "selected_option_id": "bounded-portfolio",
+      "source_count": 7,
+      "status": "completed",
+      "suite": "housing-land-use-regeneration",
+      "template_id": "deep.housing.request-triage.v1",
+      "title": "Housing-related request triage"
+    },
+    {
+      "analysis_modes": [
+        "forecast",
+        "simulation",
+        "optimization"
+      ],
+      "artifact_count": 7,
+      "city_id": "us.ma.boston",
+      "city_name": "Boston",
+      "content_hash": "sha256:7fe9c54700ad66470a6015cc621a65901d47d9f62b5bdeb634bd6249d2b53b39",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "execution_id": "tierd.us.ma.boston.07",
+      "kind": "deep-pack",
+      "limitations": [
+        "Reporting behavior, publication coverage, taxonomy, and workflow differ across cities.",
+        "A transparent baseline can support planning exercises but cannot validate intervention impact.",
+        "Do not call service requests verified incidents, harms, needs, or completed outcomes.",
+        "Do not describe proposed action coefficients as observed or causal effects.",
+        "Do not present a planning-support option as a municipal recommendation or deployment.",
+        "Public data, internal reproducibility, and computational scale do not establish external review, adoption, deployment, users, or real-world impact."
+      ],
+      "observed_request_count": 31764,
+      "readiness": "planning-support",
+      "recommendation_issued": true,
+      "scenario_id": "tierd.us.ma.boston.07",
+      "selected_option_id": "bounded-portfolio",
+      "source_count": 7,
+      "status": "completed",
+      "suite": "population-health-environmental-exposure",
+      "template_id": "deep.health.environmental-request-screen.v1",
+      "title": "Environmental request workload screen"
+    },
+    {
+      "analysis_modes": [
+        "forecast",
+        "simulation",
+        "optimization"
+      ],
+      "artifact_count": 7,
+      "city_id": "us.ma.boston",
+      "city_name": "Boston",
+      "content_hash": "sha256:b7382a32960c3356468d2eb2c8f4680e4ba9052d12e653ba2724b2b622d64e87",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "execution_id": "tierd.us.ma.boston.08",
+      "kind": "deep-pack",
+      "limitations": [
+        "Reporting behavior, publication coverage, taxonomy, and workflow differ across cities.",
+        "A transparent baseline can support planning exercises but cannot validate intervention impact.",
+        "Do not call service requests verified incidents, harms, needs, or completed outcomes.",
+        "Do not describe proposed action coefficients as observed or causal effects.",
+        "Do not present a planning-support option as a municipal recommendation or deployment.",
+        "Public data, internal reproducibility, and computational scale do not establish external review, adoption, deployment, users, or real-world impact."
+      ],
+      "observed_request_count": 26025,
+      "readiness": "planning-support",
+      "recommendation_issued": true,
+      "scenario_id": "tierd.us.ma.boston.08",
+      "selected_option_id": "bounded-portfolio",
+      "source_count": 7,
+      "status": "completed",
+      "suite": "infrastructure-finance-asset-risk",
+      "template_id": "deep.infrastructure.maintenance-portfolio.v1",
+      "title": "Infrastructure-maintenance request portfolio"
+    },
+    {
+      "analysis_modes": [
+        "forecast",
+        "simulation",
+        "optimization"
+      ],
+      "artifact_count": 7,
+      "city_id": "us.ma.boston",
+      "city_name": "Boston",
+      "content_hash": "sha256:fd41613993a05cff325f123ca83c4a78c805f556a26425e73daad091543411e5",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "execution_id": "tierd.us.ma.boston.09",
+      "kind": "deep-pack",
+      "limitations": [
+        "Reporting behavior, publication coverage, taxonomy, and workflow differ across cities.",
+        "A transparent baseline can support planning exercises but cannot validate intervention impact.",
+        "Do not call service requests verified incidents, harms, needs, or completed outcomes.",
+        "Do not describe proposed action coefficients as observed or causal effects.",
+        "Do not present a planning-support option as a municipal recommendation or deployment.",
+        "Public data, internal reproducibility, and computational scale do not establish external review, adoption, deployment, users, or real-world impact."
+      ],
+      "observed_request_count": 148160,
+      "readiness": "planning-support",
+      "recommendation_issued": true,
+      "scenario_id": "tierd.us.ma.boston.09",
+      "selected_option_id": "bounded-portfolio",
+      "source_count": 7,
+      "status": "completed",
+      "suite": "behavioral-policy-equity",
+      "template_id": "deep.equity.area-balance.v1",
+      "title": "Area-level request balance"
+    },
+    {
+      "analysis_modes": [
+        "forecast",
+        "simulation",
+        "optimization"
+      ],
+      "artifact_count": 7,
+      "city_id": "us.ma.boston",
+      "city_name": "Boston",
+      "content_hash": "sha256:6feb275a16abf082eb2564b85c6b9720a59d81cb7c2eb8fa321032d6c65daab4",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "execution_id": "tierd.us.ma.boston.10",
+      "kind": "deep-pack",
+      "limitations": [
+        "Reporting behavior, publication coverage, taxonomy, and workflow differ across cities.",
+        "A transparent baseline can support planning exercises but cannot validate intervention impact.",
+        "Do not call service requests verified incidents, harms, needs, or completed outcomes.",
+        "Do not describe proposed action coefficients as observed or causal effects.",
+        "Do not present a planning-support option as a municipal recommendation or deployment.",
+        "Public data, internal reproducibility, and computational scale do not establish external review, adoption, deployment, users, or real-world impact."
+      ],
+      "observed_request_count": 4442,
+      "readiness": "planning-support",
+      "recommendation_issued": true,
+      "scenario_id": "tierd.us.ma.boston.10",
+      "selected_option_id": "bounded-portfolio",
+      "source_count": 7,
+      "status": "completed",
+      "suite": "mobility-accessibility-operations",
+      "template_id": "deep.mobility.accessibility-request.v1",
+      "title": "Accessibility-related request planning"
+    },
+    {
+      "analysis_modes": [
+        "descriptive",
+        "causal"
+      ],
+      "artifact_count": 3,
+      "city_id": "us.ma.boston",
+      "city_name": "Boston",
+      "content_hash": "sha256:44cc0b21815d18c3d5c2d00ad48bf1dcbbdf7a5d0d5e951874259c4cf4d18613",
+      "evidence_types": [
+        "causal",
+        "observed"
+      ],
+      "execution_id": "tierd.us.ma.boston.11",
+      "kind": "deep-pack",
+      "limitations": [
+        "A causal question is retained as a negative evidence-gate test, not silently reduced to an associational claim.",
+        "Do not infer treatment effects from before/after request counts.",
+        "Do not use request status as verified service resolution or welfare impact.",
+        "Public data, internal reproducibility, and computational scale do not establish external review, adoption, deployment, users, or real-world impact."
+      ],
+      "observed_request_count": 148160,
+      "readiness": "insufficient-evidence",
+      "recommendation_issued": false,
+      "scenario_id": "tierd.us.ma.boston.11",
+      "source_count": 7,
+      "status": "insufficient-evidence",
+      "suite": "behavioral-policy-equity",
+      "template_id": "deep.equity.causal-service-effectiveness.v1",
+      "title": "Causal service-effectiveness gate"
+    },
+    {
+      "analysis_modes": [
+        "descriptive",
+        "optimization"
+      ],
+      "artifact_count": 3,
+      "city_id": "us.ma.boston",
+      "city_name": "Boston",
+      "content_hash": "sha256:ae6409ce4a61a7682e5323eb38eb741705f7a5440c74d689680a4e4df9294ab2",
+      "evidence_types": [
+        "observed",
+        "proposed"
+      ],
+      "execution_id": "tierd.us.ma.boston.12",
+      "kind": "deep-pack",
+      "limitations": [
+        "The negative release demonstrates a missing-network gate and does not evaluate actual mobility performance.",
+        "Do not treat city polygons or request-area labels as a routable transport network.",
+        "Do not call a proposed allocation a real-time routing result.",
+        "Public data, internal reproducibility, and computational scale do not establish external review, adoption, deployment, users, or real-world impact."
+      ],
+      "observed_request_count": 148160,
+      "readiness": "insufficient-evidence",
+      "recommendation_issued": false,
+      "scenario_id": "tierd.us.ma.boston.12",
+      "source_count": 7,
+      "status": "insufficient-evidence",
+      "suite": "mobility-accessibility-operations",
+      "template_id": "deep.mobility.real-time-reroute.v1",
+      "title": "Real-time multimodal rerouting gate"
+    },
+    {
+      "analysis_modes": [
+        "forecast",
+        "simulation",
+        "optimization"
+      ],
+      "artifact_count": 7,
+      "city_id": "us.il.chicago",
+      "city_name": "Chicago",
+      "content_hash": "sha256:ae22e410db39b110e2d4cbf0517d05a7088c8d7faf59d6d54562ae368d662e56",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "execution_id": "tierd.us.il.chicago.01",
+      "kind": "deep-pack",
+      "limitations": [
+        "Reporting behavior, publication coverage, taxonomy, and workflow differ across cities.",
+        "A transparent baseline can support planning exercises but cannot validate intervention impact.",
+        "Do not call service requests verified incidents, harms, needs, or completed outcomes.",
+        "Do not describe proposed action coefficients as observed or causal effects.",
+        "Do not present a planning-support option as a municipal recommendation or deployment.",
+        "Public data, internal reproducibility, and computational scale do not establish external review, adoption, deployment, users, or real-world impact."
+      ],
+      "observed_request_count": 1061921,
+      "readiness": "planning-support",
+      "recommendation_issued": true,
+      "scenario_id": "tierd.us.il.chicago.01",
+      "selected_option_id": "bounded-portfolio",
+      "source_count": 7,
+      "status": "completed",
+      "suite": "public-service-operations",
+      "template_id": "deep.public-service.total-demand.v1",
+      "title": "Citywide service-request workload baseline"
+    },
+    {
+      "analysis_modes": [
+        "forecast",
+        "simulation",
+        "optimization"
+      ],
+      "artifact_count": 7,
+      "city_id": "us.il.chicago",
+      "city_name": "Chicago",
+      "content_hash": "sha256:15f2191b39e731e858b2b49d0ab3ca1e087b614dc1fdf749bd04bdfa65484d6c",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "execution_id": "tierd.us.il.chicago.02",
+      "kind": "deep-pack",
+      "limitations": [
+        "Reporting behavior, publication coverage, taxonomy, and workflow differ across cities.",
+        "A transparent baseline can support planning exercises but cannot validate intervention impact.",
+        "Do not call service requests verified incidents, harms, needs, or completed outcomes.",
+        "Do not describe proposed action coefficients as observed or causal effects.",
+        "Do not present a planning-support option as a municipal recommendation or deployment.",
+        "Public data, internal reproducibility, and computational scale do not establish external review, adoption, deployment, users, or real-world impact."
+      ],
+      "observed_request_count": 1061921,
+      "readiness": "planning-support",
+      "recommendation_issued": true,
+      "scenario_id": "tierd.us.il.chicago.02",
+      "selected_option_id": "bounded-portfolio",
+      "source_count": 7,
+      "status": "completed",
+      "suite": "public-service-operations",
+      "template_id": "deep.public-service.seasonal-staffing.v1",
+      "title": "Seasonal service-capacity planning"
+    },
+    {
+      "analysis_modes": [
+        "forecast",
+        "simulation",
+        "optimization"
+      ],
+      "artifact_count": 7,
+      "city_id": "us.il.chicago",
+      "city_name": "Chicago",
+      "content_hash": "sha256:ae57c524580b7c7e750b3f87175071bbd4cff27ff6d831e86527d2beb500813a",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "execution_id": "tierd.us.il.chicago.03",
+      "kind": "deep-pack",
+      "limitations": [
+        "Reporting behavior, publication coverage, taxonomy, and workflow differ across cities.",
+        "A transparent baseline can support planning exercises but cannot validate intervention impact.",
+        "Do not call service requests verified incidents, harms, needs, or completed outcomes.",
+        "Do not describe proposed action coefficients as observed or causal effects.",
+        "Do not present a planning-support option as a municipal recommendation or deployment.",
+        "Public data, internal reproducibility, and computational scale do not establish external review, adoption, deployment, users, or real-world impact."
+      ],
+      "observed_request_count": 105668,
+      "readiness": "planning-support",
+      "recommendation_issued": true,
+      "scenario_id": "tierd.us.il.chicago.03",
+      "selected_option_id": "bounded-portfolio",
+      "source_count": 7,
+      "status": "completed",
+      "suite": "public-service-operations",
+      "template_id": "deep.public-service.sanitation-workload.v1",
+      "title": "Sanitation-related request workload planning"
+    },
+    {
+      "analysis_modes": [
+        "forecast",
+        "simulation",
+        "optimization"
+      ],
+      "artifact_count": 7,
+      "city_id": "us.il.chicago",
+      "city_name": "Chicago",
+      "content_hash": "sha256:e3bd9bba8120d106f429a1973dffd745547ae0f1e89d03df90f59f3982bf3463",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "execution_id": "tierd.us.il.chicago.04",
+      "kind": "deep-pack",
+      "limitations": [
+        "Reporting behavior, publication coverage, taxonomy, and workflow differ across cities.",
+        "A transparent baseline can support planning exercises but cannot validate intervention impact.",
+        "Do not call service requests verified incidents, harms, needs, or completed outcomes.",
+        "Do not describe proposed action coefficients as observed or causal effects.",
+        "Do not present a planning-support option as a municipal recommendation or deployment.",
+        "Public data, internal reproducibility, and computational scale do not establish external review, adoption, deployment, users, or real-world impact."
+      ],
+      "observed_request_count": 1061921,
+      "readiness": "planning-support",
+      "recommendation_issued": true,
+      "scenario_id": "tierd.us.il.chicago.04",
+      "selected_option_id": "bounded-portfolio",
+      "source_count": 7,
+      "status": "completed",
+      "suite": "climate-disaster-resilience",
+      "template_id": "deep.climate.heat-service-surge.v1",
+      "title": "Heat-context service continuity"
+    },
+    {
+      "analysis_modes": [
+        "forecast",
+        "simulation",
+        "optimization"
+      ],
+      "artifact_count": 7,
+      "city_id": "us.il.chicago",
+      "city_name": "Chicago",
+      "content_hash": "sha256:0a1a6be4e10fab368348527c63944fbf10403bbb84f19269d4f466d9be1f6477",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "execution_id": "tierd.us.il.chicago.05",
+      "kind": "deep-pack",
+      "limitations": [
+        "Reporting behavior, publication coverage, taxonomy, and workflow differ across cities.",
+        "A transparent baseline can support planning exercises but cannot validate intervention impact.",
+        "Do not call service requests verified incidents, harms, needs, or completed outcomes.",
+        "Do not describe proposed action coefficients as observed or causal effects.",
+        "Do not present a planning-support option as a municipal recommendation or deployment.",
+        "Public data, internal reproducibility, and computational scale do not establish external review, adoption, deployment, users, or real-world impact."
+      ],
+      "observed_request_count": 1061921,
+      "readiness": "planning-support",
+      "recommendation_issued": true,
+      "scenario_id": "tierd.us.il.chicago.05",
+      "selected_option_id": "bounded-portfolio",
+      "source_count": 7,
+      "status": "completed",
+      "suite": "climate-disaster-resilience",
+      "template_id": "deep.climate.rainfall-continuity.v1",
+      "title": "Rainfall-context service continuity"
+    },
+    {
+      "analysis_modes": [
+        "forecast",
+        "simulation",
+        "optimization"
+      ],
+      "artifact_count": 7,
+      "city_id": "us.il.chicago",
+      "city_name": "Chicago",
+      "content_hash": "sha256:96be659f4e2a7db69e0abb1561d12224ad82a55533ebde08f758e459e264ff9a",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "execution_id": "tierd.us.il.chicago.06",
+      "kind": "deep-pack",
+      "limitations": [
+        "Reporting behavior, publication coverage, taxonomy, and workflow differ across cities.",
+        "A transparent baseline can support planning exercises but cannot validate intervention impact.",
+        "Do not call service requests verified incidents, harms, needs, or completed outcomes.",
+        "Do not describe proposed action coefficients as observed or causal effects.",
+        "Do not present a planning-support option as a municipal recommendation or deployment.",
+        "Public data, internal reproducibility, and computational scale do not establish external review, adoption, deployment, users, or real-world impact."
+      ],
+      "observed_request_count": 24959,
+      "readiness": "planning-support",
+      "recommendation_issued": true,
+      "scenario_id": "tierd.us.il.chicago.06",
+      "selected_option_id": "bounded-portfolio",
+      "source_count": 7,
+      "status": "completed",
+      "suite": "housing-land-use-regeneration",
+      "template_id": "deep.housing.request-triage.v1",
+      "title": "Housing-related request triage"
+    },
+    {
+      "analysis_modes": [
+        "forecast",
+        "simulation",
+        "optimization"
+      ],
+      "artifact_count": 7,
+      "city_id": "us.il.chicago",
+      "city_name": "Chicago",
+      "content_hash": "sha256:d73613bc0951da7e82ab8081f44d4854897fdde4ee72ff743f642a5a58c4485e",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "execution_id": "tierd.us.il.chicago.07",
+      "kind": "deep-pack",
+      "limitations": [
+        "Reporting behavior, publication coverage, taxonomy, and workflow differ across cities.",
+        "A transparent baseline can support planning exercises but cannot validate intervention impact.",
+        "Do not call service requests verified incidents, harms, needs, or completed outcomes.",
+        "Do not describe proposed action coefficients as observed or causal effects.",
+        "Do not present a planning-support option as a municipal recommendation or deployment.",
+        "Public data, internal reproducibility, and computational scale do not establish external review, adoption, deployment, users, or real-world impact."
+      ],
+      "observed_request_count": 388845,
+      "readiness": "planning-support",
+      "recommendation_issued": true,
+      "scenario_id": "tierd.us.il.chicago.07",
+      "selected_option_id": "bounded-portfolio",
+      "source_count": 7,
+      "status": "completed",
+      "suite": "population-health-environmental-exposure",
+      "template_id": "deep.health.environmental-request-screen.v1",
+      "title": "Environmental request workload screen"
+    },
+    {
+      "analysis_modes": [
+        "forecast",
+        "simulation",
+        "optimization"
+      ],
+      "artifact_count": 7,
+      "city_id": "us.il.chicago",
+      "city_name": "Chicago",
+      "content_hash": "sha256:c43b4a4ea40661f7dbb83ce4c3bd41798d7d0c8fcf0fbea54465905d590596ea",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "execution_id": "tierd.us.il.chicago.08",
+      "kind": "deep-pack",
+      "limitations": [
+        "Reporting behavior, publication coverage, taxonomy, and workflow differ across cities.",
+        "A transparent baseline can support planning exercises but cannot validate intervention impact.",
+        "Do not call service requests verified incidents, harms, needs, or completed outcomes.",
+        "Do not describe proposed action coefficients as observed or causal effects.",
+        "Do not present a planning-support option as a municipal recommendation or deployment.",
+        "Public data, internal reproducibility, and computational scale do not establish external review, adoption, deployment, users, or real-world impact."
+      ],
+      "observed_request_count": 128010,
+      "readiness": "planning-support",
+      "recommendation_issued": true,
+      "scenario_id": "tierd.us.il.chicago.08",
+      "selected_option_id": "bounded-portfolio",
+      "source_count": 7,
+      "status": "completed",
+      "suite": "infrastructure-finance-asset-risk",
+      "template_id": "deep.infrastructure.maintenance-portfolio.v1",
+      "title": "Infrastructure-maintenance request portfolio"
+    },
+    {
+      "analysis_modes": [
+        "forecast",
+        "simulation",
+        "optimization"
+      ],
+      "artifact_count": 7,
+      "city_id": "us.il.chicago",
+      "city_name": "Chicago",
+      "content_hash": "sha256:8e2f1f864d7a2b7181b09d2388779db6c2de7ccd90084e9e800b92d052805150",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "execution_id": "tierd.us.il.chicago.09",
+      "kind": "deep-pack",
+      "limitations": [
+        "Reporting behavior, publication coverage, taxonomy, and workflow differ across cities.",
+        "A transparent baseline can support planning exercises but cannot validate intervention impact.",
+        "Do not call service requests verified incidents, harms, needs, or completed outcomes.",
+        "Do not describe proposed action coefficients as observed or causal effects.",
+        "Do not present a planning-support option as a municipal recommendation or deployment.",
+        "Public data, internal reproducibility, and computational scale do not establish external review, adoption, deployment, users, or real-world impact."
+      ],
+      "observed_request_count": 1061921,
+      "readiness": "planning-support",
+      "recommendation_issued": true,
+      "scenario_id": "tierd.us.il.chicago.09",
+      "selected_option_id": "bounded-portfolio",
+      "source_count": 7,
+      "status": "completed",
+      "suite": "behavioral-policy-equity",
+      "template_id": "deep.equity.area-balance.v1",
+      "title": "Area-level request balance"
+    },
+    {
+      "analysis_modes": [
+        "forecast",
+        "simulation",
+        "optimization"
+      ],
+      "artifact_count": 7,
+      "city_id": "us.il.chicago",
+      "city_name": "Chicago",
+      "content_hash": "sha256:830ec3d7ad2f6c7b1878b4a7451eab58094402106a3f388da7afaba0bf6bc0e6",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "execution_id": "tierd.us.il.chicago.10",
+      "kind": "deep-pack",
+      "limitations": [
+        "Reporting behavior, publication coverage, taxonomy, and workflow differ across cities.",
+        "A transparent baseline can support planning exercises but cannot validate intervention impact.",
+        "Do not call service requests verified incidents, harms, needs, or completed outcomes.",
+        "Do not describe proposed action coefficients as observed or causal effects.",
+        "Do not present a planning-support option as a municipal recommendation or deployment.",
+        "Public data, internal reproducibility, and computational scale do not establish external review, adoption, deployment, users, or real-world impact."
+      ],
+      "observed_request_count": 5387,
+      "readiness": "planning-support",
+      "recommendation_issued": true,
+      "scenario_id": "tierd.us.il.chicago.10",
+      "selected_option_id": "bounded-portfolio",
+      "source_count": 7,
+      "status": "completed",
+      "suite": "mobility-accessibility-operations",
+      "template_id": "deep.mobility.accessibility-request.v1",
+      "title": "Accessibility-related request planning"
+    },
+    {
+      "analysis_modes": [
+        "descriptive",
+        "causal"
+      ],
+      "artifact_count": 3,
+      "city_id": "us.il.chicago",
+      "city_name": "Chicago",
+      "content_hash": "sha256:b41418b2353c1a6f9fb5f4d0f59bafe9d7bc800c923b0b21277363fbd55f1ebb",
+      "evidence_types": [
+        "causal",
+        "observed"
+      ],
+      "execution_id": "tierd.us.il.chicago.11",
+      "kind": "deep-pack",
+      "limitations": [
+        "A causal question is retained as a negative evidence-gate test, not silently reduced to an associational claim.",
+        "Do not infer treatment effects from before/after request counts.",
+        "Do not use request status as verified service resolution or welfare impact.",
+        "Public data, internal reproducibility, and computational scale do not establish external review, adoption, deployment, users, or real-world impact."
+      ],
+      "observed_request_count": 1061921,
+      "readiness": "insufficient-evidence",
+      "recommendation_issued": false,
+      "scenario_id": "tierd.us.il.chicago.11",
+      "source_count": 7,
+      "status": "insufficient-evidence",
+      "suite": "behavioral-policy-equity",
+      "template_id": "deep.equity.causal-service-effectiveness.v1",
+      "title": "Causal service-effectiveness gate"
+    },
+    {
+      "analysis_modes": [
+        "descriptive",
+        "optimization"
+      ],
+      "artifact_count": 3,
+      "city_id": "us.il.chicago",
+      "city_name": "Chicago",
+      "content_hash": "sha256:e9271560e3dd9d2c7cdd73864aead7f545c6b525d92cf3a8d139b86744489395",
+      "evidence_types": [
+        "observed",
+        "proposed"
+      ],
+      "execution_id": "tierd.us.il.chicago.12",
+      "kind": "deep-pack",
+      "limitations": [
+        "The negative release demonstrates a missing-network gate and does not evaluate actual mobility performance.",
+        "Do not treat city polygons or request-area labels as a routable transport network.",
+        "Do not call a proposed allocation a real-time routing result.",
+        "Public data, internal reproducibility, and computational scale do not establish external review, adoption, deployment, users, or real-world impact."
+      ],
+      "observed_request_count": 1061921,
+      "readiness": "insufficient-evidence",
+      "recommendation_issued": false,
+      "scenario_id": "tierd.us.il.chicago.12",
+      "source_count": 7,
+      "status": "insufficient-evidence",
+      "suite": "mobility-accessibility-operations",
+      "template_id": "deep.mobility.real-time-reroute.v1",
+      "title": "Real-time multimodal rerouting gate"
+    },
+    {
+      "analysis_modes": [
+        "forecast",
+        "simulation",
+        "optimization"
+      ],
+      "artifact_count": 7,
+      "city_id": "us.ca.los-angeles",
+      "city_name": "Los Angeles",
+      "content_hash": "sha256:a470f4716b8465ec94a2a03c29ec8002304e379ace5c2583f69c8a4d901f3c17",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "execution_id": "tierd.us.ca.los-angeles.01",
+      "kind": "deep-pack",
+      "limitations": [
+        "Reporting behavior, publication coverage, taxonomy, and workflow differ across cities.",
+        "A transparent baseline can support planning exercises but cannot validate intervention impact.",
+        "Do not call service requests verified incidents, harms, needs, or completed outcomes.",
+        "Do not describe proposed action coefficients as observed or causal effects.",
+        "Do not present a planning-support option as a municipal recommendation or deployment.",
+        "Public data, internal reproducibility, and computational scale do not establish external review, adoption, deployment, users, or real-world impact."
+      ],
+      "observed_request_count": 53194,
+      "readiness": "planning-support",
+      "recommendation_issued": true,
+      "scenario_id": "tierd.us.ca.los-angeles.01",
+      "selected_option_id": "bounded-portfolio",
+      "source_count": 7,
+      "status": "completed",
+      "suite": "public-service-operations",
+      "template_id": "deep.public-service.total-demand.v1",
+      "title": "Citywide service-request workload baseline"
+    },
+    {
+      "analysis_modes": [
+        "forecast",
+        "simulation",
+        "optimization"
+      ],
+      "artifact_count": 7,
+      "city_id": "us.ca.los-angeles",
+      "city_name": "Los Angeles",
+      "content_hash": "sha256:0842d5ddf65cdc3a5b9ca8432cc074e585706ebf4e14dd6d795afddfccc4767b",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "execution_id": "tierd.us.ca.los-angeles.02",
+      "kind": "deep-pack",
+      "limitations": [
+        "Reporting behavior, publication coverage, taxonomy, and workflow differ across cities.",
+        "A transparent baseline can support planning exercises but cannot validate intervention impact.",
+        "Do not call service requests verified incidents, harms, needs, or completed outcomes.",
+        "Do not describe proposed action coefficients as observed or causal effects.",
+        "Do not present a planning-support option as a municipal recommendation or deployment.",
+        "Public data, internal reproducibility, and computational scale do not establish external review, adoption, deployment, users, or real-world impact."
+      ],
+      "observed_request_count": 53194,
+      "readiness": "planning-support",
+      "recommendation_issued": true,
+      "scenario_id": "tierd.us.ca.los-angeles.02",
+      "selected_option_id": "bounded-portfolio",
+      "source_count": 7,
+      "status": "completed",
+      "suite": "public-service-operations",
+      "template_id": "deep.public-service.seasonal-staffing.v1",
+      "title": "Seasonal service-capacity planning"
+    },
+    {
+      "analysis_modes": [
+        "forecast",
+        "simulation",
+        "optimization"
+      ],
+      "artifact_count": 7,
+      "city_id": "us.ca.los-angeles",
+      "city_name": "Los Angeles",
+      "content_hash": "sha256:18ad2145d40792fc333afab7dcbcbc08c126c849704e610ec52b1d669267d254",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "execution_id": "tierd.us.ca.los-angeles.03",
+      "kind": "deep-pack",
+      "limitations": [
+        "Reporting behavior, publication coverage, taxonomy, and workflow differ across cities.",
+        "A transparent baseline can support planning exercises but cannot validate intervention impact.",
+        "Do not call service requests verified incidents, harms, needs, or completed outcomes.",
+        "Do not describe proposed action coefficients as observed or causal effects.",
+        "Do not present a planning-support option as a municipal recommendation or deployment.",
+        "Public data, internal reproducibility, and computational scale do not establish external review, adoption, deployment, users, or real-world impact."
+      ],
+      "observed_request_count": 148,
+      "readiness": "planning-support",
+      "recommendation_issued": true,
+      "scenario_id": "tierd.us.ca.los-angeles.03",
+      "selected_option_id": "bounded-portfolio",
+      "source_count": 7,
+      "status": "completed",
+      "suite": "public-service-operations",
+      "template_id": "deep.public-service.sanitation-workload.v1",
+      "title": "Sanitation-related request workload planning"
+    },
+    {
+      "analysis_modes": [
+        "forecast",
+        "simulation",
+        "optimization"
+      ],
+      "artifact_count": 7,
+      "city_id": "us.ca.los-angeles",
+      "city_name": "Los Angeles",
+      "content_hash": "sha256:fec2fc28338c880750a6faf0cdfeb3677f2828ad4034f88a3f39eea011d1b713",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "execution_id": "tierd.us.ca.los-angeles.04",
+      "kind": "deep-pack",
+      "limitations": [
+        "Reporting behavior, publication coverage, taxonomy, and workflow differ across cities.",
+        "A transparent baseline can support planning exercises but cannot validate intervention impact.",
+        "Do not call service requests verified incidents, harms, needs, or completed outcomes.",
+        "Do not describe proposed action coefficients as observed or causal effects.",
+        "Do not present a planning-support option as a municipal recommendation or deployment.",
+        "Public data, internal reproducibility, and computational scale do not establish external review, adoption, deployment, users, or real-world impact."
+      ],
+      "observed_request_count": 53194,
+      "readiness": "planning-support",
+      "recommendation_issued": true,
+      "scenario_id": "tierd.us.ca.los-angeles.04",
+      "selected_option_id": "bounded-portfolio",
+      "source_count": 7,
+      "status": "completed",
+      "suite": "climate-disaster-resilience",
+      "template_id": "deep.climate.heat-service-surge.v1",
+      "title": "Heat-context service continuity"
+    },
+    {
+      "analysis_modes": [
+        "forecast",
+        "simulation",
+        "optimization"
+      ],
+      "artifact_count": 7,
+      "city_id": "us.ca.los-angeles",
+      "city_name": "Los Angeles",
+      "content_hash": "sha256:02da81aa873336211774438f58eeda08682840587093fc6e7e36158a5f4647f4",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "execution_id": "tierd.us.ca.los-angeles.05",
+      "kind": "deep-pack",
+      "limitations": [
+        "Reporting behavior, publication coverage, taxonomy, and workflow differ across cities.",
+        "A transparent baseline can support planning exercises but cannot validate intervention impact.",
+        "Do not call service requests verified incidents, harms, needs, or completed outcomes.",
+        "Do not describe proposed action coefficients as observed or causal effects.",
+        "Do not present a planning-support option as a municipal recommendation or deployment.",
+        "Public data, internal reproducibility, and computational scale do not establish external review, adoption, deployment, users, or real-world impact."
+      ],
+      "observed_request_count": 53194,
+      "readiness": "planning-support",
+      "recommendation_issued": true,
+      "scenario_id": "tierd.us.ca.los-angeles.05",
+      "selected_option_id": "bounded-portfolio",
+      "source_count": 7,
+      "status": "completed",
+      "suite": "climate-disaster-resilience",
+      "template_id": "deep.climate.rainfall-continuity.v1",
+      "title": "Rainfall-context service continuity"
+    },
+    {
+      "analysis_modes": [
+        "forecast",
+        "simulation",
+        "optimization"
+      ],
+      "artifact_count": 3,
+      "city_id": "us.ca.los-angeles",
+      "city_name": "Los Angeles",
+      "content_hash": "sha256:732ed921d0f6aac77e18e9f728630a7c26f4b9bdb441cb07a5f3001ab6e977eb",
+      "evidence_types": [
+        "observed",
+        "proposed"
+      ],
+      "execution_id": "tierd.us.ca.los-angeles.06",
+      "kind": "deep-pack",
+      "limitations": [
+        "Reporting behavior, publication coverage, taxonomy, and workflow differ across cities.",
+        "A transparent baseline can support planning exercises but cannot validate intervention impact.",
+        "Do not call service requests verified incidents, harms, needs, or completed outcomes.",
+        "Do not describe proposed action coefficients as observed or causal effects.",
+        "Do not present a planning-support option as a municipal recommendation or deployment.",
+        "Public data, internal reproducibility, and computational scale do not establish external review, adoption, deployment, users, or real-world impact."
+      ],
+      "observed_request_count": 0,
+      "readiness": "insufficient-evidence",
+      "recommendation_issued": false,
+      "scenario_id": "tierd.us.ca.los-angeles.06",
+      "source_count": 7,
+      "status": "insufficient-evidence",
+      "suite": "housing-land-use-regeneration",
+      "template_id": "deep.housing.request-triage.v1",
+      "title": "Housing-related request triage"
+    },
+    {
+      "analysis_modes": [
+        "forecast",
+        "simulation",
+        "optimization"
+      ],
+      "artifact_count": 7,
+      "city_id": "us.ca.los-angeles",
+      "city_name": "Los Angeles",
+      "content_hash": "sha256:c207da16a8e76821ae9ed5ff5f650011de968c59e28ecc3c1345da69e8f3f5d1",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "execution_id": "tierd.us.ca.los-angeles.07",
+      "kind": "deep-pack",
+      "limitations": [
+        "Reporting behavior, publication coverage, taxonomy, and workflow differ across cities.",
+        "A transparent baseline can support planning exercises but cannot validate intervention impact.",
+        "Do not call service requests verified incidents, harms, needs, or completed outcomes.",
+        "Do not describe proposed action coefficients as observed or causal effects.",
+        "Do not present a planning-support option as a municipal recommendation or deployment.",
+        "Public data, internal reproducibility, and computational scale do not establish external review, adoption, deployment, users, or real-world impact."
+      ],
+      "observed_request_count": 208,
+      "readiness": "planning-support",
+      "recommendation_issued": true,
+      "scenario_id": "tierd.us.ca.los-angeles.07",
+      "selected_option_id": "bounded-portfolio",
+      "source_count": 7,
+      "status": "completed",
+      "suite": "population-health-environmental-exposure",
+      "template_id": "deep.health.environmental-request-screen.v1",
+      "title": "Environmental request workload screen"
+    },
+    {
+      "analysis_modes": [
+        "forecast",
+        "simulation",
+        "optimization"
+      ],
+      "artifact_count": 3,
+      "city_id": "us.ca.los-angeles",
+      "city_name": "Los Angeles",
+      "content_hash": "sha256:642bf6dfd95a4368c8b5212fc29ad59bf7e07b40ac4d56c3b49c6794977d555a",
+      "evidence_types": [
+        "observed",
+        "proposed"
+      ],
+      "execution_id": "tierd.us.ca.los-angeles.08",
+      "kind": "deep-pack",
+      "limitations": [
+        "Reporting behavior, publication coverage, taxonomy, and workflow differ across cities.",
+        "A transparent baseline can support planning exercises but cannot validate intervention impact.",
+        "Do not call service requests verified incidents, harms, needs, or completed outcomes.",
+        "Do not describe proposed action coefficients as observed or causal effects.",
+        "Do not present a planning-support option as a municipal recommendation or deployment.",
+        "Public data, internal reproducibility, and computational scale do not establish external review, adoption, deployment, users, or real-world impact."
+      ],
+      "observed_request_count": 60,
+      "readiness": "insufficient-evidence",
+      "recommendation_issued": false,
+      "scenario_id": "tierd.us.ca.los-angeles.08",
+      "source_count": 7,
+      "status": "insufficient-evidence",
+      "suite": "infrastructure-finance-asset-risk",
+      "template_id": "deep.infrastructure.maintenance-portfolio.v1",
+      "title": "Infrastructure-maintenance request portfolio"
+    },
+    {
+      "analysis_modes": [
+        "forecast",
+        "simulation",
+        "optimization"
+      ],
+      "artifact_count": 7,
+      "city_id": "us.ca.los-angeles",
+      "city_name": "Los Angeles",
+      "content_hash": "sha256:6f6d85c52dd58a0e5542c3df8137f02670aaa207d05cb16f2dd6d5ea301645db",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "execution_id": "tierd.us.ca.los-angeles.09",
+      "kind": "deep-pack",
+      "limitations": [
+        "Reporting behavior, publication coverage, taxonomy, and workflow differ across cities.",
+        "A transparent baseline can support planning exercises but cannot validate intervention impact.",
+        "Do not call service requests verified incidents, harms, needs, or completed outcomes.",
+        "Do not describe proposed action coefficients as observed or causal effects.",
+        "Do not present a planning-support option as a municipal recommendation or deployment.",
+        "Public data, internal reproducibility, and computational scale do not establish external review, adoption, deployment, users, or real-world impact."
+      ],
+      "observed_request_count": 53194,
+      "readiness": "planning-support",
+      "recommendation_issued": true,
+      "scenario_id": "tierd.us.ca.los-angeles.09",
+      "selected_option_id": "bounded-portfolio",
+      "source_count": 7,
+      "status": "completed",
+      "suite": "behavioral-policy-equity",
+      "template_id": "deep.equity.area-balance.v1",
+      "title": "Area-level request balance"
+    },
+    {
+      "analysis_modes": [
+        "forecast",
+        "simulation",
+        "optimization"
+      ],
+      "artifact_count": 3,
+      "city_id": "us.ca.los-angeles",
+      "city_name": "Los Angeles",
+      "content_hash": "sha256:e0ba233e31fa954f169180b84b434b98d21093629d5a7657a53b9ca08a40eb59",
+      "evidence_types": [
+        "observed",
+        "proposed"
+      ],
+      "execution_id": "tierd.us.ca.los-angeles.10",
+      "kind": "deep-pack",
+      "limitations": [
+        "Reporting behavior, publication coverage, taxonomy, and workflow differ across cities.",
+        "A transparent baseline can support planning exercises but cannot validate intervention impact.",
+        "Do not call service requests verified incidents, harms, needs, or completed outcomes.",
+        "Do not describe proposed action coefficients as observed or causal effects.",
+        "Do not present a planning-support option as a municipal recommendation or deployment.",
+        "Public data, internal reproducibility, and computational scale do not establish external review, adoption, deployment, users, or real-world impact."
+      ],
+      "observed_request_count": 0,
+      "readiness": "insufficient-evidence",
+      "recommendation_issued": false,
+      "scenario_id": "tierd.us.ca.los-angeles.10",
+      "source_count": 7,
+      "status": "insufficient-evidence",
+      "suite": "mobility-accessibility-operations",
+      "template_id": "deep.mobility.accessibility-request.v1",
+      "title": "Accessibility-related request planning"
+    },
+    {
+      "analysis_modes": [
+        "descriptive",
+        "causal"
+      ],
+      "artifact_count": 3,
+      "city_id": "us.ca.los-angeles",
+      "city_name": "Los Angeles",
+      "content_hash": "sha256:da0a4bc4ea802cfb076dd4a178b6087902440ccefd6f45248e6b0fa3669f00b3",
+      "evidence_types": [
+        "causal",
+        "observed"
+      ],
+      "execution_id": "tierd.us.ca.los-angeles.11",
+      "kind": "deep-pack",
+      "limitations": [
+        "A causal question is retained as a negative evidence-gate test, not silently reduced to an associational claim.",
+        "Do not infer treatment effects from before/after request counts.",
+        "Do not use request status as verified service resolution or welfare impact.",
+        "Public data, internal reproducibility, and computational scale do not establish external review, adoption, deployment, users, or real-world impact."
+      ],
+      "observed_request_count": 53194,
+      "readiness": "insufficient-evidence",
+      "recommendation_issued": false,
+      "scenario_id": "tierd.us.ca.los-angeles.11",
+      "source_count": 7,
+      "status": "insufficient-evidence",
+      "suite": "behavioral-policy-equity",
+      "template_id": "deep.equity.causal-service-effectiveness.v1",
+      "title": "Causal service-effectiveness gate"
+    },
+    {
+      "analysis_modes": [
+        "descriptive",
+        "optimization"
+      ],
+      "artifact_count": 3,
+      "city_id": "us.ca.los-angeles",
+      "city_name": "Los Angeles",
+      "content_hash": "sha256:4bff9d15412f6c3af0da95d96c9c9fcc0b29fbe96d255ee0c841b533f3afa5a2",
+      "evidence_types": [
+        "observed",
+        "proposed"
+      ],
+      "execution_id": "tierd.us.ca.los-angeles.12",
+      "kind": "deep-pack",
+      "limitations": [
+        "The negative release demonstrates a missing-network gate and does not evaluate actual mobility performance.",
+        "Do not treat city polygons or request-area labels as a routable transport network.",
+        "Do not call a proposed allocation a real-time routing result.",
+        "Public data, internal reproducibility, and computational scale do not establish external review, adoption, deployment, users, or real-world impact."
+      ],
+      "observed_request_count": 53194,
+      "readiness": "insufficient-evidence",
+      "recommendation_issued": false,
+      "scenario_id": "tierd.us.ca.los-angeles.12",
+      "source_count": 7,
+      "status": "insufficient-evidence",
+      "suite": "mobility-accessibility-operations",
+      "template_id": "deep.mobility.real-time-reroute.v1",
+      "title": "Real-time multimodal rerouting gate"
+    },
+    {
+      "analysis_modes": [
+        "forecast",
+        "simulation",
+        "optimization"
+      ],
+      "artifact_count": 7,
+      "city_id": "us.ny.new-york-city",
+      "city_name": "New York City",
+      "content_hash": "sha256:1ae468303c8f674dab94996102614434c6321fcf9fcd1e6e4ef729472668b3f0",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "execution_id": "tierd.us.ny.new-york-city.01",
+      "kind": "deep-pack",
+      "limitations": [
+        "Reporting behavior, publication coverage, taxonomy, and workflow differ across cities.",
+        "A transparent baseline can support planning exercises but cannot validate intervention impact.",
+        "Do not call service requests verified incidents, harms, needs, or completed outcomes.",
+        "Do not describe proposed action coefficients as observed or causal effects.",
+        "Do not present a planning-support option as a municipal recommendation or deployment.",
+        "Public data, internal reproducibility, and computational scale do not establish external review, adoption, deployment, users, or real-world impact."
+      ],
+      "observed_request_count": 1796655,
+      "readiness": "planning-support",
+      "recommendation_issued": true,
+      "scenario_id": "tierd.us.ny.new-york-city.01",
+      "selected_option_id": "bounded-portfolio",
+      "source_count": 7,
+      "status": "completed",
+      "suite": "public-service-operations",
+      "template_id": "deep.public-service.total-demand.v1",
+      "title": "Citywide service-request workload baseline"
+    },
+    {
+      "analysis_modes": [
+        "forecast",
+        "simulation",
+        "optimization"
+      ],
+      "artifact_count": 7,
+      "city_id": "us.ny.new-york-city",
+      "city_name": "New York City",
+      "content_hash": "sha256:f59118a1f9cf7726ebde134ec3e6bdc6906ed4deda53f088ed0d28c45d5a67ae",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "execution_id": "tierd.us.ny.new-york-city.02",
+      "kind": "deep-pack",
+      "limitations": [
+        "Reporting behavior, publication coverage, taxonomy, and workflow differ across cities.",
+        "A transparent baseline can support planning exercises but cannot validate intervention impact.",
+        "Do not call service requests verified incidents, harms, needs, or completed outcomes.",
+        "Do not describe proposed action coefficients as observed or causal effects.",
+        "Do not present a planning-support option as a municipal recommendation or deployment.",
+        "Public data, internal reproducibility, and computational scale do not establish external review, adoption, deployment, users, or real-world impact."
+      ],
+      "observed_request_count": 1796655,
+      "readiness": "planning-support",
+      "recommendation_issued": true,
+      "scenario_id": "tierd.us.ny.new-york-city.02",
+      "selected_option_id": "bounded-portfolio",
+      "source_count": 7,
+      "status": "completed",
+      "suite": "public-service-operations",
+      "template_id": "deep.public-service.seasonal-staffing.v1",
+      "title": "Seasonal service-capacity planning"
+    },
+    {
+      "analysis_modes": [
+        "forecast",
+        "simulation",
+        "optimization"
+      ],
+      "artifact_count": 7,
+      "city_id": "us.ny.new-york-city",
+      "city_name": "New York City",
+      "content_hash": "sha256:e80799331824fada450dc3a1ad06c5b0e2a2aa71199c5e62c65955c9093f18d0",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "execution_id": "tierd.us.ny.new-york-city.03",
+      "kind": "deep-pack",
+      "limitations": [
+        "Reporting behavior, publication coverage, taxonomy, and workflow differ across cities.",
+        "A transparent baseline can support planning exercises but cannot validate intervention impact.",
+        "Do not call service requests verified incidents, harms, needs, or completed outcomes.",
+        "Do not describe proposed action coefficients as observed or causal effects.",
+        "Do not present a planning-support option as a municipal recommendation or deployment.",
+        "Public data, internal reproducibility, and computational scale do not establish external review, adoption, deployment, users, or real-world impact."
+      ],
+      "observed_request_count": 26620,
+      "readiness": "planning-support",
+      "recommendation_issued": true,
+      "scenario_id": "tierd.us.ny.new-york-city.03",
+      "selected_option_id": "bounded-portfolio",
+      "source_count": 7,
+      "status": "completed",
+      "suite": "public-service-operations",
+      "template_id": "deep.public-service.sanitation-workload.v1",
+      "title": "Sanitation-related request workload planning"
+    },
+    {
+      "analysis_modes": [
+        "forecast",
+        "simulation",
+        "optimization"
+      ],
+      "artifact_count": 7,
+      "city_id": "us.ny.new-york-city",
+      "city_name": "New York City",
+      "content_hash": "sha256:329dc8fb0b30a4560fb8f54315d748f0d251525447904636159d11d86be3ea76",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "execution_id": "tierd.us.ny.new-york-city.04",
+      "kind": "deep-pack",
+      "limitations": [
+        "Reporting behavior, publication coverage, taxonomy, and workflow differ across cities.",
+        "A transparent baseline can support planning exercises but cannot validate intervention impact.",
+        "Do not call service requests verified incidents, harms, needs, or completed outcomes.",
+        "Do not describe proposed action coefficients as observed or causal effects.",
+        "Do not present a planning-support option as a municipal recommendation or deployment.",
+        "Public data, internal reproducibility, and computational scale do not establish external review, adoption, deployment, users, or real-world impact."
+      ],
+      "observed_request_count": 1796655,
+      "readiness": "planning-support",
+      "recommendation_issued": true,
+      "scenario_id": "tierd.us.ny.new-york-city.04",
+      "selected_option_id": "bounded-portfolio",
+      "source_count": 7,
+      "status": "completed",
+      "suite": "climate-disaster-resilience",
+      "template_id": "deep.climate.heat-service-surge.v1",
+      "title": "Heat-context service continuity"
+    },
+    {
+      "analysis_modes": [
+        "forecast",
+        "simulation",
+        "optimization"
+      ],
+      "artifact_count": 7,
+      "city_id": "us.ny.new-york-city",
+      "city_name": "New York City",
+      "content_hash": "sha256:104c3d68f3a06962fa8bf72cdb42bced6cd5273062aa8d7b18599c6ca5b1a344",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "execution_id": "tierd.us.ny.new-york-city.05",
+      "kind": "deep-pack",
+      "limitations": [
+        "Reporting behavior, publication coverage, taxonomy, and workflow differ across cities.",
+        "A transparent baseline can support planning exercises but cannot validate intervention impact.",
+        "Do not call service requests verified incidents, harms, needs, or completed outcomes.",
+        "Do not describe proposed action coefficients as observed or causal effects.",
+        "Do not present a planning-support option as a municipal recommendation or deployment.",
+        "Public data, internal reproducibility, and computational scale do not establish external review, adoption, deployment, users, or real-world impact."
+      ],
+      "observed_request_count": 1796655,
+      "readiness": "planning-support",
+      "recommendation_issued": true,
+      "scenario_id": "tierd.us.ny.new-york-city.05",
+      "selected_option_id": "bounded-portfolio",
+      "source_count": 7,
+      "status": "completed",
+      "suite": "climate-disaster-resilience",
+      "template_id": "deep.climate.rainfall-continuity.v1",
+      "title": "Rainfall-context service continuity"
+    },
+    {
+      "analysis_modes": [
+        "forecast",
+        "simulation",
+        "optimization"
+      ],
+      "artifact_count": 7,
+      "city_id": "us.ny.new-york-city",
+      "city_name": "New York City",
+      "content_hash": "sha256:ed1c5325ce00ce3f0cedd8faf9f893e036dccf9cfef9bd1d699b26b4d85f323b",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "execution_id": "tierd.us.ny.new-york-city.06",
+      "kind": "deep-pack",
+      "limitations": [
+        "Reporting behavior, publication coverage, taxonomy, and workflow differ across cities.",
+        "A transparent baseline can support planning exercises but cannot validate intervention impact.",
+        "Do not call service requests verified incidents, harms, needs, or completed outcomes.",
+        "Do not describe proposed action coefficients as observed or causal effects.",
+        "Do not present a planning-support option as a municipal recommendation or deployment.",
+        "Public data, internal reproducibility, and computational scale do not establish external review, adoption, deployment, users, or real-world impact."
+      ],
+      "observed_request_count": 246113,
+      "readiness": "planning-support",
+      "recommendation_issued": true,
+      "scenario_id": "tierd.us.ny.new-york-city.06",
+      "selected_option_id": "bounded-portfolio",
+      "source_count": 7,
+      "status": "completed",
+      "suite": "housing-land-use-regeneration",
+      "template_id": "deep.housing.request-triage.v1",
+      "title": "Housing-related request triage"
+    },
+    {
+      "analysis_modes": [
+        "forecast",
+        "simulation",
+        "optimization"
+      ],
+      "artifact_count": 7,
+      "city_id": "us.ny.new-york-city",
+      "city_name": "New York City",
+      "content_hash": "sha256:6788eb2b67e9d5177a9eeeb90ccaa0de50bf74592928a3545a6a7d864d99ec8b",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "execution_id": "tierd.us.ny.new-york-city.07",
+      "kind": "deep-pack",
+      "limitations": [
+        "Reporting behavior, publication coverage, taxonomy, and workflow differ across cities.",
+        "A transparent baseline can support planning exercises but cannot validate intervention impact.",
+        "Do not call service requests verified incidents, harms, needs, or completed outcomes.",
+        "Do not describe proposed action coefficients as observed or causal effects.",
+        "Do not present a planning-support option as a municipal recommendation or deployment.",
+        "Public data, internal reproducibility, and computational scale do not establish external review, adoption, deployment, users, or real-world impact."
+      ],
+      "observed_request_count": 686368,
+      "readiness": "planning-support",
+      "recommendation_issued": true,
+      "scenario_id": "tierd.us.ny.new-york-city.07",
+      "selected_option_id": "bounded-portfolio",
+      "source_count": 7,
+      "status": "completed",
+      "suite": "population-health-environmental-exposure",
+      "template_id": "deep.health.environmental-request-screen.v1",
+      "title": "Environmental request workload screen"
+    },
+    {
+      "analysis_modes": [
+        "forecast",
+        "simulation",
+        "optimization"
+      ],
+      "artifact_count": 7,
+      "city_id": "us.ny.new-york-city",
+      "city_name": "New York City",
+      "content_hash": "sha256:37423fbafe7d84fffe5f5a94e40f1f73de20ac6c24fae95fbc00604faaa0bc40",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "execution_id": "tierd.us.ny.new-york-city.08",
+      "kind": "deep-pack",
+      "limitations": [
+        "Reporting behavior, publication coverage, taxonomy, and workflow differ across cities.",
+        "A transparent baseline can support planning exercises but cannot validate intervention impact.",
+        "Do not call service requests verified incidents, harms, needs, or completed outcomes.",
+        "Do not describe proposed action coefficients as observed or causal effects.",
+        "Do not present a planning-support option as a municipal recommendation or deployment.",
+        "Public data, internal reproducibility, and computational scale do not establish external review, adoption, deployment, users, or real-world impact."
+      ],
+      "observed_request_count": 358019,
+      "readiness": "planning-support",
+      "recommendation_issued": true,
+      "scenario_id": "tierd.us.ny.new-york-city.08",
+      "selected_option_id": "bounded-portfolio",
+      "source_count": 7,
+      "status": "completed",
+      "suite": "infrastructure-finance-asset-risk",
+      "template_id": "deep.infrastructure.maintenance-portfolio.v1",
+      "title": "Infrastructure-maintenance request portfolio"
+    },
+    {
+      "analysis_modes": [
+        "forecast",
+        "simulation",
+        "optimization"
+      ],
+      "artifact_count": 7,
+      "city_id": "us.ny.new-york-city",
+      "city_name": "New York City",
+      "content_hash": "sha256:2cc39213be0bccf5450d855c7512f18006f8ec91d6b536777a666adc94d1e359",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "execution_id": "tierd.us.ny.new-york-city.09",
+      "kind": "deep-pack",
+      "limitations": [
+        "Reporting behavior, publication coverage, taxonomy, and workflow differ across cities.",
+        "A transparent baseline can support planning exercises but cannot validate intervention impact.",
+        "Do not call service requests verified incidents, harms, needs, or completed outcomes.",
+        "Do not describe proposed action coefficients as observed or causal effects.",
+        "Do not present a planning-support option as a municipal recommendation or deployment.",
+        "Public data, internal reproducibility, and computational scale do not establish external review, adoption, deployment, users, or real-world impact."
+      ],
+      "observed_request_count": 1796655,
+      "readiness": "planning-support",
+      "recommendation_issued": true,
+      "scenario_id": "tierd.us.ny.new-york-city.09",
+      "selected_option_id": "bounded-portfolio",
+      "source_count": 7,
+      "status": "completed",
+      "suite": "behavioral-policy-equity",
+      "template_id": "deep.equity.area-balance.v1",
+      "title": "Area-level request balance"
+    },
+    {
+      "analysis_modes": [
+        "forecast",
+        "simulation",
+        "optimization"
+      ],
+      "artifact_count": 7,
+      "city_id": "us.ny.new-york-city",
+      "city_name": "New York City",
+      "content_hash": "sha256:a6eb04be267c1b8b09390aff6ff95a78fbcfb517a60f6db37432e6332d3690b4",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "execution_id": "tierd.us.ny.new-york-city.10",
+      "kind": "deep-pack",
+      "limitations": [
+        "Reporting behavior, publication coverage, taxonomy, and workflow differ across cities.",
+        "A transparent baseline can support planning exercises but cannot validate intervention impact.",
+        "Do not call service requests verified incidents, harms, needs, or completed outcomes.",
+        "Do not describe proposed action coefficients as observed or causal effects.",
+        "Do not present a planning-support option as a municipal recommendation or deployment.",
+        "Public data, internal reproducibility, and computational scale do not establish external review, adoption, deployment, users, or real-world impact."
+      ],
+      "observed_request_count": 151768,
+      "readiness": "planning-support",
+      "recommendation_issued": true,
+      "scenario_id": "tierd.us.ny.new-york-city.10",
+      "selected_option_id": "bounded-portfolio",
+      "source_count": 7,
+      "status": "completed",
+      "suite": "mobility-accessibility-operations",
+      "template_id": "deep.mobility.accessibility-request.v1",
+      "title": "Accessibility-related request planning"
+    },
+    {
+      "analysis_modes": [
+        "descriptive",
+        "causal"
+      ],
+      "artifact_count": 3,
+      "city_id": "us.ny.new-york-city",
+      "city_name": "New York City",
+      "content_hash": "sha256:a0da10fb1b53ac687760bb11b3c73367e89859667f296981d026e9eed4a4b445",
+      "evidence_types": [
+        "causal",
+        "observed"
+      ],
+      "execution_id": "tierd.us.ny.new-york-city.11",
+      "kind": "deep-pack",
+      "limitations": [
+        "A causal question is retained as a negative evidence-gate test, not silently reduced to an associational claim.",
+        "Do not infer treatment effects from before/after request counts.",
+        "Do not use request status as verified service resolution or welfare impact.",
+        "Public data, internal reproducibility, and computational scale do not establish external review, adoption, deployment, users, or real-world impact."
+      ],
+      "observed_request_count": 1796655,
+      "readiness": "insufficient-evidence",
+      "recommendation_issued": false,
+      "scenario_id": "tierd.us.ny.new-york-city.11",
+      "source_count": 7,
+      "status": "insufficient-evidence",
+      "suite": "behavioral-policy-equity",
+      "template_id": "deep.equity.causal-service-effectiveness.v1",
+      "title": "Causal service-effectiveness gate"
+    },
+    {
+      "analysis_modes": [
+        "descriptive",
+        "optimization"
+      ],
+      "artifact_count": 3,
+      "city_id": "us.ny.new-york-city",
+      "city_name": "New York City",
+      "content_hash": "sha256:0eede16148ab4cc2489e7e8b479721445ec2f3f784b29462fab4ddafa01d5586",
+      "evidence_types": [
+        "observed",
+        "proposed"
+      ],
+      "execution_id": "tierd.us.ny.new-york-city.12",
+      "kind": "deep-pack",
+      "limitations": [
+        "The negative release demonstrates a missing-network gate and does not evaluate actual mobility performance.",
+        "Do not treat city polygons or request-area labels as a routable transport network.",
+        "Do not call a proposed allocation a real-time routing result.",
+        "Public data, internal reproducibility, and computational scale do not establish external review, adoption, deployment, users, or real-world impact."
+      ],
+      "observed_request_count": 1796655,
+      "readiness": "insufficient-evidence",
+      "recommendation_issued": false,
+      "scenario_id": "tierd.us.ny.new-york-city.12",
+      "source_count": 7,
+      "status": "insufficient-evidence",
+      "suite": "mobility-accessibility-operations",
+      "template_id": "deep.mobility.real-time-reroute.v1",
+      "title": "Real-time multimodal rerouting gate"
+    },
+    {
+      "analysis_modes": [
+        "forecast",
+        "simulation",
+        "optimization"
+      ],
+      "artifact_count": 7,
+      "city_id": "us.pa.philadelphia",
+      "city_name": "Philadelphia",
+      "content_hash": "sha256:e5a942792e713b0aafd7c8641a573b957b2bbdeedd97425ed6540d4aa99ae4a9",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "execution_id": "tierd.us.pa.philadelphia.01",
+      "kind": "deep-pack",
+      "limitations": [
+        "Reporting behavior, publication coverage, taxonomy, and workflow differ across cities.",
+        "A transparent baseline can support planning exercises but cannot validate intervention impact.",
+        "Do not call service requests verified incidents, harms, needs, or completed outcomes.",
+        "Do not describe proposed action coefficients as observed or causal effects.",
+        "Do not present a planning-support option as a municipal recommendation or deployment.",
+        "Public data, internal reproducibility, and computational scale do not establish external review, adoption, deployment, users, or real-world impact."
+      ],
+      "observed_request_count": 276443,
+      "readiness": "planning-support",
+      "recommendation_issued": true,
+      "scenario_id": "tierd.us.pa.philadelphia.01",
+      "selected_option_id": "bounded-portfolio",
+      "source_count": 7,
+      "status": "completed",
+      "suite": "public-service-operations",
+      "template_id": "deep.public-service.total-demand.v1",
+      "title": "Citywide service-request workload baseline"
+    },
+    {
+      "analysis_modes": [
+        "forecast",
+        "simulation",
+        "optimization"
+      ],
+      "artifact_count": 7,
+      "city_id": "us.pa.philadelphia",
+      "city_name": "Philadelphia",
+      "content_hash": "sha256:d875641d249b594884946b133210f67a386b5b618121df4ec92a77edda2977d5",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "execution_id": "tierd.us.pa.philadelphia.02",
+      "kind": "deep-pack",
+      "limitations": [
+        "Reporting behavior, publication coverage, taxonomy, and workflow differ across cities.",
+        "A transparent baseline can support planning exercises but cannot validate intervention impact.",
+        "Do not call service requests verified incidents, harms, needs, or completed outcomes.",
+        "Do not describe proposed action coefficients as observed or causal effects.",
+        "Do not present a planning-support option as a municipal recommendation or deployment.",
+        "Public data, internal reproducibility, and computational scale do not establish external review, adoption, deployment, users, or real-world impact."
+      ],
+      "observed_request_count": 276443,
+      "readiness": "planning-support",
+      "recommendation_issued": true,
+      "scenario_id": "tierd.us.pa.philadelphia.02",
+      "selected_option_id": "bounded-portfolio",
+      "source_count": 7,
+      "status": "completed",
+      "suite": "public-service-operations",
+      "template_id": "deep.public-service.seasonal-staffing.v1",
+      "title": "Seasonal service-capacity planning"
+    },
+    {
+      "analysis_modes": [
+        "forecast",
+        "simulation",
+        "optimization"
+      ],
+      "artifact_count": 7,
+      "city_id": "us.pa.philadelphia",
+      "city_name": "Philadelphia",
+      "content_hash": "sha256:b0bc6966454419085c91d27672b7f0a12c0e2b2c544fa474cb072b35828a1fb8",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "execution_id": "tierd.us.pa.philadelphia.03",
+      "kind": "deep-pack",
+      "limitations": [
+        "Reporting behavior, publication coverage, taxonomy, and workflow differ across cities.",
+        "A transparent baseline can support planning exercises but cannot validate intervention impact.",
+        "Do not call service requests verified incidents, harms, needs, or completed outcomes.",
+        "Do not describe proposed action coefficients as observed or causal effects.",
+        "Do not present a planning-support option as a municipal recommendation or deployment.",
+        "Public data, internal reproducibility, and computational scale do not establish external review, adoption, deployment, users, or real-world impact."
+      ],
+      "observed_request_count": 15180,
+      "readiness": "planning-support",
+      "recommendation_issued": true,
+      "scenario_id": "tierd.us.pa.philadelphia.03",
+      "selected_option_id": "bounded-portfolio",
+      "source_count": 7,
+      "status": "completed",
+      "suite": "public-service-operations",
+      "template_id": "deep.public-service.sanitation-workload.v1",
+      "title": "Sanitation-related request workload planning"
+    },
+    {
+      "analysis_modes": [
+        "forecast",
+        "simulation",
+        "optimization"
+      ],
+      "artifact_count": 7,
+      "city_id": "us.pa.philadelphia",
+      "city_name": "Philadelphia",
+      "content_hash": "sha256:3898ef14bc3e5377d2504a387655fd572f15a90a249c059b5a8098a447b8c75a",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "execution_id": "tierd.us.pa.philadelphia.04",
+      "kind": "deep-pack",
+      "limitations": [
+        "Reporting behavior, publication coverage, taxonomy, and workflow differ across cities.",
+        "A transparent baseline can support planning exercises but cannot validate intervention impact.",
+        "Do not call service requests verified incidents, harms, needs, or completed outcomes.",
+        "Do not describe proposed action coefficients as observed or causal effects.",
+        "Do not present a planning-support option as a municipal recommendation or deployment.",
+        "Public data, internal reproducibility, and computational scale do not establish external review, adoption, deployment, users, or real-world impact."
+      ],
+      "observed_request_count": 276443,
+      "readiness": "planning-support",
+      "recommendation_issued": true,
+      "scenario_id": "tierd.us.pa.philadelphia.04",
+      "selected_option_id": "bounded-portfolio",
+      "source_count": 7,
+      "status": "completed",
+      "suite": "climate-disaster-resilience",
+      "template_id": "deep.climate.heat-service-surge.v1",
+      "title": "Heat-context service continuity"
+    },
+    {
+      "analysis_modes": [
+        "forecast",
+        "simulation",
+        "optimization"
+      ],
+      "artifact_count": 7,
+      "city_id": "us.pa.philadelphia",
+      "city_name": "Philadelphia",
+      "content_hash": "sha256:bef443a1cbf1f321c585ea3849aa2f2aae1b16ac38975d2bcd356d88a5c7caab",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "execution_id": "tierd.us.pa.philadelphia.05",
+      "kind": "deep-pack",
+      "limitations": [
+        "Reporting behavior, publication coverage, taxonomy, and workflow differ across cities.",
+        "A transparent baseline can support planning exercises but cannot validate intervention impact.",
+        "Do not call service requests verified incidents, harms, needs, or completed outcomes.",
+        "Do not describe proposed action coefficients as observed or causal effects.",
+        "Do not present a planning-support option as a municipal recommendation or deployment.",
+        "Public data, internal reproducibility, and computational scale do not establish external review, adoption, deployment, users, or real-world impact."
+      ],
+      "observed_request_count": 276443,
+      "readiness": "planning-support",
+      "recommendation_issued": true,
+      "scenario_id": "tierd.us.pa.philadelphia.05",
+      "selected_option_id": "bounded-portfolio",
+      "source_count": 7,
+      "status": "completed",
+      "suite": "climate-disaster-resilience",
+      "template_id": "deep.climate.rainfall-continuity.v1",
+      "title": "Rainfall-context service continuity"
+    },
+    {
+      "analysis_modes": [
+        "forecast",
+        "simulation",
+        "optimization"
+      ],
+      "artifact_count": 7,
+      "city_id": "us.pa.philadelphia",
+      "city_name": "Philadelphia",
+      "content_hash": "sha256:e89d1bafb373b30f676cba16b24905339d00e5b40c9cf34bc92174e3719f4fe6",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "execution_id": "tierd.us.pa.philadelphia.06",
+      "kind": "deep-pack",
+      "limitations": [
+        "Reporting behavior, publication coverage, taxonomy, and workflow differ across cities.",
+        "A transparent baseline can support planning exercises but cannot validate intervention impact.",
+        "Do not call service requests verified incidents, harms, needs, or completed outcomes.",
+        "Do not describe proposed action coefficients as observed or causal effects.",
+        "Do not present a planning-support option as a municipal recommendation or deployment.",
+        "Public data, internal reproducibility, and computational scale do not establish external review, adoption, deployment, users, or real-world impact."
+      ],
+      "observed_request_count": 1201,
+      "readiness": "planning-support",
+      "recommendation_issued": true,
+      "scenario_id": "tierd.us.pa.philadelphia.06",
+      "selected_option_id": "bounded-portfolio",
+      "source_count": 7,
+      "status": "completed",
+      "suite": "housing-land-use-regeneration",
+      "template_id": "deep.housing.request-triage.v1",
+      "title": "Housing-related request triage"
+    },
+    {
+      "analysis_modes": [
+        "forecast",
+        "simulation",
+        "optimization"
+      ],
+      "artifact_count": 7,
+      "city_id": "us.pa.philadelphia",
+      "city_name": "Philadelphia",
+      "content_hash": "sha256:56bac1f3762310bf0d865da94c49cf91003473881f20b8127731cad8ae1ec09c",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "execution_id": "tierd.us.pa.philadelphia.07",
+      "kind": "deep-pack",
+      "limitations": [
+        "Reporting behavior, publication coverage, taxonomy, and workflow differ across cities.",
+        "A transparent baseline can support planning exercises but cannot validate intervention impact.",
+        "Do not call service requests verified incidents, harms, needs, or completed outcomes.",
+        "Do not describe proposed action coefficients as observed or causal effects.",
+        "Do not present a planning-support option as a municipal recommendation or deployment.",
+        "Public data, internal reproducibility, and computational scale do not establish external review, adoption, deployment, users, or real-world impact."
+      ],
+      "observed_request_count": 35666,
+      "readiness": "planning-support",
+      "recommendation_issued": true,
+      "scenario_id": "tierd.us.pa.philadelphia.07",
+      "selected_option_id": "bounded-portfolio",
+      "source_count": 7,
+      "status": "completed",
+      "suite": "population-health-environmental-exposure",
+      "template_id": "deep.health.environmental-request-screen.v1",
+      "title": "Environmental request workload screen"
+    },
+    {
+      "analysis_modes": [
+        "forecast",
+        "simulation",
+        "optimization"
+      ],
+      "artifact_count": 7,
+      "city_id": "us.pa.philadelphia",
+      "city_name": "Philadelphia",
+      "content_hash": "sha256:dc99e006185f80dbc45a74bc7d03938791b59a0c85c96329cf0a2dd8b2f2c6fb",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "execution_id": "tierd.us.pa.philadelphia.08",
+      "kind": "deep-pack",
+      "limitations": [
+        "Reporting behavior, publication coverage, taxonomy, and workflow differ across cities.",
+        "A transparent baseline can support planning exercises but cannot validate intervention impact.",
+        "Do not call service requests verified incidents, harms, needs, or completed outcomes.",
+        "Do not describe proposed action coefficients as observed or causal effects.",
+        "Do not present a planning-support option as a municipal recommendation or deployment.",
+        "Public data, internal reproducibility, and computational scale do not establish external review, adoption, deployment, users, or real-world impact."
+      ],
+      "observed_request_count": 27037,
+      "readiness": "planning-support",
+      "recommendation_issued": true,
+      "scenario_id": "tierd.us.pa.philadelphia.08",
+      "selected_option_id": "bounded-portfolio",
+      "source_count": 7,
+      "status": "completed",
+      "suite": "infrastructure-finance-asset-risk",
+      "template_id": "deep.infrastructure.maintenance-portfolio.v1",
+      "title": "Infrastructure-maintenance request portfolio"
+    },
+    {
+      "analysis_modes": [
+        "forecast",
+        "simulation",
+        "optimization"
+      ],
+      "artifact_count": 7,
+      "city_id": "us.pa.philadelphia",
+      "city_name": "Philadelphia",
+      "content_hash": "sha256:51c5deab332c175bd1c3aa9ed0afe8e37a6f1d92aa86b82bf38748c1faa4faa5",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "execution_id": "tierd.us.pa.philadelphia.09",
+      "kind": "deep-pack",
+      "limitations": [
+        "Reporting behavior, publication coverage, taxonomy, and workflow differ across cities.",
+        "A transparent baseline can support planning exercises but cannot validate intervention impact.",
+        "Do not call service requests verified incidents, harms, needs, or completed outcomes.",
+        "Do not describe proposed action coefficients as observed or causal effects.",
+        "Do not present a planning-support option as a municipal recommendation or deployment.",
+        "Public data, internal reproducibility, and computational scale do not establish external review, adoption, deployment, users, or real-world impact."
+      ],
+      "observed_request_count": 276443,
+      "readiness": "planning-support",
+      "recommendation_issued": true,
+      "scenario_id": "tierd.us.pa.philadelphia.09",
+      "selected_option_id": "bounded-portfolio",
+      "source_count": 7,
+      "status": "completed",
+      "suite": "behavioral-policy-equity",
+      "template_id": "deep.equity.area-balance.v1",
+      "title": "Area-level request balance"
+    },
+    {
+      "analysis_modes": [
+        "forecast",
+        "simulation",
+        "optimization"
+      ],
+      "artifact_count": 7,
+      "city_id": "us.pa.philadelphia",
+      "city_name": "Philadelphia",
+      "content_hash": "sha256:faf246db189245b32d3b0261a3d9b27a3a5fbfb0ad1684ff156d399ffb900023",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "execution_id": "tierd.us.pa.philadelphia.10",
+      "kind": "deep-pack",
+      "limitations": [
+        "Reporting behavior, publication coverage, taxonomy, and workflow differ across cities.",
+        "A transparent baseline can support planning exercises but cannot validate intervention impact.",
+        "Do not call service requests verified incidents, harms, needs, or completed outcomes.",
+        "Do not describe proposed action coefficients as observed or causal effects.",
+        "Do not present a planning-support option as a municipal recommendation or deployment.",
+        "Public data, internal reproducibility, and computational scale do not establish external review, adoption, deployment, users, or real-world impact."
+      ],
+      "observed_request_count": 2336,
+      "readiness": "planning-support",
+      "recommendation_issued": true,
+      "scenario_id": "tierd.us.pa.philadelphia.10",
+      "selected_option_id": "bounded-portfolio",
+      "source_count": 7,
+      "status": "completed",
+      "suite": "mobility-accessibility-operations",
+      "template_id": "deep.mobility.accessibility-request.v1",
+      "title": "Accessibility-related request planning"
+    },
+    {
+      "analysis_modes": [
+        "descriptive",
+        "causal"
+      ],
+      "artifact_count": 3,
+      "city_id": "us.pa.philadelphia",
+      "city_name": "Philadelphia",
+      "content_hash": "sha256:04ffc7d52360d7d8063fa0f6d7f4ed59f3c96949e6f8c392769b184304a90f57",
+      "evidence_types": [
+        "causal",
+        "observed"
+      ],
+      "execution_id": "tierd.us.pa.philadelphia.11",
+      "kind": "deep-pack",
+      "limitations": [
+        "A causal question is retained as a negative evidence-gate test, not silently reduced to an associational claim.",
+        "Do not infer treatment effects from before/after request counts.",
+        "Do not use request status as verified service resolution or welfare impact.",
+        "Public data, internal reproducibility, and computational scale do not establish external review, adoption, deployment, users, or real-world impact."
+      ],
+      "observed_request_count": 276443,
+      "readiness": "insufficient-evidence",
+      "recommendation_issued": false,
+      "scenario_id": "tierd.us.pa.philadelphia.11",
+      "source_count": 7,
+      "status": "insufficient-evidence",
+      "suite": "behavioral-policy-equity",
+      "template_id": "deep.equity.causal-service-effectiveness.v1",
+      "title": "Causal service-effectiveness gate"
+    },
+    {
+      "analysis_modes": [
+        "descriptive",
+        "optimization"
+      ],
+      "artifact_count": 3,
+      "city_id": "us.pa.philadelphia",
+      "city_name": "Philadelphia",
+      "content_hash": "sha256:0b5d974b195e37cbc6fc182fd3ef9b8161bb4834c1f68712cb86b6573b01a2e4",
+      "evidence_types": [
+        "observed",
+        "proposed"
+      ],
+      "execution_id": "tierd.us.pa.philadelphia.12",
+      "kind": "deep-pack",
+      "limitations": [
+        "The negative release demonstrates a missing-network gate and does not evaluate actual mobility performance.",
+        "Do not treat city polygons or request-area labels as a routable transport network.",
+        "Do not call a proposed allocation a real-time routing result.",
+        "Public data, internal reproducibility, and computational scale do not establish external review, adoption, deployment, users, or real-world impact."
+      ],
+      "observed_request_count": 276443,
+      "readiness": "insufficient-evidence",
+      "recommendation_issued": false,
+      "scenario_id": "tierd.us.pa.philadelphia.12",
+      "source_count": 7,
+      "status": "insufficient-evidence",
+      "suite": "mobility-accessibility-operations",
+      "template_id": "deep.mobility.real-time-reroute.v1",
+      "title": "Real-time multimodal rerouting gate"
+    },
+    {
+      "analysis_modes": [
+        "forecast",
+        "simulation",
+        "optimization"
+      ],
+      "artifact_count": 7,
+      "city_id": "us.ca.san-francisco",
+      "city_name": "San Francisco",
+      "content_hash": "sha256:776ee345fbf6d0fd810c8d99ca47f290ca364469baf9b8e80199c00d9a085580",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "execution_id": "tierd.us.ca.san-francisco.01",
+      "kind": "deep-pack",
+      "limitations": [
+        "Reporting behavior, publication coverage, taxonomy, and workflow differ across cities.",
+        "A transparent baseline can support planning exercises but cannot validate intervention impact.",
+        "Do not call service requests verified incidents, harms, needs, or completed outcomes.",
+        "Do not describe proposed action coefficients as observed or causal effects.",
+        "Do not present a planning-support option as a municipal recommendation or deployment.",
+        "Public data, internal reproducibility, and computational scale do not establish external review, adoption, deployment, users, or real-world impact."
+      ],
+      "observed_request_count": 461576,
+      "readiness": "planning-support",
+      "recommendation_issued": true,
+      "scenario_id": "tierd.us.ca.san-francisco.01",
+      "selected_option_id": "bounded-portfolio",
+      "source_count": 7,
+      "status": "completed",
+      "suite": "public-service-operations",
+      "template_id": "deep.public-service.total-demand.v1",
+      "title": "Citywide service-request workload baseline"
+    },
+    {
+      "analysis_modes": [
+        "forecast",
+        "simulation",
+        "optimization"
+      ],
+      "artifact_count": 7,
+      "city_id": "us.ca.san-francisco",
+      "city_name": "San Francisco",
+      "content_hash": "sha256:d379d5d6575f710e76a6e1b1a004902c34db95c831e8d34fff1bc78e209ad1e3",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "execution_id": "tierd.us.ca.san-francisco.02",
+      "kind": "deep-pack",
+      "limitations": [
+        "Reporting behavior, publication coverage, taxonomy, and workflow differ across cities.",
+        "A transparent baseline can support planning exercises but cannot validate intervention impact.",
+        "Do not call service requests verified incidents, harms, needs, or completed outcomes.",
+        "Do not describe proposed action coefficients as observed or causal effects.",
+        "Do not present a planning-support option as a municipal recommendation or deployment.",
+        "Public data, internal reproducibility, and computational scale do not establish external review, adoption, deployment, users, or real-world impact."
+      ],
+      "observed_request_count": 461576,
+      "readiness": "planning-support",
+      "recommendation_issued": true,
+      "scenario_id": "tierd.us.ca.san-francisco.02",
+      "selected_option_id": "bounded-portfolio",
+      "source_count": 7,
+      "status": "completed",
+      "suite": "public-service-operations",
+      "template_id": "deep.public-service.seasonal-staffing.v1",
+      "title": "Seasonal service-capacity planning"
+    },
+    {
+      "analysis_modes": [
+        "forecast",
+        "simulation",
+        "optimization"
+      ],
+      "artifact_count": 7,
+      "city_id": "us.ca.san-francisco",
+      "city_name": "San Francisco",
+      "content_hash": "sha256:4a021c5da6e8d0155a23bb4e50f4672d68fbc5d23caf1dfbcf9d28d1694b6a85",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "execution_id": "tierd.us.ca.san-francisco.03",
+      "kind": "deep-pack",
+      "limitations": [
+        "Reporting behavior, publication coverage, taxonomy, and workflow differ across cities.",
+        "A transparent baseline can support planning exercises but cannot validate intervention impact.",
+        "Do not call service requests verified incidents, harms, needs, or completed outcomes.",
+        "Do not describe proposed action coefficients as observed or causal effects.",
+        "Do not present a planning-support option as a municipal recommendation or deployment.",
+        "Public data, internal reproducibility, and computational scale do not establish external review, adoption, deployment, users, or real-world impact."
+      ],
+      "observed_request_count": 189811,
+      "readiness": "planning-support",
+      "recommendation_issued": true,
+      "scenario_id": "tierd.us.ca.san-francisco.03",
+      "selected_option_id": "bounded-portfolio",
+      "source_count": 7,
+      "status": "completed",
+      "suite": "public-service-operations",
+      "template_id": "deep.public-service.sanitation-workload.v1",
+      "title": "Sanitation-related request workload planning"
+    },
+    {
+      "analysis_modes": [
+        "forecast",
+        "simulation",
+        "optimization"
+      ],
+      "artifact_count": 7,
+      "city_id": "us.ca.san-francisco",
+      "city_name": "San Francisco",
+      "content_hash": "sha256:c19d497fdf3ca18946c473c692ed3657be531bbc50170dbe496fb556842b71a9",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "execution_id": "tierd.us.ca.san-francisco.04",
+      "kind": "deep-pack",
+      "limitations": [
+        "Reporting behavior, publication coverage, taxonomy, and workflow differ across cities.",
+        "A transparent baseline can support planning exercises but cannot validate intervention impact.",
+        "Do not call service requests verified incidents, harms, needs, or completed outcomes.",
+        "Do not describe proposed action coefficients as observed or causal effects.",
+        "Do not present a planning-support option as a municipal recommendation or deployment.",
+        "Public data, internal reproducibility, and computational scale do not establish external review, adoption, deployment, users, or real-world impact."
+      ],
+      "observed_request_count": 461576,
+      "readiness": "planning-support",
+      "recommendation_issued": true,
+      "scenario_id": "tierd.us.ca.san-francisco.04",
+      "selected_option_id": "bounded-portfolio",
+      "source_count": 7,
+      "status": "completed",
+      "suite": "climate-disaster-resilience",
+      "template_id": "deep.climate.heat-service-surge.v1",
+      "title": "Heat-context service continuity"
+    },
+    {
+      "analysis_modes": [
+        "forecast",
+        "simulation",
+        "optimization"
+      ],
+      "artifact_count": 7,
+      "city_id": "us.ca.san-francisco",
+      "city_name": "San Francisco",
+      "content_hash": "sha256:536754a7c3a4cd7f97dfb802e888db07a6622485183666c396ebf498b3819c10",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "execution_id": "tierd.us.ca.san-francisco.05",
+      "kind": "deep-pack",
+      "limitations": [
+        "Reporting behavior, publication coverage, taxonomy, and workflow differ across cities.",
+        "A transparent baseline can support planning exercises but cannot validate intervention impact.",
+        "Do not call service requests verified incidents, harms, needs, or completed outcomes.",
+        "Do not describe proposed action coefficients as observed or causal effects.",
+        "Do not present a planning-support option as a municipal recommendation or deployment.",
+        "Public data, internal reproducibility, and computational scale do not establish external review, adoption, deployment, users, or real-world impact."
+      ],
+      "observed_request_count": 461576,
+      "readiness": "planning-support",
+      "recommendation_issued": true,
+      "scenario_id": "tierd.us.ca.san-francisco.05",
+      "selected_option_id": "bounded-portfolio",
+      "source_count": 7,
+      "status": "completed",
+      "suite": "climate-disaster-resilience",
+      "template_id": "deep.climate.rainfall-continuity.v1",
+      "title": "Rainfall-context service continuity"
+    },
+    {
+      "analysis_modes": [
+        "forecast",
+        "simulation",
+        "optimization"
+      ],
+      "artifact_count": 7,
+      "city_id": "us.ca.san-francisco",
+      "city_name": "San Francisco",
+      "content_hash": "sha256:1e343b2c683b28b7350a3abc8ed344d7bb3627dc5499eb46d053b3e0d234d864",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "execution_id": "tierd.us.ca.san-francisco.06",
+      "kind": "deep-pack",
+      "limitations": [
+        "Reporting behavior, publication coverage, taxonomy, and workflow differ across cities.",
+        "A transparent baseline can support planning exercises but cannot validate intervention impact.",
+        "Do not call service requests verified incidents, harms, needs, or completed outcomes.",
+        "Do not describe proposed action coefficients as observed or causal effects.",
+        "Do not present a planning-support option as a municipal recommendation or deployment.",
+        "Public data, internal reproducibility, and computational scale do not establish external review, adoption, deployment, users, or real-world impact."
+      ],
+      "observed_request_count": 1986,
+      "readiness": "planning-support",
+      "recommendation_issued": true,
+      "scenario_id": "tierd.us.ca.san-francisco.06",
+      "selected_option_id": "bounded-portfolio",
+      "source_count": 7,
+      "status": "completed",
+      "suite": "housing-land-use-regeneration",
+      "template_id": "deep.housing.request-triage.v1",
+      "title": "Housing-related request triage"
+    },
+    {
+      "analysis_modes": [
+        "forecast",
+        "simulation",
+        "optimization"
+      ],
+      "artifact_count": 7,
+      "city_id": "us.ca.san-francisco",
+      "city_name": "San Francisco",
+      "content_hash": "sha256:074376808bfbadced6f0c3a602befebece4d0d14f2324905626c9a4ffd8a8981",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "execution_id": "tierd.us.ca.san-francisco.07",
+      "kind": "deep-pack",
+      "limitations": [
+        "Reporting behavior, publication coverage, taxonomy, and workflow differ across cities.",
+        "A transparent baseline can support planning exercises but cannot validate intervention impact.",
+        "Do not call service requests verified incidents, harms, needs, or completed outcomes.",
+        "Do not describe proposed action coefficients as observed or causal effects.",
+        "Do not present a planning-support option as a municipal recommendation or deployment.",
+        "Public data, internal reproducibility, and computational scale do not establish external review, adoption, deployment, users, or real-world impact."
+      ],
+      "observed_request_count": 215386,
+      "readiness": "planning-support",
+      "recommendation_issued": true,
+      "scenario_id": "tierd.us.ca.san-francisco.07",
+      "selected_option_id": "bounded-portfolio",
+      "source_count": 7,
+      "status": "completed",
+      "suite": "population-health-environmental-exposure",
+      "template_id": "deep.health.environmental-request-screen.v1",
+      "title": "Environmental request workload screen"
+    },
+    {
+      "analysis_modes": [
+        "forecast",
+        "simulation",
+        "optimization"
+      ],
+      "artifact_count": 7,
+      "city_id": "us.ca.san-francisco",
+      "city_name": "San Francisco",
+      "content_hash": "sha256:7e96162fd428d614fa0267f610d19bac0939e710b9667b27a5f7743edb6521c0",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "execution_id": "tierd.us.ca.san-francisco.08",
+      "kind": "deep-pack",
+      "limitations": [
+        "Reporting behavior, publication coverage, taxonomy, and workflow differ across cities.",
+        "A transparent baseline can support planning exercises but cannot validate intervention impact.",
+        "Do not call service requests verified incidents, harms, needs, or completed outcomes.",
+        "Do not describe proposed action coefficients as observed or causal effects.",
+        "Do not present a planning-support option as a municipal recommendation or deployment.",
+        "Public data, internal reproducibility, and computational scale do not establish external review, adoption, deployment, users, or real-world impact."
+      ],
+      "observed_request_count": 212398,
+      "readiness": "planning-support",
+      "recommendation_issued": true,
+      "scenario_id": "tierd.us.ca.san-francisco.08",
+      "selected_option_id": "bounded-portfolio",
+      "source_count": 7,
+      "status": "completed",
+      "suite": "infrastructure-finance-asset-risk",
+      "template_id": "deep.infrastructure.maintenance-portfolio.v1",
+      "title": "Infrastructure-maintenance request portfolio"
+    },
+    {
+      "analysis_modes": [
+        "forecast",
+        "simulation",
+        "optimization"
+      ],
+      "artifact_count": 7,
+      "city_id": "us.ca.san-francisco",
+      "city_name": "San Francisco",
+      "content_hash": "sha256:bc1b0adcd26ed36ed343f5b94b957b4f4c4cc82297d5aa95f9e41f2bd04da9f1",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "execution_id": "tierd.us.ca.san-francisco.09",
+      "kind": "deep-pack",
+      "limitations": [
+        "Reporting behavior, publication coverage, taxonomy, and workflow differ across cities.",
+        "A transparent baseline can support planning exercises but cannot validate intervention impact.",
+        "Do not call service requests verified incidents, harms, needs, or completed outcomes.",
+        "Do not describe proposed action coefficients as observed or causal effects.",
+        "Do not present a planning-support option as a municipal recommendation or deployment.",
+        "Public data, internal reproducibility, and computational scale do not establish external review, adoption, deployment, users, or real-world impact."
+      ],
+      "observed_request_count": 461576,
+      "readiness": "planning-support",
+      "recommendation_issued": true,
+      "scenario_id": "tierd.us.ca.san-francisco.09",
+      "selected_option_id": "bounded-portfolio",
+      "source_count": 7,
+      "status": "completed",
+      "suite": "behavioral-policy-equity",
+      "template_id": "deep.equity.area-balance.v1",
+      "title": "Area-level request balance"
+    },
+    {
+      "analysis_modes": [
+        "forecast",
+        "simulation",
+        "optimization"
+      ],
+      "artifact_count": 7,
+      "city_id": "us.ca.san-francisco",
+      "city_name": "San Francisco",
+      "content_hash": "sha256:e2e6d65b6506a105e99ee185acf817a2f6537855f6c1911f63ddd91f116bf237",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "execution_id": "tierd.us.ca.san-francisco.10",
+      "kind": "deep-pack",
+      "limitations": [
+        "Reporting behavior, publication coverage, taxonomy, and workflow differ across cities.",
+        "A transparent baseline can support planning exercises but cannot validate intervention impact.",
+        "Do not call service requests verified incidents, harms, needs, or completed outcomes.",
+        "Do not describe proposed action coefficients as observed or causal effects.",
+        "Do not present a planning-support option as a municipal recommendation or deployment.",
+        "Public data, internal reproducibility, and computational scale do not establish external review, adoption, deployment, users, or real-world impact."
+      ],
+      "observed_request_count": 199973,
+      "readiness": "planning-support",
+      "recommendation_issued": true,
+      "scenario_id": "tierd.us.ca.san-francisco.10",
+      "selected_option_id": "bounded-portfolio",
+      "source_count": 7,
+      "status": "completed",
+      "suite": "mobility-accessibility-operations",
+      "template_id": "deep.mobility.accessibility-request.v1",
+      "title": "Accessibility-related request planning"
+    },
+    {
+      "analysis_modes": [
+        "descriptive",
+        "causal"
+      ],
+      "artifact_count": 3,
+      "city_id": "us.ca.san-francisco",
+      "city_name": "San Francisco",
+      "content_hash": "sha256:4fdf0a4e351404b00373d66fddee428677d8ef0f15d883673f0e25092d3d2c3f",
+      "evidence_types": [
+        "causal",
+        "observed"
+      ],
+      "execution_id": "tierd.us.ca.san-francisco.11",
+      "kind": "deep-pack",
+      "limitations": [
+        "A causal question is retained as a negative evidence-gate test, not silently reduced to an associational claim.",
+        "Do not infer treatment effects from before/after request counts.",
+        "Do not use request status as verified service resolution or welfare impact.",
+        "Public data, internal reproducibility, and computational scale do not establish external review, adoption, deployment, users, or real-world impact."
+      ],
+      "observed_request_count": 461576,
+      "readiness": "insufficient-evidence",
+      "recommendation_issued": false,
+      "scenario_id": "tierd.us.ca.san-francisco.11",
+      "source_count": 7,
+      "status": "insufficient-evidence",
+      "suite": "behavioral-policy-equity",
+      "template_id": "deep.equity.causal-service-effectiveness.v1",
+      "title": "Causal service-effectiveness gate"
+    },
+    {
+      "analysis_modes": [
+        "descriptive",
+        "optimization"
+      ],
+      "artifact_count": 3,
+      "city_id": "us.ca.san-francisco",
+      "city_name": "San Francisco",
+      "content_hash": "sha256:bb7ea7ce45476e4b680ff2089cdb24a5ec8867b3701cd60185f657c85ca1ca75",
+      "evidence_types": [
+        "observed",
+        "proposed"
+      ],
+      "execution_id": "tierd.us.ca.san-francisco.12",
+      "kind": "deep-pack",
+      "limitations": [
+        "The negative release demonstrates a missing-network gate and does not evaluate actual mobility performance.",
+        "Do not treat city polygons or request-area labels as a routable transport network.",
+        "Do not call a proposed allocation a real-time routing result.",
+        "Public data, internal reproducibility, and computational scale do not establish external review, adoption, deployment, users, or real-world impact."
+      ],
+      "observed_request_count": 461576,
+      "readiness": "insufficient-evidence",
+      "recommendation_issued": false,
+      "scenario_id": "tierd.us.ca.san-francisco.12",
+      "source_count": 7,
+      "status": "insufficient-evidence",
+      "suite": "mobility-accessibility-operations",
+      "template_id": "deep.mobility.real-time-reroute.v1",
+      "title": "Real-time multimodal rerouting gate"
+    },
+    {
+      "analysis_modes": [
+        "forecast",
+        "simulation",
+        "optimization"
+      ],
+      "artifact_count": 7,
+      "city_id": "us.wa.seattle",
+      "city_name": "Seattle",
+      "content_hash": "sha256:cb0ba8fbdc4d8ac6f1e39c0e19df4468ad017f0309e3957f1990a510b7eaf006",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "execution_id": "tierd.us.wa.seattle.01",
+      "kind": "deep-pack",
+      "limitations": [
+        "Reporting behavior, publication coverage, taxonomy, and workflow differ across cities.",
+        "A transparent baseline can support planning exercises but cannot validate intervention impact.",
+        "Do not call service requests verified incidents, harms, needs, or completed outcomes.",
+        "Do not describe proposed action coefficients as observed or causal effects.",
+        "Do not present a planning-support option as a municipal recommendation or deployment.",
+        "Public data, internal reproducibility, and computational scale do not establish external review, adoption, deployment, users, or real-world impact."
+      ],
+      "observed_request_count": 186351,
+      "readiness": "planning-support",
+      "recommendation_issued": true,
+      "scenario_id": "tierd.us.wa.seattle.01",
+      "selected_option_id": "bounded-portfolio",
+      "source_count": 7,
+      "status": "completed",
+      "suite": "public-service-operations",
+      "template_id": "deep.public-service.total-demand.v1",
+      "title": "Citywide service-request workload baseline"
+    },
+    {
+      "analysis_modes": [
+        "forecast",
+        "simulation",
+        "optimization"
+      ],
+      "artifact_count": 7,
+      "city_id": "us.wa.seattle",
+      "city_name": "Seattle",
+      "content_hash": "sha256:290075cb7d584e2ff831fbbccafe229683c129d8ffaf8fead6e9dad2e891b0f7",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "execution_id": "tierd.us.wa.seattle.02",
+      "kind": "deep-pack",
+      "limitations": [
+        "Reporting behavior, publication coverage, taxonomy, and workflow differ across cities.",
+        "A transparent baseline can support planning exercises but cannot validate intervention impact.",
+        "Do not call service requests verified incidents, harms, needs, or completed outcomes.",
+        "Do not describe proposed action coefficients as observed or causal effects.",
+        "Do not present a planning-support option as a municipal recommendation or deployment.",
+        "Public data, internal reproducibility, and computational scale do not establish external review, adoption, deployment, users, or real-world impact."
+      ],
+      "observed_request_count": 186351,
+      "readiness": "planning-support",
+      "recommendation_issued": true,
+      "scenario_id": "tierd.us.wa.seattle.02",
+      "selected_option_id": "bounded-portfolio",
+      "source_count": 7,
+      "status": "completed",
+      "suite": "public-service-operations",
+      "template_id": "deep.public-service.seasonal-staffing.v1",
+      "title": "Seasonal service-capacity planning"
+    },
+    {
+      "analysis_modes": [
+        "forecast",
+        "simulation",
+        "optimization"
+      ],
+      "artifact_count": 7,
+      "city_id": "us.wa.seattle",
+      "city_name": "Seattle",
+      "content_hash": "sha256:fb45b7d5ef757b876e036bf557b1ad2a049fbfb654ccb4605aed65b69f18019e",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "execution_id": "tierd.us.wa.seattle.03",
+      "kind": "deep-pack",
+      "limitations": [
+        "Reporting behavior, publication coverage, taxonomy, and workflow differ across cities.",
+        "A transparent baseline can support planning exercises but cannot validate intervention impact.",
+        "Do not call service requests verified incidents, harms, needs, or completed outcomes.",
+        "Do not describe proposed action coefficients as observed or causal effects.",
+        "Do not present a planning-support option as a municipal recommendation or deployment.",
+        "Public data, internal reproducibility, and computational scale do not establish external review, adoption, deployment, users, or real-world impact."
+      ],
+      "observed_request_count": 18449,
+      "readiness": "planning-support",
+      "recommendation_issued": true,
+      "scenario_id": "tierd.us.wa.seattle.03",
+      "selected_option_id": "bounded-portfolio",
+      "source_count": 7,
+      "status": "completed",
+      "suite": "public-service-operations",
+      "template_id": "deep.public-service.sanitation-workload.v1",
+      "title": "Sanitation-related request workload planning"
+    },
+    {
+      "analysis_modes": [
+        "forecast",
+        "simulation",
+        "optimization"
+      ],
+      "artifact_count": 7,
+      "city_id": "us.wa.seattle",
+      "city_name": "Seattle",
+      "content_hash": "sha256:26599aeaf6050bf45748a5b119dfb30de78e4b36704354321e61efc9d817c2e4",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "execution_id": "tierd.us.wa.seattle.04",
+      "kind": "deep-pack",
+      "limitations": [
+        "Reporting behavior, publication coverage, taxonomy, and workflow differ across cities.",
+        "A transparent baseline can support planning exercises but cannot validate intervention impact.",
+        "Do not call service requests verified incidents, harms, needs, or completed outcomes.",
+        "Do not describe proposed action coefficients as observed or causal effects.",
+        "Do not present a planning-support option as a municipal recommendation or deployment.",
+        "Public data, internal reproducibility, and computational scale do not establish external review, adoption, deployment, users, or real-world impact."
+      ],
+      "observed_request_count": 186351,
+      "readiness": "planning-support",
+      "recommendation_issued": true,
+      "scenario_id": "tierd.us.wa.seattle.04",
+      "selected_option_id": "bounded-portfolio",
+      "source_count": 7,
+      "status": "completed",
+      "suite": "climate-disaster-resilience",
+      "template_id": "deep.climate.heat-service-surge.v1",
+      "title": "Heat-context service continuity"
+    },
+    {
+      "analysis_modes": [
+        "forecast",
+        "simulation",
+        "optimization"
+      ],
+      "artifact_count": 7,
+      "city_id": "us.wa.seattle",
+      "city_name": "Seattle",
+      "content_hash": "sha256:d96a8f00c867ddf421ebd99b4c177f046da65da7061cd25f06092237c5045f19",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "execution_id": "tierd.us.wa.seattle.05",
+      "kind": "deep-pack",
+      "limitations": [
+        "Reporting behavior, publication coverage, taxonomy, and workflow differ across cities.",
+        "A transparent baseline can support planning exercises but cannot validate intervention impact.",
+        "Do not call service requests verified incidents, harms, needs, or completed outcomes.",
+        "Do not describe proposed action coefficients as observed or causal effects.",
+        "Do not present a planning-support option as a municipal recommendation or deployment.",
+        "Public data, internal reproducibility, and computational scale do not establish external review, adoption, deployment, users, or real-world impact."
+      ],
+      "observed_request_count": 186351,
+      "readiness": "planning-support",
+      "recommendation_issued": true,
+      "scenario_id": "tierd.us.wa.seattle.05",
+      "selected_option_id": "bounded-portfolio",
+      "source_count": 7,
+      "status": "completed",
+      "suite": "climate-disaster-resilience",
+      "template_id": "deep.climate.rainfall-continuity.v1",
+      "title": "Rainfall-context service continuity"
+    },
+    {
+      "analysis_modes": [
+        "forecast",
+        "simulation",
+        "optimization"
+      ],
+      "artifact_count": 3,
+      "city_id": "us.wa.seattle",
+      "city_name": "Seattle",
+      "content_hash": "sha256:e0edbf8f73857a89b8c1f7cacfc59baca08ce1bd61c8bd954e2bd71d104c3a54",
+      "evidence_types": [
+        "observed",
+        "proposed"
+      ],
+      "execution_id": "tierd.us.wa.seattle.06",
+      "kind": "deep-pack",
+      "limitations": [
+        "Reporting behavior, publication coverage, taxonomy, and workflow differ across cities.",
+        "A transparent baseline can support planning exercises but cannot validate intervention impact.",
+        "Do not call service requests verified incidents, harms, needs, or completed outcomes.",
+        "Do not describe proposed action coefficients as observed or causal effects.",
+        "Do not present a planning-support option as a municipal recommendation or deployment.",
+        "Public data, internal reproducibility, and computational scale do not establish external review, adoption, deployment, users, or real-world impact."
+      ],
+      "observed_request_count": 0,
+      "readiness": "insufficient-evidence",
+      "recommendation_issued": false,
+      "scenario_id": "tierd.us.wa.seattle.06",
+      "source_count": 7,
+      "status": "insufficient-evidence",
+      "suite": "housing-land-use-regeneration",
+      "template_id": "deep.housing.request-triage.v1",
+      "title": "Housing-related request triage"
+    },
+    {
+      "analysis_modes": [
+        "forecast",
+        "simulation",
+        "optimization"
+      ],
+      "artifact_count": 7,
+      "city_id": "us.wa.seattle",
+      "city_name": "Seattle",
+      "content_hash": "sha256:e9e968e34dd2481f38843097e0db7e8c63bd7546c3195f929bc1c337812dcf6d",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "execution_id": "tierd.us.wa.seattle.07",
+      "kind": "deep-pack",
+      "limitations": [
+        "Reporting behavior, publication coverage, taxonomy, and workflow differ across cities.",
+        "A transparent baseline can support planning exercises but cannot validate intervention impact.",
+        "Do not call service requests verified incidents, harms, needs, or completed outcomes.",
+        "Do not describe proposed action coefficients as observed or causal effects.",
+        "Do not present a planning-support option as a municipal recommendation or deployment.",
+        "Public data, internal reproducibility, and computational scale do not establish external review, adoption, deployment, users, or real-world impact."
+      ],
+      "observed_request_count": 22847,
+      "readiness": "planning-support",
+      "recommendation_issued": true,
+      "scenario_id": "tierd.us.wa.seattle.07",
+      "selected_option_id": "bounded-portfolio",
+      "source_count": 7,
+      "status": "completed",
+      "suite": "population-health-environmental-exposure",
+      "template_id": "deep.health.environmental-request-screen.v1",
+      "title": "Environmental request workload screen"
+    },
+    {
+      "analysis_modes": [
+        "forecast",
+        "simulation",
+        "optimization"
+      ],
+      "artifact_count": 7,
+      "city_id": "us.wa.seattle",
+      "city_name": "Seattle",
+      "content_hash": "sha256:224c5f7c614d23831f928126d48e53bea86d68577bce3363783a135b24a97b11",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "execution_id": "tierd.us.wa.seattle.08",
+      "kind": "deep-pack",
+      "limitations": [
+        "Reporting behavior, publication coverage, taxonomy, and workflow differ across cities.",
+        "A transparent baseline can support planning exercises but cannot validate intervention impact.",
+        "Do not call service requests verified incidents, harms, needs, or completed outcomes.",
+        "Do not describe proposed action coefficients as observed or causal effects.",
+        "Do not present a planning-support option as a municipal recommendation or deployment.",
+        "Public data, internal reproducibility, and computational scale do not establish external review, adoption, deployment, users, or real-world impact."
+      ],
+      "observed_request_count": 13893,
+      "readiness": "planning-support",
+      "recommendation_issued": true,
+      "scenario_id": "tierd.us.wa.seattle.08",
+      "selected_option_id": "bounded-portfolio",
+      "source_count": 7,
+      "status": "completed",
+      "suite": "infrastructure-finance-asset-risk",
+      "template_id": "deep.infrastructure.maintenance-portfolio.v1",
+      "title": "Infrastructure-maintenance request portfolio"
+    },
+    {
+      "analysis_modes": [
+        "forecast",
+        "simulation",
+        "optimization"
+      ],
+      "artifact_count": 7,
+      "city_id": "us.wa.seattle",
+      "city_name": "Seattle",
+      "content_hash": "sha256:bc98a3f1f90e36534d4b301d9dedbf224b0b22a52efd0c1bdbc7cca442ebb69d",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "execution_id": "tierd.us.wa.seattle.09",
+      "kind": "deep-pack",
+      "limitations": [
+        "Reporting behavior, publication coverage, taxonomy, and workflow differ across cities.",
+        "A transparent baseline can support planning exercises but cannot validate intervention impact.",
+        "Do not call service requests verified incidents, harms, needs, or completed outcomes.",
+        "Do not describe proposed action coefficients as observed or causal effects.",
+        "Do not present a planning-support option as a municipal recommendation or deployment.",
+        "Public data, internal reproducibility, and computational scale do not establish external review, adoption, deployment, users, or real-world impact."
+      ],
+      "observed_request_count": 186351,
+      "readiness": "planning-support",
+      "recommendation_issued": true,
+      "scenario_id": "tierd.us.wa.seattle.09",
+      "selected_option_id": "bounded-portfolio",
+      "source_count": 7,
+      "status": "completed",
+      "suite": "behavioral-policy-equity",
+      "template_id": "deep.equity.area-balance.v1",
+      "title": "Area-level request balance"
+    },
+    {
+      "analysis_modes": [
+        "forecast",
+        "simulation",
+        "optimization"
+      ],
+      "artifact_count": 7,
+      "city_id": "us.wa.seattle",
+      "city_name": "Seattle",
+      "content_hash": "sha256:9fcbbbd7fd092cab3c315813067de62bb1634f8cb65d84f373088859685e421c",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "execution_id": "tierd.us.wa.seattle.10",
+      "kind": "deep-pack",
+      "limitations": [
+        "Reporting behavior, publication coverage, taxonomy, and workflow differ across cities.",
+        "A transparent baseline can support planning exercises but cannot validate intervention impact.",
+        "Do not call service requests verified incidents, harms, needs, or completed outcomes.",
+        "Do not describe proposed action coefficients as observed or causal effects.",
+        "Do not present a planning-support option as a municipal recommendation or deployment.",
+        "Public data, internal reproducibility, and computational scale do not establish external review, adoption, deployment, users, or real-world impact."
+      ],
+      "observed_request_count": 518,
+      "readiness": "planning-support",
+      "recommendation_issued": true,
+      "scenario_id": "tierd.us.wa.seattle.10",
+      "selected_option_id": "bounded-portfolio",
+      "source_count": 7,
+      "status": "completed",
+      "suite": "mobility-accessibility-operations",
+      "template_id": "deep.mobility.accessibility-request.v1",
+      "title": "Accessibility-related request planning"
+    },
+    {
+      "analysis_modes": [
+        "descriptive",
+        "causal"
+      ],
+      "artifact_count": 3,
+      "city_id": "us.wa.seattle",
+      "city_name": "Seattle",
+      "content_hash": "sha256:72219ee9ebbea8223d81635d0c92eff9b4a427af41ddceb0ba28ce399b58c561",
+      "evidence_types": [
+        "causal",
+        "observed"
+      ],
+      "execution_id": "tierd.us.wa.seattle.11",
+      "kind": "deep-pack",
+      "limitations": [
+        "A causal question is retained as a negative evidence-gate test, not silently reduced to an associational claim.",
+        "Do not infer treatment effects from before/after request counts.",
+        "Do not use request status as verified service resolution or welfare impact.",
+        "Public data, internal reproducibility, and computational scale do not establish external review, adoption, deployment, users, or real-world impact."
+      ],
+      "observed_request_count": 186351,
+      "readiness": "insufficient-evidence",
+      "recommendation_issued": false,
+      "scenario_id": "tierd.us.wa.seattle.11",
+      "source_count": 7,
+      "status": "insufficient-evidence",
+      "suite": "behavioral-policy-equity",
+      "template_id": "deep.equity.causal-service-effectiveness.v1",
+      "title": "Causal service-effectiveness gate"
+    },
+    {
+      "analysis_modes": [
+        "descriptive",
+        "optimization"
+      ],
+      "artifact_count": 3,
+      "city_id": "us.wa.seattle",
+      "city_name": "Seattle",
+      "content_hash": "sha256:38279ce7d67f10823affa68bbcd49ca7eac05f4e0c8778174b1921aa074655d9",
+      "evidence_types": [
+        "observed",
+        "proposed"
+      ],
+      "execution_id": "tierd.us.wa.seattle.12",
+      "kind": "deep-pack",
+      "limitations": [
+        "The negative release demonstrates a missing-network gate and does not evaluate actual mobility performance.",
+        "Do not treat city polygons or request-area labels as a routable transport network.",
+        "Do not call a proposed allocation a real-time routing result.",
+        "Public data, internal reproducibility, and computational scale do not establish external review, adoption, deployment, users, or real-world impact."
+      ],
+      "observed_request_count": 186351,
+      "readiness": "insufficient-evidence",
+      "recommendation_issued": false,
+      "scenario_id": "tierd.us.wa.seattle.12",
+      "source_count": 7,
+      "status": "insufficient-evidence",
+      "suite": "mobility-accessibility-operations",
+      "template_id": "deep.mobility.real-time-reroute.v1",
+      "title": "Real-time multimodal rerouting gate"
+    }
+  ],
+  "kind": "scenarios.deep-pack",
+  "record_count": 96,
+  "schema_version": "1.0.0"
+}

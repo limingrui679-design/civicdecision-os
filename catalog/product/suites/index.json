@@ -1,0 +1,71 @@
+{
+  "claim_boundary": "City bindings are executions of shared designs, not independent methods.",
+  "items": [
+    {
+      "cities": 8,
+      "claim_boundary": "Counts are city bindings of shared templates; they are not independent methods, field studies, deployments, or observed impacts.",
+      "completed_count": 16,
+      "execution_count": 16,
+      "negative_count": 0,
+      "suite": "climate-disaster-resilience",
+      "template_count": 2
+    },
+    {
+      "cities": 8,
+      "claim_boundary": "Counts are city bindings of shared templates; they are not independent methods, field studies, deployments, or observed impacts.",
+      "completed_count": 7,
+      "execution_count": 16,
+      "negative_count": 9,
+      "suite": "mobility-accessibility-operations",
+      "template_count": 2
+    },
+    {
+      "cities": 8,
+      "claim_boundary": "Counts are city bindings of shared templates; they are not independent methods, field studies, deployments, or observed impacts.",
+      "completed_count": 8,
+      "execution_count": 8,
+      "negative_count": 0,
+      "suite": "population-health-environmental-exposure",
+      "template_count": 1
+    },
+    {
+      "cities": 8,
+      "claim_boundary": "Counts are city bindings of shared templates; they are not independent methods, field studies, deployments, or observed impacts.",
+      "completed_count": 6,
+      "execution_count": 8,
+      "negative_count": 2,
+      "suite": "housing-land-use-regeneration",
+      "template_count": 1
+    },
+    {
+      "cities": 8,
+      "claim_boundary": "Counts are city bindings of shared templates; they are not independent methods, field studies, deployments, or observed impacts.",
+      "completed_count": 24,
+      "execution_count": 24,
+      "negative_count": 0,
+      "suite": "public-service-operations",
+      "template_count": 3
+    },
+    {
+      "cities": 8,
+      "claim_boundary": "Counts are city bindings of shared templates; they are not independent methods, field studies, deployments, or observed impacts.",
+      "completed_count": 7,
+      "execution_count": 8,
+      "negative_count": 1,
+      "suite": "infrastructure-finance-asset-risk",
+      "template_count": 1
+    },
+    {
+      "cities": 8,
+      "claim_boundary": "Counts are city bindings of shared templates; they are not independent methods, field studies, deployments, or observed impacts.",
+      "completed_count": 8,
+      "execution_count": 16,
+      "negative_count": 8,
+      "suite": "behavioral-policy-equity",
+      "template_count": 2
+    }
+  ],
+  "kind": "application-suites",
+  "record_count": 7,
+  "schema_version": "1.0.0"
+}

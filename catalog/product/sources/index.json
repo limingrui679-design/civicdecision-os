@@ -1,0 +1,1554 @@
+{
+  "claim_boundary": "Source records document public inputs and do not establish outcome validity.",
+  "items": [
+    {
+      "artifact_id": "us.tx.austin.area-status.7f905235a604",
+      "content_hash": "sha256:e54a0c44726fb5c6bbc3a49e57192bbe6faa95d7d616da67049e6e3d8b68ba8c",
+      "geographic_scope": "Austin",
+      "license": "City of Austin open data portal terms and dataset conditions",
+      "limitations": [
+        "A service request is a resident or staff report, not a verified incident, exposure, need, or completed service outcome.",
+        "Reporting access, awareness, channel choice, duplicate handling, and agency workflow create selection and measurement differences across places and time.",
+        "Aggregated public records omit street addresses and free text and cannot support individual-level inference."
+      ],
+      "name": "Austin service requests: area-status",
+      "publisher": "City of Austin",
+      "record_count": 160,
+      "retrieved_at": "2026-08-13T01:30:02.151851Z",
+      "source_id": "austin-open-data-311-aggregate",
+      "temporal_scope": "[2025-04-01, 2025-10-01)"
+    },
+    {
+      "artifact_id": "us.tx.austin.category-status.16a4caac65a2",
+      "content_hash": "sha256:8bd54a880b7186407ea2f5881703ed021c3750c402215bf374138b92ec871128",
+      "geographic_scope": "Austin",
+      "license": "City of Austin open data portal terms and dataset conditions",
+      "limitations": [
+        "A service request is a resident or staff report, not a verified incident, exposure, need, or completed service outcome.",
+        "Reporting access, awareness, channel choice, duplicate handling, and agency workflow create selection and measurement differences across places and time.",
+        "Aggregated public records omit street addresses and free text and cannot support individual-level inference."
+      ],
+      "name": "Austin service requests: category-status",
+      "publisher": "City of Austin",
+      "record_count": 224,
+      "retrieved_at": "2026-08-13T01:30:01.641184Z",
+      "source_id": "austin-open-data-311-aggregate",
+      "temporal_scope": "[2025-04-01, 2025-10-01)"
+    },
+    {
+      "artifact_id": "us.tx.austin.daily-area.a1994f9f3e6b",
+      "content_hash": "sha256:39030ffe2deafa03fbc2dd5ac6e04586b10e580f044b86583b5ffbcff143152b",
+      "geographic_scope": "Austin",
+      "license": "City of Austin open data portal terms and dataset conditions",
+      "limitations": [
+        "A service request is a resident or staff report, not a verified incident, exposure, need, or completed service outcome.",
+        "Reporting access, awareness, channel choice, duplicate handling, and agency workflow create selection and measurement differences across places and time.",
+        "Aggregated public records omit street addresses and free text and cannot support individual-level inference."
+      ],
+      "name": "Austin service requests: daily-area",
+      "publisher": "City of Austin",
+      "record_count": 8310,
+      "retrieved_at": "2026-08-13T01:29:59.853325Z",
+      "source_id": "austin-open-data-311-aggregate",
+      "temporal_scope": "[2025-04-01, 2025-10-01)"
+    },
+    {
+      "artifact_id": "us.tx.austin.daily-category.853bebf75ecf",
+      "content_hash": "sha256:7dc8954d468d275e6c71e72c7258ee9f3c8d1ce85f4c49125303876db2ad059a",
+      "geographic_scope": "Austin",
+      "license": "City of Austin open data portal terms and dataset conditions",
+      "limitations": [
+        "A service request is a resident or staff report, not a verified incident, exposure, need, or completed service outcome.",
+        "Reporting access, awareness, channel choice, duplicate handling, and agency workflow create selection and measurement differences across places and time.",
+        "Aggregated public records omit street addresses and free text and cannot support individual-level inference."
+      ],
+      "name": "Austin service requests: daily-category",
+      "publisher": "City of Austin",
+      "record_count": 15555,
+      "retrieved_at": "2026-08-13T01:29:59.484483Z",
+      "source_id": "austin-open-data-311-aggregate",
+      "temporal_scope": "[2025-04-01, 2025-10-01)"
+    },
+    {
+      "artifact_id": "us.ma.boston.area-status.7f905235a604",
+      "content_hash": "sha256:d77b39669866f747d929d1e3cea4eacb7fbe4f015e2de9e1d5cfd3656e318cfa",
+      "geographic_scope": "Boston",
+      "license": "Open Data Commons Public Domain Dedication and License (PDDL)",
+      "limitations": [
+        "A service request is a resident or staff report, not a verified incident, exposure, need, or completed service outcome.",
+        "Reporting access, awareness, channel choice, duplicate handling, and agency workflow create selection and measurement differences across places and time.",
+        "Aggregated public records omit street addresses and free text and cannot support individual-level inference.",
+        "Boston began a backend transition in October 2025; this reference window ends before that transition and must not be joined to the new schema silently."
+      ],
+      "name": "Boston service requests: area-status",
+      "publisher": "City of Boston",
+      "record_count": 47,
+      "retrieved_at": "2026-08-13T01:26:11.457371Z",
+      "source_id": "boston-open-data-311-2025-aggregate",
+      "temporal_scope": "[2025-04-01, 2025-10-01)"
+    },
+    {
+      "artifact_id": "us.ma.boston.category-status.16a4caac65a2",
+      "content_hash": "sha256:e6b6f5d6dd47528af81dde27b91819a0877a2910f79a5f5dabb26fae488d03ab",
+      "geographic_scope": "Boston",
+      "license": "Open Data Commons Public Domain Dedication and License (PDDL)",
+      "limitations": [
+        "A service request is a resident or staff report, not a verified incident, exposure, need, or completed service outcome.",
+        "Reporting access, awareness, channel choice, duplicate handling, and agency workflow create selection and measurement differences across places and time.",
+        "Aggregated public records omit street addresses and free text and cannot support individual-level inference.",
+        "Boston began a backend transition in October 2025; this reference window ends before that transition and must not be joined to the new schema silently."
+      ],
+      "name": "Boston service requests: category-status",
+      "publisher": "City of Boston",
+      "record_count": 2117,
+      "retrieved_at": "2026-08-13T01:26:08.883030Z",
+      "source_id": "boston-open-data-311-2025-aggregate",
+      "temporal_scope": "[2025-04-01, 2025-10-01)"
+    },
+    {
+      "artifact_id": "us.ma.boston.daily-area.a1994f9f3e6b",
+      "content_hash": "sha256:55a8e33b851556097e4bab97be31df72b32f528571ea82f6c0e9322159cb3819",
+      "geographic_scope": "Boston",
+      "license": "Open Data Commons Public Domain Dedication and License (PDDL)",
+      "limitations": [
+        "A service request is a resident or staff report, not a verified incident, exposure, need, or completed service outcome.",
+        "Reporting access, awareness, channel choice, duplicate handling, and agency workflow create selection and measurement differences across places and time.",
+        "Aggregated public records omit street addresses and free text and cannot support individual-level inference.",
+        "Boston began a backend transition in October 2025; this reference window ends before that transition and must not be joined to the new schema silently."
+      ],
+      "name": "Boston service requests: daily-area",
+      "publisher": "City of Boston",
+      "record_count": 4152,
+      "retrieved_at": "2026-08-13T01:26:09.184787Z",
+      "source_id": "boston-open-data-311-2025-aggregate",
+      "temporal_scope": "[2025-04-01, 2025-10-01)"
+    },
+    {
+      "artifact_id": "us.ma.boston.daily-category.853bebf75ecf",
+      "content_hash": "sha256:4ab387073cde93e4a1be75df6a08db9e164d47164e410e0260294232078a2872",
+      "geographic_scope": "Boston",
+      "license": "Open Data Commons Public Domain Dedication and License (PDDL)",
+      "limitations": [
+        "A service request is a resident or staff report, not a verified incident, exposure, need, or completed service outcome.",
+        "Reporting access, awareness, channel choice, duplicate handling, and agency workflow create selection and measurement differences across places and time.",
+        "Aggregated public records omit street addresses and free text and cannot support individual-level inference.",
+        "Boston began a backend transition in October 2025; this reference window ends before that transition and must not be joined to the new schema silently."
+      ],
+      "name": "Boston service requests: daily-category",
+      "publisher": "City of Boston",
+      "record_count": 17000,
+      "retrieved_at": "2026-08-13T01:26:04.951306Z",
+      "source_id": "boston-open-data-311-2025-aggregate",
+      "temporal_scope": "[2025-04-01, 2025-10-01)"
+    },
+    {
+      "artifact_id": "cdc-places-7ccf6e7d6dc3",
+      "content_hash": "sha256:f6e3d27428c3a4fa913eeb06384b782509aab5e8491159c3c5476be5e5c75321",
+      "geographic_scope": "state=MA, county=25025",
+      "license": "Public Domain; retain CDC attribution and methodology context",
+      "limitations": [
+        "PLACES values are model-based small-area estimates, not individual records.",
+        "A limited API page is not the complete 83,522-tract dataset.",
+        "Geographic estimates must not be interpreted as individual causal effects."
+      ],
+      "name": "CDC PLACES census-tract data, GIS-friendly 2025 release",
+      "publisher": "U.S. Centers for Disease Control and Prevention",
+      "record_count": 10,
+      "retrieved_at": "2026-08-12T09:05:29.764952Z",
+      "source_id": "cdc-places-2025-tract",
+      "temporal_scope": "CDC PLACES 2025 release using stated BRFSS/Census/ACS source years"
+    },
+    {
+      "artifact_id": "census-acs5-2024-b01003-5d4036737b5e",
+      "content_hash": "sha256:89a77e02392684a6ff1469362e6c155aaefe6c9bf4e9fbe51ed6e4172a3dfc5f",
+      "geographic_scope": "Census incorporated-place GEOIDs: 0644000,0667000,1714000,2507000,3651000,4260000,4805000,5363000",
+      "license": "U.S. Census Bureau public data; source attribution requested",
+      "limitations": [
+        "B01003 is a place-level total population estimate, not an individual record.",
+        "A controlled margin is treated as zero only under published Census guidance.",
+        "The five-year estimate pools survey responses and should not be called a 2024 point-in-time count."
+      ],
+      "name": "ACS 2024 five-year B01003 population rows for Tier-D places",
+      "publisher": "U.S. Census Bureau",
+      "record_count": 8,
+      "retrieved_at": "2026-08-13T01:45:13.342985Z",
+      "source_id": "census-acs5-2024-b01003-population",
+      "temporal_scope": "2024 ACS five-year estimates"
+    },
+    {
+      "artifact_id": "census-tigerweb-place-0644000",
+      "content_hash": "sha256:7183b68b6346b999736072d5a56cf29fd3061ea221e4585a647bbf0e6e18db0f",
+      "geographic_scope": "Incorporated place GEOID 0644000",
+      "license": "U.S. Census Bureau public geographic data; source attribution requested",
+      "limitations": [
+        "Legal boundary vintages can change through annexation and boundary surveys.",
+        "A municipal polygon does not define neighborhoods, service areas, or exposure.",
+        "Coordinate precision was requested at five decimal places for a bounded sample."
+      ],
+      "name": "TIGERweb incorporated-place boundary: Los Angeles city",
+      "publisher": "U.S. Census Bureau Geography Division",
+      "record_count": 1,
+      "retrieved_at": "2026-08-13T01:45:23.810109Z",
+      "source_id": "census-tigerweb-current-incorporated-place",
+      "temporal_scope": "TIGERweb current service vintage at retrieval"
+    },
+    {
+      "artifact_id": "census-tigerweb-place-0667000",
+      "content_hash": "sha256:61c59bcfbd56e629516da50dcd4079bc42bda2cb07622a0215e204de1948c2bb",
+      "geographic_scope": "Incorporated place GEOID 0667000",
+      "license": "U.S. Census Bureau public geographic data; source attribution requested",
+      "limitations": [
+        "Legal boundary vintages can change through annexation and boundary surveys.",
+        "A municipal polygon does not define neighborhoods, service areas, or exposure.",
+        "Coordinate precision was requested at five decimal places for a bounded sample."
+      ],
+      "name": "TIGERweb incorporated-place boundary: San Francisco city",
+      "publisher": "U.S. Census Bureau Geography Division",
+      "record_count": 1,
+      "retrieved_at": "2026-08-13T01:45:16.826985Z",
+      "source_id": "census-tigerweb-current-incorporated-place",
+      "temporal_scope": "TIGERweb current service vintage at retrieval"
+    },
+    {
+      "artifact_id": "census-tigerweb-place-1714000",
+      "content_hash": "sha256:3273d226ed2c5f363e3f55e0d36e56a250c1326795104ef415c8733c95850403",
+      "geographic_scope": "Incorporated place GEOID 1714000",
+      "license": "U.S. Census Bureau public geographic data; source attribution requested",
+      "limitations": [
+        "Legal boundary vintages can change through annexation and boundary surveys.",
+        "A municipal polygon does not define neighborhoods, service areas, or exposure.",
+        "Coordinate precision was requested at five decimal places for a bounded sample."
+      ],
+      "name": "TIGERweb incorporated-place boundary: Chicago city",
+      "publisher": "U.S. Census Bureau Geography Division",
+      "record_count": 1,
+      "retrieved_at": "2026-08-13T01:45:15.872709Z",
+      "source_id": "census-tigerweb-current-incorporated-place",
+      "temporal_scope": "TIGERweb current service vintage at retrieval"
+    },
+    {
+      "artifact_id": "census-tigerweb-place-2507000",
+      "content_hash": "sha256:3961a67e5d0e0d38b712e56b1c9b15569db569b4cbb808d0f3d555ecf8b57df3",
+      "geographic_scope": "Incorporated place GEOID 2507000",
+      "license": "U.S. Census Bureau public geographic data; source attribution requested",
+      "limitations": [
+        "Legal boundary vintages can change through annexation and boundary surveys.",
+        "A municipal polygon does not define neighborhoods, service areas, or exposure.",
+        "Coordinate precision was requested at five decimal places for a bounded sample."
+      ],
+      "name": "TIGERweb incorporated-place boundary: Boston city",
+      "publisher": "U.S. Census Bureau Geography Division",
+      "record_count": 1,
+      "retrieved_at": "2026-08-13T01:45:11.863529Z",
+      "source_id": "census-tigerweb-current-incorporated-place",
+      "temporal_scope": "TIGERweb current service vintage at retrieval"
+    },
+    {
+      "artifact_id": "census-tigerweb-place-3651000",
+      "content_hash": "sha256:3e35f7e8dfc2621cdfe429e1934c6e40897bacd6b01cf861eeaf7f0440bc036b",
+      "geographic_scope": "Incorporated place GEOID 3651000",
+      "license": "U.S. Census Bureau public geographic data; source attribution requested",
+      "limitations": [
+        "Legal boundary vintages can change through annexation and boundary surveys.",
+        "A municipal polygon does not define neighborhoods, service areas, or exposure.",
+        "Coordinate precision was requested at five decimal places for a bounded sample."
+      ],
+      "name": "TIGERweb incorporated-place boundary: New York city",
+      "publisher": "U.S. Census Bureau Geography Division",
+      "record_count": 1,
+      "retrieved_at": "2026-08-13T01:37:06.579897Z",
+      "source_id": "census-tigerweb-current-incorporated-place",
+      "temporal_scope": "TIGERweb current service vintage at retrieval"
+    },
+    {
+      "artifact_id": "census-tigerweb-place-4260000",
+      "content_hash": "sha256:eb63076f6f2adeee8b4d937af43d7e7931641750fa32dd2a470563fae5f2f99b",
+      "geographic_scope": "Incorporated place GEOID 4260000",
+      "license": "U.S. Census Bureau public geographic data; source attribution requested",
+      "limitations": [
+        "Legal boundary vintages can change through annexation and boundary surveys.",
+        "A municipal polygon does not define neighborhoods, service areas, or exposure.",
+        "Coordinate precision was requested at five decimal places for a bounded sample."
+      ],
+      "name": "TIGERweb incorporated-place boundary: Philadelphia city",
+      "publisher": "U.S. Census Bureau Geography Division",
+      "record_count": 1,
+      "retrieved_at": "2026-08-13T01:45:26.190262Z",
+      "source_id": "census-tigerweb-current-incorporated-place",
+      "temporal_scope": "TIGERweb current service vintage at retrieval"
+    },
+    {
+      "artifact_id": "census-tigerweb-place-4805000",
+      "content_hash": "sha256:098645fcd49e14d542cdf08d35bf1a4b978aecd269e45acf6198c142fe09cf80",
+      "geographic_scope": "Incorporated place GEOID 4805000",
+      "license": "U.S. Census Bureau public geographic data; source attribution requested",
+      "limitations": [
+        "Legal boundary vintages can change through annexation and boundary surveys.",
+        "A municipal polygon does not define neighborhoods, service areas, or exposure.",
+        "Coordinate precision was requested at five decimal places for a bounded sample."
+      ],
+      "name": "TIGERweb incorporated-place boundary: Austin city",
+      "publisher": "U.S. Census Bureau Geography Division",
+      "record_count": 1,
+      "retrieved_at": "2026-08-13T01:45:21.322328Z",
+      "source_id": "census-tigerweb-current-incorporated-place",
+      "temporal_scope": "TIGERweb current service vintage at retrieval"
+    },
+    {
+      "artifact_id": "census-tigerweb-place-5363000",
+      "content_hash": "sha256:c7e9a83b35c04cdb2174c77133a646ba5622bd7c524b796f00fc014424c704e6",
+      "geographic_scope": "Incorporated place GEOID 5363000",
+      "license": "U.S. Census Bureau public geographic data; source attribution requested",
+      "limitations": [
+        "Legal boundary vintages can change through annexation and boundary surveys.",
+        "A municipal polygon does not define neighborhoods, service areas, or exposure.",
+        "Coordinate precision was requested at five decimal places for a bounded sample."
+      ],
+      "name": "TIGERweb incorporated-place boundary: Seattle city",
+      "publisher": "U.S. Census Bureau Geography Division",
+      "record_count": 1,
+      "retrieved_at": "2026-08-13T01:45:18.126018Z",
+      "source_id": "census-tigerweb-current-incorporated-place",
+      "temporal_scope": "TIGERweb current service vintage at retrieval"
+    },
+    {
+      "artifact_id": "us.il.chicago.area-status.7f905235a604",
+      "content_hash": "sha256:5f3a048ca1bcb5b37dc2d95174cd514e68ab47e2e83c81e577a813839bcb68ba",
+      "geographic_scope": "Chicago",
+      "license": "City of Chicago data portal Terms of Use",
+      "limitations": [
+        "A service request is a resident or staff report, not a verified incident, exposure, need, or completed service outcome.",
+        "Reporting access, awareness, channel choice, duplicate handling, and agency workflow create selection and measurement differences across places and time.",
+        "Aggregated public records omit street addresses and free text and cannot support individual-level inference.",
+        "Information-only calls can carry the 311 center address and should not be interpreted as incident locations.",
+        "Legacy records coexist with records from the system launched in December 2018."
+      ],
+      "name": "Chicago service requests: area-status",
+      "publisher": "City of Chicago",
+      "record_count": 234,
+      "retrieved_at": "2026-08-13T01:29:42.450660Z",
+      "source_id": "chicago-open-data-311-aggregate",
+      "temporal_scope": "[2025-04-01, 2025-10-01)"
+    },
+    {
+      "artifact_id": "us.il.chicago.category-status.16a4caac65a2",
+      "content_hash": "sha256:c1c39a1c40861f84db5004fbfd8b176fc6efaf63cb3745232fb3803da9defffe",
+      "geographic_scope": "Chicago",
+      "license": "City of Chicago data portal Terms of Use",
+      "limitations": [
+        "A service request is a resident or staff report, not a verified incident, exposure, need, or completed service outcome.",
+        "Reporting access, awareness, channel choice, duplicate handling, and agency workflow create selection and measurement differences across places and time.",
+        "Aggregated public records omit street addresses and free text and cannot support individual-level inference.",
+        "Information-only calls can carry the 311 center address and should not be interpreted as incident locations.",
+        "Legacy records coexist with records from the system launched in December 2018."
+      ],
+      "name": "Chicago service requests: category-status",
+      "publisher": "City of Chicago",
+      "record_count": 218,
+      "retrieved_at": "2026-08-13T01:26:44.648693Z",
+      "source_id": "chicago-open-data-311-aggregate",
+      "temporal_scope": "[2025-04-01, 2025-10-01)"
+    },
+    {
+      "artifact_id": "us.il.chicago.daily-area.a1994f9f3e6b",
+      "content_hash": "sha256:f7a360386cad8e4cac0766df9b113e0e2080ff44426fbd80d1bbb4c9ffb3a4b4",
+      "geographic_scope": "Chicago",
+      "license": "City of Chicago data portal Terms of Use",
+      "limitations": [
+        "A service request is a resident or staff report, not a verified incident, exposure, need, or completed service outcome.",
+        "Reporting access, awareness, channel choice, duplicate handling, and agency workflow create selection and measurement differences across places and time.",
+        "Aggregated public records omit street addresses and free text and cannot support individual-level inference.",
+        "Information-only calls can carry the 311 center address and should not be interpreted as incident locations.",
+        "Legacy records coexist with records from the system launched in December 2018."
+      ],
+      "name": "Chicago service requests: daily-area",
+      "publisher": "City of Chicago",
+      "record_count": 14212,
+      "retrieved_at": "2026-08-13T01:29:44.898311Z",
+      "source_id": "chicago-open-data-311-aggregate",
+      "temporal_scope": "[2025-04-01, 2025-10-01)"
+    },
+    {
+      "artifact_id": "us.il.chicago.daily-category.853bebf75ecf",
+      "content_hash": "sha256:d577719e8bdaa4b7a5321ad1e89719fb2c171ffaaacd0d7041c6339f37eaa112",
+      "geographic_scope": "Chicago",
+      "license": "City of Chicago data portal Terms of Use",
+      "limitations": [
+        "A service request is a resident or staff report, not a verified incident, exposure, need, or completed service outcome.",
+        "Reporting access, awareness, channel choice, duplicate handling, and agency workflow create selection and measurement differences across places and time.",
+        "Aggregated public records omit street addresses and free text and cannot support individual-level inference.",
+        "Information-only calls can carry the 311 center address and should not be interpreted as incident locations.",
+        "Legacy records coexist with records from the system launched in December 2018."
+      ],
+      "name": "Chicago service requests: daily-category",
+      "publisher": "City of Chicago",
+      "record_count": 14467,
+      "retrieved_at": "2026-08-13T01:26:40.303053Z",
+      "source_id": "chicago-open-data-311-aggregate",
+      "temporal_scope": "[2025-04-01, 2025-10-01)"
+    },
+    {
+      "artifact_id": "eurostat-71f0413fe625",
+      "content_hash": "sha256:7f535f7386f23b7e7ba753cbc64602c6cae578be9f426fadfec886470820f2d5",
+      "geographic_scope": "filters={'geo': 'DE', 'time': '2023'}",
+      "license": "Eurostat free reuse with source acknowledgement; dataset exceptions may apply",
+      "limitations": [
+        "Eurostat exposes the latest dataset version and does not preserve prior API versions.",
+        "Status flags and dataset metadata are required for substantive interpretation.",
+        "Some third-party or non-European data have additional reuse restrictions."
+      ],
+      "name": "Eurostat dataset demo_gind",
+      "publisher": "European Commission, Eurostat",
+      "record_count": 27,
+      "retrieved_at": "2026-08-12T09:40:21.754712Z",
+      "source_id": "eurostat-statistics-api",
+      "temporal_scope": "filters={'geo': 'DE', 'time': '2023'}"
+    },
+    {
+      "artifact_id": "geonames-cities15000-98bc5fbd4deb",
+      "content_hash": "sha256:60c00392b1ff827b11838ebd037634bd06a452c4e161dc91678e03f316b287e7",
+      "geographic_scope": "Worldwide populated places in the cities15000 extract",
+      "license": "Creative Commons Attribution 4.0; attribution to GeoNames required",
+      "limitations": [
+        "GeoNames aggregates many sources and provides no warranty of accuracy or completeness.",
+        "Population and administrative attributes may use different source years or definitions.",
+        "The gazetteer contains points, not official municipal boundaries or service areas."
+      ],
+      "name": "GeoNames cities15000 gazetteer extract",
+      "publisher": "GeoNames",
+      "record_count": 34086,
+      "retrieved_at": "2026-08-12T09:50:52.090093Z",
+      "source_id": "geonames-cities15000",
+      "temporal_scope": "Current GeoNames extract as of the recorded modification/retrieval time"
+    },
+    {
+      "artifact_id": "us.ca.los-angeles.area-status.7f905235a604",
+      "content_hash": "sha256:c0beeca34c11398fef3dd2ff91559c4db3b3f9f6e38ddce7f17dcec626246a8e",
+      "geographic_scope": "Los Angeles",
+      "license": "No dataset-specific license is displayed; use is subject to City of Los Angeles open-data terms",
+      "limitations": [
+        "A service request is a resident or staff report, not a verified incident, exposure, need, or completed service outcome.",
+        "Reporting access, awareness, channel choice, duplicate handling, and agency workflow create selection and measurement differences across places and time.",
+        "Aggregated public records omit street addresses and free text and cannot support individual-level inference."
+      ],
+      "name": "Los Angeles service requests: area-status",
+      "publisher": "City of Los Angeles Information Technology Agency",
+      "record_count": 165,
+      "retrieved_at": "2026-08-13T01:30:07.692664Z",
+      "source_id": "los-angeles-open-data-my311-2025-aggregate",
+      "temporal_scope": "[2025-04-01, 2025-10-01)"
+    },
+    {
+      "artifact_id": "us.ca.los-angeles.category-status.16a4caac65a2",
+      "content_hash": "sha256:8a77b009fe89763733d003355bb2e45977039945ffcd7f077847df9ccd819c9f",
+      "geographic_scope": "Los Angeles",
+      "license": "No dataset-specific license is displayed; use is subject to City of Los Angeles open-data terms",
+      "limitations": [
+        "A service request is a resident or staff report, not a verified incident, exposure, need, or completed service outcome.",
+        "Reporting access, awareness, channel choice, duplicate handling, and agency workflow create selection and measurement differences across places and time.",
+        "Aggregated public records omit street addresses and free text and cannot support individual-level inference."
+      ],
+      "name": "Los Angeles service requests: category-status",
+      "publisher": "City of Los Angeles Information Technology Agency",
+      "record_count": 26,
+      "retrieved_at": "2026-08-13T01:30:06.323211Z",
+      "source_id": "los-angeles-open-data-my311-2025-aggregate",
+      "temporal_scope": "[2025-04-01, 2025-10-01)"
+    },
+    {
+      "artifact_id": "us.ca.los-angeles.daily-area.a1994f9f3e6b",
+      "content_hash": "sha256:4673d23e5d4e7a22cbdbc14b22244605febe439a9347dff2ae730c5ad19c072d",
+      "geographic_scope": "Los Angeles",
+      "license": "No dataset-specific license is displayed; use is subject to City of Los Angeles open-data terms",
+      "limitations": [
+        "A service request is a resident or staff report, not a verified incident, exposure, need, or completed service outcome.",
+        "Reporting access, awareness, channel choice, duplicate handling, and agency workflow create selection and measurement differences across places and time.",
+        "Aggregated public records omit street addresses and free text and cannot support individual-level inference."
+      ],
+      "name": "Los Angeles service requests: daily-area",
+      "publisher": "City of Los Angeles Information Technology Agency",
+      "record_count": 3720,
+      "retrieved_at": "2026-08-13T01:30:03.885379Z",
+      "source_id": "los-angeles-open-data-my311-2025-aggregate",
+      "temporal_scope": "[2025-04-01, 2025-10-01)"
+    },
+    {
+      "artifact_id": "us.ca.los-angeles.daily-category.853bebf75ecf",
+      "content_hash": "sha256:4dd1edd3097a406f2f7a663f22c3dff0ebfb530eece1911ec3d19997d6686290",
+      "geographic_scope": "Los Angeles",
+      "license": "No dataset-specific license is displayed; use is subject to City of Los Angeles open-data terms",
+      "limitations": [
+        "A service request is a resident or staff report, not a verified incident, exposure, need, or completed service outcome.",
+        "Reporting access, awareness, channel choice, duplicate handling, and agency workflow create selection and measurement differences across places and time.",
+        "Aggregated public records omit street addresses and free text and cannot support individual-level inference."
+      ],
+      "name": "Los Angeles service requests: daily-category",
+      "publisher": "City of Los Angeles Information Technology Agency",
+      "record_count": 326,
+      "retrieved_at": "2026-08-13T01:30:03.083110Z",
+      "source_id": "los-angeles-open-data-my311-2025-aggregate",
+      "temporal_scope": "[2025-04-01, 2025-10-01)"
+    },
+    {
+      "artifact_id": "nasa-power-07a6b2a9825d",
+      "content_hash": "sha256:57cb070fa31d7eb2dde8c2878095bc066ac686b702c9b692d24dc0de89e721c7",
+      "geographic_scope": "point=(23.7104,90.40744)",
+      "license": "NASA Earth science public data; retain POWER citation and access metadata",
+      "limitations": [
+        "POWER values are gridded analysis-ready products, not station observations.",
+        "Near-real-time meteorology can be replaced by improved products after retrieval.",
+        "One point does not characterize within-city microclimate or exposure."
+      ],
+      "name": "NASA POWER daily point data (v2.9.6)",
+      "publisher": "NASA Langley Research Center POWER Project",
+      "record_count": 2196,
+      "retrieved_at": "2026-08-12T10:07:31.635752Z",
+      "source_id": "nasa-power-daily-point",
+      "temporal_scope": "2024-01-01 through 2024-12-31"
+    },
+    {
+      "artifact_id": "nasa-power-0b19d5395518",
+      "content_hash": "sha256:06b32fac945f52b18f0c9f879432b5d1491de0a3e9ee45364414ff309030f3ec",
+      "geographic_scope": "point=(40.7128,-74.006)",
+      "license": "NASA Earth science public data; retain POWER citation and access metadata",
+      "limitations": [
+        "POWER values are gridded analysis-ready products, not station observations.",
+        "Near-real-time meteorology can be replaced by improved products after retrieval.",
+        "One point does not characterize within-city microclimate or exposure."
+      ],
+      "name": "NASA POWER daily point data (v2.9.6)",
+      "publisher": "NASA Langley Research Center POWER Project",
+      "record_count": 1098,
+      "retrieved_at": "2026-08-13T01:37:08.998107Z",
+      "source_id": "nasa-power-daily-point",
+      "temporal_scope": "2025-04-01 through 2025-09-30"
+    },
+    {
+      "artifact_id": "nasa-power-0c3322999b6f",
+      "content_hash": "sha256:34d6e60a58ff4d768864343b3e8f2f04dc7a6b082b709f88c530105eceb173f1",
+      "geographic_scope": "point=(4.60971,-74.08175)",
+      "license": "NASA Earth science public data; retain POWER citation and access metadata",
+      "limitations": [
+        "POWER values are gridded analysis-ready products, not station observations.",
+        "Near-real-time meteorology can be replaced by improved products after retrieval.",
+        "One point does not characterize within-city microclimate or exposure."
+      ],
+      "name": "NASA POWER daily point data (v2.9.6)",
+      "publisher": "NASA Langley Research Center POWER Project",
+      "record_count": 2196,
+      "retrieved_at": "2026-08-12T10:07:35.840968Z",
+      "source_id": "nasa-power-daily-point",
+      "temporal_scope": "2024-01-01 through 2024-12-31"
+    },
+    {
+      "artifact_id": "nasa-power-16da0b36cfc5",
+      "content_hash": "sha256:2b4872152a92f22cc7ab96517e343aef96d52bd457c566e85cc68f5d1f43af04",
+      "geographic_scope": "point=(-23.5475,-46.63611)",
+      "license": "NASA Earth science public data; retain POWER citation and access metadata",
+      "limitations": [
+        "POWER values are gridded analysis-ready products, not station observations.",
+        "Near-real-time meteorology can be replaced by improved products after retrieval.",
+        "One point does not characterize within-city microclimate or exposure."
+      ],
+      "name": "NASA POWER daily point data (v2.9.6)",
+      "publisher": "NASA Langley Research Center POWER Project",
+      "record_count": 2196,
+      "retrieved_at": "2026-08-12T10:07:30.270635Z",
+      "source_id": "nasa-power-daily-point",
+      "temporal_scope": "2024-01-01 through 2024-12-31"
+    },
+    {
+      "artifact_id": "nasa-power-1a636351463f",
+      "content_hash": "sha256:dda40c6336775606726f2cb1074f149cc5361579783811a14c0d368de471c131",
+      "geographic_scope": "point=(42.3601,-71.0589)",
+      "license": "NASA Earth science public data; retain POWER citation and access metadata",
+      "limitations": [
+        "POWER values are gridded analysis-ready products, not station observations.",
+        "Near-real-time meteorology can be replaced by improved products after retrieval.",
+        "One point does not characterize within-city microclimate or exposure."
+      ],
+      "name": "NASA POWER daily point data (v2.9.6)",
+      "publisher": "NASA Langley Research Center POWER Project",
+      "record_count": 28,
+      "retrieved_at": "2026-08-12T09:40:18.821409Z",
+      "source_id": "nasa-power-daily-point",
+      "temporal_scope": "2020-01-01 through 2020-01-07"
+    },
+    {
+      "artifact_id": "nasa-power-1ec328d052a3",
+      "content_hash": "sha256:6204f2cd111069199d9e9048aca0aeb5857fdb60a2c52a35a04570abcd927cb8",
+      "geographic_scope": "point=(22.27832,114.17469)",
+      "license": "NASA Earth science public data; retain POWER citation and access metadata",
+      "limitations": [
+        "POWER values are gridded analysis-ready products, not station observations.",
+        "Near-real-time meteorology can be replaced by improved products after retrieval.",
+        "One point does not characterize within-city microclimate or exposure."
+      ],
+      "name": "NASA POWER daily point data (v2.9.6)",
+      "publisher": "NASA Langley Research Center POWER Project",
+      "record_count": 2196,
+      "retrieved_at": "2026-08-12T10:07:36.645509Z",
+      "source_id": "nasa-power-daily-point",
+      "temporal_scope": "2024-01-01 through 2024-12-31"
+    },
+    {
+      "artifact_id": "nasa-power-231b67f920d5",
+      "content_hash": "sha256:e1248ade358d6d1d555bbf97fe7a83aef7081bf9c92cecc9db639ed9222c4bbf",
+      "geographic_scope": "point=(39.9526,-75.1652)",
+      "license": "NASA Earth science public data; retain POWER citation and access metadata",
+      "limitations": [
+        "POWER values are gridded analysis-ready products, not station observations.",
+        "Near-real-time meteorology can be replaced by improved products after retrieval.",
+        "One point does not characterize within-city microclimate or exposure."
+      ],
+      "name": "NASA POWER daily point data (v2.9.6)",
+      "publisher": "NASA Langley Research Center POWER Project",
+      "record_count": 1098,
+      "retrieved_at": "2026-08-13T01:45:25.537895Z",
+      "source_id": "nasa-power-daily-point",
+      "temporal_scope": "2025-04-01 through 2025-09-30"
+    },
+    {
+      "artifact_id": "nasa-power-272e3fd9e842",
+      "content_hash": "sha256:e60111bc2086a3b679625aa36a3bd6c2476319f7cb2b0452a628485a79542ba2",
+      "geographic_scope": "point=(30.06263,31.24967)",
+      "license": "NASA Earth science public data; retain POWER citation and access metadata",
+      "limitations": [
+        "POWER values are gridded analysis-ready products, not station observations.",
+        "Near-real-time meteorology can be replaced by improved products after retrieval.",
+        "One point does not characterize within-city microclimate or exposure."
+      ],
+      "name": "NASA POWER daily point data (v2.9.6)",
+      "publisher": "NASA Langley Research Center POWER Project",
+      "record_count": 2196,
+      "retrieved_at": "2026-08-12T10:07:32.857162Z",
+      "source_id": "nasa-power-daily-point",
+      "temporal_scope": "2024-01-01 through 2024-12-31"
+    },
+    {
+      "artifact_id": "nasa-power-29a9bae0a416",
+      "content_hash": "sha256:3b588b87b69a67e569d8dd5a55a638588ba03bf2a0fa26e5a8b8b53e720eedfc",
+      "geographic_scope": "point=(-6.82349,39.26951)",
+      "license": "NASA Earth science public data; retain POWER citation and access metadata",
+      "limitations": [
+        "POWER values are gridded analysis-ready products, not station observations.",
+        "Near-real-time meteorology can be replaced by improved products after retrieval.",
+        "One point does not characterize within-city microclimate or exposure."
+      ],
+      "name": "NASA POWER daily point data (v2.9.6)",
+      "publisher": "NASA Langley Research Center POWER Project",
+      "record_count": 2196,
+      "retrieved_at": "2026-08-12T10:07:39.133117Z",
+      "source_id": "nasa-power-daily-point",
+      "temporal_scope": "2024-01-01 through 2024-12-31"
+    },
+    {
+      "artifact_id": "nasa-power-3bf694c7c637",
+      "content_hash": "sha256:1d134cee8f22d98f4da9e4a97c218eb7c613af3c252f4ebfc5451210eed19096",
+      "geographic_scope": "point=(21.49012,39.18624)",
+      "license": "NASA Earth science public data; retain POWER citation and access metadata",
+      "limitations": [
+        "POWER values are gridded analysis-ready products, not station observations.",
+        "Near-real-time meteorology can be replaced by improved products after retrieval.",
+        "One point does not characterize within-city microclimate or exposure."
+      ],
+      "name": "NASA POWER daily point data (v2.9.6)",
+      "publisher": "NASA Langley Research Center POWER Project",
+      "record_count": 2196,
+      "retrieved_at": "2026-08-12T10:07:41.052030Z",
+      "source_id": "nasa-power-daily-point",
+      "temporal_scope": "2024-01-01 through 2024-12-31"
+    },
+    {
+      "artifact_id": "nasa-power-3ce19b2cb67d",
+      "content_hash": "sha256:bba3454a904b9bd0d4411db2e816dfda49156a97c511efe0eb2fd4ed7a15488b",
+      "geographic_scope": "point=(34.0522,-118.2437)",
+      "license": "NASA Earth science public data; retain POWER citation and access metadata",
+      "limitations": [
+        "POWER values are gridded analysis-ready products, not station observations.",
+        "Near-real-time meteorology can be replaced by improved products after retrieval.",
+        "One point does not characterize within-city microclimate or exposure."
+      ],
+      "name": "NASA POWER daily point data (v2.9.6)",
+      "publisher": "NASA Langley Research Center POWER Project",
+      "record_count": 1098,
+      "retrieved_at": "2026-08-13T01:45:24.127923Z",
+      "source_id": "nasa-power-daily-point",
+      "temporal_scope": "2025-04-01 through 2025-09-30"
+    },
+    {
+      "artifact_id": "nasa-power-402278ed0a9c",
+      "content_hash": "sha256:e3fd1d833a90b1a46acb63ce0436468b78380a6f09aa04b883be26b48e8ebadf",
+      "geographic_scope": "point=(-33.45694,-70.64827)",
+      "license": "NASA Earth science public data; retain POWER citation and access metadata",
+      "limitations": [
+        "POWER values are gridded analysis-ready products, not station observations.",
+        "Near-real-time meteorology can be replaced by improved products after retrieval.",
+        "One point does not characterize within-city microclimate or exposure."
+      ],
+      "name": "NASA POWER daily point data (v2.9.6)",
+      "publisher": "NASA Langley Research Center POWER Project",
+      "record_count": 2196,
+      "retrieved_at": "2026-08-12T10:07:40.405235Z",
+      "source_id": "nasa-power-daily-point",
+      "temporal_scope": "2024-01-01 through 2024-12-31"
+    },
+    {
+      "artifact_id": "nasa-power-47c5e48fd72e",
+      "content_hash": "sha256:47898841684eb02095caccac3cea85e972c81d7b996cb2d5015b14fe4316dda6",
+      "geographic_scope": "point=(30.2672,-97.7431)",
+      "license": "NASA Earth science public data; retain POWER citation and access metadata",
+      "limitations": [
+        "POWER values are gridded analysis-ready products, not station observations.",
+        "Near-real-time meteorology can be replaced by improved products after retrieval.",
+        "One point does not characterize within-city microclimate or exposure."
+      ],
+      "name": "NASA POWER daily point data (v2.9.6)",
+      "publisher": "NASA Langley Research Center POWER Project",
+      "record_count": 1098,
+      "retrieved_at": "2026-08-13T01:45:22.245601Z",
+      "source_id": "nasa-power-daily-point",
+      "temporal_scope": "2025-04-01 through 2025-09-30"
+    },
+    {
+      "artifact_id": "nasa-power-4c264f793a64",
+      "content_hash": "sha256:f2c8c84251096c4698be3d209f66f71fec21bea30869ce8ca6e3078b6a44d575",
+      "geographic_scope": "point=(37.7749,-122.4194)",
+      "license": "NASA Earth science public data; retain POWER citation and access metadata",
+      "limitations": [
+        "POWER values are gridded analysis-ready products, not station observations.",
+        "Near-real-time meteorology can be replaced by improved products after retrieval.",
+        "One point does not characterize within-city microclimate or exposure."
+      ],
+      "name": "NASA POWER daily point data (v2.9.6)",
+      "publisher": "NASA Langley Research Center POWER Project",
+      "record_count": 1098,
+      "retrieved_at": "2026-08-13T01:45:18.572227Z",
+      "source_id": "nasa-power-daily-point",
+      "temporal_scope": "2025-04-01 through 2025-09-30"
+    },
+    {
+      "artifact_id": "nasa-power-4c8c9d5401b2",
+      "content_hash": "sha256:2f8bdc68b9d1b600cc9af6c2c7b3376ed9488bf0ce8c6981a5693428ea51ea12",
+      "geographic_scope": "point=(42.3601,-71.0589)",
+      "license": "NASA Earth science public data; retain POWER citation and access metadata",
+      "limitations": [
+        "POWER values are gridded analysis-ready products, not station observations.",
+        "Near-real-time meteorology can be replaced by improved products after retrieval.",
+        "One point does not characterize within-city microclimate or exposure."
+      ],
+      "name": "NASA POWER daily point data (v2.9.6)",
+      "publisher": "NASA Langley Research Center POWER Project",
+      "record_count": 1098,
+      "retrieved_at": "2026-08-13T01:45:13.744181Z",
+      "source_id": "nasa-power-daily-point",
+      "temporal_scope": "2025-04-01 through 2025-09-30"
+    },
+    {
+      "artifact_id": "nasa-power-4dddc2a84423",
+      "content_hash": "sha256:aa2513a255956e179eca5432caa90ca4ec7fbe3b46e673261c9a90d3a4ad1462",
+      "geographic_scope": "point=(47.6062,-122.3321)",
+      "license": "NASA Earth science public data; retain POWER citation and access metadata",
+      "limitations": [
+        "POWER values are gridded analysis-ready products, not station observations.",
+        "Near-real-time meteorology can be replaced by improved products after retrieval.",
+        "One point does not characterize within-city microclimate or exposure."
+      ],
+      "name": "NASA POWER daily point data (v2.9.6)",
+      "publisher": "NASA Langley Research Center POWER Project",
+      "record_count": 1098,
+      "retrieved_at": "2026-08-13T01:45:19.863856Z",
+      "source_id": "nasa-power-daily-point",
+      "temporal_scope": "2025-04-01 through 2025-09-30"
+    },
+    {
+      "artifact_id": "nasa-power-50c4a5599250",
+      "content_hash": "sha256:46b6e38b230fb9b59739838cd3bfffb168a943375f4eff5c7acc6b5e3cf45b8b",
+      "geographic_scope": "point=(19.07283,72.88261)",
+      "license": "NASA Earth science public data; retain POWER citation and access metadata",
+      "limitations": [
+        "POWER values are gridded analysis-ready products, not station observations.",
+        "Near-real-time meteorology can be replaced by improved products after retrieval.",
+        "One point does not characterize within-city microclimate or exposure."
+      ],
+      "name": "NASA POWER daily point data (v2.9.6)",
+      "publisher": "NASA Langley Research Center POWER Project",
+      "record_count": 2196,
+      "retrieved_at": "2026-08-12T10:07:29.207662Z",
+      "source_id": "nasa-power-daily-point",
+      "temporal_scope": "2024-01-01 through 2024-12-31"
+    },
+    {
+      "artifact_id": "nasa-power-52589737affd",
+      "content_hash": "sha256:d896529be6a495c9635f31b92d98faa98ea8d93b46ca7abfd17ced1d0a7da34b",
+      "geographic_scope": "point=(41.01384,28.94966)",
+      "license": "NASA Earth science public data; retain POWER citation and access metadata",
+      "limitations": [
+        "POWER values are gridded analysis-ready products, not station observations.",
+        "Near-real-time meteorology can be replaced by improved products after retrieval.",
+        "One point does not characterize within-city microclimate or exposure."
+      ],
+      "name": "NASA POWER daily point data (v2.9.6)",
+      "publisher": "NASA Langley Research Center POWER Project",
+      "record_count": 2196,
+      "retrieved_at": "2026-08-12T10:07:27.795713Z",
+      "source_id": "nasa-power-daily-point",
+      "temporal_scope": "2024-01-01 through 2024-12-31"
+    },
+    {
+      "artifact_id": "nasa-power-53c09f165a58",
+      "content_hash": "sha256:f01cefa76554055fca83fde387bff4059bda9361ae7ccabce7f8f96bc034a8f5",
+      "geographic_scope": "point=(35.69439,51.42151)",
+      "license": "NASA Earth science public data; retain POWER citation and access metadata",
+      "limitations": [
+        "POWER values are gridded analysis-ready products, not station observations.",
+        "Near-real-time meteorology can be replaced by improved products after retrieval.",
+        "One point does not characterize within-city microclimate or exposure."
+      ],
+      "name": "NASA POWER daily point data (v2.9.6)",
+      "publisher": "NASA Langley Research Center POWER Project",
+      "record_count": 2196,
+      "retrieved_at": "2026-08-12T10:07:37.498894Z",
+      "source_id": "nasa-power-daily-point",
+      "temporal_scope": "2024-01-01 through 2024-12-31"
+    },
+    {
+      "artifact_id": "nasa-power-604aeca5caa1",
+      "content_hash": "sha256:41c8b4cbc3dc0ef33b4c0ee305755c939cdd3aac4bff4c13e3cbea95b8db14c1",
+      "geographic_scope": "point=(31.22222,121.45806)",
+      "license": "NASA Earth science public data; retain POWER citation and access metadata",
+      "limitations": [
+        "POWER values are gridded analysis-ready products, not station observations.",
+        "Near-real-time meteorology can be replaced by improved products after retrieval.",
+        "One point does not characterize within-city microclimate or exposure."
+      ],
+      "name": "NASA POWER daily point data (v2.9.6)",
+      "publisher": "NASA Langley Research Center POWER Project",
+      "record_count": 2196,
+      "retrieved_at": "2026-08-12T10:07:03.536619Z",
+      "source_id": "nasa-power-daily-point",
+      "temporal_scope": "2024-01-01 through 2024-12-31"
+    },
+    {
+      "artifact_id": "nasa-power-62546b5afea1",
+      "content_hash": "sha256:d1d32a1e52e360e6bca85c9ea6f366f25bb5a3dde90ef9efe8fcea0e62a191c5",
+      "geographic_scope": "point=(-4.32758,15.31357)",
+      "license": "NASA Earth science public data; retain POWER citation and access metadata",
+      "limitations": [
+        "POWER values are gridded analysis-ready products, not station observations.",
+        "Near-real-time meteorology can be replaced by improved products after retrieval.",
+        "One point does not characterize within-city microclimate or exposure."
+      ],
+      "name": "NASA POWER daily point data (v2.9.6)",
+      "publisher": "NASA Langley Research Center POWER Project",
+      "record_count": 2196,
+      "retrieved_at": "2026-08-12T10:07:27.850699Z",
+      "source_id": "nasa-power-daily-point",
+      "temporal_scope": "2024-01-01 through 2024-12-31"
+    },
+    {
+      "artifact_id": "nasa-power-642e6d3de9ba",
+      "content_hash": "sha256:c4cc6234237236b033834b1fe22dd688712549a581322b8f57bf055be7ab3e42",
+      "geographic_scope": "point=(5.35444,-4.00167)",
+      "license": "NASA Earth science public data; retain POWER citation and access metadata",
+      "limitations": [
+        "POWER values are gridded analysis-ready products, not station observations.",
+        "Near-real-time meteorology can be replaced by improved products after retrieval.",
+        "One point does not characterize within-city microclimate or exposure."
+      ],
+      "name": "NASA POWER daily point data (v2.9.6)",
+      "publisher": "NASA Langley Research Center POWER Project",
+      "record_count": 2196,
+      "retrieved_at": "2026-08-12T10:07:37.897280Z",
+      "source_id": "nasa-power-daily-point",
+      "temporal_scope": "2024-01-01 through 2024-12-31"
+    },
+    {
+      "artifact_id": "nasa-power-66493d8ac878",
+      "content_hash": "sha256:67ab00d0caaad765afcfd3fffea2f80e53db8551b51ee817fc1ca3932ea7d740",
+      "geographic_scope": "point=(55.75204,37.61781)",
+      "license": "NASA Earth science public data; retain POWER citation and access metadata",
+      "limitations": [
+        "POWER values are gridded analysis-ready products, not station observations.",
+        "Near-real-time meteorology can be replaced by improved products after retrieval.",
+        "One point does not characterize within-city microclimate or exposure."
+      ],
+      "name": "NASA POWER daily point data (v2.9.6)",
+      "publisher": "NASA Langley Research Center POWER Project",
+      "record_count": 2196,
+      "retrieved_at": "2026-08-12T10:07:30.860380Z",
+      "source_id": "nasa-power-daily-point",
+      "temporal_scope": "2024-01-01 through 2024-12-31"
+    },
+    {
+      "artifact_id": "nasa-power-78867e11134e",
+      "content_hash": "sha256:d1b72b133f1176f832ab035753ab8c7453206f398bfb560177314fdbb0802eb1",
+      "geographic_scope": "point=(35.6895,139.69171)",
+      "license": "NASA Earth science public data; retain POWER citation and access metadata",
+      "limitations": [
+        "POWER values are gridded analysis-ready products, not station observations.",
+        "Near-real-time meteorology can be replaced by improved products after retrieval.",
+        "One point does not characterize within-city microclimate or exposure."
+      ],
+      "name": "NASA POWER daily point data (v2.9.6)",
+      "publisher": "NASA Langley Research Center POWER Project",
+      "record_count": 2196,
+      "retrieved_at": "2026-08-12T10:07:32.673121Z",
+      "source_id": "nasa-power-daily-point",
+      "temporal_scope": "2024-01-01 through 2024-12-31"
+    },
+    {
+      "artifact_id": "nasa-power-8110ece7a931",
+      "content_hash": "sha256:da4dd1d3931d858f7cf9eb3ffd770fcc7f9d2acd174b0b16b755b8e600aee936",
+      "geographic_scope": "point=(41.8781,-87.6298)",
+      "license": "NASA Earth science public data; retain POWER citation and access metadata",
+      "limitations": [
+        "POWER values are gridded analysis-ready products, not station observations.",
+        "Near-real-time meteorology can be replaced by improved products after retrieval.",
+        "One point does not characterize within-city microclimate or exposure."
+      ],
+      "name": "NASA POWER daily point data (v2.9.6)",
+      "publisher": "NASA Langley Research Center POWER Project",
+      "record_count": 1098,
+      "retrieved_at": "2026-08-13T01:45:15.563760Z",
+      "source_id": "nasa-power-daily-point",
+      "temporal_scope": "2025-04-01 through 2025-09-30"
+    },
+    {
+      "artifact_id": "nasa-power-83194c694303",
+      "content_hash": "sha256:ba18c75b5a1184a574d419a9835b26e56901669f4ced7208f0cac0be2e84bc81",
+      "geographic_scope": "point=(-26.20227,28.04363)",
+      "license": "NASA Earth science public data; retain POWER citation and access metadata",
+      "limitations": [
+        "POWER values are gridded analysis-ready products, not station observations.",
+        "Near-real-time meteorology can be replaced by improved products after retrieval.",
+        "One point does not characterize within-city microclimate or exposure."
+      ],
+      "name": "NASA POWER daily point data (v2.9.6)",
+      "publisher": "NASA Langley Research Center POWER Project",
+      "record_count": 2196,
+      "retrieved_at": "2026-08-12T10:07:33.833975Z",
+      "source_id": "nasa-power-daily-point",
+      "temporal_scope": "2024-01-01 through 2024-12-31"
+    },
+    {
+      "artifact_id": "nasa-power-8360e082740e",
+      "content_hash": "sha256:26b2a84df289fa83b385a3a2f25c402e2032698f98a2e0b6b11b7559ce4a13c0",
+      "geographic_scope": "point=(37.566,126.9784)",
+      "license": "NASA Earth science public data; retain POWER citation and access metadata",
+      "limitations": [
+        "POWER values are gridded analysis-ready products, not station observations.",
+        "Near-real-time meteorology can be replaced by improved products after retrieval.",
+        "One point does not characterize within-city microclimate or exposure."
+      ],
+      "name": "NASA POWER daily point data (v2.9.6)",
+      "publisher": "NASA Langley Research Center POWER Project",
+      "record_count": 2196,
+      "retrieved_at": "2026-08-12T10:07:32.699590Z",
+      "source_id": "nasa-power-daily-point",
+      "temporal_scope": "2024-01-01 through 2024-12-31"
+    },
+    {
+      "artifact_id": "nasa-power-8a8891e5129a",
+      "content_hash": "sha256:22540cf215235f3fe09ded7705268186348d7653785ad169df578752a4793db3",
+      "geographic_scope": "point=(19.42847,-99.12766)",
+      "license": "NASA Earth science public data; retain POWER citation and access metadata",
+      "limitations": [
+        "POWER values are gridded analysis-ready products, not station observations.",
+        "Near-real-time meteorology can be replaced by improved products after retrieval.",
+        "One point does not characterize within-city microclimate or exposure."
+      ],
+      "name": "NASA POWER daily point data (v2.9.6)",
+      "publisher": "NASA Langley Research Center POWER Project",
+      "record_count": 2196,
+      "retrieved_at": "2026-08-12T10:07:30.856206Z",
+      "source_id": "nasa-power-daily-point",
+      "temporal_scope": "2024-01-01 through 2024-12-31"
+    },
+    {
+      "artifact_id": "nasa-power-91326f6f2df4",
+      "content_hash": "sha256:13bc07cf90cb8607114b18b75c94b0fa3aec667a32aa3b4748c289b601d213b8",
+      "geographic_scope": "point=(51.50853,-0.12574)",
+      "license": "NASA Earth science public data; retain POWER citation and access metadata",
+      "limitations": [
+        "POWER values are gridded analysis-ready products, not station observations.",
+        "Near-real-time meteorology can be replaced by improved products after retrieval.",
+        "One point does not characterize within-city microclimate or exposure."
+      ],
+      "name": "NASA POWER daily point data (v2.9.6)",
+      "publisher": "NASA Langley Research Center POWER Project",
+      "record_count": 2196,
+      "retrieved_at": "2026-08-12T10:07:34.205911Z",
+      "source_id": "nasa-power-daily-point",
+      "temporal_scope": "2024-01-01 through 2024-12-31"
+    },
+    {
+      "artifact_id": "nasa-power-a7d70f9df56e",
+      "content_hash": "sha256:c880447b0da06127fdf3837f6550c522efe92703655c55b5aac0131c895cf1cd",
+      "geographic_scope": "point=(10.82302,106.62965)",
+      "license": "NASA Earth science public data; retain POWER citation and access metadata",
+      "limitations": [
+        "POWER values are gridded analysis-ready products, not station observations.",
+        "Near-real-time meteorology can be replaced by improved products after retrieval.",
+        "One point does not characterize within-city microclimate or exposure."
+      ],
+      "name": "NASA POWER daily point data (v2.9.6)",
+      "publisher": "NASA Langley Research Center POWER Project",
+      "record_count": 2196,
+      "retrieved_at": "2026-08-12T10:07:29.027671Z",
+      "source_id": "nasa-power-daily-point",
+      "temporal_scope": "2024-01-01 through 2024-12-31"
+    },
+    {
+      "artifact_id": "nasa-power-a8b0bb1dcfa0",
+      "content_hash": "sha256:f2e0772ab98712c159b7c2d3264006393f9e7d57fb9a1c47709fcbd69b30b362",
+      "geographic_scope": "point=(1.28967,103.85007)",
+      "license": "NASA Earth science public data; retain POWER citation and access metadata",
+      "limitations": [
+        "POWER values are gridded analysis-ready products, not station observations.",
+        "Near-real-time meteorology can be replaced by improved products after retrieval.",
+        "One point does not characterize within-city microclimate or exposure."
+      ],
+      "name": "NASA POWER daily point data (v2.9.6)",
+      "publisher": "NASA Langley Research Center POWER Project",
+      "record_count": 2196,
+      "retrieved_at": "2026-08-12T10:07:39.205293Z",
+      "source_id": "nasa-power-daily-point",
+      "temporal_scope": "2024-01-01 through 2024-12-31"
+    },
+    {
+      "artifact_id": "nasa-power-bd833ba4f99f",
+      "content_hash": "sha256:6325e9b295d3bcc90066cd74752f69e5021d5a67da576969456d692a0a693a84",
+      "geographic_scope": "point=(33.34058,44.40088)",
+      "license": "NASA Earth science public data; retain POWER citation and access metadata",
+      "limitations": [
+        "POWER values are gridded analysis-ready products, not station observations.",
+        "Near-real-time meteorology can be replaced by improved products after retrieval.",
+        "One point does not characterize within-city microclimate or exposure."
+      ],
+      "name": "NASA POWER daily point data (v2.9.6)",
+      "publisher": "NASA Langley Research Center POWER Project",
+      "record_count": 2196,
+      "retrieved_at": "2026-08-12T10:07:36.769248Z",
+      "source_id": "nasa-power-daily-point",
+      "temporal_scope": "2024-01-01 through 2024-12-31"
+    },
+    {
+      "artifact_id": "nasa-power-bddb5efb56aa",
+      "content_hash": "sha256:d38fa857d037167b64fc43dfd4dae7e0299b3dba027a51a019e8a99db1e56926",
+      "geographic_scope": "point=(-33.86785,151.20732)",
+      "license": "NASA Earth science public data; retain POWER citation and access metadata",
+      "limitations": [
+        "POWER values are gridded analysis-ready products, not station observations.",
+        "Near-real-time meteorology can be replaced by improved products after retrieval.",
+        "One point does not characterize within-city microclimate or exposure."
+      ],
+      "name": "NASA POWER daily point data (v2.9.6)",
+      "publisher": "NASA Langley Research Center POWER Project",
+      "record_count": 2196,
+      "retrieved_at": "2026-08-12T10:07:38.058078Z",
+      "source_id": "nasa-power-daily-point",
+      "temporal_scope": "2024-01-01 through 2024-12-31"
+    },
+    {
+      "artifact_id": "nasa-power-c836e1472256",
+      "content_hash": "sha256:f6d7ce7e90a78cb234b93808eefd99aa3bd4fedc647da48dbd31657259ff34aa",
+      "geographic_scope": "point=(13.75398,100.50144)",
+      "license": "NASA Earth science public data; retain POWER citation and access metadata",
+      "limitations": [
+        "POWER values are gridded analysis-ready products, not station observations.",
+        "Near-real-time meteorology can be replaced by improved products after retrieval.",
+        "One point does not characterize within-city microclimate or exposure."
+      ],
+      "name": "NASA POWER daily point data (v2.9.6)",
+      "publisher": "NASA Langley Research Center POWER Project",
+      "record_count": 2196,
+      "retrieved_at": "2026-08-12T10:07:39.286442Z",
+      "source_id": "nasa-power-daily-point",
+      "temporal_scope": "2024-01-01 through 2024-12-31"
+    },
+    {
+      "artifact_id": "nasa-power-d64d50199d61",
+      "content_hash": "sha256:3d1564ebf00e680022756f37485d192de09ea3536434701a0ba76be816c0d596",
+      "geographic_scope": "point=(40.71427,-74.00597)",
+      "license": "NASA Earth science public data; retain POWER citation and access metadata",
+      "limitations": [
+        "POWER values are gridded analysis-ready products, not station observations.",
+        "Near-real-time meteorology can be replaced by improved products after retrieval.",
+        "One point does not characterize within-city microclimate or exposure."
+      ],
+      "name": "NASA POWER daily point data (v2.9.6)",
+      "publisher": "NASA Langley Research Center POWER Project",
+      "record_count": 2196,
+      "retrieved_at": "2026-08-12T10:07:34.159372Z",
+      "source_id": "nasa-power-daily-point",
+      "temporal_scope": "2024-01-01 through 2024-12-31"
+    },
+    {
+      "artifact_id": "nasa-power-da4396779fb2",
+      "content_hash": "sha256:8ab3fc2044af4b41c3480597b9f7cecce6dbddd8a53190b297f3beb8f83a1718",
+      "geographic_scope": "point=(31.558,74.35071)",
+      "license": "NASA Earth science public data; retain POWER citation and access metadata",
+      "limitations": [
+        "POWER values are gridded analysis-ready products, not station observations.",
+        "Near-real-time meteorology can be replaced by improved products after retrieval.",
+        "One point does not characterize within-city microclimate or exposure."
+      ],
+      "name": "NASA POWER daily point data (v2.9.6)",
+      "publisher": "NASA Langley Research Center POWER Project",
+      "record_count": 2196,
+      "retrieved_at": "2026-08-12T10:07:29.212293Z",
+      "source_id": "nasa-power-daily-point",
+      "temporal_scope": "2024-01-01 through 2024-12-31"
+    },
+    {
+      "artifact_id": "nasa-power-e87d1f3c07d1",
+      "content_hash": "sha256:d1922f1baa2270c4e766e059b59fc4001acf8f027a0e0bb374c24c6014a99c72",
+      "geographic_scope": "point=(6.45407,3.39467)",
+      "license": "NASA Earth science public data; retain POWER citation and access metadata",
+      "limitations": [
+        "POWER values are gridded analysis-ready products, not station observations.",
+        "Near-real-time meteorology can be replaced by improved products after retrieval.",
+        "One point does not characterize within-city microclimate or exposure."
+      ],
+      "name": "NASA POWER daily point data (v2.9.6)",
+      "publisher": "NASA Langley Research Center POWER Project",
+      "record_count": 2196,
+      "retrieved_at": "2026-08-12T10:07:27.680560Z",
+      "source_id": "nasa-power-daily-point",
+      "temporal_scope": "2024-01-01 through 2024-12-31"
+    },
+    {
+      "artifact_id": "nasa-power-fb512e8eb2dc",
+      "content_hash": "sha256:5140dc7f0050dd8b9b2ce3fd4b494f2804433ca8771bf5f246bcf2d0b6010dad",
+      "geographic_scope": "point=(-12.04318,-77.02824)",
+      "license": "NASA Earth science public data; retain POWER citation and access metadata",
+      "limitations": [
+        "POWER values are gridded analysis-ready products, not station observations.",
+        "Near-real-time meteorology can be replaced by improved products after retrieval.",
+        "One point does not characterize within-city microclimate or exposure."
+      ],
+      "name": "NASA POWER daily point data (v2.9.6)",
+      "publisher": "NASA Langley Research Center POWER Project",
+      "record_count": 2196,
+      "retrieved_at": "2026-08-12T10:07:35.496936Z",
+      "source_id": "nasa-power-daily-point",
+      "temporal_scope": "2024-01-01 through 2024-12-31"
+    },
+    {
+      "artifact_id": "nasa-power-fe9b60bc5dea",
+      "content_hash": "sha256:05899ee70164c2b7582b217cfaa9fa6870deca350bd102a574c6f8491a274e6a",
+      "geographic_scope": "point=(-6.21462,106.84513)",
+      "license": "NASA Earth science public data; retain POWER citation and access metadata",
+      "limitations": [
+        "POWER values are gridded analysis-ready products, not station observations.",
+        "Near-real-time meteorology can be replaced by improved products after retrieval.",
+        "One point does not characterize within-city microclimate or exposure."
+      ],
+      "name": "NASA POWER daily point data (v2.9.6)",
+      "publisher": "NASA Langley Research Center POWER Project",
+      "record_count": 2196,
+      "retrieved_at": "2026-08-12T10:07:35.187010Z",
+      "source_id": "nasa-power-daily-point",
+      "temporal_scope": "2024-01-01 through 2024-12-31"
+    },
+    {
+      "artifact_id": "nyc-311-7ed06d20232e",
+      "content_hash": "sha256:d047bf39e95c3afa5082a75d4157ad1121e575dedf129ab2929c7f3b85f55f13",
+      "geographic_scope": "New York City, borough=ALL",
+      "license": "NYC Open Data terms; public resource with dataset-specific terms if present",
+      "limitations": [
+        "A service request is a report, not a verified incident or measured service outcome.",
+        "Reporting propensity, access, duplicates, and agency practices create selection effects.",
+        "Records can be corrected or overwritten and the portal does not retain all prior versions."
+      ],
+      "name": "NYC 311 Service Requests from 2020 to Present",
+      "publisher": "City of New York",
+      "record_count": 5,
+      "retrieved_at": "2026-08-12T09:40:26.471926Z",
+      "source_id": "nyc-open-data-311-2020-present",
+      "temporal_scope": "created from 2024-01-01T00:00:00+00:00 to 2024-01-01T00:05:00+00:00"
+    },
+    {
+      "artifact_id": "us.ny.new-york-city.area-status.7f905235a604",
+      "content_hash": "sha256:f1c31e77864d9dac5c9924a15e1788584f3e050a64cbc859adcd6da02beab26b",
+      "geographic_scope": "New York City",
+      "license": "NYC Open Data terms and dataset-specific conditions",
+      "limitations": [
+        "A service request is a resident or staff report, not a verified incident, exposure, need, or completed service outcome.",
+        "Reporting access, awareness, channel choice, duplicate handling, and agency workflow create selection and measurement differences across places and time.",
+        "Aggregated public records omit street addresses and free text and cannot support individual-level inference."
+      ],
+      "name": "New York City service requests: area-status",
+      "publisher": "City of New York",
+      "record_count": 38,
+      "retrieved_at": "2026-08-13T01:26:05.861426Z",
+      "source_id": "nyc-open-data-311-aggregate",
+      "temporal_scope": "[2025-04-01, 2025-10-01)"
+    },
+    {
+      "artifact_id": "us.ny.new-york-city.category-status.16a4caac65a2",
+      "content_hash": "sha256:21d935c421c5e5c65d0984b17f96e7d2a1a2a4184acbd2be8bb81087698eefd6",
+      "geographic_scope": "New York City",
+      "license": "NYC Open Data terms and dataset-specific conditions",
+      "limitations": [
+        "A service request is a resident or staff report, not a verified incident, exposure, need, or completed service outcome.",
+        "Reporting access, awareness, channel choice, duplicate handling, and agency workflow create selection and measurement differences across places and time.",
+        "Aggregated public records omit street addresses and free text and cannot support individual-level inference."
+      ],
+      "name": "New York City service requests: category-status",
+      "publisher": "City of New York",
+      "record_count": 316,
+      "retrieved_at": "2026-08-13T01:26:00.360468Z",
+      "source_id": "nyc-open-data-311-aggregate",
+      "temporal_scope": "[2025-04-01, 2025-10-01)"
+    },
+    {
+      "artifact_id": "us.ny.new-york-city.daily-area.a1994f9f3e6b",
+      "content_hash": "sha256:478976fbdacea84dc60286007f5c16cfc7624ce4268ba7f28a67cdc28ce65e9f",
+      "geographic_scope": "New York City",
+      "license": "NYC Open Data terms and dataset-specific conditions",
+      "limitations": [
+        "A service request is a resident or staff report, not a verified incident, exposure, need, or completed service outcome.",
+        "Reporting access, awareness, channel choice, duplicate handling, and agency workflow create selection and measurement differences across places and time.",
+        "Aggregated public records omit street addresses and free text and cannot support individual-level inference."
+      ],
+      "name": "New York City service requests: daily-area",
+      "publisher": "City of New York",
+      "record_count": 1098,
+      "retrieved_at": "2026-08-13T01:26:01.279500Z",
+      "source_id": "nyc-open-data-311-aggregate",
+      "temporal_scope": "[2025-04-01, 2025-10-01)"
+    },
+    {
+      "artifact_id": "us.ny.new-york-city.daily-category.853bebf75ecf",
+      "content_hash": "sha256:ce2c6236139a6571857cd406b1b4261148a5d2705fb2eec8b79ad82980e82dc4",
+      "geographic_scope": "New York City",
+      "license": "NYC Open Data terms and dataset-specific conditions",
+      "limitations": [
+        "A service request is a resident or staff report, not a verified incident, exposure, need, or completed service outcome.",
+        "Reporting access, awareness, channel choice, duplicate handling, and agency workflow create selection and measurement differences across places and time.",
+        "Aggregated public records omit street addresses and free text and cannot support individual-level inference."
+      ],
+      "name": "New York City service requests: daily-category",
+      "publisher": "City of New York",
+      "record_count": 23568,
+      "retrieved_at": "2026-08-13T01:25:50.764447Z",
+      "source_id": "nyc-open-data-311-aggregate",
+      "temporal_scope": "[2025-04-01, 2025-10-01)"
+    },
+    {
+      "artifact_id": "openfema-disasters-5d97d55c8aa3",
+      "content_hash": "sha256:eb762d87f1cf7e0e104081fdf5187e1e7c16e1e7609d1b348b0a615cb952628d",
+      "geographic_scope": "state=ALL",
+      "license": "U.S. federal open data subject to FEMA.gov and OpenFEMA terms",
+      "limitations": [
+        "A declaration record does not measure damages, recovery, or intervention effects.",
+        "Records may be amended after retrieval and place coverage can be non-uniform.",
+        "A bounded page is not the complete disaster declaration history."
+      ],
+      "name": "OpenFEMA Disaster Declarations Summaries V2",
+      "publisher": "U.S. Federal Emergency Management Agency",
+      "record_count": 5,
+      "retrieved_at": "2026-08-12T09:40:19.981627Z",
+      "source_id": "openfema-disaster-declarations-v2",
+      "temporal_scope": "declarations from 2024-01-01T00:00:00+00:00 to 2024-08-01T00:00:00+00:00"
+    },
+    {
+      "artifact_id": "us.pa.philadelphia.area-status.7f905235a604",
+      "content_hash": "sha256:58e8663c75a63c856b84bf7c624ea13377fb8d7bdb93902135e73920a15cfe71",
+      "geographic_scope": "Philadelphia",
+      "license": "OpenDataPhilly and City of Philadelphia open-data terms",
+      "limitations": [
+        "A service request is a resident or staff report, not a verified incident, exposure, need, or completed service outcome.",
+        "Reporting access, awareness, channel choice, duplicate handling, and agency workflow create selection and measurement differences across places and time.",
+        "Aggregated public records omit street addresses and free text and cannot support individual-level inference."
+      ],
+      "name": "Philadelphia service requests: area-status",
+      "publisher": "City of Philadelphia",
+      "record_count": 101,
+      "retrieved_at": "2026-08-13T01:30:11.250528Z",
+      "source_id": "philadelphia-open-data-311-aggregate",
+      "temporal_scope": "[2025-04-01, 2025-10-01)"
+    },
+    {
+      "artifact_id": "us.pa.philadelphia.category-status.16a4caac65a2",
+      "content_hash": "sha256:e94d4ea2c755773a20751271094b9b0671ad94034910790804ac443882db88cc",
+      "geographic_scope": "Philadelphia",
+      "license": "OpenDataPhilly and City of Philadelphia open-data terms",
+      "limitations": [
+        "A service request is a resident or staff report, not a verified incident, exposure, need, or completed service outcome.",
+        "Reporting access, awareness, channel choice, duplicate handling, and agency workflow create selection and measurement differences across places and time.",
+        "Aggregated public records omit street addresses and free text and cannot support individual-level inference."
+      ],
+      "name": "Philadelphia service requests: category-status",
+      "publisher": "City of Philadelphia",
+      "record_count": 81,
+      "retrieved_at": "2026-08-13T01:30:10.843225Z",
+      "source_id": "philadelphia-open-data-311-aggregate",
+      "temporal_scope": "[2025-04-01, 2025-10-01)"
+    },
+    {
+      "artifact_id": "us.pa.philadelphia.daily-area.a1994f9f3e6b",
+      "content_hash": "sha256:9dd6222cd42cb6c26ee3a7a2961395ad94026587ef15e76bf8fd93e4b898d1ae",
+      "geographic_scope": "Philadelphia",
+      "license": "OpenDataPhilly and City of Philadelphia open-data terms",
+      "limitations": [
+        "A service request is a resident or staff report, not a verified incident, exposure, need, or completed service outcome.",
+        "Reporting access, awareness, channel choice, duplicate handling, and agency workflow create selection and measurement differences across places and time.",
+        "Aggregated public records omit street addresses and free text and cannot support individual-level inference."
+      ],
+      "name": "Philadelphia service requests: daily-area",
+      "publisher": "City of Philadelphia",
+      "record_count": 8354,
+      "retrieved_at": "2026-08-13T01:30:09.791119Z",
+      "source_id": "philadelphia-open-data-311-aggregate",
+      "temporal_scope": "[2025-04-01, 2025-10-01)"
+    },
+    {
+      "artifact_id": "us.pa.philadelphia.daily-category.853bebf75ecf",
+      "content_hash": "sha256:255ce7826d739a4bd39ae8bc682f78216e941b4d878e918d8d56371a8a95ba6d",
+      "geographic_scope": "Philadelphia",
+      "license": "OpenDataPhilly and City of Philadelphia open-data terms",
+      "limitations": [
+        "A service request is a resident or staff report, not a verified incident, exposure, need, or completed service outcome.",
+        "Reporting access, awareness, channel choice, duplicate handling, and agency workflow create selection and measurement differences across places and time.",
+        "Aggregated public records omit street addresses and free text and cannot support individual-level inference."
+      ],
+      "name": "Philadelphia service requests: daily-category",
+      "publisher": "City of Philadelphia",
+      "record_count": 6010,
+      "retrieved_at": "2026-08-13T01:30:08.651976Z",
+      "source_id": "philadelphia-open-data-311-aggregate",
+      "temporal_scope": "[2025-04-01, 2025-10-01)"
+    },
+    {
+      "artifact_id": "us.ca.san-francisco.area-status.7f905235a604",
+      "content_hash": "sha256:b1b62a4ac8995d9697e5d15ff18e42b9c8d8e075259ad4e0135704f3d004b693",
+      "geographic_scope": "San Francisco",
+      "license": "Open Data Commons Public Domain Dedication and License (PDDL)",
+      "limitations": [
+        "A service request is a resident or staff report, not a verified incident, exposure, need, or completed service outcome.",
+        "Reporting access, awareness, channel choice, duplicate handling, and agency workflow create selection and measurement differences across places and time.",
+        "Aggregated public records omit street addresses and free text and cannot support individual-level inference."
+      ],
+      "name": "San Francisco service requests: area-status",
+      "publisher": "San Francisco 311",
+      "record_count": 84,
+      "retrieved_at": "2026-08-13T01:29:53.800075Z",
+      "source_id": "san-francisco-open-data-311-aggregate",
+      "temporal_scope": "[2025-04-01, 2025-10-01)"
+    },
+    {
+      "artifact_id": "us.ca.san-francisco.category-status.16a4caac65a2",
+      "content_hash": "sha256:de10e637bfab7ae2c2ab3c2043737771d178ffd41073ed013cd312fb7c2960ec",
+      "geographic_scope": "San Francisco",
+      "license": "Open Data Commons Public Domain Dedication and License (PDDL)",
+      "limitations": [
+        "A service request is a resident or staff report, not a verified incident, exposure, need, or completed service outcome.",
+        "Reporting access, awareness, channel choice, duplicate handling, and agency workflow create selection and measurement differences across places and time.",
+        "Aggregated public records omit street addresses and free text and cannot support individual-level inference."
+      ],
+      "name": "San Francisco service requests: category-status",
+      "publisher": "San Francisco 311",
+      "record_count": 64,
+      "retrieved_at": "2026-08-13T01:29:51.081517Z",
+      "source_id": "san-francisco-open-data-311-aggregate",
+      "temporal_scope": "[2025-04-01, 2025-10-01)"
+    },
+    {
+      "artifact_id": "us.ca.san-francisco.daily-area.a1994f9f3e6b",
+      "content_hash": "sha256:fed551a09c83dea2c1da240a3652c5914e75a5512287b3f9b6471ae1a9427246",
+      "geographic_scope": "San Francisco",
+      "license": "Open Data Commons Public Domain Dedication and License (PDDL)",
+      "limitations": [
+        "A service request is a resident or staff report, not a verified incident, exposure, need, or completed service outcome.",
+        "Reporting access, awareness, channel choice, duplicate handling, and agency workflow create selection and measurement differences across places and time.",
+        "Aggregated public records omit street addresses and free text and cannot support individual-level inference."
+      ],
+      "name": "San Francisco service requests: daily-area",
+      "publisher": "San Francisco 311",
+      "record_count": 7445,
+      "retrieved_at": "2026-08-13T01:29:51.474902Z",
+      "source_id": "san-francisco-open-data-311-aggregate",
+      "temporal_scope": "[2025-04-01, 2025-10-01)"
+    },
+    {
+      "artifact_id": "us.ca.san-francisco.daily-category.853bebf75ecf",
+      "content_hash": "sha256:802e062a0af218c8e297a1fae5f9893216bf3a126d5fe1a77fb910829cd1cd62",
+      "geographic_scope": "San Francisco",
+      "license": "Open Data Commons Public Domain Dedication and License (PDDL)",
+      "limitations": [
+        "A service request is a resident or staff report, not a verified incident, exposure, need, or completed service outcome.",
+        "Reporting access, awareness, channel choice, duplicate handling, and agency workflow create selection and measurement differences across places and time.",
+        "Aggregated public records omit street addresses and free text and cannot support individual-level inference."
+      ],
+      "name": "San Francisco service requests: daily-category",
+      "publisher": "San Francisco 311",
+      "record_count": 4861,
+      "retrieved_at": "2026-08-13T01:29:47.835455Z",
+      "source_id": "san-francisco-open-data-311-aggregate",
+      "temporal_scope": "[2025-04-01, 2025-10-01)"
+    },
+    {
+      "artifact_id": "us.wa.seattle.area-status.7f905235a604",
+      "content_hash": "sha256:5de53010a516c025e18c1e10b86b8f63075f07be64ee3671345a4c4eac82b2b8",
+      "geographic_scope": "Seattle",
+      "license": "Public Domain as listed by the City of Seattle data portal",
+      "limitations": [
+        "A service request is a resident or staff report, not a verified incident, exposure, need, or completed service outcome.",
+        "Reporting access, awareness, channel choice, duplicate handling, and agency workflow create selection and measurement differences across places and time.",
+        "Aggregated public records omit street addresses and free text and cannot support individual-level inference.",
+        "The dataset contains selected public request types and is not the complete set of requests received by every department."
+      ],
+      "name": "Seattle service requests: area-status",
+      "publisher": "City of Seattle",
+      "record_count": 472,
+      "retrieved_at": "2026-08-13T01:29:57.457531Z",
+      "source_id": "seattle-open-data-customer-service-aggregate",
+      "temporal_scope": "[2025-04-01, 2025-10-01)"
+    },
+    {
+      "artifact_id": "us.wa.seattle.category-status.16a4caac65a2",
+      "content_hash": "sha256:6c17358175f077a2b368d803c21340531eed3fc7c05c5a09755bb335857bd7c3",
+      "geographic_scope": "Seattle",
+      "license": "Public Domain as listed by the City of Seattle data portal",
+      "limitations": [
+        "A service request is a resident or staff report, not a verified incident, exposure, need, or completed service outcome.",
+        "Reporting access, awareness, channel choice, duplicate handling, and agency workflow create selection and measurement differences across places and time.",
+        "Aggregated public records omit street addresses and free text and cannot support individual-level inference.",
+        "The dataset contains selected public request types and is not the complete set of requests received by every department."
+      ],
+      "name": "Seattle service requests: category-status",
+      "publisher": "City of Seattle",
+      "record_count": 150,
+      "retrieved_at": "2026-08-13T01:29:56.128096Z",
+      "source_id": "seattle-open-data-customer-service-aggregate",
+      "temporal_scope": "[2025-04-01, 2025-10-01)"
+    },
+    {
+      "artifact_id": "us.wa.seattle.daily-area.a1994f9f3e6b",
+      "content_hash": "sha256:bf76b7db9ad564d74812796df1c3fb0247c5af78ae09bb3c995711b65283bd39",
+      "geographic_scope": "Seattle",
+      "license": "Public Domain as listed by the City of Seattle data portal",
+      "limitations": [
+        "A service request is a resident or staff report, not a verified incident, exposure, need, or completed service outcome.",
+        "Reporting access, awareness, channel choice, duplicate handling, and agency workflow create selection and measurement differences across places and time.",
+        "Aggregated public records omit street addresses and free text and cannot support individual-level inference.",
+        "The dataset contains selected public request types and is not the complete set of requests received by every department."
+      ],
+      "name": "Seattle service requests: daily-area",
+      "publisher": "City of Seattle",
+      "record_count": 9797,
+      "retrieved_at": "2026-08-13T01:29:56.033824Z",
+      "source_id": "seattle-open-data-customer-service-aggregate",
+      "temporal_scope": "[2025-04-01, 2025-10-01)"
+    },
+    {
+      "artifact_id": "us.wa.seattle.daily-category.853bebf75ecf",
+      "content_hash": "sha256:0ba2d190ff568ea64fdb8c7cbd4e4062a5098b18a1df1a805c81d74dcbb74cf1",
+      "geographic_scope": "Seattle",
+      "license": "Public Domain as listed by the City of Seattle data portal",
+      "limitations": [
+        "A service request is a resident or staff report, not a verified incident, exposure, need, or completed service outcome.",
+        "Reporting access, awareness, channel choice, duplicate handling, and agency workflow create selection and measurement differences across places and time.",
+        "Aggregated public records omit street addresses and free text and cannot support individual-level inference.",
+        "The dataset contains selected public request types and is not the complete set of requests received by every department."
+      ],
+      "name": "Seattle service requests: daily-category",
+      "publisher": "City of Seattle",
+      "record_count": 5464,
+      "retrieved_at": "2026-08-13T01:29:54.604617Z",
+      "source_id": "seattle-open-data-customer-service-aggregate",
+      "temporal_scope": "[2025-04-01, 2025-10-01)"
+    },
+    {
+      "artifact_id": "usgs-earthquakes-06bebebaaf0d",
+      "content_hash": "sha256:188d9cbc281b5f986e162336a448e1ac9769e10d167ce1ae0dffc53fd2fbf002",
+      "geographic_scope": "Query-defined global earthquake catalog results",
+      "license": "U.S. government public data; check source terms and attribution guidance",
+      "limitations": [
+        "Catalog records can be revised after retrieval.",
+        "A bounded query is not the complete USGS earthquake catalog.",
+        "Earthquake observations alone do not establish urban impact or causality."
+      ],
+      "name": "USGS Earthquake Catalog query",
+      "publisher": "U.S. Geological Survey",
+      "record_count": 5,
+      "retrieved_at": "2026-08-12T09:05:27.222171Z",
+      "source_id": "usgs-earthquakes",
+      "temporal_scope": "2020-01-01T00:00:00+00:00 to 2020-01-02T00:00:00+00:00"
+    },
+    {
+      "artifact_id": "world-bank-388618048c6c",
+      "content_hash": "sha256:ce1eb1a1b8a3eb90a2e06387d4286ba9d1797e9a1c1b957a566e0dda7367ecb8",
+      "geographic_scope": "country=all",
+      "license": "CC BY 4.0 for World Bank-produced open data; verify indicator metadata",
+      "limitations": [
+        "Indicators may be estimates, modeled values, or aggregates; inspect metadata.",
+        "A bounded API page is not the complete indicator series.",
+        "Cross-country comparability and revision behavior vary by indicator."
+      ],
+      "name": "World Bank indicator SP.POP.TOTL",
+      "publisher": "World Bank Group",
+      "record_count": 265,
+      "retrieved_at": "2026-08-12T10:06:30.411389Z",
+      "source_id": "world-bank-indicators-v2",
+      "temporal_scope": "2023 through 2023"
+    },
+    {
+      "artifact_id": "world-bank-88e0fde05ae4",
+      "content_hash": "sha256:7274fb80754753f1aaebfefd9b8f5cc167f121343c87315270c27cbd64e07306",
+      "geographic_scope": "country=all",
+      "license": "CC BY 4.0 for World Bank-produced open data; verify indicator metadata",
+      "limitations": [
+        "Indicators may be estimates, modeled values, or aggregates; inspect metadata.",
+        "A bounded API page is not the complete indicator series.",
+        "Cross-country comparability and revision behavior vary by indicator."
+      ],
+      "name": "World Bank indicator NY.GDP.PCAP.CD",
+      "publisher": "World Bank Group",
+      "record_count": 265,
+      "retrieved_at": "2026-08-12T10:06:35.034985Z",
+      "source_id": "world-bank-indicators-v2",
+      "temporal_scope": "2023 through 2023"
+    },
+    {
+      "artifact_id": "world-bank-a690c36b4644",
+      "content_hash": "sha256:869ea9cdf51683bfc5f78211371110e1df3d422cc2c83b057b6240207164256e",
+      "geographic_scope": "country=all",
+      "license": "CC BY 4.0 for World Bank-produced open data; verify indicator metadata",
+      "limitations": [
+        "Indicators may be estimates, modeled values, or aggregates; inspect metadata.",
+        "A bounded API page is not the complete indicator series.",
+        "Cross-country comparability and revision behavior vary by indicator."
+      ],
+      "name": "World Bank indicator SP.URB.TOTL.IN.ZS",
+      "publisher": "World Bank Group",
+      "record_count": 265,
+      "retrieved_at": "2026-08-12T10:06:25.501697Z",
+      "source_id": "world-bank-indicators-v2",
+      "temporal_scope": "2023 through 2023"
+    },
+    {
+      "artifact_id": "world-bank-d2c865dc91f7",
+      "content_hash": "sha256:d6468d27eeb9e106e4de906996e529ff23d46ce8b603a40ef8e000146fca2414",
+      "geographic_scope": "country=US",
+      "license": "CC BY 4.0 for World Bank-produced open data; verify indicator metadata",
+      "limitations": [
+        "Indicators may be estimates, modeled values, or aggregates; inspect metadata.",
+        "A bounded API page is not the complete indicator series.",
+        "Cross-country comparability and revision behavior vary by indicator."
+      ],
+      "name": "World Bank indicator SP.URB.TOTL.IN.ZS",
+      "publisher": "World Bank Group",
+      "record_count": 1,
+      "retrieved_at": "2026-08-12T09:40:16.659659Z",
+      "source_id": "world-bank-indicators-v2",
+      "temporal_scope": "2023 through 2023"
+    }
+  ],
+  "kind": "sources",
+  "record_count": 90,
+  "schema_version": "1.0.0"
+}

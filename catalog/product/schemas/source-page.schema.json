@@ -1,0 +1,148 @@
+{
+  "$defs": {
+    "Pagination": {
+      "additionalProperties": false,
+      "properties": {
+        "limit": {
+          "maximum": 100,
+          "minimum": 1,
+          "title": "Limit",
+          "type": "integer"
+        },
+        "next_offset": {
+          "anyOf": [
+            {
+              "minimum": 0,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Next Offset"
+        },
+        "offset": {
+          "minimum": 0,
+          "title": "Offset",
+          "type": "integer"
+        },
+        "returned": {
+          "minimum": 0,
+          "title": "Returned",
+          "type": "integer"
+        },
+        "total": {
+          "minimum": 0,
+          "title": "Total",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "total",
+        "limit",
+        "offset",
+        "returned"
+      ],
+      "title": "Pagination",
+      "type": "object"
+    },
+    "SourceSummary": {
+      "additionalProperties": false,
+      "properties": {
+        "artifact_id": {
+          "pattern": "^[a-z0-9]+(?:[._-][a-z0-9]+)*$",
+          "title": "Artifact Id",
+          "type": "string"
+        },
+        "content_hash": {
+          "pattern": "^sha256:[0-9a-f]{64}$",
+          "title": "Content Hash",
+          "type": "string"
+        },
+        "geographic_scope": {
+          "minLength": 1,
+          "title": "Geographic Scope",
+          "type": "string"
+        },
+        "license": {
+          "minLength": 1,
+          "title": "License",
+          "type": "string"
+        },
+        "limitations": {
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1,
+          "title": "Limitations",
+          "type": "array"
+        },
+        "name": {
+          "minLength": 1,
+          "title": "Name",
+          "type": "string"
+        },
+        "publisher": {
+          "minLength": 1,
+          "title": "Publisher",
+          "type": "string"
+        },
+        "record_count": {
+          "minimum": 0,
+          "title": "Record Count",
+          "type": "integer"
+        },
+        "retrieved_at": {
+          "format": "date-time",
+          "title": "Retrieved At",
+          "type": "string"
+        },
+        "source_id": {
+          "pattern": "^[a-z0-9]+(?:[._-][a-z0-9]+)*$",
+          "title": "Source Id",
+          "type": "string"
+        },
+        "temporal_scope": {
+          "minLength": 1,
+          "title": "Temporal Scope",
+          "type": "string"
+        }
+      },
+      "required": [
+        "artifact_id",
+        "source_id",
+        "name",
+        "publisher",
+        "license",
+        "retrieved_at",
+        "record_count",
+        "geographic_scope",
+        "temporal_scope",
+        "content_hash",
+        "limitations"
+      ],
+      "title": "SourceSummary",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "items": {
+      "items": {
+        "$ref": "#/$defs/SourceSummary"
+      },
+      "title": "Items",
+      "type": "array"
+    },
+    "pagination": {
+      "$ref": "#/$defs/Pagination"
+    }
+  },
+  "required": [
+    "pagination",
+    "items"
+  ],
+  "title": "SourcePage",
+  "type": "object"
+}

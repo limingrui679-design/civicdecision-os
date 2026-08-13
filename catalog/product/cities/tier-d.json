@@ -1,0 +1,184 @@
+{
+  "claim_boundary": "Tier labels describe evidence readiness, not deployment or impact.",
+  "items": [
+    {
+      "city_id": "us.ny.new-york-city",
+      "completed_scenarios": 10,
+      "country_code": "US",
+      "latitude": 40.697500000000005,
+      "limitations": [
+        "Borough aggregation is too coarse for neighborhood-level equity decisions.",
+        "Complaint types and agency practices can change inside the selected period.",
+        "Twelve city-bound packs are executions of twelve shared method designs; city bindings are not counted as new non-duplicative designs.",
+        "Planning-support output does not authorize implementation or establish impact."
+      ],
+      "longitude": -73.97964999999999,
+      "name": "New York City",
+      "negative_scenarios": 2,
+      "quality_status": "pass",
+      "readiness": "evidence-gated-planning-support",
+      "scenario_count": 12,
+      "source_artifact_count": 7,
+      "source_population": 8483844,
+      "tier": "D",
+      "timezone": "America/New_York"
+    },
+    {
+      "city_id": "us.ma.boston",
+      "completed_scenarios": 10,
+      "country_code": "US",
+      "latitude": 42.31435,
+      "limitations": [
+        "Neighborhood labels are operational attributes, not guaranteed official boundaries.",
+        "The legacy and new BOS:311 systems require an explicit future crosswalk.",
+        "Twelve city-bound packs are executions of twelve shared method designs; city bindings are not counted as new non-duplicative designs.",
+        "Planning-support output does not authorize implementation or establish impact."
+      ],
+      "longitude": -71.0566,
+      "name": "Boston",
+      "negative_scenarios": 2,
+      "quality_status": "warn",
+      "readiness": "evidence-gated-planning-support",
+      "scenario_count": 12,
+      "source_artifact_count": 7,
+      "source_population": 666442,
+      "tier": "D",
+      "timezone": "America/New_York"
+    },
+    {
+      "city_id": "us.il.chicago",
+      "completed_scenarios": 10,
+      "country_code": "US",
+      "latitude": 41.83375,
+      "limitations": [
+        "Community-area codes require an external geometry crosswalk for mapping.",
+        "Completed request status does not verify that the underlying issue was resolved.",
+        "Twelve city-bound packs are executions of twelve shared method designs; city bindings are not counted as new non-duplicative designs.",
+        "Planning-support output does not authorize implementation or establish impact."
+      ],
+      "longitude": -87.7319,
+      "name": "Chicago",
+      "negative_scenarios": 2,
+      "quality_status": "warn",
+      "readiness": "evidence-gated-planning-support",
+      "scenario_count": 12,
+      "source_artifact_count": 7,
+      "source_population": 2711226,
+      "tier": "D",
+      "timezone": "America/Chicago"
+    },
+    {
+      "city_id": "us.ca.san-francisco",
+      "completed_scenarios": 10,
+      "country_code": "US",
+      "latitude": 37.770250000000004,
+      "limitations": [
+        "Analysis neighborhoods are analytical groupings and can mask within-area variation.",
+        "Historical records can be updated after closure and are not immutable event logs.",
+        "Twelve city-bound packs are executions of twelve shared method designs; city bindings are not counted as new non-duplicative designs.",
+        "Planning-support output does not authorize implementation or establish impact."
+      ],
+      "longitude": -122.43594999999999,
+      "name": "San Francisco",
+      "negative_scenarios": 2,
+      "quality_status": "warn",
+      "readiness": "evidence-gated-planning-support",
+      "scenario_count": 12,
+      "source_artifact_count": 7,
+      "source_population": 830235,
+      "tier": "D",
+      "timezone": "America/Los_Angeles"
+    },
+    {
+      "city_id": "us.wa.seattle",
+      "completed_scenarios": 9,
+      "country_code": "US",
+      "latitude": 47.607600000000005,
+      "limitations": [
+        "Published request types are a selected subset, so citywide demand totals are invalid.",
+        "Current status does not contain a complete service-resolution history.",
+        "Twelve city-bound packs are executions of twelve shared method designs; city bindings are not counted as new non-duplicative designs.",
+        "Planning-support output does not authorize implementation or establish impact."
+      ],
+      "longitude": -122.34205,
+      "name": "Seattle",
+      "negative_scenarios": 3,
+      "quality_status": "warn",
+      "readiness": "evidence-gated-planning-support",
+      "scenario_count": 12,
+      "source_artifact_count": 7,
+      "source_population": 754195,
+      "tier": "D",
+      "timezone": "America/Los_Angeles"
+    },
+    {
+      "city_id": "us.tx.austin",
+      "completed_scenarios": 10,
+      "country_code": "US",
+      "latitude": 30.3078,
+      "limitations": [
+        "ZIP codes are postal units and do not align exactly with city boundaries or need.",
+        "Mass-entry requests can be entered after field work and distort creation-time demand.",
+        "Twelve city-bound packs are executions of twelve shared method designs; city bindings are not counted as new non-duplicative designs.",
+        "Planning-support output does not authorize implementation or establish impact."
+      ],
+      "longitude": -97.74995,
+      "name": "Austin",
+      "negative_scenarios": 2,
+      "quality_status": "warn",
+      "readiness": "evidence-gated-planning-support",
+      "scenario_count": 12,
+      "source_artifact_count": 7,
+      "source_population": 979539,
+      "tier": "D",
+      "timezone": "America/Chicago"
+    },
+    {
+      "city_id": "us.ca.los-angeles",
+      "completed_scenarios": 7,
+      "country_code": "US",
+      "latitude": 34.0205,
+      "limitations": [
+        "The annual resource can be revised and later system migrations require new mappings.",
+        "Blank neighborhood-council values prevent complete within-city allocation analysis.",
+        "Twelve city-bound packs are executions of twelve shared method designs; city bindings are not counted as new non-duplicative designs.",
+        "Planning-support output does not authorize implementation or establish impact."
+      ],
+      "longitude": -118.41175,
+      "name": "Los Angeles",
+      "negative_scenarios": 5,
+      "quality_status": "warn",
+      "readiness": "evidence-gated-planning-support",
+      "scenario_count": 12,
+      "source_artifact_count": 7,
+      "source_population": 3857263,
+      "tier": "D",
+      "timezone": "America/Los_Angeles"
+    },
+    {
+      "city_id": "us.pa.philadelphia",
+      "completed_scenarios": 10,
+      "country_code": "US",
+      "latitude": 40.002449999999996,
+      "limitations": [
+        "ZIP-code areas are not neighborhoods and can cross policy-relevant boundaries.",
+        "Information requests should not be interpreted as physical service demand.",
+        "Twelve city-bound packs are executions of twelve shared method designs; city bindings are not counted as new non-duplicative designs.",
+        "Planning-support output does not authorize implementation or establish impact."
+      ],
+      "longitude": -75.11805,
+      "name": "Philadelphia",
+      "negative_scenarios": 2,
+      "quality_status": "warn",
+      "readiness": "evidence-gated-planning-support",
+      "scenario_count": 12,
+      "source_artifact_count": 7,
+      "source_population": 1579706,
+      "tier": "D",
+      "timezone": "America/New_York"
+    }
+  ],
+  "kind": "cities.tier-d",
+  "record_count": 8,
+  "schema_version": "1.0.0"
+}

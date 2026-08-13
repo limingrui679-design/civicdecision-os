@@ -1,0 +1,69 @@
+{
+  "claim_boundary": "Negative releases and withheld recommendations remain first-class records.",
+  "items": [
+    {
+      "analysis_modes": [
+        "spatial",
+        "optimization",
+        "sensitivity"
+      ],
+      "artifact_count": 2,
+      "city_id": "us.ma.suffolk",
+      "city_name": "Suffolk County reference sample",
+      "content_hash": "sha256:0a30507ab9045bcd162a580457bdfa3905028afd13db423d729cdf23e4c48b5f",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "execution_id": "run-8a6e1c70ae7a",
+      "kind": "reference-pack",
+      "limitations": [
+        "This bounded public-data example is implementation evidence, not a municipal recommendation."
+      ],
+      "readiness": "negative-release",
+      "recommendation_issued": false,
+      "scenario_id": "us.ma.suffolk.heat-access-demo.v1",
+      "source_count": 1,
+      "status": "infeasible",
+      "suite": "heat-access-reference",
+      "title": "Deliberately infeasible heat-access reference"
+    },
+    {
+      "analysis_modes": [
+        "spatial",
+        "optimization",
+        "sensitivity"
+      ],
+      "artifact_count": 2,
+      "city_id": "us.ma.suffolk",
+      "city_name": "Suffolk County reference sample",
+      "content_hash": "sha256:b930f66e7b1335378b7f5a31574c2c83c4d89660102f95787b26efad89f8e63e",
+      "evidence_types": [
+        "estimated",
+        "observed",
+        "optimized",
+        "proposed",
+        "simulated"
+      ],
+      "execution_id": "run-aff7c38b12c1",
+      "kind": "reference-pack",
+      "limitations": [
+        "This bounded public-data example is implementation evidence, not a municipal recommendation."
+      ],
+      "readiness": "reference-planning-support",
+      "recommendation_issued": true,
+      "scenario_id": "us.ma.suffolk.heat-access-demo.v1",
+      "selected_option_id": "plan-25025000202-25025000502",
+      "source_count": 1,
+      "status": "completed",
+      "suite": "heat-access-reference",
+      "title": "Completed heat-access reference"
+    }
+  ],
+  "kind": "scenarios.reference-pack",
+  "record_count": 2,
+  "schema_version": "1.0.0"
+}

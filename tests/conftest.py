@@ -1,10 +1,19 @@
 from __future__ import annotations
 
 from datetime import UTC, datetime
+from pathlib import Path
 
 import pytest
 
+from civicdecision.product.store import ArtifactStore
 from civicdecision.protocols.source import SourceManifest
+
+ROOT = Path(__file__).parents[1]
+
+
+@pytest.fixture(scope="session")
+def product_store() -> ArtifactStore:
+    return ArtifactStore(ROOT, verify_sources=True)
 
 
 @pytest.fixture

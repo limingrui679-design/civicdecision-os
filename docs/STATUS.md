@@ -4,9 +4,10 @@ Updated: 2026-08-13
 
 ## Current milestone
 
-Milestone 5—the eight-city Tier-D evidence and scenario-compilation layer—is verified locally. The
-next milestone exposes the verified artifacts through a read-only SDK, REST API, CLI, and web
-interface while preserving every evidence and negative-release gate.
+Milestone 6—the shared product projection, REST API, Python SDK, CLI, evidence explorer, and
+data-only plugin layer—is verified locally. The next implementation milestone expands the twelve
+deep templates toward the 240 non-duplicative scenario target without counting repeated city
+bindings as new designs.
 
 ## Verified now
 
@@ -88,17 +89,41 @@ interface while preserving every evidence and negative-release gate.
 - All 707 committed Tier-D files validate against contracts and hashes. The verifier rebuilds the
   entire tree from the 49 committed source artifacts in a temporary directory and requires exact
   byte equality.
-- 711 automated tests pass. Coverage is 95.64% for statements, 89.78% for branches, and 94.48%
-  under coverage.py's combined line-and-branch measure; strict mypy, Ruff lint, and Ruff format
-  checks pass locally.
-- A 175,108-byte wheel builds, passes ZIP integrity, installs with dependencies in a fresh Python
-  3.12.13 environment, starts the CLI, and imports the analytical, optimization, benchmark, and
-  Tier-D compilation entry points. It is current-worktree evidence, not a tagged or signed release.
+- One fail-closed artifact store reconciles 258 highest-tier city records, 288 tier assignments,
+  90 source artifacts, 188 scenario executions, 98 DecisionPacks, seven suites, and 145 benchmark
+  runs before exposing any product view.
+- The product builder commits 35 deterministic files: 33 manifest-indexed JSON artifacts, one
+  artifact manifest, and one portable checksum file. The tree includes 17 product/plugin Schemas,
+  a 14-path OpenAPI contract, four hashed web assets, and complete city, scenario, source, suite,
+  benchmark, and Tier-D evidence projections.
+- The read-only API implements bounded filters and pagination, closed status enums, RFC-style
+  problem details, request correlation, ETags, conditional GET after route resolution, gzip,
+  security headers, and no mutation routes. Unknown routes remain 404 even when sent a matching
+  catalog ETag.
+- Local, synchronous HTTP, and asynchronous HTTP Python clients validate every response against
+  the shared product models. Repository entry points accept both strings and `Path` objects.
+- The CLI browses every product resource family, exports deterministic OpenAPI, rebuilds the full
+  product projection, validates/scaffolds data-only plugins, and refuses non-loopback serving
+  without explicit acknowledgement.
+- The data-only plugin SDK rejects code, unmanifested files, symlinks, unsafe paths, oversized
+  documents, hash drift, duplicate identities, registry overlap, and non-allowlisted plugin IDs;
+  validation never imports or executes plugin code.
+- The dependency-free evidence explorer renders the same API snapshot, preserves negative
+  releases, and has no third-party runtime assets. Local browser inspection passed at 1280×720 and
+  390×844, including Austin Tier-D details, a withheld-recommendation scenario, mobile navigation,
+  zero horizontal overflow, and zero browser warnings/errors.
+- 800 automated tests pass. Coverage is 96.798% for statements, 89.401% for branches, and 95.369%
+  under coverage.py's combined line-and-branch measure; strict mypy, Ruff lint, Ruff format, web
+  JavaScript syntax, and whitespace-integrity checks pass locally.
+- A 229,951-byte wheel (`879e974d12e65380cb1d1e5c60161d6323ef4c3071e6fbba9ec335dd546c5843`)
+  passes ZIP integrity, installs with API dependencies in a fresh Python 3.12.13 environment,
+  imports from `site-packages`, runs CLI/API/SDK/plugin smoke tests, and exactly rebuilds all 35
+  product files. It is current-worktree evidence, not a tagged or signed release.
 
 ## Implementing next
 
-- Read-only REST API, Python SDK, CLI, adapter/plugin SDK, and browser interface over the verified
-  Tier-G, Tier-S, Tier-D, benchmark, and DecisionPack artifacts.
+- Expand twelve explicit Tier-D designs toward 240 non-duplicative scenarios, with independent
+  scenario intent, evidence requirements, negative gates, and execution evidence.
 - Broader connector registry, licensing metadata, paging, caching, and 25–35 source families.
 - Normalized network and policy semantics on top of the verified geography, time, measure,
   observation, facility, event, and graph contracts.
@@ -114,5 +139,6 @@ interface while preserving every evidence and negative-release gate.
   performance. Tier-D action effects, costs, capacities, and risks remain hypothetical.
 - The full 240 non-duplicative scenario target. The historical replay and optimization-task
   minimums are complete, and the twelve Tier-D templates are counted once rather than 96 times.
-- Web/API/SDK ecosystem and public hosted demo.
+- Public hosted demo, production authentication/authorization, independent accessibility and
+  penetration testing, signed release artifacts, and remote-CI verification.
 - External review, real users, municipal adoption, or real-world impact.

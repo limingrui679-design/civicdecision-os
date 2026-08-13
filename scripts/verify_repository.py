@@ -42,6 +42,8 @@ from civicdecision.demos.heat_access import (
 )
 from civicdecision.io import validate_document
 from civicdecision.optimization.portfolio import PortfolioOptimizationRun
+from civicdecision.product.build import ProductArtifactManifest, build_product_artifacts
+from civicdecision.product.store import ArtifactStore
 from civicdecision.protocols.base import StrictModel, sha256_file
 from civicdecision.protocols.city import CityAdapterManifest
 from civicdecision.protocols.decision import DecisionPack
@@ -415,6 +417,28 @@ def verify_repository() -> dict[str, object]:
     if len(tier_d_metric_rows) != sum(len(item.metrics) for item in tier_d_bundles):
         raise RuntimeError("Tier-D metric ledger does not cover every embedded metric")
 
+    product_dir = ROOT / "catalog/product"
+    verify_checksum(product_dir)
+    product_manifest = validate_document(
+        product_dir / "artifact-manifest.json", ProductArtifactManifest
+    )
+    product_store = ArtifactStore(ROOT, verify_sources=True)
+    if product_manifest.catalog_fingerprint != product_store.catalog_fingerprint:
+        raise RuntimeError("product manifest catalog fingerprint differs from validated store")
+    if product_manifest.artifact_count != len(product_manifest.artifacts):
+        raise RuntimeError("product artifact manifest count does not reconcile")
+    for product_entry in product_manifest.artifacts:
+        product_path = safe_relative_artifact(product_dir, product_entry.path)
+        if (
+            product_path.stat().st_size != product_entry.byte_count
+            or sha256_file(product_path) != product_entry.content_hash
+        ):
+            raise RuntimeError(f"product artifact entry mismatch: {product_entry.path}")
+    product_openapi = json.loads((product_dir / "openapi-v1.json").read_text(encoding="utf-8"))
+    product_api_paths = product_openapi.get("paths")
+    if not isinstance(product_api_paths, dict) or len(product_api_paths) < 12:
+        raise RuntimeError("product OpenAPI document does not expose the required surface")
+
     cdc_dir = ROOT / "examples/data/cdc-places"
     data = cdc_dir / "cdc-places-7ccf6e7d6dc3.json"
     cdc_manifest_path = cdc_dir / "cdc-places-7ccf6e7d6dc3.manifest.json"
@@ -490,6 +514,9 @@ def verify_repository() -> dict[str, object]:
             rebuilt_tier_d_dir,
         )
         assert_tree_same(deep_dir, rebuilt_tier_d_dir)
+        rebuilt_product_dir = temporary_root / "product"
+        build_product_artifacts(ROOT, rebuilt_product_dir)
+        assert_tree_same(product_dir, rebuilt_product_dir)
 
     statuses = Counter(pack.status.value for pack in packs)
     connector_families = Counter(item.family.value for item in CONNECTOR_REGISTRY)
@@ -570,6 +597,19 @@ def verify_repository() -> dict[str, object]:
         "rebuilt_reference_hashes": sorted(rebuilt_hashes),
         "rebuilds_exactly_matched": len(rebuilt_hashes),
         "scenario_documents": len(scenario_paths),
+        "product_artifacts": len(product_manifest.artifacts) + 2,
+        "product_catalog_fingerprint": product_manifest.catalog_fingerprint,
+        "product_checksum_entries": len(
+            (product_dir / "SHA256SUMS").read_text(encoding="ascii").splitlines()
+        ),
+        "product_exactly_rebuilt": True,
+        "product_openapi_paths": len(product_api_paths),
+        "product_schema_artifacts": sum(
+            item.path.startswith("schemas/") for item in product_manifest.artifacts
+        ),
+        "product_web_assets": len(
+            json.loads((product_dir / "web-assets.json").read_text(encoding="utf-8"))["assets"]
+        ),
         "source_manifest_records": sum(item.record_count for item in manifests),
         "source_manifests": len(manifests),
         "source_attributions": len({item.source_id for item in manifests}),

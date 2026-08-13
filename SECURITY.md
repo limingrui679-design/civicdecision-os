@@ -19,6 +19,19 @@ safe. Production deployments must add network egress controls, authenticated sto
 logging, rate limiting, dependency scanning, secrets management, and jurisdiction-specific
 privacy review.
 
+The local REST service is read-only and defaults to loopback. A non-loopback bind requires an
+explicit acknowledgement, but that flag does not provide TLS, authentication, authorization,
+quotas, reverse-proxy isolation, or deployment approval. The browser explorer uses same-origin
+packaged assets and a restrictive Content Security Policy; these controls are defense in depth,
+not a penetration-test result.
+
+Version-1 adapter plugins are data-only. Validation requires an exact plugin-ID allowlist, exact
+file inventory, normalized contained paths, regular files, bounded sizes, content hashes, stable
+City Adapter contracts, unique city IDs, and no default enablement. The runtime does not discover,
+import, execute, or automatically merge plugin code. Any future executable plugin design requires
+a separately reviewed signature, provenance, permission, sandbox, resource-limit, revocation, and
+audit-log protocol.
+
 The current public samples contain public aggregate records. The repository does not claim
 authorization for protected health information, personal data, confidential government data,
 or client data.

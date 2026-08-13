@@ -1,0 +1,81 @@
+{
+  "schema_version": "1.0.0",
+  "checked_at": "2026-08-13",
+  "target": "http://127.0.0.1:8765/",
+  "inspection_mode": "local in-app browser",
+  "catalog_fingerprint": "sha256:c44212b9fa9f2f7796a9e209a7fe20826aaa3dcdcef682ad58d4e32209a8aa68",
+  "checks": [
+    {
+      "id": "browser.desktop.render",
+      "status": "passed",
+      "viewport": {
+        "width": 1280,
+        "height": 720,
+        "document_scroll_width": 1280,
+        "document_client_width": 1280
+      },
+      "observed": "The evidence explorer rendered its catalog headline, navigation, tier controls, city browser, scenario ledger, source inventory, benchmark summary, and claim boundaries."
+    },
+    {
+      "id": "browser.desktop.catalog",
+      "status": "passed",
+      "observed": {
+        "distinct_city_records": 258,
+        "tier_assignments": 288,
+        "source_artifacts": 90,
+        "standard_screens": 90,
+        "deep_executions": 96,
+        "benchmark_artifacts": 145
+      }
+    },
+    {
+      "id": "browser.city.deep-detail",
+      "status": "passed",
+      "observed": {
+        "city_id": "us.tx.austin",
+        "tier": "D",
+        "scenario_work": 12,
+        "completed": 10,
+        "negative": 2,
+        "source_artifacts": 7,
+        "quality_status": "warn"
+      }
+    },
+    {
+      "id": "browser.scenario.negative-release",
+      "status": "passed",
+      "observed": {
+        "execution_id": "tierd.us.tx.austin.11",
+        "title": "Causal service-effectiveness gate",
+        "status": "insufficient-evidence",
+        "recommendation_issued": false,
+        "selected_option": null,
+        "claim_boundary_visible": true,
+        "limitations_visible": true,
+        "artifact_hashes_visible": true
+      }
+    },
+    {
+      "id": "browser.mobile.layout",
+      "status": "passed",
+      "viewport": {
+        "width": 390,
+        "height": 844,
+        "document_scroll_width": 390,
+        "document_client_width": 390,
+        "horizontal_overflow": false
+      },
+      "observed": "The dedicated navigation control opened the mobile menu and changed aria-expanded from false to true."
+    },
+    {
+      "id": "browser.runtime.logs",
+      "status": "passed",
+      "errors_or_warnings": []
+    }
+  ],
+  "boundary": [
+    "This is a local functional and responsive inspection, not evidence of public availability.",
+    "It is not a formal accessibility certification, cross-browser matrix, performance audit, or penetration test.",
+    "Rendering an artifact does not establish external validation, deployment, adoption, users, or policy impact."
+  ]
+}

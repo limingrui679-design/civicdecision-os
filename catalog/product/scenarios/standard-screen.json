@@ -1,0 +1,2378 @@
+{
+  "claim_boundary": "Negative releases and withheld recommendations remain first-class records.",
+  "items": [
+    {
+      "analysis_modes": [
+        "descriptive"
+      ],
+      "artifact_count": 1,
+      "city_id": "geonames.2293538",
+      "city_name": "Abidjan",
+      "content_hash": "sha256:bbeb862866cd526d5856339384e2dbf72e0e04d390491656b3f295f1bbdf967f",
+      "evidence_types": [
+        "estimated"
+      ],
+      "execution_id": "geonames.2293538.screen.heat.2024",
+      "kind": "standard-screen",
+      "limitations": [
+        "This is a standardized descriptive screen, not a forecast, causal result, simulation, optimization, or recommendation.",
+        "No municipal boundary, population exposure surface, asset inventory, service network, or local policy constraint is present."
+      ],
+      "readiness": "descriptive-only",
+      "recommendation_issued": false,
+      "scenario_id": "geonames.2293538.heat-screen.v1",
+      "source_count": 4,
+      "status": "screened",
+      "suite": "standardized-screening",
+      "template_id": "standard.heat-screen.v1",
+      "title": "Abidjan 2024 heat-context descriptive screen"
+    },
+    {
+      "analysis_modes": [
+        "descriptive"
+      ],
+      "artifact_count": 1,
+      "city_id": "geonames.2293538",
+      "city_name": "Abidjan",
+      "content_hash": "sha256:677a75900384cebef386b6a798b1d8e3e94f4b5c556893856b58ef4f46214428",
+      "evidence_types": [
+        "estimated"
+      ],
+      "execution_id": "geonames.2293538.screen.policy-readiness.2024",
+      "kind": "standard-screen",
+      "limitations": [
+        "This is a standardized descriptive screen, not a forecast, causal result, simulation, optimization, or recommendation.",
+        "No municipal boundary, population exposure surface, asset inventory, service network, or local policy constraint is present.",
+        "Country GDP per capita is not a city budget, cost, income, or fiscal-capacity measure."
+      ],
+      "readiness": "insufficient-evidence",
+      "recommendation_issued": false,
+      "scenario_id": "geonames.2293538.policy-readiness.v1",
+      "source_count": 4,
+      "status": "insufficient-evidence",
+      "suite": "standardized-screening",
+      "template_id": "standard.policy-readiness.v1",
+      "title": "Abidjan intervention-readiness evidence gate"
+    },
+    {
+      "analysis_modes": [
+        "descriptive"
+      ],
+      "artifact_count": 1,
+      "city_id": "geonames.2293538",
+      "city_name": "Abidjan",
+      "content_hash": "sha256:07514a62e9fe108b0ecf32b5bf5b7b86d2ea7cfddc84a812edbe29e936526321",
+      "evidence_types": [
+        "estimated"
+      ],
+      "execution_id": "geonames.2293538.screen.precipitation.2024",
+      "kind": "standard-screen",
+      "limitations": [
+        "This is a standardized descriptive screen, not a forecast, causal result, simulation, optimization, or recommendation.",
+        "No municipal boundary, population exposure surface, asset inventory, service network, or local policy constraint is present."
+      ],
+      "readiness": "descriptive-only",
+      "recommendation_issued": false,
+      "scenario_id": "geonames.2293538.precipitation-screen.v1",
+      "source_count": 4,
+      "status": "screened",
+      "suite": "standardized-screening",
+      "template_id": "standard.precipitation-screen.v1",
+      "title": "Abidjan 2024 precipitation-context descriptive screen"
+    },
+    {
+      "analysis_modes": [
+        "descriptive"
+      ],
+      "artifact_count": 1,
+      "city_id": "geonames.98182",
+      "city_name": "Baghdad",
+      "content_hash": "sha256:06608a88c33acc1a479f3a845d3388767f7ea45ac641bd5e63a1048a5cca2b17",
+      "evidence_types": [
+        "estimated"
+      ],
+      "execution_id": "geonames.98182.screen.heat.2024",
+      "kind": "standard-screen",
+      "limitations": [
+        "This is a standardized descriptive screen, not a forecast, causal result, simulation, optimization, or recommendation.",
+        "No municipal boundary, population exposure surface, asset inventory, service network, or local policy constraint is present."
+      ],
+      "readiness": "descriptive-only",
+      "recommendation_issued": false,
+      "scenario_id": "geonames.98182.heat-screen.v1",
+      "source_count": 4,
+      "status": "screened",
+      "suite": "standardized-screening",
+      "template_id": "standard.heat-screen.v1",
+      "title": "Baghdad 2024 heat-context descriptive screen"
+    },
+    {
+      "analysis_modes": [
+        "descriptive"
+      ],
+      "artifact_count": 1,
+      "city_id": "geonames.98182",
+      "city_name": "Baghdad",
+      "content_hash": "sha256:f11104d6d613261b3c4c50203b1e265d1a520d2509c1241393e45a9f2b565838",
+      "evidence_types": [
+        "estimated"
+      ],
+      "execution_id": "geonames.98182.screen.policy-readiness.2024",
+      "kind": "standard-screen",
+      "limitations": [
+        "This is a standardized descriptive screen, not a forecast, causal result, simulation, optimization, or recommendation.",
+        "No municipal boundary, population exposure surface, asset inventory, service network, or local policy constraint is present.",
+        "Country GDP per capita is not a city budget, cost, income, or fiscal-capacity measure."
+      ],
+      "readiness": "insufficient-evidence",
+      "recommendation_issued": false,
+      "scenario_id": "geonames.98182.policy-readiness.v1",
+      "source_count": 4,
+      "status": "insufficient-evidence",
+      "suite": "standardized-screening",
+      "template_id": "standard.policy-readiness.v1",
+      "title": "Baghdad intervention-readiness evidence gate"
+    },
+    {
+      "analysis_modes": [
+        "descriptive"
+      ],
+      "artifact_count": 1,
+      "city_id": "geonames.98182",
+      "city_name": "Baghdad",
+      "content_hash": "sha256:c594f6d5b7a3fb918527ad09dba3e28ec3379bc894ac1b1997a87a659cd043ea",
+      "evidence_types": [
+        "estimated"
+      ],
+      "execution_id": "geonames.98182.screen.precipitation.2024",
+      "kind": "standard-screen",
+      "limitations": [
+        "This is a standardized descriptive screen, not a forecast, causal result, simulation, optimization, or recommendation.",
+        "No municipal boundary, population exposure surface, asset inventory, service network, or local policy constraint is present."
+      ],
+      "readiness": "descriptive-only",
+      "recommendation_issued": false,
+      "scenario_id": "geonames.98182.precipitation-screen.v1",
+      "source_count": 4,
+      "status": "screened",
+      "suite": "standardized-screening",
+      "template_id": "standard.precipitation-screen.v1",
+      "title": "Baghdad 2024 precipitation-context descriptive screen"
+    },
+    {
+      "analysis_modes": [
+        "descriptive"
+      ],
+      "artifact_count": 1,
+      "city_id": "geonames.1609350",
+      "city_name": "Bangkok",
+      "content_hash": "sha256:298321a7dda719fbfcedc8512f557a84b9c8bed7de38de9a2e6e81bc63ce2d85",
+      "evidence_types": [
+        "estimated"
+      ],
+      "execution_id": "geonames.1609350.screen.heat.2024",
+      "kind": "standard-screen",
+      "limitations": [
+        "This is a standardized descriptive screen, not a forecast, causal result, simulation, optimization, or recommendation.",
+        "No municipal boundary, population exposure surface, asset inventory, service network, or local policy constraint is present."
+      ],
+      "readiness": "descriptive-only",
+      "recommendation_issued": false,
+      "scenario_id": "geonames.1609350.heat-screen.v1",
+      "source_count": 4,
+      "status": "screened",
+      "suite": "standardized-screening",
+      "template_id": "standard.heat-screen.v1",
+      "title": "Bangkok 2024 heat-context descriptive screen"
+    },
+    {
+      "analysis_modes": [
+        "descriptive"
+      ],
+      "artifact_count": 1,
+      "city_id": "geonames.1609350",
+      "city_name": "Bangkok",
+      "content_hash": "sha256:718b0c1d847aace32f3c2644a75dc99d8951b3fa90357247b6c1fc6bc76f9675",
+      "evidence_types": [
+        "estimated"
+      ],
+      "execution_id": "geonames.1609350.screen.policy-readiness.2024",
+      "kind": "standard-screen",
+      "limitations": [
+        "This is a standardized descriptive screen, not a forecast, causal result, simulation, optimization, or recommendation.",
+        "No municipal boundary, population exposure surface, asset inventory, service network, or local policy constraint is present.",
+        "Country GDP per capita is not a city budget, cost, income, or fiscal-capacity measure."
+      ],
+      "readiness": "insufficient-evidence",
+      "recommendation_issued": false,
+      "scenario_id": "geonames.1609350.policy-readiness.v1",
+      "source_count": 4,
+      "status": "insufficient-evidence",
+      "suite": "standardized-screening",
+      "template_id": "standard.policy-readiness.v1",
+      "title": "Bangkok intervention-readiness evidence gate"
+    },
+    {
+      "analysis_modes": [
+        "descriptive"
+      ],
+      "artifact_count": 1,
+      "city_id": "geonames.1609350",
+      "city_name": "Bangkok",
+      "content_hash": "sha256:ed1fad82d9c63b45ee1d8ec2cb3c04b0d120e73e65cc2ccd22e2ce78bcb58e6a",
+      "evidence_types": [
+        "estimated"
+      ],
+      "execution_id": "geonames.1609350.screen.precipitation.2024",
+      "kind": "standard-screen",
+      "limitations": [
+        "This is a standardized descriptive screen, not a forecast, causal result, simulation, optimization, or recommendation.",
+        "No municipal boundary, population exposure surface, asset inventory, service network, or local policy constraint is present."
+      ],
+      "readiness": "descriptive-only",
+      "recommendation_issued": false,
+      "scenario_id": "geonames.1609350.precipitation-screen.v1",
+      "source_count": 4,
+      "status": "screened",
+      "suite": "standardized-screening",
+      "template_id": "standard.precipitation-screen.v1",
+      "title": "Bangkok 2024 precipitation-context descriptive screen"
+    },
+    {
+      "analysis_modes": [
+        "descriptive"
+      ],
+      "artifact_count": 1,
+      "city_id": "geonames.3688689",
+      "city_name": "Bogotá",
+      "content_hash": "sha256:6a13d69cc5b0e00da0cebc43660d20ad995736788cd31a7d2607790b515e2195",
+      "evidence_types": [
+        "estimated"
+      ],
+      "execution_id": "geonames.3688689.screen.heat.2024",
+      "kind": "standard-screen",
+      "limitations": [
+        "This is a standardized descriptive screen, not a forecast, causal result, simulation, optimization, or recommendation.",
+        "No municipal boundary, population exposure surface, asset inventory, service network, or local policy constraint is present."
+      ],
+      "readiness": "descriptive-only",
+      "recommendation_issued": false,
+      "scenario_id": "geonames.3688689.heat-screen.v1",
+      "source_count": 4,
+      "status": "screened",
+      "suite": "standardized-screening",
+      "template_id": "standard.heat-screen.v1",
+      "title": "Bogotá 2024 heat-context descriptive screen"
+    },
+    {
+      "analysis_modes": [
+        "descriptive"
+      ],
+      "artifact_count": 1,
+      "city_id": "geonames.3688689",
+      "city_name": "Bogotá",
+      "content_hash": "sha256:e2dc9f7be734edff15f282ff55c4d31171955aaa6b2902cbd5d18e388aae5fb5",
+      "evidence_types": [
+        "estimated"
+      ],
+      "execution_id": "geonames.3688689.screen.policy-readiness.2024",
+      "kind": "standard-screen",
+      "limitations": [
+        "This is a standardized descriptive screen, not a forecast, causal result, simulation, optimization, or recommendation.",
+        "No municipal boundary, population exposure surface, asset inventory, service network, or local policy constraint is present.",
+        "Country GDP per capita is not a city budget, cost, income, or fiscal-capacity measure."
+      ],
+      "readiness": "insufficient-evidence",
+      "recommendation_issued": false,
+      "scenario_id": "geonames.3688689.policy-readiness.v1",
+      "source_count": 4,
+      "status": "insufficient-evidence",
+      "suite": "standardized-screening",
+      "template_id": "standard.policy-readiness.v1",
+      "title": "Bogotá intervention-readiness evidence gate"
+    },
+    {
+      "analysis_modes": [
+        "descriptive"
+      ],
+      "artifact_count": 1,
+      "city_id": "geonames.3688689",
+      "city_name": "Bogotá",
+      "content_hash": "sha256:8f7d54933cd8895dd3cee2c85d038e610e3f0842d4636884e700fe8fb10dd4cf",
+      "evidence_types": [
+        "estimated"
+      ],
+      "execution_id": "geonames.3688689.screen.precipitation.2024",
+      "kind": "standard-screen",
+      "limitations": [
+        "This is a standardized descriptive screen, not a forecast, causal result, simulation, optimization, or recommendation.",
+        "No municipal boundary, population exposure surface, asset inventory, service network, or local policy constraint is present."
+      ],
+      "readiness": "descriptive-only",
+      "recommendation_issued": false,
+      "scenario_id": "geonames.3688689.precipitation-screen.v1",
+      "source_count": 4,
+      "status": "screened",
+      "suite": "standardized-screening",
+      "template_id": "standard.precipitation-screen.v1",
+      "title": "Bogotá 2024 precipitation-context descriptive screen"
+    },
+    {
+      "analysis_modes": [
+        "descriptive"
+      ],
+      "artifact_count": 1,
+      "city_id": "geonames.360630",
+      "city_name": "Cairo",
+      "content_hash": "sha256:b8f286ab53c39cfc2070ceab343a4f409970563fe999361c0c35451882d06b95",
+      "evidence_types": [
+        "estimated"
+      ],
+      "execution_id": "geonames.360630.screen.heat.2024",
+      "kind": "standard-screen",
+      "limitations": [
+        "This is a standardized descriptive screen, not a forecast, causal result, simulation, optimization, or recommendation.",
+        "No municipal boundary, population exposure surface, asset inventory, service network, or local policy constraint is present."
+      ],
+      "readiness": "descriptive-only",
+      "recommendation_issued": false,
+      "scenario_id": "geonames.360630.heat-screen.v1",
+      "source_count": 4,
+      "status": "screened",
+      "suite": "standardized-screening",
+      "template_id": "standard.heat-screen.v1",
+      "title": "Cairo 2024 heat-context descriptive screen"
+    },
+    {
+      "analysis_modes": [
+        "descriptive"
+      ],
+      "artifact_count": 1,
+      "city_id": "geonames.360630",
+      "city_name": "Cairo",
+      "content_hash": "sha256:68ee2e1a686819622b5f7c5bae89784f820977a865c867fd75c4a79b2f86fc68",
+      "evidence_types": [
+        "estimated"
+      ],
+      "execution_id": "geonames.360630.screen.policy-readiness.2024",
+      "kind": "standard-screen",
+      "limitations": [
+        "This is a standardized descriptive screen, not a forecast, causal result, simulation, optimization, or recommendation.",
+        "No municipal boundary, population exposure surface, asset inventory, service network, or local policy constraint is present.",
+        "Country GDP per capita is not a city budget, cost, income, or fiscal-capacity measure."
+      ],
+      "readiness": "insufficient-evidence",
+      "recommendation_issued": false,
+      "scenario_id": "geonames.360630.policy-readiness.v1",
+      "source_count": 4,
+      "status": "insufficient-evidence",
+      "suite": "standardized-screening",
+      "template_id": "standard.policy-readiness.v1",
+      "title": "Cairo intervention-readiness evidence gate"
+    },
+    {
+      "analysis_modes": [
+        "descriptive"
+      ],
+      "artifact_count": 1,
+      "city_id": "geonames.360630",
+      "city_name": "Cairo",
+      "content_hash": "sha256:375ca5a73727d246a3a9e53e9a98d0afabd9e32d5570cac96945a894d382263d",
+      "evidence_types": [
+        "estimated"
+      ],
+      "execution_id": "geonames.360630.screen.precipitation.2024",
+      "kind": "standard-screen",
+      "limitations": [
+        "This is a standardized descriptive screen, not a forecast, causal result, simulation, optimization, or recommendation.",
+        "No municipal boundary, population exposure surface, asset inventory, service network, or local policy constraint is present."
+      ],
+      "readiness": "descriptive-only",
+      "recommendation_issued": false,
+      "scenario_id": "geonames.360630.precipitation-screen.v1",
+      "source_count": 4,
+      "status": "screened",
+      "suite": "standardized-screening",
+      "template_id": "standard.precipitation-screen.v1",
+      "title": "Cairo 2024 precipitation-context descriptive screen"
+    },
+    {
+      "analysis_modes": [
+        "descriptive"
+      ],
+      "artifact_count": 1,
+      "city_id": "geonames.160263",
+      "city_name": "Dar es Salaam",
+      "content_hash": "sha256:0b47c3bdcf5fb5917d21c3876bc69d3fa6536658580d64a237e77e22e6a166ec",
+      "evidence_types": [
+        "estimated"
+      ],
+      "execution_id": "geonames.160263.screen.heat.2024",
+      "kind": "standard-screen",
+      "limitations": [
+        "This is a standardized descriptive screen, not a forecast, causal result, simulation, optimization, or recommendation.",
+        "No municipal boundary, population exposure surface, asset inventory, service network, or local policy constraint is present."
+      ],
+      "readiness": "descriptive-only",
+      "recommendation_issued": false,
+      "scenario_id": "geonames.160263.heat-screen.v1",
+      "source_count": 4,
+      "status": "screened",
+      "suite": "standardized-screening",
+      "template_id": "standard.heat-screen.v1",
+      "title": "Dar es Salaam 2024 heat-context descriptive screen"
+    },
+    {
+      "analysis_modes": [
+        "descriptive"
+      ],
+      "artifact_count": 1,
+      "city_id": "geonames.160263",
+      "city_name": "Dar es Salaam",
+      "content_hash": "sha256:fd896373a8264aa32e77dcc4e0e4d4a450f9aee99f29593b3d542a1a94fa9ab3",
+      "evidence_types": [
+        "estimated"
+      ],
+      "execution_id": "geonames.160263.screen.policy-readiness.2024",
+      "kind": "standard-screen",
+      "limitations": [
+        "This is a standardized descriptive screen, not a forecast, causal result, simulation, optimization, or recommendation.",
+        "No municipal boundary, population exposure surface, asset inventory, service network, or local policy constraint is present.",
+        "Country GDP per capita is not a city budget, cost, income, or fiscal-capacity measure."
+      ],
+      "readiness": "insufficient-evidence",
+      "recommendation_issued": false,
+      "scenario_id": "geonames.160263.policy-readiness.v1",
+      "source_count": 4,
+      "status": "insufficient-evidence",
+      "suite": "standardized-screening",
+      "template_id": "standard.policy-readiness.v1",
+      "title": "Dar es Salaam intervention-readiness evidence gate"
+    },
+    {
+      "analysis_modes": [
+        "descriptive"
+      ],
+      "artifact_count": 1,
+      "city_id": "geonames.160263",
+      "city_name": "Dar es Salaam",
+      "content_hash": "sha256:cce3879a39e02db0f92ae191807f8ceb4c8e63239d28d593f8f079e368fd1112",
+      "evidence_types": [
+        "estimated"
+      ],
+      "execution_id": "geonames.160263.screen.precipitation.2024",
+      "kind": "standard-screen",
+      "limitations": [
+        "This is a standardized descriptive screen, not a forecast, causal result, simulation, optimization, or recommendation.",
+        "No municipal boundary, population exposure surface, asset inventory, service network, or local policy constraint is present."
+      ],
+      "readiness": "descriptive-only",
+      "recommendation_issued": false,
+      "scenario_id": "geonames.160263.precipitation-screen.v1",
+      "source_count": 4,
+      "status": "screened",
+      "suite": "standardized-screening",
+      "template_id": "standard.precipitation-screen.v1",
+      "title": "Dar es Salaam 2024 precipitation-context descriptive screen"
+    },
+    {
+      "analysis_modes": [
+        "descriptive"
+      ],
+      "artifact_count": 1,
+      "city_id": "geonames.1185241",
+      "city_name": "Dhaka",
+      "content_hash": "sha256:cd92689dcb8783ac51b9b1b03b61bbbc2dc96529afa9b5730b44c650a4b3dacf",
+      "evidence_types": [
+        "estimated"
+      ],
+      "execution_id": "geonames.1185241.screen.heat.2024",
+      "kind": "standard-screen",
+      "limitations": [
+        "This is a standardized descriptive screen, not a forecast, causal result, simulation, optimization, or recommendation.",
+        "No municipal boundary, population exposure surface, asset inventory, service network, or local policy constraint is present."
+      ],
+      "readiness": "descriptive-only",
+      "recommendation_issued": false,
+      "scenario_id": "geonames.1185241.heat-screen.v1",
+      "source_count": 4,
+      "status": "screened",
+      "suite": "standardized-screening",
+      "template_id": "standard.heat-screen.v1",
+      "title": "Dhaka 2024 heat-context descriptive screen"
+    },
+    {
+      "analysis_modes": [
+        "descriptive"
+      ],
+      "artifact_count": 1,
+      "city_id": "geonames.1185241",
+      "city_name": "Dhaka",
+      "content_hash": "sha256:84539bea76b988339413482533513a3d36bdc2ac656266e1f2c2fa218c8f07b0",
+      "evidence_types": [
+        "estimated"
+      ],
+      "execution_id": "geonames.1185241.screen.policy-readiness.2024",
+      "kind": "standard-screen",
+      "limitations": [
+        "This is a standardized descriptive screen, not a forecast, causal result, simulation, optimization, or recommendation.",
+        "No municipal boundary, population exposure surface, asset inventory, service network, or local policy constraint is present.",
+        "Country GDP per capita is not a city budget, cost, income, or fiscal-capacity measure."
+      ],
+      "readiness": "insufficient-evidence",
+      "recommendation_issued": false,
+      "scenario_id": "geonames.1185241.policy-readiness.v1",
+      "source_count": 4,
+      "status": "insufficient-evidence",
+      "suite": "standardized-screening",
+      "template_id": "standard.policy-readiness.v1",
+      "title": "Dhaka intervention-readiness evidence gate"
+    },
+    {
+      "analysis_modes": [
+        "descriptive"
+      ],
+      "artifact_count": 1,
+      "city_id": "geonames.1185241",
+      "city_name": "Dhaka",
+      "content_hash": "sha256:3dc2aaf96f431d47ce856ac171f0175101937e6ea68d7ec477289e3e47f6e280",
+      "evidence_types": [
+        "estimated"
+      ],
+      "execution_id": "geonames.1185241.screen.precipitation.2024",
+      "kind": "standard-screen",
+      "limitations": [
+        "This is a standardized descriptive screen, not a forecast, causal result, simulation, optimization, or recommendation.",
+        "No municipal boundary, population exposure surface, asset inventory, service network, or local policy constraint is present."
+      ],
+      "readiness": "descriptive-only",
+      "recommendation_issued": false,
+      "scenario_id": "geonames.1185241.precipitation-screen.v1",
+      "source_count": 4,
+      "status": "screened",
+      "suite": "standardized-screening",
+      "template_id": "standard.precipitation-screen.v1",
+      "title": "Dhaka 2024 precipitation-context descriptive screen"
+    },
+    {
+      "analysis_modes": [
+        "descriptive"
+      ],
+      "artifact_count": 1,
+      "city_id": "geonames.1566083",
+      "city_name": "Ho Chi Minh City",
+      "content_hash": "sha256:3400dbbad6857b97b34a6d7c5bb127ef1230076a926776b79d042257ae98207d",
+      "evidence_types": [
+        "estimated"
+      ],
+      "execution_id": "geonames.1566083.screen.heat.2024",
+      "kind": "standard-screen",
+      "limitations": [
+        "This is a standardized descriptive screen, not a forecast, causal result, simulation, optimization, or recommendation.",
+        "No municipal boundary, population exposure surface, asset inventory, service network, or local policy constraint is present."
+      ],
+      "readiness": "descriptive-only",
+      "recommendation_issued": false,
+      "scenario_id": "geonames.1566083.heat-screen.v1",
+      "source_count": 4,
+      "status": "screened",
+      "suite": "standardized-screening",
+      "template_id": "standard.heat-screen.v1",
+      "title": "Ho Chi Minh City 2024 heat-context descriptive screen"
+    },
+    {
+      "analysis_modes": [
+        "descriptive"
+      ],
+      "artifact_count": 1,
+      "city_id": "geonames.1566083",
+      "city_name": "Ho Chi Minh City",
+      "content_hash": "sha256:5224555aedf8f8c02af232547e193c949314b56f8d40a032fdb101dbf4fb6504",
+      "evidence_types": [
+        "estimated"
+      ],
+      "execution_id": "geonames.1566083.screen.policy-readiness.2024",
+      "kind": "standard-screen",
+      "limitations": [
+        "This is a standardized descriptive screen, not a forecast, causal result, simulation, optimization, or recommendation.",
+        "No municipal boundary, population exposure surface, asset inventory, service network, or local policy constraint is present.",
+        "Country GDP per capita is not a city budget, cost, income, or fiscal-capacity measure."
+      ],
+      "readiness": "insufficient-evidence",
+      "recommendation_issued": false,
+      "scenario_id": "geonames.1566083.policy-readiness.v1",
+      "source_count": 4,
+      "status": "insufficient-evidence",
+      "suite": "standardized-screening",
+      "template_id": "standard.policy-readiness.v1",
+      "title": "Ho Chi Minh City intervention-readiness evidence gate"
+    },
+    {
+      "analysis_modes": [
+        "descriptive"
+      ],
+      "artifact_count": 1,
+      "city_id": "geonames.1566083",
+      "city_name": "Ho Chi Minh City",
+      "content_hash": "sha256:e917b945a0144e537b55e00b953cf120393fd4e423649fb2f2e46094ce2162c5",
+      "evidence_types": [
+        "estimated"
+      ],
+      "execution_id": "geonames.1566083.screen.precipitation.2024",
+      "kind": "standard-screen",
+      "limitations": [
+        "This is a standardized descriptive screen, not a forecast, causal result, simulation, optimization, or recommendation.",
+        "No municipal boundary, population exposure surface, asset inventory, service network, or local policy constraint is present."
+      ],
+      "readiness": "descriptive-only",
+      "recommendation_issued": false,
+      "scenario_id": "geonames.1566083.precipitation-screen.v1",
+      "source_count": 4,
+      "status": "screened",
+      "suite": "standardized-screening",
+      "template_id": "standard.precipitation-screen.v1",
+      "title": "Ho Chi Minh City 2024 precipitation-context descriptive screen"
+    },
+    {
+      "analysis_modes": [
+        "descriptive"
+      ],
+      "artifact_count": 1,
+      "city_id": "geonames.1819729",
+      "city_name": "Hong Kong",
+      "content_hash": "sha256:5f8edc26bf5e95b8a0531f5b260b2953116f1ef9dce3a07456a1ff86bfbb0777",
+      "evidence_types": [
+        "estimated"
+      ],
+      "execution_id": "geonames.1819729.screen.heat.2024",
+      "kind": "standard-screen",
+      "limitations": [
+        "This is a standardized descriptive screen, not a forecast, causal result, simulation, optimization, or recommendation.",
+        "No municipal boundary, population exposure surface, asset inventory, service network, or local policy constraint is present."
+      ],
+      "readiness": "descriptive-only",
+      "recommendation_issued": false,
+      "scenario_id": "geonames.1819729.heat-screen.v1",
+      "source_count": 4,
+      "status": "screened",
+      "suite": "standardized-screening",
+      "template_id": "standard.heat-screen.v1",
+      "title": "Hong Kong 2024 heat-context descriptive screen"
+    },
+    {
+      "analysis_modes": [
+        "descriptive"
+      ],
+      "artifact_count": 1,
+      "city_id": "geonames.1819729",
+      "city_name": "Hong Kong",
+      "content_hash": "sha256:8f2de49c0046d733ffc2178800ee0291de0995364a07955df3e08fd79bcd4244",
+      "evidence_types": [
+        "estimated"
+      ],
+      "execution_id": "geonames.1819729.screen.policy-readiness.2024",
+      "kind": "standard-screen",
+      "limitations": [
+        "This is a standardized descriptive screen, not a forecast, causal result, simulation, optimization, or recommendation.",
+        "No municipal boundary, population exposure surface, asset inventory, service network, or local policy constraint is present.",
+        "Country GDP per capita is not a city budget, cost, income, or fiscal-capacity measure."
+      ],
+      "readiness": "insufficient-evidence",
+      "recommendation_issued": false,
+      "scenario_id": "geonames.1819729.policy-readiness.v1",
+      "source_count": 4,
+      "status": "insufficient-evidence",
+      "suite": "standardized-screening",
+      "template_id": "standard.policy-readiness.v1",
+      "title": "Hong Kong intervention-readiness evidence gate"
+    },
+    {
+      "analysis_modes": [
+        "descriptive"
+      ],
+      "artifact_count": 1,
+      "city_id": "geonames.1819729",
+      "city_name": "Hong Kong",
+      "content_hash": "sha256:6ffb2b804083d124cacb119cc598c97e1b1a43bc6369dfabfc147369816cee2c",
+      "evidence_types": [
+        "estimated"
+      ],
+      "execution_id": "geonames.1819729.screen.precipitation.2024",
+      "kind": "standard-screen",
+      "limitations": [
+        "This is a standardized descriptive screen, not a forecast, causal result, simulation, optimization, or recommendation.",
+        "No municipal boundary, population exposure surface, asset inventory, service network, or local policy constraint is present."
+      ],
+      "readiness": "descriptive-only",
+      "recommendation_issued": false,
+      "scenario_id": "geonames.1819729.precipitation-screen.v1",
+      "source_count": 4,
+      "status": "screened",
+      "suite": "standardized-screening",
+      "template_id": "standard.precipitation-screen.v1",
+      "title": "Hong Kong 2024 precipitation-context descriptive screen"
+    },
+    {
+      "analysis_modes": [
+        "descriptive"
+      ],
+      "artifact_count": 1,
+      "city_id": "geonames.745044",
+      "city_name": "Istanbul",
+      "content_hash": "sha256:b2323b27b913e755da51aaa85b5d5c8f1c57ca58b69a3b45172dee4d3f6c998f",
+      "evidence_types": [
+        "estimated"
+      ],
+      "execution_id": "geonames.745044.screen.heat.2024",
+      "kind": "standard-screen",
+      "limitations": [
+        "This is a standardized descriptive screen, not a forecast, causal result, simulation, optimization, or recommendation.",
+        "No municipal boundary, population exposure surface, asset inventory, service network, or local policy constraint is present."
+      ],
+      "readiness": "descriptive-only",
+      "recommendation_issued": false,
+      "scenario_id": "geonames.745044.heat-screen.v1",
+      "source_count": 4,
+      "status": "screened",
+      "suite": "standardized-screening",
+      "template_id": "standard.heat-screen.v1",
+      "title": "Istanbul 2024 heat-context descriptive screen"
+    },
+    {
+      "analysis_modes": [
+        "descriptive"
+      ],
+      "artifact_count": 1,
+      "city_id": "geonames.745044",
+      "city_name": "Istanbul",
+      "content_hash": "sha256:4d04d595fc68ee313f7cade12f0f3b46f2d2b3aa3260b2ce04918aa6875da400",
+      "evidence_types": [
+        "estimated"
+      ],
+      "execution_id": "geonames.745044.screen.policy-readiness.2024",
+      "kind": "standard-screen",
+      "limitations": [
+        "This is a standardized descriptive screen, not a forecast, causal result, simulation, optimization, or recommendation.",
+        "No municipal boundary, population exposure surface, asset inventory, service network, or local policy constraint is present.",
+        "Country GDP per capita is not a city budget, cost, income, or fiscal-capacity measure."
+      ],
+      "readiness": "insufficient-evidence",
+      "recommendation_issued": false,
+      "scenario_id": "geonames.745044.policy-readiness.v1",
+      "source_count": 4,
+      "status": "insufficient-evidence",
+      "suite": "standardized-screening",
+      "template_id": "standard.policy-readiness.v1",
+      "title": "Istanbul intervention-readiness evidence gate"
+    },
+    {
+      "analysis_modes": [
+        "descriptive"
+      ],
+      "artifact_count": 1,
+      "city_id": "geonames.745044",
+      "city_name": "Istanbul",
+      "content_hash": "sha256:e8c79aad5a4b85b91461fef296fb63ab0ea65f1a42ad057e6feddc6388996c8f",
+      "evidence_types": [
+        "estimated"
+      ],
+      "execution_id": "geonames.745044.screen.precipitation.2024",
+      "kind": "standard-screen",
+      "limitations": [
+        "This is a standardized descriptive screen, not a forecast, causal result, simulation, optimization, or recommendation.",
+        "No municipal boundary, population exposure surface, asset inventory, service network, or local policy constraint is present."
+      ],
+      "readiness": "descriptive-only",
+      "recommendation_issued": false,
+      "scenario_id": "geonames.745044.precipitation-screen.v1",
+      "source_count": 4,
+      "status": "screened",
+      "suite": "standardized-screening",
+      "template_id": "standard.precipitation-screen.v1",
+      "title": "Istanbul 2024 precipitation-context descriptive screen"
+    },
+    {
+      "analysis_modes": [
+        "descriptive"
+      ],
+      "artifact_count": 1,
+      "city_id": "geonames.1642911",
+      "city_name": "Jakarta",
+      "content_hash": "sha256:6aefaf58bee5d3c12d3ea0cc72ccd989be11240857a166e418df00cd2caeed68",
+      "evidence_types": [
+        "estimated"
+      ],
+      "execution_id": "geonames.1642911.screen.heat.2024",
+      "kind": "standard-screen",
+      "limitations": [
+        "This is a standardized descriptive screen, not a forecast, causal result, simulation, optimization, or recommendation.",
+        "No municipal boundary, population exposure surface, asset inventory, service network, or local policy constraint is present."
+      ],
+      "readiness": "descriptive-only",
+      "recommendation_issued": false,
+      "scenario_id": "geonames.1642911.heat-screen.v1",
+      "source_count": 4,
+      "status": "screened",
+      "suite": "standardized-screening",
+      "template_id": "standard.heat-screen.v1",
+      "title": "Jakarta 2024 heat-context descriptive screen"
+    },
+    {
+      "analysis_modes": [
+        "descriptive"
+      ],
+      "artifact_count": 1,
+      "city_id": "geonames.1642911",
+      "city_name": "Jakarta",
+      "content_hash": "sha256:61f08572532c276162df0b013c6ab129e5318623ef6cef823e0030dc5d33e0f6",
+      "evidence_types": [
+        "estimated"
+      ],
+      "execution_id": "geonames.1642911.screen.policy-readiness.2024",
+      "kind": "standard-screen",
+      "limitations": [
+        "This is a standardized descriptive screen, not a forecast, causal result, simulation, optimization, or recommendation.",
+        "No municipal boundary, population exposure surface, asset inventory, service network, or local policy constraint is present.",
+        "Country GDP per capita is not a city budget, cost, income, or fiscal-capacity measure."
+      ],
+      "readiness": "insufficient-evidence",
+      "recommendation_issued": false,
+      "scenario_id": "geonames.1642911.policy-readiness.v1",
+      "source_count": 4,
+      "status": "insufficient-evidence",
+      "suite": "standardized-screening",
+      "template_id": "standard.policy-readiness.v1",
+      "title": "Jakarta intervention-readiness evidence gate"
+    },
+    {
+      "analysis_modes": [
+        "descriptive"
+      ],
+      "artifact_count": 1,
+      "city_id": "geonames.1642911",
+      "city_name": "Jakarta",
+      "content_hash": "sha256:774845a7eeafa779b1c0ff422521dadb1123f5c5b37cdcc4a18f6101fa6d183d",
+      "evidence_types": [
+        "estimated"
+      ],
+      "execution_id": "geonames.1642911.screen.precipitation.2024",
+      "kind": "standard-screen",
+      "limitations": [
+        "This is a standardized descriptive screen, not a forecast, causal result, simulation, optimization, or recommendation.",
+        "No municipal boundary, population exposure surface, asset inventory, service network, or local policy constraint is present."
+      ],
+      "readiness": "descriptive-only",
+      "recommendation_issued": false,
+      "scenario_id": "geonames.1642911.precipitation-screen.v1",
+      "source_count": 4,
+      "status": "screened",
+      "suite": "standardized-screening",
+      "template_id": "standard.precipitation-screen.v1",
+      "title": "Jakarta 2024 precipitation-context descriptive screen"
+    },
+    {
+      "analysis_modes": [
+        "descriptive"
+      ],
+      "artifact_count": 1,
+      "city_id": "geonames.105343",
+      "city_name": "Jeddah",
+      "content_hash": "sha256:4de3211a527bb0b94691a5e8bb935621b3723a633731bc3a15ece3cde2600c5a",
+      "evidence_types": [
+        "estimated"
+      ],
+      "execution_id": "geonames.105343.screen.heat.2024",
+      "kind": "standard-screen",
+      "limitations": [
+        "This is a standardized descriptive screen, not a forecast, causal result, simulation, optimization, or recommendation.",
+        "No municipal boundary, population exposure surface, asset inventory, service network, or local policy constraint is present."
+      ],
+      "readiness": "descriptive-only",
+      "recommendation_issued": false,
+      "scenario_id": "geonames.105343.heat-screen.v1",
+      "source_count": 4,
+      "status": "screened",
+      "suite": "standardized-screening",
+      "template_id": "standard.heat-screen.v1",
+      "title": "Jeddah 2024 heat-context descriptive screen"
+    },
+    {
+      "analysis_modes": [
+        "descriptive"
+      ],
+      "artifact_count": 1,
+      "city_id": "geonames.105343",
+      "city_name": "Jeddah",
+      "content_hash": "sha256:81882f01323bff89fbf12af31c8d83a888d736372b8855da8f81362fc861a46c",
+      "evidence_types": [
+        "estimated"
+      ],
+      "execution_id": "geonames.105343.screen.policy-readiness.2024",
+      "kind": "standard-screen",
+      "limitations": [
+        "This is a standardized descriptive screen, not a forecast, causal result, simulation, optimization, or recommendation.",
+        "No municipal boundary, population exposure surface, asset inventory, service network, or local policy constraint is present.",
+        "Country GDP per capita is not a city budget, cost, income, or fiscal-capacity measure."
+      ],
+      "readiness": "insufficient-evidence",
+      "recommendation_issued": false,
+      "scenario_id": "geonames.105343.policy-readiness.v1",
+      "source_count": 4,
+      "status": "insufficient-evidence",
+      "suite": "standardized-screening",
+      "template_id": "standard.policy-readiness.v1",
+      "title": "Jeddah intervention-readiness evidence gate"
+    },
+    {
+      "analysis_modes": [
+        "descriptive"
+      ],
+      "artifact_count": 1,
+      "city_id": "geonames.105343",
+      "city_name": "Jeddah",
+      "content_hash": "sha256:0325a75327bb950aadc2e16b602bc6a92fe8abe1b06c470c8086495a7c3b851c",
+      "evidence_types": [
+        "estimated"
+      ],
+      "execution_id": "geonames.105343.screen.precipitation.2024",
+      "kind": "standard-screen",
+      "limitations": [
+        "This is a standardized descriptive screen, not a forecast, causal result, simulation, optimization, or recommendation.",
+        "No municipal boundary, population exposure surface, asset inventory, service network, or local policy constraint is present."
+      ],
+      "readiness": "descriptive-only",
+      "recommendation_issued": false,
+      "scenario_id": "geonames.105343.precipitation-screen.v1",
+      "source_count": 4,
+      "status": "screened",
+      "suite": "standardized-screening",
+      "template_id": "standard.precipitation-screen.v1",
+      "title": "Jeddah 2024 precipitation-context descriptive screen"
+    },
+    {
+      "analysis_modes": [
+        "descriptive"
+      ],
+      "artifact_count": 1,
+      "city_id": "geonames.993800",
+      "city_name": "Johannesburg",
+      "content_hash": "sha256:39b880e8b20c9af6efe0a679317565fb0026df77708cee9f96220bc22e510c8a",
+      "evidence_types": [
+        "estimated"
+      ],
+      "execution_id": "geonames.993800.screen.heat.2024",
+      "kind": "standard-screen",
+      "limitations": [
+        "This is a standardized descriptive screen, not a forecast, causal result, simulation, optimization, or recommendation.",
+        "No municipal boundary, population exposure surface, asset inventory, service network, or local policy constraint is present."
+      ],
+      "readiness": "descriptive-only",
+      "recommendation_issued": false,
+      "scenario_id": "geonames.993800.heat-screen.v1",
+      "source_count": 4,
+      "status": "screened",
+      "suite": "standardized-screening",
+      "template_id": "standard.heat-screen.v1",
+      "title": "Johannesburg 2024 heat-context descriptive screen"
+    },
+    {
+      "analysis_modes": [
+        "descriptive"
+      ],
+      "artifact_count": 1,
+      "city_id": "geonames.993800",
+      "city_name": "Johannesburg",
+      "content_hash": "sha256:1915c1b674e39b8151e2784b26da443195e47f47d102634138330527c915ea04",
+      "evidence_types": [
+        "estimated"
+      ],
+      "execution_id": "geonames.993800.screen.policy-readiness.2024",
+      "kind": "standard-screen",
+      "limitations": [
+        "This is a standardized descriptive screen, not a forecast, causal result, simulation, optimization, or recommendation.",
+        "No municipal boundary, population exposure surface, asset inventory, service network, or local policy constraint is present.",
+        "Country GDP per capita is not a city budget, cost, income, or fiscal-capacity measure."
+      ],
+      "readiness": "insufficient-evidence",
+      "recommendation_issued": false,
+      "scenario_id": "geonames.993800.policy-readiness.v1",
+      "source_count": 4,
+      "status": "insufficient-evidence",
+      "suite": "standardized-screening",
+      "template_id": "standard.policy-readiness.v1",
+      "title": "Johannesburg intervention-readiness evidence gate"
+    },
+    {
+      "analysis_modes": [
+        "descriptive"
+      ],
+      "artifact_count": 1,
+      "city_id": "geonames.993800",
+      "city_name": "Johannesburg",
+      "content_hash": "sha256:8c66e05a0fcb806dc364129155811a3d907e516ebc9be3d41cf6aca843458f72",
+      "evidence_types": [
+        "estimated"
+      ],
+      "execution_id": "geonames.993800.screen.precipitation.2024",
+      "kind": "standard-screen",
+      "limitations": [
+        "This is a standardized descriptive screen, not a forecast, causal result, simulation, optimization, or recommendation.",
+        "No municipal boundary, population exposure surface, asset inventory, service network, or local policy constraint is present."
+      ],
+      "readiness": "descriptive-only",
+      "recommendation_issued": false,
+      "scenario_id": "geonames.993800.precipitation-screen.v1",
+      "source_count": 4,
+      "status": "screened",
+      "suite": "standardized-screening",
+      "template_id": "standard.precipitation-screen.v1",
+      "title": "Johannesburg 2024 precipitation-context descriptive screen"
+    },
+    {
+      "analysis_modes": [
+        "descriptive"
+      ],
+      "artifact_count": 1,
+      "city_id": "geonames.2314302",
+      "city_name": "Kinshasa",
+      "content_hash": "sha256:172b5e1a7c6d89d93dadde558a89d6551d794e4bd726c911e122bebf0ad88280",
+      "evidence_types": [
+        "estimated"
+      ],
+      "execution_id": "geonames.2314302.screen.heat.2024",
+      "kind": "standard-screen",
+      "limitations": [
+        "This is a standardized descriptive screen, not a forecast, causal result, simulation, optimization, or recommendation.",
+        "No municipal boundary, population exposure surface, asset inventory, service network, or local policy constraint is present."
+      ],
+      "readiness": "descriptive-only",
+      "recommendation_issued": false,
+      "scenario_id": "geonames.2314302.heat-screen.v1",
+      "source_count": 4,
+      "status": "screened",
+      "suite": "standardized-screening",
+      "template_id": "standard.heat-screen.v1",
+      "title": "Kinshasa 2024 heat-context descriptive screen"
+    },
+    {
+      "analysis_modes": [
+        "descriptive"
+      ],
+      "artifact_count": 1,
+      "city_id": "geonames.2314302",
+      "city_name": "Kinshasa",
+      "content_hash": "sha256:8255bc66b0b6d00edf43f29e81ebe2eb62c8332970cba4af7c29e8f8e72496df",
+      "evidence_types": [
+        "estimated"
+      ],
+      "execution_id": "geonames.2314302.screen.policy-readiness.2024",
+      "kind": "standard-screen",
+      "limitations": [
+        "This is a standardized descriptive screen, not a forecast, causal result, simulation, optimization, or recommendation.",
+        "No municipal boundary, population exposure surface, asset inventory, service network, or local policy constraint is present.",
+        "Country GDP per capita is not a city budget, cost, income, or fiscal-capacity measure."
+      ],
+      "readiness": "insufficient-evidence",
+      "recommendation_issued": false,
+      "scenario_id": "geonames.2314302.policy-readiness.v1",
+      "source_count": 4,
+      "status": "insufficient-evidence",
+      "suite": "standardized-screening",
+      "template_id": "standard.policy-readiness.v1",
+      "title": "Kinshasa intervention-readiness evidence gate"
+    },
+    {
+      "analysis_modes": [
+        "descriptive"
+      ],
+      "artifact_count": 1,
+      "city_id": "geonames.2314302",
+      "city_name": "Kinshasa",
+      "content_hash": "sha256:66a3cc1c4c1cddad48d32b7e2ed3312d774cba919dcf8efed1c3e59ea33b22c7",
+      "evidence_types": [
+        "estimated"
+      ],
+      "execution_id": "geonames.2314302.screen.precipitation.2024",
+      "kind": "standard-screen",
+      "limitations": [
+        "This is a standardized descriptive screen, not a forecast, causal result, simulation, optimization, or recommendation.",
+        "No municipal boundary, population exposure surface, asset inventory, service network, or local policy constraint is present."
+      ],
+      "readiness": "descriptive-only",
+      "recommendation_issued": false,
+      "scenario_id": "geonames.2314302.precipitation-screen.v1",
+      "source_count": 4,
+      "status": "screened",
+      "suite": "standardized-screening",
+      "template_id": "standard.precipitation-screen.v1",
+      "title": "Kinshasa 2024 precipitation-context descriptive screen"
+    },
+    {
+      "analysis_modes": [
+        "descriptive"
+      ],
+      "artifact_count": 1,
+      "city_id": "geonames.2332459",
+      "city_name": "Lagos",
+      "content_hash": "sha256:d2d7cdb667128f6f4fe3ad3751e584c67744de1c00ac09c560100bef47d0f8ea",
+      "evidence_types": [
+        "estimated"
+      ],
+      "execution_id": "geonames.2332459.screen.heat.2024",
+      "kind": "standard-screen",
+      "limitations": [
+        "This is a standardized descriptive screen, not a forecast, causal result, simulation, optimization, or recommendation.",
+        "No municipal boundary, population exposure surface, asset inventory, service network, or local policy constraint is present."
+      ],
+      "readiness": "descriptive-only",
+      "recommendation_issued": false,
+      "scenario_id": "geonames.2332459.heat-screen.v1",
+      "source_count": 4,
+      "status": "screened",
+      "suite": "standardized-screening",
+      "template_id": "standard.heat-screen.v1",
+      "title": "Lagos 2024 heat-context descriptive screen"
+    },
+    {
+      "analysis_modes": [
+        "descriptive"
+      ],
+      "artifact_count": 1,
+      "city_id": "geonames.2332459",
+      "city_name": "Lagos",
+      "content_hash": "sha256:780c7ec8a1c35228cde37d1c237a0363445db1bc4dbe1ef4f7e5d63a1cbd78e6",
+      "evidence_types": [
+        "estimated"
+      ],
+      "execution_id": "geonames.2332459.screen.policy-readiness.2024",
+      "kind": "standard-screen",
+      "limitations": [
+        "This is a standardized descriptive screen, not a forecast, causal result, simulation, optimization, or recommendation.",
+        "No municipal boundary, population exposure surface, asset inventory, service network, or local policy constraint is present.",
+        "Country GDP per capita is not a city budget, cost, income, or fiscal-capacity measure."
+      ],
+      "readiness": "insufficient-evidence",
+      "recommendation_issued": false,
+      "scenario_id": "geonames.2332459.policy-readiness.v1",
+      "source_count": 4,
+      "status": "insufficient-evidence",
+      "suite": "standardized-screening",
+      "template_id": "standard.policy-readiness.v1",
+      "title": "Lagos intervention-readiness evidence gate"
+    },
+    {
+      "analysis_modes": [
+        "descriptive"
+      ],
+      "artifact_count": 1,
+      "city_id": "geonames.2332459",
+      "city_name": "Lagos",
+      "content_hash": "sha256:b119b362347efc312e45ae81eea0cfe79233e993735c6c3636b7b004ba9496f2",
+      "evidence_types": [
+        "estimated"
+      ],
+      "execution_id": "geonames.2332459.screen.precipitation.2024",
+      "kind": "standard-screen",
+      "limitations": [
+        "This is a standardized descriptive screen, not a forecast, causal result, simulation, optimization, or recommendation.",
+        "No municipal boundary, population exposure surface, asset inventory, service network, or local policy constraint is present."
+      ],
+      "readiness": "descriptive-only",
+      "recommendation_issued": false,
+      "scenario_id": "geonames.2332459.precipitation-screen.v1",
+      "source_count": 4,
+      "status": "screened",
+      "suite": "standardized-screening",
+      "template_id": "standard.precipitation-screen.v1",
+      "title": "Lagos 2024 precipitation-context descriptive screen"
+    },
+    {
+      "analysis_modes": [
+        "descriptive"
+      ],
+      "artifact_count": 1,
+      "city_id": "geonames.1172451",
+      "city_name": "Lahore",
+      "content_hash": "sha256:ac60009c87ef44aec78ed4ac36f9093141761e3d471b0f282782a00af6dfcb49",
+      "evidence_types": [
+        "estimated"
+      ],
+      "execution_id": "geonames.1172451.screen.heat.2024",
+      "kind": "standard-screen",
+      "limitations": [
+        "This is a standardized descriptive screen, not a forecast, causal result, simulation, optimization, or recommendation.",
+        "No municipal boundary, population exposure surface, asset inventory, service network, or local policy constraint is present."
+      ],
+      "readiness": "descriptive-only",
+      "recommendation_issued": false,
+      "scenario_id": "geonames.1172451.heat-screen.v1",
+      "source_count": 4,
+      "status": "screened",
+      "suite": "standardized-screening",
+      "template_id": "standard.heat-screen.v1",
+      "title": "Lahore 2024 heat-context descriptive screen"
+    },
+    {
+      "analysis_modes": [
+        "descriptive"
+      ],
+      "artifact_count": 1,
+      "city_id": "geonames.1172451",
+      "city_name": "Lahore",
+      "content_hash": "sha256:d0bc5d4ffd51ff9fe71d11dab4143ea1e85cf61699462bdb812c96903ef947e6",
+      "evidence_types": [
+        "estimated"
+      ],
+      "execution_id": "geonames.1172451.screen.policy-readiness.2024",
+      "kind": "standard-screen",
+      "limitations": [
+        "This is a standardized descriptive screen, not a forecast, causal result, simulation, optimization, or recommendation.",
+        "No municipal boundary, population exposure surface, asset inventory, service network, or local policy constraint is present.",
+        "Country GDP per capita is not a city budget, cost, income, or fiscal-capacity measure."
+      ],
+      "readiness": "insufficient-evidence",
+      "recommendation_issued": false,
+      "scenario_id": "geonames.1172451.policy-readiness.v1",
+      "source_count": 4,
+      "status": "insufficient-evidence",
+      "suite": "standardized-screening",
+      "template_id": "standard.policy-readiness.v1",
+      "title": "Lahore intervention-readiness evidence gate"
+    },
+    {
+      "analysis_modes": [
+        "descriptive"
+      ],
+      "artifact_count": 1,
+      "city_id": "geonames.1172451",
+      "city_name": "Lahore",
+      "content_hash": "sha256:2b713e7e1811e319bf8700896e918c3f6f6e8c7b279c8d72288e2365db89c279",
+      "evidence_types": [
+        "estimated"
+      ],
+      "execution_id": "geonames.1172451.screen.precipitation.2024",
+      "kind": "standard-screen",
+      "limitations": [
+        "This is a standardized descriptive screen, not a forecast, causal result, simulation, optimization, or recommendation.",
+        "No municipal boundary, population exposure surface, asset inventory, service network, or local policy constraint is present."
+      ],
+      "readiness": "descriptive-only",
+      "recommendation_issued": false,
+      "scenario_id": "geonames.1172451.precipitation-screen.v1",
+      "source_count": 4,
+      "status": "screened",
+      "suite": "standardized-screening",
+      "template_id": "standard.precipitation-screen.v1",
+      "title": "Lahore 2024 precipitation-context descriptive screen"
+    },
+    {
+      "analysis_modes": [
+        "descriptive"
+      ],
+      "artifact_count": 1,
+      "city_id": "geonames.3936456",
+      "city_name": "Lima",
+      "content_hash": "sha256:569c69cd4eb93eab41f007dc4d6f7aa014cb649763e6a7553728e53a80d5ea0b",
+      "evidence_types": [
+        "estimated"
+      ],
+      "execution_id": "geonames.3936456.screen.heat.2024",
+      "kind": "standard-screen",
+      "limitations": [
+        "This is a standardized descriptive screen, not a forecast, causal result, simulation, optimization, or recommendation.",
+        "No municipal boundary, population exposure surface, asset inventory, service network, or local policy constraint is present."
+      ],
+      "readiness": "descriptive-only",
+      "recommendation_issued": false,
+      "scenario_id": "geonames.3936456.heat-screen.v1",
+      "source_count": 4,
+      "status": "screened",
+      "suite": "standardized-screening",
+      "template_id": "standard.heat-screen.v1",
+      "title": "Lima 2024 heat-context descriptive screen"
+    },
+    {
+      "analysis_modes": [
+        "descriptive"
+      ],
+      "artifact_count": 1,
+      "city_id": "geonames.3936456",
+      "city_name": "Lima",
+      "content_hash": "sha256:803406321ebd14cf4ae23ccf1ac69fbd2d6976c494c7f3406972553608e5a86d",
+      "evidence_types": [
+        "estimated"
+      ],
+      "execution_id": "geonames.3936456.screen.policy-readiness.2024",
+      "kind": "standard-screen",
+      "limitations": [
+        "This is a standardized descriptive screen, not a forecast, causal result, simulation, optimization, or recommendation.",
+        "No municipal boundary, population exposure surface, asset inventory, service network, or local policy constraint is present.",
+        "Country GDP per capita is not a city budget, cost, income, or fiscal-capacity measure."
+      ],
+      "readiness": "insufficient-evidence",
+      "recommendation_issued": false,
+      "scenario_id": "geonames.3936456.policy-readiness.v1",
+      "source_count": 4,
+      "status": "insufficient-evidence",
+      "suite": "standardized-screening",
+      "template_id": "standard.policy-readiness.v1",
+      "title": "Lima intervention-readiness evidence gate"
+    },
+    {
+      "analysis_modes": [
+        "descriptive"
+      ],
+      "artifact_count": 1,
+      "city_id": "geonames.3936456",
+      "city_name": "Lima",
+      "content_hash": "sha256:10063a9697f9a2e270c5e0e5b78e0b239c2dd106f62bb8517681c3f762cec3b4",
+      "evidence_types": [
+        "estimated"
+      ],
+      "execution_id": "geonames.3936456.screen.precipitation.2024",
+      "kind": "standard-screen",
+      "limitations": [
+        "This is a standardized descriptive screen, not a forecast, causal result, simulation, optimization, or recommendation.",
+        "No municipal boundary, population exposure surface, asset inventory, service network, or local policy constraint is present."
+      ],
+      "readiness": "descriptive-only",
+      "recommendation_issued": false,
+      "scenario_id": "geonames.3936456.precipitation-screen.v1",
+      "source_count": 4,
+      "status": "screened",
+      "suite": "standardized-screening",
+      "template_id": "standard.precipitation-screen.v1",
+      "title": "Lima 2024 precipitation-context descriptive screen"
+    },
+    {
+      "analysis_modes": [
+        "descriptive"
+      ],
+      "artifact_count": 1,
+      "city_id": "geonames.2643743",
+      "city_name": "London",
+      "content_hash": "sha256:8b064ac526bd2baf186f00dadca6574cd834a5268b8ff2ca29ed009b733749db",
+      "evidence_types": [
+        "estimated"
+      ],
+      "execution_id": "geonames.2643743.screen.heat.2024",
+      "kind": "standard-screen",
+      "limitations": [
+        "This is a standardized descriptive screen, not a forecast, causal result, simulation, optimization, or recommendation.",
+        "No municipal boundary, population exposure surface, asset inventory, service network, or local policy constraint is present."
+      ],
+      "readiness": "descriptive-only",
+      "recommendation_issued": false,
+      "scenario_id": "geonames.2643743.heat-screen.v1",
+      "source_count": 4,
+      "status": "screened",
+      "suite": "standardized-screening",
+      "template_id": "standard.heat-screen.v1",
+      "title": "London 2024 heat-context descriptive screen"
+    },
+    {
+      "analysis_modes": [
+        "descriptive"
+      ],
+      "artifact_count": 1,
+      "city_id": "geonames.2643743",
+      "city_name": "London",
+      "content_hash": "sha256:8911a483427650d7c392c6a182d0fd1e3f9ec2c06cb4090a757fa6fbed393840",
+      "evidence_types": [
+        "estimated"
+      ],
+      "execution_id": "geonames.2643743.screen.policy-readiness.2024",
+      "kind": "standard-screen",
+      "limitations": [
+        "This is a standardized descriptive screen, not a forecast, causal result, simulation, optimization, or recommendation.",
+        "No municipal boundary, population exposure surface, asset inventory, service network, or local policy constraint is present.",
+        "Country GDP per capita is not a city budget, cost, income, or fiscal-capacity measure."
+      ],
+      "readiness": "insufficient-evidence",
+      "recommendation_issued": false,
+      "scenario_id": "geonames.2643743.policy-readiness.v1",
+      "source_count": 4,
+      "status": "insufficient-evidence",
+      "suite": "standardized-screening",
+      "template_id": "standard.policy-readiness.v1",
+      "title": "London intervention-readiness evidence gate"
+    },
+    {
+      "analysis_modes": [
+        "descriptive"
+      ],
+      "artifact_count": 1,
+      "city_id": "geonames.2643743",
+      "city_name": "London",
+      "content_hash": "sha256:d3d22ed78c7af7e27dd85ec5d4574e24a8e460c4a71e8d728a5236200deddfea",
+      "evidence_types": [
+        "estimated"
+      ],
+      "execution_id": "geonames.2643743.screen.precipitation.2024",
+      "kind": "standard-screen",
+      "limitations": [
+        "This is a standardized descriptive screen, not a forecast, causal result, simulation, optimization, or recommendation.",
+        "No municipal boundary, population exposure surface, asset inventory, service network, or local policy constraint is present."
+      ],
+      "readiness": "descriptive-only",
+      "recommendation_issued": false,
+      "scenario_id": "geonames.2643743.precipitation-screen.v1",
+      "source_count": 4,
+      "status": "screened",
+      "suite": "standardized-screening",
+      "template_id": "standard.precipitation-screen.v1",
+      "title": "London 2024 precipitation-context descriptive screen"
+    },
+    {
+      "analysis_modes": [
+        "descriptive"
+      ],
+      "artifact_count": 1,
+      "city_id": "geonames.3530597",
+      "city_name": "Mexico City",
+      "content_hash": "sha256:dacc056ad66954925cd2a1b2b78817a42fb7538f1d14e886e4440e45233e0714",
+      "evidence_types": [
+        "estimated"
+      ],
+      "execution_id": "geonames.3530597.screen.heat.2024",
+      "kind": "standard-screen",
+      "limitations": [
+        "This is a standardized descriptive screen, not a forecast, causal result, simulation, optimization, or recommendation.",
+        "No municipal boundary, population exposure surface, asset inventory, service network, or local policy constraint is present."
+      ],
+      "readiness": "descriptive-only",
+      "recommendation_issued": false,
+      "scenario_id": "geonames.3530597.heat-screen.v1",
+      "source_count": 4,
+      "status": "screened",
+      "suite": "standardized-screening",
+      "template_id": "standard.heat-screen.v1",
+      "title": "Mexico City 2024 heat-context descriptive screen"
+    },
+    {
+      "analysis_modes": [
+        "descriptive"
+      ],
+      "artifact_count": 1,
+      "city_id": "geonames.3530597",
+      "city_name": "Mexico City",
+      "content_hash": "sha256:f4f717d67e0fdcce563cc156a9a1d1f0be84bc46ad88ff05182970512a96ed09",
+      "evidence_types": [
+        "estimated"
+      ],
+      "execution_id": "geonames.3530597.screen.policy-readiness.2024",
+      "kind": "standard-screen",
+      "limitations": [
+        "This is a standardized descriptive screen, not a forecast, causal result, simulation, optimization, or recommendation.",
+        "No municipal boundary, population exposure surface, asset inventory, service network, or local policy constraint is present.",
+        "Country GDP per capita is not a city budget, cost, income, or fiscal-capacity measure."
+      ],
+      "readiness": "insufficient-evidence",
+      "recommendation_issued": false,
+      "scenario_id": "geonames.3530597.policy-readiness.v1",
+      "source_count": 4,
+      "status": "insufficient-evidence",
+      "suite": "standardized-screening",
+      "template_id": "standard.policy-readiness.v1",
+      "title": "Mexico City intervention-readiness evidence gate"
+    },
+    {
+      "analysis_modes": [
+        "descriptive"
+      ],
+      "artifact_count": 1,
+      "city_id": "geonames.3530597",
+      "city_name": "Mexico City",
+      "content_hash": "sha256:b32a305f00a110c0de1dc1b1a111d8d70550aca6c7e8e3b97b98f80a9831bbaa",
+      "evidence_types": [
+        "estimated"
+      ],
+      "execution_id": "geonames.3530597.screen.precipitation.2024",
+      "kind": "standard-screen",
+      "limitations": [
+        "This is a standardized descriptive screen, not a forecast, causal result, simulation, optimization, or recommendation.",
+        "No municipal boundary, population exposure surface, asset inventory, service network, or local policy constraint is present."
+      ],
+      "readiness": "descriptive-only",
+      "recommendation_issued": false,
+      "scenario_id": "geonames.3530597.precipitation-screen.v1",
+      "source_count": 4,
+      "status": "screened",
+      "suite": "standardized-screening",
+      "template_id": "standard.precipitation-screen.v1",
+      "title": "Mexico City 2024 precipitation-context descriptive screen"
+    },
+    {
+      "analysis_modes": [
+        "descriptive"
+      ],
+      "artifact_count": 1,
+      "city_id": "geonames.524901",
+      "city_name": "Moscow",
+      "content_hash": "sha256:5985579c3cc3e5b2cce4384e7dcaf58b88379e30b332694f0408fb0e5170be73",
+      "evidence_types": [
+        "estimated"
+      ],
+      "execution_id": "geonames.524901.screen.heat.2024",
+      "kind": "standard-screen",
+      "limitations": [
+        "This is a standardized descriptive screen, not a forecast, causal result, simulation, optimization, or recommendation.",
+        "No municipal boundary, population exposure surface, asset inventory, service network, or local policy constraint is present."
+      ],
+      "readiness": "descriptive-only",
+      "recommendation_issued": false,
+      "scenario_id": "geonames.524901.heat-screen.v1",
+      "source_count": 4,
+      "status": "screened",
+      "suite": "standardized-screening",
+      "template_id": "standard.heat-screen.v1",
+      "title": "Moscow 2024 heat-context descriptive screen"
+    },
+    {
+      "analysis_modes": [
+        "descriptive"
+      ],
+      "artifact_count": 1,
+      "city_id": "geonames.524901",
+      "city_name": "Moscow",
+      "content_hash": "sha256:c76601fccbca64a9bb205ee75d218b07e29f227810feccf9175579cf915c16be",
+      "evidence_types": [
+        "estimated"
+      ],
+      "execution_id": "geonames.524901.screen.policy-readiness.2024",
+      "kind": "standard-screen",
+      "limitations": [
+        "This is a standardized descriptive screen, not a forecast, causal result, simulation, optimization, or recommendation.",
+        "No municipal boundary, population exposure surface, asset inventory, service network, or local policy constraint is present.",
+        "Country GDP per capita is not a city budget, cost, income, or fiscal-capacity measure."
+      ],
+      "readiness": "insufficient-evidence",
+      "recommendation_issued": false,
+      "scenario_id": "geonames.524901.policy-readiness.v1",
+      "source_count": 4,
+      "status": "insufficient-evidence",
+      "suite": "standardized-screening",
+      "template_id": "standard.policy-readiness.v1",
+      "title": "Moscow intervention-readiness evidence gate"
+    },
+    {
+      "analysis_modes": [
+        "descriptive"
+      ],
+      "artifact_count": 1,
+      "city_id": "geonames.524901",
+      "city_name": "Moscow",
+      "content_hash": "sha256:ec8f31b508c35941945db1c60c6621bfc87b87dbb8cd1ec3a37fea608d25d144",
+      "evidence_types": [
+        "estimated"
+      ],
+      "execution_id": "geonames.524901.screen.precipitation.2024",
+      "kind": "standard-screen",
+      "limitations": [
+        "This is a standardized descriptive screen, not a forecast, causal result, simulation, optimization, or recommendation.",
+        "No municipal boundary, population exposure surface, asset inventory, service network, or local policy constraint is present."
+      ],
+      "readiness": "descriptive-only",
+      "recommendation_issued": false,
+      "scenario_id": "geonames.524901.precipitation-screen.v1",
+      "source_count": 4,
+      "status": "screened",
+      "suite": "standardized-screening",
+      "template_id": "standard.precipitation-screen.v1",
+      "title": "Moscow 2024 precipitation-context descriptive screen"
+    },
+    {
+      "analysis_modes": [
+        "descriptive"
+      ],
+      "artifact_count": 1,
+      "city_id": "geonames.1275339",
+      "city_name": "Mumbai",
+      "content_hash": "sha256:954b03c522e83a34fa400365092c427133d4e797178fa78004d122b03a730788",
+      "evidence_types": [
+        "estimated"
+      ],
+      "execution_id": "geonames.1275339.screen.heat.2024",
+      "kind": "standard-screen",
+      "limitations": [
+        "This is a standardized descriptive screen, not a forecast, causal result, simulation, optimization, or recommendation.",
+        "No municipal boundary, population exposure surface, asset inventory, service network, or local policy constraint is present."
+      ],
+      "readiness": "descriptive-only",
+      "recommendation_issued": false,
+      "scenario_id": "geonames.1275339.heat-screen.v1",
+      "source_count": 4,
+      "status": "screened",
+      "suite": "standardized-screening",
+      "template_id": "standard.heat-screen.v1",
+      "title": "Mumbai 2024 heat-context descriptive screen"
+    },
+    {
+      "analysis_modes": [
+        "descriptive"
+      ],
+      "artifact_count": 1,
+      "city_id": "geonames.1275339",
+      "city_name": "Mumbai",
+      "content_hash": "sha256:84510f5ef08dd309f73aefd4518f5cbcf344016f718547b36c56a9ce239c7a5e",
+      "evidence_types": [
+        "estimated"
+      ],
+      "execution_id": "geonames.1275339.screen.policy-readiness.2024",
+      "kind": "standard-screen",
+      "limitations": [
+        "This is a standardized descriptive screen, not a forecast, causal result, simulation, optimization, or recommendation.",
+        "No municipal boundary, population exposure surface, asset inventory, service network, or local policy constraint is present.",
+        "Country GDP per capita is not a city budget, cost, income, or fiscal-capacity measure."
+      ],
+      "readiness": "insufficient-evidence",
+      "recommendation_issued": false,
+      "scenario_id": "geonames.1275339.policy-readiness.v1",
+      "source_count": 4,
+      "status": "insufficient-evidence",
+      "suite": "standardized-screening",
+      "template_id": "standard.policy-readiness.v1",
+      "title": "Mumbai intervention-readiness evidence gate"
+    },
+    {
+      "analysis_modes": [
+        "descriptive"
+      ],
+      "artifact_count": 1,
+      "city_id": "geonames.1275339",
+      "city_name": "Mumbai",
+      "content_hash": "sha256:70583ac321ef6dbf5601d26febc4762ea9e79688c747953600cdf4da6ac703ec",
+      "evidence_types": [
+        "estimated"
+      ],
+      "execution_id": "geonames.1275339.screen.precipitation.2024",
+      "kind": "standard-screen",
+      "limitations": [
+        "This is a standardized descriptive screen, not a forecast, causal result, simulation, optimization, or recommendation.",
+        "No municipal boundary, population exposure surface, asset inventory, service network, or local policy constraint is present."
+      ],
+      "readiness": "descriptive-only",
+      "recommendation_issued": false,
+      "scenario_id": "geonames.1275339.precipitation-screen.v1",
+      "source_count": 4,
+      "status": "screened",
+      "suite": "standardized-screening",
+      "template_id": "standard.precipitation-screen.v1",
+      "title": "Mumbai 2024 precipitation-context descriptive screen"
+    },
+    {
+      "analysis_modes": [
+        "descriptive"
+      ],
+      "artifact_count": 1,
+      "city_id": "geonames.5128581",
+      "city_name": "New York City",
+      "content_hash": "sha256:6f1659b9c8df272667c1c0b82533b905ec4acec37cff15d1fd53f0953e4f8ad4",
+      "evidence_types": [
+        "estimated"
+      ],
+      "execution_id": "geonames.5128581.screen.heat.2024",
+      "kind": "standard-screen",
+      "limitations": [
+        "This is a standardized descriptive screen, not a forecast, causal result, simulation, optimization, or recommendation.",
+        "No municipal boundary, population exposure surface, asset inventory, service network, or local policy constraint is present."
+      ],
+      "readiness": "descriptive-only",
+      "recommendation_issued": false,
+      "scenario_id": "geonames.5128581.heat-screen.v1",
+      "source_count": 4,
+      "status": "screened",
+      "suite": "standardized-screening",
+      "template_id": "standard.heat-screen.v1",
+      "title": "New York City 2024 heat-context descriptive screen"
+    },
+    {
+      "analysis_modes": [
+        "descriptive"
+      ],
+      "artifact_count": 1,
+      "city_id": "geonames.5128581",
+      "city_name": "New York City",
+      "content_hash": "sha256:0bb628cd3ad040a4befe3b626a264285ca7fc0566d6517255e401bc75669e9ef",
+      "evidence_types": [
+        "estimated"
+      ],
+      "execution_id": "geonames.5128581.screen.policy-readiness.2024",
+      "kind": "standard-screen",
+      "limitations": [
+        "This is a standardized descriptive screen, not a forecast, causal result, simulation, optimization, or recommendation.",
+        "No municipal boundary, population exposure surface, asset inventory, service network, or local policy constraint is present.",
+        "Country GDP per capita is not a city budget, cost, income, or fiscal-capacity measure."
+      ],
+      "readiness": "insufficient-evidence",
+      "recommendation_issued": false,
+      "scenario_id": "geonames.5128581.policy-readiness.v1",
+      "source_count": 4,
+      "status": "insufficient-evidence",
+      "suite": "standardized-screening",
+      "template_id": "standard.policy-readiness.v1",
+      "title": "New York City intervention-readiness evidence gate"
+    },
+    {
+      "analysis_modes": [
+        "descriptive"
+      ],
+      "artifact_count": 1,
+      "city_id": "geonames.5128581",
+      "city_name": "New York City",
+      "content_hash": "sha256:6d11be2079fb74ff3e9d7f1ff563c8822d20e37d8d0e91fbe52e549392f72dc8",
+      "evidence_types": [
+        "estimated"
+      ],
+      "execution_id": "geonames.5128581.screen.precipitation.2024",
+      "kind": "standard-screen",
+      "limitations": [
+        "This is a standardized descriptive screen, not a forecast, causal result, simulation, optimization, or recommendation.",
+        "No municipal boundary, population exposure surface, asset inventory, service network, or local policy constraint is present."
+      ],
+      "readiness": "descriptive-only",
+      "recommendation_issued": false,
+      "scenario_id": "geonames.5128581.precipitation-screen.v1",
+      "source_count": 4,
+      "status": "screened",
+      "suite": "standardized-screening",
+      "template_id": "standard.precipitation-screen.v1",
+      "title": "New York City 2024 precipitation-context descriptive screen"
+    },
+    {
+      "analysis_modes": [
+        "descriptive"
+      ],
+      "artifact_count": 1,
+      "city_id": "geonames.3871336",
+      "city_name": "Santiago",
+      "content_hash": "sha256:cccb1c5e03d935c8f092a30bfb1173ac5173f996124039656e192ee15986c126",
+      "evidence_types": [
+        "estimated"
+      ],
+      "execution_id": "geonames.3871336.screen.heat.2024",
+      "kind": "standard-screen",
+      "limitations": [
+        "This is a standardized descriptive screen, not a forecast, causal result, simulation, optimization, or recommendation.",
+        "No municipal boundary, population exposure surface, asset inventory, service network, or local policy constraint is present."
+      ],
+      "readiness": "descriptive-only",
+      "recommendation_issued": false,
+      "scenario_id": "geonames.3871336.heat-screen.v1",
+      "source_count": 4,
+      "status": "screened",
+      "suite": "standardized-screening",
+      "template_id": "standard.heat-screen.v1",
+      "title": "Santiago 2024 heat-context descriptive screen"
+    },
+    {
+      "analysis_modes": [
+        "descriptive"
+      ],
+      "artifact_count": 1,
+      "city_id": "geonames.3871336",
+      "city_name": "Santiago",
+      "content_hash": "sha256:b1958d5f62d6d16aef91049f2ee79cd90e2ed9df5d11b61d13d64f677d42a367",
+      "evidence_types": [
+        "estimated"
+      ],
+      "execution_id": "geonames.3871336.screen.policy-readiness.2024",
+      "kind": "standard-screen",
+      "limitations": [
+        "This is a standardized descriptive screen, not a forecast, causal result, simulation, optimization, or recommendation.",
+        "No municipal boundary, population exposure surface, asset inventory, service network, or local policy constraint is present.",
+        "Country GDP per capita is not a city budget, cost, income, or fiscal-capacity measure."
+      ],
+      "readiness": "insufficient-evidence",
+      "recommendation_issued": false,
+      "scenario_id": "geonames.3871336.policy-readiness.v1",
+      "source_count": 4,
+      "status": "insufficient-evidence",
+      "suite": "standardized-screening",
+      "template_id": "standard.policy-readiness.v1",
+      "title": "Santiago intervention-readiness evidence gate"
+    },
+    {
+      "analysis_modes": [
+        "descriptive"
+      ],
+      "artifact_count": 1,
+      "city_id": "geonames.3871336",
+      "city_name": "Santiago",
+      "content_hash": "sha256:038e79458e0d0a06f83b53524cb99ee1848fba6464fa546892d319b4f2b78218",
+      "evidence_types": [
+        "estimated"
+      ],
+      "execution_id": "geonames.3871336.screen.precipitation.2024",
+      "kind": "standard-screen",
+      "limitations": [
+        "This is a standardized descriptive screen, not a forecast, causal result, simulation, optimization, or recommendation.",
+        "No municipal boundary, population exposure surface, asset inventory, service network, or local policy constraint is present."
+      ],
+      "readiness": "descriptive-only",
+      "recommendation_issued": false,
+      "scenario_id": "geonames.3871336.precipitation-screen.v1",
+      "source_count": 4,
+      "status": "screened",
+      "suite": "standardized-screening",
+      "template_id": "standard.precipitation-screen.v1",
+      "title": "Santiago 2024 precipitation-context descriptive screen"
+    },
+    {
+      "analysis_modes": [
+        "descriptive"
+      ],
+      "artifact_count": 1,
+      "city_id": "geonames.1835848",
+      "city_name": "Seoul",
+      "content_hash": "sha256:aa08c3af87f14e0416100304b20d47930adcee02baed16d376f6108bfa469aec",
+      "evidence_types": [
+        "estimated"
+      ],
+      "execution_id": "geonames.1835848.screen.heat.2024",
+      "kind": "standard-screen",
+      "limitations": [
+        "This is a standardized descriptive screen, not a forecast, causal result, simulation, optimization, or recommendation.",
+        "No municipal boundary, population exposure surface, asset inventory, service network, or local policy constraint is present."
+      ],
+      "readiness": "descriptive-only",
+      "recommendation_issued": false,
+      "scenario_id": "geonames.1835848.heat-screen.v1",
+      "source_count": 4,
+      "status": "screened",
+      "suite": "standardized-screening",
+      "template_id": "standard.heat-screen.v1",
+      "title": "Seoul 2024 heat-context descriptive screen"
+    },
+    {
+      "analysis_modes": [
+        "descriptive"
+      ],
+      "artifact_count": 1,
+      "city_id": "geonames.1835848",
+      "city_name": "Seoul",
+      "content_hash": "sha256:bbf6c8b9e53820ee0fd3cb64a23a821ad617989523e3c04bf0fae89b335101f7",
+      "evidence_types": [
+        "estimated"
+      ],
+      "execution_id": "geonames.1835848.screen.policy-readiness.2024",
+      "kind": "standard-screen",
+      "limitations": [
+        "This is a standardized descriptive screen, not a forecast, causal result, simulation, optimization, or recommendation.",
+        "No municipal boundary, population exposure surface, asset inventory, service network, or local policy constraint is present.",
+        "Country GDP per capita is not a city budget, cost, income, or fiscal-capacity measure."
+      ],
+      "readiness": "insufficient-evidence",
+      "recommendation_issued": false,
+      "scenario_id": "geonames.1835848.policy-readiness.v1",
+      "source_count": 4,
+      "status": "insufficient-evidence",
+      "suite": "standardized-screening",
+      "template_id": "standard.policy-readiness.v1",
+      "title": "Seoul intervention-readiness evidence gate"
+    },
+    {
+      "analysis_modes": [
+        "descriptive"
+      ],
+      "artifact_count": 1,
+      "city_id": "geonames.1835848",
+      "city_name": "Seoul",
+      "content_hash": "sha256:997a155d5e3f707a31d7563ed60d98d665b32ace68f7e5bca14524b346862222",
+      "evidence_types": [
+        "estimated"
+      ],
+      "execution_id": "geonames.1835848.screen.precipitation.2024",
+      "kind": "standard-screen",
+      "limitations": [
+        "This is a standardized descriptive screen, not a forecast, causal result, simulation, optimization, or recommendation.",
+        "No municipal boundary, population exposure surface, asset inventory, service network, or local policy constraint is present."
+      ],
+      "readiness": "descriptive-only",
+      "recommendation_issued": false,
+      "scenario_id": "geonames.1835848.precipitation-screen.v1",
+      "source_count": 4,
+      "status": "screened",
+      "suite": "standardized-screening",
+      "template_id": "standard.precipitation-screen.v1",
+      "title": "Seoul 2024 precipitation-context descriptive screen"
+    },
+    {
+      "analysis_modes": [
+        "descriptive"
+      ],
+      "artifact_count": 1,
+      "city_id": "geonames.1796236",
+      "city_name": "Shanghai",
+      "content_hash": "sha256:2afe918be6d5ed5658d66a2997fe16cf28be43005fc0b7e0ad21ff02dae4cb54",
+      "evidence_types": [
+        "estimated"
+      ],
+      "execution_id": "geonames.1796236.screen.heat.2024",
+      "kind": "standard-screen",
+      "limitations": [
+        "This is a standardized descriptive screen, not a forecast, causal result, simulation, optimization, or recommendation.",
+        "No municipal boundary, population exposure surface, asset inventory, service network, or local policy constraint is present."
+      ],
+      "readiness": "descriptive-only",
+      "recommendation_issued": false,
+      "scenario_id": "geonames.1796236.heat-screen.v1",
+      "source_count": 4,
+      "status": "screened",
+      "suite": "standardized-screening",
+      "template_id": "standard.heat-screen.v1",
+      "title": "Shanghai 2024 heat-context descriptive screen"
+    },
+    {
+      "analysis_modes": [
+        "descriptive"
+      ],
+      "artifact_count": 1,
+      "city_id": "geonames.1796236",
+      "city_name": "Shanghai",
+      "content_hash": "sha256:9d0b8100465f8f2a277c038bcaf1c4d10c9184ff7dd5363a70f79d9157d5f55e",
+      "evidence_types": [
+        "estimated"
+      ],
+      "execution_id": "geonames.1796236.screen.policy-readiness.2024",
+      "kind": "standard-screen",
+      "limitations": [
+        "This is a standardized descriptive screen, not a forecast, causal result, simulation, optimization, or recommendation.",
+        "No municipal boundary, population exposure surface, asset inventory, service network, or local policy constraint is present.",
+        "Country GDP per capita is not a city budget, cost, income, or fiscal-capacity measure."
+      ],
+      "readiness": "insufficient-evidence",
+      "recommendation_issued": false,
+      "scenario_id": "geonames.1796236.policy-readiness.v1",
+      "source_count": 4,
+      "status": "insufficient-evidence",
+      "suite": "standardized-screening",
+      "template_id": "standard.policy-readiness.v1",
+      "title": "Shanghai intervention-readiness evidence gate"
+    },
+    {
+      "analysis_modes": [
+        "descriptive"
+      ],
+      "artifact_count": 1,
+      "city_id": "geonames.1796236",
+      "city_name": "Shanghai",
+      "content_hash": "sha256:6d2c6ff3a250d0467c9ffae4db52c66cda6c85343f319caaa7e83d0d78123af9",
+      "evidence_types": [
+        "estimated"
+      ],
+      "execution_id": "geonames.1796236.screen.precipitation.2024",
+      "kind": "standard-screen",
+      "limitations": [
+        "This is a standardized descriptive screen, not a forecast, causal result, simulation, optimization, or recommendation.",
+        "No municipal boundary, population exposure surface, asset inventory, service network, or local policy constraint is present."
+      ],
+      "readiness": "descriptive-only",
+      "recommendation_issued": false,
+      "scenario_id": "geonames.1796236.precipitation-screen.v1",
+      "source_count": 4,
+      "status": "screened",
+      "suite": "standardized-screening",
+      "template_id": "standard.precipitation-screen.v1",
+      "title": "Shanghai 2024 precipitation-context descriptive screen"
+    },
+    {
+      "analysis_modes": [
+        "descriptive"
+      ],
+      "artifact_count": 1,
+      "city_id": "geonames.1880252",
+      "city_name": "Singapore",
+      "content_hash": "sha256:1b8c8a952def2f95589901638e242a6a4f20fb4305b115e41163e81f45df329e",
+      "evidence_types": [
+        "estimated"
+      ],
+      "execution_id": "geonames.1880252.screen.heat.2024",
+      "kind": "standard-screen",
+      "limitations": [
+        "This is a standardized descriptive screen, not a forecast, causal result, simulation, optimization, or recommendation.",
+        "No municipal boundary, population exposure surface, asset inventory, service network, or local policy constraint is present."
+      ],
+      "readiness": "descriptive-only",
+      "recommendation_issued": false,
+      "scenario_id": "geonames.1880252.heat-screen.v1",
+      "source_count": 4,
+      "status": "screened",
+      "suite": "standardized-screening",
+      "template_id": "standard.heat-screen.v1",
+      "title": "Singapore 2024 heat-context descriptive screen"
+    },
+    {
+      "analysis_modes": [
+        "descriptive"
+      ],
+      "artifact_count": 1,
+      "city_id": "geonames.1880252",
+      "city_name": "Singapore",
+      "content_hash": "sha256:517f501b2ab930b9efc9ecf6ce0d01de25cf7d7089de48062be5be338055c043",
+      "evidence_types": [
+        "estimated"
+      ],
+      "execution_id": "geonames.1880252.screen.policy-readiness.2024",
+      "kind": "standard-screen",
+      "limitations": [
+        "This is a standardized descriptive screen, not a forecast, causal result, simulation, optimization, or recommendation.",
+        "No municipal boundary, population exposure surface, asset inventory, service network, or local policy constraint is present.",
+        "Country GDP per capita is not a city budget, cost, income, or fiscal-capacity measure."
+      ],
+      "readiness": "insufficient-evidence",
+      "recommendation_issued": false,
+      "scenario_id": "geonames.1880252.policy-readiness.v1",
+      "source_count": 4,
+      "status": "insufficient-evidence",
+      "suite": "standardized-screening",
+      "template_id": "standard.policy-readiness.v1",
+      "title": "Singapore intervention-readiness evidence gate"
+    },
+    {
+      "analysis_modes": [
+        "descriptive"
+      ],
+      "artifact_count": 1,
+      "city_id": "geonames.1880252",
+      "city_name": "Singapore",
+      "content_hash": "sha256:cdb440e77eff6fba6a11d568d3dc9cf60ebf3acd0a21fc1b8f7a29633c7db90b",
+      "evidence_types": [
+        "estimated"
+      ],
+      "execution_id": "geonames.1880252.screen.precipitation.2024",
+      "kind": "standard-screen",
+      "limitations": [
+        "This is a standardized descriptive screen, not a forecast, causal result, simulation, optimization, or recommendation.",
+        "No municipal boundary, population exposure surface, asset inventory, service network, or local policy constraint is present."
+      ],
+      "readiness": "descriptive-only",
+      "recommendation_issued": false,
+      "scenario_id": "geonames.1880252.precipitation-screen.v1",
+      "source_count": 4,
+      "status": "screened",
+      "suite": "standardized-screening",
+      "template_id": "standard.precipitation-screen.v1",
+      "title": "Singapore 2024 precipitation-context descriptive screen"
+    },
+    {
+      "analysis_modes": [
+        "descriptive"
+      ],
+      "artifact_count": 1,
+      "city_id": "geonames.2147714",
+      "city_name": "Sydney",
+      "content_hash": "sha256:93da5ea8623fd8b97f7d3ea98a68d8df46bcb23d6d1e7ffde83a69f053aeba7b",
+      "evidence_types": [
+        "estimated"
+      ],
+      "execution_id": "geonames.2147714.screen.heat.2024",
+      "kind": "standard-screen",
+      "limitations": [
+        "This is a standardized descriptive screen, not a forecast, causal result, simulation, optimization, or recommendation.",
+        "No municipal boundary, population exposure surface, asset inventory, service network, or local policy constraint is present."
+      ],
+      "readiness": "descriptive-only",
+      "recommendation_issued": false,
+      "scenario_id": "geonames.2147714.heat-screen.v1",
+      "source_count": 4,
+      "status": "screened",
+      "suite": "standardized-screening",
+      "template_id": "standard.heat-screen.v1",
+      "title": "Sydney 2024 heat-context descriptive screen"
+    },
+    {
+      "analysis_modes": [
+        "descriptive"
+      ],
+      "artifact_count": 1,
+      "city_id": "geonames.2147714",
+      "city_name": "Sydney",
+      "content_hash": "sha256:f978a8563ec594cb5ea7bc159b70d5aa338c124e939378262091338963a0ffb8",
+      "evidence_types": [
+        "estimated"
+      ],
+      "execution_id": "geonames.2147714.screen.policy-readiness.2024",
+      "kind": "standard-screen",
+      "limitations": [
+        "This is a standardized descriptive screen, not a forecast, causal result, simulation, optimization, or recommendation.",
+        "No municipal boundary, population exposure surface, asset inventory, service network, or local policy constraint is present.",
+        "Country GDP per capita is not a city budget, cost, income, or fiscal-capacity measure."
+      ],
+      "readiness": "insufficient-evidence",
+      "recommendation_issued": false,
+      "scenario_id": "geonames.2147714.policy-readiness.v1",
+      "source_count": 4,
+      "status": "insufficient-evidence",
+      "suite": "standardized-screening",
+      "template_id": "standard.policy-readiness.v1",
+      "title": "Sydney intervention-readiness evidence gate"
+    },
+    {
+      "analysis_modes": [
+        "descriptive"
+      ],
+      "artifact_count": 1,
+      "city_id": "geonames.2147714",
+      "city_name": "Sydney",
+      "content_hash": "sha256:9891ff29b86aa2b4dca0a063f9a9492a1c935b0f3bf98d6d779995d8a3ef2338",
+      "evidence_types": [
+        "estimated"
+      ],
+      "execution_id": "geonames.2147714.screen.precipitation.2024",
+      "kind": "standard-screen",
+      "limitations": [
+        "This is a standardized descriptive screen, not a forecast, causal result, simulation, optimization, or recommendation.",
+        "No municipal boundary, population exposure surface, asset inventory, service network, or local policy constraint is present."
+      ],
+      "readiness": "descriptive-only",
+      "recommendation_issued": false,
+      "scenario_id": "geonames.2147714.precipitation-screen.v1",
+      "source_count": 4,
+      "status": "screened",
+      "suite": "standardized-screening",
+      "template_id": "standard.precipitation-screen.v1",
+      "title": "Sydney 2024 precipitation-context descriptive screen"
+    },
+    {
+      "analysis_modes": [
+        "descriptive"
+      ],
+      "artifact_count": 1,
+      "city_id": "geonames.3448439",
+      "city_name": "São Paulo",
+      "content_hash": "sha256:dca732ed5aab6c3132fd8f34075feb4d730fff6ca2a693cc00c97cb658cece34",
+      "evidence_types": [
+        "estimated"
+      ],
+      "execution_id": "geonames.3448439.screen.heat.2024",
+      "kind": "standard-screen",
+      "limitations": [
+        "This is a standardized descriptive screen, not a forecast, causal result, simulation, optimization, or recommendation.",
+        "No municipal boundary, population exposure surface, asset inventory, service network, or local policy constraint is present."
+      ],
+      "readiness": "descriptive-only",
+      "recommendation_issued": false,
+      "scenario_id": "geonames.3448439.heat-screen.v1",
+      "source_count": 4,
+      "status": "screened",
+      "suite": "standardized-screening",
+      "template_id": "standard.heat-screen.v1",
+      "title": "São Paulo 2024 heat-context descriptive screen"
+    },
+    {
+      "analysis_modes": [
+        "descriptive"
+      ],
+      "artifact_count": 1,
+      "city_id": "geonames.3448439",
+      "city_name": "São Paulo",
+      "content_hash": "sha256:46a0602c5bff3690df1d7a19c84d48304afec9be10a94eea375d8c12b8e4d27b",
+      "evidence_types": [
+        "estimated"
+      ],
+      "execution_id": "geonames.3448439.screen.policy-readiness.2024",
+      "kind": "standard-screen",
+      "limitations": [
+        "This is a standardized descriptive screen, not a forecast, causal result, simulation, optimization, or recommendation.",
+        "No municipal boundary, population exposure surface, asset inventory, service network, or local policy constraint is present.",
+        "Country GDP per capita is not a city budget, cost, income, or fiscal-capacity measure."
+      ],
+      "readiness": "insufficient-evidence",
+      "recommendation_issued": false,
+      "scenario_id": "geonames.3448439.policy-readiness.v1",
+      "source_count": 4,
+      "status": "insufficient-evidence",
+      "suite": "standardized-screening",
+      "template_id": "standard.policy-readiness.v1",
+      "title": "São Paulo intervention-readiness evidence gate"
+    },
+    {
+      "analysis_modes": [
+        "descriptive"
+      ],
+      "artifact_count": 1,
+      "city_id": "geonames.3448439",
+      "city_name": "São Paulo",
+      "content_hash": "sha256:3b86c42997ccc36ae1056c365e49b2f968d48e9f551126203f4a36fab8090c12",
+      "evidence_types": [
+        "estimated"
+      ],
+      "execution_id": "geonames.3448439.screen.precipitation.2024",
+      "kind": "standard-screen",
+      "limitations": [
+        "This is a standardized descriptive screen, not a forecast, causal result, simulation, optimization, or recommendation.",
+        "No municipal boundary, population exposure surface, asset inventory, service network, or local policy constraint is present."
+      ],
+      "readiness": "descriptive-only",
+      "recommendation_issued": false,
+      "scenario_id": "geonames.3448439.precipitation-screen.v1",
+      "source_count": 4,
+      "status": "screened",
+      "suite": "standardized-screening",
+      "template_id": "standard.precipitation-screen.v1",
+      "title": "São Paulo 2024 precipitation-context descriptive screen"
+    },
+    {
+      "analysis_modes": [
+        "descriptive"
+      ],
+      "artifact_count": 1,
+      "city_id": "geonames.112931",
+      "city_name": "Tehran",
+      "content_hash": "sha256:acac38d2002ba01d1193550d69c0d22d7d73504a78db6922f57a5e531ff13ab1",
+      "evidence_types": [
+        "estimated"
+      ],
+      "execution_id": "geonames.112931.screen.heat.2024",
+      "kind": "standard-screen",
+      "limitations": [
+        "This is a standardized descriptive screen, not a forecast, causal result, simulation, optimization, or recommendation.",
+        "No municipal boundary, population exposure surface, asset inventory, service network, or local policy constraint is present."
+      ],
+      "readiness": "descriptive-only",
+      "recommendation_issued": false,
+      "scenario_id": "geonames.112931.heat-screen.v1",
+      "source_count": 4,
+      "status": "screened",
+      "suite": "standardized-screening",
+      "template_id": "standard.heat-screen.v1",
+      "title": "Tehran 2024 heat-context descriptive screen"
+    },
+    {
+      "analysis_modes": [
+        "descriptive"
+      ],
+      "artifact_count": 1,
+      "city_id": "geonames.112931",
+      "city_name": "Tehran",
+      "content_hash": "sha256:7e13dfbf6b519570465c76d315c10594bb3fc1fe368270a3c543c220005fedf5",
+      "evidence_types": [
+        "estimated"
+      ],
+      "execution_id": "geonames.112931.screen.policy-readiness.2024",
+      "kind": "standard-screen",
+      "limitations": [
+        "This is a standardized descriptive screen, not a forecast, causal result, simulation, optimization, or recommendation.",
+        "No municipal boundary, population exposure surface, asset inventory, service network, or local policy constraint is present.",
+        "Country GDP per capita is not a city budget, cost, income, or fiscal-capacity measure."
+      ],
+      "readiness": "insufficient-evidence",
+      "recommendation_issued": false,
+      "scenario_id": "geonames.112931.policy-readiness.v1",
+      "source_count": 4,
+      "status": "insufficient-evidence",
+      "suite": "standardized-screening",
+      "template_id": "standard.policy-readiness.v1",
+      "title": "Tehran intervention-readiness evidence gate"
+    },
+    {
+      "analysis_modes": [
+        "descriptive"
+      ],
+      "artifact_count": 1,
+      "city_id": "geonames.112931",
+      "city_name": "Tehran",
+      "content_hash": "sha256:8a05034fc16aca930ca0549398c6c7e440145c22a5ecaffaa1182d63079832d1",
+      "evidence_types": [
+        "estimated"
+      ],
+      "execution_id": "geonames.112931.screen.precipitation.2024",
+      "kind": "standard-screen",
+      "limitations": [
+        "This is a standardized descriptive screen, not a forecast, causal result, simulation, optimization, or recommendation.",
+        "No municipal boundary, population exposure surface, asset inventory, service network, or local policy constraint is present."
+      ],
+      "readiness": "descriptive-only",
+      "recommendation_issued": false,
+      "scenario_id": "geonames.112931.precipitation-screen.v1",
+      "source_count": 4,
+      "status": "screened",
+      "suite": "standardized-screening",
+      "template_id": "standard.precipitation-screen.v1",
+      "title": "Tehran 2024 precipitation-context descriptive screen"
+    },
+    {
+      "analysis_modes": [
+        "descriptive"
+      ],
+      "artifact_count": 1,
+      "city_id": "geonames.1850147",
+      "city_name": "Tokyo",
+      "content_hash": "sha256:1f179110380d89512955ca88bab15d3c73ac90a74ad78c9149566a6401d98f2b",
+      "evidence_types": [
+        "estimated"
+      ],
+      "execution_id": "geonames.1850147.screen.heat.2024",
+      "kind": "standard-screen",
+      "limitations": [
+        "This is a standardized descriptive screen, not a forecast, causal result, simulation, optimization, or recommendation.",
+        "No municipal boundary, population exposure surface, asset inventory, service network, or local policy constraint is present."
+      ],
+      "readiness": "descriptive-only",
+      "recommendation_issued": false,
+      "scenario_id": "geonames.1850147.heat-screen.v1",
+      "source_count": 4,
+      "status": "screened",
+      "suite": "standardized-screening",
+      "template_id": "standard.heat-screen.v1",
+      "title": "Tokyo 2024 heat-context descriptive screen"
+    },
+    {
+      "analysis_modes": [
+        "descriptive"
+      ],
+      "artifact_count": 1,
+      "city_id": "geonames.1850147",
+      "city_name": "Tokyo",
+      "content_hash": "sha256:6146fd70ae68f6f3fa67e1e63ffa5d19a47b9882a2310913fa505fb4b6e51078",
+      "evidence_types": [
+        "estimated"
+      ],
+      "execution_id": "geonames.1850147.screen.policy-readiness.2024",
+      "kind": "standard-screen",
+      "limitations": [
+        "This is a standardized descriptive screen, not a forecast, causal result, simulation, optimization, or recommendation.",
+        "No municipal boundary, population exposure surface, asset inventory, service network, or local policy constraint is present.",
+        "Country GDP per capita is not a city budget, cost, income, or fiscal-capacity measure."
+      ],
+      "readiness": "insufficient-evidence",
+      "recommendation_issued": false,
+      "scenario_id": "geonames.1850147.policy-readiness.v1",
+      "source_count": 4,
+      "status": "insufficient-evidence",
+      "suite": "standardized-screening",
+      "template_id": "standard.policy-readiness.v1",
+      "title": "Tokyo intervention-readiness evidence gate"
+    },
+    {
+      "analysis_modes": [
+        "descriptive"
+      ],
+      "artifact_count": 1,
+      "city_id": "geonames.1850147",
+      "city_name": "Tokyo",
+      "content_hash": "sha256:7c735948a99d9f01a5b6387c0310777d0f5e7145a08c74d1d05ef538fca074f7",
+      "evidence_types": [
+        "estimated"
+      ],
+      "execution_id": "geonames.1850147.screen.precipitation.2024",
+      "kind": "standard-screen",
+      "limitations": [
+        "This is a standardized descriptive screen, not a forecast, causal result, simulation, optimization, or recommendation.",
+        "No municipal boundary, population exposure surface, asset inventory, service network, or local policy constraint is present."
+      ],
+      "readiness": "descriptive-only",
+      "recommendation_issued": false,
+      "scenario_id": "geonames.1850147.precipitation-screen.v1",
+      "source_count": 4,
+      "status": "screened",
+      "suite": "standardized-screening",
+      "template_id": "standard.precipitation-screen.v1",
+      "title": "Tokyo 2024 precipitation-context descriptive screen"
+    }
+  ],
+  "kind": "scenarios.standard-screen",
+  "record_count": 90,
+  "schema_version": "1.0.0"
+}
