@@ -16,10 +16,10 @@ Status vocabulary: `planned`, `in_progress`, `implemented_unverified`, `verified
 | SCALE-006 | 1–3 TB compressed rebuildable data catalog | planned | Object inventory, byte totals, remote/local boundary and sampled rebuild |
 | SCALE-007 | Urban graph targeting 100 million nodes/edges | in_progress | Evidence-typed schema and 494-node / 250-edge seed graph verify the contract; partitioned construction, query benchmarks, and target scale remain |
 | SCALE-008 | 240 non-duplicative scenarios | in_progress | Three semantically distinct Tier-S templates have 90 city-bound run records; the records preserve template IDs so repeated templates cannot be miscounted as 90 non-duplicative designs |
-| SCALE-009 | At least 40 historical replays | planned | Data-cutoff proof, replay configs, baselines and held-out results |
-| SCALE-010 | At least 100 optimization tasks | planned | Solver records, baseline comparisons, infeasible/timeout preservation |
-| SCALE-011 | Up to 12 identification-gated causal studies | planned | Estimands, designs, diagnostics, refutations and cautious result language |
-| SCALE-012 | 500–800 automated checks | in_progress | 240 local tests and 95.12% branch-aware coverage, including 100% statement/branch coverage for the 69-test Tier-S package suite; remote CI and mutation testing remain |
+| SCALE-009 | At least 40 historical replays | verified | 40 complete run artifacts over 20 public city-point sources and two parameters; 13,440 training and 1,200 strictly later holdout values; immutable cutoffs, four training-only baselines, held-out metrics, row ledger, hashes, and exact tree rebuild |
+| SCALE-010 | At least 100 optimization tasks | verified | 100 complete solver records; 24,000 declared / 21,710 evaluated portfolios; 70 optimal with explicit zero-action comparisons, 20 proven infeasible, ten deterministic search-limited negative releases; artifact hashes and exact rebuild |
+| SCALE-011 | Up to 12 identification-gated causal studies | in_progress | Strict DID design/diagnostic/claim-gate contract plus one synthetic pass and one synthetic failed-pretrend qualification exist; real domain studies and external method review remain |
+| SCALE-012 | 500–800 automated checks | in_progress | 366 local tests and 95.62% branch-aware coverage; forecast 21, causal 17, simulation 30, uncertainty 23, portfolio 22, benchmark 8 tests; remote CI, mutation testing, and the 500-test floor remain |
 | SCALE-013 | 500 static figures and 80 interactive views | planned | Generated artifact manifest plus visual inspection report |
 | SCALE-014 | 100 DecisionPacks and human-readable briefs | planned | Same-source JSON and rendered outputs, schema validation and sampled recomputation |
 | SCALE-015 | Web, REST API, Python SDK, CLI and adapter/plugin SDK | in_progress | Clean installs, contracts, browser/API tests, package and public demo |
@@ -39,6 +39,12 @@ Status vocabulary: `planned`, `in_progress`, `implemented_unverified`, `verified
 | CORE-009 | Cross-city transportability failures are preserved | planned | Leave-one-city tasks and negative DecisionPacks |
 | CORE-010 | Natural language cannot bypass Scenario DSL validation | planned | Constrained compiler and adversarial tests |
 | CORE-011 | Canonical semantic and graph interchange contracts | verified | Generated Schemas, referential-integrity and evidence-gate tests, 494-geography semantic bundle, 494-node / 250-edge seed graph, and exact rebuild |
+| CORE-012 | Transparent baseline forecast contract | verified | Four baselines, rolling-origin fold evidence, eligibility exclusions, deterministic selection, intervals, negative release, JSON Schema, 40 held-out replays and tests |
+| CORE-013 | Identification-gated causal contract | verified | Declared estimand/design, balance/sample/pretrend/placebo gates, causal-type upgrade protection, association fallback, positive/negative qualification and tests |
+| CORE-014 | Seeded simulation and draw-lineage contract | verified | Six distributions, source/evidence gates, fixed seed, complete incremental draw-stream hash, retained prefix, quantiles, threshold, sensitivity, negative release and tests |
+| CORE-015 | Uncertainty, regret and reversal contract | verified | Paired option integrity, equal tie shares, probability-best, regret, dominance, complete reversal references, robustness gate, negative release and tests |
+| CORE-016 | Bounded portfolio optimization contract | verified | Expected/worst-case objectives, encoded constraints, zero-action baseline, infeasible/search-limited releases, Pareto and solver audit, 100 tasks and tests |
+| CORE-017 | Benchmark evidence-ledger integrity | verified | 145 run hashes, typed row ledger, recomputed counts/work totals, artifact-set hash, three CSV projections, 152 checksums and exact full-tree rebuild |
 
 ## Seven application suites
 
@@ -56,8 +62,8 @@ Status vocabulary: `planned`, `in_progress`, `implemented_unverified`, `verified
 
 | ID | Requirement | Status | Required completion evidence |
 |---|---|---|---|
-| RELEASE-001 | Clean environment install | in_progress | Fresh environment log from tagged archive |
-| RELEASE-002 | Rebuildable public sample | verified | One-command local verifier regenerates both reference DecisionPacks, the Tier-G foundation, and the complete Tier-S artifact tree with exact byte equality |
+| RELEASE-001 | Clean environment install | in_progress | Current-worktree wheel installs and imports in fresh Python 3.12.13 with recorded hash; repeat from a tagged release archive before verification |
+| RELEASE-002 | Rebuildable public sample | verified | One-command local verifier regenerates both reference DecisionPacks, Tier-G, Tier-S, all 145 analytical runs, evidence ledgers, reports and checksums with exact byte equality |
 | RELEASE-003 | Public no-login demo | planned | External browser verification and documented sample boundary |
 | RELEASE-004 | Signed release, checksums and SBOM | planned | GitHub Release assets and independent verification |
 | RELEASE-005 | Security and dependency scanning | in_progress | Workflows are defined; no remote result is claimed until GitHub runs them |

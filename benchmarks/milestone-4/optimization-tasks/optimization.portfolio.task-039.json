@@ -1,0 +1,419 @@
+{
+  "baseline_plan": {
+    "binding_constraints": [],
+    "evidence_type": "optimized",
+    "feasible": false,
+    "group_benefits": {
+      "general": 0.0,
+      "priority": 0.0
+    },
+    "limitations": [
+      "Optimized values are mathematical outputs under declared inputs, not observed impact.",
+      "Feasibility reflects only encoded constraints and does not establish implementability."
+    ],
+    "objective_value": 0.0,
+    "plan_id": "portfolio-plan-00000000",
+    "quantities": {
+      "action-a": 0,
+      "action-b": 0,
+      "action-c": 0,
+      "action-d": 0
+    },
+    "scenario_objectives": {
+      "adverse": 0.0,
+      "base": 0.0,
+      "favorable": 0.0
+    },
+    "selected_action_count": 0,
+    "total_benefit": 0.0,
+    "total_capacity": 0.0,
+    "total_cost": 0.0,
+    "total_risk": 0.0,
+    "violations": [
+      {
+        "bound": 14.0,
+        "constraint_id": "minimum-benefit",
+        "details": "Total modeled benefit is below the floor.",
+        "excess": 14.0,
+        "measured": 0.0
+      },
+      {
+        "bound": 4.0,
+        "constraint_id": "group-priority",
+        "details": "Modeled benefit for priority is below its floor.",
+        "excess": 4.0,
+        "measured": 0.0
+      },
+      {
+        "bound": 1,
+        "constraint_id": "minimum-selected-actions",
+        "details": "Too few action types are selected.",
+        "excess": 1.0,
+        "measured": 0
+      }
+    ]
+  },
+  "created_at": "2026-08-12T10:07:41.052030Z",
+  "diagnostics": [
+    "Evaluated 5 of 180 integer portfolios.",
+    "Compared the selected objective with the explicitly serialized zero-action baseline.",
+    "Retained 5 ranked feasible/infeasible plans for audit.",
+    "Found 4 feasible plans and 4 Pareto-efficient plans."
+  ],
+  "evidence_type": "optimized",
+  "failure_reason": "Stopped after deterministic evaluation limit 5 of 180 plans; no optimality claim is issued.",
+  "infeasibility_diagnostics": [
+    "group-priority: violated by 1 of 5 evaluated plans",
+    "minimum-benefit: violated by 1 of 5 evaluated plans",
+    "minimum-selected-actions: violated by 1 of 5 evaluated plans"
+  ],
+  "limitations": [
+    "This is a deterministic synthetic qualification task, not a real city recommendation.",
+    "Repeated task families vary parameters and statuses but are not independent field studies.",
+    "Optimization proves only mathematical status for encoded actions, scenarios, and constraints.",
+    "The theoretical upper bound ignores feasibility and is diagnostic, not a certified dual bound.",
+    "Search-limited runs preserve incumbents but deliberately issue no selected recommendation."
+  ],
+  "pareto_frontier_plan_ids": [
+    "portfolio-plan-00000001",
+    "portfolio-plan-00000002",
+    "portfolio-plan-00000003",
+    "portfolio-plan-00000004"
+  ],
+  "plans": [
+    {
+      "binding_constraints": [],
+      "evidence_type": "optimized",
+      "feasible": true,
+      "group_benefits": {
+        "general": 14.0,
+        "priority": 10.0
+      },
+      "limitations": [
+        "Optimized values are mathematical outputs under declared inputs, not observed impact.",
+        "Feasibility reflects only encoded constraints and does not establish implementability."
+      ],
+      "objective_value": 25.4,
+      "plan_id": "portfolio-plan-00000002",
+      "quantities": {
+        "action-a": 0,
+        "action-b": 0,
+        "action-c": 0,
+        "action-d": 2
+      },
+      "scenario_objectives": {
+        "adverse": 13.6,
+        "base": 25.4,
+        "favorable": 37.2
+      },
+      "selected_action_count": 1,
+      "total_benefit": 38.0,
+      "total_capacity": 4.0,
+      "total_cost": 12.0,
+      "total_risk": 6.0,
+      "violations": []
+    },
+    {
+      "binding_constraints": [],
+      "evidence_type": "optimized",
+      "feasible": true,
+      "group_benefits": {
+        "general": 13.0,
+        "priority": 9.0
+      },
+      "limitations": [
+        "Optimized values are mathematical outputs under declared inputs, not observed impact.",
+        "Feasibility reflects only encoded constraints and does not establish implementability."
+      ],
+      "objective_value": 23.4,
+      "plan_id": "portfolio-plan-00000004",
+      "quantities": {
+        "action-a": 0,
+        "action-b": 0,
+        "action-c": 1,
+        "action-d": 1
+      },
+      "scenario_objectives": {
+        "adverse": 12.6,
+        "base": 23.4,
+        "favorable": 34.2
+      },
+      "selected_action_count": 2,
+      "total_benefit": 36.0,
+      "total_capacity": 3.0,
+      "total_cost": 11.0,
+      "total_risk": 5.0,
+      "violations": []
+    },
+    {
+      "binding_constraints": [],
+      "evidence_type": "optimized",
+      "feasible": true,
+      "group_benefits": {
+        "general": 7.0,
+        "priority": 5.0
+      },
+      "limitations": [
+        "Optimized values are mathematical outputs under declared inputs, not observed impact.",
+        "Feasibility reflects only encoded constraints and does not establish implementability."
+      ],
+      "objective_value": 12.7,
+      "plan_id": "portfolio-plan-00000001",
+      "quantities": {
+        "action-a": 0,
+        "action-b": 0,
+        "action-c": 0,
+        "action-d": 1
+      },
+      "scenario_objectives": {
+        "adverse": 6.8,
+        "base": 12.7,
+        "favorable": 18.6
+      },
+      "selected_action_count": 1,
+      "total_benefit": 19.0,
+      "total_capacity": 2.0,
+      "total_cost": 6.0,
+      "total_risk": 3.0,
+      "violations": []
+    },
+    {
+      "binding_constraints": [
+        "group-priority"
+      ],
+      "evidence_type": "optimized",
+      "feasible": true,
+      "group_benefits": {
+        "general": 6.0,
+        "priority": 4.0
+      },
+      "limitations": [
+        "Optimized values are mathematical outputs under declared inputs, not observed impact.",
+        "Feasibility reflects only encoded constraints and does not establish implementability."
+      ],
+      "objective_value": 10.7,
+      "plan_id": "portfolio-plan-00000003",
+      "quantities": {
+        "action-a": 0,
+        "action-b": 0,
+        "action-c": 1,
+        "action-d": 0
+      },
+      "scenario_objectives": {
+        "adverse": 5.8,
+        "base": 10.7,
+        "favorable": 15.6
+      },
+      "selected_action_count": 1,
+      "total_benefit": 17.0,
+      "total_capacity": 1.0,
+      "total_cost": 5.0,
+      "total_risk": 2.0,
+      "violations": []
+    },
+    {
+      "binding_constraints": [],
+      "evidence_type": "optimized",
+      "feasible": false,
+      "group_benefits": {
+        "general": 0.0,
+        "priority": 0.0
+      },
+      "limitations": [
+        "Optimized values are mathematical outputs under declared inputs, not observed impact.",
+        "Feasibility reflects only encoded constraints and does not establish implementability."
+      ],
+      "objective_value": 0.0,
+      "plan_id": "portfolio-plan-00000000",
+      "quantities": {
+        "action-a": 0,
+        "action-b": 0,
+        "action-c": 0,
+        "action-d": 0
+      },
+      "scenario_objectives": {
+        "adverse": 0.0,
+        "base": 0.0,
+        "favorable": 0.0
+      },
+      "selected_action_count": 0,
+      "total_benefit": 0.0,
+      "total_capacity": 0.0,
+      "total_cost": 0.0,
+      "total_risk": 0.0,
+      "violations": [
+        {
+          "bound": 14.0,
+          "constraint_id": "minimum-benefit",
+          "details": "Total modeled benefit is below the floor.",
+          "excess": 14.0,
+          "measured": 0.0
+        },
+        {
+          "bound": 4.0,
+          "constraint_id": "group-priority",
+          "details": "Modeled benefit for priority is below its floor.",
+          "excess": 4.0,
+          "measured": 0.0
+        },
+        {
+          "bound": 1,
+          "constraint_id": "minimum-selected-actions",
+          "details": "Too few action types are selected.",
+          "excess": 1.0,
+          "measured": 0
+        }
+      ]
+    }
+  ],
+  "problem": {
+    "actions": [
+      {
+        "action_id": "action-a",
+        "group_benefit_per_unit": {
+          "general": 4.0,
+          "priority": 2.0
+        },
+        "input_evidence_type": "proposed",
+        "label": "Synthetic benchmark action a",
+        "limitations": [
+          "Qualification action is synthetic and not implementable."
+        ],
+        "max_units": 2,
+        "scenario_objective_per_unit": {
+          "adverse": 3.8,
+          "base": 6.699999999999999,
+          "favorable": 9.6
+        },
+        "source_refs": [
+          "synthetic-qualification.portfolio-family-9"
+        ],
+        "unit_benefit": 13.0,
+        "unit_capacity": 1.0,
+        "unit_cost": 3.0,
+        "unit_risk": 4.0
+      },
+      {
+        "action_id": "action-b",
+        "group_benefit_per_unit": {
+          "general": 5.0,
+          "priority": 3.0
+        },
+        "input_evidence_type": "proposed",
+        "label": "Synthetic benchmark action b",
+        "limitations": [
+          "Qualification action is synthetic and not implementable."
+        ],
+        "max_units": 3,
+        "scenario_objective_per_unit": {
+          "adverse": 4.8,
+          "base": 8.7,
+          "favorable": 12.6
+        },
+        "source_refs": [
+          "synthetic-qualification.portfolio-family-9"
+        ],
+        "unit_benefit": 15.0,
+        "unit_capacity": 2.0,
+        "unit_cost": 4.0,
+        "unit_risk": 1.0
+      },
+      {
+        "action_id": "action-c",
+        "group_benefit_per_unit": {
+          "general": 6.0,
+          "priority": 4.0
+        },
+        "input_evidence_type": "proposed",
+        "label": "Synthetic benchmark action c",
+        "limitations": [
+          "Qualification action is synthetic and not implementable."
+        ],
+        "max_units": 4,
+        "scenario_objective_per_unit": {
+          "adverse": 5.8,
+          "base": 10.7,
+          "favorable": 15.6
+        },
+        "source_refs": [
+          "synthetic-qualification.portfolio-family-9"
+        ],
+        "unit_benefit": 17.0,
+        "unit_capacity": 1.0,
+        "unit_cost": 5.0,
+        "unit_risk": 2.0
+      },
+      {
+        "action_id": "action-d",
+        "group_benefit_per_unit": {
+          "general": 7.0,
+          "priority": 5.0
+        },
+        "input_evidence_type": "proposed",
+        "label": "Synthetic benchmark action d",
+        "limitations": [
+          "Qualification action is synthetic and not implementable."
+        ],
+        "max_units": 2,
+        "scenario_objective_per_unit": {
+          "adverse": 6.8,
+          "base": 12.7,
+          "favorable": 18.6
+        },
+        "source_refs": [
+          "synthetic-qualification.portfolio-family-9"
+        ],
+        "unit_benefit": 19.0,
+        "unit_capacity": 2.0,
+        "unit_cost": 6.0,
+        "unit_risk": 3.0
+      }
+    ],
+    "assumptions": [
+      "Action quantities and modeled benefits are additive."
+    ],
+    "config": {
+      "maximum_evaluations": 5,
+      "objective_strategy": "expected",
+      "retained_plans": 75,
+      "scenario_weights": {
+        "adverse": 0.25,
+        "base": 0.5,
+        "favorable": 0.25
+      },
+      "tolerance": 1e-09
+    },
+    "constraints": {
+      "budget": 36.0,
+      "capacity": 17.0,
+      "maximum_risk": 21.0,
+      "maximum_selected_actions": 3,
+      "minimum_benefit": 14.0,
+      "minimum_group_benefit": {
+        "priority": 4.0
+      },
+      "minimum_selected_actions": 1
+    },
+    "limitations": [
+      "This is a deterministic synthetic qualification task, not a real city recommendation.",
+      "Repeated task families vary parameters and statuses but are not independent field studies."
+    ],
+    "objective": "Maximize modeled portfolio benefit across three declared stress scenarios.",
+    "objective_unit": "synthetic benefit points",
+    "problem_id": "synthetic.portfolio.task-039"
+  },
+  "run_id": "optimization.portfolio.task-039",
+  "schema_version": "1.0.0",
+  "solver": {
+    "algorithm": "deterministic exhaustive integer enumeration",
+    "enumeration_complete": false,
+    "evaluated_plans": 5,
+    "feasible_plans": 4,
+    "incumbent_objective": 25.4,
+    "retained_plans": 5,
+    "search_space_size": 180,
+    "theoretical_upper_bound": 156.6,
+    "tie_break_rule": "Maximum robust/expected objective, then minimum cost, quantity tuple, stable ID."
+  },
+  "status": "search-limited"
+}

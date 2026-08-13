@@ -14,6 +14,7 @@ from rich.console import Console
 from rich.table import Table
 
 from civicdecision import __version__
+from civicdecision.benchmarks.build import build_milestone_4_benchmarks
 from civicdecision.connectors.base import atomic_write
 from civicdecision.connectors.cdc_places import CDCPlacesConnector, CDCPlacesQuery
 from civicdecision.connectors.eurostat import (
@@ -65,11 +66,13 @@ protocol_app = typer.Typer(no_args_is_help=True)
 sources_app = typer.Typer(no_args_is_help=True)
 demo_app = typer.Typer(no_args_is_help=True)
 cities_app = typer.Typer(no_args_is_help=True)
+benchmarks_app = typer.Typer(no_args_is_help=True)
 app.add_typer(schemas_app, name="schemas")
 app.add_typer(protocol_app, name="protocol")
 app.add_typer(sources_app, name="sources")
 app.add_typer(demo_app, name="demo")
 app.add_typer(cities_app, name="cities")
+app.add_typer(benchmarks_app, name="benchmarks")
 console = Console()
 
 
@@ -520,6 +523,42 @@ def cities_build_standardized(
     table.add_row("comparison CSV", str(artifacts.comparison_csv_path))
     table.add_row("comparison report", str(artifacts.comparison_markdown_path))
     table.add_row("content hash", registry.content_hash())
+    console.print(table)
+
+
+@benchmarks_app.command("build-milestone-4")
+def benchmarks_build_milestone_4(
+    standardized: Annotated[Path, typer.Option("--standardized-directory")],
+    nasa_sources: Annotated[Path, typer.Option("--nasa-source-directory")],
+    replay_cities: Annotated[int, typer.Option("--replay-city-count")] = 20,
+    optimization_tasks: Annotated[int, typer.Option("--optimization-task-count")] = 100,
+    output: Annotated[Path, typer.Option("--output", "-o")] = Path("benchmarks/milestone-4"),
+) -> None:
+    """Build held-out public replays and synthetic analytical-engine qualifications."""
+
+    try:
+        artifacts = build_milestone_4_benchmarks(
+            standardized_directory=standardized,
+            nasa_source_directory=nasa_sources,
+            output_directory=output,
+            replay_city_count=replay_cities,
+            optimization_task_count=optimization_tasks,
+        )
+    except CivicDecisionError as exc:
+        console.print(f"[red]benchmark build failed safely[/red] {exc}")
+        raise typer.Exit(code=2) from exc
+    table = Table(title="Built milestone 4 analytical benchmarks")
+    table.add_column("Field")
+    table.add_column("Value")
+    table.add_row("run artifacts", str(len(artifacts.artifact_paths)))
+    table.add_row("registry", str(artifacts.registry_path))
+    table.add_row("evidence summary", str(artifacts.evidence_summary_path))
+    table.add_row("summary CSV", str(artifacts.summary_csv_path))
+    table.add_row("replay evidence CSV", str(artifacts.replay_evidence_csv_path))
+    table.add_row("optimization evidence CSV", str(artifacts.optimization_evidence_csv_path))
+    table.add_row("qualification evidence CSV", str(artifacts.qualification_evidence_csv_path))
+    table.add_row("summary report", str(artifacts.summary_markdown_path))
+    table.add_row("checksums", str(artifacts.checksum_path))
     console.print(table)
 
 

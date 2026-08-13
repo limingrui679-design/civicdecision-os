@@ -7,6 +7,7 @@ from pydantic import ValidationError
 
 from civicdecision.protocols.base import (
     IdentifiedModel,
+    StrictModel,
     canonical_json,
     schema_fingerprint,
     sha256_bytes,
@@ -21,6 +22,16 @@ def test_canonical_json_is_order_independent() -> None:
 def test_canonical_json_rejects_nan() -> None:
     with pytest.raises(ValueError):
         canonical_json({"value": float("nan")})
+
+
+class NumericContractFixture(StrictModel):
+    value: float
+
+
+@pytest.mark.parametrize("value", [float("nan"), float("inf"), float("-inf")])
+def test_every_strict_protocol_rejects_nonfinite_floats(value: float) -> None:
+    with pytest.raises(ValidationError, match="finite number"):
+        NumericContractFixture(value=value)
 
 
 def test_sha256_is_namespaced_and_stable() -> None:

@@ -50,6 +50,8 @@ def test_decision_artifacts_round_trip_and_use_portable_checksum(tmp_path: Path)
     restored = validate_document(artifacts.pack_path, DecisionPack)
     assert restored.content_hash() == pack.content_hash()
     assert "decision-pack.json" in artifacts.checksum_path.read_text()
+    assert "decision-brief.md" in artifacts.checksum_path.read_text()
+    assert len(artifacts.checksum_path.read_text().splitlines()) == 2
     assert str(tmp_path) not in artifacts.checksum_path.read_text()
     brief = artifacts.brief_path.read_text()
     assert "Claim boundary" in brief

@@ -26,7 +26,7 @@ def test_cli_version() -> None:
 def test_cli_builds_schemas(tmp_path: Path) -> None:
     result = runner.invoke(app, ["schemas", "build", "--output", str(tmp_path)])
     assert result.exit_code == 0
-    assert len(list(tmp_path.glob("*.schema.json"))) == 9
+    assert len(list(tmp_path.glob("*.schema.json"))) == 17
 
 
 @pytest.mark.parametrize(
@@ -206,6 +206,54 @@ def test_cli_standardized_city_failure_is_nonzero(tmp_path: Path) -> None:
     )
     assert result.exit_code == 2
     assert "standardized city build failed safely" in result.output
+
+
+def test_cli_builds_milestone_4_benchmarks(tmp_path: Path) -> None:
+    output = tmp_path / "benchmarks"
+    result = runner.invoke(
+        app,
+        [
+            "benchmarks",
+            "build-milestone-4",
+            "--standardized-directory",
+            str(ROOT / "catalog/standardized-cities"),
+            "--nasa-source-directory",
+            str(ROOT / "examples/data/tier-s/nasa-power"),
+            "--replay-city-count",
+            "1",
+            "--optimization-task-count",
+            "1",
+            "--output",
+            str(output),
+        ],
+    )
+    assert result.exit_code == 0
+    assert "Built milestone 4 analytical benchmarks" in result.output
+    assert len(list((output / "historical-replays").glob("*.json"))) == 2
+    assert len(list((output / "optimization-tasks").glob("*.json"))) == 1
+    assert len(list((output / "engine-qualification").glob("*.json"))) == 5
+
+
+def test_cli_benchmark_failure_is_nonzero(tmp_path: Path) -> None:
+    result = runner.invoke(
+        app,
+        [
+            "benchmarks",
+            "build-milestone-4",
+            "--standardized-directory",
+            str(tmp_path),
+            "--nasa-source-directory",
+            str(tmp_path),
+            "--replay-city-count",
+            "0",
+            "--optimization-task-count",
+            "1",
+            "--output",
+            str(tmp_path / "output"),
+        ],
+    )
+    assert result.exit_code == 2
+    assert "benchmark build failed safely" in result.output
 
 
 def test_cli_connector_failure_is_nonzero(tmp_path: Path, monkeypatch: pytest.MonkeyPatch) -> None:

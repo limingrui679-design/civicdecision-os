@@ -537,8 +537,8 @@ def write_decision_artifacts(pack: DecisionPack, output_dir: Path) -> DecisionAr
     if round_trip.content_hash() != pack.content_hash():
         raise AnalysisError("serialized DecisionPack failed canonical round-trip verification")
     atomic_write(brief_path, render_decision_brief(pack).encode("utf-8"))
-    file_hash = sha256_file(pack_path)
-    atomic_write(checksum_path, f"{file_hash[7:]}  {pack_path.name}\n".encode("ascii"))
+    checksum_lines = [f"{sha256_file(path)[7:]}  {path.name}" for path in (pack_path, brief_path)]
+    atomic_write(checksum_path, ("\n".join(checksum_lines) + "\n").encode("ascii"))
     return DecisionArtifacts(
         pack_path=pack_path,
         brief_path=brief_path,

@@ -1,0 +1,73 @@
+{
+  "baseline_option_id": "incumbent",
+  "config": {
+    "confidence_level": 0.95,
+    "practical_equivalence_margin": 0.0,
+    "require_paired_draws": true,
+    "robust_probability_threshold": 0.75,
+    "sense": "maximize"
+  },
+  "created_at": "2026-08-12T10:07:41.052030Z",
+  "diagnostics": [
+    "Compared 2 options over 4 aligned draws.",
+    "Selected competitor by probability-best, expected-regret, and stable ID.",
+    "Robust-winner threshold=0.75; observed probability-best=0.5."
+  ],
+  "evidence_type": "estimated",
+  "limitations": [
+    "The analysis conditions on supplied draw streams and does not validate their structural model.",
+    "Probability of being best is not probability of real-world policy success.",
+    "Expected regret uses the declared objective scale and is not automatically monetized.",
+    "Probability-best shares are split equally across exact ties; final selection ties use stable option identifiers.",
+    "A robust winner remains conditional on scenario, model, source, and distribution choices."
+  ],
+  "method": "paired-draws",
+  "option_summaries": [
+    {
+      "dominated_probability": 0.5,
+      "draws": 4,
+      "expected_regret": 4.0,
+      "lower": 2.0,
+      "maximum_regret": 8.0,
+      "mean": 6.0,
+      "option_id": "incumbent",
+      "probability_best": 0.5,
+      "standard_deviation": 4.618802153517006,
+      "upper": 10.0
+    },
+    {
+      "dominated_probability": 0.5,
+      "draws": 4,
+      "expected_regret": 4.0,
+      "lower": 2.0,
+      "maximum_regret": 8.0,
+      "mean": 6.0,
+      "option_id": "competitor",
+      "probability_best": 0.5,
+      "standard_deviation": 4.618802153517006,
+      "upper": 10.0
+    }
+  ],
+  "pairwise_dominance": [
+    {
+      "mean_difference_in_better_direction": 0.0,
+      "option_a": "incumbent",
+      "option_b": "competitor",
+      "practical_margin": 0.0,
+      "probability_a_better": 0.5
+    }
+  ],
+  "reversals": [
+    {
+      "baseline_option_id": "incumbent",
+      "competing_option_id": "competitor",
+      "condition": "Competitor exceeds the baseline by more than 0 objective units.",
+      "first_reversal_draw": 1,
+      "reversal_probability": 0.5
+    }
+  ],
+  "run_id": "qualification.uncertainty.reversal",
+  "schema_version": "1.0.0",
+  "selected_option_id": "competitor",
+  "status": "reversal-risk"
+}

@@ -1,0 +1,665 @@
+{
+  "$defs": {
+    "ActionCandidate": {
+      "additionalProperties": false,
+      "properties": {
+        "action_id": {
+          "pattern": "^[a-z0-9]+(?:[._-][a-z0-9]+)*$",
+          "title": "Action Id",
+          "type": "string"
+        },
+        "group_benefit_per_unit": {
+          "additionalProperties": {
+            "type": "number"
+          },
+          "title": "Group Benefit Per Unit",
+          "type": "object"
+        },
+        "input_evidence_type": {
+          "$ref": "#/$defs/EvidenceType"
+        },
+        "label": {
+          "minLength": 1,
+          "title": "Label",
+          "type": "string"
+        },
+        "limitations": {
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1,
+          "title": "Limitations",
+          "type": "array"
+        },
+        "max_units": {
+          "maximum": 100,
+          "minimum": 0,
+          "title": "Max Units",
+          "type": "integer"
+        },
+        "scenario_objective_per_unit": {
+          "additionalProperties": {
+            "type": "number"
+          },
+          "minProperties": 1,
+          "title": "Scenario Objective Per Unit",
+          "type": "object"
+        },
+        "source_refs": {
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1,
+          "title": "Source Refs",
+          "type": "array"
+        },
+        "unit_benefit": {
+          "title": "Unit Benefit",
+          "type": "number"
+        },
+        "unit_capacity": {
+          "minimum": 0,
+          "title": "Unit Capacity",
+          "type": "number"
+        },
+        "unit_cost": {
+          "minimum": 0,
+          "title": "Unit Cost",
+          "type": "number"
+        },
+        "unit_risk": {
+          "minimum": 0,
+          "title": "Unit Risk",
+          "type": "number"
+        }
+      },
+      "required": [
+        "action_id",
+        "label",
+        "max_units",
+        "unit_cost",
+        "unit_capacity",
+        "unit_risk",
+        "unit_benefit",
+        "scenario_objective_per_unit",
+        "input_evidence_type",
+        "source_refs",
+        "limitations"
+      ],
+      "title": "ActionCandidate",
+      "type": "object"
+    },
+    "ConstraintViolation": {
+      "additionalProperties": false,
+      "properties": {
+        "bound": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "integer"
+            }
+          ],
+          "title": "Bound"
+        },
+        "constraint_id": {
+          "pattern": "^[a-z0-9]+(?:[._-][a-z0-9]+)*$",
+          "title": "Constraint Id",
+          "type": "string"
+        },
+        "details": {
+          "minLength": 1,
+          "title": "Details",
+          "type": "string"
+        },
+        "excess": {
+          "exclusiveMinimum": 0,
+          "title": "Excess",
+          "type": "number"
+        },
+        "measured": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "integer"
+            }
+          ],
+          "title": "Measured"
+        }
+      },
+      "required": [
+        "constraint_id",
+        "measured",
+        "bound",
+        "excess",
+        "details"
+      ],
+      "title": "ConstraintViolation",
+      "type": "object"
+    },
+    "EvidenceType": {
+      "enum": [
+        "observed",
+        "estimated",
+        "causal",
+        "simulated",
+        "optimized",
+        "proposed"
+      ],
+      "title": "EvidenceType",
+      "type": "string"
+    },
+    "ObjectiveStrategy": {
+      "enum": [
+        "expected",
+        "worst-case"
+      ],
+      "title": "ObjectiveStrategy",
+      "type": "string"
+    },
+    "PortfolioConfig": {
+      "additionalProperties": false,
+      "properties": {
+        "maximum_evaluations": {
+          "default": 1000000,
+          "maximum": 10000000,
+          "minimum": 1,
+          "title": "Maximum Evaluations",
+          "type": "integer"
+        },
+        "objective_strategy": {
+          "$ref": "#/$defs/ObjectiveStrategy",
+          "default": "worst-case"
+        },
+        "retained_plans": {
+          "default": 500,
+          "maximum": 100000,
+          "minimum": 1,
+          "title": "Retained Plans",
+          "type": "integer"
+        },
+        "scenario_weights": {
+          "additionalProperties": {
+            "type": "number"
+          },
+          "title": "Scenario Weights",
+          "type": "object"
+        },
+        "tolerance": {
+          "default": 1e-09,
+          "exclusiveMinimum": 0,
+          "maximum": 0.001,
+          "title": "Tolerance",
+          "type": "number"
+        }
+      },
+      "title": "PortfolioConfig",
+      "type": "object"
+    },
+    "PortfolioConstraints": {
+      "additionalProperties": false,
+      "properties": {
+        "budget": {
+          "exclusiveMinimum": 0,
+          "title": "Budget",
+          "type": "number"
+        },
+        "capacity": {
+          "anyOf": [
+            {
+              "exclusiveMinimum": 0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Capacity"
+        },
+        "maximum_risk": {
+          "anyOf": [
+            {
+              "minimum": 0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Maximum Risk"
+        },
+        "maximum_selected_actions": {
+          "anyOf": [
+            {
+              "minimum": 1,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Maximum Selected Actions"
+        },
+        "minimum_benefit": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Minimum Benefit"
+        },
+        "minimum_group_benefit": {
+          "additionalProperties": {
+            "type": "number"
+          },
+          "title": "Minimum Group Benefit",
+          "type": "object"
+        },
+        "minimum_selected_actions": {
+          "default": 1,
+          "minimum": 0,
+          "title": "Minimum Selected Actions",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "budget"
+      ],
+      "title": "PortfolioConstraints",
+      "type": "object"
+    },
+    "PortfolioPlan": {
+      "additionalProperties": false,
+      "properties": {
+        "binding_constraints": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Binding Constraints",
+          "type": "array"
+        },
+        "evidence_type": {
+          "$ref": "#/$defs/EvidenceType",
+          "default": "optimized"
+        },
+        "feasible": {
+          "title": "Feasible",
+          "type": "boolean"
+        },
+        "group_benefits": {
+          "additionalProperties": {
+            "type": "number"
+          },
+          "title": "Group Benefits",
+          "type": "object"
+        },
+        "limitations": {
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1,
+          "title": "Limitations",
+          "type": "array"
+        },
+        "objective_value": {
+          "title": "Objective Value",
+          "type": "number"
+        },
+        "plan_id": {
+          "pattern": "^[a-z0-9]+(?:[._-][a-z0-9]+)*$",
+          "title": "Plan Id",
+          "type": "string"
+        },
+        "quantities": {
+          "additionalProperties": {
+            "type": "integer"
+          },
+          "minProperties": 1,
+          "title": "Quantities",
+          "type": "object"
+        },
+        "scenario_objectives": {
+          "additionalProperties": {
+            "type": "number"
+          },
+          "minProperties": 1,
+          "title": "Scenario Objectives",
+          "type": "object"
+        },
+        "selected_action_count": {
+          "minimum": 0,
+          "title": "Selected Action Count",
+          "type": "integer"
+        },
+        "total_benefit": {
+          "title": "Total Benefit",
+          "type": "number"
+        },
+        "total_capacity": {
+          "minimum": 0,
+          "title": "Total Capacity",
+          "type": "number"
+        },
+        "total_cost": {
+          "minimum": 0,
+          "title": "Total Cost",
+          "type": "number"
+        },
+        "total_risk": {
+          "minimum": 0,
+          "title": "Total Risk",
+          "type": "number"
+        },
+        "violations": {
+          "items": {
+            "$ref": "#/$defs/ConstraintViolation"
+          },
+          "title": "Violations",
+          "type": "array"
+        }
+      },
+      "required": [
+        "plan_id",
+        "quantities",
+        "total_cost",
+        "total_capacity",
+        "total_risk",
+        "total_benefit",
+        "group_benefits",
+        "scenario_objectives",
+        "objective_value",
+        "selected_action_count",
+        "feasible",
+        "violations",
+        "binding_constraints",
+        "limitations"
+      ],
+      "title": "PortfolioPlan",
+      "type": "object"
+    },
+    "PortfolioProblem": {
+      "additionalProperties": false,
+      "properties": {
+        "actions": {
+          "items": {
+            "$ref": "#/$defs/ActionCandidate"
+          },
+          "minItems": 1,
+          "title": "Actions",
+          "type": "array"
+        },
+        "assumptions": {
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1,
+          "title": "Assumptions",
+          "type": "array"
+        },
+        "config": {
+          "$ref": "#/$defs/PortfolioConfig"
+        },
+        "constraints": {
+          "$ref": "#/$defs/PortfolioConstraints"
+        },
+        "limitations": {
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1,
+          "title": "Limitations",
+          "type": "array"
+        },
+        "objective": {
+          "minLength": 1,
+          "title": "Objective",
+          "type": "string"
+        },
+        "objective_unit": {
+          "minLength": 1,
+          "title": "Objective Unit",
+          "type": "string"
+        },
+        "problem_id": {
+          "pattern": "^[a-z0-9]+(?:[._-][a-z0-9]+)*$",
+          "title": "Problem Id",
+          "type": "string"
+        }
+      },
+      "required": [
+        "problem_id",
+        "objective",
+        "objective_unit",
+        "actions",
+        "constraints",
+        "config",
+        "assumptions",
+        "limitations"
+      ],
+      "title": "PortfolioProblem",
+      "type": "object"
+    },
+    "PortfolioRunStatus": {
+      "enum": [
+        "optimal",
+        "infeasible",
+        "search-limited"
+      ],
+      "title": "PortfolioRunStatus",
+      "type": "string"
+    },
+    "SolverAudit": {
+      "additionalProperties": false,
+      "properties": {
+        "algorithm": {
+          "minLength": 1,
+          "title": "Algorithm",
+          "type": "string"
+        },
+        "enumeration_complete": {
+          "title": "Enumeration Complete",
+          "type": "boolean"
+        },
+        "evaluated_plans": {
+          "minimum": 1,
+          "title": "Evaluated Plans",
+          "type": "integer"
+        },
+        "feasible_plans": {
+          "minimum": 0,
+          "title": "Feasible Plans",
+          "type": "integer"
+        },
+        "incumbent_objective": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Incumbent Objective"
+        },
+        "optimality_gap": {
+          "anyOf": [
+            {
+              "minimum": 0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Optimality Gap"
+        },
+        "retained_plans": {
+          "minimum": 1,
+          "title": "Retained Plans",
+          "type": "integer"
+        },
+        "search_space_size": {
+          "minimum": 1,
+          "title": "Search Space Size",
+          "type": "integer"
+        },
+        "theoretical_upper_bound": {
+          "title": "Theoretical Upper Bound",
+          "type": "number"
+        },
+        "tie_break_rule": {
+          "minLength": 1,
+          "title": "Tie Break Rule",
+          "type": "string"
+        }
+      },
+      "required": [
+        "algorithm",
+        "search_space_size",
+        "evaluated_plans",
+        "feasible_plans",
+        "retained_plans",
+        "enumeration_complete",
+        "theoretical_upper_bound",
+        "tie_break_rule"
+      ],
+      "title": "SolverAudit",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "baseline_plan": {
+      "$ref": "#/$defs/PortfolioPlan"
+    },
+    "created_at": {
+      "format": "date-time",
+      "title": "Created At",
+      "type": "string"
+    },
+    "diagnostics": {
+      "items": {
+        "type": "string"
+      },
+      "minItems": 1,
+      "title": "Diagnostics",
+      "type": "array"
+    },
+    "evidence_type": {
+      "$ref": "#/$defs/EvidenceType",
+      "default": "optimized"
+    },
+    "failure_reason": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Failure Reason"
+    },
+    "infeasibility_diagnostics": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Infeasibility Diagnostics",
+      "type": "array"
+    },
+    "limitations": {
+      "items": {
+        "type": "string"
+      },
+      "minItems": 1,
+      "title": "Limitations",
+      "type": "array"
+    },
+    "pareto_frontier_plan_ids": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Pareto Frontier Plan Ids",
+      "type": "array"
+    },
+    "plans": {
+      "items": {
+        "$ref": "#/$defs/PortfolioPlan"
+      },
+      "minItems": 1,
+      "title": "Plans",
+      "type": "array"
+    },
+    "problem": {
+      "$ref": "#/$defs/PortfolioProblem"
+    },
+    "run_id": {
+      "pattern": "^[a-z0-9]+(?:[._-][a-z0-9]+)*$",
+      "title": "Run Id",
+      "type": "string"
+    },
+    "schema_version": {
+      "default": "1.0.0",
+      "title": "Schema Version",
+      "type": "string"
+    },
+    "selected_objective_change_from_baseline": {
+      "anyOf": [
+        {
+          "type": "number"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Selected Objective Change From Baseline"
+    },
+    "selected_plan_id": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Selected Plan Id"
+    },
+    "solver": {
+      "$ref": "#/$defs/SolverAudit"
+    },
+    "status": {
+      "$ref": "#/$defs/PortfolioRunStatus"
+    }
+  },
+  "required": [
+    "run_id",
+    "created_at",
+    "status",
+    "problem",
+    "solver",
+    "baseline_plan",
+    "plans",
+    "pareto_frontier_plan_ids",
+    "infeasibility_diagnostics",
+    "diagnostics",
+    "limitations"
+  ],
+  "title": "PortfolioOptimizationRun",
+  "type": "object"
+}

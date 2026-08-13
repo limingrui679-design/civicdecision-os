@@ -1,0 +1,391 @@
+{
+  "config": {
+    "iterations": 10000,
+    "quantiles": [
+      0.05,
+      0.25,
+      0.5,
+      0.75,
+      0.95
+    ],
+    "random_seed": 20260812,
+    "retained_draws": 25,
+    "threshold": 20.0,
+    "threshold_direction": "at-least"
+  },
+  "created_at": "2026-08-12T10:07:41.052030Z",
+  "diagnostics": [
+    "Generated 10000 draws with explicit seed 20260812.",
+    "Serialized the complete draw-stream hash and a bounded prefix for replay inspection.",
+    "Ranked input association with output; sensitivity correlations are not causal effects."
+  ],
+  "draw_stream_hash": "sha256:499d7a1b8249c5c078bb65c1f013625cc8103250a859019491a86e6e259e881e",
+  "evidence_type": "simulated",
+  "limitations": [
+    "Synthetic model is not calibrated to a real city.",
+    "Outputs are simulated consequences of declared distributions and model structure, not observed outcomes.",
+    "Parameter independence is assumed unless dependence is encoded outside this model.",
+    "Monte Carlo precision does not resolve structural or source uncertainty."
+  ],
+  "model": {
+    "assumptions": [
+      "Independent fixture draws."
+    ],
+    "ceiling": 100.0,
+    "floor": 0.0,
+    "intercept": 5.0,
+    "limitations": [
+      "Synthetic model is not calibrated to a real city."
+    ],
+    "method": "Bounded linear qualification model.",
+    "model_id": "synthetic.risk.milestone-4",
+    "outcome_id": "synthetic-risk-score",
+    "outcome_unit": "points",
+    "scenario_ref": "synthetic.risk-scenario.milestone-4",
+    "terms": [
+      {
+        "coefficient": 2.0,
+        "parameter_id": "exposure"
+      },
+      {
+        "coefficient": -3.0,
+        "parameter_id": "protection"
+      },
+      {
+        "coefficient": 10.0,
+        "parameter_id": "shock"
+      }
+    ]
+  },
+  "parameters": [
+    {
+      "assumptions": [
+        "Uniform fixture."
+      ],
+      "empirical_values": [],
+      "evidence_type": "estimated",
+      "kind": "uniform",
+      "limitations": [
+        "Synthetic input."
+      ],
+      "maximum": 10.0,
+      "minimum": 0.0,
+      "parameter_id": "exposure",
+      "source_refs": [
+        "synthetic-qualification.exposure"
+      ],
+      "unit": "points"
+    },
+    {
+      "assumptions": [
+        "Triangular fixture."
+      ],
+      "empirical_values": [],
+      "evidence_type": "proposed",
+      "kind": "triangular",
+      "limitations": [
+        "Synthetic input."
+      ],
+      "maximum": 5.0,
+      "minimum": 0.0,
+      "mode": 2.0,
+      "parameter_id": "protection",
+      "source_refs": [],
+      "unit": "points"
+    },
+    {
+      "assumptions": [
+        "Independent shock fixture."
+      ],
+      "empirical_values": [],
+      "evidence_type": "proposed",
+      "kind": "bernoulli",
+      "limitations": [
+        "Synthetic input."
+      ],
+      "parameter_id": "shock",
+      "probability": 0.2,
+      "source_refs": [],
+      "unit": "indicator"
+    }
+  ],
+  "retained_draws": [
+    {
+      "iteration": 0,
+      "outcome": 0.8108769761952246,
+      "parameters": {
+        "exposure": 0.5311363985294382,
+        "protection": 1.750465273621217,
+        "shock": 0.0
+      }
+    },
+    {
+      "iteration": 1,
+      "outcome": 14.368345433698822,
+      "parameters": {
+        "exposure": 8.566575842964578,
+        "protection": 2.588268750743445,
+        "shock": 0.0
+      }
+    },
+    {
+      "iteration": 2,
+      "outcome": 14.19399961938295,
+      "parameters": {
+        "exposure": 8.346744325597621,
+        "protection": 2.499829677270764,
+        "shock": 0.0
+      }
+    },
+    {
+      "iteration": 3,
+      "outcome": 6.059630462665876,
+      "parameters": {
+        "exposure": 4.815510673964868,
+        "protection": 2.8571302950879534,
+        "shock": 0.0
+      }
+    },
+    {
+      "iteration": 4,
+      "outcome": 8.157254133494018,
+      "parameters": {
+        "exposure": 3.57725129827048,
+        "protection": 1.3324161543489805,
+        "shock": 0.0
+      }
+    },
+    {
+      "iteration": 5,
+      "outcome": 2.1868020165416207,
+      "parameters": {
+        "exposure": 2.959162463670062,
+        "protection": 2.9105076369328344,
+        "shock": 0.0
+      }
+    },
+    {
+      "iteration": 6,
+      "outcome": 15.04255491422246,
+      "parameters": {
+        "exposure": 7.030460502833629,
+        "protection": 1.339455363814932,
+        "shock": 0.0
+      }
+    },
+    {
+      "iteration": 7,
+      "outcome": 17.088806418339782,
+      "parameters": {
+        "exposure": 7.242971486330076,
+        "protection": 0.7990455181067896,
+        "shock": 0.0
+      }
+    },
+    {
+      "iteration": 8,
+      "outcome": 5.33247395015727,
+      "parameters": {
+        "exposure": 3.407019206677593,
+        "protection": 2.1605214877326384,
+        "shock": 0.0
+      }
+    },
+    {
+      "iteration": 9,
+      "outcome": 12.197963004367022,
+      "parameters": {
+        "exposure": 6.329606723721181,
+        "protection": 1.8204168143584467,
+        "shock": 0.0
+      }
+    },
+    {
+      "iteration": 10,
+      "outcome": 6.09785664606721,
+      "parameters": {
+        "exposure": 1.127580966346553,
+        "protection": 0.3857684288752987,
+        "shock": 0.0
+      }
+    },
+    {
+      "iteration": 11,
+      "outcome": 4.360474991365656,
+      "parameters": {
+        "exposure": 5.787633195251953,
+        "protection": 4.071597133046083,
+        "shock": 0.0
+      }
+    },
+    {
+      "iteration": 12,
+      "outcome": 0.0,
+      "parameters": {
+        "exposure": 1.8386375432927982,
+        "protection": 3.6661359958859534,
+        "shock": 0.0
+      }
+    },
+    {
+      "iteration": 13,
+      "outcome": 0.04948998977173069,
+      "parameters": {
+        "exposure": 0.7269159235985512,
+        "protection": 2.1347806191417904,
+        "shock": 0.0
+      }
+    },
+    {
+      "iteration": 14,
+      "outcome": 0.0,
+      "parameters": {
+        "exposure": 1.880727434968399,
+        "protection": 3.436702666454152,
+        "shock": 0.0
+      }
+    },
+    {
+      "iteration": 15,
+      "outcome": 9.705532687917197,
+      "parameters": {
+        "exposure": 3.7462091770042183,
+        "protection": 0.9289618886970801,
+        "shock": 0.0
+      }
+    },
+    {
+      "iteration": 16,
+      "outcome": 12.484644892342027,
+      "parameters": {
+        "exposure": 5.2477854134237205,
+        "protection": 1.0036419781684711,
+        "shock": 0.0
+      }
+    },
+    {
+      "iteration": 17,
+      "outcome": 3.064968152844781,
+      "parameters": {
+        "exposure": 1.877533909314698,
+        "protection": 1.8966998885948716,
+        "shock": 0.0
+      }
+    },
+    {
+      "iteration": 18,
+      "outcome": 14.754651451230007,
+      "parameters": {
+        "exposure": 6.3306489098737835,
+        "protection": 4.30221545617252,
+        "shock": 1.0
+      }
+    },
+    {
+      "iteration": 19,
+      "outcome": 8.157198730595486,
+      "parameters": {
+        "exposure": 4.44514719685488,
+        "protection": 1.9110318877047583,
+        "shock": 0.0
+      }
+    },
+    {
+      "iteration": 20,
+      "outcome": 0.0,
+      "parameters": {
+        "exposure": 1.008357845699226,
+        "protection": 2.5707113037808162,
+        "shock": 0.0
+      }
+    },
+    {
+      "iteration": 21,
+      "outcome": 2.041330370610647,
+      "parameters": {
+        "exposure": 1.7987056948869384,
+        "protection": 2.185360339721077,
+        "shock": 0.0
+      }
+    },
+    {
+      "iteration": 22,
+      "outcome": 15.560955454665587,
+      "parameters": {
+        "exposure": 6.152008641827885,
+        "protection": 3.914353942996728,
+        "shock": 1.0
+      }
+    },
+    {
+      "iteration": 23,
+      "outcome": 4.565024677855214,
+      "parameters": {
+        "exposure": 3.036434236427994,
+        "protection": 2.169281265000258,
+        "shock": 0.0
+      }
+    },
+    {
+      "iteration": 24,
+      "outcome": 8.590303229861336,
+      "parameters": {
+        "exposure": 7.660229935368948,
+        "protection": 3.91005221362552,
+        "shock": 0.0
+      }
+    }
+  ],
+  "run_id": "qualification.simulation.seeded",
+  "schema_version": "1.0.0",
+  "sensitivity": [
+    {
+      "absolute_rank": 1,
+      "method": "Pearson correlation across the seeded joint Monte Carlo draw stream.",
+      "parameter_id": "exposure",
+      "pearson_correlation": 0.740266843239239
+    },
+    {
+      "absolute_rank": 3,
+      "method": "Pearson correlation across the seeded joint Monte Carlo draw stream.",
+      "parameter_id": "protection",
+      "pearson_correlation": -0.3686925072220168
+    },
+    {
+      "absolute_rank": 2,
+      "method": "Pearson correlation across the seeded joint Monte Carlo draw stream.",
+      "parameter_id": "shock",
+      "pearson_correlation": 0.5342870437222453
+    }
+  ],
+  "status": "completed",
+  "summary": {
+    "maximum": 34.115168591738254,
+    "mean": 10.232030237206969,
+    "minimum": 0.0,
+    "quantiles": [
+      {
+        "probability": 0.05,
+        "value": 0.0
+      },
+      {
+        "probability": 0.25,
+        "value": 4.297524337575887
+      },
+      {
+        "probability": 0.5,
+        "value": 9.891347535992633
+      },
+      {
+        "probability": 0.75,
+        "value": 15.15666997246651
+      },
+      {
+        "probability": 0.95,
+        "value": 23.016327186724215
+      }
+    ],
+    "standard_deviation": 7.219007970288629,
+    "threshold_probability": 0.0986
+  }
+}

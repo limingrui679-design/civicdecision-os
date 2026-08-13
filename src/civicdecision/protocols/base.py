@@ -19,7 +19,12 @@ SHA256_PATTERN = re.compile(r"^sha256:[0-9a-f]{64}$")
 class StrictModel(BaseModel):
     """Base model that forbids silent protocol drift."""
 
-    model_config = ConfigDict(extra="forbid", str_strip_whitespace=True, validate_assignment=True)
+    model_config = ConfigDict(
+        extra="forbid",
+        str_strip_whitespace=True,
+        validate_assignment=True,
+        allow_inf_nan=False,
+    )
 
 
 class IdentifiedModel(StrictModel):

@@ -1,0 +1,2839 @@
+{
+  "baseline_plan": {
+    "binding_constraints": [],
+    "evidence_type": "optimized",
+    "feasible": false,
+    "group_benefits": {
+      "general": 0.0,
+      "priority": 0.0
+    },
+    "limitations": [
+      "Optimized values are mathematical outputs under declared inputs, not observed impact.",
+      "Feasibility reflects only encoded constraints and does not establish implementability."
+    ],
+    "objective_value": 0.0,
+    "plan_id": "portfolio-plan-00000000",
+    "quantities": {
+      "action-a": 0,
+      "action-b": 0,
+      "action-c": 0,
+      "action-d": 0
+    },
+    "scenario_objectives": {
+      "adverse": 0.0,
+      "base": 0.0,
+      "favorable": 0.0
+    },
+    "selected_action_count": 0,
+    "total_benefit": 0.0,
+    "total_capacity": 0.0,
+    "total_cost": 0.0,
+    "total_risk": 0.0,
+    "violations": [
+      {
+        "bound": 8.0,
+        "constraint_id": "minimum-benefit",
+        "details": "Total modeled benefit is below the floor.",
+        "excess": 8.0,
+        "measured": 0.0
+      },
+      {
+        "bound": 6.0,
+        "constraint_id": "group-priority",
+        "details": "Modeled benefit for priority is below its floor.",
+        "excess": 6.0,
+        "measured": 0.0
+      },
+      {
+        "bound": 1,
+        "constraint_id": "minimum-selected-actions",
+        "details": "Too few action types are selected.",
+        "excess": 1.0,
+        "measured": 0
+      }
+    ]
+  },
+  "created_at": "2026-08-12T10:07:41.052030Z",
+  "diagnostics": [
+    "Evaluated 300 of 300 integer portfolios.",
+    "Compared the selected objective with the explicitly serialized zero-action baseline.",
+    "Retained 75 ranked feasible/infeasible plans for audit.",
+    "Found 70 feasible plans and 35 Pareto-efficient plans."
+  ],
+  "evidence_type": "optimized",
+  "infeasibility_diagnostics": [
+    "budget: violated by 197 of 300 evaluated plans",
+    "capacity: violated by 93 of 300 evaluated plans",
+    "group-priority: violated by 7 of 300 evaluated plans",
+    "maximum-risk: violated by 187 of 300 evaluated plans",
+    "maximum-selected-actions: violated by 96 of 300 evaluated plans",
+    "minimum-benefit: violated by 2 of 300 evaluated plans",
+    "minimum-selected-actions: violated by 1 of 300 evaluated plans"
+  ],
+  "limitations": [
+    "This is a deterministic synthetic qualification task, not a real city recommendation.",
+    "Repeated task families vary parameters and statuses but are not independent field studies.",
+    "Optimization proves only mathematical status for encoded actions, scenarios, and constraints.",
+    "The theoretical upper bound ignores feasibility and is diagnostic, not a certified dual bound.",
+    "Search-limited runs preserve incumbents but deliberately issue no selected recommendation."
+  ],
+  "pareto_frontier_plan_ids": [
+    "portfolio-plan-00000002",
+    "portfolio-plan-00000003",
+    "portfolio-plan-00000004",
+    "portfolio-plan-00000006",
+    "portfolio-plan-00000007",
+    "portfolio-plan-00000008",
+    "portfolio-plan-00000010",
+    "portfolio-plan-00000011",
+    "portfolio-plan-00000012",
+    "portfolio-plan-00000015",
+    "portfolio-plan-00000016",
+    "portfolio-plan-00000021",
+    "portfolio-plan-00000022",
+    "portfolio-plan-00000023",
+    "portfolio-plan-00000025",
+    "portfolio-plan-00000026",
+    "portfolio-plan-00000027",
+    "portfolio-plan-00000030",
+    "portfolio-plan-00000031",
+    "portfolio-plan-00000035",
+    "portfolio-plan-00000040",
+    "portfolio-plan-00000041",
+    "portfolio-plan-00000042",
+    "portfolio-plan-00000045",
+    "portfolio-plan-00000046",
+    "portfolio-plan-00000061",
+    "portfolio-plan-00000062",
+    "portfolio-plan-00000063",
+    "portfolio-plan-00000065",
+    "portfolio-plan-00000066",
+    "portfolio-plan-00000067",
+    "portfolio-plan-00000070",
+    "portfolio-plan-00000071",
+    "portfolio-plan-00000081",
+    "portfolio-plan-00000082"
+  ],
+  "plans": [
+    {
+      "binding_constraints": [
+        "budget"
+      ],
+      "evidence_type": "optimized",
+      "feasible": true,
+      "group_benefits": {
+        "general": 28.0,
+        "priority": 20.0
+      },
+      "limitations": [
+        "Optimized values are mathematical outputs under declared inputs, not observed impact.",
+        "Feasibility reflects only encoded constraints and does not establish implementability."
+      ],
+      "objective_value": 43.6,
+      "plan_id": "portfolio-plan-00000004",
+      "quantities": {
+        "action-a": 0,
+        "action-b": 0,
+        "action-c": 0,
+        "action-d": 4
+      },
+      "scenario_objectives": {
+        "adverse": 22.4,
+        "base": 43.6,
+        "favorable": 64.8
+      },
+      "selected_action_count": 1,
+      "total_benefit": 52.0,
+      "total_capacity": 8.0,
+      "total_cost": 24.0,
+      "total_risk": 12.0,
+      "violations": []
+    },
+    {
+      "binding_constraints": [
+        "budget"
+      ],
+      "evidence_type": "optimized",
+      "feasible": true,
+      "group_benefits": {
+        "general": 29.0,
+        "priority": 19.0
+      },
+      "limitations": [
+        "Optimized values are mathematical outputs under declared inputs, not observed impact.",
+        "Feasibility reflects only encoded constraints and does not establish implementability."
+      ],
+      "objective_value": 42.5,
+      "plan_id": "portfolio-plan-00000051",
+      "quantities": {
+        "action-a": 0,
+        "action-b": 2,
+        "action-c": 2,
+        "action-d": 1
+      },
+      "scenario_objectives": {
+        "adverse": 22.0,
+        "base": 42.5,
+        "favorable": 63.0
+      },
+      "selected_action_count": 3,
+      "total_benefit": 53.0,
+      "total_capacity": 8.0,
+      "total_cost": 24.0,
+      "total_risk": 9.0,
+      "violations": []
+    },
+    {
+      "binding_constraints": [
+        "budget"
+      ],
+      "evidence_type": "optimized",
+      "feasible": true,
+      "group_benefits": {
+        "general": 29.0,
+        "priority": 19.0
+      },
+      "limitations": [
+        "Optimized values are mathematical outputs under declared inputs, not observed impact.",
+        "Feasibility reflects only encoded constraints and does not establish implementability."
+      ],
+      "objective_value": 42.5,
+      "plan_id": "portfolio-plan-00000076",
+      "quantities": {
+        "action-a": 1,
+        "action-b": 0,
+        "action-c": 3,
+        "action-d": 1
+      },
+      "scenario_objectives": {
+        "adverse": 22.0,
+        "base": 42.5,
+        "favorable": 62.99999999999999
+      },
+      "selected_action_count": 3,
+      "total_benefit": 53.0,
+      "total_capacity": 6.0,
+      "total_cost": 24.0,
+      "total_risk": 13.0,
+      "violations": []
+    },
+    {
+      "binding_constraints": [],
+      "evidence_type": "optimized",
+      "feasible": true,
+      "group_benefits": {
+        "general": 27.0,
+        "priority": 19.0
+      },
+      "limitations": [
+        "Optimized values are mathematical outputs under declared inputs, not observed impact.",
+        "Feasibility reflects only encoded constraints and does not establish implementability."
+      ],
+      "objective_value": 41.6,
+      "plan_id": "portfolio-plan-00000008",
+      "quantities": {
+        "action-a": 0,
+        "action-b": 0,
+        "action-c": 1,
+        "action-d": 3
+      },
+      "scenario_objectives": {
+        "adverse": 21.4,
+        "base": 41.6,
+        "favorable": 61.8
+      },
+      "selected_action_count": 2,
+      "total_benefit": 50.0,
+      "total_capacity": 7.0,
+      "total_cost": 23.0,
+      "total_risk": 11.0,
+      "violations": []
+    },
+    {
+      "binding_constraints": [
+        "budget"
+      ],
+      "evidence_type": "optimized",
+      "feasible": true,
+      "group_benefits": {
+        "general": 30.0,
+        "priority": 18.0
+      },
+      "limitations": [
+        "Optimized values are mathematical outputs under declared inputs, not observed impact.",
+        "Feasibility reflects only encoded constraints and does not establish implementability."
+      ],
+      "objective_value": 41.400000000000006,
+      "plan_id": "portfolio-plan-00000170",
+      "quantities": {
+        "action-a": 2,
+        "action-b": 2,
+        "action-c": 2,
+        "action-d": 0
+      },
+      "scenario_objectives": {
+        "adverse": 21.6,
+        "base": 41.400000000000006,
+        "favorable": 61.199999999999996
+      },
+      "selected_action_count": 3,
+      "total_benefit": 54.0,
+      "total_capacity": 8.0,
+      "total_cost": 24.0,
+      "total_risk": 14.0,
+      "violations": []
+    },
+    {
+      "binding_constraints": [],
+      "evidence_type": "optimized",
+      "feasible": true,
+      "group_benefits": {
+        "general": 28.0,
+        "priority": 18.0
+      },
+      "limitations": [
+        "Optimized values are mathematical outputs under declared inputs, not observed impact.",
+        "Feasibility reflects only encoded constraints and does not establish implementability."
+      ],
+      "objective_value": 40.5,
+      "plan_id": "portfolio-plan-00000055",
+      "quantities": {
+        "action-a": 0,
+        "action-b": 2,
+        "action-c": 3,
+        "action-d": 0
+      },
+      "scenario_objectives": {
+        "adverse": 21.0,
+        "base": 40.5,
+        "favorable": 59.99999999999999
+      },
+      "selected_action_count": 2,
+      "total_benefit": 51.0,
+      "total_capacity": 7.0,
+      "total_cost": 23.0,
+      "total_risk": 8.0,
+      "violations": []
+    },
+    {
+      "binding_constraints": [],
+      "evidence_type": "optimized",
+      "feasible": true,
+      "group_benefits": {
+        "general": 28.0,
+        "priority": 18.0
+      },
+      "limitations": [
+        "Optimized values are mathematical outputs under declared inputs, not observed impact.",
+        "Feasibility reflects only encoded constraints and does not establish implementability."
+      ],
+      "objective_value": 40.5,
+      "plan_id": "portfolio-plan-00000102",
+      "quantities": {
+        "action-a": 1,
+        "action-b": 2,
+        "action-c": 0,
+        "action-d": 2
+      },
+      "scenario_objectives": {
+        "adverse": 21.0,
+        "base": 40.5,
+        "favorable": 60.0
+      },
+      "selected_action_count": 3,
+      "total_benefit": 51.0,
+      "total_capacity": 9.0,
+      "total_cost": 23.0,
+      "total_risk": 12.0,
+      "violations": []
+    },
+    {
+      "binding_constraints": [],
+      "evidence_type": "optimized",
+      "feasible": true,
+      "group_benefits": {
+        "general": 26.0,
+        "priority": 18.0
+      },
+      "limitations": [
+        "Optimized values are mathematical outputs under declared inputs, not observed impact.",
+        "Feasibility reflects only encoded constraints and does not establish implementability."
+      ],
+      "objective_value": 39.6,
+      "plan_id": "portfolio-plan-00000012",
+      "quantities": {
+        "action-a": 0,
+        "action-b": 0,
+        "action-c": 2,
+        "action-d": 2
+      },
+      "scenario_objectives": {
+        "adverse": 20.4,
+        "base": 39.6,
+        "favorable": 58.8
+      },
+      "selected_action_count": 2,
+      "total_benefit": 48.0,
+      "total_capacity": 6.0,
+      "total_cost": 22.0,
+      "total_risk": 10.0,
+      "violations": []
+    },
+    {
+      "binding_constraints": [],
+      "evidence_type": "optimized",
+      "feasible": true,
+      "group_benefits": {
+        "general": 26.0,
+        "priority": 18.0
+      },
+      "limitations": [
+        "Optimized values are mathematical outputs under declared inputs, not observed impact.",
+        "Feasibility reflects only encoded constraints and does not establish implementability."
+      ],
+      "objective_value": 39.6,
+      "plan_id": "portfolio-plan-00000023",
+      "quantities": {
+        "action-a": 0,
+        "action-b": 1,
+        "action-c": 0,
+        "action-d": 3
+      },
+      "scenario_objectives": {
+        "adverse": 20.4,
+        "base": 39.6,
+        "favorable": 58.8
+      },
+      "selected_action_count": 2,
+      "total_benefit": 48.0,
+      "total_capacity": 8.0,
+      "total_cost": 22.0,
+      "total_risk": 10.0,
+      "violations": []
+    },
+    {
+      "binding_constraints": [],
+      "evidence_type": "optimized",
+      "feasible": true,
+      "group_benefits": {
+        "general": 27.0,
+        "priority": 17.0
+      },
+      "limitations": [
+        "Optimized values are mathematical outputs under declared inputs, not observed impact.",
+        "Feasibility reflects only encoded constraints and does not establish implementability."
+      ],
+      "objective_value": 38.5,
+      "plan_id": "portfolio-plan-00000095",
+      "quantities": {
+        "action-a": 1,
+        "action-b": 1,
+        "action-c": 3,
+        "action-d": 0
+      },
+      "scenario_objectives": {
+        "adverse": 20.0,
+        "base": 38.5,
+        "favorable": 56.99999999999999
+      },
+      "selected_action_count": 3,
+      "total_benefit": 49.0,
+      "total_capacity": 6.0,
+      "total_cost": 22.0,
+      "total_risk": 11.0,
+      "violations": []
+    },
+    {
+      "binding_constraints": [
+        "maximum-risk"
+      ],
+      "evidence_type": "optimized",
+      "feasible": true,
+      "group_benefits": {
+        "general": 27.0,
+        "priority": 17.0
+      },
+      "limitations": [
+        "Optimized values are mathematical outputs under declared inputs, not observed impact.",
+        "Feasibility reflects only encoded constraints and does not establish implementability."
+      ],
+      "objective_value": 38.5,
+      "plan_id": "portfolio-plan-00000131",
+      "quantities": {
+        "action-a": 2,
+        "action-b": 0,
+        "action-c": 2,
+        "action-d": 1
+      },
+      "scenario_objectives": {
+        "adverse": 20.0,
+        "base": 38.5,
+        "favorable": 57.0
+      },
+      "selected_action_count": 3,
+      "total_benefit": 49.0,
+      "total_capacity": 6.0,
+      "total_cost": 22.0,
+      "total_risk": 15.0,
+      "violations": []
+    },
+    {
+      "binding_constraints": [
+        "maximum-risk"
+      ],
+      "evidence_type": "optimized",
+      "feasible": true,
+      "group_benefits": {
+        "general": 27.0,
+        "priority": 17.0
+      },
+      "limitations": [
+        "Optimized values are mathematical outputs under declared inputs, not observed impact.",
+        "Feasibility reflects only encoded constraints and does not establish implementability."
+      ],
+      "objective_value": 38.5,
+      "plan_id": "portfolio-plan-00000142",
+      "quantities": {
+        "action-a": 2,
+        "action-b": 1,
+        "action-c": 0,
+        "action-d": 2
+      },
+      "scenario_objectives": {
+        "adverse": 20.0,
+        "base": 38.5,
+        "favorable": 57.0
+      },
+      "selected_action_count": 3,
+      "total_benefit": 49.0,
+      "total_capacity": 8.0,
+      "total_cost": 22.0,
+      "total_risk": 15.0,
+      "violations": []
+    },
+    {
+      "binding_constraints": [],
+      "evidence_type": "optimized",
+      "feasible": true,
+      "group_benefits": {
+        "general": 25.0,
+        "priority": 17.0
+      },
+      "limitations": [
+        "Optimized values are mathematical outputs under declared inputs, not observed impact.",
+        "Feasibility reflects only encoded constraints and does not establish implementability."
+      ],
+      "objective_value": 37.6,
+      "plan_id": "portfolio-plan-00000016",
+      "quantities": {
+        "action-a": 0,
+        "action-b": 0,
+        "action-c": 3,
+        "action-d": 1
+      },
+      "scenario_objectives": {
+        "adverse": 19.4,
+        "base": 37.6,
+        "favorable": 55.8
+      },
+      "selected_action_count": 2,
+      "total_benefit": 46.0,
+      "total_capacity": 5.0,
+      "total_cost": 21.0,
+      "total_risk": 9.0,
+      "violations": []
+    },
+    {
+      "binding_constraints": [],
+      "evidence_type": "optimized",
+      "feasible": true,
+      "group_benefits": {
+        "general": 25.0,
+        "priority": 17.0
+      },
+      "limitations": [
+        "Optimized values are mathematical outputs under declared inputs, not observed impact.",
+        "Feasibility reflects only encoded constraints and does not establish implementability."
+      ],
+      "objective_value": 37.6,
+      "plan_id": "portfolio-plan-00000027",
+      "quantities": {
+        "action-a": 0,
+        "action-b": 1,
+        "action-c": 1,
+        "action-d": 2
+      },
+      "scenario_objectives": {
+        "adverse": 19.4,
+        "base": 37.6,
+        "favorable": 55.8
+      },
+      "selected_action_count": 3,
+      "total_benefit": 46.0,
+      "total_capacity": 7.0,
+      "total_cost": 21.0,
+      "total_risk": 9.0,
+      "violations": []
+    },
+    {
+      "binding_constraints": [],
+      "evidence_type": "optimized",
+      "feasible": true,
+      "group_benefits": {
+        "general": 25.0,
+        "priority": 17.0
+      },
+      "limitations": [
+        "Optimized values are mathematical outputs under declared inputs, not observed impact.",
+        "Feasibility reflects only encoded constraints and does not establish implementability."
+      ],
+      "objective_value": 37.6,
+      "plan_id": "portfolio-plan-00000063",
+      "quantities": {
+        "action-a": 1,
+        "action-b": 0,
+        "action-c": 0,
+        "action-d": 3
+      },
+      "scenario_objectives": {
+        "adverse": 19.4,
+        "base": 37.6,
+        "favorable": 55.8
+      },
+      "selected_action_count": 2,
+      "total_benefit": 46.0,
+      "total_capacity": 7.0,
+      "total_cost": 21.0,
+      "total_risk": 13.0,
+      "violations": []
+    },
+    {
+      "binding_constraints": [],
+      "evidence_type": "optimized",
+      "feasible": true,
+      "group_benefits": {
+        "general": 26.0,
+        "priority": 16.0
+      },
+      "limitations": [
+        "Optimized values are mathematical outputs under declared inputs, not observed impact.",
+        "Feasibility reflects only encoded constraints and does not establish implementability."
+      ],
+      "objective_value": 36.5,
+      "plan_id": "portfolio-plan-00000110",
+      "quantities": {
+        "action-a": 1,
+        "action-b": 2,
+        "action-c": 2,
+        "action-d": 0
+      },
+      "scenario_objectives": {
+        "adverse": 19.0,
+        "base": 36.5,
+        "favorable": 54.0
+      },
+      "selected_action_count": 3,
+      "total_benefit": 47.0,
+      "total_capacity": 7.0,
+      "total_cost": 21.0,
+      "total_risk": 10.0,
+      "violations": []
+    },
+    {
+      "binding_constraints": [],
+      "evidence_type": "optimized",
+      "feasible": true,
+      "group_benefits": {
+        "general": 26.0,
+        "priority": 16.0
+      },
+      "limitations": [
+        "Optimized values are mathematical outputs under declared inputs, not observed impact.",
+        "Feasibility reflects only encoded constraints and does not establish implementability."
+      ],
+      "objective_value": 36.5,
+      "plan_id": "portfolio-plan-00000135",
+      "quantities": {
+        "action-a": 2,
+        "action-b": 0,
+        "action-c": 3,
+        "action-d": 0
+      },
+      "scenario_objectives": {
+        "adverse": 19.0,
+        "base": 36.5,
+        "favorable": 53.99999999999999
+      },
+      "selected_action_count": 2,
+      "total_benefit": 47.0,
+      "total_capacity": 5.0,
+      "total_cost": 21.0,
+      "total_risk": 14.0,
+      "violations": []
+    },
+    {
+      "binding_constraints": [],
+      "evidence_type": "optimized",
+      "feasible": true,
+      "group_benefits": {
+        "general": 24.0,
+        "priority": 16.0
+      },
+      "limitations": [
+        "Optimized values are mathematical outputs under declared inputs, not observed impact.",
+        "Feasibility reflects only encoded constraints and does not establish implementability."
+      ],
+      "objective_value": 35.6,
+      "plan_id": "portfolio-plan-00000031",
+      "quantities": {
+        "action-a": 0,
+        "action-b": 1,
+        "action-c": 2,
+        "action-d": 1
+      },
+      "scenario_objectives": {
+        "adverse": 18.4,
+        "base": 35.6,
+        "favorable": 52.8
+      },
+      "selected_action_count": 3,
+      "total_benefit": 44.0,
+      "total_capacity": 6.0,
+      "total_cost": 20.0,
+      "total_risk": 8.0,
+      "violations": []
+    },
+    {
+      "binding_constraints": [],
+      "evidence_type": "optimized",
+      "feasible": true,
+      "group_benefits": {
+        "general": 24.0,
+        "priority": 16.0
+      },
+      "limitations": [
+        "Optimized values are mathematical outputs under declared inputs, not observed impact.",
+        "Feasibility reflects only encoded constraints and does not establish implementability."
+      ],
+      "objective_value": 35.6,
+      "plan_id": "portfolio-plan-00000042",
+      "quantities": {
+        "action-a": 0,
+        "action-b": 2,
+        "action-c": 0,
+        "action-d": 2
+      },
+      "scenario_objectives": {
+        "adverse": 18.4,
+        "base": 35.6,
+        "favorable": 52.8
+      },
+      "selected_action_count": 2,
+      "total_benefit": 44.0,
+      "total_capacity": 8.0,
+      "total_cost": 20.0,
+      "total_risk": 8.0,
+      "violations": []
+    },
+    {
+      "binding_constraints": [],
+      "evidence_type": "optimized",
+      "feasible": true,
+      "group_benefits": {
+        "general": 24.0,
+        "priority": 16.0
+      },
+      "limitations": [
+        "Optimized values are mathematical outputs under declared inputs, not observed impact.",
+        "Feasibility reflects only encoded constraints and does not establish implementability."
+      ],
+      "objective_value": 35.6,
+      "plan_id": "portfolio-plan-00000067",
+      "quantities": {
+        "action-a": 1,
+        "action-b": 0,
+        "action-c": 1,
+        "action-d": 2
+      },
+      "scenario_objectives": {
+        "adverse": 18.4,
+        "base": 35.6,
+        "favorable": 52.8
+      },
+      "selected_action_count": 3,
+      "total_benefit": 44.0,
+      "total_capacity": 6.0,
+      "total_cost": 20.0,
+      "total_risk": 12.0,
+      "violations": []
+    },
+    {
+      "binding_constraints": [],
+      "evidence_type": "optimized",
+      "feasible": true,
+      "group_benefits": {
+        "general": 25.0,
+        "priority": 15.0
+      },
+      "limitations": [
+        "Optimized values are mathematical outputs under declared inputs, not observed impact.",
+        "Feasibility reflects only encoded constraints and does not establish implementability."
+      ],
+      "objective_value": 34.5,
+      "plan_id": "portfolio-plan-00000150",
+      "quantities": {
+        "action-a": 2,
+        "action-b": 1,
+        "action-c": 2,
+        "action-d": 0
+      },
+      "scenario_objectives": {
+        "adverse": 18.0,
+        "base": 34.5,
+        "favorable": 51.0
+      },
+      "selected_action_count": 3,
+      "total_benefit": 45.0,
+      "total_capacity": 6.0,
+      "total_cost": 20.0,
+      "total_risk": 13.0,
+      "violations": []
+    },
+    {
+      "binding_constraints": [],
+      "evidence_type": "optimized",
+      "feasible": true,
+      "group_benefits": {
+        "general": 25.0,
+        "priority": 15.0
+      },
+      "limitations": [
+        "Optimized values are mathematical outputs under declared inputs, not observed impact.",
+        "Feasibility reflects only encoded constraints and does not establish implementability."
+      ],
+      "objective_value": 34.5,
+      "plan_id": "portfolio-plan-00000161",
+      "quantities": {
+        "action-a": 2,
+        "action-b": 2,
+        "action-c": 0,
+        "action-d": 1
+      },
+      "scenario_objectives": {
+        "adverse": 18.0,
+        "base": 34.5,
+        "favorable": 51.0
+      },
+      "selected_action_count": 3,
+      "total_benefit": 45.0,
+      "total_capacity": 8.0,
+      "total_cost": 20.0,
+      "total_risk": 13.0,
+      "violations": []
+    },
+    {
+      "binding_constraints": [],
+      "evidence_type": "optimized",
+      "feasible": true,
+      "group_benefits": {
+        "general": 23.0,
+        "priority": 15.0
+      },
+      "limitations": [
+        "Optimized values are mathematical outputs under declared inputs, not observed impact.",
+        "Feasibility reflects only encoded constraints and does not establish implementability."
+      ],
+      "objective_value": 33.6,
+      "plan_id": "portfolio-plan-00000035",
+      "quantities": {
+        "action-a": 0,
+        "action-b": 1,
+        "action-c": 3,
+        "action-d": 0
+      },
+      "scenario_objectives": {
+        "adverse": 17.4,
+        "base": 33.6,
+        "favorable": 49.8
+      },
+      "selected_action_count": 2,
+      "total_benefit": 42.0,
+      "total_capacity": 5.0,
+      "total_cost": 19.0,
+      "total_risk": 7.0,
+      "violations": []
+    },
+    {
+      "binding_constraints": [],
+      "evidence_type": "optimized",
+      "feasible": true,
+      "group_benefits": {
+        "general": 23.0,
+        "priority": 15.0
+      },
+      "limitations": [
+        "Optimized values are mathematical outputs under declared inputs, not observed impact.",
+        "Feasibility reflects only encoded constraints and does not establish implementability."
+      ],
+      "objective_value": 33.6,
+      "plan_id": "portfolio-plan-00000046",
+      "quantities": {
+        "action-a": 0,
+        "action-b": 2,
+        "action-c": 1,
+        "action-d": 1
+      },
+      "scenario_objectives": {
+        "adverse": 17.4,
+        "base": 33.6,
+        "favorable": 49.8
+      },
+      "selected_action_count": 3,
+      "total_benefit": 42.0,
+      "total_capacity": 7.0,
+      "total_cost": 19.0,
+      "total_risk": 7.0,
+      "violations": []
+    },
+    {
+      "binding_constraints": [],
+      "evidence_type": "optimized",
+      "feasible": true,
+      "group_benefits": {
+        "general": 23.0,
+        "priority": 15.0
+      },
+      "limitations": [
+        "Optimized values are mathematical outputs under declared inputs, not observed impact.",
+        "Feasibility reflects only encoded constraints and does not establish implementability."
+      ],
+      "objective_value": 33.6,
+      "plan_id": "portfolio-plan-00000071",
+      "quantities": {
+        "action-a": 1,
+        "action-b": 0,
+        "action-c": 2,
+        "action-d": 1
+      },
+      "scenario_objectives": {
+        "adverse": 17.4,
+        "base": 33.6,
+        "favorable": 49.8
+      },
+      "selected_action_count": 3,
+      "total_benefit": 42.0,
+      "total_capacity": 5.0,
+      "total_cost": 19.0,
+      "total_risk": 11.0,
+      "violations": []
+    },
+    {
+      "binding_constraints": [],
+      "evidence_type": "optimized",
+      "feasible": true,
+      "group_benefits": {
+        "general": 23.0,
+        "priority": 15.0
+      },
+      "limitations": [
+        "Optimized values are mathematical outputs under declared inputs, not observed impact.",
+        "Feasibility reflects only encoded constraints and does not establish implementability."
+      ],
+      "objective_value": 33.6,
+      "plan_id": "portfolio-plan-00000082",
+      "quantities": {
+        "action-a": 1,
+        "action-b": 1,
+        "action-c": 0,
+        "action-d": 2
+      },
+      "scenario_objectives": {
+        "adverse": 17.4,
+        "base": 33.6,
+        "favorable": 49.8
+      },
+      "selected_action_count": 3,
+      "total_benefit": 42.0,
+      "total_capacity": 7.0,
+      "total_cost": 19.0,
+      "total_risk": 11.0,
+      "violations": []
+    },
+    {
+      "binding_constraints": [],
+      "evidence_type": "optimized",
+      "feasible": true,
+      "group_benefits": {
+        "general": 21.0,
+        "priority": 15.0
+      },
+      "limitations": [
+        "Optimized values are mathematical outputs under declared inputs, not observed impact.",
+        "Feasibility reflects only encoded constraints and does not establish implementability."
+      ],
+      "objective_value": 32.7,
+      "plan_id": "portfolio-plan-00000003",
+      "quantities": {
+        "action-a": 0,
+        "action-b": 0,
+        "action-c": 0,
+        "action-d": 3
+      },
+      "scenario_objectives": {
+        "adverse": 16.799999999999997,
+        "base": 32.7,
+        "favorable": 48.599999999999994
+      },
+      "selected_action_count": 1,
+      "total_benefit": 39.0,
+      "total_capacity": 6.0,
+      "total_cost": 18.0,
+      "total_risk": 9.0,
+      "violations": []
+    },
+    {
+      "binding_constraints": [],
+      "evidence_type": "optimized",
+      "feasible": true,
+      "group_benefits": {
+        "general": 24.0,
+        "priority": 14.0
+      },
+      "limitations": [
+        "Optimized values are mathematical outputs under declared inputs, not observed impact.",
+        "Feasibility reflects only encoded constraints and does not establish implementability."
+      ],
+      "objective_value": 32.5,
+      "plan_id": "portfolio-plan-00000165",
+      "quantities": {
+        "action-a": 2,
+        "action-b": 2,
+        "action-c": 1,
+        "action-d": 0
+      },
+      "scenario_objectives": {
+        "adverse": 17.0,
+        "base": 32.5,
+        "favorable": 48.0
+      },
+      "selected_action_count": 3,
+      "total_benefit": 43.0,
+      "total_capacity": 7.0,
+      "total_cost": 19.0,
+      "total_risk": 12.0,
+      "violations": []
+    },
+    {
+      "binding_constraints": [],
+      "evidence_type": "optimized",
+      "feasible": true,
+      "group_benefits": {
+        "general": 22.0,
+        "priority": 14.0
+      },
+      "limitations": [
+        "Optimized values are mathematical outputs under declared inputs, not observed impact.",
+        "Feasibility reflects only encoded constraints and does not establish implementability."
+      ],
+      "objective_value": 31.6,
+      "plan_id": "portfolio-plan-00000050",
+      "quantities": {
+        "action-a": 0,
+        "action-b": 2,
+        "action-c": 2,
+        "action-d": 0
+      },
+      "scenario_objectives": {
+        "adverse": 16.4,
+        "base": 31.6,
+        "favorable": 46.8
+      },
+      "selected_action_count": 2,
+      "total_benefit": 40.0,
+      "total_capacity": 6.0,
+      "total_cost": 18.0,
+      "total_risk": 6.0,
+      "violations": []
+    },
+    {
+      "binding_constraints": [],
+      "evidence_type": "optimized",
+      "feasible": true,
+      "group_benefits": {
+        "general": 22.0,
+        "priority": 14.0
+      },
+      "limitations": [
+        "Optimized values are mathematical outputs under declared inputs, not observed impact.",
+        "Feasibility reflects only encoded constraints and does not establish implementability."
+      ],
+      "objective_value": 31.6,
+      "plan_id": "portfolio-plan-00000075",
+      "quantities": {
+        "action-a": 1,
+        "action-b": 0,
+        "action-c": 3,
+        "action-d": 0
+      },
+      "scenario_objectives": {
+        "adverse": 16.4,
+        "base": 31.6,
+        "favorable": 46.8
+      },
+      "selected_action_count": 2,
+      "total_benefit": 40.0,
+      "total_capacity": 4.0,
+      "total_cost": 18.0,
+      "total_risk": 10.0,
+      "violations": []
+    },
+    {
+      "binding_constraints": [],
+      "evidence_type": "optimized",
+      "feasible": true,
+      "group_benefits": {
+        "general": 22.0,
+        "priority": 14.0
+      },
+      "limitations": [
+        "Optimized values are mathematical outputs under declared inputs, not observed impact.",
+        "Feasibility reflects only encoded constraints and does not establish implementability."
+      ],
+      "objective_value": 31.6,
+      "plan_id": "portfolio-plan-00000122",
+      "quantities": {
+        "action-a": 2,
+        "action-b": 0,
+        "action-c": 0,
+        "action-d": 2
+      },
+      "scenario_objectives": {
+        "adverse": 16.4,
+        "base": 31.6,
+        "favorable": 46.8
+      },
+      "selected_action_count": 2,
+      "total_benefit": 40.0,
+      "total_capacity": 6.0,
+      "total_cost": 18.0,
+      "total_risk": 14.0,
+      "violations": []
+    },
+    {
+      "binding_constraints": [],
+      "evidence_type": "optimized",
+      "feasible": true,
+      "group_benefits": {
+        "general": 20.0,
+        "priority": 14.0
+      },
+      "limitations": [
+        "Optimized values are mathematical outputs under declared inputs, not observed impact.",
+        "Feasibility reflects only encoded constraints and does not establish implementability."
+      ],
+      "objective_value": 30.7,
+      "plan_id": "portfolio-plan-00000007",
+      "quantities": {
+        "action-a": 0,
+        "action-b": 0,
+        "action-c": 1,
+        "action-d": 2
+      },
+      "scenario_objectives": {
+        "adverse": 15.799999999999999,
+        "base": 30.700000000000003,
+        "favorable": 45.599999999999994
+      },
+      "selected_action_count": 2,
+      "total_benefit": 37.0,
+      "total_capacity": 5.0,
+      "total_cost": 17.0,
+      "total_risk": 8.0,
+      "violations": []
+    },
+    {
+      "binding_constraints": [
+        "maximum-risk"
+      ],
+      "evidence_type": "optimized",
+      "feasible": true,
+      "group_benefits": {
+        "general": 23.0,
+        "priority": 13.0
+      },
+      "limitations": [
+        "Optimized values are mathematical outputs under declared inputs, not observed impact.",
+        "Feasibility reflects only encoded constraints and does not establish implementability."
+      ],
+      "objective_value": 30.5,
+      "plan_id": "portfolio-plan-00000205",
+      "quantities": {
+        "action-a": 3,
+        "action-b": 1,
+        "action-c": 1,
+        "action-d": 0
+      },
+      "scenario_objectives": {
+        "adverse": 16.0,
+        "base": 30.5,
+        "favorable": 45.0
+      },
+      "selected_action_count": 3,
+      "total_benefit": 41.0,
+      "total_capacity": 6.0,
+      "total_cost": 18.0,
+      "total_risk": 15.0,
+      "violations": []
+    },
+    {
+      "binding_constraints": [],
+      "evidence_type": "optimized",
+      "feasible": true,
+      "group_benefits": {
+        "general": 21.0,
+        "priority": 13.0
+      },
+      "limitations": [
+        "Optimized values are mathematical outputs under declared inputs, not observed impact.",
+        "Feasibility reflects only encoded constraints and does not establish implementability."
+      ],
+      "objective_value": 29.6,
+      "plan_id": "portfolio-plan-00000090",
+      "quantities": {
+        "action-a": 1,
+        "action-b": 1,
+        "action-c": 2,
+        "action-d": 0
+      },
+      "scenario_objectives": {
+        "adverse": 15.399999999999999,
+        "base": 29.6,
+        "favorable": 43.8
+      },
+      "selected_action_count": 3,
+      "total_benefit": 38.0,
+      "total_capacity": 5.0,
+      "total_cost": 17.0,
+      "total_risk": 9.0,
+      "violations": []
+    },
+    {
+      "binding_constraints": [],
+      "evidence_type": "optimized",
+      "feasible": true,
+      "group_benefits": {
+        "general": 21.0,
+        "priority": 13.0
+      },
+      "limitations": [
+        "Optimized values are mathematical outputs under declared inputs, not observed impact.",
+        "Feasibility reflects only encoded constraints and does not establish implementability."
+      ],
+      "objective_value": 29.6,
+      "plan_id": "portfolio-plan-00000101",
+      "quantities": {
+        "action-a": 1,
+        "action-b": 2,
+        "action-c": 0,
+        "action-d": 1
+      },
+      "scenario_objectives": {
+        "adverse": 15.4,
+        "base": 29.6,
+        "favorable": 43.8
+      },
+      "selected_action_count": 3,
+      "total_benefit": 38.0,
+      "total_capacity": 7.0,
+      "total_cost": 17.0,
+      "total_risk": 9.0,
+      "violations": []
+    },
+    {
+      "binding_constraints": [],
+      "evidence_type": "optimized",
+      "feasible": true,
+      "group_benefits": {
+        "general": 21.0,
+        "priority": 13.0
+      },
+      "limitations": [
+        "Optimized values are mathematical outputs under declared inputs, not observed impact.",
+        "Feasibility reflects only encoded constraints and does not establish implementability."
+      ],
+      "objective_value": 29.6,
+      "plan_id": "portfolio-plan-00000126",
+      "quantities": {
+        "action-a": 2,
+        "action-b": 0,
+        "action-c": 1,
+        "action-d": 1
+      },
+      "scenario_objectives": {
+        "adverse": 15.399999999999999,
+        "base": 29.6,
+        "favorable": 43.8
+      },
+      "selected_action_count": 3,
+      "total_benefit": 38.0,
+      "total_capacity": 5.0,
+      "total_cost": 17.0,
+      "total_risk": 13.0,
+      "violations": []
+    },
+    {
+      "binding_constraints": [],
+      "evidence_type": "optimized",
+      "feasible": true,
+      "group_benefits": {
+        "general": 19.0,
+        "priority": 13.0
+      },
+      "limitations": [
+        "Optimized values are mathematical outputs under declared inputs, not observed impact.",
+        "Feasibility reflects only encoded constraints and does not establish implementability."
+      ],
+      "objective_value": 28.7,
+      "plan_id": "portfolio-plan-00000011",
+      "quantities": {
+        "action-a": 0,
+        "action-b": 0,
+        "action-c": 2,
+        "action-d": 1
+      },
+      "scenario_objectives": {
+        "adverse": 14.799999999999999,
+        "base": 28.700000000000003,
+        "favorable": 42.599999999999994
+      },
+      "selected_action_count": 2,
+      "total_benefit": 35.0,
+      "total_capacity": 4.0,
+      "total_cost": 16.0,
+      "total_risk": 7.0,
+      "violations": []
+    },
+    {
+      "binding_constraints": [],
+      "evidence_type": "optimized",
+      "feasible": true,
+      "group_benefits": {
+        "general": 19.0,
+        "priority": 13.0
+      },
+      "limitations": [
+        "Optimized values are mathematical outputs under declared inputs, not observed impact.",
+        "Feasibility reflects only encoded constraints and does not establish implementability."
+      ],
+      "objective_value": 28.7,
+      "plan_id": "portfolio-plan-00000022",
+      "quantities": {
+        "action-a": 0,
+        "action-b": 1,
+        "action-c": 0,
+        "action-d": 2
+      },
+      "scenario_objectives": {
+        "adverse": 14.799999999999999,
+        "base": 28.700000000000003,
+        "favorable": 42.599999999999994
+      },
+      "selected_action_count": 2,
+      "total_benefit": 35.0,
+      "total_capacity": 6.0,
+      "total_cost": 16.0,
+      "total_risk": 7.0,
+      "violations": []
+    },
+    {
+      "binding_constraints": [],
+      "evidence_type": "optimized",
+      "feasible": true,
+      "group_benefits": {
+        "general": 22.0,
+        "priority": 12.0
+      },
+      "limitations": [
+        "Optimized values are mathematical outputs under declared inputs, not observed impact.",
+        "Feasibility reflects only encoded constraints and does not establish implementability."
+      ],
+      "objective_value": 28.5,
+      "plan_id": "portfolio-plan-00000220",
+      "quantities": {
+        "action-a": 3,
+        "action-b": 2,
+        "action-c": 0,
+        "action-d": 0
+      },
+      "scenario_objectives": {
+        "adverse": 15.0,
+        "base": 28.5,
+        "favorable": 42.0
+      },
+      "selected_action_count": 2,
+      "total_benefit": 39.0,
+      "total_capacity": 7.0,
+      "total_cost": 17.0,
+      "total_risk": 14.0,
+      "violations": []
+    },
+    {
+      "binding_constraints": [],
+      "evidence_type": "optimized",
+      "feasible": true,
+      "group_benefits": {
+        "general": 20.0,
+        "priority": 12.0
+      },
+      "limitations": [
+        "Optimized values are mathematical outputs under declared inputs, not observed impact.",
+        "Feasibility reflects only encoded constraints and does not establish implementability."
+      ],
+      "objective_value": 27.6,
+      "plan_id": "portfolio-plan-00000105",
+      "quantities": {
+        "action-a": 1,
+        "action-b": 2,
+        "action-c": 1,
+        "action-d": 0
+      },
+      "scenario_objectives": {
+        "adverse": 14.4,
+        "base": 27.6,
+        "favorable": 40.8
+      },
+      "selected_action_count": 3,
+      "total_benefit": 36.0,
+      "total_capacity": 6.0,
+      "total_cost": 16.0,
+      "total_risk": 8.0,
+      "violations": []
+    },
+    {
+      "binding_constraints": [],
+      "evidence_type": "optimized",
+      "feasible": true,
+      "group_benefits": {
+        "general": 20.0,
+        "priority": 12.0
+      },
+      "limitations": [
+        "Optimized values are mathematical outputs under declared inputs, not observed impact.",
+        "Feasibility reflects only encoded constraints and does not establish implementability."
+      ],
+      "objective_value": 27.6,
+      "plan_id": "portfolio-plan-00000130",
+      "quantities": {
+        "action-a": 2,
+        "action-b": 0,
+        "action-c": 2,
+        "action-d": 0
+      },
+      "scenario_objectives": {
+        "adverse": 14.399999999999999,
+        "base": 27.6,
+        "favorable": 40.8
+      },
+      "selected_action_count": 2,
+      "total_benefit": 36.0,
+      "total_capacity": 4.0,
+      "total_cost": 16.0,
+      "total_risk": 12.0,
+      "violations": []
+    },
+    {
+      "binding_constraints": [],
+      "evidence_type": "optimized",
+      "feasible": true,
+      "group_benefits": {
+        "general": 20.0,
+        "priority": 12.0
+      },
+      "limitations": [
+        "Optimized values are mathematical outputs under declared inputs, not observed impact.",
+        "Feasibility reflects only encoded constraints and does not establish implementability."
+      ],
+      "objective_value": 27.6,
+      "plan_id": "portfolio-plan-00000141",
+      "quantities": {
+        "action-a": 2,
+        "action-b": 1,
+        "action-c": 0,
+        "action-d": 1
+      },
+      "scenario_objectives": {
+        "adverse": 14.4,
+        "base": 27.6,
+        "favorable": 40.8
+      },
+      "selected_action_count": 3,
+      "total_benefit": 36.0,
+      "total_capacity": 6.0,
+      "total_cost": 16.0,
+      "total_risk": 12.0,
+      "violations": []
+    },
+    {
+      "binding_constraints": [],
+      "evidence_type": "optimized",
+      "feasible": true,
+      "group_benefits": {
+        "general": 18.0,
+        "priority": 12.0
+      },
+      "limitations": [
+        "Optimized values are mathematical outputs under declared inputs, not observed impact.",
+        "Feasibility reflects only encoded constraints and does not establish implementability."
+      ],
+      "objective_value": 26.700000000000003,
+      "plan_id": "portfolio-plan-00000062",
+      "quantities": {
+        "action-a": 1,
+        "action-b": 0,
+        "action-c": 0,
+        "action-d": 2
+      },
+      "scenario_objectives": {
+        "adverse": 13.799999999999999,
+        "base": 26.700000000000003,
+        "favorable": 39.6
+      },
+      "selected_action_count": 2,
+      "total_benefit": 33.0,
+      "total_capacity": 5.0,
+      "total_cost": 15.0,
+      "total_risk": 10.0,
+      "violations": []
+    },
+    {
+      "binding_constraints": [],
+      "evidence_type": "optimized",
+      "feasible": true,
+      "group_benefits": {
+        "general": 18.0,
+        "priority": 12.0
+      },
+      "limitations": [
+        "Optimized values are mathematical outputs under declared inputs, not observed impact.",
+        "Feasibility reflects only encoded constraints and does not establish implementability."
+      ],
+      "objective_value": 26.7,
+      "plan_id": "portfolio-plan-00000015",
+      "quantities": {
+        "action-a": 0,
+        "action-b": 0,
+        "action-c": 3,
+        "action-d": 0
+      },
+      "scenario_objectives": {
+        "adverse": 13.799999999999999,
+        "base": 26.700000000000003,
+        "favorable": 39.599999999999994
+      },
+      "selected_action_count": 1,
+      "total_benefit": 33.0,
+      "total_capacity": 3.0,
+      "total_cost": 15.0,
+      "total_risk": 6.0,
+      "violations": []
+    },
+    {
+      "binding_constraints": [],
+      "evidence_type": "optimized",
+      "feasible": true,
+      "group_benefits": {
+        "general": 18.0,
+        "priority": 12.0
+      },
+      "limitations": [
+        "Optimized values are mathematical outputs under declared inputs, not observed impact.",
+        "Feasibility reflects only encoded constraints and does not establish implementability."
+      ],
+      "objective_value": 26.7,
+      "plan_id": "portfolio-plan-00000026",
+      "quantities": {
+        "action-a": 0,
+        "action-b": 1,
+        "action-c": 1,
+        "action-d": 1
+      },
+      "scenario_objectives": {
+        "adverse": 13.799999999999999,
+        "base": 26.700000000000003,
+        "favorable": 39.599999999999994
+      },
+      "selected_action_count": 3,
+      "total_benefit": 33.0,
+      "total_capacity": 5.0,
+      "total_cost": 15.0,
+      "total_risk": 6.0,
+      "violations": []
+    },
+    {
+      "binding_constraints": [],
+      "evidence_type": "optimized",
+      "feasible": true,
+      "group_benefits": {
+        "general": 19.0,
+        "priority": 11.0
+      },
+      "limitations": [
+        "Optimized values are mathematical outputs under declared inputs, not observed impact.",
+        "Feasibility reflects only encoded constraints and does not establish implementability."
+      ],
+      "objective_value": 25.6,
+      "plan_id": "portfolio-plan-00000145",
+      "quantities": {
+        "action-a": 2,
+        "action-b": 1,
+        "action-c": 1,
+        "action-d": 0
+      },
+      "scenario_objectives": {
+        "adverse": 13.4,
+        "base": 25.6,
+        "favorable": 37.8
+      },
+      "selected_action_count": 3,
+      "total_benefit": 34.0,
+      "total_capacity": 5.0,
+      "total_cost": 15.0,
+      "total_risk": 11.0,
+      "violations": []
+    },
+    {
+      "binding_constraints": [
+        "maximum-risk"
+      ],
+      "evidence_type": "optimized",
+      "feasible": true,
+      "group_benefits": {
+        "general": 19.0,
+        "priority": 11.0
+      },
+      "limitations": [
+        "Optimized values are mathematical outputs under declared inputs, not observed impact.",
+        "Feasibility reflects only encoded constraints and does not establish implementability."
+      ],
+      "objective_value": 25.6,
+      "plan_id": "portfolio-plan-00000181",
+      "quantities": {
+        "action-a": 3,
+        "action-b": 0,
+        "action-c": 0,
+        "action-d": 1
+      },
+      "scenario_objectives": {
+        "adverse": 13.4,
+        "base": 25.6,
+        "favorable": 37.8
+      },
+      "selected_action_count": 2,
+      "total_benefit": 34.0,
+      "total_capacity": 5.0,
+      "total_cost": 15.0,
+      "total_risk": 15.0,
+      "violations": []
+    },
+    {
+      "binding_constraints": [],
+      "evidence_type": "optimized",
+      "feasible": true,
+      "group_benefits": {
+        "general": 17.0,
+        "priority": 11.0
+      },
+      "limitations": [
+        "Optimized values are mathematical outputs under declared inputs, not observed impact.",
+        "Feasibility reflects only encoded constraints and does not establish implementability."
+      ],
+      "objective_value": 24.700000000000003,
+      "plan_id": "portfolio-plan-00000066",
+      "quantities": {
+        "action-a": 1,
+        "action-b": 0,
+        "action-c": 1,
+        "action-d": 1
+      },
+      "scenario_objectives": {
+        "adverse": 12.799999999999999,
+        "base": 24.700000000000003,
+        "favorable": 36.6
+      },
+      "selected_action_count": 3,
+      "total_benefit": 31.0,
+      "total_capacity": 4.0,
+      "total_cost": 14.0,
+      "total_risk": 9.0,
+      "violations": []
+    },
+    {
+      "binding_constraints": [],
+      "evidence_type": "optimized",
+      "feasible": true,
+      "group_benefits": {
+        "general": 17.0,
+        "priority": 11.0
+      },
+      "limitations": [
+        "Optimized values are mathematical outputs under declared inputs, not observed impact.",
+        "Feasibility reflects only encoded constraints and does not establish implementability."
+      ],
+      "objective_value": 24.7,
+      "plan_id": "portfolio-plan-00000030",
+      "quantities": {
+        "action-a": 0,
+        "action-b": 1,
+        "action-c": 2,
+        "action-d": 0
+      },
+      "scenario_objectives": {
+        "adverse": 12.799999999999999,
+        "base": 24.700000000000003,
+        "favorable": 36.599999999999994
+      },
+      "selected_action_count": 2,
+      "total_benefit": 31.0,
+      "total_capacity": 4.0,
+      "total_cost": 14.0,
+      "total_risk": 5.0,
+      "violations": []
+    },
+    {
+      "binding_constraints": [],
+      "evidence_type": "optimized",
+      "feasible": true,
+      "group_benefits": {
+        "general": 17.0,
+        "priority": 11.0
+      },
+      "limitations": [
+        "Optimized values are mathematical outputs under declared inputs, not observed impact.",
+        "Feasibility reflects only encoded constraints and does not establish implementability."
+      ],
+      "objective_value": 24.7,
+      "plan_id": "portfolio-plan-00000041",
+      "quantities": {
+        "action-a": 0,
+        "action-b": 2,
+        "action-c": 0,
+        "action-d": 1
+      },
+      "scenario_objectives": {
+        "adverse": 12.8,
+        "base": 24.700000000000003,
+        "favorable": 36.599999999999994
+      },
+      "selected_action_count": 2,
+      "total_benefit": 31.0,
+      "total_capacity": 6.0,
+      "total_cost": 14.0,
+      "total_risk": 5.0,
+      "violations": []
+    },
+    {
+      "binding_constraints": [],
+      "evidence_type": "optimized",
+      "feasible": true,
+      "group_benefits": {
+        "general": 18.0,
+        "priority": 10.0
+      },
+      "limitations": [
+        "Optimized values are mathematical outputs under declared inputs, not observed impact.",
+        "Feasibility reflects only encoded constraints and does not establish implementability."
+      ],
+      "objective_value": 23.6,
+      "plan_id": "portfolio-plan-00000160",
+      "quantities": {
+        "action-a": 2,
+        "action-b": 2,
+        "action-c": 0,
+        "action-d": 0
+      },
+      "scenario_objectives": {
+        "adverse": 12.4,
+        "base": 23.6,
+        "favorable": 34.8
+      },
+      "selected_action_count": 2,
+      "total_benefit": 32.0,
+      "total_capacity": 6.0,
+      "total_cost": 14.0,
+      "total_risk": 10.0,
+      "violations": []
+    },
+    {
+      "binding_constraints": [],
+      "evidence_type": "optimized",
+      "feasible": true,
+      "group_benefits": {
+        "general": 18.0,
+        "priority": 10.0
+      },
+      "limitations": [
+        "Optimized values are mathematical outputs under declared inputs, not observed impact.",
+        "Feasibility reflects only encoded constraints and does not establish implementability."
+      ],
+      "objective_value": 23.6,
+      "plan_id": "portfolio-plan-00000185",
+      "quantities": {
+        "action-a": 3,
+        "action-b": 0,
+        "action-c": 1,
+        "action-d": 0
+      },
+      "scenario_objectives": {
+        "adverse": 12.4,
+        "base": 23.6,
+        "favorable": 34.8
+      },
+      "selected_action_count": 2,
+      "total_benefit": 32.0,
+      "total_capacity": 4.0,
+      "total_cost": 14.0,
+      "total_risk": 14.0,
+      "violations": []
+    },
+    {
+      "binding_constraints": [],
+      "evidence_type": "optimized",
+      "feasible": true,
+      "group_benefits": {
+        "general": 16.0,
+        "priority": 10.0
+      },
+      "limitations": [
+        "Optimized values are mathematical outputs under declared inputs, not observed impact.",
+        "Feasibility reflects only encoded constraints and does not establish implementability."
+      ],
+      "objective_value": 22.700000000000003,
+      "plan_id": "portfolio-plan-00000070",
+      "quantities": {
+        "action-a": 1,
+        "action-b": 0,
+        "action-c": 2,
+        "action-d": 0
+      },
+      "scenario_objectives": {
+        "adverse": 11.799999999999999,
+        "base": 22.700000000000003,
+        "favorable": 33.6
+      },
+      "selected_action_count": 2,
+      "total_benefit": 29.0,
+      "total_capacity": 3.0,
+      "total_cost": 13.0,
+      "total_risk": 8.0,
+      "violations": []
+    },
+    {
+      "binding_constraints": [],
+      "evidence_type": "optimized",
+      "feasible": true,
+      "group_benefits": {
+        "general": 16.0,
+        "priority": 10.0
+      },
+      "limitations": [
+        "Optimized values are mathematical outputs under declared inputs, not observed impact.",
+        "Feasibility reflects only encoded constraints and does not establish implementability."
+      ],
+      "objective_value": 22.700000000000003,
+      "plan_id": "portfolio-plan-00000081",
+      "quantities": {
+        "action-a": 1,
+        "action-b": 1,
+        "action-c": 0,
+        "action-d": 1
+      },
+      "scenario_objectives": {
+        "adverse": 11.8,
+        "base": 22.700000000000003,
+        "favorable": 33.6
+      },
+      "selected_action_count": 3,
+      "total_benefit": 29.0,
+      "total_capacity": 5.0,
+      "total_cost": 13.0,
+      "total_risk": 8.0,
+      "violations": []
+    },
+    {
+      "binding_constraints": [],
+      "evidence_type": "optimized",
+      "feasible": true,
+      "group_benefits": {
+        "general": 16.0,
+        "priority": 10.0
+      },
+      "limitations": [
+        "Optimized values are mathematical outputs under declared inputs, not observed impact.",
+        "Feasibility reflects only encoded constraints and does not establish implementability."
+      ],
+      "objective_value": 22.7,
+      "plan_id": "portfolio-plan-00000045",
+      "quantities": {
+        "action-a": 0,
+        "action-b": 2,
+        "action-c": 1,
+        "action-d": 0
+      },
+      "scenario_objectives": {
+        "adverse": 11.8,
+        "base": 22.700000000000003,
+        "favorable": 33.599999999999994
+      },
+      "selected_action_count": 2,
+      "total_benefit": 29.0,
+      "total_capacity": 5.0,
+      "total_cost": 13.0,
+      "total_risk": 4.0,
+      "violations": []
+    },
+    {
+      "binding_constraints": [],
+      "evidence_type": "optimized",
+      "feasible": true,
+      "group_benefits": {
+        "general": 14.0,
+        "priority": 10.0
+      },
+      "limitations": [
+        "Optimized values are mathematical outputs under declared inputs, not observed impact.",
+        "Feasibility reflects only encoded constraints and does not establish implementability."
+      ],
+      "objective_value": 21.8,
+      "plan_id": "portfolio-plan-00000002",
+      "quantities": {
+        "action-a": 0,
+        "action-b": 0,
+        "action-c": 0,
+        "action-d": 2
+      },
+      "scenario_objectives": {
+        "adverse": 11.2,
+        "base": 21.8,
+        "favorable": 32.4
+      },
+      "selected_action_count": 1,
+      "total_benefit": 26.0,
+      "total_capacity": 4.0,
+      "total_cost": 12.0,
+      "total_risk": 6.0,
+      "violations": []
+    },
+    {
+      "binding_constraints": [],
+      "evidence_type": "optimized",
+      "feasible": true,
+      "group_benefits": {
+        "general": 17.0,
+        "priority": 9.0
+      },
+      "limitations": [
+        "Optimized values are mathematical outputs under declared inputs, not observed impact.",
+        "Feasibility reflects only encoded constraints and does not establish implementability."
+      ],
+      "objective_value": 21.6,
+      "plan_id": "portfolio-plan-00000200",
+      "quantities": {
+        "action-a": 3,
+        "action-b": 1,
+        "action-c": 0,
+        "action-d": 0
+      },
+      "scenario_objectives": {
+        "adverse": 11.4,
+        "base": 21.6,
+        "favorable": 31.8
+      },
+      "selected_action_count": 2,
+      "total_benefit": 30.0,
+      "total_capacity": 5.0,
+      "total_cost": 13.0,
+      "total_risk": 13.0,
+      "violations": []
+    },
+    {
+      "binding_constraints": [],
+      "evidence_type": "optimized",
+      "feasible": true,
+      "group_benefits": {
+        "general": 15.0,
+        "priority": 9.0
+      },
+      "limitations": [
+        "Optimized values are mathematical outputs under declared inputs, not observed impact.",
+        "Feasibility reflects only encoded constraints and does not establish implementability."
+      ],
+      "objective_value": 20.700000000000003,
+      "plan_id": "portfolio-plan-00000085",
+      "quantities": {
+        "action-a": 1,
+        "action-b": 1,
+        "action-c": 1,
+        "action-d": 0
+      },
+      "scenario_objectives": {
+        "adverse": 10.8,
+        "base": 20.700000000000003,
+        "favorable": 30.599999999999998
+      },
+      "selected_action_count": 3,
+      "total_benefit": 27.0,
+      "total_capacity": 4.0,
+      "total_cost": 12.0,
+      "total_risk": 7.0,
+      "violations": []
+    },
+    {
+      "binding_constraints": [],
+      "evidence_type": "optimized",
+      "feasible": true,
+      "group_benefits": {
+        "general": 15.0,
+        "priority": 9.0
+      },
+      "limitations": [
+        "Optimized values are mathematical outputs under declared inputs, not observed impact.",
+        "Feasibility reflects only encoded constraints and does not establish implementability."
+      ],
+      "objective_value": 20.700000000000003,
+      "plan_id": "portfolio-plan-00000121",
+      "quantities": {
+        "action-a": 2,
+        "action-b": 0,
+        "action-c": 0,
+        "action-d": 1
+      },
+      "scenario_objectives": {
+        "adverse": 10.8,
+        "base": 20.700000000000003,
+        "favorable": 30.6
+      },
+      "selected_action_count": 2,
+      "total_benefit": 27.0,
+      "total_capacity": 4.0,
+      "total_cost": 12.0,
+      "total_risk": 11.0,
+      "violations": []
+    },
+    {
+      "binding_constraints": [],
+      "evidence_type": "optimized",
+      "feasible": true,
+      "group_benefits": {
+        "general": 13.0,
+        "priority": 9.0
+      },
+      "limitations": [
+        "Optimized values are mathematical outputs under declared inputs, not observed impact.",
+        "Feasibility reflects only encoded constraints and does not establish implementability."
+      ],
+      "objective_value": 19.8,
+      "plan_id": "portfolio-plan-00000006",
+      "quantities": {
+        "action-a": 0,
+        "action-b": 0,
+        "action-c": 1,
+        "action-d": 1
+      },
+      "scenario_objectives": {
+        "adverse": 10.2,
+        "base": 19.8,
+        "favorable": 29.4
+      },
+      "selected_action_count": 2,
+      "total_benefit": 24.0,
+      "total_capacity": 3.0,
+      "total_cost": 11.0,
+      "total_risk": 5.0,
+      "violations": []
+    },
+    {
+      "binding_constraints": [],
+      "evidence_type": "optimized",
+      "feasible": true,
+      "group_benefits": {
+        "general": 14.0,
+        "priority": 8.0
+      },
+      "limitations": [
+        "Optimized values are mathematical outputs under declared inputs, not observed impact.",
+        "Feasibility reflects only encoded constraints and does not establish implementability."
+      ],
+      "objective_value": 18.700000000000003,
+      "plan_id": "portfolio-plan-00000100",
+      "quantities": {
+        "action-a": 1,
+        "action-b": 2,
+        "action-c": 0,
+        "action-d": 0
+      },
+      "scenario_objectives": {
+        "adverse": 9.8,
+        "base": 18.700000000000003,
+        "favorable": 27.599999999999998
+      },
+      "selected_action_count": 2,
+      "total_benefit": 25.0,
+      "total_capacity": 5.0,
+      "total_cost": 11.0,
+      "total_risk": 6.0,
+      "violations": []
+    },
+    {
+      "binding_constraints": [],
+      "evidence_type": "optimized",
+      "feasible": true,
+      "group_benefits": {
+        "general": 14.0,
+        "priority": 8.0
+      },
+      "limitations": [
+        "Optimized values are mathematical outputs under declared inputs, not observed impact.",
+        "Feasibility reflects only encoded constraints and does not establish implementability."
+      ],
+      "objective_value": 18.700000000000003,
+      "plan_id": "portfolio-plan-00000125",
+      "quantities": {
+        "action-a": 2,
+        "action-b": 0,
+        "action-c": 1,
+        "action-d": 0
+      },
+      "scenario_objectives": {
+        "adverse": 9.8,
+        "base": 18.700000000000003,
+        "favorable": 27.6
+      },
+      "selected_action_count": 2,
+      "total_benefit": 25.0,
+      "total_capacity": 3.0,
+      "total_cost": 11.0,
+      "total_risk": 10.0,
+      "violations": []
+    },
+    {
+      "binding_constraints": [],
+      "evidence_type": "optimized",
+      "feasible": true,
+      "group_benefits": {
+        "general": 12.0,
+        "priority": 8.0
+      },
+      "limitations": [
+        "Optimized values are mathematical outputs under declared inputs, not observed impact.",
+        "Feasibility reflects only encoded constraints and does not establish implementability."
+      ],
+      "objective_value": 17.8,
+      "plan_id": "portfolio-plan-00000010",
+      "quantities": {
+        "action-a": 0,
+        "action-b": 0,
+        "action-c": 2,
+        "action-d": 0
+      },
+      "scenario_objectives": {
+        "adverse": 9.2,
+        "base": 17.8,
+        "favorable": 26.4
+      },
+      "selected_action_count": 1,
+      "total_benefit": 22.0,
+      "total_capacity": 2.0,
+      "total_cost": 10.0,
+      "total_risk": 4.0,
+      "violations": []
+    },
+    {
+      "binding_constraints": [],
+      "evidence_type": "optimized",
+      "feasible": true,
+      "group_benefits": {
+        "general": 12.0,
+        "priority": 8.0
+      },
+      "limitations": [
+        "Optimized values are mathematical outputs under declared inputs, not observed impact.",
+        "Feasibility reflects only encoded constraints and does not establish implementability."
+      ],
+      "objective_value": 17.8,
+      "plan_id": "portfolio-plan-00000021",
+      "quantities": {
+        "action-a": 0,
+        "action-b": 1,
+        "action-c": 0,
+        "action-d": 1
+      },
+      "scenario_objectives": {
+        "adverse": 9.2,
+        "base": 17.8,
+        "favorable": 26.4
+      },
+      "selected_action_count": 2,
+      "total_benefit": 22.0,
+      "total_capacity": 4.0,
+      "total_cost": 10.0,
+      "total_risk": 4.0,
+      "violations": []
+    },
+    {
+      "binding_constraints": [],
+      "evidence_type": "optimized",
+      "feasible": true,
+      "group_benefits": {
+        "general": 13.0,
+        "priority": 7.0
+      },
+      "limitations": [
+        "Optimized values are mathematical outputs under declared inputs, not observed impact.",
+        "Feasibility reflects only encoded constraints and does not establish implementability."
+      ],
+      "objective_value": 16.700000000000003,
+      "plan_id": "portfolio-plan-00000140",
+      "quantities": {
+        "action-a": 2,
+        "action-b": 1,
+        "action-c": 0,
+        "action-d": 0
+      },
+      "scenario_objectives": {
+        "adverse": 8.8,
+        "base": 16.700000000000003,
+        "favorable": 24.6
+      },
+      "selected_action_count": 2,
+      "total_benefit": 23.0,
+      "total_capacity": 4.0,
+      "total_cost": 10.0,
+      "total_risk": 9.0,
+      "violations": []
+    },
+    {
+      "binding_constraints": [],
+      "evidence_type": "optimized",
+      "feasible": true,
+      "group_benefits": {
+        "general": 11.0,
+        "priority": 7.0
+      },
+      "limitations": [
+        "Optimized values are mathematical outputs under declared inputs, not observed impact.",
+        "Feasibility reflects only encoded constraints and does not establish implementability."
+      ],
+      "objective_value": 15.8,
+      "plan_id": "portfolio-plan-00000025",
+      "quantities": {
+        "action-a": 0,
+        "action-b": 1,
+        "action-c": 1,
+        "action-d": 0
+      },
+      "scenario_objectives": {
+        "adverse": 8.2,
+        "base": 15.8,
+        "favorable": 23.4
+      },
+      "selected_action_count": 2,
+      "total_benefit": 20.0,
+      "total_capacity": 3.0,
+      "total_cost": 9.0,
+      "total_risk": 3.0,
+      "violations": []
+    },
+    {
+      "binding_constraints": [],
+      "evidence_type": "optimized",
+      "feasible": true,
+      "group_benefits": {
+        "general": 11.0,
+        "priority": 7.0
+      },
+      "limitations": [
+        "Optimized values are mathematical outputs under declared inputs, not observed impact.",
+        "Feasibility reflects only encoded constraints and does not establish implementability."
+      ],
+      "objective_value": 15.8,
+      "plan_id": "portfolio-plan-00000061",
+      "quantities": {
+        "action-a": 1,
+        "action-b": 0,
+        "action-c": 0,
+        "action-d": 1
+      },
+      "scenario_objectives": {
+        "adverse": 8.2,
+        "base": 15.8,
+        "favorable": 23.4
+      },
+      "selected_action_count": 2,
+      "total_benefit": 20.0,
+      "total_capacity": 3.0,
+      "total_cost": 9.0,
+      "total_risk": 7.0,
+      "violations": []
+    },
+    {
+      "binding_constraints": [
+        "group-priority"
+      ],
+      "evidence_type": "optimized",
+      "feasible": true,
+      "group_benefits": {
+        "general": 12.0,
+        "priority": 6.0
+      },
+      "limitations": [
+        "Optimized values are mathematical outputs under declared inputs, not observed impact.",
+        "Feasibility reflects only encoded constraints and does not establish implementability."
+      ],
+      "objective_value": 14.700000000000001,
+      "plan_id": "portfolio-plan-00000180",
+      "quantities": {
+        "action-a": 3,
+        "action-b": 0,
+        "action-c": 0,
+        "action-d": 0
+      },
+      "scenario_objectives": {
+        "adverse": 7.800000000000001,
+        "base": 14.700000000000001,
+        "favorable": 21.6
+      },
+      "selected_action_count": 1,
+      "total_benefit": 21.0,
+      "total_capacity": 3.0,
+      "total_cost": 9.0,
+      "total_risk": 12.0,
+      "violations": []
+    },
+    {
+      "binding_constraints": [
+        "group-priority"
+      ],
+      "evidence_type": "optimized",
+      "feasible": true,
+      "group_benefits": {
+        "general": 10.0,
+        "priority": 6.0
+      },
+      "limitations": [
+        "Optimized values are mathematical outputs under declared inputs, not observed impact.",
+        "Feasibility reflects only encoded constraints and does not establish implementability."
+      ],
+      "objective_value": 13.8,
+      "plan_id": "portfolio-plan-00000040",
+      "quantities": {
+        "action-a": 0,
+        "action-b": 2,
+        "action-c": 0,
+        "action-d": 0
+      },
+      "scenario_objectives": {
+        "adverse": 7.2,
+        "base": 13.8,
+        "favorable": 20.4
+      },
+      "selected_action_count": 1,
+      "total_benefit": 18.0,
+      "total_capacity": 4.0,
+      "total_cost": 8.0,
+      "total_risk": 2.0,
+      "violations": []
+    },
+    {
+      "binding_constraints": [
+        "group-priority"
+      ],
+      "evidence_type": "optimized",
+      "feasible": true,
+      "group_benefits": {
+        "general": 10.0,
+        "priority": 6.0
+      },
+      "limitations": [
+        "Optimized values are mathematical outputs under declared inputs, not observed impact.",
+        "Feasibility reflects only encoded constraints and does not establish implementability."
+      ],
+      "objective_value": 13.8,
+      "plan_id": "portfolio-plan-00000065",
+      "quantities": {
+        "action-a": 1,
+        "action-b": 0,
+        "action-c": 1,
+        "action-d": 0
+      },
+      "scenario_objectives": {
+        "adverse": 7.199999999999999,
+        "base": 13.8,
+        "favorable": 20.4
+      },
+      "selected_action_count": 2,
+      "total_benefit": 18.0,
+      "total_capacity": 2.0,
+      "total_cost": 8.0,
+      "total_risk": 6.0,
+      "violations": []
+    },
+    {
+      "binding_constraints": [],
+      "evidence_type": "optimized",
+      "feasible": false,
+      "group_benefits": {
+        "general": 72.0,
+        "priority": 46.0
+      },
+      "limitations": [
+        "Optimized values are mathematical outputs under declared inputs, not observed impact.",
+        "Feasibility reflects only encoded constraints and does not establish implementability."
+      ],
+      "objective_value": 103.7,
+      "plan_id": "portfolio-plan-00000299",
+      "quantities": {
+        "action-a": 4,
+        "action-b": 2,
+        "action-c": 3,
+        "action-d": 4
+      },
+      "scenario_objectives": {
+        "adverse": 53.8,
+        "base": 103.7,
+        "favorable": 153.6
+      },
+      "selected_action_count": 4,
+      "total_benefit": 131.0,
+      "total_capacity": 19.0,
+      "total_cost": 59.0,
+      "total_risk": 36.0,
+      "violations": [
+        {
+          "bound": 24.0,
+          "constraint_id": "budget",
+          "details": "Total cost exceeds the declared budget.",
+          "excess": 35.0,
+          "measured": 59.0
+        },
+        {
+          "bound": 11.0,
+          "constraint_id": "capacity",
+          "details": "Total capacity use exceeds availability.",
+          "excess": 8.0,
+          "measured": 19.0
+        },
+        {
+          "bound": 15.0,
+          "constraint_id": "maximum-risk",
+          "details": "Total modeled risk exceeds the cap.",
+          "excess": 21.0,
+          "measured": 36.0
+        },
+        {
+          "bound": 3,
+          "constraint_id": "maximum-selected-actions",
+          "details": "Too many action types are selected.",
+          "excess": 1.0,
+          "measured": 4
+        }
+      ]
+    },
+    {
+      "binding_constraints": [],
+      "evidence_type": "optimized",
+      "feasible": false,
+      "group_benefits": {
+        "general": 68.0,
+        "priority": 44.0
+      },
+      "limitations": [
+        "Optimized values are mathematical outputs under declared inputs, not observed impact.",
+        "Feasibility reflects only encoded constraints and does not establish implementability."
+      ],
+      "objective_value": 98.8,
+      "plan_id": "portfolio-plan-00000239",
+      "quantities": {
+        "action-a": 3,
+        "action-b": 2,
+        "action-c": 3,
+        "action-d": 4
+      },
+      "scenario_objectives": {
+        "adverse": 51.199999999999996,
+        "base": 98.80000000000001,
+        "favorable": 146.39999999999998
+      },
+      "selected_action_count": 4,
+      "total_benefit": 124.0,
+      "total_capacity": 18.0,
+      "total_cost": 56.0,
+      "total_risk": 32.0,
+      "violations": [
+        {
+          "bound": 24.0,
+          "constraint_id": "budget",
+          "details": "Total cost exceeds the declared budget.",
+          "excess": 32.0,
+          "measured": 56.0
+        },
+        {
+          "bound": 11.0,
+          "constraint_id": "capacity",
+          "details": "Total capacity use exceeds availability.",
+          "excess": 7.0,
+          "measured": 18.0
+        },
+        {
+          "bound": 15.0,
+          "constraint_id": "maximum-risk",
+          "details": "Total modeled risk exceeds the cap.",
+          "excess": 17.0,
+          "measured": 32.0
+        },
+        {
+          "bound": 3,
+          "constraint_id": "maximum-selected-actions",
+          "details": "Too many action types are selected.",
+          "excess": 1.0,
+          "measured": 4
+        }
+      ]
+    },
+    {
+      "binding_constraints": [],
+      "evidence_type": "optimized",
+      "feasible": false,
+      "group_benefits": {
+        "general": 67.0,
+        "priority": 43.0
+      },
+      "limitations": [
+        "Optimized values are mathematical outputs under declared inputs, not observed impact.",
+        "Feasibility reflects only encoded constraints and does not establish implementability."
+      ],
+      "objective_value": 96.8,
+      "plan_id": "portfolio-plan-00000279",
+      "quantities": {
+        "action-a": 4,
+        "action-b": 1,
+        "action-c": 3,
+        "action-d": 4
+      },
+      "scenario_objectives": {
+        "adverse": 50.199999999999996,
+        "base": 96.80000000000001,
+        "favorable": 143.39999999999998
+      },
+      "selected_action_count": 4,
+      "total_benefit": 122.0,
+      "total_capacity": 17.0,
+      "total_cost": 55.0,
+      "total_risk": 35.0,
+      "violations": [
+        {
+          "bound": 24.0,
+          "constraint_id": "budget",
+          "details": "Total cost exceeds the declared budget.",
+          "excess": 31.0,
+          "measured": 55.0
+        },
+        {
+          "bound": 11.0,
+          "constraint_id": "capacity",
+          "details": "Total capacity use exceeds availability.",
+          "excess": 6.0,
+          "measured": 17.0
+        },
+        {
+          "bound": 15.0,
+          "constraint_id": "maximum-risk",
+          "details": "Total modeled risk exceeds the cap.",
+          "excess": 20.0,
+          "measured": 35.0
+        },
+        {
+          "bound": 3,
+          "constraint_id": "maximum-selected-actions",
+          "details": "Too many action types are selected.",
+          "excess": 1.0,
+          "measured": 4
+        }
+      ]
+    },
+    {
+      "binding_constraints": [],
+      "evidence_type": "optimized",
+      "feasible": false,
+      "group_benefits": {
+        "general": 66.0,
+        "priority": 42.0
+      },
+      "limitations": [
+        "Optimized values are mathematical outputs under declared inputs, not observed impact.",
+        "Feasibility reflects only encoded constraints and does not establish implementability."
+      ],
+      "objective_value": 94.80000000000001,
+      "plan_id": "portfolio-plan-00000294",
+      "quantities": {
+        "action-a": 4,
+        "action-b": 2,
+        "action-c": 2,
+        "action-d": 4
+      },
+      "scenario_objectives": {
+        "adverse": 49.199999999999996,
+        "base": 94.80000000000001,
+        "favorable": 140.4
+      },
+      "selected_action_count": 4,
+      "total_benefit": 120.0,
+      "total_capacity": 18.0,
+      "total_cost": 54.0,
+      "total_risk": 34.0,
+      "violations": [
+        {
+          "bound": 24.0,
+          "constraint_id": "budget",
+          "details": "Total cost exceeds the declared budget.",
+          "excess": 30.0,
+          "measured": 54.0
+        },
+        {
+          "bound": 11.0,
+          "constraint_id": "capacity",
+          "details": "Total capacity use exceeds availability.",
+          "excess": 7.0,
+          "measured": 18.0
+        },
+        {
+          "bound": 15.0,
+          "constraint_id": "maximum-risk",
+          "details": "Total modeled risk exceeds the cap.",
+          "excess": 19.0,
+          "measured": 34.0
+        },
+        {
+          "bound": 3,
+          "constraint_id": "maximum-selected-actions",
+          "details": "Too many action types are selected.",
+          "excess": 1.0,
+          "measured": 4
+        }
+      ]
+    },
+    {
+      "binding_constraints": [],
+      "evidence_type": "optimized",
+      "feasible": false,
+      "group_benefits": {
+        "general": 64.0,
+        "priority": 42.0
+      },
+      "limitations": [
+        "Optimized values are mathematical outputs under declared inputs, not observed impact.",
+        "Feasibility reflects only encoded constraints and does not establish implementability."
+      ],
+      "objective_value": 93.9,
+      "plan_id": "portfolio-plan-00000179",
+      "quantities": {
+        "action-a": 2,
+        "action-b": 2,
+        "action-c": 3,
+        "action-d": 4
+      },
+      "scenario_objectives": {
+        "adverse": 48.599999999999994,
+        "base": 93.9,
+        "favorable": 139.2
+      },
+      "selected_action_count": 4,
+      "total_benefit": 117.0,
+      "total_capacity": 17.0,
+      "total_cost": 53.0,
+      "total_risk": 28.0,
+      "violations": [
+        {
+          "bound": 24.0,
+          "constraint_id": "budget",
+          "details": "Total cost exceeds the declared budget.",
+          "excess": 29.0,
+          "measured": 53.0
+        },
+        {
+          "bound": 11.0,
+          "constraint_id": "capacity",
+          "details": "Total capacity use exceeds availability.",
+          "excess": 6.0,
+          "measured": 17.0
+        },
+        {
+          "bound": 15.0,
+          "constraint_id": "maximum-risk",
+          "details": "Total modeled risk exceeds the cap.",
+          "excess": 13.0,
+          "measured": 28.0
+        },
+        {
+          "bound": 3,
+          "constraint_id": "maximum-selected-actions",
+          "details": "Too many action types are selected.",
+          "excess": 1.0,
+          "measured": 4
+        }
+      ]
+    }
+  ],
+  "problem": {
+    "actions": [
+      {
+        "action_id": "action-a",
+        "group_benefit_per_unit": {
+          "general": 4.0,
+          "priority": 2.0
+        },
+        "input_evidence_type": "proposed",
+        "label": "Synthetic benchmark action a",
+        "limitations": [
+          "Qualification action is synthetic and not implementable."
+        ],
+        "max_units": 4,
+        "scenario_objective_per_unit": {
+          "adverse": 2.6,
+          "base": 4.9,
+          "favorable": 7.2
+        },
+        "source_refs": [
+          "synthetic-qualification.portfolio-family-3"
+        ],
+        "unit_benefit": 7.0,
+        "unit_capacity": 1.0,
+        "unit_cost": 3.0,
+        "unit_risk": 4.0
+      },
+      {
+        "action_id": "action-b",
+        "group_benefit_per_unit": {
+          "general": 5.0,
+          "priority": 3.0
+        },
+        "input_evidence_type": "proposed",
+        "label": "Synthetic benchmark action b",
+        "limitations": [
+          "Qualification action is synthetic and not implementable."
+        ],
+        "max_units": 2,
+        "scenario_objective_per_unit": {
+          "adverse": 3.6,
+          "base": 6.9,
+          "favorable": 10.2
+        },
+        "source_refs": [
+          "synthetic-qualification.portfolio-family-3"
+        ],
+        "unit_benefit": 9.0,
+        "unit_capacity": 2.0,
+        "unit_cost": 4.0,
+        "unit_risk": 1.0
+      },
+      {
+        "action_id": "action-c",
+        "group_benefit_per_unit": {
+          "general": 6.0,
+          "priority": 4.0
+        },
+        "input_evidence_type": "proposed",
+        "label": "Synthetic benchmark action c",
+        "limitations": [
+          "Qualification action is synthetic and not implementable."
+        ],
+        "max_units": 3,
+        "scenario_objective_per_unit": {
+          "adverse": 4.6,
+          "base": 8.9,
+          "favorable": 13.2
+        },
+        "source_refs": [
+          "synthetic-qualification.portfolio-family-3"
+        ],
+        "unit_benefit": 11.0,
+        "unit_capacity": 1.0,
+        "unit_cost": 5.0,
+        "unit_risk": 2.0
+      },
+      {
+        "action_id": "action-d",
+        "group_benefit_per_unit": {
+          "general": 7.0,
+          "priority": 5.0
+        },
+        "input_evidence_type": "proposed",
+        "label": "Synthetic benchmark action d",
+        "limitations": [
+          "Qualification action is synthetic and not implementable."
+        ],
+        "max_units": 4,
+        "scenario_objective_per_unit": {
+          "adverse": 5.6,
+          "base": 10.9,
+          "favorable": 16.2
+        },
+        "source_refs": [
+          "synthetic-qualification.portfolio-family-3"
+        ],
+        "unit_benefit": 13.0,
+        "unit_capacity": 2.0,
+        "unit_cost": 6.0,
+        "unit_risk": 3.0
+      }
+    ],
+    "assumptions": [
+      "Action quantities and modeled benefits are additive."
+    ],
+    "config": {
+      "maximum_evaluations": 1000000,
+      "objective_strategy": "expected",
+      "retained_plans": 75,
+      "scenario_weights": {
+        "adverse": 0.25,
+        "base": 0.5,
+        "favorable": 0.25
+      },
+      "tolerance": 1e-09
+    },
+    "constraints": {
+      "budget": 24.0,
+      "capacity": 11.0,
+      "maximum_risk": 15.0,
+      "maximum_selected_actions": 3,
+      "minimum_benefit": 8.0,
+      "minimum_group_benefit": {
+        "priority": 6.0
+      },
+      "minimum_selected_actions": 1
+    },
+    "limitations": [
+      "This is a deterministic synthetic qualification task, not a real city recommendation.",
+      "Repeated task families vary parameters and statuses but are not independent field studies."
+    ],
+    "objective": "Maximize modeled portfolio benefit across three declared stress scenarios.",
+    "objective_unit": "synthetic benefit points",
+    "problem_id": "synthetic.portfolio.task-023"
+  },
+  "run_id": "optimization.portfolio.task-023",
+  "schema_version": "1.0.0",
+  "selected_objective_change_from_baseline": 43.6,
+  "selected_plan_id": "portfolio-plan-00000004",
+  "solver": {
+    "algorithm": "deterministic exhaustive integer enumeration",
+    "enumeration_complete": true,
+    "evaluated_plans": 300,
+    "feasible_plans": 70,
+    "incumbent_objective": 43.6,
+    "optimality_gap": 0.0,
+    "retained_plans": 75,
+    "search_space_size": 300,
+    "theoretical_upper_bound": 153.6,
+    "tie_break_rule": "Maximum robust/expected objective, then minimum cost, quantity tuple, stable ID."
+  },
+  "status": "optimal"
+}

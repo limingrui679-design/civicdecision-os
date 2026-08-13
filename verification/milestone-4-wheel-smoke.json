@@ -1,0 +1,23 @@
+{
+  "artifact": "civicdecision-0.1.0-py3-none-any.whl",
+  "artifact_bytes": 118599,
+  "artifact_sha256": "sha256:a6da9c785af42e15cbbff40faecba3a88bb72b84d42833fa251d768d5e38bdf5",
+  "built_from": "current milestone-4 worktree",
+  "cli_help_exit_zero": true,
+  "dependencies_installed": true,
+  "import_checks": [
+    "civicdecision",
+    "civicdecision.analysis.run_baseline_forecast",
+    "civicdecision.analysis.run_difference_in_differences",
+    "civicdecision.analysis.run_monte_carlo",
+    "civicdecision.benchmarks.build_milestone_4_benchmarks",
+    "civicdecision.optimization.optimize_portfolio"
+  ],
+  "imports_passed": true,
+  "installer": "pip",
+  "python": "3.12.13",
+  "status": "passed",
+  "tested_at": "2026-08-13",
+  "wheel_archive_integrity": "passed",
+  "claim_boundary": "This is a local clean-environment wheel smoke test from the current worktree, not a tagged release, signed artifact, remote CI result, public deployment, or external review."
+}

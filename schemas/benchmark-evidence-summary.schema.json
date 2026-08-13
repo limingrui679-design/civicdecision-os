@@ -1,0 +1,447 @@
+{
+  "$defs": {
+    "EngineQualificationEvidence": {
+      "additionalProperties": false,
+      "properties": {
+        "artifact_id": {
+          "pattern": "^[a-z0-9]+(?:[._-][a-z0-9]+)*$",
+          "title": "Artifact Id",
+          "type": "string"
+        },
+        "content_hash": {
+          "pattern": "^sha256:[0-9a-f]{64}$",
+          "title": "Content Hash",
+          "type": "string"
+        },
+        "evidence_type": {
+          "$ref": "#/$defs/EvidenceType"
+        },
+        "run_id": {
+          "pattern": "^[a-z0-9]+(?:[._-][a-z0-9]+)*$",
+          "title": "Run Id",
+          "type": "string"
+        },
+        "source_refs": {
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1,
+          "title": "Source Refs",
+          "type": "array"
+        },
+        "status": {
+          "minLength": 1,
+          "title": "Status",
+          "type": "string"
+        }
+      },
+      "required": [
+        "artifact_id",
+        "run_id",
+        "status",
+        "evidence_type",
+        "source_refs",
+        "content_hash"
+      ],
+      "title": "EngineQualificationEvidence",
+      "type": "object"
+    },
+    "EvidenceType": {
+      "enum": [
+        "observed",
+        "estimated",
+        "causal",
+        "simulated",
+        "optimized",
+        "proposed"
+      ],
+      "title": "EvidenceType",
+      "type": "string"
+    },
+    "ForecastMethod": {
+      "enum": [
+        "naive",
+        "drift",
+        "moving-average",
+        "seasonal-naive"
+      ],
+      "title": "ForecastMethod",
+      "type": "string"
+    },
+    "HistoricalReplayEvidence": {
+      "additionalProperties": false,
+      "properties": {
+        "city_id": {
+          "pattern": "^[a-z0-9]+(?:[._-][a-z0-9]+)*$",
+          "title": "City Id",
+          "type": "string"
+        },
+        "city_name": {
+          "minLength": 1,
+          "title": "City Name",
+          "type": "string"
+        },
+        "content_hash": {
+          "pattern": "^sha256:[0-9a-f]{64}$",
+          "title": "Content Hash",
+          "type": "string"
+        },
+        "data_cutoff": {
+          "format": "date-time",
+          "title": "Data Cutoff",
+          "type": "string"
+        },
+        "empirical_interval_coverage": {
+          "maximum": 1,
+          "minimum": 0,
+          "title": "Empirical Interval Coverage",
+          "type": "number"
+        },
+        "evaluation_end": {
+          "format": "date-time",
+          "title": "Evaluation End",
+          "type": "string"
+        },
+        "evaluation_mae": {
+          "minimum": 0,
+          "title": "Evaluation Mae",
+          "type": "number"
+        },
+        "evaluation_rmse": {
+          "minimum": 0,
+          "title": "Evaluation Rmse",
+          "type": "number"
+        },
+        "evaluation_start": {
+          "format": "date-time",
+          "title": "Evaluation Start",
+          "type": "string"
+        },
+        "evaluation_wape": {
+          "anyOf": [
+            {
+              "minimum": 0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Evaluation Wape"
+        },
+        "holdout_observations": {
+          "minimum": 1,
+          "title": "Holdout Observations",
+          "type": "integer"
+        },
+        "parameter": {
+          "pattern": "^[A-Z0-9_]+$",
+          "title": "Parameter",
+          "type": "string"
+        },
+        "replay_id": {
+          "pattern": "^[a-z0-9]+(?:[._-][a-z0-9]+)*$",
+          "title": "Replay Id",
+          "type": "string"
+        },
+        "selected_method": {
+          "$ref": "#/$defs/ForecastMethod"
+        },
+        "source_artifact_id": {
+          "pattern": "^[a-z0-9]+(?:[._-][a-z0-9]+)*$",
+          "title": "Source Artifact Id",
+          "type": "string"
+        },
+        "training_observations": {
+          "minimum": 1,
+          "title": "Training Observations",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "replay_id",
+        "city_id",
+        "city_name",
+        "parameter",
+        "source_artifact_id",
+        "data_cutoff",
+        "evaluation_start",
+        "evaluation_end",
+        "training_observations",
+        "holdout_observations",
+        "selected_method",
+        "evaluation_mae",
+        "evaluation_rmse",
+        "empirical_interval_coverage",
+        "content_hash"
+      ],
+      "title": "HistoricalReplayEvidence",
+      "type": "object"
+    },
+    "ObjectiveStrategy": {
+      "enum": [
+        "expected",
+        "worst-case"
+      ],
+      "title": "ObjectiveStrategy",
+      "type": "string"
+    },
+    "OptimizationTaskEvidence": {
+      "additionalProperties": false,
+      "properties": {
+        "baseline_feasible": {
+          "title": "Baseline Feasible",
+          "type": "boolean"
+        },
+        "baseline_objective": {
+          "title": "Baseline Objective",
+          "type": "number"
+        },
+        "content_hash": {
+          "pattern": "^sha256:[0-9a-f]{64}$",
+          "title": "Content Hash",
+          "type": "string"
+        },
+        "enumeration_complete": {
+          "title": "Enumeration Complete",
+          "type": "boolean"
+        },
+        "evaluated_plans": {
+          "minimum": 1,
+          "title": "Evaluated Plans",
+          "type": "integer"
+        },
+        "feasible_plans": {
+          "minimum": 0,
+          "title": "Feasible Plans",
+          "type": "integer"
+        },
+        "objective_strategy": {
+          "$ref": "#/$defs/ObjectiveStrategy"
+        },
+        "pareto_frontier_plans": {
+          "minimum": 0,
+          "title": "Pareto Frontier Plans",
+          "type": "integer"
+        },
+        "retained_plans": {
+          "minimum": 1,
+          "title": "Retained Plans",
+          "type": "integer"
+        },
+        "run_id": {
+          "pattern": "^[a-z0-9]+(?:[._-][a-z0-9]+)*$",
+          "title": "Run Id",
+          "type": "string"
+        },
+        "search_space_size": {
+          "minimum": 1,
+          "title": "Search Space Size",
+          "type": "integer"
+        },
+        "selected_objective": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Selected Objective"
+        },
+        "selected_objective_change_from_baseline": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Selected Objective Change From Baseline"
+        },
+        "selected_plan_id": {
+          "anyOf": [
+            {
+              "pattern": "^[a-z0-9]+(?:[._-][a-z0-9]+)*$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Selected Plan Id"
+        },
+        "status": {
+          "$ref": "#/$defs/PortfolioRunStatus"
+        },
+        "violated_constraint_ids": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Violated Constraint Ids",
+          "type": "array"
+        }
+      },
+      "required": [
+        "run_id",
+        "status",
+        "objective_strategy",
+        "search_space_size",
+        "evaluated_plans",
+        "feasible_plans",
+        "retained_plans",
+        "enumeration_complete",
+        "baseline_feasible",
+        "baseline_objective",
+        "pareto_frontier_plans",
+        "violated_constraint_ids",
+        "content_hash"
+      ],
+      "title": "OptimizationTaskEvidence",
+      "type": "object"
+    },
+    "PortfolioRunStatus": {
+      "enum": [
+        "optimal",
+        "infeasible",
+        "search-limited"
+      ],
+      "title": "PortfolioRunStatus",
+      "type": "string"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "artifact_set_hash": {
+      "pattern": "^sha256:[0-9a-f]{64}$",
+      "title": "Artifact Set Hash",
+      "type": "string"
+    },
+    "baseline_comparisons": {
+      "minimum": 0,
+      "title": "Baseline Comparisons",
+      "type": "integer"
+    },
+    "created_at": {
+      "format": "date-time",
+      "title": "Created At",
+      "type": "string"
+    },
+    "engine_qualification_runs": {
+      "items": {
+        "$ref": "#/$defs/EngineQualificationEvidence"
+      },
+      "title": "Engine Qualification Runs",
+      "type": "array"
+    },
+    "historical_replays": {
+      "items": {
+        "$ref": "#/$defs/HistoricalReplayEvidence"
+      },
+      "title": "Historical Replays",
+      "type": "array"
+    },
+    "limitations": {
+      "items": {
+        "type": "string"
+      },
+      "minItems": 1,
+      "title": "Limitations",
+      "type": "array"
+    },
+    "method_counts": {
+      "additionalProperties": {
+        "type": "integer"
+      },
+      "title": "Method Counts",
+      "type": "object"
+    },
+    "optimization_status_counts": {
+      "additionalProperties": {
+        "type": "integer"
+      },
+      "title": "Optimization Status Counts",
+      "type": "object"
+    },
+    "optimization_strategy_counts": {
+      "additionalProperties": {
+        "type": "integer"
+      },
+      "title": "Optimization Strategy Counts",
+      "type": "object"
+    },
+    "optimization_tasks": {
+      "items": {
+        "$ref": "#/$defs/OptimizationTaskEvidence"
+      },
+      "title": "Optimization Tasks",
+      "type": "array"
+    },
+    "parameter_counts": {
+      "additionalProperties": {
+        "type": "integer"
+      },
+      "title": "Parameter Counts",
+      "type": "object"
+    },
+    "run_artifact_hashes": {
+      "additionalProperties": {
+        "type": "string"
+      },
+      "minProperties": 1,
+      "title": "Run Artifact Hashes",
+      "type": "object"
+    },
+    "schema_version": {
+      "default": "1.0.0",
+      "title": "Schema Version",
+      "type": "string"
+    },
+    "summary_id": {
+      "pattern": "^[a-z0-9]+(?:[._-][a-z0-9]+)*$",
+      "title": "Summary Id",
+      "type": "string"
+    },
+    "total_evaluated_plans": {
+      "minimum": 0,
+      "title": "Total Evaluated Plans",
+      "type": "integer"
+    },
+    "total_feasible_plans": {
+      "minimum": 0,
+      "title": "Total Feasible Plans",
+      "type": "integer"
+    },
+    "total_search_space_size": {
+      "minimum": 0,
+      "title": "Total Search Space Size",
+      "type": "integer"
+    }
+  },
+  "required": [
+    "summary_id",
+    "created_at",
+    "artifact_set_hash",
+    "run_artifact_hashes",
+    "historical_replays",
+    "optimization_tasks",
+    "engine_qualification_runs",
+    "method_counts",
+    "parameter_counts",
+    "optimization_status_counts",
+    "optimization_strategy_counts",
+    "total_search_space_size",
+    "total_evaluated_plans",
+    "total_feasible_plans",
+    "baseline_comparisons",
+    "limitations"
+  ],
+  "title": "BenchmarkEvidenceSummary",
+  "type": "object"
+}

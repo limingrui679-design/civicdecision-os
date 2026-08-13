@@ -1,0 +1,203 @@
+{
+  "causal_claim_issued": false,
+  "config": {
+    "confidence_level": 0.95,
+    "intervention_period": 4,
+    "minimum_post_periods": 2,
+    "minimum_pre_periods": 4,
+    "minimum_units_per_group": 5,
+    "placebo_effect_equivalence_margin": 0.5,
+    "pretrend_slope_equivalence_margin": 0.2,
+    "require_balanced_panel": true
+  },
+  "created_at": "2026-08-12T10:07:41.052030Z",
+  "data_cutoff_period": 5,
+  "design": {
+    "assignment_mechanism": "Deterministic fixture assignment by ID prefix.",
+    "comparison_definition": "Never-treated fixture units.",
+    "estimand": "Synthetic average treatment effect on treated units in two post periods.",
+    "limitations": [
+      "Synthetic identification evidence is not a real policy study."
+    ],
+    "no_anticipation_rationale": "No shift is applied before period 4.",
+    "no_interference_rationale": "Fixture unit outcomes are generated independently.",
+    "parallel_trends_rationale": "Both fixture groups have identical pre-period slopes.",
+    "source_refs": [
+      "synthetic-qualification.did-panel"
+    ],
+    "study_id": "synthetic.did.milestone-4",
+    "treatment_definition": "Additive fixture shift at period 4."
+  },
+  "diagnostics": [
+    {
+      "details": "Small groups make unit-level uncertainty unstable.",
+      "id": "treated-unit-count",
+      "measured": 6,
+      "method": "Count unique units assigned to the treated group.",
+      "status": "pass",
+      "threshold": ">=5"
+    },
+    {
+      "details": "The design requires a contemporaneous comparison group.",
+      "id": "comparison-unit-count",
+      "measured": 6,
+      "method": "Count unique units assigned to the never-treated comparison group.",
+      "status": "pass",
+      "threshold": ">=5"
+    },
+    {
+      "details": "Multiple pre-periods are required for observable trend diagnostics.",
+      "id": "pre-period-count",
+      "measured": 4,
+      "method": "Count distinct periods strictly before intervention.",
+      "status": "pass",
+      "threshold": ">=4"
+    },
+    {
+      "details": "The declared post window must meet the configured evidence floor.",
+      "id": "post-period-count",
+      "measured": 2,
+      "method": "Count distinct periods at or after intervention.",
+      "status": "pass",
+      "threshold": ">=2"
+    },
+    {
+      "details": "The current estimator does not weight or impute unbalanced observations.",
+      "id": "balanced-panel",
+      "measured": true,
+      "method": "Compare each unit's period keys with the complete panel period set.",
+      "status": "pass",
+      "threshold": true
+    },
+    {
+      "details": "This is an observable pretrend diagnostic, not proof of counterfactual trends.",
+      "id": "pretrend-slope-equivalence",
+      "measured": 1.0000000000000004,
+      "method": "Unit-level pre-period OLS slopes; require the full two-sided confidence interval inside the declared practical-equivalence margin.",
+      "status": "fail",
+      "threshold": "<0.2"
+    },
+    {
+      "details": "Placebo equivalence can reject obvious differential pre-movements but not latent bias.",
+      "id": "placebo-effect-equivalence",
+      "measured": 3.000000000000001,
+      "method": "Contrast each later pre-period with the first pre-period and require every full confidence interval inside the declared practical-equivalence margin.",
+      "status": "fail",
+      "threshold": "<0.5"
+    }
+  ],
+  "event_time_effects": [
+    {
+      "calendar_period": 4,
+      "estimate": {
+        "comparison_units": 6,
+        "confidence_level": 0.95,
+        "estimate": 1.5,
+        "label": "DID effect at post-period 4",
+        "lower": 1.4999999999999991,
+        "p_value": 0.0,
+        "standard_error": 4.586533637279208e-16,
+        "treated_units": 6,
+        "upper": 1.5000000000000009
+      },
+      "relative_period": 0
+    },
+    {
+      "calendar_period": 5,
+      "estimate": {
+        "comparison_units": 6,
+        "confidence_level": 0.95,
+        "estimate": 1.5,
+        "label": "DID effect at post-period 5",
+        "lower": 1.499999999999999,
+        "p_value": 0.0,
+        "standard_error": 5.617333549722722e-16,
+        "treated_units": 6,
+        "upper": 1.500000000000001
+      },
+      "relative_period": 1
+    }
+  ],
+  "evidence_type": "estimated",
+  "failure_reason": "Identification diagnostics failed: pretrend-slope-equivalence, placebo-effect-equivalence.",
+  "interpretation": "A treated-versus-comparison association was estimated, but it is not released as causal because at least one identification diagnostic failed.",
+  "limitations": [
+    "Synthetic identification evidence is not a real policy study.",
+    "Passing observable diagnostics cannot prove parallel counterfactual trends, no anticipation, or no interference.",
+    "The estimator is an unadjusted two-group panel contrast with unit-level change variance.",
+    "The causal label applies only to the declared estimand, units, periods, and design."
+  ],
+  "observation_count": 72,
+  "placebo_effects": [
+    {
+      "calendar_period": 1,
+      "estimate": {
+        "comparison_units": 6,
+        "confidence_level": 0.95,
+        "estimate": 1.0,
+        "label": "placebo DID at pre-period 1",
+        "lower": 1.0,
+        "p_value": 0.0,
+        "standard_error": 0.0,
+        "treated_units": 6,
+        "upper": 1.0
+      },
+      "relative_period": -3
+    },
+    {
+      "calendar_period": 2,
+      "estimate": {
+        "comparison_units": 6,
+        "confidence_level": 0.95,
+        "estimate": 2.0,
+        "label": "placebo DID at pre-period 2",
+        "lower": 2.0,
+        "p_value": 0.0,
+        "standard_error": 0.0,
+        "treated_units": 6,
+        "upper": 2.0
+      },
+      "relative_period": -2
+    },
+    {
+      "calendar_period": 3,
+      "estimate": {
+        "comparison_units": 6,
+        "confidence_level": 0.95,
+        "estimate": 3.0,
+        "label": "placebo DID at pre-period 3",
+        "lower": 2.999999999999999,
+        "p_value": 0.0,
+        "standard_error": 4.586533637279208e-16,
+        "treated_units": 6,
+        "upper": 3.000000000000001
+      },
+      "relative_period": -1
+    }
+  ],
+  "post_periods": [
+    4,
+    5
+  ],
+  "pre_periods": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "primary_effect": {
+    "comparison_units": 6,
+    "confidence_level": 0.95,
+    "estimate": 1.5,
+    "label": "average post-period DID effect",
+    "lower": 1.499999999999999,
+    "p_value": 0.0,
+    "standard_error": 5.617333549722722e-16,
+    "treated_units": 6,
+    "upper": 1.500000000000001
+  },
+  "run_id": "qualification.causal.failed-pretrend",
+  "schema_version": "1.0.0",
+  "status": "insufficient-evidence",
+  "unit_count": 12
+}

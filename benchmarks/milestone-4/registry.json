@@ -1,0 +1,1626 @@
+{
+  "artifact_set_hash": "sha256:0079bbd5f3b9e7645431a8e6e371efdfc7a7e7f9629be0d0850bc2489444ce89",
+  "artifacts": [
+    {
+      "artifact_id": "historical-replay-001",
+      "content_hash": "sha256:d19da4b1a31a5edaeb5da6b7fcf2971972e7ee126daf9bb063f3bbe37db0b1ad",
+      "evidence_boundary": "Held-out 2024 public gridded-point replay; estimated forecast evidence, not live performance, city exposure, or intervention impact.",
+      "kind": "historical-replay",
+      "relative_path": "historical-replays/historical-replay-001.json",
+      "source_refs": [
+        "nasa-power-604aeca5caa1"
+      ],
+      "status": "completed"
+    },
+    {
+      "artifact_id": "historical-replay-002",
+      "content_hash": "sha256:a2621689e1c2ffb00ea20930b41c933975b30ea394663082ff967844c62cc66b",
+      "evidence_boundary": "Held-out 2024 public gridded-point replay; estimated forecast evidence, not live performance, city exposure, or intervention impact.",
+      "kind": "historical-replay",
+      "relative_path": "historical-replays/historical-replay-002.json",
+      "source_refs": [
+        "nasa-power-604aeca5caa1"
+      ],
+      "status": "completed"
+    },
+    {
+      "artifact_id": "historical-replay-003",
+      "content_hash": "sha256:ccd15aace5ccc70be0aa86f602ca9d91261eb604432e00bb72740896f59f1a04",
+      "evidence_boundary": "Held-out 2024 public gridded-point replay; estimated forecast evidence, not live performance, city exposure, or intervention impact.",
+      "kind": "historical-replay",
+      "relative_path": "historical-replays/historical-replay-003.json",
+      "source_refs": [
+        "nasa-power-62546b5afea1"
+      ],
+      "status": "completed"
+    },
+    {
+      "artifact_id": "historical-replay-004",
+      "content_hash": "sha256:72baa2d19b1c5f0a6174ffb54fe224b4ef69dc5f69db837e5488308dccee3295",
+      "evidence_boundary": "Held-out 2024 public gridded-point replay; estimated forecast evidence, not live performance, city exposure, or intervention impact.",
+      "kind": "historical-replay",
+      "relative_path": "historical-replays/historical-replay-004.json",
+      "source_refs": [
+        "nasa-power-62546b5afea1"
+      ],
+      "status": "completed"
+    },
+    {
+      "artifact_id": "historical-replay-005",
+      "content_hash": "sha256:711bcf2fdf0b6922e248a48502d0f69ec2a27abc94e50e7f1f01be8911a6c281",
+      "evidence_boundary": "Held-out 2024 public gridded-point replay; estimated forecast evidence, not live performance, city exposure, or intervention impact.",
+      "kind": "historical-replay",
+      "relative_path": "historical-replays/historical-replay-005.json",
+      "source_refs": [
+        "nasa-power-52589737affd"
+      ],
+      "status": "completed"
+    },
+    {
+      "artifact_id": "historical-replay-006",
+      "content_hash": "sha256:15afa1fa5824fd4869a40e0c6daea8b1925214d9304b8d5c3b686ae003c0b3d8",
+      "evidence_boundary": "Held-out 2024 public gridded-point replay; estimated forecast evidence, not live performance, city exposure, or intervention impact.",
+      "kind": "historical-replay",
+      "relative_path": "historical-replays/historical-replay-006.json",
+      "source_refs": [
+        "nasa-power-52589737affd"
+      ],
+      "status": "completed"
+    },
+    {
+      "artifact_id": "historical-replay-007",
+      "content_hash": "sha256:5d98037566257b19bf11857fd8d44a3856679e11f3c0ed5419290137e5aed3b3",
+      "evidence_boundary": "Held-out 2024 public gridded-point replay; estimated forecast evidence, not live performance, city exposure, or intervention impact.",
+      "kind": "historical-replay",
+      "relative_path": "historical-replays/historical-replay-007.json",
+      "source_refs": [
+        "nasa-power-e87d1f3c07d1"
+      ],
+      "status": "completed"
+    },
+    {
+      "artifact_id": "historical-replay-008",
+      "content_hash": "sha256:ed33359895f20c425c4f7da8290d398a771ecb31ee8f2de09327eb975490c82b",
+      "evidence_boundary": "Held-out 2024 public gridded-point replay; estimated forecast evidence, not live performance, city exposure, or intervention impact.",
+      "kind": "historical-replay",
+      "relative_path": "historical-replays/historical-replay-008.json",
+      "source_refs": [
+        "nasa-power-e87d1f3c07d1"
+      ],
+      "status": "completed"
+    },
+    {
+      "artifact_id": "historical-replay-009",
+      "content_hash": "sha256:083c719cfc05ae253d5357b7194025c7635d90437c6462cb1f411887c8dd4333",
+      "evidence_boundary": "Held-out 2024 public gridded-point replay; estimated forecast evidence, not live performance, city exposure, or intervention impact.",
+      "kind": "historical-replay",
+      "relative_path": "historical-replays/historical-replay-009.json",
+      "source_refs": [
+        "nasa-power-a7d70f9df56e"
+      ],
+      "status": "completed"
+    },
+    {
+      "artifact_id": "historical-replay-010",
+      "content_hash": "sha256:05285101d6e46fb3f9d5b20a7203ef0426865b9c743584c3d4d3c87dc11d2be0",
+      "evidence_boundary": "Held-out 2024 public gridded-point replay; estimated forecast evidence, not live performance, city exposure, or intervention impact.",
+      "kind": "historical-replay",
+      "relative_path": "historical-replays/historical-replay-010.json",
+      "source_refs": [
+        "nasa-power-a7d70f9df56e"
+      ],
+      "status": "completed"
+    },
+    {
+      "artifact_id": "historical-replay-011",
+      "content_hash": "sha256:dd7abb4866ff26cd95fe8ecd8b58a19fc06914b889b38049d12a35c136a1a375",
+      "evidence_boundary": "Held-out 2024 public gridded-point replay; estimated forecast evidence, not live performance, city exposure, or intervention impact.",
+      "kind": "historical-replay",
+      "relative_path": "historical-replays/historical-replay-011.json",
+      "source_refs": [
+        "nasa-power-da4396779fb2"
+      ],
+      "status": "completed"
+    },
+    {
+      "artifact_id": "historical-replay-012",
+      "content_hash": "sha256:236a0da48a4027282365965a9c15a86ef45628c35f01b8363545fad4e27f65f7",
+      "evidence_boundary": "Held-out 2024 public gridded-point replay; estimated forecast evidence, not live performance, city exposure, or intervention impact.",
+      "kind": "historical-replay",
+      "relative_path": "historical-replays/historical-replay-012.json",
+      "source_refs": [
+        "nasa-power-da4396779fb2"
+      ],
+      "status": "completed"
+    },
+    {
+      "artifact_id": "historical-replay-013",
+      "content_hash": "sha256:ec5c73a85b294cdde13d6b0f3e6ebc22fd1d0a3d59cdc01e703307d08cc544b1",
+      "evidence_boundary": "Held-out 2024 public gridded-point replay; estimated forecast evidence, not live performance, city exposure, or intervention impact.",
+      "kind": "historical-replay",
+      "relative_path": "historical-replays/historical-replay-013.json",
+      "source_refs": [
+        "nasa-power-50c4a5599250"
+      ],
+      "status": "completed"
+    },
+    {
+      "artifact_id": "historical-replay-014",
+      "content_hash": "sha256:e88f56c6005ae4c263c022ebc5349c7504d7ed1e0848f5f9ba8b801c43719b06",
+      "evidence_boundary": "Held-out 2024 public gridded-point replay; estimated forecast evidence, not live performance, city exposure, or intervention impact.",
+      "kind": "historical-replay",
+      "relative_path": "historical-replays/historical-replay-014.json",
+      "source_refs": [
+        "nasa-power-50c4a5599250"
+      ],
+      "status": "completed"
+    },
+    {
+      "artifact_id": "historical-replay-015",
+      "content_hash": "sha256:ecd78b203dafdf43ca0a94a43b3c8f39340cbcae3dec885168e54257af5431e6",
+      "evidence_boundary": "Held-out 2024 public gridded-point replay; estimated forecast evidence, not live performance, city exposure, or intervention impact.",
+      "kind": "historical-replay",
+      "relative_path": "historical-replays/historical-replay-015.json",
+      "source_refs": [
+        "nasa-power-16da0b36cfc5"
+      ],
+      "status": "completed"
+    },
+    {
+      "artifact_id": "historical-replay-016",
+      "content_hash": "sha256:859ad22813672d085e4b0820e4c94e056e6958d0309ddf77e9c5146c4b560058",
+      "evidence_boundary": "Held-out 2024 public gridded-point replay; estimated forecast evidence, not live performance, city exposure, or intervention impact.",
+      "kind": "historical-replay",
+      "relative_path": "historical-replays/historical-replay-016.json",
+      "source_refs": [
+        "nasa-power-16da0b36cfc5"
+      ],
+      "status": "completed"
+    },
+    {
+      "artifact_id": "historical-replay-017",
+      "content_hash": "sha256:6f3a9ad315a21549e2c160512895dbc11a15db4fb2b85d8f3298db73c1c6a57d",
+      "evidence_boundary": "Held-out 2024 public gridded-point replay; estimated forecast evidence, not live performance, city exposure, or intervention impact.",
+      "kind": "historical-replay",
+      "relative_path": "historical-replays/historical-replay-017.json",
+      "source_refs": [
+        "nasa-power-8a8891e5129a"
+      ],
+      "status": "completed"
+    },
+    {
+      "artifact_id": "historical-replay-018",
+      "content_hash": "sha256:10ee1ecf53294080749bd9d89b5d6530fdefb7417d796e193503272aac95cdb6",
+      "evidence_boundary": "Held-out 2024 public gridded-point replay; estimated forecast evidence, not live performance, city exposure, or intervention impact.",
+      "kind": "historical-replay",
+      "relative_path": "historical-replays/historical-replay-018.json",
+      "source_refs": [
+        "nasa-power-8a8891e5129a"
+      ],
+      "status": "completed"
+    },
+    {
+      "artifact_id": "historical-replay-019",
+      "content_hash": "sha256:839e2d3dd7f23d5c66a429b01e59cef8642485aeafb595ecb37fcef189ddc9c7",
+      "evidence_boundary": "Held-out 2024 public gridded-point replay; estimated forecast evidence, not live performance, city exposure, or intervention impact.",
+      "kind": "historical-replay",
+      "relative_path": "historical-replays/historical-replay-019.json",
+      "source_refs": [
+        "nasa-power-66493d8ac878"
+      ],
+      "status": "completed"
+    },
+    {
+      "artifact_id": "historical-replay-020",
+      "content_hash": "sha256:2fcd5c1faaa16688aa93b5c76f8cb5d151f252c3a42800f2406a1b308d270709",
+      "evidence_boundary": "Held-out 2024 public gridded-point replay; estimated forecast evidence, not live performance, city exposure, or intervention impact.",
+      "kind": "historical-replay",
+      "relative_path": "historical-replays/historical-replay-020.json",
+      "source_refs": [
+        "nasa-power-66493d8ac878"
+      ],
+      "status": "completed"
+    },
+    {
+      "artifact_id": "historical-replay-021",
+      "content_hash": "sha256:e96f892df33faa3c74f451b48328a359e2aa0a1a4d0c470b0d3e292a5f9499bb",
+      "evidence_boundary": "Held-out 2024 public gridded-point replay; estimated forecast evidence, not live performance, city exposure, or intervention impact.",
+      "kind": "historical-replay",
+      "relative_path": "historical-replays/historical-replay-021.json",
+      "source_refs": [
+        "nasa-power-07a6b2a9825d"
+      ],
+      "status": "completed"
+    },
+    {
+      "artifact_id": "historical-replay-022",
+      "content_hash": "sha256:64a8fa548a8c866015a2967f8c9d5e3a0df4b184751d7c491967c6b8999bd630",
+      "evidence_boundary": "Held-out 2024 public gridded-point replay; estimated forecast evidence, not live performance, city exposure, or intervention impact.",
+      "kind": "historical-replay",
+      "relative_path": "historical-replays/historical-replay-022.json",
+      "source_refs": [
+        "nasa-power-07a6b2a9825d"
+      ],
+      "status": "completed"
+    },
+    {
+      "artifact_id": "historical-replay-023",
+      "content_hash": "sha256:bc0996d4fb9272a814e56e69051fdf2debb429d8117e7f523eb1e85f4852e133",
+      "evidence_boundary": "Held-out 2024 public gridded-point replay; estimated forecast evidence, not live performance, city exposure, or intervention impact.",
+      "kind": "historical-replay",
+      "relative_path": "historical-replays/historical-replay-023.json",
+      "source_refs": [
+        "nasa-power-8360e082740e"
+      ],
+      "status": "completed"
+    },
+    {
+      "artifact_id": "historical-replay-024",
+      "content_hash": "sha256:5373160756f56c1c34a9b50b406b36ced5026f7449ebd51ae1526b2bf40c9515",
+      "evidence_boundary": "Held-out 2024 public gridded-point replay; estimated forecast evidence, not live performance, city exposure, or intervention impact.",
+      "kind": "historical-replay",
+      "relative_path": "historical-replays/historical-replay-024.json",
+      "source_refs": [
+        "nasa-power-8360e082740e"
+      ],
+      "status": "completed"
+    },
+    {
+      "artifact_id": "historical-replay-025",
+      "content_hash": "sha256:383eeafef3649eedbe153548ef034021ddc2a014cf993f13e826741663085200",
+      "evidence_boundary": "Held-out 2024 public gridded-point replay; estimated forecast evidence, not live performance, city exposure, or intervention impact.",
+      "kind": "historical-replay",
+      "relative_path": "historical-replays/historical-replay-025.json",
+      "source_refs": [
+        "nasa-power-78867e11134e"
+      ],
+      "status": "completed"
+    },
+    {
+      "artifact_id": "historical-replay-026",
+      "content_hash": "sha256:9cb43763f054ce391710ca96ef9f39ed50763e3ff91288c7340a6ceb295e3c09",
+      "evidence_boundary": "Held-out 2024 public gridded-point replay; estimated forecast evidence, not live performance, city exposure, or intervention impact.",
+      "kind": "historical-replay",
+      "relative_path": "historical-replays/historical-replay-026.json",
+      "source_refs": [
+        "nasa-power-78867e11134e"
+      ],
+      "status": "completed"
+    },
+    {
+      "artifact_id": "historical-replay-027",
+      "content_hash": "sha256:f675b9c6eb0d148a4eb3f6fa636a68a3ea6ce9de99f8045625b3fc255ce34d87",
+      "evidence_boundary": "Held-out 2024 public gridded-point replay; estimated forecast evidence, not live performance, city exposure, or intervention impact.",
+      "kind": "historical-replay",
+      "relative_path": "historical-replays/historical-replay-027.json",
+      "source_refs": [
+        "nasa-power-272e3fd9e842"
+      ],
+      "status": "completed"
+    },
+    {
+      "artifact_id": "historical-replay-028",
+      "content_hash": "sha256:dba6bb1973f59f3389ab02882100ff6a91fedfd0531fc561e4d09b029af66e7a",
+      "evidence_boundary": "Held-out 2024 public gridded-point replay; estimated forecast evidence, not live performance, city exposure, or intervention impact.",
+      "kind": "historical-replay",
+      "relative_path": "historical-replays/historical-replay-028.json",
+      "source_refs": [
+        "nasa-power-272e3fd9e842"
+      ],
+      "status": "completed"
+    },
+    {
+      "artifact_id": "historical-replay-029",
+      "content_hash": "sha256:fc335843a16a6d088caf1c7b0a6cd465e45bf0fc9bb73d3ffd7bb4ef282aeb1a",
+      "evidence_boundary": "Held-out 2024 public gridded-point replay; estimated forecast evidence, not live performance, city exposure, or intervention impact.",
+      "kind": "historical-replay",
+      "relative_path": "historical-replays/historical-replay-029.json",
+      "source_refs": [
+        "nasa-power-83194c694303"
+      ],
+      "status": "completed"
+    },
+    {
+      "artifact_id": "historical-replay-030",
+      "content_hash": "sha256:4e9983f617f032ca0f8b019e71631600cd3e8c5960e47eafbeeac8aa857d62ce",
+      "evidence_boundary": "Held-out 2024 public gridded-point replay; estimated forecast evidence, not live performance, city exposure, or intervention impact.",
+      "kind": "historical-replay",
+      "relative_path": "historical-replays/historical-replay-030.json",
+      "source_refs": [
+        "nasa-power-83194c694303"
+      ],
+      "status": "completed"
+    },
+    {
+      "artifact_id": "historical-replay-031",
+      "content_hash": "sha256:c7eeb91a7f4a2605c4b965522b0ea424f561115cc433b49be729e92f3ffc1173",
+      "evidence_boundary": "Held-out 2024 public gridded-point replay; estimated forecast evidence, not live performance, city exposure, or intervention impact.",
+      "kind": "historical-replay",
+      "relative_path": "historical-replays/historical-replay-031.json",
+      "source_refs": [
+        "nasa-power-91326f6f2df4"
+      ],
+      "status": "completed"
+    },
+    {
+      "artifact_id": "historical-replay-032",
+      "content_hash": "sha256:bceaad4867bcb9c5401fe9c235f4db9778064d9b140c880b898b0ba28d60deea",
+      "evidence_boundary": "Held-out 2024 public gridded-point replay; estimated forecast evidence, not live performance, city exposure, or intervention impact.",
+      "kind": "historical-replay",
+      "relative_path": "historical-replays/historical-replay-032.json",
+      "source_refs": [
+        "nasa-power-91326f6f2df4"
+      ],
+      "status": "completed"
+    },
+    {
+      "artifact_id": "historical-replay-033",
+      "content_hash": "sha256:89d632bb7e071be6ba98f683484740514b406c91ec4e29ef54ec79cce5801cb3",
+      "evidence_boundary": "Held-out 2024 public gridded-point replay; estimated forecast evidence, not live performance, city exposure, or intervention impact.",
+      "kind": "historical-replay",
+      "relative_path": "historical-replays/historical-replay-033.json",
+      "source_refs": [
+        "nasa-power-d64d50199d61"
+      ],
+      "status": "completed"
+    },
+    {
+      "artifact_id": "historical-replay-034",
+      "content_hash": "sha256:61ea8cc87ce62c2c55f216cedb7e742f59d2cdfccc104b594ab30aca6349f47d",
+      "evidence_boundary": "Held-out 2024 public gridded-point replay; estimated forecast evidence, not live performance, city exposure, or intervention impact.",
+      "kind": "historical-replay",
+      "relative_path": "historical-replays/historical-replay-034.json",
+      "source_refs": [
+        "nasa-power-d64d50199d61"
+      ],
+      "status": "completed"
+    },
+    {
+      "artifact_id": "historical-replay-035",
+      "content_hash": "sha256:433d0658b9db44755c838daecb5a8fc14ea865af0f2503fc5c1d31eacd794816",
+      "evidence_boundary": "Held-out 2024 public gridded-point replay; estimated forecast evidence, not live performance, city exposure, or intervention impact.",
+      "kind": "historical-replay",
+      "relative_path": "historical-replays/historical-replay-035.json",
+      "source_refs": [
+        "nasa-power-fe9b60bc5dea"
+      ],
+      "status": "completed"
+    },
+    {
+      "artifact_id": "historical-replay-036",
+      "content_hash": "sha256:71187759f82091e7a760fdc0e1011e7b0dbc09ebe4088d0e223ecc6106bfd06a",
+      "evidence_boundary": "Held-out 2024 public gridded-point replay; estimated forecast evidence, not live performance, city exposure, or intervention impact.",
+      "kind": "historical-replay",
+      "relative_path": "historical-replays/historical-replay-036.json",
+      "source_refs": [
+        "nasa-power-fe9b60bc5dea"
+      ],
+      "status": "completed"
+    },
+    {
+      "artifact_id": "historical-replay-037",
+      "content_hash": "sha256:368346aa36aff4ad233bdbb1072bdb89744ba196331d2e125a206595469ce19b",
+      "evidence_boundary": "Held-out 2024 public gridded-point replay; estimated forecast evidence, not live performance, city exposure, or intervention impact.",
+      "kind": "historical-replay",
+      "relative_path": "historical-replays/historical-replay-037.json",
+      "source_refs": [
+        "nasa-power-fb512e8eb2dc"
+      ],
+      "status": "completed"
+    },
+    {
+      "artifact_id": "historical-replay-038",
+      "content_hash": "sha256:47bd82ac8f1a88e0a5c959bb172dd31ed5d17de3948ef65746a79fbf053f099b",
+      "evidence_boundary": "Held-out 2024 public gridded-point replay; estimated forecast evidence, not live performance, city exposure, or intervention impact.",
+      "kind": "historical-replay",
+      "relative_path": "historical-replays/historical-replay-038.json",
+      "source_refs": [
+        "nasa-power-fb512e8eb2dc"
+      ],
+      "status": "completed"
+    },
+    {
+      "artifact_id": "historical-replay-039",
+      "content_hash": "sha256:9ba6bd8d018b0a7ae88fc90d8fa009447d955bf2467392eca9d92b751bb78ecb",
+      "evidence_boundary": "Held-out 2024 public gridded-point replay; estimated forecast evidence, not live performance, city exposure, or intervention impact.",
+      "kind": "historical-replay",
+      "relative_path": "historical-replays/historical-replay-039.json",
+      "source_refs": [
+        "nasa-power-0c3322999b6f"
+      ],
+      "status": "completed"
+    },
+    {
+      "artifact_id": "historical-replay-040",
+      "content_hash": "sha256:050edf2be407c0ffac4539fe19f6fc34d1284cad4fd8131e22f280c11b69e61c",
+      "evidence_boundary": "Held-out 2024 public gridded-point replay; estimated forecast evidence, not live performance, city exposure, or intervention impact.",
+      "kind": "historical-replay",
+      "relative_path": "historical-replays/historical-replay-040.json",
+      "source_refs": [
+        "nasa-power-0c3322999b6f"
+      ],
+      "status": "completed"
+    },
+    {
+      "artifact_id": "optimization.portfolio.task-001",
+      "content_hash": "sha256:94544211382e2cfac5c73016f52612b3eb954019e3c17d4fb66963476488a265",
+      "evidence_boundary": "Synthetic solver qualification; optimized mathematical output, not a real action portfolio, implementation, or observed benefit.",
+      "kind": "optimization-task",
+      "relative_path": "optimization-tasks/optimization.portfolio.task-001.json",
+      "source_refs": [
+        "synthetic-qualification.portfolio-family-1"
+      ],
+      "status": "optimal"
+    },
+    {
+      "artifact_id": "optimization.portfolio.task-002",
+      "content_hash": "sha256:7d25850ad1ed544efc8bfcb63456ad041aebf3bbb8f14d136e18bab2e99c3080",
+      "evidence_boundary": "Synthetic solver qualification; optimized mathematical output, not a real action portfolio, implementation, or observed benefit.",
+      "kind": "optimization-task",
+      "relative_path": "optimization-tasks/optimization.portfolio.task-002.json",
+      "source_refs": [
+        "synthetic-qualification.portfolio-family-2"
+      ],
+      "status": "optimal"
+    },
+    {
+      "artifact_id": "optimization.portfolio.task-003",
+      "content_hash": "sha256:83484789a98d53a336be1cd00f89419929cf93f22c49ccad2842eddf71c2c39b",
+      "evidence_boundary": "Synthetic solver qualification; optimized mathematical output, not a real action portfolio, implementation, or observed benefit.",
+      "kind": "optimization-task",
+      "relative_path": "optimization-tasks/optimization.portfolio.task-003.json",
+      "source_refs": [
+        "synthetic-qualification.portfolio-family-3"
+      ],
+      "status": "optimal"
+    },
+    {
+      "artifact_id": "optimization.portfolio.task-004",
+      "content_hash": "sha256:718bc3604676955b1c8b98714efb2da5797b9788e15e1663fecd8d0c4e91caac",
+      "evidence_boundary": "Synthetic solver qualification; optimized mathematical output, not a real action portfolio, implementation, or observed benefit.",
+      "kind": "optimization-task",
+      "relative_path": "optimization-tasks/optimization.portfolio.task-004.json",
+      "source_refs": [
+        "synthetic-qualification.portfolio-family-4"
+      ],
+      "status": "optimal"
+    },
+    {
+      "artifact_id": "optimization.portfolio.task-005",
+      "content_hash": "sha256:f514ffec33dee7ae4f87caba6f4fe1bf3c8509e19eb7da397bf9b64fcf3f53cf",
+      "evidence_boundary": "Synthetic solver qualification; optimized mathematical output, not a real action portfolio, implementation, or observed benefit.",
+      "kind": "optimization-task",
+      "relative_path": "optimization-tasks/optimization.portfolio.task-005.json",
+      "source_refs": [
+        "synthetic-qualification.portfolio-family-5"
+      ],
+      "status": "optimal"
+    },
+    {
+      "artifact_id": "optimization.portfolio.task-006",
+      "content_hash": "sha256:41c5b1e5e619c83725298ea3541eb7727f95dd9fa00c1309e5dcc745944607d2",
+      "evidence_boundary": "Synthetic solver qualification; optimized mathematical output, not a real action portfolio, implementation, or observed benefit.",
+      "kind": "optimization-task",
+      "relative_path": "optimization-tasks/optimization.portfolio.task-006.json",
+      "source_refs": [
+        "synthetic-qualification.portfolio-family-6"
+      ],
+      "status": "optimal"
+    },
+    {
+      "artifact_id": "optimization.portfolio.task-007",
+      "content_hash": "sha256:58d087191ffa742d2c445d391ab822eb12fb8302c09690ad8ed54cc30bd91d99",
+      "evidence_boundary": "Synthetic solver qualification; optimized mathematical output, not a real action portfolio, implementation, or observed benefit.",
+      "kind": "optimization-task",
+      "relative_path": "optimization-tasks/optimization.portfolio.task-007.json",
+      "source_refs": [
+        "synthetic-qualification.portfolio-family-7"
+      ],
+      "status": "infeasible"
+    },
+    {
+      "artifact_id": "optimization.portfolio.task-008",
+      "content_hash": "sha256:76fadcf0b3afc93b79f24530aab5c0525b66157bcf141322ca4be422c3741b99",
+      "evidence_boundary": "Synthetic solver qualification; optimized mathematical output, not a real action portfolio, implementation, or observed benefit.",
+      "kind": "optimization-task",
+      "relative_path": "optimization-tasks/optimization.portfolio.task-008.json",
+      "source_refs": [
+        "synthetic-qualification.portfolio-family-8"
+      ],
+      "status": "infeasible"
+    },
+    {
+      "artifact_id": "optimization.portfolio.task-009",
+      "content_hash": "sha256:e6a1e58ed957ed9f3ddf35ee1574db91c079387f8285c13619af3c67afdc5528",
+      "evidence_boundary": "Synthetic solver qualification; optimized mathematical output, not a real action portfolio, implementation, or observed benefit.",
+      "kind": "optimization-task",
+      "relative_path": "optimization-tasks/optimization.portfolio.task-009.json",
+      "source_refs": [
+        "synthetic-qualification.portfolio-family-9"
+      ],
+      "status": "search-limited"
+    },
+    {
+      "artifact_id": "optimization.portfolio.task-010",
+      "content_hash": "sha256:7a2b37430a3ff92a42790e604c36c48b16409a721bfa786da0ecd99f86a9d298",
+      "evidence_boundary": "Synthetic solver qualification; optimized mathematical output, not a real action portfolio, implementation, or observed benefit.",
+      "kind": "optimization-task",
+      "relative_path": "optimization-tasks/optimization.portfolio.task-010.json",
+      "source_refs": [
+        "synthetic-qualification.portfolio-family-0"
+      ],
+      "status": "optimal"
+    },
+    {
+      "artifact_id": "optimization.portfolio.task-011",
+      "content_hash": "sha256:57cefac5ab1c6002bdce6fd003acadff5d2577a0cd2cedc89fac38ca586a68dd",
+      "evidence_boundary": "Synthetic solver qualification; optimized mathematical output, not a real action portfolio, implementation, or observed benefit.",
+      "kind": "optimization-task",
+      "relative_path": "optimization-tasks/optimization.portfolio.task-011.json",
+      "source_refs": [
+        "synthetic-qualification.portfolio-family-1"
+      ],
+      "status": "optimal"
+    },
+    {
+      "artifact_id": "optimization.portfolio.task-012",
+      "content_hash": "sha256:742ce54d185bb83b325dc97e11a7bd63e34a45c211f0f4c0a289d5512dd6dea4",
+      "evidence_boundary": "Synthetic solver qualification; optimized mathematical output, not a real action portfolio, implementation, or observed benefit.",
+      "kind": "optimization-task",
+      "relative_path": "optimization-tasks/optimization.portfolio.task-012.json",
+      "source_refs": [
+        "synthetic-qualification.portfolio-family-2"
+      ],
+      "status": "optimal"
+    },
+    {
+      "artifact_id": "optimization.portfolio.task-013",
+      "content_hash": "sha256:3c5827c6be3425d7388903d9a58d4207ae584cdb2fb9d8d075257a2cb3fb4f2d",
+      "evidence_boundary": "Synthetic solver qualification; optimized mathematical output, not a real action portfolio, implementation, or observed benefit.",
+      "kind": "optimization-task",
+      "relative_path": "optimization-tasks/optimization.portfolio.task-013.json",
+      "source_refs": [
+        "synthetic-qualification.portfolio-family-3"
+      ],
+      "status": "optimal"
+    },
+    {
+      "artifact_id": "optimization.portfolio.task-014",
+      "content_hash": "sha256:4347f4acb299c33823f6d2ae61c3adff67944b7eaf8b17a802b70a20c0ccb7ce",
+      "evidence_boundary": "Synthetic solver qualification; optimized mathematical output, not a real action portfolio, implementation, or observed benefit.",
+      "kind": "optimization-task",
+      "relative_path": "optimization-tasks/optimization.portfolio.task-014.json",
+      "source_refs": [
+        "synthetic-qualification.portfolio-family-4"
+      ],
+      "status": "optimal"
+    },
+    {
+      "artifact_id": "optimization.portfolio.task-015",
+      "content_hash": "sha256:b628b0bcc00922c01a1782c78d3a46406334861f1c24922f4013e552d3780ec9",
+      "evidence_boundary": "Synthetic solver qualification; optimized mathematical output, not a real action portfolio, implementation, or observed benefit.",
+      "kind": "optimization-task",
+      "relative_path": "optimization-tasks/optimization.portfolio.task-015.json",
+      "source_refs": [
+        "synthetic-qualification.portfolio-family-5"
+      ],
+      "status": "optimal"
+    },
+    {
+      "artifact_id": "optimization.portfolio.task-016",
+      "content_hash": "sha256:896791c669da551d5671bef3b7649b9f95b1b93bc70fa2d5a3b818a5f8d38bc5",
+      "evidence_boundary": "Synthetic solver qualification; optimized mathematical output, not a real action portfolio, implementation, or observed benefit.",
+      "kind": "optimization-task",
+      "relative_path": "optimization-tasks/optimization.portfolio.task-016.json",
+      "source_refs": [
+        "synthetic-qualification.portfolio-family-6"
+      ],
+      "status": "optimal"
+    },
+    {
+      "artifact_id": "optimization.portfolio.task-017",
+      "content_hash": "sha256:9d0bbba96bc019c2491e50c413cf0b3ea89c288c8e91e1fa665cab60a5562650",
+      "evidence_boundary": "Synthetic solver qualification; optimized mathematical output, not a real action portfolio, implementation, or observed benefit.",
+      "kind": "optimization-task",
+      "relative_path": "optimization-tasks/optimization.portfolio.task-017.json",
+      "source_refs": [
+        "synthetic-qualification.portfolio-family-7"
+      ],
+      "status": "infeasible"
+    },
+    {
+      "artifact_id": "optimization.portfolio.task-018",
+      "content_hash": "sha256:039f53f6f40ff06d671fc479de6c9ec39ae880f8991cdff5d83f96509cc9e4b9",
+      "evidence_boundary": "Synthetic solver qualification; optimized mathematical output, not a real action portfolio, implementation, or observed benefit.",
+      "kind": "optimization-task",
+      "relative_path": "optimization-tasks/optimization.portfolio.task-018.json",
+      "source_refs": [
+        "synthetic-qualification.portfolio-family-8"
+      ],
+      "status": "infeasible"
+    },
+    {
+      "artifact_id": "optimization.portfolio.task-019",
+      "content_hash": "sha256:e04d46ebd885736ec19041ca61baa6f5aab8e37a33d98e6df1ffa11ac0c1354c",
+      "evidence_boundary": "Synthetic solver qualification; optimized mathematical output, not a real action portfolio, implementation, or observed benefit.",
+      "kind": "optimization-task",
+      "relative_path": "optimization-tasks/optimization.portfolio.task-019.json",
+      "source_refs": [
+        "synthetic-qualification.portfolio-family-9"
+      ],
+      "status": "search-limited"
+    },
+    {
+      "artifact_id": "optimization.portfolio.task-020",
+      "content_hash": "sha256:1bb5ad599890a7959b2844b22b0dab9b2b2ae027676745ec50c24fc286c54523",
+      "evidence_boundary": "Synthetic solver qualification; optimized mathematical output, not a real action portfolio, implementation, or observed benefit.",
+      "kind": "optimization-task",
+      "relative_path": "optimization-tasks/optimization.portfolio.task-020.json",
+      "source_refs": [
+        "synthetic-qualification.portfolio-family-0"
+      ],
+      "status": "optimal"
+    },
+    {
+      "artifact_id": "optimization.portfolio.task-021",
+      "content_hash": "sha256:c03691813b0293fff9720606572e97d199cb146a0cd995fb7ef444f0b2069050",
+      "evidence_boundary": "Synthetic solver qualification; optimized mathematical output, not a real action portfolio, implementation, or observed benefit.",
+      "kind": "optimization-task",
+      "relative_path": "optimization-tasks/optimization.portfolio.task-021.json",
+      "source_refs": [
+        "synthetic-qualification.portfolio-family-1"
+      ],
+      "status": "optimal"
+    },
+    {
+      "artifact_id": "optimization.portfolio.task-022",
+      "content_hash": "sha256:531ad90569733f686d4813e0c3d1e7f3febcb9353e3216241239fc8ade492283",
+      "evidence_boundary": "Synthetic solver qualification; optimized mathematical output, not a real action portfolio, implementation, or observed benefit.",
+      "kind": "optimization-task",
+      "relative_path": "optimization-tasks/optimization.portfolio.task-022.json",
+      "source_refs": [
+        "synthetic-qualification.portfolio-family-2"
+      ],
+      "status": "optimal"
+    },
+    {
+      "artifact_id": "optimization.portfolio.task-023",
+      "content_hash": "sha256:6ab2d23540ad74646bb43dac391d5cdc0d28da505c09827818d996b2cce9d5f6",
+      "evidence_boundary": "Synthetic solver qualification; optimized mathematical output, not a real action portfolio, implementation, or observed benefit.",
+      "kind": "optimization-task",
+      "relative_path": "optimization-tasks/optimization.portfolio.task-023.json",
+      "source_refs": [
+        "synthetic-qualification.portfolio-family-3"
+      ],
+      "status": "optimal"
+    },
+    {
+      "artifact_id": "optimization.portfolio.task-024",
+      "content_hash": "sha256:711b451838d4925ab70faa4e652eea3bb70ab9412f7fcf1a353db21e0d1cd93a",
+      "evidence_boundary": "Synthetic solver qualification; optimized mathematical output, not a real action portfolio, implementation, or observed benefit.",
+      "kind": "optimization-task",
+      "relative_path": "optimization-tasks/optimization.portfolio.task-024.json",
+      "source_refs": [
+        "synthetic-qualification.portfolio-family-4"
+      ],
+      "status": "optimal"
+    },
+    {
+      "artifact_id": "optimization.portfolio.task-025",
+      "content_hash": "sha256:e54f04584b7e9d4ea05c71e7757ea1f6c1583f3fe18aa5483e4205913ea62098",
+      "evidence_boundary": "Synthetic solver qualification; optimized mathematical output, not a real action portfolio, implementation, or observed benefit.",
+      "kind": "optimization-task",
+      "relative_path": "optimization-tasks/optimization.portfolio.task-025.json",
+      "source_refs": [
+        "synthetic-qualification.portfolio-family-5"
+      ],
+      "status": "optimal"
+    },
+    {
+      "artifact_id": "optimization.portfolio.task-026",
+      "content_hash": "sha256:add482870e98c5d2e0212e677929b0a36f59ab9361231b8cb85a924b5401c2ff",
+      "evidence_boundary": "Synthetic solver qualification; optimized mathematical output, not a real action portfolio, implementation, or observed benefit.",
+      "kind": "optimization-task",
+      "relative_path": "optimization-tasks/optimization.portfolio.task-026.json",
+      "source_refs": [
+        "synthetic-qualification.portfolio-family-6"
+      ],
+      "status": "optimal"
+    },
+    {
+      "artifact_id": "optimization.portfolio.task-027",
+      "content_hash": "sha256:20c5b540bb37261080d937b392eaab2e0b6a07a1c0331c16e31c5daa95912024",
+      "evidence_boundary": "Synthetic solver qualification; optimized mathematical output, not a real action portfolio, implementation, or observed benefit.",
+      "kind": "optimization-task",
+      "relative_path": "optimization-tasks/optimization.portfolio.task-027.json",
+      "source_refs": [
+        "synthetic-qualification.portfolio-family-7"
+      ],
+      "status": "infeasible"
+    },
+    {
+      "artifact_id": "optimization.portfolio.task-028",
+      "content_hash": "sha256:8f07c2638f5b46ed89689a9e75a1dc11edd6b0fa270b4b215d28d3368d800f0e",
+      "evidence_boundary": "Synthetic solver qualification; optimized mathematical output, not a real action portfolio, implementation, or observed benefit.",
+      "kind": "optimization-task",
+      "relative_path": "optimization-tasks/optimization.portfolio.task-028.json",
+      "source_refs": [
+        "synthetic-qualification.portfolio-family-8"
+      ],
+      "status": "infeasible"
+    },
+    {
+      "artifact_id": "optimization.portfolio.task-029",
+      "content_hash": "sha256:2f643a3860d325f74c46b2f6dce0437176ff64ca3ec9360e1ead5d6556dab58a",
+      "evidence_boundary": "Synthetic solver qualification; optimized mathematical output, not a real action portfolio, implementation, or observed benefit.",
+      "kind": "optimization-task",
+      "relative_path": "optimization-tasks/optimization.portfolio.task-029.json",
+      "source_refs": [
+        "synthetic-qualification.portfolio-family-9"
+      ],
+      "status": "search-limited"
+    },
+    {
+      "artifact_id": "optimization.portfolio.task-030",
+      "content_hash": "sha256:bf215692085a57bebbdfe9c85ee8bb422d28bc2eb25493f4d768e7877d8b5fea",
+      "evidence_boundary": "Synthetic solver qualification; optimized mathematical output, not a real action portfolio, implementation, or observed benefit.",
+      "kind": "optimization-task",
+      "relative_path": "optimization-tasks/optimization.portfolio.task-030.json",
+      "source_refs": [
+        "synthetic-qualification.portfolio-family-0"
+      ],
+      "status": "optimal"
+    },
+    {
+      "artifact_id": "optimization.portfolio.task-031",
+      "content_hash": "sha256:369fe8f9c42693e01ea713f9a6c662b9b6aaca1f4ae6e9015463625778de6a37",
+      "evidence_boundary": "Synthetic solver qualification; optimized mathematical output, not a real action portfolio, implementation, or observed benefit.",
+      "kind": "optimization-task",
+      "relative_path": "optimization-tasks/optimization.portfolio.task-031.json",
+      "source_refs": [
+        "synthetic-qualification.portfolio-family-1"
+      ],
+      "status": "optimal"
+    },
+    {
+      "artifact_id": "optimization.portfolio.task-032",
+      "content_hash": "sha256:ea5a4a672bae3c0dbfe79063f724f3704bbf53ece3423d85d56ff7ee9754407e",
+      "evidence_boundary": "Synthetic solver qualification; optimized mathematical output, not a real action portfolio, implementation, or observed benefit.",
+      "kind": "optimization-task",
+      "relative_path": "optimization-tasks/optimization.portfolio.task-032.json",
+      "source_refs": [
+        "synthetic-qualification.portfolio-family-2"
+      ],
+      "status": "optimal"
+    },
+    {
+      "artifact_id": "optimization.portfolio.task-033",
+      "content_hash": "sha256:559d576ba5c04b0245ce9e8000dc303872ed4edbfbec9f4abe650349a857e136",
+      "evidence_boundary": "Synthetic solver qualification; optimized mathematical output, not a real action portfolio, implementation, or observed benefit.",
+      "kind": "optimization-task",
+      "relative_path": "optimization-tasks/optimization.portfolio.task-033.json",
+      "source_refs": [
+        "synthetic-qualification.portfolio-family-3"
+      ],
+      "status": "optimal"
+    },
+    {
+      "artifact_id": "optimization.portfolio.task-034",
+      "content_hash": "sha256:836255a2430e37edccbea16947bac059c9f2677f4bbd5a3fa68f3e6c4c81f06a",
+      "evidence_boundary": "Synthetic solver qualification; optimized mathematical output, not a real action portfolio, implementation, or observed benefit.",
+      "kind": "optimization-task",
+      "relative_path": "optimization-tasks/optimization.portfolio.task-034.json",
+      "source_refs": [
+        "synthetic-qualification.portfolio-family-4"
+      ],
+      "status": "optimal"
+    },
+    {
+      "artifact_id": "optimization.portfolio.task-035",
+      "content_hash": "sha256:9a6952d9c866ac8a3333cc96a124f13e264de980d72b0c214b4ef28a186221a8",
+      "evidence_boundary": "Synthetic solver qualification; optimized mathematical output, not a real action portfolio, implementation, or observed benefit.",
+      "kind": "optimization-task",
+      "relative_path": "optimization-tasks/optimization.portfolio.task-035.json",
+      "source_refs": [
+        "synthetic-qualification.portfolio-family-5"
+      ],
+      "status": "optimal"
+    },
+    {
+      "artifact_id": "optimization.portfolio.task-036",
+      "content_hash": "sha256:9d8bf3cb9eb9723bcc849fdac091a9b5b5c53555aeac59ba56ca4e641d732dc3",
+      "evidence_boundary": "Synthetic solver qualification; optimized mathematical output, not a real action portfolio, implementation, or observed benefit.",
+      "kind": "optimization-task",
+      "relative_path": "optimization-tasks/optimization.portfolio.task-036.json",
+      "source_refs": [
+        "synthetic-qualification.portfolio-family-6"
+      ],
+      "status": "optimal"
+    },
+    {
+      "artifact_id": "optimization.portfolio.task-037",
+      "content_hash": "sha256:23cf652f2ecdbad027d057c4ffad84aa111e962da11a346885333da894a2b6ad",
+      "evidence_boundary": "Synthetic solver qualification; optimized mathematical output, not a real action portfolio, implementation, or observed benefit.",
+      "kind": "optimization-task",
+      "relative_path": "optimization-tasks/optimization.portfolio.task-037.json",
+      "source_refs": [
+        "synthetic-qualification.portfolio-family-7"
+      ],
+      "status": "infeasible"
+    },
+    {
+      "artifact_id": "optimization.portfolio.task-038",
+      "content_hash": "sha256:f82734e01540eed47dbab91be73bdf55cf448d779e3b450240b097a354c073e2",
+      "evidence_boundary": "Synthetic solver qualification; optimized mathematical output, not a real action portfolio, implementation, or observed benefit.",
+      "kind": "optimization-task",
+      "relative_path": "optimization-tasks/optimization.portfolio.task-038.json",
+      "source_refs": [
+        "synthetic-qualification.portfolio-family-8"
+      ],
+      "status": "infeasible"
+    },
+    {
+      "artifact_id": "optimization.portfolio.task-039",
+      "content_hash": "sha256:dd18a0d1b1eb5e193411f99d2fa5726904045291f9f36bfc09ddf608f3e0fcac",
+      "evidence_boundary": "Synthetic solver qualification; optimized mathematical output, not a real action portfolio, implementation, or observed benefit.",
+      "kind": "optimization-task",
+      "relative_path": "optimization-tasks/optimization.portfolio.task-039.json",
+      "source_refs": [
+        "synthetic-qualification.portfolio-family-9"
+      ],
+      "status": "search-limited"
+    },
+    {
+      "artifact_id": "optimization.portfolio.task-040",
+      "content_hash": "sha256:e999aed54a24d3067ef8edecaf549452f25213cf2155d83c09a05abbaa7a400d",
+      "evidence_boundary": "Synthetic solver qualification; optimized mathematical output, not a real action portfolio, implementation, or observed benefit.",
+      "kind": "optimization-task",
+      "relative_path": "optimization-tasks/optimization.portfolio.task-040.json",
+      "source_refs": [
+        "synthetic-qualification.portfolio-family-0"
+      ],
+      "status": "optimal"
+    },
+    {
+      "artifact_id": "optimization.portfolio.task-041",
+      "content_hash": "sha256:d17fff3d5db487f43937ba0e728f15b201bd4bb8ecd151e1ecebb80e37778e30",
+      "evidence_boundary": "Synthetic solver qualification; optimized mathematical output, not a real action portfolio, implementation, or observed benefit.",
+      "kind": "optimization-task",
+      "relative_path": "optimization-tasks/optimization.portfolio.task-041.json",
+      "source_refs": [
+        "synthetic-qualification.portfolio-family-1"
+      ],
+      "status": "optimal"
+    },
+    {
+      "artifact_id": "optimization.portfolio.task-042",
+      "content_hash": "sha256:89a1fac220addd11f6d934081f1f0ac3ea2cb06c47b7138231020d657e946613",
+      "evidence_boundary": "Synthetic solver qualification; optimized mathematical output, not a real action portfolio, implementation, or observed benefit.",
+      "kind": "optimization-task",
+      "relative_path": "optimization-tasks/optimization.portfolio.task-042.json",
+      "source_refs": [
+        "synthetic-qualification.portfolio-family-2"
+      ],
+      "status": "optimal"
+    },
+    {
+      "artifact_id": "optimization.portfolio.task-043",
+      "content_hash": "sha256:346fe1ed35bfa5134f800ab575d12e4005d6377b5483612dcb9cd3e3cda8febb",
+      "evidence_boundary": "Synthetic solver qualification; optimized mathematical output, not a real action portfolio, implementation, or observed benefit.",
+      "kind": "optimization-task",
+      "relative_path": "optimization-tasks/optimization.portfolio.task-043.json",
+      "source_refs": [
+        "synthetic-qualification.portfolio-family-3"
+      ],
+      "status": "optimal"
+    },
+    {
+      "artifact_id": "optimization.portfolio.task-044",
+      "content_hash": "sha256:cddfa57b1e05fe42fc9b365e6a9e2a3357c92776f6094485db1b36ae2c14ed6e",
+      "evidence_boundary": "Synthetic solver qualification; optimized mathematical output, not a real action portfolio, implementation, or observed benefit.",
+      "kind": "optimization-task",
+      "relative_path": "optimization-tasks/optimization.portfolio.task-044.json",
+      "source_refs": [
+        "synthetic-qualification.portfolio-family-4"
+      ],
+      "status": "optimal"
+    },
+    {
+      "artifact_id": "optimization.portfolio.task-045",
+      "content_hash": "sha256:85758bbabf1320acb59003f6ffe0a71ce8538c0a1577a31160510742478da175",
+      "evidence_boundary": "Synthetic solver qualification; optimized mathematical output, not a real action portfolio, implementation, or observed benefit.",
+      "kind": "optimization-task",
+      "relative_path": "optimization-tasks/optimization.portfolio.task-045.json",
+      "source_refs": [
+        "synthetic-qualification.portfolio-family-5"
+      ],
+      "status": "optimal"
+    },
+    {
+      "artifact_id": "optimization.portfolio.task-046",
+      "content_hash": "sha256:5c627c68d11d3b97f53c5e6b5b8b8878d7f48458e2863769f991a0cd505dd1f3",
+      "evidence_boundary": "Synthetic solver qualification; optimized mathematical output, not a real action portfolio, implementation, or observed benefit.",
+      "kind": "optimization-task",
+      "relative_path": "optimization-tasks/optimization.portfolio.task-046.json",
+      "source_refs": [
+        "synthetic-qualification.portfolio-family-6"
+      ],
+      "status": "optimal"
+    },
+    {
+      "artifact_id": "optimization.portfolio.task-047",
+      "content_hash": "sha256:1dedd4e31533636df7e8eb03fd6a8d2affa072d51f4c0a0ef2ccba6bb6031d0f",
+      "evidence_boundary": "Synthetic solver qualification; optimized mathematical output, not a real action portfolio, implementation, or observed benefit.",
+      "kind": "optimization-task",
+      "relative_path": "optimization-tasks/optimization.portfolio.task-047.json",
+      "source_refs": [
+        "synthetic-qualification.portfolio-family-7"
+      ],
+      "status": "infeasible"
+    },
+    {
+      "artifact_id": "optimization.portfolio.task-048",
+      "content_hash": "sha256:82c64429db54f65c9816b4a989a67fd5ead0b6777415d7885f152080c5c576ed",
+      "evidence_boundary": "Synthetic solver qualification; optimized mathematical output, not a real action portfolio, implementation, or observed benefit.",
+      "kind": "optimization-task",
+      "relative_path": "optimization-tasks/optimization.portfolio.task-048.json",
+      "source_refs": [
+        "synthetic-qualification.portfolio-family-8"
+      ],
+      "status": "infeasible"
+    },
+    {
+      "artifact_id": "optimization.portfolio.task-049",
+      "content_hash": "sha256:8fe162f11441a21317ea8c7ea46a0859de6c827131e27b2c89ce95c44096dadf",
+      "evidence_boundary": "Synthetic solver qualification; optimized mathematical output, not a real action portfolio, implementation, or observed benefit.",
+      "kind": "optimization-task",
+      "relative_path": "optimization-tasks/optimization.portfolio.task-049.json",
+      "source_refs": [
+        "synthetic-qualification.portfolio-family-9"
+      ],
+      "status": "search-limited"
+    },
+    {
+      "artifact_id": "optimization.portfolio.task-050",
+      "content_hash": "sha256:34d741fc05ab96f17d3d5f3d6b7eb9f8ab621d972a1288a095d76733f0be8940",
+      "evidence_boundary": "Synthetic solver qualification; optimized mathematical output, not a real action portfolio, implementation, or observed benefit.",
+      "kind": "optimization-task",
+      "relative_path": "optimization-tasks/optimization.portfolio.task-050.json",
+      "source_refs": [
+        "synthetic-qualification.portfolio-family-0"
+      ],
+      "status": "optimal"
+    },
+    {
+      "artifact_id": "optimization.portfolio.task-051",
+      "content_hash": "sha256:36430ddd48b7dafe105be3b5d6c34c43061650a2dab06db612ceecf9b42229c7",
+      "evidence_boundary": "Synthetic solver qualification; optimized mathematical output, not a real action portfolio, implementation, or observed benefit.",
+      "kind": "optimization-task",
+      "relative_path": "optimization-tasks/optimization.portfolio.task-051.json",
+      "source_refs": [
+        "synthetic-qualification.portfolio-family-1"
+      ],
+      "status": "optimal"
+    },
+    {
+      "artifact_id": "optimization.portfolio.task-052",
+      "content_hash": "sha256:69bf099d1be48c999f7a3fd9b8f2c18400c53dbc10a53aa190618ceed85238a0",
+      "evidence_boundary": "Synthetic solver qualification; optimized mathematical output, not a real action portfolio, implementation, or observed benefit.",
+      "kind": "optimization-task",
+      "relative_path": "optimization-tasks/optimization.portfolio.task-052.json",
+      "source_refs": [
+        "synthetic-qualification.portfolio-family-2"
+      ],
+      "status": "optimal"
+    },
+    {
+      "artifact_id": "optimization.portfolio.task-053",
+      "content_hash": "sha256:e3b5c004a56415e5ac929c70ad0338ad806cc5f4e6b5e41d87f6a4c56cbfc15c",
+      "evidence_boundary": "Synthetic solver qualification; optimized mathematical output, not a real action portfolio, implementation, or observed benefit.",
+      "kind": "optimization-task",
+      "relative_path": "optimization-tasks/optimization.portfolio.task-053.json",
+      "source_refs": [
+        "synthetic-qualification.portfolio-family-3"
+      ],
+      "status": "optimal"
+    },
+    {
+      "artifact_id": "optimization.portfolio.task-054",
+      "content_hash": "sha256:9300fba8e5b96a13edb6df91369958761caca56e5bce498007e21d90ed686511",
+      "evidence_boundary": "Synthetic solver qualification; optimized mathematical output, not a real action portfolio, implementation, or observed benefit.",
+      "kind": "optimization-task",
+      "relative_path": "optimization-tasks/optimization.portfolio.task-054.json",
+      "source_refs": [
+        "synthetic-qualification.portfolio-family-4"
+      ],
+      "status": "optimal"
+    },
+    {
+      "artifact_id": "optimization.portfolio.task-055",
+      "content_hash": "sha256:5fa50079b8aa603ab7bd3fb7e1149e61b747966715c88ac12da7607eee5172cf",
+      "evidence_boundary": "Synthetic solver qualification; optimized mathematical output, not a real action portfolio, implementation, or observed benefit.",
+      "kind": "optimization-task",
+      "relative_path": "optimization-tasks/optimization.portfolio.task-055.json",
+      "source_refs": [
+        "synthetic-qualification.portfolio-family-5"
+      ],
+      "status": "optimal"
+    },
+    {
+      "artifact_id": "optimization.portfolio.task-056",
+      "content_hash": "sha256:fd7921215c7d3ded603289f098c59ce0e26b12a8eeebdc0616e4731e0047c03a",
+      "evidence_boundary": "Synthetic solver qualification; optimized mathematical output, not a real action portfolio, implementation, or observed benefit.",
+      "kind": "optimization-task",
+      "relative_path": "optimization-tasks/optimization.portfolio.task-056.json",
+      "source_refs": [
+        "synthetic-qualification.portfolio-family-6"
+      ],
+      "status": "optimal"
+    },
+    {
+      "artifact_id": "optimization.portfolio.task-057",
+      "content_hash": "sha256:a6be8b6d47fb2f64efafadc719a8f7d1b1c1b9baea546b98f2846395f4c32650",
+      "evidence_boundary": "Synthetic solver qualification; optimized mathematical output, not a real action portfolio, implementation, or observed benefit.",
+      "kind": "optimization-task",
+      "relative_path": "optimization-tasks/optimization.portfolio.task-057.json",
+      "source_refs": [
+        "synthetic-qualification.portfolio-family-7"
+      ],
+      "status": "infeasible"
+    },
+    {
+      "artifact_id": "optimization.portfolio.task-058",
+      "content_hash": "sha256:a82eba5dc22ff45307770bc1d679365b52d59502cb8dc7c0836e382353778e6b",
+      "evidence_boundary": "Synthetic solver qualification; optimized mathematical output, not a real action portfolio, implementation, or observed benefit.",
+      "kind": "optimization-task",
+      "relative_path": "optimization-tasks/optimization.portfolio.task-058.json",
+      "source_refs": [
+        "synthetic-qualification.portfolio-family-8"
+      ],
+      "status": "infeasible"
+    },
+    {
+      "artifact_id": "optimization.portfolio.task-059",
+      "content_hash": "sha256:2228c067d213bc421087df378d8f584ee4f956d4c4a74d15fe8756d54962466b",
+      "evidence_boundary": "Synthetic solver qualification; optimized mathematical output, not a real action portfolio, implementation, or observed benefit.",
+      "kind": "optimization-task",
+      "relative_path": "optimization-tasks/optimization.portfolio.task-059.json",
+      "source_refs": [
+        "synthetic-qualification.portfolio-family-9"
+      ],
+      "status": "search-limited"
+    },
+    {
+      "artifact_id": "optimization.portfolio.task-060",
+      "content_hash": "sha256:1933676a948bd375ad668d5e36c33f22e2443141999f18493661c9e4e8e31a34",
+      "evidence_boundary": "Synthetic solver qualification; optimized mathematical output, not a real action portfolio, implementation, or observed benefit.",
+      "kind": "optimization-task",
+      "relative_path": "optimization-tasks/optimization.portfolio.task-060.json",
+      "source_refs": [
+        "synthetic-qualification.portfolio-family-0"
+      ],
+      "status": "optimal"
+    },
+    {
+      "artifact_id": "optimization.portfolio.task-061",
+      "content_hash": "sha256:5d423240065c6b1537c1fb32ac0cea5330b84f5fac5fd555cecb9dc60e49ea53",
+      "evidence_boundary": "Synthetic solver qualification; optimized mathematical output, not a real action portfolio, implementation, or observed benefit.",
+      "kind": "optimization-task",
+      "relative_path": "optimization-tasks/optimization.portfolio.task-061.json",
+      "source_refs": [
+        "synthetic-qualification.portfolio-family-1"
+      ],
+      "status": "optimal"
+    },
+    {
+      "artifact_id": "optimization.portfolio.task-062",
+      "content_hash": "sha256:83936541a6345e79b991ab6cd7dbbf7c2de1443742d6814e182ef50635118ac5",
+      "evidence_boundary": "Synthetic solver qualification; optimized mathematical output, not a real action portfolio, implementation, or observed benefit.",
+      "kind": "optimization-task",
+      "relative_path": "optimization-tasks/optimization.portfolio.task-062.json",
+      "source_refs": [
+        "synthetic-qualification.portfolio-family-2"
+      ],
+      "status": "optimal"
+    },
+    {
+      "artifact_id": "optimization.portfolio.task-063",
+      "content_hash": "sha256:5357c79496a5b0169e30769da9b231f2bcc05202f3d38f3ccc07dbc72ec6e7b8",
+      "evidence_boundary": "Synthetic solver qualification; optimized mathematical output, not a real action portfolio, implementation, or observed benefit.",
+      "kind": "optimization-task",
+      "relative_path": "optimization-tasks/optimization.portfolio.task-063.json",
+      "source_refs": [
+        "synthetic-qualification.portfolio-family-3"
+      ],
+      "status": "optimal"
+    },
+    {
+      "artifact_id": "optimization.portfolio.task-064",
+      "content_hash": "sha256:226b001759f92e77055a37e62f2dc49725a538c91ce46de2d4c12752cbd8e138",
+      "evidence_boundary": "Synthetic solver qualification; optimized mathematical output, not a real action portfolio, implementation, or observed benefit.",
+      "kind": "optimization-task",
+      "relative_path": "optimization-tasks/optimization.portfolio.task-064.json",
+      "source_refs": [
+        "synthetic-qualification.portfolio-family-4"
+      ],
+      "status": "optimal"
+    },
+    {
+      "artifact_id": "optimization.portfolio.task-065",
+      "content_hash": "sha256:fb235d28221570bd97e48e670a49a3d8a432447f46d50064107c27a341c09066",
+      "evidence_boundary": "Synthetic solver qualification; optimized mathematical output, not a real action portfolio, implementation, or observed benefit.",
+      "kind": "optimization-task",
+      "relative_path": "optimization-tasks/optimization.portfolio.task-065.json",
+      "source_refs": [
+        "synthetic-qualification.portfolio-family-5"
+      ],
+      "status": "optimal"
+    },
+    {
+      "artifact_id": "optimization.portfolio.task-066",
+      "content_hash": "sha256:1f17113cc2f31964b56eae06f2378b293c6cda11627ff67271d0cbd32051fc07",
+      "evidence_boundary": "Synthetic solver qualification; optimized mathematical output, not a real action portfolio, implementation, or observed benefit.",
+      "kind": "optimization-task",
+      "relative_path": "optimization-tasks/optimization.portfolio.task-066.json",
+      "source_refs": [
+        "synthetic-qualification.portfolio-family-6"
+      ],
+      "status": "optimal"
+    },
+    {
+      "artifact_id": "optimization.portfolio.task-067",
+      "content_hash": "sha256:181f3bede672ff24bc335287516515ec583162cb2d2f7799c1c16055a80a07b4",
+      "evidence_boundary": "Synthetic solver qualification; optimized mathematical output, not a real action portfolio, implementation, or observed benefit.",
+      "kind": "optimization-task",
+      "relative_path": "optimization-tasks/optimization.portfolio.task-067.json",
+      "source_refs": [
+        "synthetic-qualification.portfolio-family-7"
+      ],
+      "status": "infeasible"
+    },
+    {
+      "artifact_id": "optimization.portfolio.task-068",
+      "content_hash": "sha256:43c1a74e3305b042ae737acdb7ead0f1e4d31dd7fc3fd21056c2def39742cb33",
+      "evidence_boundary": "Synthetic solver qualification; optimized mathematical output, not a real action portfolio, implementation, or observed benefit.",
+      "kind": "optimization-task",
+      "relative_path": "optimization-tasks/optimization.portfolio.task-068.json",
+      "source_refs": [
+        "synthetic-qualification.portfolio-family-8"
+      ],
+      "status": "infeasible"
+    },
+    {
+      "artifact_id": "optimization.portfolio.task-069",
+      "content_hash": "sha256:a082b18231d440d509d91fd3a76f65ca4d198647842bd12cd760b617ccb95a8d",
+      "evidence_boundary": "Synthetic solver qualification; optimized mathematical output, not a real action portfolio, implementation, or observed benefit.",
+      "kind": "optimization-task",
+      "relative_path": "optimization-tasks/optimization.portfolio.task-069.json",
+      "source_refs": [
+        "synthetic-qualification.portfolio-family-9"
+      ],
+      "status": "search-limited"
+    },
+    {
+      "artifact_id": "optimization.portfolio.task-070",
+      "content_hash": "sha256:19e8cd381e3d93e8f0ede28e644f32aceee03739ffc58a881b34d6e69abdd59d",
+      "evidence_boundary": "Synthetic solver qualification; optimized mathematical output, not a real action portfolio, implementation, or observed benefit.",
+      "kind": "optimization-task",
+      "relative_path": "optimization-tasks/optimization.portfolio.task-070.json",
+      "source_refs": [
+        "synthetic-qualification.portfolio-family-0"
+      ],
+      "status": "optimal"
+    },
+    {
+      "artifact_id": "optimization.portfolio.task-071",
+      "content_hash": "sha256:a45422625562c50aa3459468ee95baa801fafd91a4436f3e2a2ffc2eeddeeae4",
+      "evidence_boundary": "Synthetic solver qualification; optimized mathematical output, not a real action portfolio, implementation, or observed benefit.",
+      "kind": "optimization-task",
+      "relative_path": "optimization-tasks/optimization.portfolio.task-071.json",
+      "source_refs": [
+        "synthetic-qualification.portfolio-family-1"
+      ],
+      "status": "optimal"
+    },
+    {
+      "artifact_id": "optimization.portfolio.task-072",
+      "content_hash": "sha256:ef7fb5ac246d85dce9d364507d9a37b25896a4984d0960f65eeaaa09b44fdf0b",
+      "evidence_boundary": "Synthetic solver qualification; optimized mathematical output, not a real action portfolio, implementation, or observed benefit.",
+      "kind": "optimization-task",
+      "relative_path": "optimization-tasks/optimization.portfolio.task-072.json",
+      "source_refs": [
+        "synthetic-qualification.portfolio-family-2"
+      ],
+      "status": "optimal"
+    },
+    {
+      "artifact_id": "optimization.portfolio.task-073",
+      "content_hash": "sha256:da7ebd99dde6eec39d0a2af7c99d115f6b5c2200df203d8eb858af1d328ff3fd",
+      "evidence_boundary": "Synthetic solver qualification; optimized mathematical output, not a real action portfolio, implementation, or observed benefit.",
+      "kind": "optimization-task",
+      "relative_path": "optimization-tasks/optimization.portfolio.task-073.json",
+      "source_refs": [
+        "synthetic-qualification.portfolio-family-3"
+      ],
+      "status": "optimal"
+    },
+    {
+      "artifact_id": "optimization.portfolio.task-074",
+      "content_hash": "sha256:5318199b376d3ee92ecc62f23e88ed2e81e1d46272f28690fcfe6a7aeb57f1aa",
+      "evidence_boundary": "Synthetic solver qualification; optimized mathematical output, not a real action portfolio, implementation, or observed benefit.",
+      "kind": "optimization-task",
+      "relative_path": "optimization-tasks/optimization.portfolio.task-074.json",
+      "source_refs": [
+        "synthetic-qualification.portfolio-family-4"
+      ],
+      "status": "optimal"
+    },
+    {
+      "artifact_id": "optimization.portfolio.task-075",
+      "content_hash": "sha256:4de3708e57ee4ffb333b0e858dcd7e56a9dc5155889dbf52d732221e5ff03f66",
+      "evidence_boundary": "Synthetic solver qualification; optimized mathematical output, not a real action portfolio, implementation, or observed benefit.",
+      "kind": "optimization-task",
+      "relative_path": "optimization-tasks/optimization.portfolio.task-075.json",
+      "source_refs": [
+        "synthetic-qualification.portfolio-family-5"
+      ],
+      "status": "optimal"
+    },
+    {
+      "artifact_id": "optimization.portfolio.task-076",
+      "content_hash": "sha256:c9e4cb7f48d416c2cbc8410fd9d3bc2315d2852dbea70bd2a94203e68e473812",
+      "evidence_boundary": "Synthetic solver qualification; optimized mathematical output, not a real action portfolio, implementation, or observed benefit.",
+      "kind": "optimization-task",
+      "relative_path": "optimization-tasks/optimization.portfolio.task-076.json",
+      "source_refs": [
+        "synthetic-qualification.portfolio-family-6"
+      ],
+      "status": "optimal"
+    },
+    {
+      "artifact_id": "optimization.portfolio.task-077",
+      "content_hash": "sha256:71a144e1ca8ba7e244f655a6760c2e4ceabf3e1f8af6d7e988d4c2142ad7305c",
+      "evidence_boundary": "Synthetic solver qualification; optimized mathematical output, not a real action portfolio, implementation, or observed benefit.",
+      "kind": "optimization-task",
+      "relative_path": "optimization-tasks/optimization.portfolio.task-077.json",
+      "source_refs": [
+        "synthetic-qualification.portfolio-family-7"
+      ],
+      "status": "infeasible"
+    },
+    {
+      "artifact_id": "optimization.portfolio.task-078",
+      "content_hash": "sha256:0d0a1c25e97a76d29920fcb88c1f7a3f689bcf42f8424e4d090bfe59a3d9e7c2",
+      "evidence_boundary": "Synthetic solver qualification; optimized mathematical output, not a real action portfolio, implementation, or observed benefit.",
+      "kind": "optimization-task",
+      "relative_path": "optimization-tasks/optimization.portfolio.task-078.json",
+      "source_refs": [
+        "synthetic-qualification.portfolio-family-8"
+      ],
+      "status": "infeasible"
+    },
+    {
+      "artifact_id": "optimization.portfolio.task-079",
+      "content_hash": "sha256:8455e6b720ab33fdab54cb5d424281401621074532be0c34e706d9fa79744ad5",
+      "evidence_boundary": "Synthetic solver qualification; optimized mathematical output, not a real action portfolio, implementation, or observed benefit.",
+      "kind": "optimization-task",
+      "relative_path": "optimization-tasks/optimization.portfolio.task-079.json",
+      "source_refs": [
+        "synthetic-qualification.portfolio-family-9"
+      ],
+      "status": "search-limited"
+    },
+    {
+      "artifact_id": "optimization.portfolio.task-080",
+      "content_hash": "sha256:31ce06a39b90820cde888bbcbcf26604736fc1b87cd63114c93ab069a2ad7836",
+      "evidence_boundary": "Synthetic solver qualification; optimized mathematical output, not a real action portfolio, implementation, or observed benefit.",
+      "kind": "optimization-task",
+      "relative_path": "optimization-tasks/optimization.portfolio.task-080.json",
+      "source_refs": [
+        "synthetic-qualification.portfolio-family-0"
+      ],
+      "status": "optimal"
+    },
+    {
+      "artifact_id": "optimization.portfolio.task-081",
+      "content_hash": "sha256:db9781b5a30ee846de75d0dac2ff9b4bfd1b045ed7c105fbb45c980c4ae0abb8",
+      "evidence_boundary": "Synthetic solver qualification; optimized mathematical output, not a real action portfolio, implementation, or observed benefit.",
+      "kind": "optimization-task",
+      "relative_path": "optimization-tasks/optimization.portfolio.task-081.json",
+      "source_refs": [
+        "synthetic-qualification.portfolio-family-1"
+      ],
+      "status": "optimal"
+    },
+    {
+      "artifact_id": "optimization.portfolio.task-082",
+      "content_hash": "sha256:1bbfc90371026f81b40e3b201cdbb2868a8d87da107f2d2cfd93941f158c921a",
+      "evidence_boundary": "Synthetic solver qualification; optimized mathematical output, not a real action portfolio, implementation, or observed benefit.",
+      "kind": "optimization-task",
+      "relative_path": "optimization-tasks/optimization.portfolio.task-082.json",
+      "source_refs": [
+        "synthetic-qualification.portfolio-family-2"
+      ],
+      "status": "optimal"
+    },
+    {
+      "artifact_id": "optimization.portfolio.task-083",
+      "content_hash": "sha256:f3d4b37cd84438773ee0dd808e59485e1e62d0885f28be16d390192d559c572c",
+      "evidence_boundary": "Synthetic solver qualification; optimized mathematical output, not a real action portfolio, implementation, or observed benefit.",
+      "kind": "optimization-task",
+      "relative_path": "optimization-tasks/optimization.portfolio.task-083.json",
+      "source_refs": [
+        "synthetic-qualification.portfolio-family-3"
+      ],
+      "status": "optimal"
+    },
+    {
+      "artifact_id": "optimization.portfolio.task-084",
+      "content_hash": "sha256:2d6aaf84bbd48f5d6ed629eae8b99a83cf832e70f0568c37ce3e82d5af07892f",
+      "evidence_boundary": "Synthetic solver qualification; optimized mathematical output, not a real action portfolio, implementation, or observed benefit.",
+      "kind": "optimization-task",
+      "relative_path": "optimization-tasks/optimization.portfolio.task-084.json",
+      "source_refs": [
+        "synthetic-qualification.portfolio-family-4"
+      ],
+      "status": "optimal"
+    },
+    {
+      "artifact_id": "optimization.portfolio.task-085",
+      "content_hash": "sha256:68156ece62ec72f7a06e310b99c5af13d71202ed6d61adda1423dadbd059a589",
+      "evidence_boundary": "Synthetic solver qualification; optimized mathematical output, not a real action portfolio, implementation, or observed benefit.",
+      "kind": "optimization-task",
+      "relative_path": "optimization-tasks/optimization.portfolio.task-085.json",
+      "source_refs": [
+        "synthetic-qualification.portfolio-family-5"
+      ],
+      "status": "optimal"
+    },
+    {
+      "artifact_id": "optimization.portfolio.task-086",
+      "content_hash": "sha256:f12c124d0cbad55a8dcc7984738b32770d02b73595405a99d86a262e20d552ee",
+      "evidence_boundary": "Synthetic solver qualification; optimized mathematical output, not a real action portfolio, implementation, or observed benefit.",
+      "kind": "optimization-task",
+      "relative_path": "optimization-tasks/optimization.portfolio.task-086.json",
+      "source_refs": [
+        "synthetic-qualification.portfolio-family-6"
+      ],
+      "status": "optimal"
+    },
+    {
+      "artifact_id": "optimization.portfolio.task-087",
+      "content_hash": "sha256:d8ad3938e37a6e1abfcdbb33251812bc1600c7512d50ce22627cbd46ab2f9d76",
+      "evidence_boundary": "Synthetic solver qualification; optimized mathematical output, not a real action portfolio, implementation, or observed benefit.",
+      "kind": "optimization-task",
+      "relative_path": "optimization-tasks/optimization.portfolio.task-087.json",
+      "source_refs": [
+        "synthetic-qualification.portfolio-family-7"
+      ],
+      "status": "infeasible"
+    },
+    {
+      "artifact_id": "optimization.portfolio.task-088",
+      "content_hash": "sha256:bc2b7522126b8dc4da5803b95f6eae12e042be728e0f61891148c3adede321d4",
+      "evidence_boundary": "Synthetic solver qualification; optimized mathematical output, not a real action portfolio, implementation, or observed benefit.",
+      "kind": "optimization-task",
+      "relative_path": "optimization-tasks/optimization.portfolio.task-088.json",
+      "source_refs": [
+        "synthetic-qualification.portfolio-family-8"
+      ],
+      "status": "infeasible"
+    },
+    {
+      "artifact_id": "optimization.portfolio.task-089",
+      "content_hash": "sha256:665a9614db4602fa3f6408b8bb03b1cd4fc8b29a27e821d3c52fc184aa90efbf",
+      "evidence_boundary": "Synthetic solver qualification; optimized mathematical output, not a real action portfolio, implementation, or observed benefit.",
+      "kind": "optimization-task",
+      "relative_path": "optimization-tasks/optimization.portfolio.task-089.json",
+      "source_refs": [
+        "synthetic-qualification.portfolio-family-9"
+      ],
+      "status": "search-limited"
+    },
+    {
+      "artifact_id": "optimization.portfolio.task-090",
+      "content_hash": "sha256:3f396387704c12a039a328a58a59a8ae35ad69065ae05bcd94cd404d9d451722",
+      "evidence_boundary": "Synthetic solver qualification; optimized mathematical output, not a real action portfolio, implementation, or observed benefit.",
+      "kind": "optimization-task",
+      "relative_path": "optimization-tasks/optimization.portfolio.task-090.json",
+      "source_refs": [
+        "synthetic-qualification.portfolio-family-0"
+      ],
+      "status": "optimal"
+    },
+    {
+      "artifact_id": "optimization.portfolio.task-091",
+      "content_hash": "sha256:f2c1e162fd3cb8feac5c321c8782a6f3e62a41e9ccfecbb6129384a939082c20",
+      "evidence_boundary": "Synthetic solver qualification; optimized mathematical output, not a real action portfolio, implementation, or observed benefit.",
+      "kind": "optimization-task",
+      "relative_path": "optimization-tasks/optimization.portfolio.task-091.json",
+      "source_refs": [
+        "synthetic-qualification.portfolio-family-1"
+      ],
+      "status": "optimal"
+    },
+    {
+      "artifact_id": "optimization.portfolio.task-092",
+      "content_hash": "sha256:44b37f29c1807a3f67d18b6db9ca08fbda746262618f06ba8204610d19d98935",
+      "evidence_boundary": "Synthetic solver qualification; optimized mathematical output, not a real action portfolio, implementation, or observed benefit.",
+      "kind": "optimization-task",
+      "relative_path": "optimization-tasks/optimization.portfolio.task-092.json",
+      "source_refs": [
+        "synthetic-qualification.portfolio-family-2"
+      ],
+      "status": "optimal"
+    },
+    {
+      "artifact_id": "optimization.portfolio.task-093",
+      "content_hash": "sha256:5fa83219b7f207db29ed7365984a9eeb79149c493fc47eb5e6ee998747fe2bc6",
+      "evidence_boundary": "Synthetic solver qualification; optimized mathematical output, not a real action portfolio, implementation, or observed benefit.",
+      "kind": "optimization-task",
+      "relative_path": "optimization-tasks/optimization.portfolio.task-093.json",
+      "source_refs": [
+        "synthetic-qualification.portfolio-family-3"
+      ],
+      "status": "optimal"
+    },
+    {
+      "artifact_id": "optimization.portfolio.task-094",
+      "content_hash": "sha256:dcc0a485e34288ce74ccf4aaa435f1c159454fe6e331513a9f1274838a96d932",
+      "evidence_boundary": "Synthetic solver qualification; optimized mathematical output, not a real action portfolio, implementation, or observed benefit.",
+      "kind": "optimization-task",
+      "relative_path": "optimization-tasks/optimization.portfolio.task-094.json",
+      "source_refs": [
+        "synthetic-qualification.portfolio-family-4"
+      ],
+      "status": "optimal"
+    },
+    {
+      "artifact_id": "optimization.portfolio.task-095",
+      "content_hash": "sha256:939b05c90c9a78f1dd3110ee693920d8553a15eabde975ac9a75b1dec54d0663",
+      "evidence_boundary": "Synthetic solver qualification; optimized mathematical output, not a real action portfolio, implementation, or observed benefit.",
+      "kind": "optimization-task",
+      "relative_path": "optimization-tasks/optimization.portfolio.task-095.json",
+      "source_refs": [
+        "synthetic-qualification.portfolio-family-5"
+      ],
+      "status": "optimal"
+    },
+    {
+      "artifact_id": "optimization.portfolio.task-096",
+      "content_hash": "sha256:7f81d724d809940ab8fc88b554a9448e14cca24b2dc3f501696fdd71c14ddfc1",
+      "evidence_boundary": "Synthetic solver qualification; optimized mathematical output, not a real action portfolio, implementation, or observed benefit.",
+      "kind": "optimization-task",
+      "relative_path": "optimization-tasks/optimization.portfolio.task-096.json",
+      "source_refs": [
+        "synthetic-qualification.portfolio-family-6"
+      ],
+      "status": "optimal"
+    },
+    {
+      "artifact_id": "optimization.portfolio.task-097",
+      "content_hash": "sha256:1d3b303de233fd73a1e277d78d7e54e70b20868f1a2f9bd0833fbdb0a6435553",
+      "evidence_boundary": "Synthetic solver qualification; optimized mathematical output, not a real action portfolio, implementation, or observed benefit.",
+      "kind": "optimization-task",
+      "relative_path": "optimization-tasks/optimization.portfolio.task-097.json",
+      "source_refs": [
+        "synthetic-qualification.portfolio-family-7"
+      ],
+      "status": "infeasible"
+    },
+    {
+      "artifact_id": "optimization.portfolio.task-098",
+      "content_hash": "sha256:39bb856c6c012aeb111ec7f67f5d9e134574ddd713fa0440ae7830e9da4e0e37",
+      "evidence_boundary": "Synthetic solver qualification; optimized mathematical output, not a real action portfolio, implementation, or observed benefit.",
+      "kind": "optimization-task",
+      "relative_path": "optimization-tasks/optimization.portfolio.task-098.json",
+      "source_refs": [
+        "synthetic-qualification.portfolio-family-8"
+      ],
+      "status": "infeasible"
+    },
+    {
+      "artifact_id": "optimization.portfolio.task-099",
+      "content_hash": "sha256:a5caf640f27d929f912d7070e75dfecd1493632ca02b2630d73edc7f30eb45b5",
+      "evidence_boundary": "Synthetic solver qualification; optimized mathematical output, not a real action portfolio, implementation, or observed benefit.",
+      "kind": "optimization-task",
+      "relative_path": "optimization-tasks/optimization.portfolio.task-099.json",
+      "source_refs": [
+        "synthetic-qualification.portfolio-family-9"
+      ],
+      "status": "search-limited"
+    },
+    {
+      "artifact_id": "optimization.portfolio.task-100",
+      "content_hash": "sha256:6bdae48bcf108dbbaeced2abd8c9b86166420142c6850a24df42df1106aa77e3",
+      "evidence_boundary": "Synthetic solver qualification; optimized mathematical output, not a real action portfolio, implementation, or observed benefit.",
+      "kind": "optimization-task",
+      "relative_path": "optimization-tasks/optimization.portfolio.task-100.json",
+      "source_refs": [
+        "synthetic-qualification.portfolio-family-0"
+      ],
+      "status": "optimal"
+    },
+    {
+      "artifact_id": "qualification-causal-passed",
+      "content_hash": "sha256:b0dc58c59ead952a8740898084a6a149da335dd7022965279e2b2c61e6cc6dfb",
+      "evidence_boundary": "Synthetic method qualification; not a real causal study.",
+      "kind": "engine-qualification",
+      "relative_path": "engine-qualification/qualification-causal-passed.json",
+      "source_refs": [
+        "synthetic-qualification.did-panel"
+      ],
+      "status": "identification-passed"
+    },
+    {
+      "artifact_id": "qualification-causal-failed-pretrend",
+      "content_hash": "sha256:025f8e4b4530d5186b1498c9f6f9a51156b7afad25dda85789b6d68bc4d856bd",
+      "evidence_boundary": "Negative synthetic identification result preserved as estimated association.",
+      "kind": "engine-qualification",
+      "relative_path": "engine-qualification/qualification-causal-failed-pretrend.json",
+      "source_refs": [
+        "synthetic-qualification.did-panel"
+      ],
+      "status": "insufficient-evidence"
+    },
+    {
+      "artifact_id": "qualification-simulation-seeded",
+      "content_hash": "sha256:72dde71532da7368699b0a856c4e59d80ce79f85e72bf2e6cb99840ddb09996a",
+      "evidence_boundary": "Seeded synthetic simulation; not observed impact.",
+      "kind": "engine-qualification",
+      "relative_path": "engine-qualification/qualification-simulation-seeded.json",
+      "source_refs": [
+        "synthetic-qualification.exposure",
+        "proposed"
+      ],
+      "status": "completed"
+    },
+    {
+      "artifact_id": "qualification-uncertainty-robust",
+      "content_hash": "sha256:23e1c6b16ab9476d1a518c203e32523fef69ad45f959acbee433479887ee14c6",
+      "evidence_boundary": "Synthetic robustness qualification; not probability of policy success.",
+      "kind": "engine-qualification",
+      "relative_path": "engine-qualification/qualification-uncertainty-robust.json",
+      "source_refs": [
+        "synthetic-qualification.option-a",
+        "synthetic-qualification.option-b"
+      ],
+      "status": "robust-winner"
+    },
+    {
+      "artifact_id": "qualification-uncertainty-reversal",
+      "content_hash": "sha256:f8e5a2d3798a910c2fae544e0ef5eb88dc2eecbea605f24aa8109de070c5c28a",
+      "evidence_boundary": "Synthetic reversal qualification; not field evidence.",
+      "kind": "engine-qualification",
+      "relative_path": "engine-qualification/qualification-uncertainty-reversal.json",
+      "source_refs": [
+        "synthetic-qualification.incumbent",
+        "synthetic-qualification.competitor"
+      ],
+      "status": "reversal-risk"
+    }
+  ],
+  "created_at": "2026-08-12T10:07:41.052030Z",
+  "engine_qualification_runs": 5,
+  "evidence_summary_content_hash": "sha256:8c94e281b30bca6bdbb213fbba22a0edeafe9543a315658b3ca983f90a56e214",
+  "evidence_summary_ref": "evidence-summary.json",
+  "historical_replays": 40,
+  "limitations": [
+    "Historical replays use real committed public NASA POWER data but remain point-level method evaluations, not production forecasts.",
+    "Optimization and engine-qualification artifacts are synthetic and prove software behavior only.",
+    "Artifact counts distinguish tasks from unique sources, cities, methods, and real studies."
+  ],
+  "optimization_tasks": 100,
+  "registry_id": "milestone-4-analytical-engine-benchmarks.v1",
+  "schema_version": "1.0.0",
+  "status_counts": {
+    "completed": 41,
+    "identification-passed": 1,
+    "infeasible": 20,
+    "insufficient-evidence": 1,
+    "optimal": 70,
+    "reversal-risk": 1,
+    "robust-winner": 1,
+    "search-limited": 10
+  }
+}

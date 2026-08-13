@@ -20,9 +20,10 @@ intervention definition
 
 This repository is an early implementation. The global scale described in the project blueprint is a target, not a completed result. Current, verified capabilities are listed in [`docs/STATUS.md`](docs/STATUS.md); the complete requirement-to-evidence matrix is in [`docs/REQUIREMENTS.md`](docs/REQUIREMENTS.md).
 
-The third implementation milestone establishes nine generated public contracts, the evidence type
+The fourth implementation milestone establishes 17 generated public contracts, the evidence type
 system, deterministic validation, eight real public-data connectors, a reproducible Tier-G catalog
-of 250 city points, and 30 Tier-S standardized descriptive bundles. Tier G means global
+of 250 city points, 30 Tier-S standardized descriptive bundles, five transparent analytical
+engines, 40 held-out historical replays, and 100 bounded optimization tasks. Tier G means global
 discoverability and Tier S means bounded cross-city screening; neither means a deep city adapter,
 production deployment, municipal adoption, or real-world impact.
 
@@ -39,10 +40,11 @@ radius is not travel time, the population proxy is not individual demand, and th
 is not a municipal recommendation.
 
 Current local quality evidence is recorded in
-[`verification/milestone-3-standardized-cities.json`](verification/milestone-3-standardized-cities.json).
-The independent verifier regenerates Schemas, both reference outputs, all four global-city
-artifacts, and the complete standardized-city artifact tree in a temporary directory and requires
-exact bytes.
+[`verification/milestone-4-analytical-engines.json`](verification/milestone-4-analytical-engines.json)
+and [`verification/milestone-4-coverage.json`](verification/milestone-4-coverage.json). The
+independent verifier regenerates Schemas, both reference outputs, all four global-city artifacts,
+the complete standardized-city tree, and all milestone-4 benchmark artifacts in a temporary
+directory and requires exact bytes.
 
 The current source catalog contains eight verified connectors across eight source families. The 41
 committed source manifests cover 100,842 declared source units: 34,086 GeoNames gazetteer rows,
@@ -89,6 +91,38 @@ Every screening record fixes `recommendation_issued=false`. National indicators 
 typed as country context, and the point climate series is never described as a municipal exposure
 surface. See [`docs/STANDARDIZED_CITY_COVERAGE.md`](docs/STANDARDIZED_CITY_COVERAGE.md).
 
+## Audited analytical engines and benchmarks
+
+The analytical layer now provides five independently typed engines:
+
+- transparent naive, drift, moving-average, and seasonal-naive forecasts selected only through
+  rolling-origin training folds, with empirical residual intervals and negative releases;
+- a balanced-panel difference-in-differences estimator whose output remains an estimated
+  association unless every sample, balance, pretrend-equivalence, and placebo-equivalence gate
+  passes;
+- seeded Monte Carlo simulation over six distribution families with complete draw-stream hashes,
+  retained prefixes, quantiles, thresholds, and non-causal sensitivity rankings;
+- paired-draw uncertainty analysis with probability-best tie sharing, regret, dominance,
+  reversals, robust-winner gates, and insufficient-evidence releases; and
+- deterministic bounded integer portfolio optimization with hard constraints, infeasibility
+  diagnostics, search-limit releases, Pareto records, solver audit, and a serialized zero-action
+  baseline.
+
+[`benchmarks/milestone-4/evidence-summary.json`](benchmarks/milestone-4/evidence-summary.json)
+binds every metric below to the SHA-256 hash of its complete run artifact. The 40 historical tasks
+use 13,440 training values and 1,200 strictly later holdout values from 20 committed NASA POWER
+city-point artifacts and two parameters. The 100 synthetic solver tasks declare 24,000 portfolios,
+evaluate 21,710, encounter 4,333 feasible cases across the full run set, and contain 70 explicit
+selected-versus-zero-action comparisons, 20 proven infeasible releases, and 10 search-limited
+releases. These are substantial, reproducible software and public-data evaluation artifacts—not
+live forecasts, 40 independent cities, real interventions, clients, users, or observed impact.
+
+The human-readable [benchmark audit](benchmarks/milestone-4/summary.md), three row-level evidence
+CSVs, 145 complete run JSON files, a 152-entry portable checksum inventory, and a deterministic
+registry provide separate review surfaces. See
+[`docs/ANALYTICAL_ENGINE_AUDIT.md`](docs/ANALYTICAL_ENGINE_AUDIT.md) for methods, gates, tests, and
+claim boundaries.
+
 ## Core protocols
 
 1. `city-adapter.schema.json` — how a city declares sources, coverage, capabilities, and limitations.
@@ -100,6 +134,14 @@ surface. See [`docs/STANDARDIZED_CITY_COVERAGE.md`](docs/STANDARDIZED_CITY_COVER
 7. `standard-scenario-run.schema.json` — descriptive and insufficient-evidence screening outputs.
 8. `standardized-city-bundle.schema.json` — source alignment, quality, metrics, and scenario gates.
 9. `tier-s-registry.schema.json` — selection, exclusions, hashes, and cross-city artifact references.
+10. `forecast-run.schema.json` — baseline candidates, rolling-origin folds, metrics, intervals, and negative status.
+11. `historical-replay.schema.json` — immutable training cutoff, later holdout, errors, and lineage.
+12. `causal-run.schema.json` — estimand, design, diagnostics, effect, interpretation, and claim gate.
+13. `simulation-run.schema.json` — distributions, seeded configuration, summaries, sensitivity, and draw hash.
+14. `uncertainty-run.schema.json` — option summaries, dominance, regret, reversals, and robustness status.
+15. `portfolio-optimization-run.schema.json` — problem, baseline, plans, violations, frontier, and solver status.
+16. `benchmark-evidence-summary.schema.json` — row evidence plus recomputed task and work totals.
+17. `benchmark-registry.schema.json` — run inventory, file hashes, counts, and artifact-set binding.
 
 ## Evidence types
 
@@ -150,6 +192,13 @@ civicdecision cities build-standardized \
   --country-context-directory examples/data/tier-s/world-bank \
   --target-count 30 \
   --output catalog/standardized-cities
+
+civicdecision benchmarks build-milestone-4 \
+  --standardized-directory catalog/standardized-cities \
+  --nasa-source-directory examples/data/tier-s/nasa-power \
+  --replay-city-count 20 \
+  --optimization-task-count 100 \
+  --output benchmarks/milestone-4
 ```
 
 Verify a downloaded artifact and compile the committed reference workflow:
@@ -173,12 +222,15 @@ python scripts/verify_repository.py
 - `src/civicdecision/connectors/` — bounded public-data ingestion.
 - `src/civicdecision/semantic/` — canonical urban semantics, Tier-G catalog, and seed graph.
 - `src/civicdecision/analysis/` and `optimization/` — transparent analytical primitives.
+- `src/civicdecision/benchmarks/` — deterministic replay, solver-task, qualification, and
+  evidence-ledger builders.
 - `src/civicdecision/demos/` — end-to-end reference compilers.
 - `schemas/` — generated versioned JSON Schemas.
 - `examples/data/` — small public fixtures plus manifests.
 - `examples/outputs/` — completed and negative golden DecisionPacks.
 - `docs/` — architecture, governance, threat model, ADRs, and scope matrix.
 - `verification/` — machine-readable exact-rebuild evidence.
+- `benchmarks/` — complete runs, row-level evidence ledgers, reports, and portable hashes.
 
 ## Scope and claim boundary
 

@@ -72,9 +72,36 @@ Each engine consumes typed semantic inputs and returns evidence items with the w
 evidence type. Engines do not mutate source evidence. Causal analysis is gated separately from
 prediction and simulation. Solver status is retained even when no feasible recommendation exists.
 
-The first reference engine uses exhaustive enumeration, making bounded optimality independently
-checkable. Larger mixed-integer, graph, and simulation engines will implement the same result
-contract and retain solver diagnostics.
+Forecasting preserves every baseline candidate and rolling-origin fold, selects only from training
+evidence, and emits a negative status when history or regularity is inadequate. Difference in
+differences separates design claims from statistical results and upgrades an association to
+`causal` only when all declared identification diagnostics pass. Monte Carlo simulation uses
+explicit distributions and seeds, hashes the complete canonical draw stream incrementally, and
+retains a bounded inspection prefix. Paired uncertainty analysis calculates probability-best,
+regret, dominance, and reversal evidence without converting modeled probabilities into policy
+success probabilities.
+
+Portfolio optimization exhaustively enumerates a declared finite integer search space up to a
+deterministic evaluation cap. It serializes a zero-action baseline, retained feasible and
+violating alternatives, binding and violated constraints, a Pareto subset, and solver accounting.
+Only a complete search with a feasible incumbent and zero optimality gap can emit `optimal`;
+complete no-solution searches emit `infeasible`, while capped searches emit `search-limited` and
+withhold selection. Larger mixed-integer and graph solvers will implement the same evidence and
+negative-release contracts.
+
+### 3a. Benchmark and evidence-ledger layer
+
+The milestone-4 builder produces 40 strictly forward public-data replays, 100 synthetic bounded
+portfolio tasks, and five synthetic method-qualification runs. Every full run is written before
+its SHA-256 is added to the registry. A typed evidence summary repeats reviewer-relevant fields,
+binds each row back to the full artifact hash, recomputes method/status/strategy counts and work
+totals, and hashes the full artifact map. Three CSV projections make row-level inspection possible
+without weakening the authoritative JSON contracts.
+
+The repository verifier validates all hashes and schemas, rebuilds the full benchmark tree in an
+isolated temporary directory, and requires identical paths and bytes. This creates a chain from
+source manifest to run artifact to evidence row to registry to portable checksum. It proves
+deterministic implementation and stated task counts; it does not prove external validity or impact.
 
 ### 4. Decision diagnostics
 
@@ -105,15 +132,18 @@ and copied rows do not inflate the non-raster record target.
 
 ## Determinism
 
-Protocol serialization is canonical UTF-8 JSON with sorted keys and no NaN values. Every source
-and DecisionPack has a SHA-256 content hash. Reference workflows use fixed inputs, explicit
-parameters, and fixed seeds. `scripts/verify_repository.py` rebuilds Schemas and DecisionPacks in
-a temporary directory and requires byte-for-byte equality with committed artifacts.
+Protocol serialization is canonical UTF-8 JSON with sorted keys and no NaN values. Every source,
+run artifact, evidence summary, and DecisionPack has a SHA-256 content hash. Reference workflows
+use fixed inputs, explicit parameters, and fixed seeds. `scripts/verify_repository.py` rebuilds
+Schemas, DecisionPacks, the Tier-G and Tier-S layers, and all 145 analytical run artifacts plus
+evidence ledgers in a temporary directory and requires byte-for-byte equality.
 
 ## Current limits
 
-The current milestone implements a 250-point global catalog, a small semantic seed graph, and 30
-standardized descriptive bundles. It does not implement official municipal geometries or deep
-local evidence for those 30 cities. Production network routing, forecasting, causal
-identification, large-scale simulation, API, web UI, hosted demo, production security controls,
-external review, real users, and policy impact remain incomplete.
+The current milestone implements a 250-point global catalog, a small semantic seed graph, 30
+standardized descriptive bundles, five analytical engine families, 40 public-data forecast
+replays, 100 synthetic optimization tasks, and five synthetic engine qualifications. It does not
+implement official municipal geometries or deep local evidence for those 30 cities. Production
+network routing, externally credible causal studies, city-calibrated intervention simulation,
+API, web UI, hosted demo, production security controls, external review, real users, and policy
+impact remain incomplete.

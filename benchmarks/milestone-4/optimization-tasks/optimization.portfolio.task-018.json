@@ -1,0 +1,4273 @@
+{
+  "baseline_plan": {
+    "binding_constraints": [],
+    "evidence_type": "optimized",
+    "feasible": false,
+    "group_benefits": {
+      "general": 0.0,
+      "priority": 0.0
+    },
+    "limitations": [
+      "Optimized values are mathematical outputs under declared inputs, not observed impact.",
+      "Feasibility reflects only encoded constraints and does not establish implementability."
+    ],
+    "objective_value": 0.0,
+    "plan_id": "portfolio-plan-00000000",
+    "quantities": {
+      "action-a": 0,
+      "action-b": 0,
+      "action-c": 0,
+      "action-d": 0
+    },
+    "scenario_objectives": {
+      "adverse": 0.0,
+      "base": 0.0,
+      "favorable": 0.0
+    },
+    "selected_action_count": 0,
+    "total_benefit": 0.0,
+    "total_capacity": 0.0,
+    "total_cost": 0.0,
+    "total_risk": 0.0,
+    "violations": [
+      {
+        "bound": 1000.0,
+        "constraint_id": "minimum-benefit",
+        "details": "Total modeled benefit is below the floor.",
+        "excess": 1000.0,
+        "measured": 0.0
+      },
+      {
+        "bound": 500.0,
+        "constraint_id": "group-priority",
+        "details": "Modeled benefit for priority is below its floor.",
+        "excess": 500.0,
+        "measured": 0.0
+      },
+      {
+        "bound": 1,
+        "constraint_id": "minimum-selected-actions",
+        "details": "Too few action types are selected.",
+        "excess": 1.0,
+        "measured": 0
+      }
+    ]
+  },
+  "created_at": "2026-08-12T10:07:41.052030Z",
+  "diagnostics": [
+    "Evaluated 180 of 180 integer portfolios.",
+    "Compared the selected objective with the explicitly serialized zero-action baseline.",
+    "Retained 75 ranked feasible/infeasible plans for audit.",
+    "Found 0 feasible plans and 0 Pareto-efficient plans."
+  ],
+  "evidence_type": "optimized",
+  "failure_reason": "Complete enumeration found no plan satisfying every hard constraint.",
+  "infeasibility_diagnostics": [
+    "budget: violated by 179 of 180 evaluated plans",
+    "group-priority: violated by 180 of 180 evaluated plans",
+    "minimum-benefit: violated by 180 of 180 evaluated plans",
+    "minimum-selected-actions: violated by 1 of 180 evaluated plans"
+  ],
+  "limitations": [
+    "This is a deterministic synthetic qualification task, not a real city recommendation.",
+    "Repeated task families vary parameters and statuses but are not independent field studies.",
+    "Optimization proves only mathematical status for encoded actions, scenarios, and constraints.",
+    "The theoretical upper bound ignores feasibility and is diagnostic, not a certified dual bound.",
+    "Search-limited runs preserve incumbents but deliberately issue no selected recommendation."
+  ],
+  "pareto_frontier_plan_ids": [],
+  "plans": [
+    {
+      "binding_constraints": [],
+      "evidence_type": "optimized",
+      "feasible": false,
+      "group_benefits": {
+        "general": 50.0,
+        "priority": 39.0
+      },
+      "limitations": [
+        "Optimized values are mathematical outputs under declared inputs, not observed impact.",
+        "Feasibility reflects only encoded constraints and does not establish implementability."
+      ],
+      "objective_value": 56.599999999999994,
+      "plan_id": "portfolio-plan-00000179",
+      "quantities": {
+        "action-a": 2,
+        "action-b": 3,
+        "action-c": 4,
+        "action-d": 2
+      },
+      "scenario_objectives": {
+        "adverse": 56.599999999999994,
+        "base": 104.4,
+        "favorable": 152.2
+      },
+      "selected_action_count": 4,
+      "total_benefit": 166.0,
+      "total_capacity": 16.0,
+      "total_cost": 72.0,
+      "total_risk": 26.0,
+      "violations": [
+        {
+          "bound": 1.0,
+          "constraint_id": "budget",
+          "details": "Total cost exceeds the declared budget.",
+          "excess": 71.0,
+          "measured": 72.0
+        },
+        {
+          "bound": 1000.0,
+          "constraint_id": "minimum-benefit",
+          "details": "Total modeled benefit is below the floor.",
+          "excess": 834.0,
+          "measured": 166.0
+        },
+        {
+          "bound": 500.0,
+          "constraint_id": "group-priority",
+          "details": "Modeled benefit for priority is below its floor.",
+          "excess": 461.0,
+          "measured": 39.0
+        }
+      ]
+    },
+    {
+      "binding_constraints": [],
+      "evidence_type": "optimized",
+      "feasible": false,
+      "group_benefits": {
+        "general": 47.0,
+        "priority": 37.0
+      },
+      "limitations": [
+        "Optimized values are mathematical outputs under declared inputs, not observed impact.",
+        "Feasibility reflects only encoded constraints and does not establish implementability."
+      ],
+      "objective_value": 53.0,
+      "plan_id": "portfolio-plan-00000119",
+      "quantities": {
+        "action-a": 1,
+        "action-b": 3,
+        "action-c": 4,
+        "action-d": 2
+      },
+      "scenario_objectives": {
+        "adverse": 53.0,
+        "base": 98.0,
+        "favorable": 143.0
+      },
+      "selected_action_count": 4,
+      "total_benefit": 154.0,
+      "total_capacity": 15.0,
+      "total_cost": 67.0,
+      "total_risk": 23.0,
+      "violations": [
+        {
+          "bound": 1.0,
+          "constraint_id": "budget",
+          "details": "Total cost exceeds the declared budget.",
+          "excess": 66.0,
+          "measured": 67.0
+        },
+        {
+          "bound": 1000.0,
+          "constraint_id": "minimum-benefit",
+          "details": "Total modeled benefit is below the floor.",
+          "excess": 846.0,
+          "measured": 154.0
+        },
+        {
+          "bound": 500.0,
+          "constraint_id": "group-priority",
+          "details": "Modeled benefit for priority is below its floor.",
+          "excess": 463.0,
+          "measured": 37.0
+        }
+      ]
+    },
+    {
+      "binding_constraints": [],
+      "evidence_type": "optimized",
+      "feasible": false,
+      "group_benefits": {
+        "general": 46.0,
+        "priority": 36.0
+      },
+      "limitations": [
+        "Optimized values are mathematical outputs under declared inputs, not observed impact.",
+        "Feasibility reflects only encoded constraints and does not establish implementability."
+      ],
+      "objective_value": 52.0,
+      "plan_id": "portfolio-plan-00000164",
+      "quantities": {
+        "action-a": 2,
+        "action-b": 2,
+        "action-c": 4,
+        "action-d": 2
+      },
+      "scenario_objectives": {
+        "adverse": 52.0,
+        "base": 96.0,
+        "favorable": 140.0
+      },
+      "selected_action_count": 4,
+      "total_benefit": 152.0,
+      "total_capacity": 14.0,
+      "total_cost": 66.0,
+      "total_risk": 22.0,
+      "violations": [
+        {
+          "bound": 1.0,
+          "constraint_id": "budget",
+          "details": "Total cost exceeds the declared budget.",
+          "excess": 65.0,
+          "measured": 66.0
+        },
+        {
+          "bound": 1000.0,
+          "constraint_id": "minimum-benefit",
+          "details": "Total modeled benefit is below the floor.",
+          "excess": 848.0,
+          "measured": 152.0
+        },
+        {
+          "bound": 500.0,
+          "constraint_id": "group-priority",
+          "details": "Modeled benefit for priority is below its floor.",
+          "excess": 464.0,
+          "measured": 36.0
+        }
+      ]
+    },
+    {
+      "binding_constraints": [],
+      "evidence_type": "optimized",
+      "feasible": false,
+      "group_benefits": {
+        "general": 45.0,
+        "priority": 35.0
+      },
+      "limitations": [
+        "Optimized values are mathematical outputs under declared inputs, not observed impact.",
+        "Feasibility reflects only encoded constraints and does not establish implementability."
+      ],
+      "objective_value": 50.99999999999999,
+      "plan_id": "portfolio-plan-00000176",
+      "quantities": {
+        "action-a": 2,
+        "action-b": 3,
+        "action-c": 3,
+        "action-d": 2
+      },
+      "scenario_objectives": {
+        "adverse": 50.99999999999999,
+        "base": 94.0,
+        "favorable": 137.0
+      },
+      "selected_action_count": 4,
+      "total_benefit": 150.0,
+      "total_capacity": 15.0,
+      "total_cost": 65.0,
+      "total_risk": 25.0,
+      "violations": [
+        {
+          "bound": 1.0,
+          "constraint_id": "budget",
+          "details": "Total cost exceeds the declared budget.",
+          "excess": 64.0,
+          "measured": 65.0
+        },
+        {
+          "bound": 1000.0,
+          "constraint_id": "minimum-benefit",
+          "details": "Total modeled benefit is below the floor.",
+          "excess": 850.0,
+          "measured": 150.0
+        },
+        {
+          "bound": 500.0,
+          "constraint_id": "group-priority",
+          "details": "Modeled benefit for priority is below its floor.",
+          "excess": 465.0,
+          "measured": 35.0
+        }
+      ]
+    },
+    {
+      "binding_constraints": [],
+      "evidence_type": "optimized",
+      "feasible": false,
+      "group_benefits": {
+        "general": 44.0,
+        "priority": 34.0
+      },
+      "limitations": [
+        "Optimized values are mathematical outputs under declared inputs, not observed impact.",
+        "Feasibility reflects only encoded constraints and does not establish implementability."
+      ],
+      "objective_value": 50.0,
+      "plan_id": "portfolio-plan-00000178",
+      "quantities": {
+        "action-a": 2,
+        "action-b": 3,
+        "action-c": 4,
+        "action-d": 1
+      },
+      "scenario_objectives": {
+        "adverse": 50.0,
+        "base": 92.0,
+        "favorable": 134.0
+      },
+      "selected_action_count": 4,
+      "total_benefit": 148.0,
+      "total_capacity": 14.0,
+      "total_cost": 64.0,
+      "total_risk": 24.0,
+      "violations": [
+        {
+          "bound": 1.0,
+          "constraint_id": "budget",
+          "details": "Total cost exceeds the declared budget.",
+          "excess": 63.0,
+          "measured": 64.0
+        },
+        {
+          "bound": 1000.0,
+          "constraint_id": "minimum-benefit",
+          "details": "Total modeled benefit is below the floor.",
+          "excess": 852.0,
+          "measured": 148.0
+        },
+        {
+          "bound": 500.0,
+          "constraint_id": "group-priority",
+          "details": "Modeled benefit for priority is below its floor.",
+          "excess": 466.0,
+          "measured": 34.0
+        }
+      ]
+    },
+    {
+      "binding_constraints": [],
+      "evidence_type": "optimized",
+      "feasible": false,
+      "group_benefits": {
+        "general": 44.0,
+        "priority": 35.0
+      },
+      "limitations": [
+        "Optimized values are mathematical outputs under declared inputs, not observed impact.",
+        "Feasibility reflects only encoded constraints and does not establish implementability."
+      ],
+      "objective_value": 49.4,
+      "plan_id": "portfolio-plan-00000059",
+      "quantities": {
+        "action-a": 0,
+        "action-b": 3,
+        "action-c": 4,
+        "action-d": 2
+      },
+      "scenario_objectives": {
+        "adverse": 49.4,
+        "base": 91.60000000000001,
+        "favorable": 133.79999999999998
+      },
+      "selected_action_count": 3,
+      "total_benefit": 142.0,
+      "total_capacity": 14.0,
+      "total_cost": 62.0,
+      "total_risk": 20.0,
+      "violations": [
+        {
+          "bound": 1.0,
+          "constraint_id": "budget",
+          "details": "Total cost exceeds the declared budget.",
+          "excess": 61.0,
+          "measured": 62.0
+        },
+        {
+          "bound": 1000.0,
+          "constraint_id": "minimum-benefit",
+          "details": "Total modeled benefit is below the floor.",
+          "excess": 858.0,
+          "measured": 142.0
+        },
+        {
+          "bound": 500.0,
+          "constraint_id": "group-priority",
+          "details": "Modeled benefit for priority is below its floor.",
+          "excess": 465.0,
+          "measured": 35.0
+        }
+      ]
+    },
+    {
+      "binding_constraints": [],
+      "evidence_type": "optimized",
+      "feasible": false,
+      "group_benefits": {
+        "general": 43.0,
+        "priority": 34.0
+      },
+      "limitations": [
+        "Optimized values are mathematical outputs under declared inputs, not observed impact.",
+        "Feasibility reflects only encoded constraints and does not establish implementability."
+      ],
+      "objective_value": 48.4,
+      "plan_id": "portfolio-plan-00000104",
+      "quantities": {
+        "action-a": 1,
+        "action-b": 2,
+        "action-c": 4,
+        "action-d": 2
+      },
+      "scenario_objectives": {
+        "adverse": 48.4,
+        "base": 89.60000000000001,
+        "favorable": 130.79999999999998
+      },
+      "selected_action_count": 4,
+      "total_benefit": 140.0,
+      "total_capacity": 13.0,
+      "total_cost": 61.0,
+      "total_risk": 19.0,
+      "violations": [
+        {
+          "bound": 1.0,
+          "constraint_id": "budget",
+          "details": "Total cost exceeds the declared budget.",
+          "excess": 60.0,
+          "measured": 61.0
+        },
+        {
+          "bound": 1000.0,
+          "constraint_id": "minimum-benefit",
+          "details": "Total modeled benefit is below the floor.",
+          "excess": 860.0,
+          "measured": 140.0
+        },
+        {
+          "bound": 500.0,
+          "constraint_id": "group-priority",
+          "details": "Modeled benefit for priority is below its floor.",
+          "excess": 466.0,
+          "measured": 34.0
+        }
+      ]
+    },
+    {
+      "binding_constraints": [],
+      "evidence_type": "optimized",
+      "feasible": false,
+      "group_benefits": {
+        "general": 42.0,
+        "priority": 33.0
+      },
+      "limitations": [
+        "Optimized values are mathematical outputs under declared inputs, not observed impact.",
+        "Feasibility reflects only encoded constraints and does not establish implementability."
+      ],
+      "objective_value": 47.4,
+      "plan_id": "portfolio-plan-00000116",
+      "quantities": {
+        "action-a": 1,
+        "action-b": 3,
+        "action-c": 3,
+        "action-d": 2
+      },
+      "scenario_objectives": {
+        "adverse": 47.4,
+        "base": 87.60000000000001,
+        "favorable": 127.79999999999998
+      },
+      "selected_action_count": 4,
+      "total_benefit": 138.0,
+      "total_capacity": 14.0,
+      "total_cost": 60.0,
+      "total_risk": 22.0,
+      "violations": [
+        {
+          "bound": 1.0,
+          "constraint_id": "budget",
+          "details": "Total cost exceeds the declared budget.",
+          "excess": 59.0,
+          "measured": 60.0
+        },
+        {
+          "bound": 1000.0,
+          "constraint_id": "minimum-benefit",
+          "details": "Total modeled benefit is below the floor.",
+          "excess": 862.0,
+          "measured": 138.0
+        },
+        {
+          "bound": 500.0,
+          "constraint_id": "group-priority",
+          "details": "Modeled benefit for priority is below its floor.",
+          "excess": 467.0,
+          "measured": 33.0
+        }
+      ]
+    },
+    {
+      "binding_constraints": [],
+      "evidence_type": "optimized",
+      "feasible": false,
+      "group_benefits": {
+        "general": 42.0,
+        "priority": 33.0
+      },
+      "limitations": [
+        "Optimized values are mathematical outputs under declared inputs, not observed impact.",
+        "Feasibility reflects only encoded constraints and does not establish implementability."
+      ],
+      "objective_value": 47.4,
+      "plan_id": "portfolio-plan-00000149",
+      "quantities": {
+        "action-a": 2,
+        "action-b": 1,
+        "action-c": 4,
+        "action-d": 2
+      },
+      "scenario_objectives": {
+        "adverse": 47.4,
+        "base": 87.60000000000001,
+        "favorable": 127.8
+      },
+      "selected_action_count": 4,
+      "total_benefit": 138.0,
+      "total_capacity": 12.0,
+      "total_cost": 60.0,
+      "total_risk": 18.0,
+      "violations": [
+        {
+          "bound": 1.0,
+          "constraint_id": "budget",
+          "details": "Total cost exceeds the declared budget.",
+          "excess": 59.0,
+          "measured": 60.0
+        },
+        {
+          "bound": 1000.0,
+          "constraint_id": "minimum-benefit",
+          "details": "Total modeled benefit is below the floor.",
+          "excess": 862.0,
+          "measured": 138.0
+        },
+        {
+          "bound": 500.0,
+          "constraint_id": "group-priority",
+          "details": "Modeled benefit for priority is below its floor.",
+          "excess": 467.0,
+          "measured": 33.0
+        }
+      ]
+    },
+    {
+      "binding_constraints": [],
+      "evidence_type": "optimized",
+      "feasible": false,
+      "group_benefits": {
+        "general": 41.0,
+        "priority": 32.0
+      },
+      "limitations": [
+        "Optimized values are mathematical outputs under declared inputs, not observed impact.",
+        "Feasibility reflects only encoded constraints and does not establish implementability."
+      ],
+      "objective_value": 46.4,
+      "plan_id": "portfolio-plan-00000118",
+      "quantities": {
+        "action-a": 1,
+        "action-b": 3,
+        "action-c": 4,
+        "action-d": 1
+      },
+      "scenario_objectives": {
+        "adverse": 46.4,
+        "base": 85.60000000000001,
+        "favorable": 124.79999999999998
+      },
+      "selected_action_count": 4,
+      "total_benefit": 136.0,
+      "total_capacity": 13.0,
+      "total_cost": 59.0,
+      "total_risk": 21.0,
+      "violations": [
+        {
+          "bound": 1.0,
+          "constraint_id": "budget",
+          "details": "Total cost exceeds the declared budget.",
+          "excess": 58.0,
+          "measured": 59.0
+        },
+        {
+          "bound": 1000.0,
+          "constraint_id": "minimum-benefit",
+          "details": "Total modeled benefit is below the floor.",
+          "excess": 864.0,
+          "measured": 136.0
+        },
+        {
+          "bound": 500.0,
+          "constraint_id": "group-priority",
+          "details": "Modeled benefit for priority is below its floor.",
+          "excess": 468.0,
+          "measured": 32.0
+        }
+      ]
+    },
+    {
+      "binding_constraints": [],
+      "evidence_type": "optimized",
+      "feasible": false,
+      "group_benefits": {
+        "general": 41.0,
+        "priority": 32.0
+      },
+      "limitations": [
+        "Optimized values are mathematical outputs under declared inputs, not observed impact.",
+        "Feasibility reflects only encoded constraints and does not establish implementability."
+      ],
+      "objective_value": 46.4,
+      "plan_id": "portfolio-plan-00000161",
+      "quantities": {
+        "action-a": 2,
+        "action-b": 2,
+        "action-c": 3,
+        "action-d": 2
+      },
+      "scenario_objectives": {
+        "adverse": 46.4,
+        "base": 85.60000000000001,
+        "favorable": 124.79999999999998
+      },
+      "selected_action_count": 4,
+      "total_benefit": 136.0,
+      "total_capacity": 13.0,
+      "total_cost": 59.0,
+      "total_risk": 21.0,
+      "violations": [
+        {
+          "bound": 1.0,
+          "constraint_id": "budget",
+          "details": "Total cost exceeds the declared budget.",
+          "excess": 58.0,
+          "measured": 59.0
+        },
+        {
+          "bound": 1000.0,
+          "constraint_id": "minimum-benefit",
+          "details": "Total modeled benefit is below the floor.",
+          "excess": 864.0,
+          "measured": 136.0
+        },
+        {
+          "bound": 500.0,
+          "constraint_id": "group-priority",
+          "details": "Modeled benefit for priority is below its floor.",
+          "excess": 468.0,
+          "measured": 32.0
+        }
+      ]
+    },
+    {
+      "binding_constraints": [],
+      "evidence_type": "optimized",
+      "feasible": false,
+      "group_benefits": {
+        "general": 40.0,
+        "priority": 31.0
+      },
+      "limitations": [
+        "Optimized values are mathematical outputs under declared inputs, not observed impact.",
+        "Feasibility reflects only encoded constraints and does not establish implementability."
+      ],
+      "objective_value": 45.4,
+      "plan_id": "portfolio-plan-00000163",
+      "quantities": {
+        "action-a": 2,
+        "action-b": 2,
+        "action-c": 4,
+        "action-d": 1
+      },
+      "scenario_objectives": {
+        "adverse": 45.4,
+        "base": 83.60000000000001,
+        "favorable": 121.8
+      },
+      "selected_action_count": 4,
+      "total_benefit": 134.0,
+      "total_capacity": 12.0,
+      "total_cost": 58.0,
+      "total_risk": 20.0,
+      "violations": [
+        {
+          "bound": 1.0,
+          "constraint_id": "budget",
+          "details": "Total cost exceeds the declared budget.",
+          "excess": 57.0,
+          "measured": 58.0
+        },
+        {
+          "bound": 1000.0,
+          "constraint_id": "minimum-benefit",
+          "details": "Total modeled benefit is below the floor.",
+          "excess": 866.0,
+          "measured": 134.0
+        },
+        {
+          "bound": 500.0,
+          "constraint_id": "group-priority",
+          "details": "Modeled benefit for priority is below its floor.",
+          "excess": 469.0,
+          "measured": 31.0
+        }
+      ]
+    },
+    {
+      "binding_constraints": [],
+      "evidence_type": "optimized",
+      "feasible": false,
+      "group_benefits": {
+        "general": 40.0,
+        "priority": 31.0
+      },
+      "limitations": [
+        "Optimized values are mathematical outputs under declared inputs, not observed impact.",
+        "Feasibility reflects only encoded constraints and does not establish implementability."
+      ],
+      "objective_value": 45.4,
+      "plan_id": "portfolio-plan-00000173",
+      "quantities": {
+        "action-a": 2,
+        "action-b": 3,
+        "action-c": 2,
+        "action-d": 2
+      },
+      "scenario_objectives": {
+        "adverse": 45.4,
+        "base": 83.60000000000001,
+        "favorable": 121.79999999999998
+      },
+      "selected_action_count": 4,
+      "total_benefit": 134.0,
+      "total_capacity": 14.0,
+      "total_cost": 58.0,
+      "total_risk": 24.0,
+      "violations": [
+        {
+          "bound": 1.0,
+          "constraint_id": "budget",
+          "details": "Total cost exceeds the declared budget.",
+          "excess": 57.0,
+          "measured": 58.0
+        },
+        {
+          "bound": 1000.0,
+          "constraint_id": "minimum-benefit",
+          "details": "Total modeled benefit is below the floor.",
+          "excess": 866.0,
+          "measured": 134.0
+        },
+        {
+          "bound": 500.0,
+          "constraint_id": "group-priority",
+          "details": "Modeled benefit for priority is below its floor.",
+          "excess": 469.0,
+          "measured": 31.0
+        }
+      ]
+    },
+    {
+      "binding_constraints": [],
+      "evidence_type": "optimized",
+      "feasible": false,
+      "group_benefits": {
+        "general": 40.0,
+        "priority": 32.0
+      },
+      "limitations": [
+        "Optimized values are mathematical outputs under declared inputs, not observed impact.",
+        "Feasibility reflects only encoded constraints and does not establish implementability."
+      ],
+      "objective_value": 44.8,
+      "plan_id": "portfolio-plan-00000044",
+      "quantities": {
+        "action-a": 0,
+        "action-b": 2,
+        "action-c": 4,
+        "action-d": 2
+      },
+      "scenario_objectives": {
+        "adverse": 44.8,
+        "base": 83.2,
+        "favorable": 121.6
+      },
+      "selected_action_count": 3,
+      "total_benefit": 128.0,
+      "total_capacity": 12.0,
+      "total_cost": 56.0,
+      "total_risk": 16.0,
+      "violations": [
+        {
+          "bound": 1.0,
+          "constraint_id": "budget",
+          "details": "Total cost exceeds the declared budget.",
+          "excess": 55.0,
+          "measured": 56.0
+        },
+        {
+          "bound": 1000.0,
+          "constraint_id": "minimum-benefit",
+          "details": "Total modeled benefit is below the floor.",
+          "excess": 872.0,
+          "measured": 128.0
+        },
+        {
+          "bound": 500.0,
+          "constraint_id": "group-priority",
+          "details": "Modeled benefit for priority is below its floor.",
+          "excess": 468.0,
+          "measured": 32.0
+        }
+      ]
+    },
+    {
+      "binding_constraints": [],
+      "evidence_type": "optimized",
+      "feasible": false,
+      "group_benefits": {
+        "general": 39.0,
+        "priority": 30.0
+      },
+      "limitations": [
+        "Optimized values are mathematical outputs under declared inputs, not observed impact.",
+        "Feasibility reflects only encoded constraints and does not establish implementability."
+      ],
+      "objective_value": 44.4,
+      "plan_id": "portfolio-plan-00000175",
+      "quantities": {
+        "action-a": 2,
+        "action-b": 3,
+        "action-c": 3,
+        "action-d": 1
+      },
+      "scenario_objectives": {
+        "adverse": 44.4,
+        "base": 81.60000000000001,
+        "favorable": 118.79999999999998
+      },
+      "selected_action_count": 4,
+      "total_benefit": 132.0,
+      "total_capacity": 13.0,
+      "total_cost": 57.0,
+      "total_risk": 23.0,
+      "violations": [
+        {
+          "bound": 1.0,
+          "constraint_id": "budget",
+          "details": "Total cost exceeds the declared budget.",
+          "excess": 56.0,
+          "measured": 57.0
+        },
+        {
+          "bound": 1000.0,
+          "constraint_id": "minimum-benefit",
+          "details": "Total modeled benefit is below the floor.",
+          "excess": 868.0,
+          "measured": 132.0
+        },
+        {
+          "bound": 500.0,
+          "constraint_id": "group-priority",
+          "details": "Modeled benefit for priority is below its floor.",
+          "excess": 470.0,
+          "measured": 30.0
+        }
+      ]
+    },
+    {
+      "binding_constraints": [],
+      "evidence_type": "optimized",
+      "feasible": false,
+      "group_benefits": {
+        "general": 39.0,
+        "priority": 31.0
+      },
+      "limitations": [
+        "Optimized values are mathematical outputs under declared inputs, not observed impact.",
+        "Feasibility reflects only encoded constraints and does not establish implementability."
+      ],
+      "objective_value": 43.8,
+      "plan_id": "portfolio-plan-00000056",
+      "quantities": {
+        "action-a": 0,
+        "action-b": 3,
+        "action-c": 3,
+        "action-d": 2
+      },
+      "scenario_objectives": {
+        "adverse": 43.8,
+        "base": 81.2,
+        "favorable": 118.6
+      },
+      "selected_action_count": 3,
+      "total_benefit": 126.0,
+      "total_capacity": 13.0,
+      "total_cost": 55.0,
+      "total_risk": 19.0,
+      "violations": [
+        {
+          "bound": 1.0,
+          "constraint_id": "budget",
+          "details": "Total cost exceeds the declared budget.",
+          "excess": 54.0,
+          "measured": 55.0
+        },
+        {
+          "bound": 1000.0,
+          "constraint_id": "minimum-benefit",
+          "details": "Total modeled benefit is below the floor.",
+          "excess": 874.0,
+          "measured": 126.0
+        },
+        {
+          "bound": 500.0,
+          "constraint_id": "group-priority",
+          "details": "Modeled benefit for priority is below its floor.",
+          "excess": 469.0,
+          "measured": 31.0
+        }
+      ]
+    },
+    {
+      "binding_constraints": [],
+      "evidence_type": "optimized",
+      "feasible": false,
+      "group_benefits": {
+        "general": 39.0,
+        "priority": 31.0
+      },
+      "limitations": [
+        "Optimized values are mathematical outputs under declared inputs, not observed impact.",
+        "Feasibility reflects only encoded constraints and does not establish implementability."
+      ],
+      "objective_value": 43.8,
+      "plan_id": "portfolio-plan-00000089",
+      "quantities": {
+        "action-a": 1,
+        "action-b": 1,
+        "action-c": 4,
+        "action-d": 2
+      },
+      "scenario_objectives": {
+        "adverse": 43.8,
+        "base": 81.2,
+        "favorable": 118.6
+      },
+      "selected_action_count": 4,
+      "total_benefit": 126.0,
+      "total_capacity": 11.0,
+      "total_cost": 55.0,
+      "total_risk": 15.0,
+      "violations": [
+        {
+          "bound": 1.0,
+          "constraint_id": "budget",
+          "details": "Total cost exceeds the declared budget.",
+          "excess": 54.0,
+          "measured": 55.0
+        },
+        {
+          "bound": 1000.0,
+          "constraint_id": "minimum-benefit",
+          "details": "Total modeled benefit is below the floor.",
+          "excess": 874.0,
+          "measured": 126.0
+        },
+        {
+          "bound": 500.0,
+          "constraint_id": "group-priority",
+          "details": "Modeled benefit for priority is below its floor.",
+          "excess": 469.0,
+          "measured": 31.0
+        }
+      ]
+    },
+    {
+      "binding_constraints": [],
+      "evidence_type": "optimized",
+      "feasible": false,
+      "group_benefits": {
+        "general": 38.0,
+        "priority": 29.0
+      },
+      "limitations": [
+        "Optimized values are mathematical outputs under declared inputs, not observed impact.",
+        "Feasibility reflects only encoded constraints and does not establish implementability."
+      ],
+      "objective_value": 43.4,
+      "plan_id": "portfolio-plan-00000177",
+      "quantities": {
+        "action-a": 2,
+        "action-b": 3,
+        "action-c": 4,
+        "action-d": 0
+      },
+      "scenario_objectives": {
+        "adverse": 43.4,
+        "base": 79.60000000000001,
+        "favorable": 115.79999999999998
+      },
+      "selected_action_count": 3,
+      "total_benefit": 130.0,
+      "total_capacity": 12.0,
+      "total_cost": 56.0,
+      "total_risk": 22.0,
+      "violations": [
+        {
+          "bound": 1.0,
+          "constraint_id": "budget",
+          "details": "Total cost exceeds the declared budget.",
+          "excess": 55.0,
+          "measured": 56.0
+        },
+        {
+          "bound": 1000.0,
+          "constraint_id": "minimum-benefit",
+          "details": "Total modeled benefit is below the floor.",
+          "excess": 870.0,
+          "measured": 130.0
+        },
+        {
+          "bound": 500.0,
+          "constraint_id": "group-priority",
+          "details": "Modeled benefit for priority is below its floor.",
+          "excess": 471.0,
+          "measured": 29.0
+        }
+      ]
+    },
+    {
+      "binding_constraints": [],
+      "evidence_type": "optimized",
+      "feasible": false,
+      "group_benefits": {
+        "general": 38.0,
+        "priority": 30.0
+      },
+      "limitations": [
+        "Optimized values are mathematical outputs under declared inputs, not observed impact.",
+        "Feasibility reflects only encoded constraints and does not establish implementability."
+      ],
+      "objective_value": 42.8,
+      "plan_id": "portfolio-plan-00000058",
+      "quantities": {
+        "action-a": 0,
+        "action-b": 3,
+        "action-c": 4,
+        "action-d": 1
+      },
+      "scenario_objectives": {
+        "adverse": 42.8,
+        "base": 79.2,
+        "favorable": 115.6
+      },
+      "selected_action_count": 3,
+      "total_benefit": 124.0,
+      "total_capacity": 12.0,
+      "total_cost": 54.0,
+      "total_risk": 18.0,
+      "violations": [
+        {
+          "bound": 1.0,
+          "constraint_id": "budget",
+          "details": "Total cost exceeds the declared budget.",
+          "excess": 53.0,
+          "measured": 54.0
+        },
+        {
+          "bound": 1000.0,
+          "constraint_id": "minimum-benefit",
+          "details": "Total modeled benefit is below the floor.",
+          "excess": 876.0,
+          "measured": 124.0
+        },
+        {
+          "bound": 500.0,
+          "constraint_id": "group-priority",
+          "details": "Modeled benefit for priority is below its floor.",
+          "excess": 470.0,
+          "measured": 30.0
+        }
+      ]
+    },
+    {
+      "binding_constraints": [],
+      "evidence_type": "optimized",
+      "feasible": false,
+      "group_benefits": {
+        "general": 38.0,
+        "priority": 30.0
+      },
+      "limitations": [
+        "Optimized values are mathematical outputs under declared inputs, not observed impact.",
+        "Feasibility reflects only encoded constraints and does not establish implementability."
+      ],
+      "objective_value": 42.8,
+      "plan_id": "portfolio-plan-00000101",
+      "quantities": {
+        "action-a": 1,
+        "action-b": 2,
+        "action-c": 3,
+        "action-d": 2
+      },
+      "scenario_objectives": {
+        "adverse": 42.8,
+        "base": 79.2,
+        "favorable": 115.6
+      },
+      "selected_action_count": 4,
+      "total_benefit": 124.0,
+      "total_capacity": 12.0,
+      "total_cost": 54.0,
+      "total_risk": 18.0,
+      "violations": [
+        {
+          "bound": 1.0,
+          "constraint_id": "budget",
+          "details": "Total cost exceeds the declared budget.",
+          "excess": 53.0,
+          "measured": 54.0
+        },
+        {
+          "bound": 1000.0,
+          "constraint_id": "minimum-benefit",
+          "details": "Total modeled benefit is below the floor.",
+          "excess": 876.0,
+          "measured": 124.0
+        },
+        {
+          "bound": 500.0,
+          "constraint_id": "group-priority",
+          "details": "Modeled benefit for priority is below its floor.",
+          "excess": 470.0,
+          "measured": 30.0
+        }
+      ]
+    },
+    {
+      "binding_constraints": [],
+      "evidence_type": "optimized",
+      "feasible": false,
+      "group_benefits": {
+        "general": 38.0,
+        "priority": 30.0
+      },
+      "limitations": [
+        "Optimized values are mathematical outputs under declared inputs, not observed impact.",
+        "Feasibility reflects only encoded constraints and does not establish implementability."
+      ],
+      "objective_value": 42.8,
+      "plan_id": "portfolio-plan-00000134",
+      "quantities": {
+        "action-a": 2,
+        "action-b": 0,
+        "action-c": 4,
+        "action-d": 2
+      },
+      "scenario_objectives": {
+        "adverse": 42.8,
+        "base": 79.2,
+        "favorable": 115.6
+      },
+      "selected_action_count": 3,
+      "total_benefit": 124.0,
+      "total_capacity": 10.0,
+      "total_cost": 54.0,
+      "total_risk": 14.0,
+      "violations": [
+        {
+          "bound": 1.0,
+          "constraint_id": "budget",
+          "details": "Total cost exceeds the declared budget.",
+          "excess": 53.0,
+          "measured": 54.0
+        },
+        {
+          "bound": 1000.0,
+          "constraint_id": "minimum-benefit",
+          "details": "Total modeled benefit is below the floor.",
+          "excess": 876.0,
+          "measured": 124.0
+        },
+        {
+          "bound": 500.0,
+          "constraint_id": "group-priority",
+          "details": "Modeled benefit for priority is below its floor.",
+          "excess": 470.0,
+          "measured": 30.0
+        }
+      ]
+    },
+    {
+      "binding_constraints": [],
+      "evidence_type": "optimized",
+      "feasible": false,
+      "group_benefits": {
+        "general": 37.0,
+        "priority": 29.0
+      },
+      "limitations": [
+        "Optimized values are mathematical outputs under declared inputs, not observed impact.",
+        "Feasibility reflects only encoded constraints and does not establish implementability."
+      ],
+      "objective_value": 41.8,
+      "plan_id": "portfolio-plan-00000103",
+      "quantities": {
+        "action-a": 1,
+        "action-b": 2,
+        "action-c": 4,
+        "action-d": 1
+      },
+      "scenario_objectives": {
+        "adverse": 41.8,
+        "base": 77.2,
+        "favorable": 112.6
+      },
+      "selected_action_count": 4,
+      "total_benefit": 122.0,
+      "total_capacity": 11.0,
+      "total_cost": 53.0,
+      "total_risk": 17.0,
+      "violations": [
+        {
+          "bound": 1.0,
+          "constraint_id": "budget",
+          "details": "Total cost exceeds the declared budget.",
+          "excess": 52.0,
+          "measured": 53.0
+        },
+        {
+          "bound": 1000.0,
+          "constraint_id": "minimum-benefit",
+          "details": "Total modeled benefit is below the floor.",
+          "excess": 878.0,
+          "measured": 122.0
+        },
+        {
+          "bound": 500.0,
+          "constraint_id": "group-priority",
+          "details": "Modeled benefit for priority is below its floor.",
+          "excess": 471.0,
+          "measured": 29.0
+        }
+      ]
+    },
+    {
+      "binding_constraints": [],
+      "evidence_type": "optimized",
+      "feasible": false,
+      "group_benefits": {
+        "general": 37.0,
+        "priority": 29.0
+      },
+      "limitations": [
+        "Optimized values are mathematical outputs under declared inputs, not observed impact.",
+        "Feasibility reflects only encoded constraints and does not establish implementability."
+      ],
+      "objective_value": 41.8,
+      "plan_id": "portfolio-plan-00000113",
+      "quantities": {
+        "action-a": 1,
+        "action-b": 3,
+        "action-c": 2,
+        "action-d": 2
+      },
+      "scenario_objectives": {
+        "adverse": 41.8,
+        "base": 77.2,
+        "favorable": 112.6
+      },
+      "selected_action_count": 4,
+      "total_benefit": 122.0,
+      "total_capacity": 13.0,
+      "total_cost": 53.0,
+      "total_risk": 21.0,
+      "violations": [
+        {
+          "bound": 1.0,
+          "constraint_id": "budget",
+          "details": "Total cost exceeds the declared budget.",
+          "excess": 52.0,
+          "measured": 53.0
+        },
+        {
+          "bound": 1000.0,
+          "constraint_id": "minimum-benefit",
+          "details": "Total modeled benefit is below the floor.",
+          "excess": 878.0,
+          "measured": 122.0
+        },
+        {
+          "bound": 500.0,
+          "constraint_id": "group-priority",
+          "details": "Modeled benefit for priority is below its floor.",
+          "excess": 471.0,
+          "measured": 29.0
+        }
+      ]
+    },
+    {
+      "binding_constraints": [],
+      "evidence_type": "optimized",
+      "feasible": false,
+      "group_benefits": {
+        "general": 37.0,
+        "priority": 29.0
+      },
+      "limitations": [
+        "Optimized values are mathematical outputs under declared inputs, not observed impact.",
+        "Feasibility reflects only encoded constraints and does not establish implementability."
+      ],
+      "objective_value": 41.8,
+      "plan_id": "portfolio-plan-00000146",
+      "quantities": {
+        "action-a": 2,
+        "action-b": 1,
+        "action-c": 3,
+        "action-d": 2
+      },
+      "scenario_objectives": {
+        "adverse": 41.8,
+        "base": 77.2,
+        "favorable": 112.6
+      },
+      "selected_action_count": 4,
+      "total_benefit": 122.0,
+      "total_capacity": 11.0,
+      "total_cost": 53.0,
+      "total_risk": 17.0,
+      "violations": [
+        {
+          "bound": 1.0,
+          "constraint_id": "budget",
+          "details": "Total cost exceeds the declared budget.",
+          "excess": 52.0,
+          "measured": 53.0
+        },
+        {
+          "bound": 1000.0,
+          "constraint_id": "minimum-benefit",
+          "details": "Total modeled benefit is below the floor.",
+          "excess": 878.0,
+          "measured": 122.0
+        },
+        {
+          "bound": 500.0,
+          "constraint_id": "group-priority",
+          "details": "Modeled benefit for priority is below its floor.",
+          "excess": 471.0,
+          "measured": 29.0
+        }
+      ]
+    },
+    {
+      "binding_constraints": [],
+      "evidence_type": "optimized",
+      "feasible": false,
+      "group_benefits": {
+        "general": 36.0,
+        "priority": 28.0
+      },
+      "limitations": [
+        "Optimized values are mathematical outputs under declared inputs, not observed impact.",
+        "Feasibility reflects only encoded constraints and does not establish implementability."
+      ],
+      "objective_value": 40.8,
+      "plan_id": "portfolio-plan-00000115",
+      "quantities": {
+        "action-a": 1,
+        "action-b": 3,
+        "action-c": 3,
+        "action-d": 1
+      },
+      "scenario_objectives": {
+        "adverse": 40.8,
+        "base": 75.2,
+        "favorable": 109.6
+      },
+      "selected_action_count": 4,
+      "total_benefit": 120.0,
+      "total_capacity": 12.0,
+      "total_cost": 52.0,
+      "total_risk": 20.0,
+      "violations": [
+        {
+          "bound": 1.0,
+          "constraint_id": "budget",
+          "details": "Total cost exceeds the declared budget.",
+          "excess": 51.0,
+          "measured": 52.0
+        },
+        {
+          "bound": 1000.0,
+          "constraint_id": "minimum-benefit",
+          "details": "Total modeled benefit is below the floor.",
+          "excess": 880.0,
+          "measured": 120.0
+        },
+        {
+          "bound": 500.0,
+          "constraint_id": "group-priority",
+          "details": "Modeled benefit for priority is below its floor.",
+          "excess": 472.0,
+          "measured": 28.0
+        }
+      ]
+    },
+    {
+      "binding_constraints": [],
+      "evidence_type": "optimized",
+      "feasible": false,
+      "group_benefits": {
+        "general": 36.0,
+        "priority": 28.0
+      },
+      "limitations": [
+        "Optimized values are mathematical outputs under declared inputs, not observed impact.",
+        "Feasibility reflects only encoded constraints and does not establish implementability."
+      ],
+      "objective_value": 40.8,
+      "plan_id": "portfolio-plan-00000148",
+      "quantities": {
+        "action-a": 2,
+        "action-b": 1,
+        "action-c": 4,
+        "action-d": 1
+      },
+      "scenario_objectives": {
+        "adverse": 40.8,
+        "base": 75.2,
+        "favorable": 109.6
+      },
+      "selected_action_count": 4,
+      "total_benefit": 120.0,
+      "total_capacity": 10.0,
+      "total_cost": 52.0,
+      "total_risk": 16.0,
+      "violations": [
+        {
+          "bound": 1.0,
+          "constraint_id": "budget",
+          "details": "Total cost exceeds the declared budget.",
+          "excess": 51.0,
+          "measured": 52.0
+        },
+        {
+          "bound": 1000.0,
+          "constraint_id": "minimum-benefit",
+          "details": "Total modeled benefit is below the floor.",
+          "excess": 880.0,
+          "measured": 120.0
+        },
+        {
+          "bound": 500.0,
+          "constraint_id": "group-priority",
+          "details": "Modeled benefit for priority is below its floor.",
+          "excess": 472.0,
+          "measured": 28.0
+        }
+      ]
+    },
+    {
+      "binding_constraints": [],
+      "evidence_type": "optimized",
+      "feasible": false,
+      "group_benefits": {
+        "general": 36.0,
+        "priority": 28.0
+      },
+      "limitations": [
+        "Optimized values are mathematical outputs under declared inputs, not observed impact.",
+        "Feasibility reflects only encoded constraints and does not establish implementability."
+      ],
+      "objective_value": 40.8,
+      "plan_id": "portfolio-plan-00000158",
+      "quantities": {
+        "action-a": 2,
+        "action-b": 2,
+        "action-c": 2,
+        "action-d": 2
+      },
+      "scenario_objectives": {
+        "adverse": 40.8,
+        "base": 75.2,
+        "favorable": 109.6
+      },
+      "selected_action_count": 4,
+      "total_benefit": 120.0,
+      "total_capacity": 12.0,
+      "total_cost": 52.0,
+      "total_risk": 20.0,
+      "violations": [
+        {
+          "bound": 1.0,
+          "constraint_id": "budget",
+          "details": "Total cost exceeds the declared budget.",
+          "excess": 51.0,
+          "measured": 52.0
+        },
+        {
+          "bound": 1000.0,
+          "constraint_id": "minimum-benefit",
+          "details": "Total modeled benefit is below the floor.",
+          "excess": 880.0,
+          "measured": 120.0
+        },
+        {
+          "bound": 500.0,
+          "constraint_id": "group-priority",
+          "details": "Modeled benefit for priority is below its floor.",
+          "excess": 472.0,
+          "measured": 28.0
+        }
+      ]
+    },
+    {
+      "binding_constraints": [],
+      "evidence_type": "optimized",
+      "feasible": false,
+      "group_benefits": {
+        "general": 36.0,
+        "priority": 29.0
+      },
+      "limitations": [
+        "Optimized values are mathematical outputs under declared inputs, not observed impact.",
+        "Feasibility reflects only encoded constraints and does not establish implementability."
+      ],
+      "objective_value": 40.199999999999996,
+      "plan_id": "portfolio-plan-00000029",
+      "quantities": {
+        "action-a": 0,
+        "action-b": 1,
+        "action-c": 4,
+        "action-d": 2
+      },
+      "scenario_objectives": {
+        "adverse": 40.199999999999996,
+        "base": 74.8,
+        "favorable": 109.39999999999999
+      },
+      "selected_action_count": 3,
+      "total_benefit": 114.0,
+      "total_capacity": 10.0,
+      "total_cost": 50.0,
+      "total_risk": 12.0,
+      "violations": [
+        {
+          "bound": 1.0,
+          "constraint_id": "budget",
+          "details": "Total cost exceeds the declared budget.",
+          "excess": 49.0,
+          "measured": 50.0
+        },
+        {
+          "bound": 1000.0,
+          "constraint_id": "minimum-benefit",
+          "details": "Total modeled benefit is below the floor.",
+          "excess": 886.0,
+          "measured": 114.0
+        },
+        {
+          "bound": 500.0,
+          "constraint_id": "group-priority",
+          "details": "Modeled benefit for priority is below its floor.",
+          "excess": 471.0,
+          "measured": 29.0
+        }
+      ]
+    },
+    {
+      "binding_constraints": [],
+      "evidence_type": "optimized",
+      "feasible": false,
+      "group_benefits": {
+        "general": 35.0,
+        "priority": 27.0
+      },
+      "limitations": [
+        "Optimized values are mathematical outputs under declared inputs, not observed impact.",
+        "Feasibility reflects only encoded constraints and does not establish implementability."
+      ],
+      "objective_value": 39.8,
+      "plan_id": "portfolio-plan-00000117",
+      "quantities": {
+        "action-a": 1,
+        "action-b": 3,
+        "action-c": 4,
+        "action-d": 0
+      },
+      "scenario_objectives": {
+        "adverse": 39.8,
+        "base": 73.2,
+        "favorable": 106.6
+      },
+      "selected_action_count": 3,
+      "total_benefit": 118.0,
+      "total_capacity": 11.0,
+      "total_cost": 51.0,
+      "total_risk": 19.0,
+      "violations": [
+        {
+          "bound": 1.0,
+          "constraint_id": "budget",
+          "details": "Total cost exceeds the declared budget.",
+          "excess": 50.0,
+          "measured": 51.0
+        },
+        {
+          "bound": 1000.0,
+          "constraint_id": "minimum-benefit",
+          "details": "Total modeled benefit is below the floor.",
+          "excess": 882.0,
+          "measured": 118.0
+        },
+        {
+          "bound": 500.0,
+          "constraint_id": "group-priority",
+          "details": "Modeled benefit for priority is below its floor.",
+          "excess": 473.0,
+          "measured": 27.0
+        }
+      ]
+    },
+    {
+      "binding_constraints": [],
+      "evidence_type": "optimized",
+      "feasible": false,
+      "group_benefits": {
+        "general": 35.0,
+        "priority": 27.0
+      },
+      "limitations": [
+        "Optimized values are mathematical outputs under declared inputs, not observed impact.",
+        "Feasibility reflects only encoded constraints and does not establish implementability."
+      ],
+      "objective_value": 39.8,
+      "plan_id": "portfolio-plan-00000160",
+      "quantities": {
+        "action-a": 2,
+        "action-b": 2,
+        "action-c": 3,
+        "action-d": 1
+      },
+      "scenario_objectives": {
+        "adverse": 39.8,
+        "base": 73.2,
+        "favorable": 106.6
+      },
+      "selected_action_count": 4,
+      "total_benefit": 118.0,
+      "total_capacity": 11.0,
+      "total_cost": 51.0,
+      "total_risk": 19.0,
+      "violations": [
+        {
+          "bound": 1.0,
+          "constraint_id": "budget",
+          "details": "Total cost exceeds the declared budget.",
+          "excess": 50.0,
+          "measured": 51.0
+        },
+        {
+          "bound": 1000.0,
+          "constraint_id": "minimum-benefit",
+          "details": "Total modeled benefit is below the floor.",
+          "excess": 882.0,
+          "measured": 118.0
+        },
+        {
+          "bound": 500.0,
+          "constraint_id": "group-priority",
+          "details": "Modeled benefit for priority is below its floor.",
+          "excess": 473.0,
+          "measured": 27.0
+        }
+      ]
+    },
+    {
+      "binding_constraints": [],
+      "evidence_type": "optimized",
+      "feasible": false,
+      "group_benefits": {
+        "general": 35.0,
+        "priority": 27.0
+      },
+      "limitations": [
+        "Optimized values are mathematical outputs under declared inputs, not observed impact.",
+        "Feasibility reflects only encoded constraints and does not establish implementability."
+      ],
+      "objective_value": 39.8,
+      "plan_id": "portfolio-plan-00000170",
+      "quantities": {
+        "action-a": 2,
+        "action-b": 3,
+        "action-c": 1,
+        "action-d": 2
+      },
+      "scenario_objectives": {
+        "adverse": 39.8,
+        "base": 73.2,
+        "favorable": 106.6
+      },
+      "selected_action_count": 4,
+      "total_benefit": 118.0,
+      "total_capacity": 13.0,
+      "total_cost": 51.0,
+      "total_risk": 23.0,
+      "violations": [
+        {
+          "bound": 1.0,
+          "constraint_id": "budget",
+          "details": "Total cost exceeds the declared budget.",
+          "excess": 50.0,
+          "measured": 51.0
+        },
+        {
+          "bound": 1000.0,
+          "constraint_id": "minimum-benefit",
+          "details": "Total modeled benefit is below the floor.",
+          "excess": 882.0,
+          "measured": 118.0
+        },
+        {
+          "bound": 500.0,
+          "constraint_id": "group-priority",
+          "details": "Modeled benefit for priority is below its floor.",
+          "excess": 473.0,
+          "measured": 27.0
+        }
+      ]
+    },
+    {
+      "binding_constraints": [],
+      "evidence_type": "optimized",
+      "feasible": false,
+      "group_benefits": {
+        "general": 35.0,
+        "priority": 28.0
+      },
+      "limitations": [
+        "Optimized values are mathematical outputs under declared inputs, not observed impact.",
+        "Feasibility reflects only encoded constraints and does not establish implementability."
+      ],
+      "objective_value": 39.199999999999996,
+      "plan_id": "portfolio-plan-00000041",
+      "quantities": {
+        "action-a": 0,
+        "action-b": 2,
+        "action-c": 3,
+        "action-d": 2
+      },
+      "scenario_objectives": {
+        "adverse": 39.199999999999996,
+        "base": 72.80000000000001,
+        "favorable": 106.39999999999999
+      },
+      "selected_action_count": 3,
+      "total_benefit": 112.0,
+      "total_capacity": 11.0,
+      "total_cost": 49.0,
+      "total_risk": 15.0,
+      "violations": [
+        {
+          "bound": 1.0,
+          "constraint_id": "budget",
+          "details": "Total cost exceeds the declared budget.",
+          "excess": 48.0,
+          "measured": 49.0
+        },
+        {
+          "bound": 1000.0,
+          "constraint_id": "minimum-benefit",
+          "details": "Total modeled benefit is below the floor.",
+          "excess": 888.0,
+          "measured": 112.0
+        },
+        {
+          "bound": 500.0,
+          "constraint_id": "group-priority",
+          "details": "Modeled benefit for priority is below its floor.",
+          "excess": 472.0,
+          "measured": 28.0
+        }
+      ]
+    },
+    {
+      "binding_constraints": [],
+      "evidence_type": "optimized",
+      "feasible": false,
+      "group_benefits": {
+        "general": 35.0,
+        "priority": 28.0
+      },
+      "limitations": [
+        "Optimized values are mathematical outputs under declared inputs, not observed impact.",
+        "Feasibility reflects only encoded constraints and does not establish implementability."
+      ],
+      "objective_value": 39.199999999999996,
+      "plan_id": "portfolio-plan-00000074",
+      "quantities": {
+        "action-a": 1,
+        "action-b": 0,
+        "action-c": 4,
+        "action-d": 2
+      },
+      "scenario_objectives": {
+        "adverse": 39.199999999999996,
+        "base": 72.8,
+        "favorable": 106.39999999999999
+      },
+      "selected_action_count": 3,
+      "total_benefit": 112.0,
+      "total_capacity": 9.0,
+      "total_cost": 49.0,
+      "total_risk": 11.0,
+      "violations": [
+        {
+          "bound": 1.0,
+          "constraint_id": "budget",
+          "details": "Total cost exceeds the declared budget.",
+          "excess": 48.0,
+          "measured": 49.0
+        },
+        {
+          "bound": 1000.0,
+          "constraint_id": "minimum-benefit",
+          "details": "Total modeled benefit is below the floor.",
+          "excess": 888.0,
+          "measured": 112.0
+        },
+        {
+          "bound": 500.0,
+          "constraint_id": "group-priority",
+          "details": "Modeled benefit for priority is below its floor.",
+          "excess": 472.0,
+          "measured": 28.0
+        }
+      ]
+    },
+    {
+      "binding_constraints": [],
+      "evidence_type": "optimized",
+      "feasible": false,
+      "group_benefits": {
+        "general": 34.0,
+        "priority": 26.0
+      },
+      "limitations": [
+        "Optimized values are mathematical outputs under declared inputs, not observed impact.",
+        "Feasibility reflects only encoded constraints and does not establish implementability."
+      ],
+      "objective_value": 38.8,
+      "plan_id": "portfolio-plan-00000162",
+      "quantities": {
+        "action-a": 2,
+        "action-b": 2,
+        "action-c": 4,
+        "action-d": 0
+      },
+      "scenario_objectives": {
+        "adverse": 38.8,
+        "base": 71.2,
+        "favorable": 103.6
+      },
+      "selected_action_count": 3,
+      "total_benefit": 116.0,
+      "total_capacity": 10.0,
+      "total_cost": 50.0,
+      "total_risk": 18.0,
+      "violations": [
+        {
+          "bound": 1.0,
+          "constraint_id": "budget",
+          "details": "Total cost exceeds the declared budget.",
+          "excess": 49.0,
+          "measured": 50.0
+        },
+        {
+          "bound": 1000.0,
+          "constraint_id": "minimum-benefit",
+          "details": "Total modeled benefit is below the floor.",
+          "excess": 884.0,
+          "measured": 116.0
+        },
+        {
+          "bound": 500.0,
+          "constraint_id": "group-priority",
+          "details": "Modeled benefit for priority is below its floor.",
+          "excess": 474.0,
+          "measured": 26.0
+        }
+      ]
+    },
+    {
+      "binding_constraints": [],
+      "evidence_type": "optimized",
+      "feasible": false,
+      "group_benefits": {
+        "general": 34.0,
+        "priority": 26.0
+      },
+      "limitations": [
+        "Optimized values are mathematical outputs under declared inputs, not observed impact.",
+        "Feasibility reflects only encoded constraints and does not establish implementability."
+      ],
+      "objective_value": 38.8,
+      "plan_id": "portfolio-plan-00000172",
+      "quantities": {
+        "action-a": 2,
+        "action-b": 3,
+        "action-c": 2,
+        "action-d": 1
+      },
+      "scenario_objectives": {
+        "adverse": 38.8,
+        "base": 71.2,
+        "favorable": 103.6
+      },
+      "selected_action_count": 4,
+      "total_benefit": 116.0,
+      "total_capacity": 12.0,
+      "total_cost": 50.0,
+      "total_risk": 22.0,
+      "violations": [
+        {
+          "bound": 1.0,
+          "constraint_id": "budget",
+          "details": "Total cost exceeds the declared budget.",
+          "excess": 49.0,
+          "measured": 50.0
+        },
+        {
+          "bound": 1000.0,
+          "constraint_id": "minimum-benefit",
+          "details": "Total modeled benefit is below the floor.",
+          "excess": 884.0,
+          "measured": 116.0
+        },
+        {
+          "bound": 500.0,
+          "constraint_id": "group-priority",
+          "details": "Modeled benefit for priority is below its floor.",
+          "excess": 474.0,
+          "measured": 26.0
+        }
+      ]
+    },
+    {
+      "binding_constraints": [],
+      "evidence_type": "optimized",
+      "feasible": false,
+      "group_benefits": {
+        "general": 34.0,
+        "priority": 27.0
+      },
+      "limitations": [
+        "Optimized values are mathematical outputs under declared inputs, not observed impact.",
+        "Feasibility reflects only encoded constraints and does not establish implementability."
+      ],
+      "objective_value": 38.199999999999996,
+      "plan_id": "portfolio-plan-00000043",
+      "quantities": {
+        "action-a": 0,
+        "action-b": 2,
+        "action-c": 4,
+        "action-d": 1
+      },
+      "scenario_objectives": {
+        "adverse": 38.199999999999996,
+        "base": 70.8,
+        "favorable": 103.39999999999999
+      },
+      "selected_action_count": 3,
+      "total_benefit": 110.0,
+      "total_capacity": 10.0,
+      "total_cost": 48.0,
+      "total_risk": 14.0,
+      "violations": [
+        {
+          "bound": 1.0,
+          "constraint_id": "budget",
+          "details": "Total cost exceeds the declared budget.",
+          "excess": 47.0,
+          "measured": 48.0
+        },
+        {
+          "bound": 1000.0,
+          "constraint_id": "minimum-benefit",
+          "details": "Total modeled benefit is below the floor.",
+          "excess": 890.0,
+          "measured": 110.0
+        },
+        {
+          "bound": 500.0,
+          "constraint_id": "group-priority",
+          "details": "Modeled benefit for priority is below its floor.",
+          "excess": 473.0,
+          "measured": 27.0
+        }
+      ]
+    },
+    {
+      "binding_constraints": [],
+      "evidence_type": "optimized",
+      "feasible": false,
+      "group_benefits": {
+        "general": 34.0,
+        "priority": 27.0
+      },
+      "limitations": [
+        "Optimized values are mathematical outputs under declared inputs, not observed impact.",
+        "Feasibility reflects only encoded constraints and does not establish implementability."
+      ],
+      "objective_value": 38.199999999999996,
+      "plan_id": "portfolio-plan-00000053",
+      "quantities": {
+        "action-a": 0,
+        "action-b": 3,
+        "action-c": 2,
+        "action-d": 2
+      },
+      "scenario_objectives": {
+        "adverse": 38.199999999999996,
+        "base": 70.80000000000001,
+        "favorable": 103.39999999999999
+      },
+      "selected_action_count": 3,
+      "total_benefit": 110.0,
+      "total_capacity": 12.0,
+      "total_cost": 48.0,
+      "total_risk": 18.0,
+      "violations": [
+        {
+          "bound": 1.0,
+          "constraint_id": "budget",
+          "details": "Total cost exceeds the declared budget.",
+          "excess": 47.0,
+          "measured": 48.0
+        },
+        {
+          "bound": 1000.0,
+          "constraint_id": "minimum-benefit",
+          "details": "Total modeled benefit is below the floor.",
+          "excess": 890.0,
+          "measured": 110.0
+        },
+        {
+          "bound": 500.0,
+          "constraint_id": "group-priority",
+          "details": "Modeled benefit for priority is below its floor.",
+          "excess": 473.0,
+          "measured": 27.0
+        }
+      ]
+    },
+    {
+      "binding_constraints": [],
+      "evidence_type": "optimized",
+      "feasible": false,
+      "group_benefits": {
+        "general": 34.0,
+        "priority": 27.0
+      },
+      "limitations": [
+        "Optimized values are mathematical outputs under declared inputs, not observed impact.",
+        "Feasibility reflects only encoded constraints and does not establish implementability."
+      ],
+      "objective_value": 38.199999999999996,
+      "plan_id": "portfolio-plan-00000086",
+      "quantities": {
+        "action-a": 1,
+        "action-b": 1,
+        "action-c": 3,
+        "action-d": 2
+      },
+      "scenario_objectives": {
+        "adverse": 38.199999999999996,
+        "base": 70.80000000000001,
+        "favorable": 103.39999999999999
+      },
+      "selected_action_count": 4,
+      "total_benefit": 110.0,
+      "total_capacity": 10.0,
+      "total_cost": 48.0,
+      "total_risk": 14.0,
+      "violations": [
+        {
+          "bound": 1.0,
+          "constraint_id": "budget",
+          "details": "Total cost exceeds the declared budget.",
+          "excess": 47.0,
+          "measured": 48.0
+        },
+        {
+          "bound": 1000.0,
+          "constraint_id": "minimum-benefit",
+          "details": "Total modeled benefit is below the floor.",
+          "excess": 890.0,
+          "measured": 110.0
+        },
+        {
+          "bound": 500.0,
+          "constraint_id": "group-priority",
+          "details": "Modeled benefit for priority is below its floor.",
+          "excess": 473.0,
+          "measured": 27.0
+        }
+      ]
+    },
+    {
+      "binding_constraints": [],
+      "evidence_type": "optimized",
+      "feasible": false,
+      "group_benefits": {
+        "general": 33.0,
+        "priority": 25.0
+      },
+      "limitations": [
+        "Optimized values are mathematical outputs under declared inputs, not observed impact.",
+        "Feasibility reflects only encoded constraints and does not establish implementability."
+      ],
+      "objective_value": 37.8,
+      "plan_id": "portfolio-plan-00000174",
+      "quantities": {
+        "action-a": 2,
+        "action-b": 3,
+        "action-c": 3,
+        "action-d": 0
+      },
+      "scenario_objectives": {
+        "adverse": 37.8,
+        "base": 69.2,
+        "favorable": 100.6
+      },
+      "selected_action_count": 3,
+      "total_benefit": 114.0,
+      "total_capacity": 11.0,
+      "total_cost": 49.0,
+      "total_risk": 21.0,
+      "violations": [
+        {
+          "bound": 1.0,
+          "constraint_id": "budget",
+          "details": "Total cost exceeds the declared budget.",
+          "excess": 48.0,
+          "measured": 49.0
+        },
+        {
+          "bound": 1000.0,
+          "constraint_id": "minimum-benefit",
+          "details": "Total modeled benefit is below the floor.",
+          "excess": 886.0,
+          "measured": 114.0
+        },
+        {
+          "bound": 500.0,
+          "constraint_id": "group-priority",
+          "details": "Modeled benefit for priority is below its floor.",
+          "excess": 475.0,
+          "measured": 25.0
+        }
+      ]
+    },
+    {
+      "binding_constraints": [],
+      "evidence_type": "optimized",
+      "feasible": false,
+      "group_benefits": {
+        "general": 33.0,
+        "priority": 26.0
+      },
+      "limitations": [
+        "Optimized values are mathematical outputs under declared inputs, not observed impact.",
+        "Feasibility reflects only encoded constraints and does not establish implementability."
+      ],
+      "objective_value": 37.199999999999996,
+      "plan_id": "portfolio-plan-00000055",
+      "quantities": {
+        "action-a": 0,
+        "action-b": 3,
+        "action-c": 3,
+        "action-d": 1
+      },
+      "scenario_objectives": {
+        "adverse": 37.199999999999996,
+        "base": 68.80000000000001,
+        "favorable": 100.39999999999999
+      },
+      "selected_action_count": 3,
+      "total_benefit": 108.0,
+      "total_capacity": 11.0,
+      "total_cost": 47.0,
+      "total_risk": 17.0,
+      "violations": [
+        {
+          "bound": 1.0,
+          "constraint_id": "budget",
+          "details": "Total cost exceeds the declared budget.",
+          "excess": 46.0,
+          "measured": 47.0
+        },
+        {
+          "bound": 1000.0,
+          "constraint_id": "minimum-benefit",
+          "details": "Total modeled benefit is below the floor.",
+          "excess": 892.0,
+          "measured": 108.0
+        },
+        {
+          "bound": 500.0,
+          "constraint_id": "group-priority",
+          "details": "Modeled benefit for priority is below its floor.",
+          "excess": 474.0,
+          "measured": 26.0
+        }
+      ]
+    },
+    {
+      "binding_constraints": [],
+      "evidence_type": "optimized",
+      "feasible": false,
+      "group_benefits": {
+        "general": 33.0,
+        "priority": 26.0
+      },
+      "limitations": [
+        "Optimized values are mathematical outputs under declared inputs, not observed impact.",
+        "Feasibility reflects only encoded constraints and does not establish implementability."
+      ],
+      "objective_value": 37.199999999999996,
+      "plan_id": "portfolio-plan-00000088",
+      "quantities": {
+        "action-a": 1,
+        "action-b": 1,
+        "action-c": 4,
+        "action-d": 1
+      },
+      "scenario_objectives": {
+        "adverse": 37.199999999999996,
+        "base": 68.8,
+        "favorable": 100.39999999999999
+      },
+      "selected_action_count": 4,
+      "total_benefit": 108.0,
+      "total_capacity": 9.0,
+      "total_cost": 47.0,
+      "total_risk": 13.0,
+      "violations": [
+        {
+          "bound": 1.0,
+          "constraint_id": "budget",
+          "details": "Total cost exceeds the declared budget.",
+          "excess": 46.0,
+          "measured": 47.0
+        },
+        {
+          "bound": 1000.0,
+          "constraint_id": "minimum-benefit",
+          "details": "Total modeled benefit is below the floor.",
+          "excess": 892.0,
+          "measured": 108.0
+        },
+        {
+          "bound": 500.0,
+          "constraint_id": "group-priority",
+          "details": "Modeled benefit for priority is below its floor.",
+          "excess": 474.0,
+          "measured": 26.0
+        }
+      ]
+    },
+    {
+      "binding_constraints": [],
+      "evidence_type": "optimized",
+      "feasible": false,
+      "group_benefits": {
+        "general": 33.0,
+        "priority": 26.0
+      },
+      "limitations": [
+        "Optimized values are mathematical outputs under declared inputs, not observed impact.",
+        "Feasibility reflects only encoded constraints and does not establish implementability."
+      ],
+      "objective_value": 37.199999999999996,
+      "plan_id": "portfolio-plan-00000098",
+      "quantities": {
+        "action-a": 1,
+        "action-b": 2,
+        "action-c": 2,
+        "action-d": 2
+      },
+      "scenario_objectives": {
+        "adverse": 37.199999999999996,
+        "base": 68.8,
+        "favorable": 100.39999999999999
+      },
+      "selected_action_count": 4,
+      "total_benefit": 108.0,
+      "total_capacity": 11.0,
+      "total_cost": 47.0,
+      "total_risk": 17.0,
+      "violations": [
+        {
+          "bound": 1.0,
+          "constraint_id": "budget",
+          "details": "Total cost exceeds the declared budget.",
+          "excess": 46.0,
+          "measured": 47.0
+        },
+        {
+          "bound": 1000.0,
+          "constraint_id": "minimum-benefit",
+          "details": "Total modeled benefit is below the floor.",
+          "excess": 892.0,
+          "measured": 108.0
+        },
+        {
+          "bound": 500.0,
+          "constraint_id": "group-priority",
+          "details": "Modeled benefit for priority is below its floor.",
+          "excess": 474.0,
+          "measured": 26.0
+        }
+      ]
+    },
+    {
+      "binding_constraints": [],
+      "evidence_type": "optimized",
+      "feasible": false,
+      "group_benefits": {
+        "general": 33.0,
+        "priority": 26.0
+      },
+      "limitations": [
+        "Optimized values are mathematical outputs under declared inputs, not observed impact.",
+        "Feasibility reflects only encoded constraints and does not establish implementability."
+      ],
+      "objective_value": 37.199999999999996,
+      "plan_id": "portfolio-plan-00000131",
+      "quantities": {
+        "action-a": 2,
+        "action-b": 0,
+        "action-c": 3,
+        "action-d": 2
+      },
+      "scenario_objectives": {
+        "adverse": 37.199999999999996,
+        "base": 68.80000000000001,
+        "favorable": 100.39999999999999
+      },
+      "selected_action_count": 3,
+      "total_benefit": 108.0,
+      "total_capacity": 9.0,
+      "total_cost": 47.0,
+      "total_risk": 13.0,
+      "violations": [
+        {
+          "bound": 1.0,
+          "constraint_id": "budget",
+          "details": "Total cost exceeds the declared budget.",
+          "excess": 46.0,
+          "measured": 47.0
+        },
+        {
+          "bound": 1000.0,
+          "constraint_id": "minimum-benefit",
+          "details": "Total modeled benefit is below the floor.",
+          "excess": 892.0,
+          "measured": 108.0
+        },
+        {
+          "bound": 500.0,
+          "constraint_id": "group-priority",
+          "details": "Modeled benefit for priority is below its floor.",
+          "excess": 474.0,
+          "measured": 26.0
+        }
+      ]
+    },
+    {
+      "binding_constraints": [],
+      "evidence_type": "optimized",
+      "feasible": false,
+      "group_benefits": {
+        "general": 32.0,
+        "priority": 25.0
+      },
+      "limitations": [
+        "Optimized values are mathematical outputs under declared inputs, not observed impact.",
+        "Feasibility reflects only encoded constraints and does not establish implementability."
+      ],
+      "objective_value": 36.199999999999996,
+      "plan_id": "portfolio-plan-00000057",
+      "quantities": {
+        "action-a": 0,
+        "action-b": 3,
+        "action-c": 4,
+        "action-d": 0
+      },
+      "scenario_objectives": {
+        "adverse": 36.199999999999996,
+        "base": 66.80000000000001,
+        "favorable": 97.39999999999999
+      },
+      "selected_action_count": 2,
+      "total_benefit": 106.0,
+      "total_capacity": 10.0,
+      "total_cost": 46.0,
+      "total_risk": 16.0,
+      "violations": [
+        {
+          "bound": 1.0,
+          "constraint_id": "budget",
+          "details": "Total cost exceeds the declared budget.",
+          "excess": 45.0,
+          "measured": 46.0
+        },
+        {
+          "bound": 1000.0,
+          "constraint_id": "minimum-benefit",
+          "details": "Total modeled benefit is below the floor.",
+          "excess": 894.0,
+          "measured": 106.0
+        },
+        {
+          "bound": 500.0,
+          "constraint_id": "group-priority",
+          "details": "Modeled benefit for priority is below its floor.",
+          "excess": 475.0,
+          "measured": 25.0
+        }
+      ]
+    },
+    {
+      "binding_constraints": [],
+      "evidence_type": "optimized",
+      "feasible": false,
+      "group_benefits": {
+        "general": 32.0,
+        "priority": 25.0
+      },
+      "limitations": [
+        "Optimized values are mathematical outputs under declared inputs, not observed impact.",
+        "Feasibility reflects only encoded constraints and does not establish implementability."
+      ],
+      "objective_value": 36.199999999999996,
+      "plan_id": "portfolio-plan-00000100",
+      "quantities": {
+        "action-a": 1,
+        "action-b": 2,
+        "action-c": 3,
+        "action-d": 1
+      },
+      "scenario_objectives": {
+        "adverse": 36.199999999999996,
+        "base": 66.80000000000001,
+        "favorable": 97.39999999999999
+      },
+      "selected_action_count": 4,
+      "total_benefit": 106.0,
+      "total_capacity": 10.0,
+      "total_cost": 46.0,
+      "total_risk": 16.0,
+      "violations": [
+        {
+          "bound": 1.0,
+          "constraint_id": "budget",
+          "details": "Total cost exceeds the declared budget.",
+          "excess": 45.0,
+          "measured": 46.0
+        },
+        {
+          "bound": 1000.0,
+          "constraint_id": "minimum-benefit",
+          "details": "Total modeled benefit is below the floor.",
+          "excess": 894.0,
+          "measured": 106.0
+        },
+        {
+          "bound": 500.0,
+          "constraint_id": "group-priority",
+          "details": "Modeled benefit for priority is below its floor.",
+          "excess": 475.0,
+          "measured": 25.0
+        }
+      ]
+    },
+    {
+      "binding_constraints": [],
+      "evidence_type": "optimized",
+      "feasible": false,
+      "group_benefits": {
+        "general": 32.0,
+        "priority": 25.0
+      },
+      "limitations": [
+        "Optimized values are mathematical outputs under declared inputs, not observed impact.",
+        "Feasibility reflects only encoded constraints and does not establish implementability."
+      ],
+      "objective_value": 36.199999999999996,
+      "plan_id": "portfolio-plan-00000110",
+      "quantities": {
+        "action-a": 1,
+        "action-b": 3,
+        "action-c": 1,
+        "action-d": 2
+      },
+      "scenario_objectives": {
+        "adverse": 36.199999999999996,
+        "base": 66.80000000000001,
+        "favorable": 97.39999999999999
+      },
+      "selected_action_count": 4,
+      "total_benefit": 106.0,
+      "total_capacity": 12.0,
+      "total_cost": 46.0,
+      "total_risk": 20.0,
+      "violations": [
+        {
+          "bound": 1.0,
+          "constraint_id": "budget",
+          "details": "Total cost exceeds the declared budget.",
+          "excess": 45.0,
+          "measured": 46.0
+        },
+        {
+          "bound": 1000.0,
+          "constraint_id": "minimum-benefit",
+          "details": "Total modeled benefit is below the floor.",
+          "excess": 894.0,
+          "measured": 106.0
+        },
+        {
+          "bound": 500.0,
+          "constraint_id": "group-priority",
+          "details": "Modeled benefit for priority is below its floor.",
+          "excess": 475.0,
+          "measured": 25.0
+        }
+      ]
+    },
+    {
+      "binding_constraints": [],
+      "evidence_type": "optimized",
+      "feasible": false,
+      "group_benefits": {
+        "general": 32.0,
+        "priority": 25.0
+      },
+      "limitations": [
+        "Optimized values are mathematical outputs under declared inputs, not observed impact.",
+        "Feasibility reflects only encoded constraints and does not establish implementability."
+      ],
+      "objective_value": 36.199999999999996,
+      "plan_id": "portfolio-plan-00000133",
+      "quantities": {
+        "action-a": 2,
+        "action-b": 0,
+        "action-c": 4,
+        "action-d": 1
+      },
+      "scenario_objectives": {
+        "adverse": 36.199999999999996,
+        "base": 66.8,
+        "favorable": 97.39999999999999
+      },
+      "selected_action_count": 3,
+      "total_benefit": 106.0,
+      "total_capacity": 8.0,
+      "total_cost": 46.0,
+      "total_risk": 12.0,
+      "violations": [
+        {
+          "bound": 1.0,
+          "constraint_id": "budget",
+          "details": "Total cost exceeds the declared budget.",
+          "excess": 45.0,
+          "measured": 46.0
+        },
+        {
+          "bound": 1000.0,
+          "constraint_id": "minimum-benefit",
+          "details": "Total modeled benefit is below the floor.",
+          "excess": 894.0,
+          "measured": 106.0
+        },
+        {
+          "bound": 500.0,
+          "constraint_id": "group-priority",
+          "details": "Modeled benefit for priority is below its floor.",
+          "excess": 475.0,
+          "measured": 25.0
+        }
+      ]
+    },
+    {
+      "binding_constraints": [],
+      "evidence_type": "optimized",
+      "feasible": false,
+      "group_benefits": {
+        "general": 32.0,
+        "priority": 25.0
+      },
+      "limitations": [
+        "Optimized values are mathematical outputs under declared inputs, not observed impact.",
+        "Feasibility reflects only encoded constraints and does not establish implementability."
+      ],
+      "objective_value": 36.199999999999996,
+      "plan_id": "portfolio-plan-00000143",
+      "quantities": {
+        "action-a": 2,
+        "action-b": 1,
+        "action-c": 2,
+        "action-d": 2
+      },
+      "scenario_objectives": {
+        "adverse": 36.199999999999996,
+        "base": 66.8,
+        "favorable": 97.39999999999999
+      },
+      "selected_action_count": 4,
+      "total_benefit": 106.0,
+      "total_capacity": 10.0,
+      "total_cost": 46.0,
+      "total_risk": 16.0,
+      "violations": [
+        {
+          "bound": 1.0,
+          "constraint_id": "budget",
+          "details": "Total cost exceeds the declared budget.",
+          "excess": 45.0,
+          "measured": 46.0
+        },
+        {
+          "bound": 1000.0,
+          "constraint_id": "minimum-benefit",
+          "details": "Total modeled benefit is below the floor.",
+          "excess": 894.0,
+          "measured": 106.0
+        },
+        {
+          "bound": 500.0,
+          "constraint_id": "group-priority",
+          "details": "Modeled benefit for priority is below its floor.",
+          "excess": 475.0,
+          "measured": 25.0
+        }
+      ]
+    },
+    {
+      "binding_constraints": [],
+      "evidence_type": "optimized",
+      "feasible": false,
+      "group_benefits": {
+        "general": 32.0,
+        "priority": 26.0
+      },
+      "limitations": [
+        "Optimized values are mathematical outputs under declared inputs, not observed impact.",
+        "Feasibility reflects only encoded constraints and does not establish implementability."
+      ],
+      "objective_value": 35.599999999999994,
+      "plan_id": "portfolio-plan-00000014",
+      "quantities": {
+        "action-a": 0,
+        "action-b": 0,
+        "action-c": 4,
+        "action-d": 2
+      },
+      "scenario_objectives": {
+        "adverse": 35.599999999999994,
+        "base": 66.4,
+        "favorable": 97.19999999999999
+      },
+      "selected_action_count": 2,
+      "total_benefit": 100.0,
+      "total_capacity": 8.0,
+      "total_cost": 44.0,
+      "total_risk": 8.0,
+      "violations": [
+        {
+          "bound": 1.0,
+          "constraint_id": "budget",
+          "details": "Total cost exceeds the declared budget.",
+          "excess": 43.0,
+          "measured": 44.0
+        },
+        {
+          "bound": 1000.0,
+          "constraint_id": "minimum-benefit",
+          "details": "Total modeled benefit is below the floor.",
+          "excess": 900.0,
+          "measured": 100.0
+        },
+        {
+          "bound": 500.0,
+          "constraint_id": "group-priority",
+          "details": "Modeled benefit for priority is below its floor.",
+          "excess": 474.0,
+          "measured": 26.0
+        }
+      ]
+    },
+    {
+      "binding_constraints": [],
+      "evidence_type": "optimized",
+      "feasible": false,
+      "group_benefits": {
+        "general": 31.0,
+        "priority": 24.0
+      },
+      "limitations": [
+        "Optimized values are mathematical outputs under declared inputs, not observed impact.",
+        "Feasibility reflects only encoded constraints and does not establish implementability."
+      ],
+      "objective_value": 35.199999999999996,
+      "plan_id": "portfolio-plan-00000102",
+      "quantities": {
+        "action-a": 1,
+        "action-b": 2,
+        "action-c": 4,
+        "action-d": 0
+      },
+      "scenario_objectives": {
+        "adverse": 35.199999999999996,
+        "base": 64.8,
+        "favorable": 94.39999999999999
+      },
+      "selected_action_count": 3,
+      "total_benefit": 104.0,
+      "total_capacity": 9.0,
+      "total_cost": 45.0,
+      "total_risk": 15.0,
+      "violations": [
+        {
+          "bound": 1.0,
+          "constraint_id": "budget",
+          "details": "Total cost exceeds the declared budget.",
+          "excess": 44.0,
+          "measured": 45.0
+        },
+        {
+          "bound": 1000.0,
+          "constraint_id": "minimum-benefit",
+          "details": "Total modeled benefit is below the floor.",
+          "excess": 896.0,
+          "measured": 104.0
+        },
+        {
+          "bound": 500.0,
+          "constraint_id": "group-priority",
+          "details": "Modeled benefit for priority is below its floor.",
+          "excess": 476.0,
+          "measured": 24.0
+        }
+      ]
+    },
+    {
+      "binding_constraints": [],
+      "evidence_type": "optimized",
+      "feasible": false,
+      "group_benefits": {
+        "general": 31.0,
+        "priority": 24.0
+      },
+      "limitations": [
+        "Optimized values are mathematical outputs under declared inputs, not observed impact.",
+        "Feasibility reflects only encoded constraints and does not establish implementability."
+      ],
+      "objective_value": 35.199999999999996,
+      "plan_id": "portfolio-plan-00000112",
+      "quantities": {
+        "action-a": 1,
+        "action-b": 3,
+        "action-c": 2,
+        "action-d": 1
+      },
+      "scenario_objectives": {
+        "adverse": 35.199999999999996,
+        "base": 64.80000000000001,
+        "favorable": 94.39999999999999
+      },
+      "selected_action_count": 4,
+      "total_benefit": 104.0,
+      "total_capacity": 11.0,
+      "total_cost": 45.0,
+      "total_risk": 19.0,
+      "violations": [
+        {
+          "bound": 1.0,
+          "constraint_id": "budget",
+          "details": "Total cost exceeds the declared budget.",
+          "excess": 44.0,
+          "measured": 45.0
+        },
+        {
+          "bound": 1000.0,
+          "constraint_id": "minimum-benefit",
+          "details": "Total modeled benefit is below the floor.",
+          "excess": 896.0,
+          "measured": 104.0
+        },
+        {
+          "bound": 500.0,
+          "constraint_id": "group-priority",
+          "details": "Modeled benefit for priority is below its floor.",
+          "excess": 476.0,
+          "measured": 24.0
+        }
+      ]
+    },
+    {
+      "binding_constraints": [],
+      "evidence_type": "optimized",
+      "feasible": false,
+      "group_benefits": {
+        "general": 31.0,
+        "priority": 24.0
+      },
+      "limitations": [
+        "Optimized values are mathematical outputs under declared inputs, not observed impact.",
+        "Feasibility reflects only encoded constraints and does not establish implementability."
+      ],
+      "objective_value": 35.199999999999996,
+      "plan_id": "portfolio-plan-00000145",
+      "quantities": {
+        "action-a": 2,
+        "action-b": 1,
+        "action-c": 3,
+        "action-d": 1
+      },
+      "scenario_objectives": {
+        "adverse": 35.199999999999996,
+        "base": 64.80000000000001,
+        "favorable": 94.39999999999999
+      },
+      "selected_action_count": 4,
+      "total_benefit": 104.0,
+      "total_capacity": 9.0,
+      "total_cost": 45.0,
+      "total_risk": 15.0,
+      "violations": [
+        {
+          "bound": 1.0,
+          "constraint_id": "budget",
+          "details": "Total cost exceeds the declared budget.",
+          "excess": 44.0,
+          "measured": 45.0
+        },
+        {
+          "bound": 1000.0,
+          "constraint_id": "minimum-benefit",
+          "details": "Total modeled benefit is below the floor.",
+          "excess": 896.0,
+          "measured": 104.0
+        },
+        {
+          "bound": 500.0,
+          "constraint_id": "group-priority",
+          "details": "Modeled benefit for priority is below its floor.",
+          "excess": 476.0,
+          "measured": 24.0
+        }
+      ]
+    },
+    {
+      "binding_constraints": [],
+      "evidence_type": "optimized",
+      "feasible": false,
+      "group_benefits": {
+        "general": 31.0,
+        "priority": 24.0
+      },
+      "limitations": [
+        "Optimized values are mathematical outputs under declared inputs, not observed impact.",
+        "Feasibility reflects only encoded constraints and does not establish implementability."
+      ],
+      "objective_value": 35.199999999999996,
+      "plan_id": "portfolio-plan-00000155",
+      "quantities": {
+        "action-a": 2,
+        "action-b": 2,
+        "action-c": 1,
+        "action-d": 2
+      },
+      "scenario_objectives": {
+        "adverse": 35.199999999999996,
+        "base": 64.8,
+        "favorable": 94.39999999999999
+      },
+      "selected_action_count": 4,
+      "total_benefit": 104.0,
+      "total_capacity": 11.0,
+      "total_cost": 45.0,
+      "total_risk": 19.0,
+      "violations": [
+        {
+          "bound": 1.0,
+          "constraint_id": "budget",
+          "details": "Total cost exceeds the declared budget.",
+          "excess": 44.0,
+          "measured": 45.0
+        },
+        {
+          "bound": 1000.0,
+          "constraint_id": "minimum-benefit",
+          "details": "Total modeled benefit is below the floor.",
+          "excess": 896.0,
+          "measured": 104.0
+        },
+        {
+          "bound": 500.0,
+          "constraint_id": "group-priority",
+          "details": "Modeled benefit for priority is below its floor.",
+          "excess": 476.0,
+          "measured": 24.0
+        }
+      ]
+    },
+    {
+      "binding_constraints": [],
+      "evidence_type": "optimized",
+      "feasible": false,
+      "group_benefits": {
+        "general": 31.0,
+        "priority": 25.0
+      },
+      "limitations": [
+        "Optimized values are mathematical outputs under declared inputs, not observed impact.",
+        "Feasibility reflects only encoded constraints and does not establish implementability."
+      ],
+      "objective_value": 34.599999999999994,
+      "plan_id": "portfolio-plan-00000026",
+      "quantities": {
+        "action-a": 0,
+        "action-b": 1,
+        "action-c": 3,
+        "action-d": 2
+      },
+      "scenario_objectives": {
+        "adverse": 34.599999999999994,
+        "base": 64.4,
+        "favorable": 94.19999999999999
+      },
+      "selected_action_count": 3,
+      "total_benefit": 98.0,
+      "total_capacity": 9.0,
+      "total_cost": 43.0,
+      "total_risk": 11.0,
+      "violations": [
+        {
+          "bound": 1.0,
+          "constraint_id": "budget",
+          "details": "Total cost exceeds the declared budget.",
+          "excess": 42.0,
+          "measured": 43.0
+        },
+        {
+          "bound": 1000.0,
+          "constraint_id": "minimum-benefit",
+          "details": "Total modeled benefit is below the floor.",
+          "excess": 902.0,
+          "measured": 98.0
+        },
+        {
+          "bound": 500.0,
+          "constraint_id": "group-priority",
+          "details": "Modeled benefit for priority is below its floor.",
+          "excess": 475.0,
+          "measured": 25.0
+        }
+      ]
+    },
+    {
+      "binding_constraints": [],
+      "evidence_type": "optimized",
+      "feasible": false,
+      "group_benefits": {
+        "general": 30.0,
+        "priority": 23.0
+      },
+      "limitations": [
+        "Optimized values are mathematical outputs under declared inputs, not observed impact.",
+        "Feasibility reflects only encoded constraints and does not establish implementability."
+      ],
+      "objective_value": 34.199999999999996,
+      "plan_id": "portfolio-plan-00000114",
+      "quantities": {
+        "action-a": 1,
+        "action-b": 3,
+        "action-c": 3,
+        "action-d": 0
+      },
+      "scenario_objectives": {
+        "adverse": 34.199999999999996,
+        "base": 62.800000000000004,
+        "favorable": 91.39999999999999
+      },
+      "selected_action_count": 3,
+      "total_benefit": 102.0,
+      "total_capacity": 10.0,
+      "total_cost": 44.0,
+      "total_risk": 18.0,
+      "violations": [
+        {
+          "bound": 1.0,
+          "constraint_id": "budget",
+          "details": "Total cost exceeds the declared budget.",
+          "excess": 43.0,
+          "measured": 44.0
+        },
+        {
+          "bound": 1000.0,
+          "constraint_id": "minimum-benefit",
+          "details": "Total modeled benefit is below the floor.",
+          "excess": 898.0,
+          "measured": 102.0
+        },
+        {
+          "bound": 500.0,
+          "constraint_id": "group-priority",
+          "details": "Modeled benefit for priority is below its floor.",
+          "excess": 477.0,
+          "measured": 23.0
+        }
+      ]
+    },
+    {
+      "binding_constraints": [],
+      "evidence_type": "optimized",
+      "feasible": false,
+      "group_benefits": {
+        "general": 30.0,
+        "priority": 23.0
+      },
+      "limitations": [
+        "Optimized values are mathematical outputs under declared inputs, not observed impact.",
+        "Feasibility reflects only encoded constraints and does not establish implementability."
+      ],
+      "objective_value": 34.199999999999996,
+      "plan_id": "portfolio-plan-00000147",
+      "quantities": {
+        "action-a": 2,
+        "action-b": 1,
+        "action-c": 4,
+        "action-d": 0
+      },
+      "scenario_objectives": {
+        "adverse": 34.199999999999996,
+        "base": 62.800000000000004,
+        "favorable": 91.39999999999999
+      },
+      "selected_action_count": 3,
+      "total_benefit": 102.0,
+      "total_capacity": 8.0,
+      "total_cost": 44.0,
+      "total_risk": 14.0,
+      "violations": [
+        {
+          "bound": 1.0,
+          "constraint_id": "budget",
+          "details": "Total cost exceeds the declared budget.",
+          "excess": 43.0,
+          "measured": 44.0
+        },
+        {
+          "bound": 1000.0,
+          "constraint_id": "minimum-benefit",
+          "details": "Total modeled benefit is below the floor.",
+          "excess": 898.0,
+          "measured": 102.0
+        },
+        {
+          "bound": 500.0,
+          "constraint_id": "group-priority",
+          "details": "Modeled benefit for priority is below its floor.",
+          "excess": 477.0,
+          "measured": 23.0
+        }
+      ]
+    },
+    {
+      "binding_constraints": [],
+      "evidence_type": "optimized",
+      "feasible": false,
+      "group_benefits": {
+        "general": 30.0,
+        "priority": 23.0
+      },
+      "limitations": [
+        "Optimized values are mathematical outputs under declared inputs, not observed impact.",
+        "Feasibility reflects only encoded constraints and does not establish implementability."
+      ],
+      "objective_value": 34.199999999999996,
+      "plan_id": "portfolio-plan-00000157",
+      "quantities": {
+        "action-a": 2,
+        "action-b": 2,
+        "action-c": 2,
+        "action-d": 1
+      },
+      "scenario_objectives": {
+        "adverse": 34.199999999999996,
+        "base": 62.800000000000004,
+        "favorable": 91.39999999999999
+      },
+      "selected_action_count": 4,
+      "total_benefit": 102.0,
+      "total_capacity": 10.0,
+      "total_cost": 44.0,
+      "total_risk": 18.0,
+      "violations": [
+        {
+          "bound": 1.0,
+          "constraint_id": "budget",
+          "details": "Total cost exceeds the declared budget.",
+          "excess": 43.0,
+          "measured": 44.0
+        },
+        {
+          "bound": 1000.0,
+          "constraint_id": "minimum-benefit",
+          "details": "Total modeled benefit is below the floor.",
+          "excess": 898.0,
+          "measured": 102.0
+        },
+        {
+          "bound": 500.0,
+          "constraint_id": "group-priority",
+          "details": "Modeled benefit for priority is below its floor.",
+          "excess": 477.0,
+          "measured": 23.0
+        }
+      ]
+    },
+    {
+      "binding_constraints": [],
+      "evidence_type": "optimized",
+      "feasible": false,
+      "group_benefits": {
+        "general": 30.0,
+        "priority": 23.0
+      },
+      "limitations": [
+        "Optimized values are mathematical outputs under declared inputs, not observed impact.",
+        "Feasibility reflects only encoded constraints and does not establish implementability."
+      ],
+      "objective_value": 34.199999999999996,
+      "plan_id": "portfolio-plan-00000167",
+      "quantities": {
+        "action-a": 2,
+        "action-b": 3,
+        "action-c": 0,
+        "action-d": 2
+      },
+      "scenario_objectives": {
+        "adverse": 34.199999999999996,
+        "base": 62.800000000000004,
+        "favorable": 91.39999999999999
+      },
+      "selected_action_count": 3,
+      "total_benefit": 102.0,
+      "total_capacity": 12.0,
+      "total_cost": 44.0,
+      "total_risk": 22.0,
+      "violations": [
+        {
+          "bound": 1.0,
+          "constraint_id": "budget",
+          "details": "Total cost exceeds the declared budget.",
+          "excess": 43.0,
+          "measured": 44.0
+        },
+        {
+          "bound": 1000.0,
+          "constraint_id": "minimum-benefit",
+          "details": "Total modeled benefit is below the floor.",
+          "excess": 898.0,
+          "measured": 102.0
+        },
+        {
+          "bound": 500.0,
+          "constraint_id": "group-priority",
+          "details": "Modeled benefit for priority is below its floor.",
+          "excess": 477.0,
+          "measured": 23.0
+        }
+      ]
+    },
+    {
+      "binding_constraints": [],
+      "evidence_type": "optimized",
+      "feasible": false,
+      "group_benefits": {
+        "general": 30.0,
+        "priority": 24.0
+      },
+      "limitations": [
+        "Optimized values are mathematical outputs under declared inputs, not observed impact.",
+        "Feasibility reflects only encoded constraints and does not establish implementability."
+      ],
+      "objective_value": 33.599999999999994,
+      "plan_id": "portfolio-plan-00000028",
+      "quantities": {
+        "action-a": 0,
+        "action-b": 1,
+        "action-c": 4,
+        "action-d": 1
+      },
+      "scenario_objectives": {
+        "adverse": 33.599999999999994,
+        "base": 62.400000000000006,
+        "favorable": 91.19999999999999
+      },
+      "selected_action_count": 3,
+      "total_benefit": 96.0,
+      "total_capacity": 8.0,
+      "total_cost": 42.0,
+      "total_risk": 10.0,
+      "violations": [
+        {
+          "bound": 1.0,
+          "constraint_id": "budget",
+          "details": "Total cost exceeds the declared budget.",
+          "excess": 41.0,
+          "measured": 42.0
+        },
+        {
+          "bound": 1000.0,
+          "constraint_id": "minimum-benefit",
+          "details": "Total modeled benefit is below the floor.",
+          "excess": 904.0,
+          "measured": 96.0
+        },
+        {
+          "bound": 500.0,
+          "constraint_id": "group-priority",
+          "details": "Modeled benefit for priority is below its floor.",
+          "excess": 476.0,
+          "measured": 24.0
+        }
+      ]
+    },
+    {
+      "binding_constraints": [],
+      "evidence_type": "optimized",
+      "feasible": false,
+      "group_benefits": {
+        "general": 30.0,
+        "priority": 24.0
+      },
+      "limitations": [
+        "Optimized values are mathematical outputs under declared inputs, not observed impact.",
+        "Feasibility reflects only encoded constraints and does not establish implementability."
+      ],
+      "objective_value": 33.599999999999994,
+      "plan_id": "portfolio-plan-00000038",
+      "quantities": {
+        "action-a": 0,
+        "action-b": 2,
+        "action-c": 2,
+        "action-d": 2
+      },
+      "scenario_objectives": {
+        "adverse": 33.599999999999994,
+        "base": 62.400000000000006,
+        "favorable": 91.19999999999999
+      },
+      "selected_action_count": 3,
+      "total_benefit": 96.0,
+      "total_capacity": 10.0,
+      "total_cost": 42.0,
+      "total_risk": 14.0,
+      "violations": [
+        {
+          "bound": 1.0,
+          "constraint_id": "budget",
+          "details": "Total cost exceeds the declared budget.",
+          "excess": 41.0,
+          "measured": 42.0
+        },
+        {
+          "bound": 1000.0,
+          "constraint_id": "minimum-benefit",
+          "details": "Total modeled benefit is below the floor.",
+          "excess": 904.0,
+          "measured": 96.0
+        },
+        {
+          "bound": 500.0,
+          "constraint_id": "group-priority",
+          "details": "Modeled benefit for priority is below its floor.",
+          "excess": 476.0,
+          "measured": 24.0
+        }
+      ]
+    },
+    {
+      "binding_constraints": [],
+      "evidence_type": "optimized",
+      "feasible": false,
+      "group_benefits": {
+        "general": 30.0,
+        "priority": 24.0
+      },
+      "limitations": [
+        "Optimized values are mathematical outputs under declared inputs, not observed impact.",
+        "Feasibility reflects only encoded constraints and does not establish implementability."
+      ],
+      "objective_value": 33.599999999999994,
+      "plan_id": "portfolio-plan-00000071",
+      "quantities": {
+        "action-a": 1,
+        "action-b": 0,
+        "action-c": 3,
+        "action-d": 2
+      },
+      "scenario_objectives": {
+        "adverse": 33.599999999999994,
+        "base": 62.400000000000006,
+        "favorable": 91.19999999999999
+      },
+      "selected_action_count": 3,
+      "total_benefit": 96.0,
+      "total_capacity": 8.0,
+      "total_cost": 42.0,
+      "total_risk": 10.0,
+      "violations": [
+        {
+          "bound": 1.0,
+          "constraint_id": "budget",
+          "details": "Total cost exceeds the declared budget.",
+          "excess": 41.0,
+          "measured": 42.0
+        },
+        {
+          "bound": 1000.0,
+          "constraint_id": "minimum-benefit",
+          "details": "Total modeled benefit is below the floor.",
+          "excess": 904.0,
+          "measured": 96.0
+        },
+        {
+          "bound": 500.0,
+          "constraint_id": "group-priority",
+          "details": "Modeled benefit for priority is below its floor.",
+          "excess": 476.0,
+          "measured": 24.0
+        }
+      ]
+    },
+    {
+      "binding_constraints": [],
+      "evidence_type": "optimized",
+      "feasible": false,
+      "group_benefits": {
+        "general": 29.0,
+        "priority": 22.0
+      },
+      "limitations": [
+        "Optimized values are mathematical outputs under declared inputs, not observed impact.",
+        "Feasibility reflects only encoded constraints and does not establish implementability."
+      ],
+      "objective_value": 33.199999999999996,
+      "plan_id": "portfolio-plan-00000159",
+      "quantities": {
+        "action-a": 2,
+        "action-b": 2,
+        "action-c": 3,
+        "action-d": 0
+      },
+      "scenario_objectives": {
+        "adverse": 33.199999999999996,
+        "base": 60.800000000000004,
+        "favorable": 88.39999999999999
+      },
+      "selected_action_count": 3,
+      "total_benefit": 100.0,
+      "total_capacity": 9.0,
+      "total_cost": 43.0,
+      "total_risk": 17.0,
+      "violations": [
+        {
+          "bound": 1.0,
+          "constraint_id": "budget",
+          "details": "Total cost exceeds the declared budget.",
+          "excess": 42.0,
+          "measured": 43.0
+        },
+        {
+          "bound": 1000.0,
+          "constraint_id": "minimum-benefit",
+          "details": "Total modeled benefit is below the floor.",
+          "excess": 900.0,
+          "measured": 100.0
+        },
+        {
+          "bound": 500.0,
+          "constraint_id": "group-priority",
+          "details": "Modeled benefit for priority is below its floor.",
+          "excess": 478.0,
+          "measured": 22.0
+        }
+      ]
+    },
+    {
+      "binding_constraints": [],
+      "evidence_type": "optimized",
+      "feasible": false,
+      "group_benefits": {
+        "general": 29.0,
+        "priority": 22.0
+      },
+      "limitations": [
+        "Optimized values are mathematical outputs under declared inputs, not observed impact.",
+        "Feasibility reflects only encoded constraints and does not establish implementability."
+      ],
+      "objective_value": 33.199999999999996,
+      "plan_id": "portfolio-plan-00000169",
+      "quantities": {
+        "action-a": 2,
+        "action-b": 3,
+        "action-c": 1,
+        "action-d": 1
+      },
+      "scenario_objectives": {
+        "adverse": 33.199999999999996,
+        "base": 60.800000000000004,
+        "favorable": 88.39999999999999
+      },
+      "selected_action_count": 4,
+      "total_benefit": 100.0,
+      "total_capacity": 11.0,
+      "total_cost": 43.0,
+      "total_risk": 21.0,
+      "violations": [
+        {
+          "bound": 1.0,
+          "constraint_id": "budget",
+          "details": "Total cost exceeds the declared budget.",
+          "excess": 42.0,
+          "measured": 43.0
+        },
+        {
+          "bound": 1000.0,
+          "constraint_id": "minimum-benefit",
+          "details": "Total modeled benefit is below the floor.",
+          "excess": 900.0,
+          "measured": 100.0
+        },
+        {
+          "bound": 500.0,
+          "constraint_id": "group-priority",
+          "details": "Modeled benefit for priority is below its floor.",
+          "excess": 478.0,
+          "measured": 22.0
+        }
+      ]
+    },
+    {
+      "binding_constraints": [],
+      "evidence_type": "optimized",
+      "feasible": false,
+      "group_benefits": {
+        "general": 29.0,
+        "priority": 23.0
+      },
+      "limitations": [
+        "Optimized values are mathematical outputs under declared inputs, not observed impact.",
+        "Feasibility reflects only encoded constraints and does not establish implementability."
+      ],
+      "objective_value": 32.6,
+      "plan_id": "portfolio-plan-00000073",
+      "quantities": {
+        "action-a": 1,
+        "action-b": 0,
+        "action-c": 4,
+        "action-d": 1
+      },
+      "scenario_objectives": {
+        "adverse": 32.6,
+        "base": 60.400000000000006,
+        "favorable": 88.19999999999999
+      },
+      "selected_action_count": 3,
+      "total_benefit": 94.0,
+      "total_capacity": 7.0,
+      "total_cost": 41.0,
+      "total_risk": 9.0,
+      "violations": [
+        {
+          "bound": 1.0,
+          "constraint_id": "budget",
+          "details": "Total cost exceeds the declared budget.",
+          "excess": 40.0,
+          "measured": 41.0
+        },
+        {
+          "bound": 1000.0,
+          "constraint_id": "minimum-benefit",
+          "details": "Total modeled benefit is below the floor.",
+          "excess": 906.0,
+          "measured": 94.0
+        },
+        {
+          "bound": 500.0,
+          "constraint_id": "group-priority",
+          "details": "Modeled benefit for priority is below its floor.",
+          "excess": 477.0,
+          "measured": 23.0
+        }
+      ]
+    },
+    {
+      "binding_constraints": [],
+      "evidence_type": "optimized",
+      "feasible": false,
+      "group_benefits": {
+        "general": 29.0,
+        "priority": 23.0
+      },
+      "limitations": [
+        "Optimized values are mathematical outputs under declared inputs, not observed impact.",
+        "Feasibility reflects only encoded constraints and does not establish implementability."
+      ],
+      "objective_value": 32.6,
+      "plan_id": "portfolio-plan-00000083",
+      "quantities": {
+        "action-a": 1,
+        "action-b": 1,
+        "action-c": 2,
+        "action-d": 2
+      },
+      "scenario_objectives": {
+        "adverse": 32.6,
+        "base": 60.400000000000006,
+        "favorable": 88.19999999999999
+      },
+      "selected_action_count": 4,
+      "total_benefit": 94.0,
+      "total_capacity": 9.0,
+      "total_cost": 41.0,
+      "total_risk": 13.0,
+      "violations": [
+        {
+          "bound": 1.0,
+          "constraint_id": "budget",
+          "details": "Total cost exceeds the declared budget.",
+          "excess": 40.0,
+          "measured": 41.0
+        },
+        {
+          "bound": 1000.0,
+          "constraint_id": "minimum-benefit",
+          "details": "Total modeled benefit is below the floor.",
+          "excess": 906.0,
+          "measured": 94.0
+        },
+        {
+          "bound": 500.0,
+          "constraint_id": "group-priority",
+          "details": "Modeled benefit for priority is below its floor.",
+          "excess": 477.0,
+          "measured": 23.0
+        }
+      ]
+    },
+    {
+      "binding_constraints": [],
+      "evidence_type": "optimized",
+      "feasible": false,
+      "group_benefits": {
+        "general": 29.0,
+        "priority": 23.0
+      },
+      "limitations": [
+        "Optimized values are mathematical outputs under declared inputs, not observed impact.",
+        "Feasibility reflects only encoded constraints and does not establish implementability."
+      ],
+      "objective_value": 32.599999999999994,
+      "plan_id": "portfolio-plan-00000040",
+      "quantities": {
+        "action-a": 0,
+        "action-b": 2,
+        "action-c": 3,
+        "action-d": 1
+      },
+      "scenario_objectives": {
+        "adverse": 32.599999999999994,
+        "base": 60.400000000000006,
+        "favorable": 88.19999999999999
+      },
+      "selected_action_count": 3,
+      "total_benefit": 94.0,
+      "total_capacity": 9.0,
+      "total_cost": 41.0,
+      "total_risk": 13.0,
+      "violations": [
+        {
+          "bound": 1.0,
+          "constraint_id": "budget",
+          "details": "Total cost exceeds the declared budget.",
+          "excess": 40.0,
+          "measured": 41.0
+        },
+        {
+          "bound": 1000.0,
+          "constraint_id": "minimum-benefit",
+          "details": "Total modeled benefit is below the floor.",
+          "excess": 906.0,
+          "measured": 94.0
+        },
+        {
+          "bound": 500.0,
+          "constraint_id": "group-priority",
+          "details": "Modeled benefit for priority is below its floor.",
+          "excess": 477.0,
+          "measured": 23.0
+        }
+      ]
+    },
+    {
+      "binding_constraints": [],
+      "evidence_type": "optimized",
+      "feasible": false,
+      "group_benefits": {
+        "general": 29.0,
+        "priority": 23.0
+      },
+      "limitations": [
+        "Optimized values are mathematical outputs under declared inputs, not observed impact.",
+        "Feasibility reflects only encoded constraints and does not establish implementability."
+      ],
+      "objective_value": 32.599999999999994,
+      "plan_id": "portfolio-plan-00000050",
+      "quantities": {
+        "action-a": 0,
+        "action-b": 3,
+        "action-c": 1,
+        "action-d": 2
+      },
+      "scenario_objectives": {
+        "adverse": 32.599999999999994,
+        "base": 60.400000000000006,
+        "favorable": 88.19999999999999
+      },
+      "selected_action_count": 3,
+      "total_benefit": 94.0,
+      "total_capacity": 11.0,
+      "total_cost": 41.0,
+      "total_risk": 17.0,
+      "violations": [
+        {
+          "bound": 1.0,
+          "constraint_id": "budget",
+          "details": "Total cost exceeds the declared budget.",
+          "excess": 40.0,
+          "measured": 41.0
+        },
+        {
+          "bound": 1000.0,
+          "constraint_id": "minimum-benefit",
+          "details": "Total modeled benefit is below the floor.",
+          "excess": 906.0,
+          "measured": 94.0
+        },
+        {
+          "bound": 500.0,
+          "constraint_id": "group-priority",
+          "details": "Modeled benefit for priority is below its floor.",
+          "excess": 477.0,
+          "measured": 23.0
+        }
+      ]
+    },
+    {
+      "binding_constraints": [],
+      "evidence_type": "optimized",
+      "feasible": false,
+      "group_benefits": {
+        "general": 28.0,
+        "priority": 21.0
+      },
+      "limitations": [
+        "Optimized values are mathematical outputs under declared inputs, not observed impact.",
+        "Feasibility reflects only encoded constraints and does not establish implementability."
+      ],
+      "objective_value": 32.199999999999996,
+      "plan_id": "portfolio-plan-00000171",
+      "quantities": {
+        "action-a": 2,
+        "action-b": 3,
+        "action-c": 2,
+        "action-d": 0
+      },
+      "scenario_objectives": {
+        "adverse": 32.199999999999996,
+        "base": 58.800000000000004,
+        "favorable": 85.39999999999999
+      },
+      "selected_action_count": 3,
+      "total_benefit": 98.0,
+      "total_capacity": 10.0,
+      "total_cost": 42.0,
+      "total_risk": 20.0,
+      "violations": [
+        {
+          "bound": 1.0,
+          "constraint_id": "budget",
+          "details": "Total cost exceeds the declared budget.",
+          "excess": 41.0,
+          "measured": 42.0
+        },
+        {
+          "bound": 1000.0,
+          "constraint_id": "minimum-benefit",
+          "details": "Total modeled benefit is below the floor.",
+          "excess": 902.0,
+          "measured": 98.0
+        },
+        {
+          "bound": 500.0,
+          "constraint_id": "group-priority",
+          "details": "Modeled benefit for priority is below its floor.",
+          "excess": 479.0,
+          "measured": 21.0
+        }
+      ]
+    },
+    {
+      "binding_constraints": [],
+      "evidence_type": "optimized",
+      "feasible": false,
+      "group_benefits": {
+        "general": 28.0,
+        "priority": 22.0
+      },
+      "limitations": [
+        "Optimized values are mathematical outputs under declared inputs, not observed impact.",
+        "Feasibility reflects only encoded constraints and does not establish implementability."
+      ],
+      "objective_value": 31.599999999999998,
+      "plan_id": "portfolio-plan-00000042",
+      "quantities": {
+        "action-a": 0,
+        "action-b": 2,
+        "action-c": 4,
+        "action-d": 0
+      },
+      "scenario_objectives": {
+        "adverse": 31.599999999999998,
+        "base": 58.400000000000006,
+        "favorable": 85.19999999999999
+      },
+      "selected_action_count": 2,
+      "total_benefit": 92.0,
+      "total_capacity": 8.0,
+      "total_cost": 40.0,
+      "total_risk": 12.0,
+      "violations": [
+        {
+          "bound": 1.0,
+          "constraint_id": "budget",
+          "details": "Total cost exceeds the declared budget.",
+          "excess": 39.0,
+          "measured": 40.0
+        },
+        {
+          "bound": 1000.0,
+          "constraint_id": "minimum-benefit",
+          "details": "Total modeled benefit is below the floor.",
+          "excess": 908.0,
+          "measured": 92.0
+        },
+        {
+          "bound": 500.0,
+          "constraint_id": "group-priority",
+          "details": "Modeled benefit for priority is below its floor.",
+          "excess": 478.0,
+          "measured": 22.0
+        }
+      ]
+    },
+    {
+      "binding_constraints": [],
+      "evidence_type": "optimized",
+      "feasible": false,
+      "group_benefits": {
+        "general": 28.0,
+        "priority": 22.0
+      },
+      "limitations": [
+        "Optimized values are mathematical outputs under declared inputs, not observed impact.",
+        "Feasibility reflects only encoded constraints and does not establish implementability."
+      ],
+      "objective_value": 31.599999999999998,
+      "plan_id": "portfolio-plan-00000052",
+      "quantities": {
+        "action-a": 0,
+        "action-b": 3,
+        "action-c": 2,
+        "action-d": 1
+      },
+      "scenario_objectives": {
+        "adverse": 31.599999999999998,
+        "base": 58.400000000000006,
+        "favorable": 85.19999999999999
+      },
+      "selected_action_count": 3,
+      "total_benefit": 92.0,
+      "total_capacity": 10.0,
+      "total_cost": 40.0,
+      "total_risk": 16.0,
+      "violations": [
+        {
+          "bound": 1.0,
+          "constraint_id": "budget",
+          "details": "Total cost exceeds the declared budget.",
+          "excess": 39.0,
+          "measured": 40.0
+        },
+        {
+          "bound": 1000.0,
+          "constraint_id": "minimum-benefit",
+          "details": "Total modeled benefit is below the floor.",
+          "excess": 908.0,
+          "measured": 92.0
+        },
+        {
+          "bound": 500.0,
+          "constraint_id": "group-priority",
+          "details": "Modeled benefit for priority is below its floor.",
+          "excess": 478.0,
+          "measured": 22.0
+        }
+      ]
+    },
+    {
+      "binding_constraints": [],
+      "evidence_type": "optimized",
+      "feasible": false,
+      "group_benefits": {
+        "general": 28.0,
+        "priority": 22.0
+      },
+      "limitations": [
+        "Optimized values are mathematical outputs under declared inputs, not observed impact.",
+        "Feasibility reflects only encoded constraints and does not establish implementability."
+      ],
+      "objective_value": 31.599999999999998,
+      "plan_id": "portfolio-plan-00000085",
+      "quantities": {
+        "action-a": 1,
+        "action-b": 1,
+        "action-c": 3,
+        "action-d": 1
+      },
+      "scenario_objectives": {
+        "adverse": 31.599999999999998,
+        "base": 58.400000000000006,
+        "favorable": 85.19999999999999
+      },
+      "selected_action_count": 4,
+      "total_benefit": 92.0,
+      "total_capacity": 8.0,
+      "total_cost": 40.0,
+      "total_risk": 12.0,
+      "violations": [
+        {
+          "bound": 1.0,
+          "constraint_id": "budget",
+          "details": "Total cost exceeds the declared budget.",
+          "excess": 39.0,
+          "measured": 40.0
+        },
+        {
+          "bound": 1000.0,
+          "constraint_id": "minimum-benefit",
+          "details": "Total modeled benefit is below the floor.",
+          "excess": 908.0,
+          "measured": 92.0
+        },
+        {
+          "bound": 500.0,
+          "constraint_id": "group-priority",
+          "details": "Modeled benefit for priority is below its floor.",
+          "excess": 478.0,
+          "measured": 22.0
+        }
+      ]
+    },
+    {
+      "binding_constraints": [],
+      "evidence_type": "optimized",
+      "feasible": false,
+      "group_benefits": {
+        "general": 28.0,
+        "priority": 22.0
+      },
+      "limitations": [
+        "Optimized values are mathematical outputs under declared inputs, not observed impact.",
+        "Feasibility reflects only encoded constraints and does not establish implementability."
+      ],
+      "objective_value": 31.599999999999998,
+      "plan_id": "portfolio-plan-00000095",
+      "quantities": {
+        "action-a": 1,
+        "action-b": 2,
+        "action-c": 1,
+        "action-d": 2
+      },
+      "scenario_objectives": {
+        "adverse": 31.599999999999998,
+        "base": 58.400000000000006,
+        "favorable": 85.19999999999999
+      },
+      "selected_action_count": 4,
+      "total_benefit": 92.0,
+      "total_capacity": 10.0,
+      "total_cost": 40.0,
+      "total_risk": 16.0,
+      "violations": [
+        {
+          "bound": 1.0,
+          "constraint_id": "budget",
+          "details": "Total cost exceeds the declared budget.",
+          "excess": 39.0,
+          "measured": 40.0
+        },
+        {
+          "bound": 1000.0,
+          "constraint_id": "minimum-benefit",
+          "details": "Total modeled benefit is below the floor.",
+          "excess": 908.0,
+          "measured": 92.0
+        },
+        {
+          "bound": 500.0,
+          "constraint_id": "group-priority",
+          "details": "Modeled benefit for priority is below its floor.",
+          "excess": 478.0,
+          "measured": 22.0
+        }
+      ]
+    },
+    {
+      "binding_constraints": [],
+      "evidence_type": "optimized",
+      "feasible": false,
+      "group_benefits": {
+        "general": 28.0,
+        "priority": 22.0
+      },
+      "limitations": [
+        "Optimized values are mathematical outputs under declared inputs, not observed impact.",
+        "Feasibility reflects only encoded constraints and does not establish implementability."
+      ],
+      "objective_value": 31.599999999999998,
+      "plan_id": "portfolio-plan-00000128",
+      "quantities": {
+        "action-a": 2,
+        "action-b": 0,
+        "action-c": 2,
+        "action-d": 2
+      },
+      "scenario_objectives": {
+        "adverse": 31.599999999999998,
+        "base": 58.400000000000006,
+        "favorable": 85.19999999999999
+      },
+      "selected_action_count": 3,
+      "total_benefit": 92.0,
+      "total_capacity": 8.0,
+      "total_cost": 40.0,
+      "total_risk": 12.0,
+      "violations": [
+        {
+          "bound": 1.0,
+          "constraint_id": "budget",
+          "details": "Total cost exceeds the declared budget.",
+          "excess": 39.0,
+          "measured": 40.0
+        },
+        {
+          "bound": 1000.0,
+          "constraint_id": "minimum-benefit",
+          "details": "Total modeled benefit is below the floor.",
+          "excess": 908.0,
+          "measured": 92.0
+        },
+        {
+          "bound": 500.0,
+          "constraint_id": "group-priority",
+          "details": "Modeled benefit for priority is below its floor.",
+          "excess": 478.0,
+          "measured": 22.0
+        }
+      ]
+    },
+    {
+      "binding_constraints": [],
+      "evidence_type": "optimized",
+      "feasible": false,
+      "group_benefits": {
+        "general": 27.0,
+        "priority": 21.0
+      },
+      "limitations": [
+        "Optimized values are mathematical outputs under declared inputs, not observed impact.",
+        "Feasibility reflects only encoded constraints and does not establish implementability."
+      ],
+      "objective_value": 30.599999999999998,
+      "plan_id": "portfolio-plan-00000087",
+      "quantities": {
+        "action-a": 1,
+        "action-b": 1,
+        "action-c": 4,
+        "action-d": 0
+      },
+      "scenario_objectives": {
+        "adverse": 30.599999999999998,
+        "base": 56.400000000000006,
+        "favorable": 82.19999999999999
+      },
+      "selected_action_count": 3,
+      "total_benefit": 90.0,
+      "total_capacity": 7.0,
+      "total_cost": 39.0,
+      "total_risk": 11.0,
+      "violations": [
+        {
+          "bound": 1.0,
+          "constraint_id": "budget",
+          "details": "Total cost exceeds the declared budget.",
+          "excess": 38.0,
+          "measured": 39.0
+        },
+        {
+          "bound": 1000.0,
+          "constraint_id": "minimum-benefit",
+          "details": "Total modeled benefit is below the floor.",
+          "excess": 910.0,
+          "measured": 90.0
+        },
+        {
+          "bound": 500.0,
+          "constraint_id": "group-priority",
+          "details": "Modeled benefit for priority is below its floor.",
+          "excess": 479.0,
+          "measured": 21.0
+        }
+      ]
+    },
+    {
+      "binding_constraints": [],
+      "evidence_type": "optimized",
+      "feasible": false,
+      "group_benefits": {
+        "general": 27.0,
+        "priority": 21.0
+      },
+      "limitations": [
+        "Optimized values are mathematical outputs under declared inputs, not observed impact.",
+        "Feasibility reflects only encoded constraints and does not establish implementability."
+      ],
+      "objective_value": 30.599999999999998,
+      "plan_id": "portfolio-plan-00000097",
+      "quantities": {
+        "action-a": 1,
+        "action-b": 2,
+        "action-c": 2,
+        "action-d": 1
+      },
+      "scenario_objectives": {
+        "adverse": 30.599999999999998,
+        "base": 56.400000000000006,
+        "favorable": 82.19999999999999
+      },
+      "selected_action_count": 4,
+      "total_benefit": 90.0,
+      "total_capacity": 9.0,
+      "total_cost": 39.0,
+      "total_risk": 15.0,
+      "violations": [
+        {
+          "bound": 1.0,
+          "constraint_id": "budget",
+          "details": "Total cost exceeds the declared budget.",
+          "excess": 38.0,
+          "measured": 39.0
+        },
+        {
+          "bound": 1000.0,
+          "constraint_id": "minimum-benefit",
+          "details": "Total modeled benefit is below the floor.",
+          "excess": 910.0,
+          "measured": 90.0
+        },
+        {
+          "bound": 500.0,
+          "constraint_id": "group-priority",
+          "details": "Modeled benefit for priority is below its floor.",
+          "excess": 479.0,
+          "measured": 21.0
+        }
+      ]
+    }
+  ],
+  "problem": {
+    "actions": [
+      {
+        "action_id": "action-a",
+        "group_benefit_per_unit": {
+          "general": 3.0,
+          "priority": 2.0
+        },
+        "input_evidence_type": "proposed",
+        "label": "Synthetic benchmark action a",
+        "limitations": [
+          "Qualification action is synthetic and not implementable."
+        ],
+        "max_units": 2,
+        "scenario_objective_per_unit": {
+          "adverse": 3.6,
+          "base": 6.4,
+          "favorable": 9.2
+        },
+        "source_refs": [
+          "synthetic-qualification.portfolio-family-8"
+        ],
+        "unit_benefit": 12.0,
+        "unit_capacity": 1.0,
+        "unit_cost": 5.0,
+        "unit_risk": 3.0
+      },
+      {
+        "action_id": "action-b",
+        "group_benefit_per_unit": {
+          "general": 4.0,
+          "priority": 3.0
+        },
+        "input_evidence_type": "proposed",
+        "label": "Synthetic benchmark action b",
+        "limitations": [
+          "Qualification action is synthetic and not implementable."
+        ],
+        "max_units": 3,
+        "scenario_objective_per_unit": {
+          "adverse": 4.6,
+          "base": 8.4,
+          "favorable": 12.2
+        },
+        "source_refs": [
+          "synthetic-qualification.portfolio-family-8"
+        ],
+        "unit_benefit": 14.0,
+        "unit_capacity": 2.0,
+        "unit_cost": 6.0,
+        "unit_risk": 4.0
+      },
+      {
+        "action_id": "action-c",
+        "group_benefit_per_unit": {
+          "general": 5.0,
+          "priority": 4.0
+        },
+        "input_evidence_type": "proposed",
+        "label": "Synthetic benchmark action c",
+        "limitations": [
+          "Qualification action is synthetic and not implementable."
+        ],
+        "max_units": 4,
+        "scenario_objective_per_unit": {
+          "adverse": 5.6,
+          "base": 10.4,
+          "favorable": 15.2
+        },
+        "source_refs": [
+          "synthetic-qualification.portfolio-family-8"
+        ],
+        "unit_benefit": 16.0,
+        "unit_capacity": 1.0,
+        "unit_cost": 7.0,
+        "unit_risk": 1.0
+      },
+      {
+        "action_id": "action-d",
+        "group_benefit_per_unit": {
+          "general": 6.0,
+          "priority": 5.0
+        },
+        "input_evidence_type": "proposed",
+        "label": "Synthetic benchmark action d",
+        "limitations": [
+          "Qualification action is synthetic and not implementable."
+        ],
+        "max_units": 2,
+        "scenario_objective_per_unit": {
+          "adverse": 6.6,
+          "base": 12.4,
+          "favorable": 18.2
+        },
+        "source_refs": [
+          "synthetic-qualification.portfolio-family-8"
+        ],
+        "unit_benefit": 18.0,
+        "unit_capacity": 2.0,
+        "unit_cost": 8.0,
+        "unit_risk": 2.0
+      }
+    ],
+    "assumptions": [
+      "Action quantities and modeled benefits are additive."
+    ],
+    "config": {
+      "maximum_evaluations": 1000000,
+      "objective_strategy": "worst-case",
+      "retained_plans": 75,
+      "scenario_weights": {},
+      "tolerance": 1e-09
+    },
+    "constraints": {
+      "budget": 1.0,
+      "minimum_benefit": 1000.0,
+      "minimum_group_benefit": {
+        "priority": 500.0
+      },
+      "minimum_selected_actions": 1
+    },
+    "limitations": [
+      "This is a deterministic synthetic qualification task, not a real city recommendation.",
+      "Repeated task families vary parameters and statuses but are not independent field studies."
+    ],
+    "objective": "Maximize modeled portfolio benefit across three declared stress scenarios.",
+    "objective_unit": "synthetic benefit points",
+    "problem_id": "synthetic.portfolio.task-018"
+  },
+  "run_id": "optimization.portfolio.task-018",
+  "schema_version": "1.0.0",
+  "solver": {
+    "algorithm": "deterministic exhaustive integer enumeration",
+    "enumeration_complete": true,
+    "evaluated_plans": 180,
+    "feasible_plans": 0,
+    "retained_plans": 75,
+    "search_space_size": 180,
+    "theoretical_upper_bound": 152.2,
+    "tie_break_rule": "Maximum robust/expected objective, then minimum cost, quantity tuple, stable ID."
+  },
+  "status": "infeasible"
+}

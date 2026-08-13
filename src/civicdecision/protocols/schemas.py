@@ -7,6 +7,16 @@ from pathlib import Path
 
 from pydantic import BaseModel
 
+from civicdecision.analysis.causal import DifferenceInDifferencesRun
+from civicdecision.analysis.forecasting import ForecastRun
+from civicdecision.analysis.simulation import SimulationRun
+from civicdecision.analysis.uncertainty import UncertaintyRun
+from civicdecision.benchmarks.models import (
+    BenchmarkEvidenceSummary,
+    BenchmarkRegistry,
+    HistoricalReplay,
+)
+from civicdecision.optimization.portfolio import PortfolioOptimizationRun
 from civicdecision.protocols.city import CityAdapterManifest
 from civicdecision.protocols.decision import DecisionPack
 from civicdecision.protocols.scenario import PolicyScenario
@@ -20,15 +30,23 @@ from civicdecision.standardized.models import (
 )
 
 SCHEMAS: dict[str, type[BaseModel]] = {
+    "benchmark-evidence-summary.schema.json": BenchmarkEvidenceSummary,
+    "benchmark-registry.schema.json": BenchmarkRegistry,
+    "causal-run.schema.json": DifferenceInDifferencesRun,
     "city-adapter.schema.json": CityAdapterManifest,
     "policy-scenario.schema.json": PolicyScenario,
     "decision-pack.schema.json": DecisionPack,
+    "forecast-run.schema.json": ForecastRun,
     "global-city-catalog.schema.json": GlobalCityCatalog,
+    "historical-replay.schema.json": HistoricalReplay,
     "semantic-bundle.schema.json": SemanticBundle,
     "urban-graph.schema.json": UrbanGraphBundle,
     "standard-scenario-run.schema.json": StandardScenarioRun,
     "standardized-city-bundle.schema.json": StandardizedCityBundle,
     "tier-s-registry.schema.json": TierSRegistry,
+    "portfolio-optimization-run.schema.json": PortfolioOptimizationRun,
+    "simulation-run.schema.json": SimulationRun,
+    "uncertainty-run.schema.json": UncertaintyRun,
 }
 
 
