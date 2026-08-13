@@ -866,8 +866,8 @@ def build_release(
             "tool_versions": tool_versions,
             "command_log": command_log,
             "claim_boundary": [
-                "This report verifies a local release candidate; it is not a public deployment "
-                "or GitHub Release.",
+                "This report verifies the release assets; it does not by itself prove that a tag, "
+                "release page, or deployment was published.",
                 "A clean vulnerability audit means no finding in the queried advisory service "
                 "at check time; it is not a guarantee of absence.",
                 "The SBOM and license inventory describe the isolated Python runtime, not "
@@ -879,7 +879,6 @@ def build_release(
             ],
             "external_gates_not_claimed": [
                 "cryptographic artifact signature or trusted timestamp",
-                "published Git tag and GitHub Release",
                 "remote CI, CodeQL, or branch-protection result for this commit",
                 "public hosted demo availability",
                 "independent security, accessibility, or domain review",
