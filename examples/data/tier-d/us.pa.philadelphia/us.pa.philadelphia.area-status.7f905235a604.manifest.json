@@ -1,0 +1,33 @@
+{
+  "artifact_id": "us.pa.philadelphia.area-status.7f905235a604",
+  "artifact_path": "us.pa.philadelphia.area-status.7f905235a604.json",
+  "content_hash": "sha256:58e8663c75a63c856b84bf7c624ea13377fb8d7bdb93902135e73920a15cfe71",
+  "data_url": "https://phl.carto.com/api/v2/sql?q=SELECT+zipcode+AS+area%2C+status+AS+status%2C+count%28%2A%29%3A%3Aint+AS+request_count+FROM+public_cases_fc+WHERE+requested_datetime+%3E%3D+%272025-04-01%27+AND+requested_datetime+%3C+%272025-10-01%27+GROUP+BY+zipcode%2C+status+ORDER+BY+area%2C+status+LIMIT+50000+OFFSET+0",
+  "geographic_scope": "Philadelphia",
+  "landing_url": "https://opendataphilly.org/datasets/311-service-and-information-requests/",
+  "license": "OpenDataPhilly and City of Philadelphia open-data terms",
+  "limitations": [
+    "A service request is a resident or staff report, not a verified incident, exposure, need, or completed service outcome.",
+    "Reporting access, awareness, channel choice, duplicate handling, and agency workflow create selection and measurement differences across places and time.",
+    "Aggregated public records omit street addresses and free text and cannot support individual-level inference."
+  ],
+  "name": "Philadelphia service requests: area-status",
+  "publisher": "City of Philadelphia",
+  "query": {
+    "aggregation": "area-status",
+    "end": "2025-10-01",
+    "limit": 50000,
+    "offset": 0,
+    "start": "2025-04-01"
+  },
+  "record_count": 101,
+  "response_headers": {
+    "content-type": "application/json; charset=utf-8",
+    "last-modified": "Thu, 13 Aug 2026 01:30:11 GMT"
+  },
+  "retrieved_at": "2026-08-13T01:30:11.250528Z",
+  "schema_fingerprint": "sha256:3ca6c061b597e53e661010cb42b3617598f6d6e30514329dd3cb554550f124a3",
+  "schema_version": "1.0.0",
+  "source_id": "philadelphia-open-data-311-aggregate",
+  "temporal_scope": "[2025-04-01, 2025-10-01)"
+}

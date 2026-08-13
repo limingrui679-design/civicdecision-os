@@ -1,0 +1,268 @@
+{
+  "benchmark_artifact_set_hash": "sha256:0079bbd5f3b9e7645431a8e6e371efdfc7a7e7f9629be0d0850bc2489444ce89",
+  "benchmark_artifacts": 145,
+  "benchmark_baseline_comparisons": 70,
+  "benchmark_checksum_entries": 152,
+  "benchmark_engine_qualification_runs": 5,
+  "benchmark_evidence_summary_content_hash": "sha256:8c94e281b30bca6bdbb213fbba22a0edeafe9543a315658b3ca983f90a56e214",
+  "benchmark_exactly_rebuilt": true,
+  "benchmark_historical_replays": 40,
+  "benchmark_method_counts": {
+    "drift": 2,
+    "moving-average": 19,
+    "naive": 13,
+    "seasonal-naive": 6
+  },
+  "benchmark_optimization_feasible_plans": 4333,
+  "benchmark_optimization_portfolios_evaluated": 21710,
+  "benchmark_optimization_search_space": 24000,
+  "benchmark_optimization_status_counts": {
+    "infeasible": 20,
+    "optimal": 70,
+    "search-limited": 10
+  },
+  "benchmark_optimization_strategy_counts": {
+    "expected": 50,
+    "worst-case": 50
+  },
+  "benchmark_optimization_tasks": 100,
+  "benchmark_parameter_counts": {
+    "PRECTOTCORR": 20,
+    "T2M": 20
+  },
+  "benchmark_registry_content_hash": "sha256:8ea10c750993908a89a4ebe92c9605cc61e92df15677ce389213c46ac27a40ad",
+  "benchmark_statuses": {
+    "completed": 41,
+    "identification-passed": 1,
+    "infeasible": 20,
+    "insufficient-evidence": 1,
+    "optimal": 70,
+    "reversal-risk": 1,
+    "robust-winner": 1,
+    "search-limited": 10
+  },
+  "city_adapter_documents": 1,
+  "connector_families": {
+    "climate": 1,
+    "demography": 2,
+    "disaster": 1,
+    "geography": 2,
+    "health": 1,
+    "public-service": 1,
+    "seismic": 1,
+    "statistics": 1
+  },
+  "connectors": 10,
+  "decision_pack_content_hashes": [
+    "sha256:0a30507ab9045bcd162a580457bdfa3905028afd13db423d729cdf23e4c48b5f",
+    "sha256:b930f66e7b1335378b7f5a31574c2c83c4d89660102f95787b26efad89f8e63e"
+  ],
+  "decision_pack_statuses": {
+    "completed": 1,
+    "infeasible": 1
+  },
+  "decision_packs": 2,
+  "generated_schemas": 22,
+  "global_city_catalog_content_hash": "sha256:64072b39ea0d3f9d96f4d53654d345dd5bec32fc02e179ec6dd5c94c7ee69c70",
+  "global_city_catalog_exactly_rebuilt": true,
+  "global_city_country_leaders": 244,
+  "global_city_country_or_territory_codes": 244,
+  "global_city_coverage_matrix_rows": 250,
+  "global_city_population_source_zero_count": 1,
+  "global_city_timezones": 243,
+  "global_tier_g_cities": 250,
+  "global_tier_g_inspection_sample": [
+    {
+      "city_id": "geonames.1796236",
+      "country_code": "CN",
+      "name": "Shanghai",
+      "selection_basis": "country-leader",
+      "selection_rank": 1,
+      "source_population": 24874500
+    },
+    {
+      "city_id": "geonames.2314302",
+      "country_code": "CD",
+      "name": "Kinshasa",
+      "selection_basis": "country-leader",
+      "selection_rank": 2,
+      "source_population": 16000000
+    },
+    {
+      "city_id": "geonames.745044",
+      "country_code": "TR",
+      "name": "Istanbul",
+      "selection_basis": "country-leader",
+      "selection_rank": 3,
+      "source_population": 15701602
+    },
+    {
+      "city_id": "geonames.2293538",
+      "country_code": "CI",
+      "name": "Abidjan",
+      "selection_basis": "country-leader",
+      "selection_rank": 25,
+      "source_population": 6321017
+    },
+    {
+      "city_id": "geonames.53654",
+      "country_code": "SO",
+      "name": "Mogadishu",
+      "selection_basis": "country-leader",
+      "selection_rank": 50,
+      "source_population": 2587183
+    },
+    {
+      "city_id": "geonames.232422",
+      "country_code": "UG",
+      "name": "Kampala",
+      "selection_basis": "country-leader",
+      "selection_rank": 75,
+      "source_population": 1680600
+    },
+    {
+      "city_id": "geonames.927967",
+      "country_code": "MW",
+      "name": "Lilongwe",
+      "selection_basis": "country-leader",
+      "selection_rank": 100,
+      "source_population": 1115815
+    },
+    {
+      "city_id": "geonames.264371",
+      "country_code": "GR",
+      "name": "Athens",
+      "selection_basis": "country-leader",
+      "selection_rank": 125,
+      "source_population": 664046
+    },
+    {
+      "city_id": "geonames.290030",
+      "country_code": "QA",
+      "name": "Doha",
+      "selection_basis": "country-leader",
+      "selection_rank": 150,
+      "source_population": 344939
+    },
+    {
+      "city_id": "geonames.8740209",
+      "country_code": "FJ",
+      "name": "Nasinu",
+      "selection_basis": "country-leader",
+      "selection_rank": 175,
+      "source_population": 92043
+    },
+    {
+      "city_id": "geonames.2411585",
+      "country_code": "GI",
+      "name": "Gibraltar",
+      "selection_basis": "country-leader",
+      "selection_rank": 200,
+      "source_population": 26544
+    },
+    {
+      "city_id": "geonames.3042030",
+      "country_code": "LI",
+      "name": "Vaduz",
+      "selection_basis": "country-leader",
+      "selection_rank": 225,
+      "source_population": 5197
+    },
+    {
+      "city_id": "geonames.8063361",
+      "country_code": "PW",
+      "name": "Ngerulmud",
+      "selection_basis": "country-leader",
+      "selection_rank": 244,
+      "source_population": 0
+    },
+    {
+      "city_id": "geonames.1816670",
+      "country_code": "CN",
+      "name": "Beijing",
+      "selection_basis": "global-fill",
+      "selection_rank": 245,
+      "source_population": 18960744
+    },
+    {
+      "city_id": "geonames.1792947",
+      "country_code": "CN",
+      "name": "Tianjin",
+      "selection_basis": "global-fill",
+      "selection_rank": 250,
+      "source_population": 11090314
+    }
+  ],
+  "rebuilds_exactly_matched": 2,
+  "rebuilt_reference_hashes": [
+    "sha256:0a30507ab9045bcd162a580457bdfa3905028afd13db423d729cdf23e4c48b5f",
+    "sha256:b930f66e7b1335378b7f5a31574c2c83c4d89660102f95787b26efad89f8e63e"
+  ],
+  "scenario_documents": 2,
+  "seed_graph_content_hash": "sha256:1bdf89cdefaffeb2e46ca128190d2aab19a7c3cd3a30843ccbacf5dede5c4912",
+  "seed_graph_edges": 250,
+  "seed_graph_nodes": 494,
+  "semantic_geographies": 494,
+  "source_attributions": 18,
+  "source_manifest_records": 258478,
+  "source_manifests": 90,
+  "tier_d_aggregate_source_rows": 148836,
+  "tier_d_bundle_metrics": 144,
+  "tier_d_checksum_entries": 706,
+  "tier_d_city_bundles": 8,
+  "tier_d_context_source_units": 8800,
+  "tier_d_decision_briefs": 96,
+  "tier_d_decision_packs": 96,
+  "tier_d_deduplicated_underlying_requests": 4148633,
+  "tier_d_distinct_source_datasets": 11,
+  "tier_d_evidence_summary_content_hash": "sha256:422e0f94186f6f68c98f9660a34126b26735b39a88a9d105d11356e6368a4caa",
+  "tier_d_exactly_rebuilt": true,
+  "tier_d_forecast_input_observations": 13908,
+  "tier_d_forecast_runs": 76,
+  "tier_d_nonduplicative_scenario_designs": 12,
+  "tier_d_optimization_evaluated_plans": 237500,
+  "tier_d_optimization_feasible_plans": 19152,
+  "tier_d_optimization_search_space": 237500,
+  "tier_d_optimization_tasks": 76,
+  "tier_d_quality_passes": 1,
+  "tier_d_quality_warnings": 7,
+  "tier_d_registry_content_hash": "sha256:8f0ad676423a0233df4a43b24fc11611bdc9b086e94d105c2e20f8b5a75e94ba",
+  "tier_d_scenario_packs": 96,
+  "tier_d_scenario_statuses": {
+    "completed": 76,
+    "insufficient-evidence": 20
+  },
+  "tier_d_simulation_iterations": 190000,
+  "tier_d_simulation_runs": 76,
+  "tier_d_source_artifacts": 49,
+  "tier_d_suite_execution_counts": {
+    "behavioral-policy-equity": 16,
+    "climate-disaster-resilience": 16,
+    "housing-land-use-regeneration": 8,
+    "infrastructure-finance-asset-risk": 8,
+    "mobility-accessibility-operations": 16,
+    "population-health-environmental-exposure": 8,
+    "public-service-operations": 24
+  },
+  "tier_d_uncertainty_option_draw_values": 228000,
+  "tier_d_uncertainty_runs": 76,
+  "tier_s_bundle_metrics": 330,
+  "tier_s_checksum_entries": 124,
+  "tier_s_city_bundles": 30,
+  "tier_s_country_context_records": 795,
+  "tier_s_coverage_matrix_rows": 30,
+  "tier_s_cross_city_comparison_csv_hash": "sha256:fc3760fb49d83fd6ba1b8f5cc97bd84e4e72c8bc294c41855035254bec638d5a",
+  "tier_s_cross_city_comparison_markdown_hash": "sha256:a34dd6bff8650f344f3035942eef0b65eccd63fe18aad567326e95354f23831a",
+  "tier_s_cross_city_comparison_rows": 30,
+  "tier_s_exactly_rebuilt": true,
+  "tier_s_exclusions_before_target": 1,
+  "tier_s_nasa_parameter_date_values": 65880,
+  "tier_s_quality_passes": 30,
+  "tier_s_registry_content_hash": "sha256:a9df7a1f850b735e6eaf2ad297775dd7b3cf43694addc08db0a5404e68f703bc",
+  "tier_s_scenario_runs": 90,
+  "tier_s_scenario_statuses": {
+    "insufficient-evidence": 30,
+    "screened": 60
+  },
+  "tier_s_source_bindings": 150
+}

@@ -1,0 +1,39 @@
+{
+  "artifact_id": "census-acs5-2024-b01003-5d4036737b5e",
+  "artifact_path": "census-acs5-2024-b01003-5d4036737b5e.json",
+  "content_hash": "sha256:89a77e02392684a6ff1469362e6c155aaefe6c9bf4e9fbe51ed6e4172a3dfc5f",
+  "data_url": "https://www2.census.gov/programs-surveys/acs/summary_file/2024/table-based-SF/data/5YRData/acsdt5y2024-b01003.dat",
+  "geographic_scope": "Census incorporated-place GEOIDs: 0644000,0667000,1714000,2507000,3651000,4260000,4805000,5363000",
+  "landing_url": "https://www.census.gov/programs-surveys/acs/data/summary-file.html",
+  "license": "U.S. Census Bureau public data; source attribution requested",
+  "limitations": [
+    "B01003 is a place-level total population estimate, not an individual record.",
+    "A controlled margin is treated as zero only under published Census guidance.",
+    "The five-year estimate pools survey responses and should not be called a 2024 point-in-time count."
+  ],
+  "name": "ACS 2024 five-year B01003 population rows for Tier-D places",
+  "publisher": "U.S. Census Bureau",
+  "query": {
+    "geoids": [
+      "0644000",
+      "0667000",
+      "1714000",
+      "2507000",
+      "3651000",
+      "4260000",
+      "4805000",
+      "5363000"
+    ]
+  },
+  "record_count": 8,
+  "response_headers": {
+    "last-modified": "Thu, 29 Jan 2026 12:31:45 GMT",
+    "x-civicdecision-upstream-bytes": "18313708",
+    "x-civicdecision-upstream-sha256": "sha256:38d1a992bb058d184009b10b9b34987279aee575e4323165cfb5706c69b6ca90"
+  },
+  "retrieved_at": "2026-08-13T01:45:13.342985Z",
+  "schema_fingerprint": "sha256:9cfe2b7328ccbf464f4a2e146c292e70f4801695de038ae43edb6cbcb2b56708",
+  "schema_version": "1.0.0",
+  "source_id": "census-acs5-2024-b01003-population",
+  "temporal_scope": "2024 ACS five-year estimates"
+}

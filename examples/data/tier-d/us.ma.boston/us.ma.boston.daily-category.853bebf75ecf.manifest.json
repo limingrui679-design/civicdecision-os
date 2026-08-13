@@ -1,0 +1,33 @@
+{
+  "artifact_id": "us.ma.boston.daily-category.853bebf75ecf",
+  "artifact_path": "us.ma.boston.daily-category.853bebf75ecf.json",
+  "content_hash": "sha256:4ab387073cde93e4a1be75df6a08db9e164d47164e410e0260294232078a2872",
+  "data_url": "https://data.boston.gov/api/3/action/datastore_search_sql?sql=SELECT+date_trunc%28%27day%27%2C+%22open_dt%22%3A%3Atimestamp%29%3A%3Adate+AS+service_date%2C+%22case_title%22+AS+category%2C+count%28%2A%29%3A%3Aint+AS+request_count+FROM+%229d7c2214-4709-478a-a2e8-fb2020a5bb94%22+WHERE+%22open_dt%22+%3E%3D+%272025-04-01%27+AND+%22open_dt%22+%3C+%272025-10-01%27+GROUP+BY+date_trunc%28%27day%27%2C+%22open_dt%22%3A%3Atimestamp%29%3A%3Adate%2C+%22case_title%22+ORDER+BY+service_date%2C+category+LIMIT+50000+OFFSET+0",
+  "geographic_scope": "Boston",
+  "landing_url": "https://data.boston.gov/dataset/311-service-requests",
+  "license": "Open Data Commons Public Domain Dedication and License (PDDL)",
+  "limitations": [
+    "A service request is a resident or staff report, not a verified incident, exposure, need, or completed service outcome.",
+    "Reporting access, awareness, channel choice, duplicate handling, and agency workflow create selection and measurement differences across places and time.",
+    "Aggregated public records omit street addresses and free text and cannot support individual-level inference.",
+    "Boston began a backend transition in October 2025; this reference window ends before that transition and must not be joined to the new schema silently."
+  ],
+  "name": "Boston service requests: daily-category",
+  "publisher": "City of Boston",
+  "query": {
+    "aggregation": "daily-category",
+    "end": "2025-10-01",
+    "limit": 50000,
+    "offset": 0,
+    "start": "2025-04-01"
+  },
+  "record_count": 17000,
+  "response_headers": {
+    "content-type": "application/json;charset=utf-8"
+  },
+  "retrieved_at": "2026-08-13T01:26:04.951306Z",
+  "schema_fingerprint": "sha256:25a9204bee516a9d4a023c2e80afbf7f4f9e87f87481bd5d4f651c35a38016bb",
+  "schema_version": "1.0.0",
+  "source_id": "boston-open-data-311-2025-aggregate",
+  "temporal_scope": "[2025-04-01, 2025-10-01)"
+}

@@ -1,0 +1,30 @@
+{
+  "artifact_id": "census-tigerweb-place-5363000",
+  "artifact_path": "census-tigerweb-place-5363000.geojson",
+  "content_hash": "sha256:c7e9a83b35c04cdb2174c77133a646ba5622bd7c524b796f00fc014424c704e6",
+  "data_url": "https://tigerweb.geo.census.gov/arcgis/rest/services/TIGERweb/Places_CouSub_ConCity_SubMCD/MapServer/4/query?where=GEOID%3D%275363000%27&outFields=GEOID%2CBASENAME%2CNAME%2CSTATE%2CPLACE%2CAREALAND%2CAREAWATER%2CLSADC%2CFUNCSTAT&returnGeometry=true&outSR=4326&geometryPrecision=5&f=geojson",
+  "geographic_scope": "Incorporated place GEOID 5363000",
+  "landing_url": "https://tigerweb.geo.census.gov/tigerwebmain/TIGERweb_restmapservice.html",
+  "license": "U.S. Census Bureau public geographic data; source attribution requested",
+  "limitations": [
+    "Legal boundary vintages can change through annexation and boundary surveys.",
+    "A municipal polygon does not define neighborhoods, service areas, or exposure.",
+    "Coordinate precision was requested at five decimal places for a bounded sample."
+  ],
+  "name": "TIGERweb incorporated-place boundary: Seattle city",
+  "publisher": "U.S. Census Bureau Geography Division",
+  "query": {
+    "place_fips": "63000",
+    "state_fips": "53"
+  },
+  "record_count": 1,
+  "response_headers": {
+    "content-type": "application/geo+json;charset=UTF-8",
+    "etag": "\"1768336602\""
+  },
+  "retrieved_at": "2026-08-13T01:45:18.126018Z",
+  "schema_fingerprint": "sha256:b1c0c02e33f0a5765dbe49667030393f145671fa874540d6fcedb4696d9d3ad4",
+  "schema_version": "1.0.0",
+  "source_id": "census-tigerweb-current-incorporated-place",
+  "temporal_scope": "TIGERweb current service vintage at retrieval"
+}

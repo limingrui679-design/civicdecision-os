@@ -1,0 +1,35 @@
+{
+  "artifact_id": "us.ny.new-york-city.daily-area.a1994f9f3e6b",
+  "artifact_path": "us.ny.new-york-city.daily-area.a1994f9f3e6b.json",
+  "content_hash": "sha256:478976fbdacea84dc60286007f5c16cfc7624ce4268ba7f28a67cdc28ce65e9f",
+  "data_url": "https://data.cityofnewyork.us/resource/erm2-nwe9.json?%24select=date_trunc_ymd%28created_date%29+as+service_date%2Cborough+as+area%2Ccount%28%2A%29+as+request_count&%24where=created_date+%3E%3D+%272025-04-01T00%3A00%3A00%27+AND+created_date+%3C+%272025-10-01T00%3A00%3A00%27&%24group=date_trunc_ymd%28created_date%29%2Cborough&%24order=service_date%2Carea&%24limit=50000&%24offset=0",
+  "geographic_scope": "New York City",
+  "landing_url": "https://data.cityofnewyork.us/Social-Services/311-Service-Requests-from-2020-to-Present/erm2-nwe9",
+  "license": "NYC Open Data terms and dataset-specific conditions",
+  "limitations": [
+    "A service request is a resident or staff report, not a verified incident, exposure, need, or completed service outcome.",
+    "Reporting access, awareness, channel choice, duplicate handling, and agency workflow create selection and measurement differences across places and time.",
+    "Aggregated public records omit street addresses and free text and cannot support individual-level inference."
+  ],
+  "name": "New York City service requests: daily-area",
+  "publisher": "City of New York",
+  "query": {
+    "aggregation": "daily-area",
+    "end": "2025-10-01",
+    "limit": 50000,
+    "offset": 0,
+    "start": "2025-04-01"
+  },
+  "record_count": 1098,
+  "response_headers": {
+    "content-type": "application/json;charset=utf-8",
+    "etag": "\"Zm94dHJvdC4xNTY1NV8xODNfMTkzMDgzSmtfQ3BZSDktNVNZVjNvb2prSEI0ZXdYdkVn---gzip5LP7A_dQyMVqnE4GcQCVLURIrag--gzip--gzip\"",
+    "last-modified": "Wed, 12 Aug 2026 01:54:30 GMT",
+    "x-soda2-truth-last-modified": "Wed, 12 Aug 2026 01:54:30 GMT"
+  },
+  "retrieved_at": "2026-08-13T01:26:01.279500Z",
+  "schema_fingerprint": "sha256:29dd3eb1898061ea6a0706a627380af96173b10a9ee29b6760817c73ecf7488f",
+  "schema_version": "1.0.0",
+  "source_id": "nyc-open-data-311-aggregate",
+  "temporal_scope": "[2025-04-01, 2025-10-01)"
+}

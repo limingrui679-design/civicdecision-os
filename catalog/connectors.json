@@ -1,5 +1,39 @@
 [
   {
+    "authentication": "No key for the official table-based summary-file download.",
+    "class_name": "CensusACSPopulationTableConnector",
+    "documentation_url": "https://www.census.gov/data/developers/data-sets/acs-5year.html",
+    "family": "demography",
+    "id": "census-acs5-2024-b01003-population",
+    "license_summary": "U.S. Census Bureau public data; source attribution requested",
+    "module": "civicdecision.connectors.census_places",
+    "name": "Census ACS 2024 five-year B01003 place population",
+    "paging_or_bound": "One <= 25 MiB B01003 file filtered to <= 50 named place GEOIDs",
+    "primary_limitations": [
+      "Survey estimates require margins of error and correct statistical universes."
+    ],
+    "publisher": "U.S. Census Bureau",
+    "record_semantics": "One ACS five-year place population estimate with its 90% margin",
+    "scope": "national"
+  },
+  {
+    "authentication": "No API key.",
+    "class_name": "CensusTIGERPlaceConnector",
+    "documentation_url": "https://tigerweb.geo.census.gov/tigerwebmain/TIGERweb_restmapservice.html",
+    "family": "geography",
+    "id": "census-tigerweb-current-incorporated-place",
+    "license_summary": "U.S. Census Bureau public geographic data",
+    "module": "civicdecision.connectors.census_places",
+    "name": "Census TIGERweb current incorporated-place boundary",
+    "paging_or_bound": "Exactly one incorporated-place GEOID, polygon geometry, <= 10 MiB",
+    "primary_limitations": [
+      "Boundary vintages can change and do not define service or exposure geographies."
+    ],
+    "publisher": "U.S. Census Bureau Geography Division",
+    "record_semantics": "One current-service incorporated-place polygon feature",
+    "scope": "national"
+  },
+  {
     "authentication": "No key for bounded Socrata queries; app tokens may raise limits.",
     "class_name": "CDCPlacesConnector",
     "documentation_url": "https://data.cdc.gov/500-Cities-Places/PLACES-Census-Tract-Data-GIS-Friendly-Format-2025-/yjkw-uj5s",

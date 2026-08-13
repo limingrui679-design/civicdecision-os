@@ -1,0 +1,3274 @@
+{
+  "$defs": {
+    "ActionCandidate": {
+      "additionalProperties": false,
+      "properties": {
+        "action_id": {
+          "pattern": "^[a-z0-9]+(?:[._-][a-z0-9]+)*$",
+          "title": "Action Id",
+          "type": "string"
+        },
+        "group_benefit_per_unit": {
+          "additionalProperties": {
+            "type": "number"
+          },
+          "title": "Group Benefit Per Unit",
+          "type": "object"
+        },
+        "input_evidence_type": {
+          "$ref": "#/$defs/EvidenceType"
+        },
+        "label": {
+          "minLength": 1,
+          "title": "Label",
+          "type": "string"
+        },
+        "limitations": {
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1,
+          "title": "Limitations",
+          "type": "array"
+        },
+        "max_units": {
+          "maximum": 100,
+          "minimum": 0,
+          "title": "Max Units",
+          "type": "integer"
+        },
+        "scenario_objective_per_unit": {
+          "additionalProperties": {
+            "type": "number"
+          },
+          "minProperties": 1,
+          "title": "Scenario Objective Per Unit",
+          "type": "object"
+        },
+        "source_refs": {
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1,
+          "title": "Source Refs",
+          "type": "array"
+        },
+        "unit_benefit": {
+          "title": "Unit Benefit",
+          "type": "number"
+        },
+        "unit_capacity": {
+          "minimum": 0,
+          "title": "Unit Capacity",
+          "type": "number"
+        },
+        "unit_cost": {
+          "minimum": 0,
+          "title": "Unit Cost",
+          "type": "number"
+        },
+        "unit_risk": {
+          "minimum": 0,
+          "title": "Unit Risk",
+          "type": "number"
+        }
+      },
+      "required": [
+        "action_id",
+        "label",
+        "max_units",
+        "unit_cost",
+        "unit_capacity",
+        "unit_risk",
+        "unit_benefit",
+        "scenario_objective_per_unit",
+        "input_evidence_type",
+        "source_refs",
+        "limitations"
+      ],
+      "title": "ActionCandidate",
+      "type": "object"
+    },
+    "AnalysisMode": {
+      "enum": [
+        "descriptive",
+        "forecast",
+        "causal",
+        "simulation",
+        "optimization"
+      ],
+      "title": "AnalysisMode",
+      "type": "string"
+    },
+    "ApplicationSuite": {
+      "enum": [
+        "climate-disaster-resilience",
+        "mobility-accessibility-operations",
+        "population-health-environmental-exposure",
+        "housing-land-use-regeneration",
+        "public-service-operations",
+        "infrastructure-finance-asset-risk",
+        "behavioral-policy-equity"
+      ],
+      "title": "ApplicationSuite",
+      "type": "string"
+    },
+    "Constraint": {
+      "additionalProperties": false,
+      "properties": {
+        "expression": {
+          "minLength": 1,
+          "title": "Expression",
+          "type": "string"
+        },
+        "hard": {
+          "default": true,
+          "title": "Hard",
+          "type": "boolean"
+        },
+        "id": {
+          "pattern": "^[a-z0-9]+(?:[._-][a-z0-9]+)*$",
+          "title": "Id",
+          "type": "string"
+        },
+        "kind": {
+          "pattern": "^(budget|capacity|equity|risk|time|regulatory|custom)$",
+          "title": "Kind",
+          "type": "string"
+        },
+        "source_ref": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Source Ref"
+        }
+      },
+      "required": [
+        "id",
+        "expression",
+        "kind"
+      ],
+      "title": "Constraint",
+      "type": "object"
+    },
+    "ConstraintViolation": {
+      "additionalProperties": false,
+      "properties": {
+        "bound": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "integer"
+            }
+          ],
+          "title": "Bound"
+        },
+        "constraint_id": {
+          "pattern": "^[a-z0-9]+(?:[._-][a-z0-9]+)*$",
+          "title": "Constraint Id",
+          "type": "string"
+        },
+        "details": {
+          "minLength": 1,
+          "title": "Details",
+          "type": "string"
+        },
+        "excess": {
+          "exclusiveMinimum": 0,
+          "title": "Excess",
+          "type": "number"
+        },
+        "measured": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "integer"
+            }
+          ],
+          "title": "Measured"
+        }
+      },
+      "required": [
+        "constraint_id",
+        "measured",
+        "bound",
+        "excess",
+        "details"
+      ],
+      "title": "ConstraintViolation",
+      "type": "object"
+    },
+    "DecisionOption": {
+      "additionalProperties": false,
+      "properties": {
+        "binding_constraints": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Binding Constraints",
+          "type": "array"
+        },
+        "evidence_type": {
+          "$ref": "#/$defs/EvidenceType"
+        },
+        "feasible": {
+          "title": "Feasible",
+          "type": "boolean"
+        },
+        "id": {
+          "pattern": "^[a-z0-9]+(?:[._-][a-z0-9]+)*$",
+          "title": "Id",
+          "type": "string"
+        },
+        "label": {
+          "minLength": 1,
+          "title": "Label",
+          "type": "string"
+        },
+        "limitations": {
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1,
+          "title": "Limitations",
+          "type": "array"
+        },
+        "metrics": {
+          "additionalProperties": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "integer"
+              },
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "title": "Metrics",
+          "type": "object"
+        }
+      },
+      "required": [
+        "id",
+        "label",
+        "evidence_type",
+        "feasible",
+        "metrics",
+        "limitations"
+      ],
+      "title": "DecisionOption",
+      "type": "object"
+    },
+    "DecisionPack": {
+      "additionalProperties": false,
+      "properties": {
+        "created_at": {
+          "format": "date-time",
+          "title": "Created At",
+          "type": "string"
+        },
+        "evidence": {
+          "items": {
+            "$ref": "#/$defs/EvidenceItem"
+          },
+          "minItems": 1,
+          "title": "Evidence",
+          "type": "array"
+        },
+        "failure_reason": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Failure Reason"
+        },
+        "options": {
+          "items": {
+            "$ref": "#/$defs/DecisionOption"
+          },
+          "title": "Options",
+          "type": "array"
+        },
+        "recommendation": {
+          "$ref": "#/$defs/Recommendation"
+        },
+        "reproducibility": {
+          "$ref": "#/$defs/Reproducibility"
+        },
+        "reversal_tests": {
+          "items": {
+            "$ref": "#/$defs/ReversalTest"
+          },
+          "title": "Reversal Tests",
+          "type": "array"
+        },
+        "run_id": {
+          "pattern": "^[a-z0-9]+(?:[._-][a-z0-9]+)*$",
+          "title": "Run Id",
+          "type": "string"
+        },
+        "scenario_id": {
+          "pattern": "^[a-z0-9]+(?:[._-][a-z0-9]+)*$",
+          "title": "Scenario Id",
+          "type": "string"
+        },
+        "schema_version": {
+          "default": "1.0.0",
+          "title": "Schema Version",
+          "type": "string"
+        },
+        "source_manifests": {
+          "items": {
+            "$ref": "#/$defs/SourceManifest"
+          },
+          "minItems": 1,
+          "title": "Source Manifests",
+          "type": "array"
+        },
+        "status": {
+          "$ref": "#/$defs/RunStatus"
+        },
+        "value_of_information": {
+          "items": {
+            "$ref": "#/$defs/ValueOfInformation"
+          },
+          "title": "Value Of Information",
+          "type": "array"
+        }
+      },
+      "required": [
+        "run_id",
+        "scenario_id",
+        "created_at",
+        "status",
+        "source_manifests",
+        "evidence",
+        "recommendation",
+        "reproducibility"
+      ],
+      "title": "DecisionPack",
+      "type": "object"
+    },
+    "DecisionReversal": {
+      "additionalProperties": false,
+      "properties": {
+        "baseline_option_id": {
+          "pattern": "^[a-z0-9]+(?:[._-][a-z0-9]+)*$",
+          "title": "Baseline Option Id",
+          "type": "string"
+        },
+        "competing_option_id": {
+          "pattern": "^[a-z0-9]+(?:[._-][a-z0-9]+)*$",
+          "title": "Competing Option Id",
+          "type": "string"
+        },
+        "condition": {
+          "minLength": 1,
+          "title": "Condition",
+          "type": "string"
+        },
+        "first_reversal_draw": {
+          "anyOf": [
+            {
+              "minimum": 0,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "First Reversal Draw"
+        },
+        "reversal_probability": {
+          "maximum": 1,
+          "minimum": 0,
+          "title": "Reversal Probability",
+          "type": "number"
+        }
+      },
+      "required": [
+        "baseline_option_id",
+        "competing_option_id",
+        "reversal_probability",
+        "condition"
+      ],
+      "title": "DecisionReversal",
+      "type": "object"
+    },
+    "DeepScenarioStatus": {
+      "enum": [
+        "completed",
+        "insufficient-evidence",
+        "infeasible",
+        "failed"
+      ],
+      "title": "DeepScenarioStatus",
+      "type": "string"
+    },
+    "DistributionKind": {
+      "enum": [
+        "fixed",
+        "uniform",
+        "triangular",
+        "normal",
+        "bernoulli",
+        "empirical"
+      ],
+      "title": "DistributionKind",
+      "type": "string"
+    },
+    "EvidenceItem": {
+      "additionalProperties": false,
+      "description": "A typed analytical statement with evidence-specific requirements.",
+      "properties": {
+        "assumptions": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Assumptions",
+          "type": "array"
+        },
+        "constraints": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Constraints",
+          "type": "array"
+        },
+        "diagnostics": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Diagnostics",
+          "type": "array"
+        },
+        "id": {
+          "title": "Id",
+          "type": "string"
+        },
+        "identification_strategy": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Identification Strategy"
+        },
+        "limitations": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Limitations",
+          "type": "array"
+        },
+        "method": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Method"
+        },
+        "objective": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Objective"
+        },
+        "scenario_ref": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Scenario Ref"
+        },
+        "source_refs": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Source Refs",
+          "type": "array"
+        },
+        "status": {
+          "$ref": "#/$defs/EvidenceStatus"
+        },
+        "summary": {
+          "minLength": 1,
+          "title": "Summary",
+          "type": "string"
+        },
+        "title": {
+          "maxLength": 160,
+          "minLength": 1,
+          "title": "Title",
+          "type": "string"
+        },
+        "type": {
+          "$ref": "#/$defs/EvidenceType"
+        }
+      },
+      "required": [
+        "id",
+        "type",
+        "status",
+        "title",
+        "summary"
+      ],
+      "title": "EvidenceItem",
+      "type": "object"
+    },
+    "EvidenceStatus": {
+      "enum": [
+        "established",
+        "limited",
+        "failed",
+        "insufficient_evidence"
+      ],
+      "title": "EvidenceStatus",
+      "type": "string"
+    },
+    "EvidenceType": {
+      "enum": [
+        "observed",
+        "estimated",
+        "causal",
+        "simulated",
+        "optimized",
+        "proposed"
+      ],
+      "title": "EvidenceType",
+      "type": "string"
+    },
+    "ForecastCandidate": {
+      "additionalProperties": false,
+      "properties": {
+        "conformal_radius": {
+          "anyOf": [
+            {
+              "minimum": 0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Conformal Radius"
+        },
+        "eligible": {
+          "title": "Eligible",
+          "type": "boolean"
+        },
+        "exclusion_reason": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Exclusion Reason"
+        },
+        "folds": {
+          "items": {
+            "$ref": "#/$defs/ForecastFold"
+          },
+          "title": "Folds",
+          "type": "array"
+        },
+        "method": {
+          "$ref": "#/$defs/ForecastMethod"
+        },
+        "metrics": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/ForecastMetrics"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        }
+      },
+      "required": [
+        "method",
+        "eligible"
+      ],
+      "title": "ForecastCandidate",
+      "type": "object"
+    },
+    "ForecastConfig": {
+      "additionalProperties": false,
+      "properties": {
+        "backtest_folds": {
+          "default": 8,
+          "maximum": 100,
+          "minimum": 1,
+          "title": "Backtest Folds",
+          "type": "integer"
+        },
+        "horizon": {
+          "default": 7,
+          "maximum": 366,
+          "minimum": 1,
+          "title": "Horizon",
+          "type": "integer"
+        },
+        "interval_level": {
+          "default": 0.9,
+          "exclusiveMaximum": 1,
+          "exclusiveMinimum": 0.5,
+          "title": "Interval Level",
+          "type": "number"
+        },
+        "methods": {
+          "items": {
+            "$ref": "#/$defs/ForecastMethod"
+          },
+          "minItems": 1,
+          "title": "Methods",
+          "type": "array"
+        },
+        "minimum_backtest_folds": {
+          "default": 3,
+          "maximum": 100,
+          "minimum": 1,
+          "title": "Minimum Backtest Folds",
+          "type": "integer"
+        },
+        "minimum_train_size": {
+          "default": 14,
+          "maximum": 100000,
+          "minimum": 2,
+          "title": "Minimum Train Size",
+          "type": "integer"
+        },
+        "moving_average_window": {
+          "default": 7,
+          "maximum": 366,
+          "minimum": 2,
+          "title": "Moving Average Window",
+          "type": "integer"
+        },
+        "require_nonnegative": {
+          "default": true,
+          "title": "Require Nonnegative",
+          "type": "boolean"
+        },
+        "seasonal_period": {
+          "default": 7,
+          "maximum": 366,
+          "minimum": 2,
+          "title": "Seasonal Period",
+          "type": "integer"
+        }
+      },
+      "title": "ForecastConfig",
+      "type": "object"
+    },
+    "ForecastFold": {
+      "additionalProperties": false,
+      "properties": {
+        "absolute_errors": {
+          "items": {
+            "type": "number"
+          },
+          "minItems": 1,
+          "title": "Absolute Errors",
+          "type": "array"
+        },
+        "actual": {
+          "items": {
+            "type": "number"
+          },
+          "minItems": 1,
+          "title": "Actual",
+          "type": "array"
+        },
+        "origin_timestamp": {
+          "format": "date-time",
+          "title": "Origin Timestamp",
+          "type": "string"
+        },
+        "predicted": {
+          "items": {
+            "type": "number"
+          },
+          "minItems": 1,
+          "title": "Predicted",
+          "type": "array"
+        },
+        "target_timestamps": {
+          "items": {
+            "format": "date-time",
+            "type": "string"
+          },
+          "minItems": 1,
+          "title": "Target Timestamps",
+          "type": "array"
+        }
+      },
+      "required": [
+        "origin_timestamp",
+        "target_timestamps",
+        "actual",
+        "predicted",
+        "absolute_errors"
+      ],
+      "title": "ForecastFold",
+      "type": "object"
+    },
+    "ForecastMethod": {
+      "enum": [
+        "naive",
+        "drift",
+        "moving-average",
+        "seasonal-naive"
+      ],
+      "title": "ForecastMethod",
+      "type": "string"
+    },
+    "ForecastMetrics": {
+      "additionalProperties": false,
+      "properties": {
+        "bias": {
+          "title": "Bias",
+          "type": "number"
+        },
+        "empirical_interval_coverage": {
+          "maximum": 1,
+          "minimum": 0,
+          "title": "Empirical Interval Coverage",
+          "type": "number"
+        },
+        "mae": {
+          "minimum": 0,
+          "title": "Mae",
+          "type": "number"
+        },
+        "mean_interval_width": {
+          "minimum": 0,
+          "title": "Mean Interval Width",
+          "type": "number"
+        },
+        "observations": {
+          "minimum": 1,
+          "title": "Observations",
+          "type": "integer"
+        },
+        "rmse": {
+          "minimum": 0,
+          "title": "Rmse",
+          "type": "number"
+        },
+        "wape": {
+          "anyOf": [
+            {
+              "minimum": 0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Wape"
+        }
+      },
+      "required": [
+        "observations",
+        "mae",
+        "rmse",
+        "bias",
+        "empirical_interval_coverage",
+        "mean_interval_width"
+      ],
+      "title": "ForecastMetrics",
+      "type": "object"
+    },
+    "ForecastRun": {
+      "additionalProperties": false,
+      "properties": {
+        "candidates": {
+          "items": {
+            "$ref": "#/$defs/ForecastCandidate"
+          },
+          "minItems": 1,
+          "title": "Candidates",
+          "type": "array"
+        },
+        "config": {
+          "$ref": "#/$defs/ForecastConfig"
+        },
+        "created_at": {
+          "format": "date-time",
+          "title": "Created At",
+          "type": "string"
+        },
+        "data_cutoff": {
+          "format": "date-time",
+          "title": "Data Cutoff",
+          "type": "string"
+        },
+        "diagnostics": {
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1,
+          "title": "Diagnostics",
+          "type": "array"
+        },
+        "evidence_type": {
+          "$ref": "#/$defs/EvidenceType",
+          "default": "estimated"
+        },
+        "failure_reason": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Failure Reason"
+        },
+        "forecast": {
+          "items": {
+            "$ref": "#/$defs/ForecastValue"
+          },
+          "title": "Forecast",
+          "type": "array"
+        },
+        "interval_seconds": {
+          "anyOf": [
+            {
+              "exclusiveMinimum": 0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Interval Seconds"
+        },
+        "limitations": {
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1,
+          "title": "Limitations",
+          "type": "array"
+        },
+        "observation_count": {
+          "minimum": 0,
+          "title": "Observation Count",
+          "type": "integer"
+        },
+        "run_id": {
+          "pattern": "^[a-z0-9]+(?:[._-][a-z0-9]+)*$",
+          "title": "Run Id",
+          "type": "string"
+        },
+        "schema_version": {
+          "default": "1.0.0",
+          "title": "Schema Version",
+          "type": "string"
+        },
+        "selected_method": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/ForecastMethod"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "series_id": {
+          "pattern": "^[a-z0-9]+(?:[._-][a-z0-9]+)*$",
+          "title": "Series Id",
+          "type": "string"
+        },
+        "source_refs": {
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1,
+          "title": "Source Refs",
+          "type": "array"
+        },
+        "status": {
+          "$ref": "#/$defs/ForecastStatus"
+        }
+      },
+      "required": [
+        "run_id",
+        "series_id",
+        "created_at",
+        "data_cutoff",
+        "source_refs",
+        "status",
+        "config",
+        "observation_count",
+        "candidates",
+        "diagnostics",
+        "limitations"
+      ],
+      "title": "ForecastRun",
+      "type": "object"
+    },
+    "ForecastStatus": {
+      "enum": [
+        "completed",
+        "insufficient-evidence"
+      ],
+      "title": "ForecastStatus",
+      "type": "string"
+    },
+    "ForecastValue": {
+      "additionalProperties": false,
+      "properties": {
+        "lower": {
+          "title": "Lower",
+          "type": "number"
+        },
+        "point": {
+          "title": "Point",
+          "type": "number"
+        },
+        "timestamp": {
+          "format": "date-time",
+          "title": "Timestamp",
+          "type": "string"
+        },
+        "upper": {
+          "title": "Upper",
+          "type": "number"
+        }
+      },
+      "required": [
+        "timestamp",
+        "point",
+        "lower",
+        "upper"
+      ],
+      "title": "ForecastValue",
+      "type": "object"
+    },
+    "Intervention": {
+      "additionalProperties": false,
+      "properties": {
+        "evidence_type": {
+          "$ref": "#/$defs/EvidenceType",
+          "default": "proposed"
+        },
+        "id": {
+          "pattern": "^[a-z0-9]+(?:[._-][a-z0-9]+)*$",
+          "title": "Id",
+          "type": "string"
+        },
+        "kind": {
+          "pattern": "^[a-z0-9]+(?:[._-][a-z0-9]+)*$",
+          "title": "Kind",
+          "type": "string"
+        },
+        "parameters": {
+          "additionalProperties": {
+            "$ref": "#/$defs/JsonValue"
+          },
+          "title": "Parameters",
+          "type": "object"
+        },
+        "target": {
+          "minLength": 1,
+          "title": "Target",
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "kind",
+        "target",
+        "parameters"
+      ],
+      "title": "Intervention",
+      "type": "object"
+    },
+    "JsonValue": {},
+    "Objective": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "pattern": "^[a-z0-9]+(?:[._-][a-z0-9]+)*$",
+          "title": "Id",
+          "type": "string"
+        },
+        "metric": {
+          "minLength": 1,
+          "title": "Metric",
+          "type": "string"
+        },
+        "sense": {
+          "pattern": "^(minimize|maximize)$",
+          "title": "Sense",
+          "type": "string"
+        },
+        "unit": {
+          "minLength": 1,
+          "title": "Unit",
+          "type": "string"
+        },
+        "weight": {
+          "exclusiveMinimum": 0,
+          "title": "Weight",
+          "type": "number"
+        }
+      },
+      "required": [
+        "id",
+        "metric",
+        "sense",
+        "weight",
+        "unit"
+      ],
+      "title": "Objective",
+      "type": "object"
+    },
+    "ObjectiveSense": {
+      "enum": [
+        "maximize",
+        "minimize"
+      ],
+      "title": "ObjectiveSense",
+      "type": "string"
+    },
+    "ObjectiveStrategy": {
+      "enum": [
+        "expected",
+        "worst-case"
+      ],
+      "title": "ObjectiveStrategy",
+      "type": "string"
+    },
+    "OptionUncertaintySummary": {
+      "additionalProperties": false,
+      "properties": {
+        "dominated_probability": {
+          "maximum": 1,
+          "minimum": 0,
+          "title": "Dominated Probability",
+          "type": "number"
+        },
+        "draws": {
+          "minimum": 2,
+          "title": "Draws",
+          "type": "integer"
+        },
+        "expected_regret": {
+          "minimum": 0,
+          "title": "Expected Regret",
+          "type": "number"
+        },
+        "lower": {
+          "title": "Lower",
+          "type": "number"
+        },
+        "maximum_regret": {
+          "minimum": 0,
+          "title": "Maximum Regret",
+          "type": "number"
+        },
+        "mean": {
+          "title": "Mean",
+          "type": "number"
+        },
+        "option_id": {
+          "pattern": "^[a-z0-9]+(?:[._-][a-z0-9]+)*$",
+          "title": "Option Id",
+          "type": "string"
+        },
+        "probability_best": {
+          "maximum": 1,
+          "minimum": 0,
+          "title": "Probability Best",
+          "type": "number"
+        },
+        "standard_deviation": {
+          "minimum": 0,
+          "title": "Standard Deviation",
+          "type": "number"
+        },
+        "upper": {
+          "title": "Upper",
+          "type": "number"
+        }
+      },
+      "required": [
+        "option_id",
+        "draws",
+        "mean",
+        "standard_deviation",
+        "lower",
+        "upper",
+        "probability_best",
+        "expected_regret",
+        "maximum_regret",
+        "dominated_probability"
+      ],
+      "title": "OptionUncertaintySummary",
+      "type": "object"
+    },
+    "PairwiseDominance": {
+      "additionalProperties": false,
+      "properties": {
+        "mean_difference_in_better_direction": {
+          "title": "Mean Difference In Better Direction",
+          "type": "number"
+        },
+        "option_a": {
+          "pattern": "^[a-z0-9]+(?:[._-][a-z0-9]+)*$",
+          "title": "Option A",
+          "type": "string"
+        },
+        "option_b": {
+          "pattern": "^[a-z0-9]+(?:[._-][a-z0-9]+)*$",
+          "title": "Option B",
+          "type": "string"
+        },
+        "practical_margin": {
+          "minimum": 0,
+          "title": "Practical Margin",
+          "type": "number"
+        },
+        "probability_a_better": {
+          "maximum": 1,
+          "minimum": 0,
+          "title": "Probability A Better",
+          "type": "number"
+        }
+      },
+      "required": [
+        "option_a",
+        "option_b",
+        "probability_a_better",
+        "mean_difference_in_better_direction",
+        "practical_margin"
+      ],
+      "title": "PairwiseDominance",
+      "type": "object"
+    },
+    "ParameterDistribution": {
+      "additionalProperties": false,
+      "properties": {
+        "assumptions": {
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1,
+          "title": "Assumptions",
+          "type": "array"
+        },
+        "empirical_values": {
+          "items": {
+            "type": "number"
+          },
+          "title": "Empirical Values",
+          "type": "array"
+        },
+        "evidence_type": {
+          "$ref": "#/$defs/EvidenceType"
+        },
+        "fixed_value": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Fixed Value"
+        },
+        "kind": {
+          "$ref": "#/$defs/DistributionKind"
+        },
+        "limitations": {
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1,
+          "title": "Limitations",
+          "type": "array"
+        },
+        "maximum": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Maximum"
+        },
+        "mean": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Mean"
+        },
+        "minimum": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Minimum"
+        },
+        "mode": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Mode"
+        },
+        "parameter_id": {
+          "pattern": "^[a-z0-9]+(?:[._-][a-z0-9]+)*$",
+          "title": "Parameter Id",
+          "type": "string"
+        },
+        "probability": {
+          "anyOf": [
+            {
+              "maximum": 1,
+              "minimum": 0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Probability"
+        },
+        "source_refs": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Source Refs",
+          "type": "array"
+        },
+        "standard_deviation": {
+          "anyOf": [
+            {
+              "exclusiveMinimum": 0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Standard Deviation"
+        },
+        "unit": {
+          "minLength": 1,
+          "title": "Unit",
+          "type": "string"
+        }
+      },
+      "required": [
+        "parameter_id",
+        "unit",
+        "kind",
+        "evidence_type",
+        "assumptions",
+        "limitations"
+      ],
+      "title": "ParameterDistribution",
+      "type": "object"
+    },
+    "PolicyScenario": {
+      "additionalProperties": false,
+      "properties": {
+        "analysis_modes": {
+          "items": {
+            "$ref": "#/$defs/AnalysisMode"
+          },
+          "minItems": 1,
+          "title": "Analysis Modes",
+          "type": "array"
+        },
+        "as_of": {
+          "format": "date-time",
+          "title": "As Of",
+          "type": "string"
+        },
+        "assumptions": {
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1,
+          "title": "Assumptions",
+          "type": "array"
+        },
+        "baseline": {
+          "minLength": 1,
+          "title": "Baseline",
+          "type": "string"
+        },
+        "city_id": {
+          "pattern": "^[a-z0-9]+(?:[._-][a-z0-9]+)*$",
+          "title": "City Id",
+          "type": "string"
+        },
+        "constraints": {
+          "items": {
+            "$ref": "#/$defs/Constraint"
+          },
+          "minItems": 1,
+          "title": "Constraints",
+          "type": "array"
+        },
+        "data_cutoff": {
+          "format": "date-time",
+          "title": "Data Cutoff",
+          "type": "string"
+        },
+        "evidence_requirements": {
+          "items": {
+            "$ref": "#/$defs/EvidenceType"
+          },
+          "minItems": 1,
+          "title": "Evidence Requirements",
+          "type": "array"
+        },
+        "interventions": {
+          "items": {
+            "$ref": "#/$defs/Intervention"
+          },
+          "minItems": 1,
+          "title": "Interventions",
+          "type": "array"
+        },
+        "limitations": {
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1,
+          "title": "Limitations",
+          "type": "array"
+        },
+        "objectives": {
+          "items": {
+            "$ref": "#/$defs/Objective"
+          },
+          "minItems": 1,
+          "title": "Objectives",
+          "type": "array"
+        },
+        "question": {
+          "minLength": 1,
+          "title": "Question",
+          "type": "string"
+        },
+        "random_seed": {
+          "maximum": 4294967295,
+          "minimum": 0,
+          "title": "Random Seed",
+          "type": "integer"
+        },
+        "scenario_id": {
+          "pattern": "^[a-z0-9]+(?:[._-][a-z0-9]+)*$",
+          "title": "Scenario Id",
+          "type": "string"
+        },
+        "schema_version": {
+          "default": "1.0.0",
+          "title": "Schema Version",
+          "type": "string"
+        },
+        "tags": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Tags",
+          "type": "array"
+        },
+        "title": {
+          "maxLength": 200,
+          "minLength": 1,
+          "title": "Title",
+          "type": "string"
+        }
+      },
+      "required": [
+        "scenario_id",
+        "title",
+        "question",
+        "city_id",
+        "as_of",
+        "data_cutoff",
+        "baseline",
+        "interventions",
+        "objectives",
+        "constraints",
+        "analysis_modes",
+        "evidence_requirements",
+        "random_seed",
+        "assumptions",
+        "limitations"
+      ],
+      "title": "PolicyScenario",
+      "type": "object"
+    },
+    "PortfolioConfig": {
+      "additionalProperties": false,
+      "properties": {
+        "maximum_evaluations": {
+          "default": 1000000,
+          "maximum": 10000000,
+          "minimum": 1,
+          "title": "Maximum Evaluations",
+          "type": "integer"
+        },
+        "objective_strategy": {
+          "$ref": "#/$defs/ObjectiveStrategy",
+          "default": "worst-case"
+        },
+        "retained_plans": {
+          "default": 500,
+          "maximum": 100000,
+          "minimum": 1,
+          "title": "Retained Plans",
+          "type": "integer"
+        },
+        "scenario_weights": {
+          "additionalProperties": {
+            "type": "number"
+          },
+          "title": "Scenario Weights",
+          "type": "object"
+        },
+        "tolerance": {
+          "default": 1e-09,
+          "exclusiveMinimum": 0,
+          "maximum": 0.001,
+          "title": "Tolerance",
+          "type": "number"
+        }
+      },
+      "title": "PortfolioConfig",
+      "type": "object"
+    },
+    "PortfolioConstraints": {
+      "additionalProperties": false,
+      "properties": {
+        "budget": {
+          "exclusiveMinimum": 0,
+          "title": "Budget",
+          "type": "number"
+        },
+        "capacity": {
+          "anyOf": [
+            {
+              "exclusiveMinimum": 0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Capacity"
+        },
+        "maximum_risk": {
+          "anyOf": [
+            {
+              "minimum": 0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Maximum Risk"
+        },
+        "maximum_selected_actions": {
+          "anyOf": [
+            {
+              "minimum": 1,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Maximum Selected Actions"
+        },
+        "minimum_benefit": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Minimum Benefit"
+        },
+        "minimum_group_benefit": {
+          "additionalProperties": {
+            "type": "number"
+          },
+          "title": "Minimum Group Benefit",
+          "type": "object"
+        },
+        "minimum_selected_actions": {
+          "default": 1,
+          "minimum": 0,
+          "title": "Minimum Selected Actions",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "budget"
+      ],
+      "title": "PortfolioConstraints",
+      "type": "object"
+    },
+    "PortfolioOptimizationRun": {
+      "additionalProperties": false,
+      "properties": {
+        "baseline_plan": {
+          "$ref": "#/$defs/PortfolioPlan"
+        },
+        "created_at": {
+          "format": "date-time",
+          "title": "Created At",
+          "type": "string"
+        },
+        "diagnostics": {
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1,
+          "title": "Diagnostics",
+          "type": "array"
+        },
+        "evidence_type": {
+          "$ref": "#/$defs/EvidenceType",
+          "default": "optimized"
+        },
+        "failure_reason": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Failure Reason"
+        },
+        "infeasibility_diagnostics": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Infeasibility Diagnostics",
+          "type": "array"
+        },
+        "limitations": {
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1,
+          "title": "Limitations",
+          "type": "array"
+        },
+        "pareto_frontier_plan_ids": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Pareto Frontier Plan Ids",
+          "type": "array"
+        },
+        "plans": {
+          "items": {
+            "$ref": "#/$defs/PortfolioPlan"
+          },
+          "minItems": 1,
+          "title": "Plans",
+          "type": "array"
+        },
+        "problem": {
+          "$ref": "#/$defs/PortfolioProblem"
+        },
+        "run_id": {
+          "pattern": "^[a-z0-9]+(?:[._-][a-z0-9]+)*$",
+          "title": "Run Id",
+          "type": "string"
+        },
+        "schema_version": {
+          "default": "1.0.0",
+          "title": "Schema Version",
+          "type": "string"
+        },
+        "selected_objective_change_from_baseline": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Selected Objective Change From Baseline"
+        },
+        "selected_plan_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Selected Plan Id"
+        },
+        "solver": {
+          "$ref": "#/$defs/SolverAudit"
+        },
+        "status": {
+          "$ref": "#/$defs/PortfolioRunStatus"
+        }
+      },
+      "required": [
+        "run_id",
+        "created_at",
+        "status",
+        "problem",
+        "solver",
+        "baseline_plan",
+        "plans",
+        "pareto_frontier_plan_ids",
+        "infeasibility_diagnostics",
+        "diagnostics",
+        "limitations"
+      ],
+      "title": "PortfolioOptimizationRun",
+      "type": "object"
+    },
+    "PortfolioPlan": {
+      "additionalProperties": false,
+      "properties": {
+        "binding_constraints": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Binding Constraints",
+          "type": "array"
+        },
+        "evidence_type": {
+          "$ref": "#/$defs/EvidenceType",
+          "default": "optimized"
+        },
+        "feasible": {
+          "title": "Feasible",
+          "type": "boolean"
+        },
+        "group_benefits": {
+          "additionalProperties": {
+            "type": "number"
+          },
+          "title": "Group Benefits",
+          "type": "object"
+        },
+        "limitations": {
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1,
+          "title": "Limitations",
+          "type": "array"
+        },
+        "objective_value": {
+          "title": "Objective Value",
+          "type": "number"
+        },
+        "plan_id": {
+          "pattern": "^[a-z0-9]+(?:[._-][a-z0-9]+)*$",
+          "title": "Plan Id",
+          "type": "string"
+        },
+        "quantities": {
+          "additionalProperties": {
+            "type": "integer"
+          },
+          "minProperties": 1,
+          "title": "Quantities",
+          "type": "object"
+        },
+        "scenario_objectives": {
+          "additionalProperties": {
+            "type": "number"
+          },
+          "minProperties": 1,
+          "title": "Scenario Objectives",
+          "type": "object"
+        },
+        "selected_action_count": {
+          "minimum": 0,
+          "title": "Selected Action Count",
+          "type": "integer"
+        },
+        "total_benefit": {
+          "title": "Total Benefit",
+          "type": "number"
+        },
+        "total_capacity": {
+          "minimum": 0,
+          "title": "Total Capacity",
+          "type": "number"
+        },
+        "total_cost": {
+          "minimum": 0,
+          "title": "Total Cost",
+          "type": "number"
+        },
+        "total_risk": {
+          "minimum": 0,
+          "title": "Total Risk",
+          "type": "number"
+        },
+        "violations": {
+          "items": {
+            "$ref": "#/$defs/ConstraintViolation"
+          },
+          "title": "Violations",
+          "type": "array"
+        }
+      },
+      "required": [
+        "plan_id",
+        "quantities",
+        "total_cost",
+        "total_capacity",
+        "total_risk",
+        "total_benefit",
+        "group_benefits",
+        "scenario_objectives",
+        "objective_value",
+        "selected_action_count",
+        "feasible",
+        "violations",
+        "binding_constraints",
+        "limitations"
+      ],
+      "title": "PortfolioPlan",
+      "type": "object"
+    },
+    "PortfolioProblem": {
+      "additionalProperties": false,
+      "properties": {
+        "actions": {
+          "items": {
+            "$ref": "#/$defs/ActionCandidate"
+          },
+          "minItems": 1,
+          "title": "Actions",
+          "type": "array"
+        },
+        "assumptions": {
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1,
+          "title": "Assumptions",
+          "type": "array"
+        },
+        "config": {
+          "$ref": "#/$defs/PortfolioConfig"
+        },
+        "constraints": {
+          "$ref": "#/$defs/PortfolioConstraints"
+        },
+        "limitations": {
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1,
+          "title": "Limitations",
+          "type": "array"
+        },
+        "objective": {
+          "minLength": 1,
+          "title": "Objective",
+          "type": "string"
+        },
+        "objective_unit": {
+          "minLength": 1,
+          "title": "Objective Unit",
+          "type": "string"
+        },
+        "problem_id": {
+          "pattern": "^[a-z0-9]+(?:[._-][a-z0-9]+)*$",
+          "title": "Problem Id",
+          "type": "string"
+        }
+      },
+      "required": [
+        "problem_id",
+        "objective",
+        "objective_unit",
+        "actions",
+        "constraints",
+        "config",
+        "assumptions",
+        "limitations"
+      ],
+      "title": "PortfolioProblem",
+      "type": "object"
+    },
+    "PortfolioRunStatus": {
+      "enum": [
+        "optimal",
+        "infeasible",
+        "search-limited"
+      ],
+      "title": "PortfolioRunStatus",
+      "type": "string"
+    },
+    "QuantileEstimate": {
+      "additionalProperties": false,
+      "properties": {
+        "probability": {
+          "exclusiveMaximum": 1,
+          "exclusiveMinimum": 0,
+          "title": "Probability",
+          "type": "number"
+        },
+        "value": {
+          "title": "Value",
+          "type": "number"
+        }
+      },
+      "required": [
+        "probability",
+        "value"
+      ],
+      "title": "QuantileEstimate",
+      "type": "object"
+    },
+    "ReadinessLevel": {
+      "enum": [
+        "descriptive",
+        "planning-support",
+        "insufficient-evidence"
+      ],
+      "title": "ReadinessLevel",
+      "type": "string"
+    },
+    "Recommendation": {
+      "additionalProperties": false,
+      "properties": {
+        "evidence_type": {
+          "$ref": "#/$defs/EvidenceType"
+        },
+        "limitations": {
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1,
+          "title": "Limitations",
+          "type": "array"
+        },
+        "rationale": {
+          "minLength": 1,
+          "title": "Rationale",
+          "type": "string"
+        },
+        "required_next_evidence": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Required Next Evidence",
+          "type": "array"
+        },
+        "reversal_conditions": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Reversal Conditions",
+          "type": "array"
+        },
+        "selected_option_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Selected Option Id"
+        }
+      },
+      "required": [
+        "evidence_type",
+        "rationale",
+        "limitations"
+      ],
+      "title": "Recommendation",
+      "type": "object"
+    },
+    "Reproducibility": {
+      "additionalProperties": false,
+      "properties": {
+        "command": {
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1,
+          "title": "Command",
+          "type": "array"
+        },
+        "environment": {
+          "additionalProperties": {
+            "type": "string"
+          },
+          "minProperties": 1,
+          "title": "Environment",
+          "type": "object"
+        },
+        "parameters": {
+          "additionalProperties": {
+            "$ref": "#/$defs/JsonValue"
+          },
+          "minProperties": 1,
+          "title": "Parameters",
+          "type": "object"
+        },
+        "random_seed": {
+          "maximum": 4294967295,
+          "minimum": 0,
+          "title": "Random Seed",
+          "type": "integer"
+        },
+        "software_version": {
+          "minLength": 1,
+          "title": "Software Version",
+          "type": "string"
+        },
+        "source_hashes": {
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1,
+          "title": "Source Hashes",
+          "type": "array"
+        }
+      },
+      "required": [
+        "software_version",
+        "command",
+        "random_seed",
+        "environment",
+        "parameters",
+        "source_hashes"
+      ],
+      "title": "Reproducibility",
+      "type": "object"
+    },
+    "RetainedSimulationDraw": {
+      "additionalProperties": false,
+      "properties": {
+        "iteration": {
+          "minimum": 0,
+          "title": "Iteration",
+          "type": "integer"
+        },
+        "outcome": {
+          "title": "Outcome",
+          "type": "number"
+        },
+        "parameters": {
+          "additionalProperties": {
+            "type": "number"
+          },
+          "minProperties": 1,
+          "title": "Parameters",
+          "type": "object"
+        }
+      },
+      "required": [
+        "iteration",
+        "parameters",
+        "outcome"
+      ],
+      "title": "RetainedSimulationDraw",
+      "type": "object"
+    },
+    "ReversalOutcome": {
+      "enum": [
+        "reversed",
+        "stable",
+        "inconclusive"
+      ],
+      "title": "ReversalOutcome",
+      "type": "string"
+    },
+    "ReversalTest": {
+      "additionalProperties": false,
+      "description": "A controlled sensitivity test that can overturn a selected option.",
+      "properties": {
+        "baseline_option_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Baseline Option Id"
+        },
+        "baseline_value": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "integer"
+            },
+            {
+              "type": "string"
+            },
+            {
+              "type": "boolean"
+            }
+          ],
+          "title": "Baseline Value"
+        },
+        "evidence_type": {
+          "$ref": "#/$defs/EvidenceType"
+        },
+        "id": {
+          "pattern": "^[a-z0-9]+(?:[._-][a-z0-9]+)*$",
+          "title": "Id",
+          "type": "string"
+        },
+        "limitations": {
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1,
+          "title": "Limitations",
+          "type": "array"
+        },
+        "method": {
+          "minLength": 1,
+          "title": "Method",
+          "type": "string"
+        },
+        "outcome": {
+          "$ref": "#/$defs/ReversalOutcome"
+        },
+        "parameter": {
+          "minLength": 1,
+          "title": "Parameter",
+          "type": "string"
+        },
+        "selected_option_id_after_test": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Selected Option Id After Test"
+        },
+        "tested_value": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "integer"
+            },
+            {
+              "type": "string"
+            },
+            {
+              "type": "boolean"
+            }
+          ],
+          "title": "Tested Value"
+        },
+        "unit": {
+          "minLength": 1,
+          "title": "Unit",
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "parameter",
+        "baseline_value",
+        "tested_value",
+        "unit",
+        "outcome",
+        "evidence_type",
+        "method",
+        "limitations"
+      ],
+      "title": "ReversalTest",
+      "type": "object"
+    },
+    "RunStatus": {
+      "enum": [
+        "completed",
+        "failed",
+        "insufficient_evidence",
+        "infeasible",
+        "timed_out"
+      ],
+      "title": "RunStatus",
+      "type": "string"
+    },
+    "ScenarioArtifactRef": {
+      "additionalProperties": false,
+      "properties": {
+        "content_hash": {
+          "pattern": "^sha256:[0-9a-f]{64}$",
+          "title": "Content Hash",
+          "type": "string"
+        },
+        "evidence_type": {
+          "$ref": "#/$defs/EvidenceType"
+        },
+        "kind": {
+          "enum": [
+            "policy-scenario",
+            "forecast-run",
+            "simulation-run",
+            "optimization-run",
+            "uncertainty-run",
+            "decision-pack",
+            "decision-brief"
+          ],
+          "title": "Kind",
+          "type": "string"
+        },
+        "path": {
+          "minLength": 1,
+          "title": "Path",
+          "type": "string"
+        }
+      },
+      "required": [
+        "kind",
+        "path",
+        "content_hash",
+        "evidence_type"
+      ],
+      "title": "ScenarioArtifactRef",
+      "type": "object"
+    },
+    "SensitivityEstimate": {
+      "additionalProperties": false,
+      "properties": {
+        "absolute_rank": {
+          "minimum": 1,
+          "title": "Absolute Rank",
+          "type": "integer"
+        },
+        "method": {
+          "minLength": 1,
+          "title": "Method",
+          "type": "string"
+        },
+        "parameter_id": {
+          "pattern": "^[a-z0-9]+(?:[._-][a-z0-9]+)*$",
+          "title": "Parameter Id",
+          "type": "string"
+        },
+        "pearson_correlation": {
+          "maximum": 1,
+          "minimum": -1,
+          "title": "Pearson Correlation",
+          "type": "number"
+        }
+      },
+      "required": [
+        "parameter_id",
+        "pearson_correlation",
+        "absolute_rank",
+        "method"
+      ],
+      "title": "SensitivityEstimate",
+      "type": "object"
+    },
+    "SimulationConfig": {
+      "additionalProperties": false,
+      "properties": {
+        "iterations": {
+          "default": 10000,
+          "maximum": 1000000,
+          "minimum": 100,
+          "title": "Iterations",
+          "type": "integer"
+        },
+        "quantiles": {
+          "items": {
+            "type": "number"
+          },
+          "title": "Quantiles",
+          "type": "array"
+        },
+        "random_seed": {
+          "default": 20260812,
+          "maximum": 4294967295,
+          "minimum": 0,
+          "title": "Random Seed",
+          "type": "integer"
+        },
+        "retained_draws": {
+          "default": 25,
+          "maximum": 1000,
+          "minimum": 0,
+          "title": "Retained Draws",
+          "type": "integer"
+        },
+        "threshold": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Threshold"
+        },
+        "threshold_direction": {
+          "$ref": "#/$defs/ThresholdDirection",
+          "default": "at-least"
+        }
+      },
+      "title": "SimulationConfig",
+      "type": "object"
+    },
+    "SimulationModel": {
+      "additionalProperties": false,
+      "properties": {
+        "assumptions": {
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1,
+          "title": "Assumptions",
+          "type": "array"
+        },
+        "ceiling": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Ceiling"
+        },
+        "floor": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Floor"
+        },
+        "intercept": {
+          "title": "Intercept",
+          "type": "number"
+        },
+        "limitations": {
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1,
+          "title": "Limitations",
+          "type": "array"
+        },
+        "method": {
+          "minLength": 1,
+          "title": "Method",
+          "type": "string"
+        },
+        "model_id": {
+          "pattern": "^[a-z0-9]+(?:[._-][a-z0-9]+)*$",
+          "title": "Model Id",
+          "type": "string"
+        },
+        "outcome_id": {
+          "pattern": "^[a-z0-9]+(?:[._-][a-z0-9]+)*$",
+          "title": "Outcome Id",
+          "type": "string"
+        },
+        "outcome_unit": {
+          "minLength": 1,
+          "title": "Outcome Unit",
+          "type": "string"
+        },
+        "scenario_ref": {
+          "pattern": "^[a-z0-9]+(?:[._-][a-z0-9]+)*$",
+          "title": "Scenario Ref",
+          "type": "string"
+        },
+        "terms": {
+          "items": {
+            "$ref": "#/$defs/SimulationTerm"
+          },
+          "minItems": 1,
+          "title": "Terms",
+          "type": "array"
+        }
+      },
+      "required": [
+        "model_id",
+        "scenario_ref",
+        "outcome_id",
+        "outcome_unit",
+        "intercept",
+        "terms",
+        "method",
+        "assumptions",
+        "limitations"
+      ],
+      "title": "SimulationModel",
+      "type": "object"
+    },
+    "SimulationRun": {
+      "additionalProperties": false,
+      "properties": {
+        "config": {
+          "$ref": "#/$defs/SimulationConfig"
+        },
+        "created_at": {
+          "format": "date-time",
+          "title": "Created At",
+          "type": "string"
+        },
+        "diagnostics": {
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1,
+          "title": "Diagnostics",
+          "type": "array"
+        },
+        "draw_stream_hash": {
+          "anyOf": [
+            {
+              "pattern": "^sha256:[0-9a-f]{64}$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Draw Stream Hash"
+        },
+        "evidence_type": {
+          "$ref": "#/$defs/EvidenceType",
+          "default": "simulated"
+        },
+        "failure_reason": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Failure Reason"
+        },
+        "limitations": {
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1,
+          "title": "Limitations",
+          "type": "array"
+        },
+        "model": {
+          "$ref": "#/$defs/SimulationModel"
+        },
+        "parameters": {
+          "items": {
+            "$ref": "#/$defs/ParameterDistribution"
+          },
+          "minItems": 1,
+          "title": "Parameters",
+          "type": "array"
+        },
+        "retained_draws": {
+          "items": {
+            "$ref": "#/$defs/RetainedSimulationDraw"
+          },
+          "title": "Retained Draws",
+          "type": "array"
+        },
+        "run_id": {
+          "pattern": "^[a-z0-9]+(?:[._-][a-z0-9]+)*$",
+          "title": "Run Id",
+          "type": "string"
+        },
+        "schema_version": {
+          "default": "1.0.0",
+          "title": "Schema Version",
+          "type": "string"
+        },
+        "sensitivity": {
+          "items": {
+            "$ref": "#/$defs/SensitivityEstimate"
+          },
+          "title": "Sensitivity",
+          "type": "array"
+        },
+        "status": {
+          "$ref": "#/$defs/SimulationStatus"
+        },
+        "summary": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/SimulationSummary"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        }
+      },
+      "required": [
+        "run_id",
+        "created_at",
+        "status",
+        "model",
+        "config",
+        "parameters",
+        "diagnostics",
+        "limitations"
+      ],
+      "title": "SimulationRun",
+      "type": "object"
+    },
+    "SimulationStatus": {
+      "enum": [
+        "completed",
+        "insufficient-evidence"
+      ],
+      "title": "SimulationStatus",
+      "type": "string"
+    },
+    "SimulationSummary": {
+      "additionalProperties": false,
+      "properties": {
+        "maximum": {
+          "title": "Maximum",
+          "type": "number"
+        },
+        "mean": {
+          "title": "Mean",
+          "type": "number"
+        },
+        "minimum": {
+          "title": "Minimum",
+          "type": "number"
+        },
+        "quantiles": {
+          "items": {
+            "$ref": "#/$defs/QuantileEstimate"
+          },
+          "minItems": 1,
+          "title": "Quantiles",
+          "type": "array"
+        },
+        "standard_deviation": {
+          "minimum": 0,
+          "title": "Standard Deviation",
+          "type": "number"
+        },
+        "threshold_probability": {
+          "anyOf": [
+            {
+              "maximum": 1,
+              "minimum": 0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Threshold Probability"
+        }
+      },
+      "required": [
+        "mean",
+        "standard_deviation",
+        "minimum",
+        "maximum",
+        "quantiles"
+      ],
+      "title": "SimulationSummary",
+      "type": "object"
+    },
+    "SimulationTerm": {
+      "additionalProperties": false,
+      "properties": {
+        "coefficient": {
+          "title": "Coefficient",
+          "type": "number"
+        },
+        "parameter_id": {
+          "pattern": "^[a-z0-9]+(?:[._-][a-z0-9]+)*$",
+          "title": "Parameter Id",
+          "type": "string"
+        }
+      },
+      "required": [
+        "parameter_id",
+        "coefficient"
+      ],
+      "title": "SimulationTerm",
+      "type": "object"
+    },
+    "SolverAudit": {
+      "additionalProperties": false,
+      "properties": {
+        "algorithm": {
+          "minLength": 1,
+          "title": "Algorithm",
+          "type": "string"
+        },
+        "enumeration_complete": {
+          "title": "Enumeration Complete",
+          "type": "boolean"
+        },
+        "evaluated_plans": {
+          "minimum": 1,
+          "title": "Evaluated Plans",
+          "type": "integer"
+        },
+        "feasible_plans": {
+          "minimum": 0,
+          "title": "Feasible Plans",
+          "type": "integer"
+        },
+        "incumbent_objective": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Incumbent Objective"
+        },
+        "optimality_gap": {
+          "anyOf": [
+            {
+              "minimum": 0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Optimality Gap"
+        },
+        "retained_plans": {
+          "minimum": 1,
+          "title": "Retained Plans",
+          "type": "integer"
+        },
+        "search_space_size": {
+          "minimum": 1,
+          "title": "Search Space Size",
+          "type": "integer"
+        },
+        "theoretical_upper_bound": {
+          "title": "Theoretical Upper Bound",
+          "type": "number"
+        },
+        "tie_break_rule": {
+          "minLength": 1,
+          "title": "Tie Break Rule",
+          "type": "string"
+        }
+      },
+      "required": [
+        "algorithm",
+        "search_space_size",
+        "evaluated_plans",
+        "feasible_plans",
+        "retained_plans",
+        "enumeration_complete",
+        "theoretical_upper_bound",
+        "tie_break_rule"
+      ],
+      "title": "SolverAudit",
+      "type": "object"
+    },
+    "SourceManifest": {
+      "additionalProperties": false,
+      "description": "Evidence required to identify and independently verify a downloaded artifact.",
+      "properties": {
+        "artifact_id": {
+          "pattern": "^[a-z0-9]+(?:[._-][a-z0-9]+)*$",
+          "title": "Artifact Id",
+          "type": "string"
+        },
+        "artifact_path": {
+          "minLength": 1,
+          "title": "Artifact Path",
+          "type": "string"
+        },
+        "content_hash": {
+          "title": "Content Hash",
+          "type": "string"
+        },
+        "data_url": {
+          "format": "uri",
+          "minLength": 1,
+          "title": "Data Url",
+          "type": "string"
+        },
+        "geographic_scope": {
+          "minLength": 1,
+          "title": "Geographic Scope",
+          "type": "string"
+        },
+        "landing_url": {
+          "format": "uri",
+          "minLength": 1,
+          "title": "Landing Url",
+          "type": "string"
+        },
+        "license": {
+          "minLength": 1,
+          "title": "License",
+          "type": "string"
+        },
+        "limitations": {
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1,
+          "title": "Limitations",
+          "type": "array"
+        },
+        "name": {
+          "minLength": 1,
+          "title": "Name",
+          "type": "string"
+        },
+        "publisher": {
+          "minLength": 1,
+          "title": "Publisher",
+          "type": "string"
+        },
+        "query": {
+          "additionalProperties": {
+            "$ref": "#/$defs/JsonValue"
+          },
+          "title": "Query",
+          "type": "object"
+        },
+        "record_count": {
+          "minimum": 0,
+          "title": "Record Count",
+          "type": "integer"
+        },
+        "response_headers": {
+          "additionalProperties": {
+            "type": "string"
+          },
+          "title": "Response Headers",
+          "type": "object"
+        },
+        "retrieved_at": {
+          "format": "date-time",
+          "title": "Retrieved At",
+          "type": "string"
+        },
+        "schema_fingerprint": {
+          "title": "Schema Fingerprint",
+          "type": "string"
+        },
+        "schema_version": {
+          "default": "1.0.0",
+          "title": "Schema Version",
+          "type": "string"
+        },
+        "source_id": {
+          "pattern": "^[a-z0-9]+(?:[._-][a-z0-9]+)*$",
+          "title": "Source Id",
+          "type": "string"
+        },
+        "temporal_scope": {
+          "minLength": 1,
+          "title": "Temporal Scope",
+          "type": "string"
+        },
+        "upstream_updated_at": {
+          "anyOf": [
+            {
+              "format": "date-time",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Upstream Updated At"
+        }
+      },
+      "required": [
+        "source_id",
+        "artifact_id",
+        "name",
+        "publisher",
+        "landing_url",
+        "data_url",
+        "license",
+        "retrieved_at",
+        "query",
+        "artifact_path",
+        "content_hash",
+        "record_count",
+        "schema_fingerprint",
+        "geographic_scope",
+        "temporal_scope",
+        "limitations"
+      ],
+      "title": "SourceManifest",
+      "type": "object"
+    },
+    "ThresholdDirection": {
+      "enum": [
+        "at-least",
+        "at-most"
+      ],
+      "title": "ThresholdDirection",
+      "type": "string"
+    },
+    "UncertaintyConfig": {
+      "additionalProperties": false,
+      "properties": {
+        "confidence_level": {
+          "default": 0.95,
+          "exclusiveMaximum": 0.999,
+          "exclusiveMinimum": 0.5,
+          "title": "Confidence Level",
+          "type": "number"
+        },
+        "maximum_expected_regret": {
+          "anyOf": [
+            {
+              "minimum": 0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Maximum Expected Regret"
+        },
+        "practical_equivalence_margin": {
+          "default": 0,
+          "minimum": 0,
+          "title": "Practical Equivalence Margin",
+          "type": "number"
+        },
+        "require_paired_draws": {
+          "default": true,
+          "title": "Require Paired Draws",
+          "type": "boolean"
+        },
+        "robust_probability_threshold": {
+          "default": 0.9,
+          "exclusiveMinimum": 0.5,
+          "maximum": 1,
+          "title": "Robust Probability Threshold",
+          "type": "number"
+        },
+        "sense": {
+          "$ref": "#/$defs/ObjectiveSense"
+        }
+      },
+      "required": [
+        "sense"
+      ],
+      "title": "UncertaintyConfig",
+      "type": "object"
+    },
+    "UncertaintyMethod": {
+      "enum": [
+        "paired-draws",
+        "independent-summaries"
+      ],
+      "title": "UncertaintyMethod",
+      "type": "string"
+    },
+    "UncertaintyRun": {
+      "additionalProperties": false,
+      "properties": {
+        "baseline_option_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Baseline Option Id"
+        },
+        "config": {
+          "$ref": "#/$defs/UncertaintyConfig"
+        },
+        "created_at": {
+          "format": "date-time",
+          "title": "Created At",
+          "type": "string"
+        },
+        "diagnostics": {
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1,
+          "title": "Diagnostics",
+          "type": "array"
+        },
+        "evidence_type": {
+          "$ref": "#/$defs/EvidenceType"
+        },
+        "failure_reason": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Failure Reason"
+        },
+        "limitations": {
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1,
+          "title": "Limitations",
+          "type": "array"
+        },
+        "method": {
+          "$ref": "#/$defs/UncertaintyMethod"
+        },
+        "option_summaries": {
+          "items": {
+            "$ref": "#/$defs/OptionUncertaintySummary"
+          },
+          "title": "Option Summaries",
+          "type": "array"
+        },
+        "pairwise_dominance": {
+          "items": {
+            "$ref": "#/$defs/PairwiseDominance"
+          },
+          "title": "Pairwise Dominance",
+          "type": "array"
+        },
+        "reversals": {
+          "items": {
+            "$ref": "#/$defs/DecisionReversal"
+          },
+          "title": "Reversals",
+          "type": "array"
+        },
+        "run_id": {
+          "pattern": "^[a-z0-9]+(?:[._-][a-z0-9]+)*$",
+          "title": "Run Id",
+          "type": "string"
+        },
+        "schema_version": {
+          "default": "1.0.0",
+          "title": "Schema Version",
+          "type": "string"
+        },
+        "selected_option_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Selected Option Id"
+        },
+        "status": {
+          "$ref": "#/$defs/UncertaintyStatus"
+        }
+      },
+      "required": [
+        "run_id",
+        "created_at",
+        "status",
+        "method",
+        "evidence_type",
+        "config",
+        "option_summaries",
+        "pairwise_dominance",
+        "reversals",
+        "diagnostics",
+        "limitations"
+      ],
+      "title": "UncertaintyRun",
+      "type": "object"
+    },
+    "UncertaintyStatus": {
+      "enum": [
+        "robust-winner",
+        "reversal-risk",
+        "insufficient-evidence"
+      ],
+      "title": "UncertaintyStatus",
+      "type": "string"
+    },
+    "ValueOfInformation": {
+      "additionalProperties": false,
+      "description": "A ranked evidence gap whose resolution could change the decision.",
+      "properties": {
+        "collection_action": {
+          "minLength": 1,
+          "title": "Collection Action",
+          "type": "string"
+        },
+        "decision_link": {
+          "minLength": 1,
+          "title": "Decision Link",
+          "type": "string"
+        },
+        "evidence_type": {
+          "$ref": "#/$defs/EvidenceType",
+          "default": "proposed"
+        },
+        "id": {
+          "pattern": "^[a-z0-9]+(?:[._-][a-z0-9]+)*$",
+          "title": "Id",
+          "type": "string"
+        },
+        "limitations": {
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1,
+          "title": "Limitations",
+          "type": "array"
+        },
+        "priority_score": {
+          "maximum": 1,
+          "minimum": 0,
+          "title": "Priority Score",
+          "type": "number"
+        },
+        "uncertainty": {
+          "minLength": 1,
+          "title": "Uncertainty",
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "uncertainty",
+        "decision_link",
+        "collection_action",
+        "priority_score",
+        "limitations"
+      ],
+      "title": "ValueOfInformation",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "analytical_artifacts": {
+      "items": {
+        "$ref": "#/$defs/ScenarioArtifactRef"
+      },
+      "minItems": 2,
+      "title": "Analytical Artifacts",
+      "type": "array"
+    },
+    "assumption_register": {
+      "items": {
+        "type": "string"
+      },
+      "minItems": 1,
+      "title": "Assumption Register",
+      "type": "array"
+    },
+    "city_id": {
+      "pattern": "^[a-z0-9]+(?:[._-][a-z0-9]+)*$",
+      "title": "City Id",
+      "type": "string"
+    },
+    "created_at": {
+      "format": "date-time",
+      "title": "Created At",
+      "type": "string"
+    },
+    "data_cutoff": {
+      "format": "date-time",
+      "title": "Data Cutoff",
+      "type": "string"
+    },
+    "decision_brief": {
+      "minLength": 1,
+      "title": "Decision Brief",
+      "type": "string"
+    },
+    "decision_pack": {
+      "$ref": "#/$defs/DecisionPack"
+    },
+    "diagnostics": {
+      "items": {
+        "type": "string"
+      },
+      "minItems": 1,
+      "title": "Diagnostics",
+      "type": "array"
+    },
+    "forecast": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/ForecastRun"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null
+    },
+    "limitations": {
+      "items": {
+        "type": "string"
+      },
+      "minItems": 1,
+      "title": "Limitations",
+      "type": "array"
+    },
+    "observed_feature_summary": {
+      "additionalProperties": {
+        "$ref": "#/$defs/JsonValue"
+      },
+      "minProperties": 1,
+      "title": "Observed Feature Summary",
+      "type": "object"
+    },
+    "observed_request_count": {
+      "minimum": 0,
+      "title": "Observed Request Count",
+      "type": "integer"
+    },
+    "optimization": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/PortfolioOptimizationRun"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null
+    },
+    "pack_id": {
+      "pattern": "^[a-z0-9]+(?:[._-][a-z0-9]+)*$",
+      "title": "Pack Id",
+      "type": "string"
+    },
+    "readiness": {
+      "$ref": "#/$defs/ReadinessLevel"
+    },
+    "scenario": {
+      "$ref": "#/$defs/PolicyScenario"
+    },
+    "scenario_template_id": {
+      "pattern": "^[a-z0-9]+(?:[._-][a-z0-9]+)*$",
+      "title": "Scenario Template Id",
+      "type": "string"
+    },
+    "schema_version": {
+      "const": "1.0.0",
+      "default": "1.0.0",
+      "title": "Schema Version",
+      "type": "string"
+    },
+    "simulation": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/SimulationRun"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null
+    },
+    "source_refs": {
+      "items": {
+        "type": "string"
+      },
+      "minItems": 1,
+      "title": "Source Refs",
+      "type": "array"
+    },
+    "status": {
+      "$ref": "#/$defs/DeepScenarioStatus"
+    },
+    "suite": {
+      "$ref": "#/$defs/ApplicationSuite"
+    },
+    "uncertainty": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/UncertaintyRun"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null
+    }
+  },
+  "required": [
+    "pack_id",
+    "city_id",
+    "scenario_template_id",
+    "suite",
+    "created_at",
+    "data_cutoff",
+    "status",
+    "readiness",
+    "scenario",
+    "source_refs",
+    "observed_request_count",
+    "observed_feature_summary",
+    "analytical_artifacts",
+    "decision_pack",
+    "decision_brief",
+    "assumption_register",
+    "diagnostics",
+    "limitations"
+  ],
+  "title": "DeepScenarioPack",
+  "type": "object"
+}

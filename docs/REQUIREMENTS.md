@@ -10,31 +10,31 @@ Status vocabulary: `planned`, `in_progress`, `implemented_unverified`, `verified
 |---|---|---|---|
 | SCALE-001 | 250 Tier-G global cities | verified | Versioned catalog, 250-row coverage matrix, semantic bundle, seed graph, portable checksums, schema validation, exact temporary rebuild, and sampled inspection |
 | SCALE-002 | 30 Tier-S standardized cities, at least 3 standard scenarios each | verified | 30 validated source-bound adapters, 30 passing quality reports, 90 independent screening records, selection/exclusion audit, cross-city CSV/Markdown report, recursive checksums, and exact tree rebuild |
-| SCALE-003 | 8 Tier-D cities, at least 12 deep scenarios each | planned | 8 independent adapters and 96 end-to-end scenario packs |
-| SCALE-004 | 25–35 public data families | in_progress | 8 loadable connector families currently verified; registry, manifests, terms, hashes, schema and negative tests exist |
+| SCALE-003 | 8 Tier-D cities, at least 12 deep scenarios each | verified | 8 source-bound adapters, 8 quality reports, 96 Policy Scenarios / DecisionPacks / briefs, 76 completed planning-support packs, 20 negative releases, 49-source ledger, hashes, recursive checksums, and exact full-tree rebuild |
+| SCALE-004 | 25–35 public data families | in_progress | 8 source families, 10 loadable connector implementations, and 8 audited municipal dataset configurations currently verified; registry/specifications, manifests, terms, hashes, schema and negative tests exist |
 | SCALE-005 | At least 1 billion non-raster observations/relations | planned | Deduplicated manifest totals with anti-inflation audit and storage query evidence |
 | SCALE-006 | 1–3 TB compressed rebuildable data catalog | planned | Object inventory, byte totals, remote/local boundary and sampled rebuild |
 | SCALE-007 | Urban graph targeting 100 million nodes/edges | in_progress | Evidence-typed schema and 494-node / 250-edge seed graph verify the contract; partitioned construction, query benchmarks, and target scale remain |
-| SCALE-008 | 240 non-duplicative scenarios | in_progress | Three semantically distinct Tier-S templates have 90 city-bound run records; the records preserve template IDs so repeated templates cannot be miscounted as 90 non-duplicative designs |
+| SCALE-008 | 240 non-duplicative scenarios | in_progress | Three Tier-S and twelve Tier-D template designs are explicit; 90 Tier-S and 96 Tier-D city-bound executions preserve template IDs so repeated bindings cannot be miscounted as 186 non-duplicative designs |
 | SCALE-009 | At least 40 historical replays | verified | 40 complete run artifacts over 20 public city-point sources and two parameters; 13,440 training and 1,200 strictly later holdout values; immutable cutoffs, four training-only baselines, held-out metrics, row ledger, hashes, and exact tree rebuild |
 | SCALE-010 | At least 100 optimization tasks | verified | 100 complete solver records; 24,000 declared / 21,710 evaluated portfolios; 70 optimal with explicit zero-action comparisons, 20 proven infeasible, ten deterministic search-limited negative releases; artifact hashes and exact rebuild |
 | SCALE-011 | Up to 12 identification-gated causal studies | in_progress | Strict DID design/diagnostic/claim-gate contract plus one synthetic pass and one synthetic failed-pretrend qualification exist; real domain studies and external method review remain |
-| SCALE-012 | 500–800 automated checks | in_progress | 366 local tests and 95.62% branch-aware coverage; forecast 21, causal 17, simulation 30, uncertainty 23, portfolio 22, benchmark 8 tests; remote CI, mutation testing, and the 500-test floor remain |
+| SCALE-012 | 500–800 automated checks | in_progress | The 500-test floor is met: 711 local tests pass with 95.64% statement, 89.78% branch, and 94.48% combined line-and-branch coverage. Strict typing, lint, and formatting pass; remote CI and mutation testing remain |
 | SCALE-013 | 500 static figures and 80 interactive views | planned | Generated artifact manifest plus visual inspection report |
-| SCALE-014 | 100 DecisionPacks and human-readable briefs | planned | Same-source JSON and rendered outputs, schema validation and sampled recomputation |
+| SCALE-014 | 100 DecisionPacks and human-readable briefs | in_progress | 96 Tier-D plus 2 earlier reference DecisionPacks and same-source briefs validate and exactly rebuild; two additional non-duplicative packs remain for the 100-pack floor |
 | SCALE-015 | Web, REST API, Python SDK, CLI and adapter/plugin SDK | in_progress | Clean installs, contracts, browser/API tests, package and public demo |
 
 ## Product protocols and evidence invariants
 
 | ID | Requirement | Status | Required completion evidence |
 |---|---|---|---|
-| CORE-001 | Stable City Adapter schema | verified | Generated JSON Schema, positive/rejection tests, and 30 real-source Tier-S adapters embedded in exact-rebuild city bundles |
-| CORE-002 | Stable Policy Scenario schema | in_progress | Generated JSON Schema, positive/negative fixtures and compiler test |
+| CORE-001 | Stable City Adapter schema | verified | Generated JSON Schema, positive/rejection tests, 30 real-source Tier-S adapters, and 8 deeper local-source Tier-D adapters embedded in exact-rebuild bundles |
+| CORE-002 | Stable Policy Scenario schema | verified | Generated JSON Schema, positive/rejection tests, and 96 compiler-generated Tier-D scenarios with evidence, objective, constraint, time, and city bindings |
 | CORE-003 | Stable DecisionPack schema | verified | Generated JSON Schema, completed and infeasible golden examples, exact rebuild audit |
 | CORE-004 | Six evidence types remain distinct | verified | Model invariants and positive/rejection tests, including explicit absence of causal evidence in the demo |
 | CORE-005 | Failed, infeasible, timed-out and insufficient-evidence runs are releasable | verified | Four negative status tests plus an end-to-end infeasible golden DecisionPack |
-| CORE-006 | Every source artifact has version, query, license, hash and record count | verified | 41 real public source manifests covering 100,842 declared source records/values, CLI verification, tamper/path/archive/shape tests, and deterministic registry audit |
-| CORE-007 | Deterministic canonical serialization and content hashes | verified | Exact temporary-directory rebuild of Schemas, JSON, brief, and portable checksums |
+| CORE-006 | Every source artifact has version, query, license, hash and record count | verified | 90 real public source manifests covering 258,478 declared heterogeneous source units, CLI verification, attribution audit, tamper/path/archive/shape tests, and deterministic registry/specification audit |
+| CORE-007 | Deterministic canonical serialization and content hashes | verified | Exact temporary-directory rebuild of Schemas, earlier references, Tier G, Tier S, 145 analytical benchmarks, and all 707 Tier-D files |
 | CORE-008 | Decision reversals and value of information are first-class outputs | verified | Required protocol fields, five-case sensitivity reruns, three ranked evidence gaps, validation tests |
 | CORE-009 | Cross-city transportability failures are preserved | planned | Leave-one-city tasks and negative DecisionPacks |
 | CORE-010 | Natural language cannot bypass Scenario DSL validation | planned | Constrained compiler and adversarial tests |
@@ -50,20 +50,20 @@ Status vocabulary: `planned`, `in_progress`, `implemented_unverified`, `verified
 
 | ID | Suite | Status | Required completion evidence |
 |---|---|---|---|
-| SUITE-001 | Climate and disaster resilience | planned | Real data, replay, simulation, optimization and brief |
-| SUITE-002 | Mobility and accessibility operations | planned | Multimodal network, disruption replay and allocation task |
-| SUITE-003 | Population health and environmental exposure | in_progress | CDC PLACES connector, exposure model and guarded interpretation |
-| SUITE-004 | Housing, land use and regeneration | planned | Real planning/permit data and policy scenario |
-| SUITE-005 | Public service operations | planned | Real service-request data, forecasting and routing/allocation |
-| SUITE-006 | Infrastructure finance and asset risk | planned | Public capital/asset data and constrained portfolio task |
-| SUITE-007 | Behavioral policy and equity | planned | Population/behavior parameters, uncertainty and distributional report |
+| SUITE-001 | Climate and disaster resilience | in_progress | Sixteen Tier-D heat/rainfall city bindings use real workload and climate context plus forecast, simulation, optimization, uncertainty, and briefs; hazard footprints, exposure, assets, and intervention replay remain |
+| SUITE-002 | Mobility and accessibility operations | in_progress | Six accessibility-request planning packs complete and ten category/network-gated packs are negative; routable multimodal networks, disruption replay, and travel-time validation remain |
+| SUITE-003 | Population health and environmental exposure | in_progress | CDC PLACES and eight environmental-request Tier-D bindings preserve guarded population/climate context; no individual outcome or exposure surface is claimed |
+| SUITE-004 | Housing, land use and regeneration | in_progress | Six housing-label Tier-D planning packs complete and two fail their workload gate; parcel, permit, zoning, tenure, price, and verified-condition evidence remain |
+| SUITE-005 | Public service operations | in_progress | Twenty-four Tier-D total-demand, staffing, and sanitation bindings use real service requests, forecasts, allocation portfolios, uncertainty, and briefs; routing and observed service outcomes remain |
+| SUITE-006 | Infrastructure finance and asset risk | in_progress | Seven infrastructure-label portfolios complete and one fails its workload gate; asset registers, condition, lifecycle cost, approved budgets, and engineering validation remain |
+| SUITE-007 | Behavioral policy and equity | in_progress | Eight area-balance planning packs and eight causal-gate negative packs preserve uncertainty and distributional limits; subgroup outcomes and causal intervention evidence remain |
 
 ## Release gates
 
 | ID | Requirement | Status | Required completion evidence |
 |---|---|---|---|
 | RELEASE-001 | Clean environment install | in_progress | Current-worktree wheel installs and imports in fresh Python 3.12.13 with recorded hash; repeat from a tagged release archive before verification |
-| RELEASE-002 | Rebuildable public sample | verified | One-command local verifier regenerates both reference DecisionPacks, Tier-G, Tier-S, all 145 analytical runs, evidence ledgers, reports and checksums with exact byte equality |
+| RELEASE-002 | Rebuildable public sample | verified | One-command local verifier regenerates both earlier reference DecisionPacks, Tier-G, Tier-S, all 145 analytical runs, and all 707 Tier-D files, ledgers, reports and checksums with exact byte equality |
 | RELEASE-003 | Public no-login demo | planned | External browser verification and documented sample boundary |
 | RELEASE-004 | Signed release, checksums and SBOM | planned | GitHub Release assets and independent verification |
 | RELEASE-005 | Security and dependency scanning | in_progress | Workflows are defined; no remote result is claimed until GitHub runs them |

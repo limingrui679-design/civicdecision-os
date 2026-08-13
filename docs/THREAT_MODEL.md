@@ -22,7 +22,9 @@ validated. A content hash proves byte identity, not truth, safety, license, or p
 | Path traversal | Manifest artifact containment check | Apply equivalent checks to all future bundle paths |
 | Silent upstream revision | Retrieval/upstream times, content hash, raw bytes | Scheduled drift monitor and signed snapshots |
 | Schema drift | Field fingerprint, strict protocol models | Dataset-specific semantic drift policies |
-| Evidence inflation | Six evidence types and validator gates | Repository-wide claim linter and UI enforcement |
+| Evidence inflation | Six evidence types, validator gates, deduplicated Tier-D source/scenario ledgers, and anti-inflation audit | Repository-wide claim linter and UI enforcement |
+| Repeated-view count inflation | Four municipal aggregates must reconcile; underlying request totals are counted once | Generalize provenance-aware deduplication to future bulk sources |
+| Unsupported local recommendation | Completed packs require reversals and VOI; causal/network/sample gates emit negative packs | Authenticated review workflow, local owner sign-off, and deployment controls |
 | Unsafe plugin/adapter | No dynamic plugin execution yet | Signed packages, permissions, sandbox, capability manifest |
 | Dependency or supply-chain compromise | Pinned ranges, planned CodeQL workflow | Lockfiles, SBOM, provenance, dependency review, signed releases |
 | Secret leakage | Public-data-only design and `.gitignore` | Secret scanning and pre-commit protection |

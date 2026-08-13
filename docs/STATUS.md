@@ -4,23 +4,22 @@ Updated: 2026-08-13
 
 ## Current milestone
 
-Milestone 4—the evidence-typed analytical engine and benchmark layer—is verified locally. The next
-milestone builds eight deep-city adapters and integrates these general engines into end-to-end
-decision workflows without promoting standardized descriptive screens beyond their evidence.
+Milestone 5—the eight-city Tier-D evidence and scenario-compilation layer—is verified locally. The
+next milestone exposes the verified artifacts through a read-only SDK, REST API, CLI, and web
+interface while preserving every evidence and negative-release gate.
 
 ## Verified now
 
-- Seventeen deterministic versioned JSON Schemas regenerate byte-for-byte.
+- Twenty-two deterministic versioned JSON Schemas regenerate byte-for-byte.
 - Six evidence types have type-specific positive and rejection tests.
 - Completed DecisionPacks require formal reversal tests and value-of-information guidance.
 - Failed, insufficient-evidence, infeasible, and timed-out statuses validate as negative releases.
-- Eight loadable connectors span climate, demography, disaster, geography, health, public service,
-  seismic, and multinational statistics. Each has bounded or fully identified source scope,
-  source terms, record semantics, schema checks, and limitations in a deterministic catalog.
-- Forty-one verified source manifests cover 100,842 heterogeneous source units: 34,086 GeoNames
-  rows, 65,880 Tier-S NASA POWER parameter-date values, 795 Tier-S World Bank response rows, and
-  81 earlier bounded units. They are not counted as interchangeable or independent policy
-  observations.
+- Ten loadable connectors span climate, demography, disaster, geography, health, public service,
+  seismic, and multinational statistics. Eight additional audited municipal dataset
+  configurations use the generic privacy-minimized aggregation connector.
+- Ninety verified source manifests cover 258,478 heterogeneous declared source units. The new
+  Tier-D layer contributes 148,836 endpoint-side aggregate rows and 8,800 context units; these are
+  not counted as interchangeable or independent policy observations.
 - A deterministic Tier-G catalog contains 250 unique city points across 244 GeoNames country or
   territory codes: 244 source-population leaders and six global fills.
 - The city build emits a 250-row coverage matrix, a 494-geography semantic bundle, a 494-node /
@@ -67,29 +66,53 @@ decision workflows without promoting standardized descriptive screens beyond the
 - The 145 full run artifacts are indexed by a typed evidence summary, three row-level CSVs, an
   artifact-set hash, a human audit, and 152 portable checksum entries. The entire tree rebuilds
   byte-for-byte from committed inputs.
-- 366 automated tests pass with 95.62% branch-aware coverage; strict mypy and Ruff pass locally.
-- A 118,599-byte wheel builds, passes ZIP integrity, installs with dependencies in a fresh Python
-  3.12.13 environment, starts the CLI, and imports all five analytical/benchmark entry points. It
-  is current-worktree evidence, not a tagged or signed release.
+- Eight Tier-D city adapters cover New York City, Boston, Chicago, San Francisco, Seattle, Austin,
+  Los Angeles, and Philadelphia across six Socrata, one CKAN DataStore, and one CARTO SQL local
+  dataset.
+- Every Tier-D city binds four reconciled service-request aggregates, one exact ACS 2024 five-year
+  incorporated-place population row, one current TIGERweb legal boundary, and one complete 183-day
+  six-parameter NASA POWER point series.
+- Forty-nine deduplicated Tier-D source artifacts represent eleven datasets. The 32 municipal
+  views contain 148,836 grouped rows but reconcile to 4,148,633 underlying requests counted once;
+  the anti-inflation audit explicitly rejects the naive four-view sum of 16,594,532.
+- The Tier-D compiler defines twelve non-duplicative scenario templates and binds each to all eight
+  cities. It emits 96 validated Policy Scenarios, 96 DecisionPacks, 96 same-source briefs, eight
+  bundles, four CSV ledgers, three human audits, a registry, evidence summary, and portable
+  checksums.
+- Seventy-six Tier-D packs complete a planning-support pipeline; twenty are explicit
+  `insufficient-evidence` releases. The negative set includes sixteen causal/network refusals and
+  four city-template bindings that fail the declared 100-request category gate.
+- The completed Tier-D workload contains 76 forecasts over 13,908 regular daily input positions,
+  190,000 seeded simulation iterations, 76 complete enumerations of 3,125 portfolios each
+  (237,500 total), 19,152 feasible portfolios encountered, and 228,000 paired option-draw values.
+- All 707 committed Tier-D files validate against contracts and hashes. The verifier rebuilds the
+  entire tree from the 49 committed source artifacts in a temporary directory and requires exact
+  byte equality.
+- 711 automated tests pass. Coverage is 95.64% for statements, 89.78% for branches, and 94.48%
+  under coverage.py's combined line-and-branch measure; strict mypy, Ruff lint, and Ruff format
+  checks pass locally.
+- A 175,108-byte wheel builds, passes ZIP integrity, installs with dependencies in a fresh Python
+  3.12.13 environment, starts the CLI, and imports the analytical, optimization, benchmark, and
+  Tier-D compilation entry points. It is current-worktree evidence, not a tagged or signed release.
 
 ## Implementing next
 
+- Read-only REST API, Python SDK, CLI, adapter/plugin SDK, and browser interface over the verified
+  Tier-G, Tier-S, Tier-D, benchmark, and DecisionPack artifacts.
 - Broader connector registry, licensing metadata, paging, caching, and 25–35 source families.
 - Normalized network and policy semantics on top of the verified geography, time, measure,
   observation, facility, event, and graph contracts.
-- The first complete deep-city adapters with official local boundaries and local sources.
 - Network routing, scalable solver interfaces, and deep-city engine orchestration.
-- REST API, Python SDK, adapter SDK, web UI, and hosted read-only demo.
+- The remaining non-duplicative scenario library, figure/view manifests, and transportability
+  tests required by the flagship scope.
 - CI/security workflows require a real remote run before their results can be called verified.
 
 ## Explicitly not complete
 
-- Eight deep-city adapters. The 30 Tier-S bundles are complete for standardized descriptive
-  screening only and deliberately do not imply deep analytical readiness.
 - A production-scale urban knowledge graph. The current seed graph has 494 nodes and 250 edges.
 - Externally credible causal studies, city-calibrated intervention simulations, or live forecast
-  performance. The current causal/simulation qualification artifacts are synthetic.
+  performance. Tier-D action effects, costs, capacities, and risks remain hypothetical.
 - The full 240 non-duplicative scenario target. The historical replay and optimization-task
-  minimums are complete, but they are not counted as 240 application scenarios.
+  minimums are complete, and the twelve Tier-D templates are counted once rather than 96 times.
 - Web/API/SDK ecosystem and public hosted demo.
 - External review, real users, municipal adoption, or real-world impact.

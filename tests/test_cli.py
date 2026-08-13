@@ -26,7 +26,7 @@ def test_cli_version() -> None:
 def test_cli_builds_schemas(tmp_path: Path) -> None:
     result = runner.invoke(app, ["schemas", "build", "--output", str(tmp_path)])
     assert result.exit_code == 0
-    assert len(list(tmp_path.glob("*.schema.json"))) == 17
+    assert len(list(tmp_path.glob("*.schema.json"))) == 22
 
 
 @pytest.mark.parametrize(

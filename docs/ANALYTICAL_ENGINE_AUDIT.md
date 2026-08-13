@@ -147,13 +147,16 @@ bytes against the registry and checksum file before rebuilding the entire tree.
 
 ## Quality evidence
 
-The milestone test suite contains 366 tests with 95.62% branch-aware coverage at the latest full
+The historical milestone-4 suite contained 366 tests with 95.62% combined line-and-branch coverage
+at its full
 run. The engine-focused suites include 21 forecast, 17 causal, 30 simulation, 23 uncertainty, 22
 portfolio, and eight benchmark tests. Strict mypy and Ruff pass. The independently generated
 verification report is
 [`../verification/milestone-4-analytical-engines.json`](../verification/milestone-4-analytical-engines.json),
 and detailed coverage evidence is
-[`../verification/milestone-4-coverage.json`](../verification/milestone-4-coverage.json).
+[`../verification/milestone-4-coverage.json`](../verification/milestone-4-coverage.json). The
+current milestone-5 suite and coverage are recorded separately in
+[`../verification/milestone-5-coverage.json`](../verification/milestone-5-coverage.json).
 
 These local results do not substitute for a remote CI run, mutation testing, security scanning,
 external methodological review, or domain validation. Those remain separate release gates.

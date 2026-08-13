@@ -27,12 +27,20 @@ personal-data risk, and redistribution boundary.
 - Do not silently replace a revised artifact under an old manifest.
 - Make page counts additive only when pages are disjoint and deduplicated.
 - Publish missingness, schema drift, and quality failures beside successful outputs.
+- When multiple aggregates re-express the same records, retain every view for reconciliation but
+  count the underlying records only once in scale claims.
+- Store no street address, free text, submitter field, contact field, or individual-level request
+  record in the Tier-D public reference layer.
+- Treat an absent endpoint-side date as ambiguous between true zero and publication incompleteness;
+  any zero completion must be declared in diagnostics and limitations.
 
 ## Interpretation safeguards
 
 Aggregate prevalence is not an individual record. Prediction is not causation. Geographic
 association is not an intervention effect. Public records are not proof of service delivery.
 Model outputs must preserve uncertainty, limitations, and the source-to-output transformation.
+Public category labels are operational taxonomies, and keyword matching does not validate the
+underlying condition. A workflow status such as “closed” does not verify resolution or benefit.
 
 ## Retention and removal
 

@@ -1,0 +1,173 @@
+{
+  "$defs": {
+    "MunicipalAggregateRow": {
+      "additionalProperties": false,
+      "properties": {
+        "area": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Area"
+        },
+        "category": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Category"
+        },
+        "request_count": {
+          "minimum": 1,
+          "title": "Request Count",
+          "type": "integer"
+        },
+        "service_date": {
+          "anyOf": [
+            {
+              "format": "date",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Service Date"
+        },
+        "status": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Status"
+        }
+      },
+      "required": [
+        "request_count"
+      ],
+      "title": "MunicipalAggregateRow",
+      "type": "object"
+    },
+    "MunicipalAggregation": {
+      "enum": [
+        "daily-category",
+        "daily-area",
+        "category-status",
+        "area-status"
+      ],
+      "title": "MunicipalAggregation",
+      "type": "string"
+    },
+    "MunicipalPlatform": {
+      "enum": [
+        "socrata",
+        "ckan-datastore",
+        "carto-sql"
+      ],
+      "title": "MunicipalPlatform",
+      "type": "string"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "aggregate_row_count": {
+      "minimum": 1,
+      "title": "Aggregate Row Count",
+      "type": "integer"
+    },
+    "aggregation": {
+      "$ref": "#/$defs/MunicipalAggregation"
+    },
+    "city_id": {
+      "pattern": "^[a-z0-9]+(?:[._-][a-z0-9]+)*$",
+      "title": "City Id",
+      "type": "string"
+    },
+    "coverage_end_exclusive": {
+      "format": "date",
+      "title": "Coverage End Exclusive",
+      "type": "string"
+    },
+    "coverage_start": {
+      "format": "date",
+      "title": "Coverage Start",
+      "type": "string"
+    },
+    "dataset_identifier": {
+      "minLength": 1,
+      "title": "Dataset Identifier",
+      "type": "string"
+    },
+    "limitations": {
+      "items": {
+        "type": "string"
+      },
+      "minItems": 1,
+      "title": "Limitations",
+      "type": "array"
+    },
+    "platform": {
+      "$ref": "#/$defs/MunicipalPlatform"
+    },
+    "rows": {
+      "items": {
+        "$ref": "#/$defs/MunicipalAggregateRow"
+      },
+      "minItems": 1,
+      "title": "Rows",
+      "type": "array"
+    },
+    "schema_version": {
+      "default": "1.0.0",
+      "title": "Schema Version",
+      "type": "string"
+    },
+    "source_id": {
+      "pattern": "^[a-z0-9]+(?:[._-][a-z0-9]+)*$",
+      "title": "Source Id",
+      "type": "string"
+    },
+    "transformation": {
+      "minLength": 1,
+      "title": "Transformation",
+      "type": "string"
+    },
+    "underlying_request_count": {
+      "minimum": 1,
+      "title": "Underlying Request Count",
+      "type": "integer"
+    }
+  },
+  "required": [
+    "source_id",
+    "city_id",
+    "platform",
+    "dataset_identifier",
+    "aggregation",
+    "coverage_start",
+    "coverage_end_exclusive",
+    "rows",
+    "aggregate_row_count",
+    "underlying_request_count",
+    "transformation",
+    "limitations"
+  ],
+  "title": "MunicipalAggregateArtifact",
+  "type": "object"
+}

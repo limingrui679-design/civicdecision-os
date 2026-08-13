@@ -20,12 +20,13 @@ intervention definition
 
 This repository is an early implementation. The global scale described in the project blueprint is a target, not a completed result. Current, verified capabilities are listed in [`docs/STATUS.md`](docs/STATUS.md); the complete requirement-to-evidence matrix is in [`docs/REQUIREMENTS.md`](docs/REQUIREMENTS.md).
 
-The fourth implementation milestone establishes 17 generated public contracts, the evidence type
-system, deterministic validation, eight real public-data connectors, a reproducible Tier-G catalog
-of 250 city points, 30 Tier-S standardized descriptive bundles, five transparent analytical
-engines, 40 held-out historical replays, and 100 bounded optimization tasks. Tier G means global
-discoverability and Tier S means bounded cross-city screening; neither means a deep city adapter,
-production deployment, municipal adoption, or real-world impact.
+The fifth implementation milestone establishes 22 generated public contracts, the evidence type
+system, deterministic validation, ten loadable public-data connectors, a reproducible Tier-G
+catalog of 250 city points, 30 Tier-S standardized descriptive bundles, five transparent
+analytical engines, 40 held-out historical replays, 100 bounded benchmark optimization tasks, and
+eight Tier-D city adapters with 96 evidence-gated scenario packs. Tier D means a deeper,
+source-bound reference workflow; it still does not mean production deployment, municipal
+adoption, policy validity, or real-world impact.
 
 ## Verified reference workflow
 
@@ -40,20 +41,21 @@ radius is not travel time, the population proxy is not individual demand, and th
 is not a municipal recommendation.
 
 Current local quality evidence is recorded in
-[`verification/milestone-4-analytical-engines.json`](verification/milestone-4-analytical-engines.json)
-and [`verification/milestone-4-coverage.json`](verification/milestone-4-coverage.json). The
-independent verifier regenerates Schemas, both reference outputs, all four global-city artifacts,
-the complete standardized-city tree, and all milestone-4 benchmark artifacts in a temporary
-directory and requires exact bytes.
+[`verification/milestone-5-deep-cities.json`](verification/milestone-5-deep-cities.json). The
+independent verifier regenerates Schemas, both earlier reference outputs, all four global-city
+artifacts, the complete standardized-city and analytical-benchmark trees, and all 707 Tier-D
+artifacts in a temporary directory and requires exact bytes.
 
-The current source catalog contains eight verified connectors across eight source families. The 41
-committed source manifests cover 100,842 declared source units: 34,086 GeoNames gazetteer rows,
-65,880 NASA POWER parameter-date values for the Tier-S layer, 795 World Bank response rows for
-three context indicators, and 81 earlier bounded source units. These heterogeneous units are not
-presented as 100,842 independent policy observations. See
+The current source catalog contains ten loadable connector implementations across eight source
+families, plus eight audited municipal dataset configurations used by the generic aggregate
+connector. The 90 committed source manifests cover 258,478 declared heterogeneous units: 100,842
+from the earlier layers, 148,836 endpoint-side Tier-D aggregate rows, and 8,800 Tier-D context
+units. The four municipal views re-express the same 4,148,633 underlying requests and are never
+summed as 16,594,532 distinct requests. See
 [`catalog/connectors.json`](catalog/connectors.json) for authentication, request bounds, licensing
-summaries, record semantics, and primary limitations. Eight is current scope, not the final
-25–35-family target.
+summaries, record semantics, and primary limitations, and the
+[Tier-D anti-inflation audit](catalog/deep-cities/anti-inflation-audit.md) for exact counting
+rules. Eight source families remain current scope, not the final 25–35-family target.
 
 ## Reproducible global city foundation
 
@@ -90,6 +92,31 @@ artifacts: GeoNames identity, one complete 2024 NASA POWER six-parameter point s
 Every screening record fixes `recommendation_issued=false`. National indicators remain explicitly
 typed as country context, and the point climate series is never described as a municipal exposure
 surface. See [`docs/STANDARDIZED_CITY_COVERAGE.md`](docs/STANDARDIZED_CITY_COVERAGE.md).
+
+## Eight deep-city reference bundles
+
+[`catalog/deep-cities/registry.json`](catalog/deep-cities/registry.json) indexes New York City,
+Boston, Chicago, San Francisco, Seattle, Austin, Los Angeles, and Philadelphia. Each bundle binds
+four independently reconciled official municipal aggregates, one exact ACS incorporated-place
+population row, one current TIGERweb legal boundary, and one complete six-parameter NASA POWER
+point series. The build emits:
+
+- 8 Tier-D City Adapters, 8 quality reports, 144 evidence-typed city metrics, and 56 explicit
+  source bindings;
+- 12 non-duplicative scenario designs bound across eight cities, producing 96 validated
+  DecisionPacks and 96 briefs;
+- 76 completed planning-support packs and 20 explicit `insufficient-evidence` packs, including
+  causal, network, and minimum-workload gates;
+- 76 forecasts over 13,908 daily input positions, 190,000 seeded simulation iterations, 76
+  exhaustive optimization tasks evaluating 237,500 portfolios, and 228,000 paired uncertainty
+  option values; and
+- a 49-row deduplicated source ledger, 96-row scenario ledger, 144-row metric ledger, selection
+  report, template catalog, anti-inflation audit, and 706-entry portable checksum inventory.
+
+The 96 executions are not described as 96 new methods: they are eight city bindings of twelve
+shared designs. Service requests remain reports rather than incidents or outcomes; ACS is a survey
+estimate; NASA POWER is one gridded point; action effects, costs, capacities, and risks remain
+hypothetical. See the [Tier-D evidence audit](catalog/deep-cities/summary.md).
 
 ## Audited analytical engines and benchmarks
 
@@ -142,6 +169,16 @@ claim boundaries.
 15. `portfolio-optimization-run.schema.json` — problem, baseline, plans, violations, frontier, and solver status.
 16. `benchmark-evidence-summary.schema.json` — row evidence plus recomputed task and work totals.
 17. `benchmark-registry.schema.json` — run inventory, file hashes, counts, and artifact-set binding.
+18. `municipal-aggregate-artifact.schema.json` — privacy-minimized request dimensions and exact
+    underlying-count reconciliation.
+19. `deep-scenario-pack.schema.json` — city binding, analytical files, negative gates, and embedded
+    DecisionPack.
+20. `deep-city-bundle.schema.json` — Tier-D sources, quality, metrics, capabilities, and twelve
+    scenario packs.
+21. `tier-d-registry.schema.json` — eight-city selection, twelve shared templates, hashes, and
+    anti-duplication structure.
+22. `tier-d-evidence-summary.schema.json` — source, scenario, forecast, simulation, optimization,
+    uncertainty, and anti-inflation workload ledger.
 
 ## Evidence types
 
@@ -199,6 +236,12 @@ civicdecision benchmarks build-milestone-4 \
   --replay-city-count 20 \
   --optimization-task-count 100 \
   --output benchmarks/milestone-4
+
+civicdecision deep fetch-sources --output examples/data/tier-d
+civicdecision deep fetch-context --output examples/data/tier-d
+civicdecision deep build \
+  --source-directory examples/data/tier-d \
+  --output-directory catalog/deep-cities
 ```
 
 Verify a downloaded artifact and compile the committed reference workflow:
@@ -224,6 +267,8 @@ python scripts/verify_repository.py
 - `src/civicdecision/analysis/` and `optimization/` — transparent analytical primitives.
 - `src/civicdecision/benchmarks/` — deterministic replay, solver-task, qualification, and
   evidence-ledger builders.
+- `src/civicdecision/deep/` — audited city specifications, acquisition, evidence reconciliation,
+  twelve scenario templates, compilation, ledgers, and exact-rebuild output.
 - `src/civicdecision/demos/` — end-to-end reference compilers.
 - `schemas/` — generated versioned JSON Schemas.
 - `examples/data/` — small public fixtures plus manifests.
@@ -231,6 +276,8 @@ python scripts/verify_repository.py
 - `docs/` — architecture, governance, threat model, ADRs, and scope matrix.
 - `verification/` — machine-readable exact-rebuild evidence.
 - `benchmarks/` — complete runs, row-level evidence ledgers, reports, and portable hashes.
+- `catalog/deep-cities/` — 8 city bundles, 96 scenario packs, 96 briefs, evidence ledgers, and
+  anti-inflation audit.
 
 ## Scope and claim boundary
 

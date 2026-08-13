@@ -1,0 +1,35 @@
+{
+  "artifact_id": "us.ca.san-francisco.category-status.16a4caac65a2",
+  "artifact_path": "us.ca.san-francisco.category-status.16a4caac65a2.json",
+  "content_hash": "sha256:de10e637bfab7ae2c2ab3c2043737771d178ffd41073ed013cd312fb7c2960ec",
+  "data_url": "https://data.sfgov.org/resource/vw6y-z8j6.json?%24select=service_name+as+category%2Cstatus_description+as+status%2Ccount%28%2A%29+as+request_count&%24where=requested_datetime+%3E%3D+%272025-04-01T00%3A00%3A00%27+AND+requested_datetime+%3C+%272025-10-01T00%3A00%3A00%27&%24group=service_name%2Cstatus_description&%24order=category%2Cstatus&%24limit=50000&%24offset=0",
+  "geographic_scope": "San Francisco",
+  "landing_url": "https://data.sfgov.org/City-Infrastructure/311-Cases/vw6y-z8j6",
+  "license": "Open Data Commons Public Domain Dedication and License (PDDL)",
+  "limitations": [
+    "A service request is a resident or staff report, not a verified incident, exposure, need, or completed service outcome.",
+    "Reporting access, awareness, channel choice, duplicate handling, and agency workflow create selection and measurement differences across places and time.",
+    "Aggregated public records omit street addresses and free text and cannot support individual-level inference."
+  ],
+  "name": "San Francisco service requests: category-status",
+  "publisher": "San Francisco 311",
+  "query": {
+    "aggregation": "category-status",
+    "end": "2025-10-01",
+    "limit": 50000,
+    "offset": 0,
+    "start": "2025-04-01"
+  },
+  "record_count": 64,
+  "response_headers": {
+    "content-type": "application/json;charset=utf-8",
+    "etag": "\"Zm94dHJvdC4yNjMzXzM5XzM4Mzg0NnFMU1JxTmRNcU5xZnhCZWthaFBGV1hOVGE0---gzipCLa5P7aCDGziLEo6KAcM5289bag--gzip--gzip\"",
+    "last-modified": "Wed, 12 Aug 2026 10:10:48 GMT",
+    "x-soda2-truth-last-modified": "Wed, 12 Aug 2026 10:10:48 GMT"
+  },
+  "retrieved_at": "2026-08-13T01:29:51.081517Z",
+  "schema_fingerprint": "sha256:cff8fc29203d0689178d8dfcc295521ea8400e852d80c2d2f1355c2ae77aaffc",
+  "schema_version": "1.0.0",
+  "source_id": "san-francisco-open-data-311-aggregate",
+  "temporal_scope": "[2025-04-01, 2025-10-01)"
+}

@@ -1,0 +1,37 @@
+{
+  "artifact_id": "us.il.chicago.category-status.16a4caac65a2",
+  "artifact_path": "us.il.chicago.category-status.16a4caac65a2.json",
+  "content_hash": "sha256:c1c39a1c40861f84db5004fbfd8b176fc6efaf63cb3745232fb3803da9defffe",
+  "data_url": "https://data.cityofchicago.org/resource/v6vf-nfxy.json?%24select=sr_type+as+category%2Cstatus+as+status%2Ccount%28%2A%29+as+request_count&%24where=created_date+%3E%3D+%272025-04-01T00%3A00%3A00%27+AND+created_date+%3C+%272025-10-01T00%3A00%3A00%27&%24group=sr_type%2Cstatus&%24order=category%2Cstatus&%24limit=50000&%24offset=0",
+  "geographic_scope": "Chicago",
+  "landing_url": "https://data.cityofchicago.org/Service-Requests/311-Service-Requests/v6vf-nfxy",
+  "license": "City of Chicago data portal Terms of Use",
+  "limitations": [
+    "A service request is a resident or staff report, not a verified incident, exposure, need, or completed service outcome.",
+    "Reporting access, awareness, channel choice, duplicate handling, and agency workflow create selection and measurement differences across places and time.",
+    "Aggregated public records omit street addresses and free text and cannot support individual-level inference.",
+    "Information-only calls can carry the 311 center address and should not be interpreted as incident locations.",
+    "Legacy records coexist with records from the system launched in December 2018."
+  ],
+  "name": "Chicago service requests: category-status",
+  "publisher": "City of Chicago",
+  "query": {
+    "aggregation": "category-status",
+    "end": "2025-10-01",
+    "limit": 50000,
+    "offset": 0,
+    "start": "2025-04-01"
+  },
+  "record_count": 218,
+  "response_headers": {
+    "content-type": "application/json;charset=utf-8",
+    "etag": "\"Z29sZi4yOTI4OV8xM18xNDY2MjlnOE0wLW5HdENPeVVGblNtODA1LTVteHZYSVk---gzir5srGWQzWzNDddIRXdbW3WxGGScQ--gzip--gzip\"",
+    "last-modified": "Thu, 13 Aug 2026 00:24:30 GMT",
+    "x-soda2-truth-last-modified": "Thu, 13 Aug 2026 00:24:30 GMT"
+  },
+  "retrieved_at": "2026-08-13T01:26:44.648693Z",
+  "schema_fingerprint": "sha256:cff8fc29203d0689178d8dfcc295521ea8400e852d80c2d2f1355c2ae77aaffc",
+  "schema_version": "1.0.0",
+  "source_id": "chicago-open-data-311-aggregate",
+  "temporal_scope": "[2025-04-01, 2025-10-01)"
+}

@@ -1,0 +1,36 @@
+{
+  "artifact_id": "us.wa.seattle.area-status.7f905235a604",
+  "artifact_path": "us.wa.seattle.area-status.7f905235a604.json",
+  "content_hash": "sha256:5de53010a516c025e18c1e10b86b8f63075f07be64ee3671345a4c4eac82b2b8",
+  "data_url": "https://data.seattle.gov/resource/5ngg-rpne.json?%24select=community_reporting_area+as+area%2Cservicerequeststatusname+as+status%2Ccount%28%2A%29+as+request_count&%24where=createddate+%3E%3D+%272025-04-01T00%3A00%3A00%27+AND+createddate+%3C+%272025-10-01T00%3A00%3A00%27&%24group=community_reporting_area%2Cservicerequeststatusname&%24order=area%2Cstatus&%24limit=50000&%24offset=0",
+  "geographic_scope": "Seattle",
+  "landing_url": "https://data.seattle.gov/City-Administration/Customer-Service-Requests/5ngg-rpne",
+  "license": "Public Domain as listed by the City of Seattle data portal",
+  "limitations": [
+    "A service request is a resident or staff report, not a verified incident, exposure, need, or completed service outcome.",
+    "Reporting access, awareness, channel choice, duplicate handling, and agency workflow create selection and measurement differences across places and time.",
+    "Aggregated public records omit street addresses and free text and cannot support individual-level inference.",
+    "The dataset contains selected public request types and is not the complete set of requests received by every department."
+  ],
+  "name": "Seattle service requests: area-status",
+  "publisher": "City of Seattle",
+  "query": {
+    "aggregation": "area-status",
+    "end": "2025-10-01",
+    "limit": 50000,
+    "offset": 0,
+    "start": "2025-04-01"
+  },
+  "record_count": 472,
+  "response_headers": {
+    "content-type": "application/json;charset=utf-8",
+    "etag": "\"aW5kaWEuMzM2MDJfNF84Nzd4VnhkNlFaRjFWc2RCcWR4M0dYQWF1UzZIYkU---gzipE6S9ls8KTMJN5DKYs6FMYUIAGXw--gzip--gzip\"",
+    "last-modified": "Wed, 12 Aug 2026 15:20:45 GMT",
+    "x-soda2-truth-last-modified": "Wed, 12 Aug 2026 15:20:45 GMT"
+  },
+  "retrieved_at": "2026-08-13T01:29:57.457531Z",
+  "schema_fingerprint": "sha256:3ca6c061b597e53e661010cb42b3617598f6d6e30514329dd3cb554550f124a3",
+  "schema_version": "1.0.0",
+  "source_id": "seattle-open-data-customer-service-aggregate",
+  "temporal_scope": "[2025-04-01, 2025-10-01)"
+}

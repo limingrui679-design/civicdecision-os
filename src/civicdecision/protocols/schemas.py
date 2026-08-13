@@ -16,6 +16,13 @@ from civicdecision.benchmarks.models import (
     BenchmarkRegistry,
     HistoricalReplay,
 )
+from civicdecision.connectors.municipal_service import MunicipalAggregateArtifact
+from civicdecision.deep.models import (
+    DeepCityBundle,
+    DeepScenarioPack,
+    TierDEvidenceSummary,
+    TierDRegistry,
+)
 from civicdecision.optimization.portfolio import PortfolioOptimizationRun
 from civicdecision.protocols.city import CityAdapterManifest
 from civicdecision.protocols.decision import DecisionPack
@@ -34,6 +41,8 @@ SCHEMAS: dict[str, type[BaseModel]] = {
     "benchmark-registry.schema.json": BenchmarkRegistry,
     "causal-run.schema.json": DifferenceInDifferencesRun,
     "city-adapter.schema.json": CityAdapterManifest,
+    "deep-city-bundle.schema.json": DeepCityBundle,
+    "deep-scenario-pack.schema.json": DeepScenarioPack,
     "policy-scenario.schema.json": PolicyScenario,
     "decision-pack.schema.json": DecisionPack,
     "forecast-run.schema.json": ForecastRun,
@@ -46,6 +55,9 @@ SCHEMAS: dict[str, type[BaseModel]] = {
     "tier-s-registry.schema.json": TierSRegistry,
     "portfolio-optimization-run.schema.json": PortfolioOptimizationRun,
     "simulation-run.schema.json": SimulationRun,
+    "municipal-aggregate-artifact.schema.json": MunicipalAggregateArtifact,
+    "tier-d-registry.schema.json": TierDRegistry,
+    "tier-d-evidence-summary.schema.json": TierDEvidenceSummary,
     "uncertainty-run.schema.json": UncertaintyRun,
 }
 

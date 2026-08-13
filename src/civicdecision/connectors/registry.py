@@ -58,6 +58,44 @@ class ConnectorDescriptor(StrictModel):
 
 CONNECTOR_REGISTRY = (
     ConnectorDescriptor(
+        id="census-acs5-2024-b01003-population",
+        name="Census ACS 2024 five-year B01003 place population",
+        family=ConnectorFamily.DEMOGRAPHY,
+        scope=ConnectorScope.NATIONAL,
+        publisher="U.S. Census Bureau",
+        module="civicdecision.connectors.census_places",
+        class_name="CensusACSPopulationTableConnector",
+        documentation_url=AnyHttpUrl(
+            "https://www.census.gov/data/developers/data-sets/acs-5year.html"
+        ),
+        authentication="No key for the official table-based summary-file download.",
+        paging_or_bound="One <= 25 MiB B01003 file filtered to <= 50 named place GEOIDs",
+        license_summary="U.S. Census Bureau public data; source attribution requested",
+        record_semantics="One ACS five-year place population estimate with its 90% margin",
+        primary_limitations=[
+            "Survey estimates require margins of error and correct statistical universes."
+        ],
+    ),
+    ConnectorDescriptor(
+        id="census-tigerweb-current-incorporated-place",
+        name="Census TIGERweb current incorporated-place boundary",
+        family=ConnectorFamily.GEOGRAPHY,
+        scope=ConnectorScope.NATIONAL,
+        publisher="U.S. Census Bureau Geography Division",
+        module="civicdecision.connectors.census_places",
+        class_name="CensusTIGERPlaceConnector",
+        documentation_url=AnyHttpUrl(
+            "https://tigerweb.geo.census.gov/tigerwebmain/TIGERweb_restmapservice.html"
+        ),
+        authentication="No API key.",
+        paging_or_bound="Exactly one incorporated-place GEOID, polygon geometry, <= 10 MiB",
+        license_summary="U.S. Census Bureau public geographic data",
+        record_semantics="One current-service incorporated-place polygon feature",
+        primary_limitations=[
+            "Boundary vintages can change and do not define service or exposure geographies."
+        ],
+    ),
+    ConnectorDescriptor(
         id="cdc-places-2025-tract",
         name="CDC PLACES 2025 census-tract estimates",
         family=ConnectorFamily.HEALTH,

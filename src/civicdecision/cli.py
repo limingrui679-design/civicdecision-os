@@ -42,6 +42,9 @@ from civicdecision.connectors.world_bank import (
     WorldBankIndicatorConnector,
     WorldBankIndicatorQuery,
 )
+from civicdecision.deep.build import build_tier_d_artifacts
+from civicdecision.deep.fetch import fetch_tier_d_context, fetch_tier_d_sources
+from civicdecision.deep.models import TierDEvidenceSummary, TierDRegistry
 from civicdecision.demos.heat_access import (
     HeatAccessDemoConfig,
     build_heat_access_pack,
@@ -67,12 +70,14 @@ sources_app = typer.Typer(no_args_is_help=True)
 demo_app = typer.Typer(no_args_is_help=True)
 cities_app = typer.Typer(no_args_is_help=True)
 benchmarks_app = typer.Typer(no_args_is_help=True)
+deep_app = typer.Typer(no_args_is_help=True)
 app.add_typer(schemas_app, name="schemas")
 app.add_typer(protocol_app, name="protocol")
 app.add_typer(sources_app, name="sources")
 app.add_typer(demo_app, name="demo")
 app.add_typer(cities_app, name="cities")
 app.add_typer(benchmarks_app, name="benchmarks")
+app.add_typer(deep_app, name="deep")
 console = Console()
 
 
@@ -558,6 +563,93 @@ def benchmarks_build_milestone_4(
     table.add_row("optimization evidence CSV", str(artifacts.optimization_evidence_csv_path))
     table.add_row("qualification evidence CSV", str(artifacts.qualification_evidence_csv_path))
     table.add_row("summary report", str(artifacts.summary_markdown_path))
+    table.add_row("checksums", str(artifacts.checksum_path))
+    console.print(table)
+
+
+@deep_app.command("fetch-sources")
+def deep_fetch_sources(
+    output: Annotated[Path, typer.Option("--output", "-o")] = Path("examples/data/tier-d"),
+    start: Annotated[str, typer.Option("--start")] = "2025-04-01",
+    end: Annotated[str, typer.Option("--end-exclusive")] = "2025-10-01",
+    concurrency: Annotated[int, typer.Option("--concurrency")] = 2,
+) -> None:
+    """Fetch four official aggregate municipal views for every Tier-D city."""
+
+    try:
+        report = asyncio.run(
+            fetch_tier_d_sources(
+                output,
+                start=_parse_iso_date(start, "start"),
+                end=_parse_iso_date(end, "end-exclusive"),
+                concurrency=concurrency,
+            )
+        )
+    except (CivicDecisionError, ValueError) as exc:
+        console.print(f"[red]Tier-D municipal fetch failed safely[/red] {exc}")
+        raise typer.Exit(code=2) from exc
+    console.print(
+        f"[green]fetched[/green] {report.aggregation_count} aggregates for "
+        f"{report.city_count} cities: {report.aggregate_rows:,} aggregate rows"
+    )
+
+
+@deep_app.command("fetch-context")
+def deep_fetch_context(
+    output: Annotated[Path, typer.Option("--output", "-o")] = Path("examples/data/tier-d"),
+    start: Annotated[str, typer.Option("--start")] = "2025-04-01",
+    end: Annotated[str, typer.Option("--end-inclusive")] = "2025-09-30",
+    concurrency: Annotated[int, typer.Option("--concurrency")] = 2,
+) -> None:
+    """Fetch shared ACS population, legal boundaries, and NASA climate context."""
+
+    try:
+        report = asyncio.run(
+            fetch_tier_d_context(
+                output,
+                start=_parse_iso_date(start, "start"),
+                end_inclusive=_parse_iso_date(end, "end-inclusive"),
+                concurrency=concurrency,
+            )
+        )
+    except (CivicDecisionError, ValueError) as exc:
+        console.print(f"[red]Tier-D context fetch failed safely[/red] {exc}")
+        raise typer.Exit(code=2) from exc
+    console.print(
+        f"[green]fetched[/green] {report.artifact_count} context artifacts for "
+        f"{report.city_count} cities: {report.declared_source_units:,} declared units"
+    )
+
+
+@deep_app.command("build")
+def deep_build(
+    source_directory: Annotated[Path, typer.Option("--source-directory")] = Path(
+        "examples/data/tier-d"
+    ),
+    output_directory: Annotated[Path, typer.Option("--output-directory", "-o")] = Path(
+        "catalog/deep-cities"
+    ),
+) -> None:
+    """Build eight deep-city bundles and 96 evidence-gated scenario packs."""
+
+    try:
+        artifacts = build_tier_d_artifacts(source_directory, output_directory)
+    except CivicDecisionError as exc:
+        console.print(f"[red]Tier-D build failed safely[/red] {exc}")
+        raise typer.Exit(code=2) from exc
+    registry = validate_document(artifacts.registry_path, TierDRegistry)
+    evidence = validate_document(artifacts.evidence_summary_path, TierDEvidenceSummary)
+    table = Table(title="Built Tier-D deep-city reference layer")
+    table.add_column("Field")
+    table.add_column("Value")
+    table.add_row("cities", str(len(registry.entries)))
+    table.add_row("scenario packs", str(evidence.city_bound_scenario_executions))
+    table.add_row("completed", str(evidence.completed_scenarios))
+    table.add_row("negative", str(evidence.negative_scenarios))
+    table.add_row("deduplicated requests", f"{evidence.deduplicated_underlying_requests:,}")
+    table.add_row("written artifacts", str(len(artifacts.artifact_paths)))
+    table.add_row("registry", str(artifacts.registry_path))
+    table.add_row("evidence summary", str(artifacts.evidence_summary_path))
     table.add_row("checksums", str(artifacts.checksum_path))
     console.print(table)
 

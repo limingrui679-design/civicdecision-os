@@ -1,0 +1,33 @@
+{
+  "artifact_id": "us.ma.boston.area-status.7f905235a604",
+  "artifact_path": "us.ma.boston.area-status.7f905235a604.json",
+  "content_hash": "sha256:d77b39669866f747d929d1e3cea4eacb7fbe4f015e2de9e1d5cfd3656e318cfa",
+  "data_url": "https://data.boston.gov/api/3/action/datastore_search_sql?sql=SELECT+%22neighborhood%22+AS+area%2C+%22case_status%22+AS+status%2C+count%28%2A%29%3A%3Aint+AS+request_count+FROM+%229d7c2214-4709-478a-a2e8-fb2020a5bb94%22+WHERE+%22open_dt%22+%3E%3D+%272025-04-01%27+AND+%22open_dt%22+%3C+%272025-10-01%27+GROUP+BY+%22neighborhood%22%2C+%22case_status%22+ORDER+BY+area%2C+status+LIMIT+50000+OFFSET+0",
+  "geographic_scope": "Boston",
+  "landing_url": "https://data.boston.gov/dataset/311-service-requests",
+  "license": "Open Data Commons Public Domain Dedication and License (PDDL)",
+  "limitations": [
+    "A service request is a resident or staff report, not a verified incident, exposure, need, or completed service outcome.",
+    "Reporting access, awareness, channel choice, duplicate handling, and agency workflow create selection and measurement differences across places and time.",
+    "Aggregated public records omit street addresses and free text and cannot support individual-level inference.",
+    "Boston began a backend transition in October 2025; this reference window ends before that transition and must not be joined to the new schema silently."
+  ],
+  "name": "Boston service requests: area-status",
+  "publisher": "City of Boston",
+  "query": {
+    "aggregation": "area-status",
+    "end": "2025-10-01",
+    "limit": 50000,
+    "offset": 0,
+    "start": "2025-04-01"
+  },
+  "record_count": 47,
+  "response_headers": {
+    "content-type": "application/json;charset=utf-8"
+  },
+  "retrieved_at": "2026-08-13T01:26:11.457371Z",
+  "schema_fingerprint": "sha256:3ca6c061b597e53e661010cb42b3617598f6d6e30514329dd3cb554550f124a3",
+  "schema_version": "1.0.0",
+  "source_id": "boston-open-data-311-2025-aggregate",
+  "temporal_scope": "[2025-04-01, 2025-10-01)"
+}

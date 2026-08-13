@@ -1,0 +1,35 @@
+{
+  "artifact_id": "us.ca.los-angeles.category-status.16a4caac65a2",
+  "artifact_path": "us.ca.los-angeles.category-status.16a4caac65a2.json",
+  "content_hash": "sha256:8a77b009fe89763733d003355bb2e45977039945ffcd7f077847df9ccd819c9f",
+  "data_url": "https://data.lacity.org/resource/h73f-gn57.json?%24select=requesttype+as+category%2Cstatus+as+status%2Ccount%28%2A%29+as+request_count&%24where=createddate+%3E%3D+%272025-04-01T00%3A00%3A00%27+AND+createddate+%3C+%272025-10-01T00%3A00%3A00%27&%24group=requesttype%2Cstatus&%24order=category%2Cstatus&%24limit=50000&%24offset=0",
+  "geographic_scope": "Los Angeles",
+  "landing_url": "https://data.lacity.org/City-Infrastructure-Service-Requests/MyLA311-Service-Request-Data-2025/h73f-gn57",
+  "license": "No dataset-specific license is displayed; use is subject to City of Los Angeles open-data terms",
+  "limitations": [
+    "A service request is a resident or staff report, not a verified incident, exposure, need, or completed service outcome.",
+    "Reporting access, awareness, channel choice, duplicate handling, and agency workflow create selection and measurement differences across places and time.",
+    "Aggregated public records omit street addresses and free text and cannot support individual-level inference."
+  ],
+  "name": "Los Angeles service requests: category-status",
+  "publisher": "City of Los Angeles Information Technology Agency",
+  "query": {
+    "aggregation": "category-status",
+    "end": "2025-10-01",
+    "limit": 50000,
+    "offset": 0,
+    "start": "2025-04-01"
+  },
+  "record_count": 26,
+  "response_headers": {
+    "content-type": "application/json;charset=utf-8",
+    "etag": "\"Zm94dHJvdC40NTk3MV82XzEzMTgzMzJNSDJEMUFfYkNVd2RBalk1ak4tSGQ5VW1EYWc---gzirqDjlcC1LNiSXVOGyYfm0flrHnHA--gzip--gzip\"",
+    "last-modified": "Thu, 13 Aug 2026 01:21:15 GMT",
+    "x-soda2-truth-last-modified": "Thu, 13 Aug 2026 01:21:15 GMT"
+  },
+  "retrieved_at": "2026-08-13T01:30:06.323211Z",
+  "schema_fingerprint": "sha256:cff8fc29203d0689178d8dfcc295521ea8400e852d80c2d2f1355c2ae77aaffc",
+  "schema_version": "1.0.0",
+  "source_id": "los-angeles-open-data-my311-2025-aggregate",
+  "temporal_scope": "[2025-04-01, 2025-10-01)"
+}

@@ -1,0 +1,382 @@
+{
+  "$defs": {
+    "AnalysisMode": {
+      "enum": [
+        "descriptive",
+        "forecast",
+        "causal",
+        "simulation",
+        "optimization"
+      ],
+      "title": "AnalysisMode",
+      "type": "string"
+    },
+    "ApplicationSuite": {
+      "enum": [
+        "climate-disaster-resilience",
+        "mobility-accessibility-operations",
+        "population-health-environmental-exposure",
+        "housing-land-use-regeneration",
+        "public-service-operations",
+        "infrastructure-finance-asset-risk",
+        "behavioral-policy-equity"
+      ],
+      "title": "ApplicationSuite",
+      "type": "string"
+    },
+    "DeepScenarioTemplate": {
+      "additionalProperties": false,
+      "properties": {
+        "analysis_modes": {
+          "items": {
+            "$ref": "#/$defs/AnalysisMode"
+          },
+          "minItems": 1,
+          "title": "Analysis Modes",
+          "type": "array"
+        },
+        "assumptions": {
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1,
+          "title": "Assumptions",
+          "type": "array"
+        },
+        "category_keywords": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Category Keywords",
+          "type": "array"
+        },
+        "completion_strategy": {
+          "$ref": "#/$defs/ScenarioCompletionStrategy"
+        },
+        "evidence_requirements": {
+          "items": {
+            "$ref": "#/$defs/EvidenceType"
+          },
+          "minItems": 1,
+          "title": "Evidence Requirements",
+          "type": "array"
+        },
+        "intended_claim": {
+          "minLength": 1,
+          "title": "Intended Claim",
+          "type": "string"
+        },
+        "limitations": {
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1,
+          "title": "Limitations",
+          "type": "array"
+        },
+        "minimum_matching_requests": {
+          "minimum": 0,
+          "title": "Minimum Matching Requests",
+          "type": "integer"
+        },
+        "prohibited_claims": {
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1,
+          "title": "Prohibited Claims",
+          "type": "array"
+        },
+        "question": {
+          "minLength": 1,
+          "title": "Question",
+          "type": "string"
+        },
+        "required_source_roles": {
+          "items": {
+            "$ref": "#/$defs/SourceRole"
+          },
+          "minItems": 1,
+          "title": "Required Source Roles",
+          "type": "array"
+        },
+        "suite": {
+          "$ref": "#/$defs/ApplicationSuite"
+        },
+        "template_id": {
+          "pattern": "^[a-z0-9]+(?:[._-][a-z0-9]+)*$",
+          "title": "Template Id",
+          "type": "string"
+        },
+        "template_order": {
+          "maximum": 12,
+          "minimum": 1,
+          "title": "Template Order",
+          "type": "integer"
+        },
+        "title": {
+          "maxLength": 160,
+          "minLength": 1,
+          "title": "Title",
+          "type": "string"
+        }
+      },
+      "required": [
+        "template_order",
+        "template_id",
+        "suite",
+        "title",
+        "question",
+        "completion_strategy",
+        "category_keywords",
+        "minimum_matching_requests",
+        "required_source_roles",
+        "analysis_modes",
+        "evidence_requirements",
+        "intended_claim",
+        "prohibited_claims",
+        "assumptions",
+        "limitations"
+      ],
+      "title": "DeepScenarioTemplate",
+      "type": "object"
+    },
+    "EvidenceType": {
+      "enum": [
+        "observed",
+        "estimated",
+        "causal",
+        "simulated",
+        "optimized",
+        "proposed"
+      ],
+      "title": "EvidenceType",
+      "type": "string"
+    },
+    "QualityStatus": {
+      "enum": [
+        "pass",
+        "warn",
+        "fail"
+      ],
+      "title": "QualityStatus",
+      "type": "string"
+    },
+    "ScenarioCompletionStrategy": {
+      "enum": [
+        "total-demand",
+        "category-demand",
+        "required-causal-design",
+        "required-network"
+      ],
+      "title": "ScenarioCompletionStrategy",
+      "type": "string"
+    },
+    "SourceRole": {
+      "enum": [
+        "municipal-demand",
+        "climate-context",
+        "geographic-identity",
+        "demographic-context",
+        "asset-inventory",
+        "network"
+      ],
+      "title": "SourceRole",
+      "type": "string"
+    },
+    "TierDRegistryEntry": {
+      "additionalProperties": false,
+      "properties": {
+        "bundle_hash": {
+          "pattern": "^sha256:[0-9a-f]{64}$",
+          "title": "Bundle Hash",
+          "type": "string"
+        },
+        "bundle_ref": {
+          "minLength": 1,
+          "title": "Bundle Ref",
+          "type": "string"
+        },
+        "city_id": {
+          "pattern": "^[a-z0-9]+(?:[._-][a-z0-9]+)*$",
+          "title": "City Id",
+          "type": "string"
+        },
+        "completed_scenarios": {
+          "maximum": 12,
+          "minimum": 0,
+          "title": "Completed Scenarios",
+          "type": "integer"
+        },
+        "display_name": {
+          "minLength": 1,
+          "title": "Display Name",
+          "type": "string"
+        },
+        "negative_scenarios": {
+          "maximum": 12,
+          "minimum": 0,
+          "title": "Negative Scenarios",
+          "type": "integer"
+        },
+        "platform": {
+          "minLength": 1,
+          "title": "Platform",
+          "type": "string"
+        },
+        "quality_status": {
+          "$ref": "#/$defs/QualityStatus"
+        },
+        "scenario_pack_hashes": {
+          "items": {
+            "type": "string"
+          },
+          "maxItems": 12,
+          "minItems": 12,
+          "title": "Scenario Pack Hashes",
+          "type": "array"
+        },
+        "scenario_pack_refs": {
+          "items": {
+            "type": "string"
+          },
+          "maxItems": 12,
+          "minItems": 12,
+          "title": "Scenario Pack Refs",
+          "type": "array"
+        },
+        "selection_order": {
+          "minimum": 1,
+          "title": "Selection Order",
+          "type": "integer"
+        },
+        "underlying_request_count": {
+          "minimum": 1,
+          "title": "Underlying Request Count",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "selection_order",
+        "city_id",
+        "display_name",
+        "platform",
+        "bundle_ref",
+        "bundle_hash",
+        "scenario_pack_refs",
+        "scenario_pack_hashes",
+        "completed_scenarios",
+        "negative_scenarios",
+        "underlying_request_count",
+        "quality_status"
+      ],
+      "title": "TierDRegistryEntry",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "created_at": {
+      "format": "date-time",
+      "title": "Created At",
+      "type": "string"
+    },
+    "entries": {
+      "items": {
+        "$ref": "#/$defs/TierDRegistryEntry"
+      },
+      "maxItems": 8,
+      "minItems": 8,
+      "title": "Entries",
+      "type": "array"
+    },
+    "limitations": {
+      "items": {
+        "type": "string"
+      },
+      "minItems": 1,
+      "title": "Limitations",
+      "type": "array"
+    },
+    "platform_counts": {
+      "additionalProperties": {
+        "type": "integer"
+      },
+      "minProperties": 3,
+      "title": "Platform Counts",
+      "type": "object"
+    },
+    "reference_period_end_exclusive": {
+      "format": "date",
+      "title": "Reference Period End Exclusive",
+      "type": "string"
+    },
+    "reference_period_start": {
+      "format": "date",
+      "title": "Reference Period Start",
+      "type": "string"
+    },
+    "registry_id": {
+      "pattern": "^[a-z0-9]+(?:[._-][a-z0-9]+)*$",
+      "title": "Registry Id",
+      "type": "string"
+    },
+    "required_scenarios_per_city": {
+      "const": 12,
+      "default": 12,
+      "title": "Required Scenarios Per City",
+      "type": "integer"
+    },
+    "scenario_templates": {
+      "items": {
+        "$ref": "#/$defs/DeepScenarioTemplate"
+      },
+      "maxItems": 12,
+      "minItems": 12,
+      "title": "Scenario Templates",
+      "type": "array"
+    },
+    "schema_version": {
+      "const": "1.0.0",
+      "default": "1.0.0",
+      "title": "Schema Version",
+      "type": "string"
+    },
+    "selection_method": {
+      "minLength": 1,
+      "title": "Selection Method",
+      "type": "string"
+    },
+    "target_city_count": {
+      "const": 8,
+      "default": 8,
+      "title": "Target City Count",
+      "type": "integer"
+    },
+    "total_scenario_packs": {
+      "const": 96,
+      "default": 96,
+      "title": "Total Scenario Packs",
+      "type": "integer"
+    },
+    "total_underlying_requests": {
+      "minimum": 1,
+      "title": "Total Underlying Requests",
+      "type": "integer"
+    }
+  },
+  "required": [
+    "registry_id",
+    "created_at",
+    "reference_period_start",
+    "reference_period_end_exclusive",
+    "selection_method",
+    "scenario_templates",
+    "entries",
+    "total_underlying_requests",
+    "platform_counts",
+    "limitations"
+  ],
+  "title": "TierDRegistry",
+  "type": "object"
+}

@@ -22,9 +22,19 @@ from civicdecision.benchmarks.build import (
 from civicdecision.benchmarks.models import (
     BenchmarkEvidenceSummary,
     BenchmarkRegistry,
+    EngineQualificationEvidence,
     HistoricalReplay,
+    HistoricalReplayEvidence,
+    OptimizationTaskEvidence,
 )
 from civicdecision.connectors.registry import CONNECTOR_REGISTRY, registry_json
+from civicdecision.deep.build import build_tier_d_artifacts
+from civicdecision.deep.models import (
+    DeepCityBundle,
+    DeepScenarioPack,
+    TierDEvidenceSummary,
+    TierDRegistry,
+)
 from civicdecision.demos.heat_access import (
     HeatAccessDemoConfig,
     build_heat_access_pack,
@@ -32,7 +42,7 @@ from civicdecision.demos.heat_access import (
 )
 from civicdecision.io import validate_document
 from civicdecision.optimization.portfolio import PortfolioOptimizationRun
-from civicdecision.protocols.base import sha256_file
+from civicdecision.protocols.base import StrictModel, sha256_file
 from civicdecision.protocols.city import CityAdapterManifest
 from civicdecision.protocols.decision import DecisionPack
 from civicdecision.protocols.scenario import PolicyScenario
@@ -267,9 +277,9 @@ def verify_repository() -> dict[str, object]:
     verify_checksum(benchmark_dir)
     benchmark_replays: list[HistoricalReplay] = []
     benchmark_optimizations: list[PortfolioOptimizationRun] = []
-    reconstructed_replay_evidence = []
-    reconstructed_optimization_evidence = []
-    reconstructed_qualification_evidence = []
+    reconstructed_replay_evidence: list[HistoricalReplayEvidence] = []
+    reconstructed_optimization_evidence: list[OptimizationTaskEvidence] = []
+    reconstructed_qualification_evidence: list[EngineQualificationEvidence] = []
     replay_evidence_by_id = {item.replay_id: item for item in benchmark_evidence.historical_replays}
     optimization_evidence_by_id = {
         item.run_id: item for item in benchmark_evidence.optimization_tasks
@@ -284,20 +294,23 @@ def verify_repository() -> dict[str, object]:
         if artifact.kind == "historical-replay":
             replay = validate_document(path, HistoricalReplay)
             benchmark_replays.append(replay)
-            row = historical_replay_evidence(replay, artifact.content_hash)
-            if row != replay_evidence_by_id.get(artifact.artifact_id):
+            replay_evidence_row = historical_replay_evidence(replay, artifact.content_hash)
+            if replay_evidence_row != replay_evidence_by_id.get(artifact.artifact_id):
                 raise RuntimeError(f"benchmark replay evidence differs: {artifact.artifact_id}")
-            reconstructed_replay_evidence.append(row)
+            reconstructed_replay_evidence.append(replay_evidence_row)
         elif artifact.kind == "optimization-task":
             optimization = validate_document(path, PortfolioOptimizationRun)
             benchmark_optimizations.append(optimization)
-            row = optimization_task_evidence(optimization, artifact.content_hash)
-            if row != optimization_evidence_by_id.get(artifact.artifact_id):
+            optimization_evidence_row = optimization_task_evidence(
+                optimization, artifact.content_hash
+            )
+            if optimization_evidence_row != optimization_evidence_by_id.get(artifact.artifact_id):
                 raise RuntimeError(
                     f"benchmark optimization evidence differs: {artifact.artifact_id}"
                 )
-            reconstructed_optimization_evidence.append(row)
+            reconstructed_optimization_evidence.append(optimization_evidence_row)
         else:
+            qualification_run: StrictModel
             if artifact.artifact_id.startswith("qualification-causal"):
                 qualification_run = validate_document(path, DifferenceInDifferencesRun)
             elif artifact.artifact_id == "qualification-simulation-seeded":
@@ -308,17 +321,17 @@ def verify_repository() -> dict[str, object]:
                 raise RuntimeError(
                     f"unknown benchmark qualification artifact: {artifact.artifact_id}"
                 )
-            row = engine_qualification_evidence(
+            qualification_evidence_row = engine_qualification_evidence(
                 artifact_id=artifact.artifact_id,
                 run=qualification_run,
                 source_refs=artifact.source_refs,
                 content_hash=artifact.content_hash,
             )
-            if row != qualification_evidence_by_id.get(artifact.artifact_id):
+            if qualification_evidence_row != qualification_evidence_by_id.get(artifact.artifact_id):
                 raise RuntimeError(
                     f"benchmark qualification evidence differs: {artifact.artifact_id}"
                 )
-            reconstructed_qualification_evidence.append(row)
+            reconstructed_qualification_evidence.append(qualification_evidence_row)
     if (
         reconstructed_replay_evidence != benchmark_evidence.historical_replays
         or reconstructed_optimization_evidence != benchmark_evidence.optimization_tasks
@@ -326,9 +339,85 @@ def verify_repository() -> dict[str, object]:
     ):
         raise RuntimeError("benchmark evidence row order differs from the registry order")
 
+    deep_dir = ROOT / "catalog/deep-cities"
+    tier_d_registry = validate_document(deep_dir / "registry.json", TierDRegistry)
+    tier_d_evidence = validate_document(deep_dir / "evidence-summary.json", TierDEvidenceSummary)
+    verify_checksum(deep_dir)
+    tier_d_bundles: list[DeepCityBundle] = []
+    tier_d_packs: list[DeepScenarioPack] = []
+    tier_d_evidence_by_id = {item.pack_id: item for item in tier_d_evidence.scenarios}
+    tier_d_source_paths = sorted((ROOT / "examples/data/tier-d").glob("**/*.manifest.json"))
+    tier_d_source_manifests = {
+        validate_document(path, SourceManifest).artifact_id: validate_document(path, SourceManifest)
+        for path in tier_d_source_paths
+    }
+    if len(tier_d_source_manifests) != tier_d_evidence.source_manifest_artifacts:
+        raise RuntimeError("Tier-D source artifact count differs from the evidence summary")
+    if tier_d_evidence.source_artifact_hashes != {
+        key: value.content_hash for key, value in sorted(tier_d_source_manifests.items())
+    }:
+        raise RuntimeError("Tier-D source artifact hashes differ from the evidence summary")
+    for tier_d_entry in tier_d_registry.entries:
+        tier_d_bundle_path = safe_relative_artifact(deep_dir, tier_d_entry.bundle_ref)
+        tier_d_bundle = validate_document(tier_d_bundle_path, DeepCityBundle)
+        if tier_d_bundle.content_hash() != tier_d_entry.bundle_hash:
+            raise RuntimeError(f"Tier-D bundle hash mismatch: {tier_d_entry.city_id}")
+        for embedded in tier_d_bundle.source_manifests:
+            if manifests_by_artifact.get(embedded.artifact_id) != embedded:
+                raise RuntimeError(
+                    f"Tier-D bundle embeds an unknown source: {embedded.artifact_id}"
+                )
+        for index, reference in enumerate(tier_d_entry.scenario_pack_refs):
+            pack_path = safe_relative_artifact(deep_dir, reference)
+            pack = validate_document(pack_path, DeepScenarioPack)
+            if (
+                pack != tier_d_bundle.scenario_packs[index]
+                or pack.content_hash() != tier_d_entry.scenario_pack_hashes[index]
+            ):
+                raise RuntimeError(f"Tier-D scenario pack mismatch: {reference}")
+            evidence_row = tier_d_evidence_by_id.get(pack.pack_id)
+            if evidence_row is None or evidence_row.pack_file_hash != sha256_file(pack_path):
+                raise RuntimeError(f"Tier-D scenario evidence mismatch: {pack.pack_id}")
+            for scenario_artifact in pack.analytical_artifacts:
+                artifact_path = safe_relative_artifact(deep_dir, scenario_artifact.path)
+                if (
+                    sha256_file(artifact_path) != scenario_artifact.content_hash
+                    or evidence_row.artifact_hashes.get(scenario_artifact.kind)
+                    != scenario_artifact.content_hash
+                ):
+                    raise RuntimeError(
+                        f"Tier-D analytical artifact hash mismatch: {scenario_artifact.path}"
+                    )
+            tier_d_packs.append(pack)
+        tier_d_bundles.append(tier_d_bundle)
+    if len(tier_d_packs) != 96 or len(tier_d_bundles) != 8:
+        raise RuntimeError("Tier-D verified city/pack count differs from 8 / 96")
+    if set(tier_d_evidence_by_id) != {item.pack_id for item in tier_d_packs}:
+        raise RuntimeError("Tier-D evidence summary does not exactly cover scenario packs")
+    tier_d_coverage_path = deep_dir / "coverage.csv"
+    with tier_d_coverage_path.open(encoding="utf-8", newline="") as handle:
+        tier_d_coverage_rows = list(csv.DictReader(handle))
+    if len(tier_d_coverage_rows) != 8:
+        raise RuntimeError("Tier-D coverage matrix must contain eight city rows")
+    tier_d_scenario_ledger_path = deep_dir / "scenario-ledger.csv"
+    with tier_d_scenario_ledger_path.open(encoding="utf-8", newline="") as handle:
+        tier_d_scenario_rows = list(csv.DictReader(handle))
+    if len(tier_d_scenario_rows) != 96:
+        raise RuntimeError("Tier-D scenario ledger must contain 96 rows")
+    tier_d_source_ledger_path = deep_dir / "source-evidence.csv"
+    with tier_d_source_ledger_path.open(encoding="utf-8", newline="") as handle:
+        tier_d_source_rows = list(csv.DictReader(handle))
+    if len(tier_d_source_rows) != 49:
+        raise RuntimeError("Tier-D source ledger must contain 49 deduplicated rows")
+    tier_d_metric_ledger_path = deep_dir / "cross-city-metrics.csv"
+    with tier_d_metric_ledger_path.open(encoding="utf-8", newline="") as handle:
+        tier_d_metric_rows = list(csv.DictReader(handle))
+    if len(tier_d_metric_rows) != sum(len(item.metrics) for item in tier_d_bundles):
+        raise RuntimeError("Tier-D metric ledger does not cover every embedded metric")
+
     cdc_dir = ROOT / "examples/data/cdc-places"
     data = cdc_dir / "cdc-places-7ccf6e7d6dc3.json"
-    manifest = cdc_dir / "cdc-places-7ccf6e7d6dc3.manifest.json"
+    cdc_manifest_path = cdc_dir / "cdc-places-7ccf6e7d6dc3.manifest.json"
     scenario = ROOT / "examples/scenarios/suffolk-heat-access-demo.yaml"
     workflows = [
         (
@@ -349,7 +438,7 @@ def verify_repository() -> dict[str, object]:
         rebuilt_hashes = [
             rebuild_reference_workflow(
                 data,
-                manifest,
+                cdc_manifest_path,
                 scenario,
                 config,
                 output,
@@ -395,11 +484,19 @@ def verify_repository() -> dict[str, object]:
             optimization_task_count=100,
         )
         assert_tree_same(benchmark_dir, rebuilt_benchmark_dir)
+        rebuilt_tier_d_dir = temporary_root / "deep-cities"
+        build_tier_d_artifacts(
+            ROOT / "examples/data/tier-d",
+            rebuilt_tier_d_dir,
+        )
+        assert_tree_same(deep_dir, rebuilt_tier_d_dir)
 
     statuses = Counter(pack.status.value for pack in packs)
     connector_families = Counter(item.family.value for item in CONNECTOR_REGISTRY)
     tier_s_statuses = Counter(item.status.value for item in tier_s_runs)
     benchmark_statuses = Counter(item.status for item in benchmark_registry.artifacts)
+    tier_d_statuses = Counter(item.status.value for item in tier_d_packs)
+    tier_d_suites = Counter(item.suite.value for item in tier_d_packs)
     tier_s_nasa_records = sum(
         manifest.record_count
         for path, manifest in zip(manifest_paths, manifests, strict=True)
@@ -498,6 +595,45 @@ def verify_repository() -> dict[str, object]:
         "tier_s_scenario_runs": len(tier_s_runs),
         "tier_s_scenario_statuses": dict(sorted(tier_s_statuses.items())),
         "tier_s_source_bindings": sum(len(item.source_bindings) for item in tier_s_bundles),
+        "tier_d_aggregate_source_rows": tier_d_evidence.aggregate_source_rows,
+        "tier_d_bundle_metrics": sum(len(item.metrics) for item in tier_d_bundles),
+        "tier_d_checksum_entries": len(
+            (deep_dir / "SHA256SUMS").read_text(encoding="ascii").splitlines()
+        ),
+        "tier_d_city_bundles": len(tier_d_bundles),
+        "tier_d_context_source_units": tier_d_evidence.context_source_units,
+        "tier_d_decision_briefs": tier_d_evidence.decision_briefs,
+        "tier_d_decision_packs": tier_d_evidence.decision_packs,
+        "tier_d_deduplicated_underlying_requests": (
+            tier_d_evidence.deduplicated_underlying_requests
+        ),
+        "tier_d_distinct_source_datasets": tier_d_evidence.distinct_source_datasets,
+        "tier_d_evidence_summary_content_hash": sha256_file(deep_dir / "evidence-summary.json"),
+        "tier_d_exactly_rebuilt": True,
+        "tier_d_forecast_input_observations": (tier_d_evidence.total_forecast_input_observations),
+        "tier_d_forecast_runs": tier_d_evidence.forecast_runs,
+        "tier_d_nonduplicative_scenario_designs": (tier_d_evidence.nonduplicative_scenario_designs),
+        "tier_d_optimization_evaluated_plans": (tier_d_evidence.total_optimization_evaluated_plans),
+        "tier_d_optimization_feasible_plans": (tier_d_evidence.total_optimization_feasible_plans),
+        "tier_d_optimization_search_space": tier_d_evidence.total_optimization_search_space,
+        "tier_d_optimization_tasks": tier_d_evidence.optimization_tasks,
+        "tier_d_quality_passes": sum(
+            item.quality_report.overall_status is QualityStatus.PASS for item in tier_d_bundles
+        ),
+        "tier_d_quality_warnings": sum(
+            item.quality_report.overall_status is QualityStatus.WARN for item in tier_d_bundles
+        ),
+        "tier_d_registry_content_hash": tier_d_registry.content_hash(),
+        "tier_d_scenario_packs": len(tier_d_packs),
+        "tier_d_scenario_statuses": dict(sorted(tier_d_statuses.items())),
+        "tier_d_simulation_iterations": tier_d_evidence.total_simulation_iterations,
+        "tier_d_simulation_runs": tier_d_evidence.simulation_runs,
+        "tier_d_source_artifacts": tier_d_evidence.source_manifest_artifacts,
+        "tier_d_suite_execution_counts": dict(sorted(tier_d_suites.items())),
+        "tier_d_uncertainty_option_draw_values": (
+            tier_d_evidence.total_uncertainty_option_draw_values
+        ),
+        "tier_d_uncertainty_runs": tier_d_evidence.uncertainty_runs,
     }
 
 

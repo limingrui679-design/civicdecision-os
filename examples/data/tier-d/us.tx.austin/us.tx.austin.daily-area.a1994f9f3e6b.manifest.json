@@ -1,0 +1,35 @@
+{
+  "artifact_id": "us.tx.austin.daily-area.a1994f9f3e6b",
+  "artifact_path": "us.tx.austin.daily-area.a1994f9f3e6b.json",
+  "content_hash": "sha256:39030ffe2deafa03fbc2dd5ac6e04586b10e580f044b86583b5ffbcff143152b",
+  "data_url": "https://data.austintexas.gov/resource/xwdj-i9he.json?%24select=date_trunc_ymd%28sr_created_date%29+as+service_date%2Csr_location_zip_code+as+area%2Ccount%28%2A%29+as+request_count&%24where=sr_created_date+%3E%3D+%272025-04-01T00%3A00%3A00%27+AND+sr_created_date+%3C+%272025-10-01T00%3A00%3A00%27&%24group=date_trunc_ymd%28sr_created_date%29%2Csr_location_zip_code&%24order=service_date%2Carea&%24limit=50000&%24offset=0",
+  "geographic_scope": "Austin",
+  "landing_url": "https://data.austintexas.gov/Utilities-and-City-Services/Austin-311-Public-Data/xwdj-i9he",
+  "license": "City of Austin open data portal terms and dataset conditions",
+  "limitations": [
+    "A service request is a resident or staff report, not a verified incident, exposure, need, or completed service outcome.",
+    "Reporting access, awareness, channel choice, duplicate handling, and agency workflow create selection and measurement differences across places and time.",
+    "Aggregated public records omit street addresses and free text and cannot support individual-level inference."
+  ],
+  "name": "Austin service requests: daily-area",
+  "publisher": "City of Austin",
+  "query": {
+    "aggregation": "daily-area",
+    "end": "2025-10-01",
+    "limit": 50000,
+    "offset": 0,
+    "start": "2025-04-01"
+  },
+  "record_count": 8310,
+  "response_headers": {
+    "content-type": "application/json;charset=utf-8",
+    "etag": "\"Zm94dHJvdC42NTQ1XzE2XzE0MTc5MlFQR1N1NWZzTm5acS10ZDFMQTVnZGJzbWsyRQ---gziprc9L95-Tn1PPtKTsSuVfUZAq1F--gzip--gzip\"",
+    "last-modified": "Wed, 12 Aug 2026 12:55:17 GMT",
+    "x-soda2-truth-last-modified": "Wed, 12 Aug 2026 12:55:17 GMT"
+  },
+  "retrieved_at": "2026-08-13T01:29:59.853325Z",
+  "schema_fingerprint": "sha256:29dd3eb1898061ea6a0706a627380af96173b10a9ee29b6760817c73ecf7488f",
+  "schema_version": "1.0.0",
+  "source_id": "austin-open-data-311-aggregate",
+  "temporal_scope": "[2025-04-01, 2025-10-01)"
+}

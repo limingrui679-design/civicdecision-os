@@ -103,6 +103,27 @@ isolated temporary directory, and requires identical paths and bytes. This creat
 source manifest to run artifact to evidence row to registry to portable checksum. It proves
 deterministic implementation and stated task counts; it does not prove external validity or impact.
 
+### 3b. Deep-city compilation layer
+
+Tier D binds four independently reconciling municipal aggregate views, an exact ACS place row, a
+legal TIGERweb boundary, and a complete NASA POWER point series. A loader verifies all source
+manifests and identities before metrics or scenarios can be constructed. The quality report
+separates hard failures from retained warnings such as missing operational area labels and absent
+aggregate dates.
+
+Twelve shared scenario templates declare application suite, completion strategy, source roles,
+analysis modes, evidence requirements, keyword rules, minimum sample gates, intended claim,
+prohibited claims, assumptions, and limitations. The compiler binds each template to eight cities.
+It does not count those 96 bindings as 96 unique designs.
+
+A completed binding writes a Policy Scenario, forecast, simulation, bounded optimization,
+uncertainty analysis, DecisionPack, brief, and the encompassing scenario pack as separately hashed
+artifacts. A missing causal design, routable network, or minimum matching workload produces a
+negative DecisionPack without forecast, simulation, optimization, uncertainty, or selected option.
+The evidence summary separately reconciles public source units, deduplicated underlying requests,
+forecast inputs, simulation iterations, optimizer search/evaluation counts, uncertainty draws,
+and file hashes.
+
 ### 4. Decision diagnostics
 
 Completed DecisionPacks require at least one controlled reversal test and one ranked
@@ -135,15 +156,17 @@ and copied rows do not inflate the non-raster record target.
 Protocol serialization is canonical UTF-8 JSON with sorted keys and no NaN values. Every source,
 run artifact, evidence summary, and DecisionPack has a SHA-256 content hash. Reference workflows
 use fixed inputs, explicit parameters, and fixed seeds. `scripts/verify_repository.py` rebuilds
-Schemas, DecisionPacks, the Tier-G and Tier-S layers, and all 145 analytical run artifacts plus
-evidence ledgers in a temporary directory and requires byte-for-byte equality.
+Schemas, DecisionPacks, the Tier-G and Tier-S layers, all 145 analytical benchmark artifacts, and
+the complete 707-file Tier-D tree plus evidence ledgers in a temporary directory and requires
+byte-for-byte equality.
 
 ## Current limits
 
 The current milestone implements a 250-point global catalog, a small semantic seed graph, 30
 standardized descriptive bundles, five analytical engine families, 40 public-data forecast
-replays, 100 synthetic optimization tasks, and five synthetic engine qualifications. It does not
-implement official municipal geometries or deep local evidence for those 30 cities. Production
-network routing, externally credible causal studies, city-calibrated intervention simulation,
-API, web UI, hosted demo, production security controls, external review, real users, and policy
-impact remain incomplete.
+replays, 100 synthetic optimization tasks, five synthetic engine qualifications, and eight
+deep-city reference bundles with legal geometries and local public request evidence. Tier-D action
+parameters are still hypothetical, and its climate input remains a point rather than an exposure
+surface. Production network routing, externally credible causal studies, city-calibrated
+intervention effects, API, web UI, hosted demo, production security controls, external review,
+real users, and policy impact remain incomplete.

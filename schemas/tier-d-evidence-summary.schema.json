@@ -1,0 +1,301 @@
+{
+  "$defs": {
+    "ApplicationSuite": {
+      "enum": [
+        "climate-disaster-resilience",
+        "mobility-accessibility-operations",
+        "population-health-environmental-exposure",
+        "housing-land-use-regeneration",
+        "public-service-operations",
+        "infrastructure-finance-asset-risk",
+        "behavioral-policy-equity"
+      ],
+      "title": "ApplicationSuite",
+      "type": "string"
+    },
+    "DeepScenarioStatus": {
+      "enum": [
+        "completed",
+        "insufficient-evidence",
+        "infeasible",
+        "failed"
+      ],
+      "title": "DeepScenarioStatus",
+      "type": "string"
+    },
+    "TierDScenarioEvidence": {
+      "additionalProperties": false,
+      "properties": {
+        "artifact_hashes": {
+          "additionalProperties": {
+            "type": "string"
+          },
+          "minProperties": 3,
+          "title": "Artifact Hashes",
+          "type": "object"
+        },
+        "city_id": {
+          "pattern": "^[a-z0-9]+(?:[._-][a-z0-9]+)*$",
+          "title": "City Id",
+          "type": "string"
+        },
+        "forecast_input_observations": {
+          "minimum": 0,
+          "title": "Forecast Input Observations",
+          "type": "integer"
+        },
+        "observed_request_count": {
+          "minimum": 0,
+          "title": "Observed Request Count",
+          "type": "integer"
+        },
+        "optimization_evaluated_plans": {
+          "minimum": 0,
+          "title": "Optimization Evaluated Plans",
+          "type": "integer"
+        },
+        "optimization_feasible_plans": {
+          "minimum": 0,
+          "title": "Optimization Feasible Plans",
+          "type": "integer"
+        },
+        "optimization_search_space": {
+          "minimum": 0,
+          "title": "Optimization Search Space",
+          "type": "integer"
+        },
+        "pack_file_hash": {
+          "pattern": "^sha256:[0-9a-f]{64}$",
+          "title": "Pack File Hash",
+          "type": "string"
+        },
+        "pack_id": {
+          "pattern": "^[a-z0-9]+(?:[._-][a-z0-9]+)*$",
+          "title": "Pack Id",
+          "type": "string"
+        },
+        "scenario_template_id": {
+          "pattern": "^[a-z0-9]+(?:[._-][a-z0-9]+)*$",
+          "title": "Scenario Template Id",
+          "type": "string"
+        },
+        "simulation_iterations": {
+          "minimum": 0,
+          "title": "Simulation Iterations",
+          "type": "integer"
+        },
+        "status": {
+          "$ref": "#/$defs/DeepScenarioStatus"
+        },
+        "suite": {
+          "$ref": "#/$defs/ApplicationSuite"
+        },
+        "uncertainty_option_draw_values": {
+          "minimum": 0,
+          "title": "Uncertainty Option Draw Values",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "pack_id",
+        "city_id",
+        "scenario_template_id",
+        "suite",
+        "status",
+        "observed_request_count",
+        "artifact_hashes",
+        "pack_file_hash",
+        "forecast_input_observations",
+        "simulation_iterations",
+        "optimization_search_space",
+        "optimization_evaluated_plans",
+        "optimization_feasible_plans",
+        "uncertainty_option_draw_values"
+      ],
+      "title": "TierDScenarioEvidence",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "aggregate_source_rows": {
+      "minimum": 1,
+      "title": "Aggregate Source Rows",
+      "type": "integer"
+    },
+    "city_bound_scenario_executions": {
+      "const": 96,
+      "default": 96,
+      "title": "City Bound Scenario Executions",
+      "type": "integer"
+    },
+    "completed_scenarios": {
+      "maximum": 96,
+      "minimum": 1,
+      "title": "Completed Scenarios",
+      "type": "integer"
+    },
+    "context_source_units": {
+      "minimum": 1,
+      "title": "Context Source Units",
+      "type": "integer"
+    },
+    "created_at": {
+      "format": "date-time",
+      "title": "Created At",
+      "type": "string"
+    },
+    "decision_briefs": {
+      "const": 96,
+      "default": 96,
+      "title": "Decision Briefs",
+      "type": "integer"
+    },
+    "decision_packs": {
+      "const": 96,
+      "default": 96,
+      "title": "Decision Packs",
+      "type": "integer"
+    },
+    "deduplicated_underlying_requests": {
+      "minimum": 1,
+      "title": "Deduplicated Underlying Requests",
+      "type": "integer"
+    },
+    "distinct_source_datasets": {
+      "const": 11,
+      "default": 11,
+      "title": "Distinct Source Datasets",
+      "type": "integer"
+    },
+    "forecast_runs": {
+      "minimum": 1,
+      "title": "Forecast Runs",
+      "type": "integer"
+    },
+    "limitations": {
+      "items": {
+        "type": "string"
+      },
+      "minItems": 1,
+      "title": "Limitations",
+      "type": "array"
+    },
+    "negative_scenarios": {
+      "maximum": 96,
+      "minimum": 1,
+      "title": "Negative Scenarios",
+      "type": "integer"
+    },
+    "nonduplicative_scenario_designs": {
+      "const": 12,
+      "default": 12,
+      "title": "Nonduplicative Scenario Designs",
+      "type": "integer"
+    },
+    "optimization_tasks": {
+      "minimum": 1,
+      "title": "Optimization Tasks",
+      "type": "integer"
+    },
+    "scenarios": {
+      "items": {
+        "$ref": "#/$defs/TierDScenarioEvidence"
+      },
+      "maxItems": 96,
+      "minItems": 96,
+      "title": "Scenarios",
+      "type": "array"
+    },
+    "schema_version": {
+      "const": "1.0.0",
+      "default": "1.0.0",
+      "title": "Schema Version",
+      "type": "string"
+    },
+    "simulation_runs": {
+      "minimum": 1,
+      "title": "Simulation Runs",
+      "type": "integer"
+    },
+    "source_artifact_hashes": {
+      "additionalProperties": {
+        "type": "string"
+      },
+      "maxProperties": 49,
+      "minProperties": 49,
+      "title": "Source Artifact Hashes",
+      "type": "object"
+    },
+    "source_manifest_artifacts": {
+      "const": 49,
+      "default": 49,
+      "title": "Source Manifest Artifacts",
+      "type": "integer"
+    },
+    "summary_id": {
+      "pattern": "^[a-z0-9]+(?:[._-][a-z0-9]+)*$",
+      "title": "Summary Id",
+      "type": "string"
+    },
+    "total_forecast_input_observations": {
+      "minimum": 1,
+      "title": "Total Forecast Input Observations",
+      "type": "integer"
+    },
+    "total_optimization_evaluated_plans": {
+      "minimum": 1,
+      "title": "Total Optimization Evaluated Plans",
+      "type": "integer"
+    },
+    "total_optimization_feasible_plans": {
+      "minimum": 1,
+      "title": "Total Optimization Feasible Plans",
+      "type": "integer"
+    },
+    "total_optimization_search_space": {
+      "minimum": 1,
+      "title": "Total Optimization Search Space",
+      "type": "integer"
+    },
+    "total_simulation_iterations": {
+      "minimum": 1,
+      "title": "Total Simulation Iterations",
+      "type": "integer"
+    },
+    "total_uncertainty_option_draw_values": {
+      "minimum": 1,
+      "title": "Total Uncertainty Option Draw Values",
+      "type": "integer"
+    },
+    "uncertainty_runs": {
+      "minimum": 1,
+      "title": "Uncertainty Runs",
+      "type": "integer"
+    }
+  },
+  "required": [
+    "summary_id",
+    "created_at",
+    "source_artifact_hashes",
+    "aggregate_source_rows",
+    "context_source_units",
+    "deduplicated_underlying_requests",
+    "scenarios",
+    "completed_scenarios",
+    "negative_scenarios",
+    "forecast_runs",
+    "total_forecast_input_observations",
+    "simulation_runs",
+    "total_simulation_iterations",
+    "optimization_tasks",
+    "total_optimization_search_space",
+    "total_optimization_evaluated_plans",
+    "total_optimization_feasible_plans",
+    "uncertainty_runs",
+    "total_uncertainty_option_draw_values",
+    "limitations"
+  ],
+  "title": "TierDEvidenceSummary",
+  "type": "object"
+}
