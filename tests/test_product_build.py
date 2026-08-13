@@ -1100,6 +1100,39 @@ def test_product_builder_rejects_stale_files_and_release_archives_fail_closed(
         encoding="utf-8",
     )
     assert audit_claims(audit_root)["failures"][0]["check"] == "package-project-urls"
+    published_urls = {"Repository": "https://example.com"}
+    published_state = dict(public_state)
+    published_state["package_project_urls"] = published_urls
+    published_policy = json.loads(json.dumps(policy))
+    published_policy["public_state_contract"]["package_project_urls"] = published_urls
+    (audit_root / "verification/public-state.json").write_text(
+        json.dumps(published_state) + "\n", encoding="utf-8"
+    )
+    write_policy(published_policy)
+    assert audit_claims(audit_root)["status"] == "passed"
+
+    (audit_root / "pyproject.toml").write_text(
+        '[project]\nname = "claim-audit-fixture"\nurls = ["not-a-mapping"]\n',
+        encoding="utf-8",
+    )
+    with pytest.raises(ClaimAuditError, match="package project URLs must be a string mapping"):
+        audit_claims(audit_root)
+
+    malformed_url_state = dict(public_state)
+    malformed_url_state["package_project_urls"] = ["not-a-mapping"]
+    (audit_root / "verification/public-state.json").write_text(
+        json.dumps(malformed_url_state) + "\n", encoding="utf-8"
+    )
+    (audit_root / "pyproject.toml").write_text(
+        '[project]\nname = "claim-audit-fixture"\n', encoding="utf-8"
+    )
+    write_policy(policy)
+    with pytest.raises(ClaimAuditError, match="public-state package project URLs"):
+        audit_claims(audit_root)
+
+    (audit_root / "verification/public-state.json").write_text(
+        json.dumps(public_state) + "\n", encoding="utf-8"
+    )
     (audit_root / "pyproject.toml").write_text(
         '[project]\nname = "claim-audit-fixture"\n', encoding="utf-8"
     )

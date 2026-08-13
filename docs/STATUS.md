@@ -133,7 +133,7 @@ performance, security, SBOM, license, and checksum evidence.
 - Current local browser inspection passed at the default desktop viewport and 390×844, including
   family-to-eight-design filtering, compound search, design and audit drawers, mobile navigation,
   zero horizontal scroll, and zero browser warnings/errors.
-- 800 automated tests pass. Coverage is 97.100% for statements, 91.076% for branches, and 95.893%
+- 800 automated tests pass. Coverage is 97.102% for statements, 91.091% for branches, and 95.896%
   under coverage.py's combined line-and-branch measure. The release module alone reaches 96%
   combined coverage and is exercised against real wheel/sdist files plus adversarial paths,
   members, metadata, hashes, inventories, links, budgets, and checksum failures.
@@ -156,9 +156,9 @@ performance, security, SBOM, license, and checksum evidence.
   claim-audit evidence, with a portable per-asset checksum inventory; a detached SHA-256 sidecar
   covers the bundle itself.
 - A governed claim audit reconciles core quantitative statements against committed JSON evidence,
-  rejects undeclared publication URLs and stale hosted-domain identifiers, requires explicit
-  local/external boundaries, and records the dated absence of a public repository, hosted demo,
-  Git remote, or package project URL. A live refresh uses the official GitHub repository API.
+  requires declared repository/package coordinates and explicit local/external boundaries, and
+  records the dated availability of the public repository plus the continuing absence of a hosted
+  demo. A live refresh uses the official GitHub repository API.
 
 ## Implementing next
 
@@ -168,8 +168,7 @@ performance, security, SBOM, license, and checksum evidence.
 - Network routing, scalable solver interfaces, and deep-city engine orchestration.
 - City-specific compilation pilots, external domain review, transportability review, and
   independently checkable execution evidence for selected design-only records.
-- Cryptographic signing or trusted provenance, a published tag/GitHub Release, and independent
-  verification of a published bundle.
+- Cryptographic signing or trusted provenance and independent verification of a published bundle.
 - Remote CI, security, CodeQL, and release-candidate workflows require real GitHub runs before
   their results can be called verified.
 

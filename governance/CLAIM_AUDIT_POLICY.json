@@ -1,16 +1,8 @@
 {
   "forbidden_literals": [
     {
-      "id": "unpublished-project-github-url",
-      "literal": "https://github.com/limingrui679-design/civicdecision-os"
-    },
-    {
       "id": "unregistered-project-host-domain",
       "literal": "https://civicdecision.dev"
-    },
-    {
-      "id": "undeclared-package-project-urls",
-      "literal": "[project.urls]"
     },
     {
       "id": "stale-sdist-member-count",
@@ -39,10 +31,17 @@
   ],
   "public_state_contract": {
     "github_repository": "limingrui679-design/civicdecision-os",
-    "github_repository_http_status": 404,
-    "github_repository_state": "not-publicly-available-at-check-time",
-    "local_git_remotes": [],
-    "package_project_urls": [],
+    "github_repository_http_status": 200,
+    "github_repository_state": "publicly-available-at-check-time",
+    "local_git_remotes": [
+      "origin\thttps://github.com/limingrui679-design/civicdecision-os.git (fetch)",
+      "origin\thttps://github.com/limingrui679-design/civicdecision-os.git (push)"
+    ],
+    "package_project_urls": {
+      "Documentation": "https://github.com/limingrui679-design/civicdecision-os#readme",
+      "Issues": "https://github.com/limingrui679-design/civicdecision-os/issues",
+      "Repository": "https://github.com/limingrui679-design/civicdecision-os"
+    },
     "public_hosted_demo_url": null
   },
   "public_state_snapshot": "verification/milestone-8-public-state.json",
@@ -594,7 +593,7 @@
       ]
     },
     {
-      "expected": 97.10005350454789,
+      "expected": 97.1019142337718,
       "id": "statement-coverage-percent",
       "renderings": [
         {
@@ -614,7 +613,7 @@
       ]
     },
     {
-      "expected": 91.07600341588386,
+      "expected": 91.09121909633419,
       "id": "branch-coverage-percent",
       "renderings": [
         {
@@ -634,7 +633,7 @@
       ]
     },
     {
-      "expected": 95.89287242234963,
+      "expected": 95.89638368812516,
       "id": "combined-coverage-percent",
       "renderings": [
         {
@@ -769,7 +768,7 @@
   ],
   "required_boundaries": [
     {
-      "contains": "signed or published GitHub Release, remote CI success, public hosting, or external review.",
+      "contains": "Repository publication does not establish remote CI success, public hosting, external review,",
       "id": "readme-external-release-boundary",
       "path": "README.md"
     },

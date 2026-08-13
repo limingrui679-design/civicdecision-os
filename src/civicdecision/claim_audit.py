@@ -478,10 +478,20 @@ def audit_claims(
 
     pyproject = tomllib.loads((repository_root / "pyproject.toml").read_text(encoding="utf-8"))
     project = cast(dict[str, Any], pyproject.get("project", {}))
-    declared_urls = cast(dict[str, Any], project.get("urls", {}))
-    expected_urls = public_state.get("package_project_urls")
+    raw_declared_urls = project.get("urls", {})
+    if not isinstance(raw_declared_urls, dict) or not all(
+        isinstance(key, str) and isinstance(value, str) for key, value in raw_declared_urls.items()
+    ):
+        raise ClaimAuditError("package project URLs must be a string mapping")
+    declared_urls = cast(dict[str, str], raw_declared_urls)
+    raw_expected_urls = public_state.get("package_project_urls")
+    expected_urls: object = {} if raw_expected_urls == [] else raw_expected_urls
+    if not isinstance(expected_urls, dict) or not all(
+        isinstance(key, str) and isinstance(value, str) for key, value in expected_urls.items()
+    ):
+        raise ClaimAuditError("public-state package project URLs must be a string mapping")
     checks_total += 1
-    if expected_urls == [] and declared_urls == {}:
+    if declared_urls == expected_urls:
         checks_passed += 1
     else:
         failures.append(
@@ -489,8 +499,8 @@ def audit_claims(
                 "check": "package-project-urls",
                 "category": "public-state",
                 "detail": (
-                    "package project URLs differ from the no-public-repository snapshot: "
-                    f"{declared_urls!r}"
+                    "package project URLs differ from the public-state snapshot: "
+                    f"declared={declared_urls!r}, expected={expected_urls!r}"
                 ),
             }
         )
@@ -604,8 +614,8 @@ def audit_claims(
             "snapshot; it is not external validation.",
             "A passing offline audit does not prove that external state is unchanged; refresh it "
             "before publication.",
-            "No public repository, hosted demo, remote CI, external review, users, adoption, or "
-            "impact is inferred from local implementation evidence.",
+            "A public repository coordinate does not establish a hosted demo, remote CI success, "
+            "external review, users, adoption, or impact.",
         ],
     }
 

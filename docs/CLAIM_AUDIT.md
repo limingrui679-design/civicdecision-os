@@ -4,9 +4,9 @@
 
 The claim audit makes the project's evidence boundary executable. It checks whether governed
 README, status, requirement, security, architecture, release, and governance statements still
-match committed machine-readable evidence. It also prevents a local candidate from silently
-acquiring a repository, issue tracker, hosted-domain, deployment, user, adoption, or impact claim
-that has not been established outside the repository.
+match committed machine-readable evidence. It also requires published repository and package
+coordinates to match the dated public snapshot while preventing a repository URL from silently
+becoming a hosted-domain, deployment, user, adoption, or impact claim.
 
 The audit is deliberately separate from the analytical verifier. Exact reconstruction answers
 whether committed artifacts can be reproduced; this audit answers whether human-facing language
@@ -16,7 +16,7 @@ describes those artifacts without upgrading their meaning.
 
 1. **Surface scan.** The policy enumerates every governed Markdown/document surface plus package
    metadata, API problem identifiers, and release-builder claim boundaries. Forbidden literals
-   catch nonexistent project URLs, unregistered hosted-domain identifiers, obsolete release
+   catch unregistered hosted-domain identifiers, obsolete release
    counts, and stale assurance wording.
 2. **Quantitative reconciliation.** Named facts resolve through JSON Pointers into the repository,
    product, coverage, performance, and quality reports. Derived facts use explicit operations such
@@ -26,9 +26,9 @@ describes those artifacts without upgrading their meaning.
    production deployment, external validation, real users, municipal adoption, and observed
    impact.
 4. **Public-state check.** A dated snapshot records the exact GitHub repository API endpoint,
-   returned status, absent local Git remotes, absent package project URLs, and absent hosted-demo
-   URL. A live run refreshes the GitHub status; an offline release run validates the committed
-   snapshot for deterministic packaging.
+   returned status, declared local Git remote, matching package project URLs, and absent
+   hosted-demo URL. A live run refreshes the GitHub status; an offline release run validates the
+   committed snapshot for deterministic packaging.
 
 ## Run it
 
@@ -50,8 +50,8 @@ python scripts/audit_claims.py --root .
 Both modes fail closed on a missing evidence pointer, unsafe path, malformed policy, value drift,
 missing required phrase, forbidden literal, package URL drift, or changed local Git remote. Live
 mode additionally fails when the official repository endpoint no longer matches the dated
-snapshot. If the project is later published, update the package URLs, public-state snapshot,
-policy, docs, and release boundary together rather than weakening the check.
+snapshot. Repository publication updates the package URLs, public-state snapshot, policy, docs,
+and release boundary together rather than weakening the check.
 
 ## Evidence map
 

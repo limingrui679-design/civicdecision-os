@@ -94,7 +94,7 @@ Current repository and local-browser evidence is recorded in
 [`verification/milestone-8-performance.json`](verification/milestone-8-performance.json). The
 machine-readable claim and dated public-state checks are documented in
 [`docs/CLAIM_AUDIT.md`](docs/CLAIM_AUDIT.md). Exactly
-800 tests pass with 97.100% statement, 91.076% branch, and 95.893% combined line-and-branch
+800 tests pass with 97.102% statement, 91.091% branch, and 95.896% combined line-and-branch
 coverage. The independent verifier regenerates Schemas, both earlier reference outputs, all four
 global-city artifacts, the complete standardized-city and analytical-benchmark trees, all 707
 Tier-D artifacts, the 282-file scenario library, and the 338-file product projection in a
@@ -107,8 +107,10 @@ and plugin contract; and reruns the full verifier from a no-Git source archive. 
 Bandit, Detect Secrets, dependency-advisory, license, CycloneDX 1.6 SBOM, performance, and checksum
 evidence. See [`docs/RELEASE_PROCESS.md`](docs/RELEASE_PROCESS.md),
 [`docs/SECURITY_ASSURANCE.md`](docs/SECURITY_ASSURANCE.md), and
-[`docs/RELEASE_NOTES_0.8.0.md`](docs/RELEASE_NOTES_0.8.0.md). These local gates do not establish a
-signed or published GitHub Release, remote CI success, public hosting, or external review.
+[`docs/RELEASE_NOTES_0.8.0.md`](docs/RELEASE_NOTES_0.8.0.md). The public repository coordinate is
+[`limingrui679-design/civicdecision-os`](https://github.com/limingrui679-design/civicdecision-os).
+Repository publication does not establish remote CI success, public hosting, external review,
+users, adoption, or real-world impact.
 
 The current source catalog contains ten loadable connector implementations across eight source
 families, plus eight audited municipal dataset configurations used by the generic aggregate

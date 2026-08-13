@@ -1,16 +1,23 @@
 {
-  "checked_at": "2026-08-13T08:10:25Z",
+  "checked_at": "2026-08-13T12:15:16Z",
   "claim_boundary": [
-    "An HTTP 404 is a dated absence check, not proof that a repository can never exist.",
-    "An empty local Git remote list does not inspect private repositories or other machines.",
-    "No public repository, hosted demo, remote CI result, external review, users, adoption, or impact is claimed."
+    "An HTTP 200 is a dated public-repository availability check, not proof that any workflow or release passed.",
+    "The declared local Git remote and package URLs identify publication coordinates; they do not prove deployment.",
+    "No hosted demo, remote CI success, external review, users, adoption, or impact is claimed."
   ],
   "github_repository": "limingrui679-design/civicdecision-os",
   "github_repository_api": "https://api.github.com/repos/limingrui679-design/civicdecision-os",
-  "github_repository_http_status": 404,
-  "github_repository_state": "not-publicly-available-at-check-time",
-  "local_git_remotes": [],
-  "package_project_urls": [],
+  "github_repository_http_status": 200,
+  "github_repository_state": "publicly-available-at-check-time",
+  "local_git_remotes": [
+    "origin\thttps://github.com/limingrui679-design/civicdecision-os.git (fetch)",
+    "origin\thttps://github.com/limingrui679-design/civicdecision-os.git (push)"
+  ],
+  "package_project_urls": {
+    "Documentation": "https://github.com/limingrui679-design/civicdecision-os#readme",
+    "Issues": "https://github.com/limingrui679-design/civicdecision-os/issues",
+    "Repository": "https://github.com/limingrui679-design/civicdecision-os"
+  },
   "public_hosted_demo_url": null,
   "schema_version": "1.0.0",
   "source": {

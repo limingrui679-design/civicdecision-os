@@ -53,8 +53,8 @@ pytest -q --cov=civicdecision --cov-branch \
   --cov-report=json:verification/milestone-8-coverage.json
 ```
 
-The final collection contains exactly 800 tests. The current report records 97.100% statement
-coverage, 91.076% branch coverage, and 95.893% under coverage.py's combined line-and-branch
+The final collection contains exactly 800 tests. The current report records 97.102% statement
+coverage, 91.091% branch coverage, and 95.896% under coverage.py's combined line-and-branch
 measure. In addition to the product and library gates, the collection validates real wheel and
 sdist outputs, complete wheel `RECORD` hashes and sizes, safe paths, bounded expansion, required
 release inventory, deterministic source ZIPs, portable checksums, and adversarial archive and
@@ -73,7 +73,7 @@ budgets over the real catalog, API, design filters/details, and exact library/pr
 totals, lint, formatting, typing, JavaScript, structured-document, workflow, and whitespace checks.
 [`milestone-8-claim-audit.json`](milestone-8-claim-audit.json) records the governed quantitative
 claim and boundary checks, while [`milestone-8-public-state.json`](milestone-8-public-state.json)
-preserves the dated official-API result and absent local publication coordinates. Public state is
+preserves the dated official-API result and declared repository/package coordinates. Public state is
 refreshed before a candidate is described externally; the offline release build validates the
 committed snapshot so deterministic packaging does not depend on a mutable network response.
 The complete release candidate adds a clean hash-locked install, installed-product smoke test,

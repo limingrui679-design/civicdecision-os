@@ -1,35 +1,35 @@
 {
-  "audit_completed_at": "2026-08-13T11:36:23Z",
+  "audit_completed_at": "2026-08-13T12:15:37Z",
   "checks": {
     "failed": 0,
-    "passed": 138,
-    "total": 138
+    "passed": 136,
+    "total": 136
   },
   "claim_boundary": [
     "This audit checks governed text, committed evidence values, and a dated public-state snapshot; it is not external validation.",
     "A passing offline audit does not prove that external state is unchanged; refresh it before publication.",
-    "No public repository, hosted demo, remote CI, external review, users, adoption, or impact is inferred from local implementation evidence."
+    "A public repository coordinate does not establish a hosted demo, remote CI success, external review, users, adoption, or impact."
   ],
   "evidence_sha256": {
     "catalog/product/artifact-manifest.json": "sha256:8c891439ecc129dcbf7370764e4432beefce40b2ac66b2de4616ca1c0d08c1c1",
     "catalog/product/catalog-summary.json": "sha256:e22b8ecb0b35b6047d367d2fdce5260c0209dbb7c5f8ca4377fdc68fa8e04d3d",
     "catalog/product/scenarios/all.json": "sha256:fb1d13082ad3a8e717473dcce6cb966f19d85117cf6318855cb17e03d7dc0f97",
-    "verification/milestone-8-coverage.json": "sha256:f29ba838776524372c655a54d0cf1107e36ea6ad571c75c142b3b76fd516a267",
+    "verification/milestone-8-coverage.json": "sha256:8940ee2f0c92f203941facf78ff26724e444f17f80f9e4e19c1fdbcd3d635947",
     "verification/milestone-8-performance.json": "sha256:e948685859070e1a182032c084aa0f9176486dc188747b3ae53ebb8f6185aa38",
-    "verification/milestone-8-public-state.json": "sha256:6721449f7f83bf75af9b353ef8694f05c3dd7fea90100eb55cfefdd5982e4bb7",
-    "verification/milestone-8-quality.json": "sha256:f5b5ea3de90b3c55e96b595ff05033173c5abad254b76e6b76e96cda343169d3",
+    "verification/milestone-8-public-state.json": "sha256:b6c7ccd8358ce252d50449fc57e5a173045a812321a21711a6c267c9af4a747f",
+    "verification/milestone-8-quality.json": "sha256:22c03c78f9df309c349ef122cbe0e2050c56bd13f4d0abd0674b0d3e02a9054d",
     "verification/milestone-8-repository.json": "sha256:78b809a4c2931b5b817c195bb206e19e6a53cc443fd629a76a6dd907eceadb3e"
   },
   "failures": [],
   "governed_surface_sha256": {
-    "CHANGELOG.md": "sha256:3ea15d3c22d512f0a1e634d38900d98dc92b568ed0ecd4944e4d7d673e8e4752",
+    "CHANGELOG.md": "sha256:2ae8255d94e18a713511456ecfe399d8670fdd8902677009ac6da1b7aad3de57",
     "CONTRIBUTING.md": "sha256:c8622e1a630aafa47ee0284d32da41dbe240e9081c237a7d207318dfbd040de3",
-    "README.md": "sha256:cc029f58bcdfea4723380eb075ccf585d165e2bce8bac52682fb803cee1145e4",
+    "README.md": "sha256:75ae07409b89fbd86bfd9ac5734de2e1c7db18df5035bcda11b59eaf938b62dc",
     "SECURITY.md": "sha256:6d4ce198843863e34fe24e250f5d0c7ef0274bf87c4efb7ba3076af94c01f6a4",
     "docs/ANALYTICAL_ENGINE_AUDIT.md": "sha256:5c673dc493596576e5432577f2683c51f569ce65a8d601a5d627746c7b3a5aec",
     "docs/API.md": "sha256:1aa3cbbb37cd7e9496616b5c13a8cf874aecc0575667b3b5d1ab9583dc5032e2",
     "docs/ARCHITECTURE.md": "sha256:ac19c0409d3a0263235b972702c1427f1db80f7003c508ed06c59621d3a7c8f8",
-    "docs/CLAIM_AUDIT.md": "sha256:e229b51e25d3986f6048b5d944f6ec4b24ff78448bcac6a37b21be2960a9cea0",
+    "docs/CLAIM_AUDIT.md": "sha256:df60479a467d5470f5358a16001410e0e71ea33c7963ab7ef6655e2e4e94f129",
     "docs/DATA_ATTRIBUTION.md": "sha256:8f25018a3a5b1aaa7720a0284d36ec808c47491066c23a8a14b53fc153cb81bc",
     "docs/DATA_GOVERNANCE.md": "sha256:326cc184c4f8be76d5553f18d2bd019d8a6599ae5f14cd1921cd71ea3fa23f79",
     "docs/DEEP_CITY_COVERAGE.md": "sha256:0b472c841f5e20ab41ffd7e49afc301cf94fa69e5e2017dec8947fbaa54cca2f",
@@ -37,42 +37,49 @@
     "docs/PERFORMANCE.md": "sha256:669cf19ad4e5696f300780fa3ceb1a690d88e56e0cf24411dc68e78d3f2a04cc",
     "docs/PLUGIN_SDK.md": "sha256:3cf0e1d2314b43099fe7ae133b2ff42256a05c8251d3cd2c56562955517c4f42",
     "docs/PRODUCT_SURFACES.md": "sha256:7ea7f5832067df0021b3339e1c8b5a3016de9d177e8692cdc85f15cfaa7f9849",
-    "docs/RELEASE_NOTES_0.8.0.md": "sha256:53842da0937a9df55dec45332aceee8102bc58d31ca3acac1776906c126aa67b",
-    "docs/RELEASE_PROCESS.md": "sha256:f9d6a7550c730af4df07aa828d663e427fc68e4b619650825834f28417b38134",
-    "docs/REQUIREMENTS.md": "sha256:215d6ca829df97e0c84aa3daa67ee941055aacc19373b247e42ddb59cfe35f6e",
+    "docs/RELEASE_NOTES_0.8.0.md": "sha256:e5b2088f223c075faba4bbc7104f54fefc42e6d9665e0e7526c238ab1e174d96",
+    "docs/RELEASE_PROCESS.md": "sha256:85197d807074c71e0f169a4533619deca925060c3e7408d3cf884a05c4adefa0",
+    "docs/REQUIREMENTS.md": "sha256:e096eb9facdb591f4864543ebe638fbd22ccad882b1319e3723dff9a1bab7702",
     "docs/SCENARIO_LIBRARY.md": "sha256:6cda5fae4f9da4842ee5bec0ea21e51bd7fe99f680bd8476945a35077b92991f",
     "docs/SDK.md": "sha256:d492191ef59ae2ea1a7018fa3f771f631cc448a3ff8dd31096aaa28635ecc0d2",
     "docs/SECURITY_ASSURANCE.md": "sha256:90db3bf40eed0ff72e4a18b45e5540de409053b2c519c2a8f0062ffc6f66eb6d",
     "docs/STANDARDIZED_CITY_COVERAGE.md": "sha256:362be6ac6e9d1014ab0aaaff99e3935f163b5f47ece990e8566124c1b7052a62",
-    "docs/STATUS.md": "sha256:667ea0a60f1b7ffe56550b068e7cd0c51ceb9ec40c8c4eff6bd1e2958bf5d834",
+    "docs/STATUS.md": "sha256:5fa7a515d36df31140f04b20200bb89477425930898bd2ee550cf84561426dff",
     "docs/THREAT_MODEL.md": "sha256:93a4d8f24fb58199c333908f911259692d888c74ba0ec37ee88164576472bd0d",
     "docs/WEB_EXPLORER.md": "sha256:e7949c8dba956019150eeb93f02efecd607bd0d9d03633225cc750c93c3b3072",
     "docs/adr/0001-evidence-typed-compiler.md": "sha256:39fb8e99d9b77490137858dbb95a2fd294da053cf39077e0a64f9440b1c38192",
     "docs/adr/0002-negative-evidence-releases.md": "sha256:d20caf131edb1092bf1755d1fc4fd8218fb83fc69eda521798dcc2dcbc85711c",
     "docs/adr/0003-one-validated-product-core.md": "sha256:996766f81f1bd2d8ec3954759b958a8d20dc3771f7ad15f9c178795170b5cff0",
     "governance/CLAIM_BOUNDARIES.md": "sha256:8ca3bc54912599bf3ecb43da88d1feb7c83c6ba2a22cf6f3170f5e732f239bf0",
-    "pyproject.toml": "sha256:257e47e3f627167a944accd5f480105f9a888bd14660431e8955c37b02a2e649",
+    "pyproject.toml": "sha256:76fa3c0dc0b92e0f532ab58f79a7c80901ec82d2e11cfb500eafd29895c4f53e",
     "scripts/build_release_candidate.py": "sha256:4f5182a0cdd0d88d6733044b9ad83db347f8dcaed449bcb0ab104a10c85687c7",
     "src/civicdecision/api/app.py": "sha256:cd0b37b13b2416d7bcb6763bae82cdfdbf46e1c22a163cef7d2a467d4e147859"
   },
   "policy": {
     "path": "governance/CLAIM_AUDIT_POLICY.json",
-    "sha256": "sha256:940db2a79579132e6cf8a1ae30041a28cf082f2dd94f02539d7af79fd6860580"
+    "sha256": "sha256:bccd74ec6e081e4aaf010d5e99d580fd6d18d594051d50c2cf254fc1330e11f4"
   },
   "public_state": {
     "github_repository": "limingrui679-design/civicdecision-os",
     "github_repository_api": "https://api.github.com/repos/limingrui679-design/civicdecision-os",
-    "local_git_remotes": [],
-    "package_project_urls": {},
+    "local_git_remotes": [
+      "origin\thttps://github.com/limingrui679-design/civicdecision-os.git (fetch)",
+      "origin\thttps://github.com/limingrui679-design/civicdecision-os.git (push)"
+    ],
+    "package_project_urls": {
+      "Documentation": "https://github.com/limingrui679-design/civicdecision-os#readme",
+      "Issues": "https://github.com/limingrui679-design/civicdecision-os/issues",
+      "Repository": "https://github.com/limingrui679-design/civicdecision-os"
+    },
     "public_hosted_demo_url": null,
-    "refreshed_http_status": 404,
-    "snapshot_http_status": 404
+    "refreshed_http_status": 200,
+    "snapshot_http_status": 200
   },
   "quantitative_values": {
     "benchmark-artifacts": 145,
     "benchmark-optimization-tasks": 100,
-    "branch-coverage-percent": 91.07600341588386,
-    "combined-coverage-percent": 95.89287242234963,
+    "branch-coverage-percent": 91.09121909633419,
+    "combined-coverage-percent": 95.89638368812516,
     "core-generated-schemas": 22,
     "decision-packs": 98,
     "declared-source-units": 258478,
@@ -97,7 +104,7 @@
     "scenario-library-files": 282,
     "software-version": "0.8.0",
     "source-manifests": 90,
-    "statement-coverage-percent": 97.10005350454789,
+    "statement-coverage-percent": 97.1019142337718,
     "tier-d-cities": 8,
     "tier-d-completed-executions": 76,
     "tier-d-negative-executions": 20,
@@ -110,14 +117,14 @@
   "schema_version": "1.0.0",
   "scope": {
     "claim_renderings": 70,
-    "forbidden_literals": 9,
+    "forbidden_literals": 7,
     "public_state_contract_fields": 7,
     "quantitative_claims": 36,
     "required_boundaries": 12,
-    "scanned_bytes": 239542,
+    "scanned_bytes": 239823,
     "scanned_files": 32
   },
-  "snapshot_checked_at": "2026-08-13T08:10:25Z",
+  "snapshot_checked_at": "2026-08-13T12:15:16Z",
   "software_version": "0.8.0",
   "status": "passed"
 }

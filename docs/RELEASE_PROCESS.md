@@ -158,8 +158,8 @@ commit, tool versions, and epoch, then compare the wheel, sdist, and source-ZIP 
 
 ## Deliberately external gates
 
-The local builder does not manufacture evidence for public state. A public release still requires
-a pushed commit and tag, remote CI and CodeQL results, a published release page, and a signature or
-trusted provenance mechanism. A hosted service additionally requires authentication and
+The local builder does not manufacture evidence for public state. Repository and release-page
+publication still do not establish remote CI and CodeQL success, external verification, or a
+signature/trusted provenance mechanism. A hosted service additionally requires authentication and
 authorization where applicable, TLS and reverse-proxy controls, rate limits, monitoring, backup,
 privacy review, accessibility testing, penetration testing, and deployment-specific SBOM coverage.

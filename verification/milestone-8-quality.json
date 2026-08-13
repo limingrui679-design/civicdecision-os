@@ -1,15 +1,15 @@
 {
-  "checked_at": "2026-08-13T11:36:01Z",
+  "checked_at": "2026-08-13T12:15:16Z",
   "claim_boundary": [
     "This file is refreshed only after the full local suite and every named static check complete.",
     "Local quality checks do not establish remote CI, external review, production readiness, users, adoption, or impact."
   ],
   "coverage": {
-    "branches_percent": 91.07600341588386,
-    "combined_percent": 95.89287242234963,
+    "branches_percent": 91.09121909633419,
+    "combined_percent": 95.89638368812516,
     "report": "verification/milestone-8-coverage.json",
-    "report_sha256": "sha256:f29ba838776524372c655a54d0cf1107e36ea6ad571c75c142b3b76fd516a267",
-    "statements_percent": 97.10005350454789,
+    "report_sha256": "sha256:8940ee2f0c92f203941facf78ff26724e444f17f80f9e4e19c1fdbcd3d635947",
+    "statements_percent": 97.1019142337718,
     "claim_audit_module": {
       "branches_percent": 100.0,
       "combined_percent": 100.0,
