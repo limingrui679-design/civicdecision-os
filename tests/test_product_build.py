@@ -277,7 +277,8 @@ def test_product_builder_rejects_stale_files_and_release_archives_fail_closed(
         validate_sdist(unsafe_sdist, version="0.8.0")
 
     original_checksums = checksums.read_text(encoding="ascii")
-    checksums.write_text("0" + original_checksums[1:], encoding="ascii")
+    replacement = "1" if original_checksums[0] == "0" else "0"
+    checksums.write_text(replacement + original_checksums[1:], encoding="ascii")
     with pytest.raises(ReleaseValidationError, match="checksum mismatch"):
         verify_checksum_inventory(inventory, checksums)
     with pytest.raises(ReleaseValidationError, match="regular file"):
