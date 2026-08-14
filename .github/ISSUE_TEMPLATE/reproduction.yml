@@ -1,0 +1,75 @@
+name: Independent reproduction
+description: Record an external attempt to reproduce a named release and artifact set.
+title: "[Reproduction]: "
+labels: [external-review, reproducibility]
+body:
+  - type: markdown
+    attributes:
+      value: A reproduced software result is not automatically a validation of method, policy, deployment, adoption, or impact.
+  - type: input
+    id: identity
+    attributes:
+      label: Reviewer identity and affiliation
+      description: A declared pseudonym is acceptable; state any affiliation relevant to the review.
+    validations:
+      required: true
+  - type: textarea
+    id: conflicts
+    attributes:
+      label: Conflicts and relationship to the maintainer
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Immutable release and commit
+      placeholder: v0.8.0 · 219e6f75298fe02e360c36faceeea17ea38f64b0
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment and installation path
+      description: OS, architecture, Python version, and whether wheel, sdist, source ZIP, or checkout was used.
+    validations:
+      required: true
+  - type: textarea
+    id: commands
+    attributes:
+      label: Exact commands and exit codes
+      render: shell
+    validations:
+      required: true
+  - type: textarea
+    id: hashes
+    attributes:
+      label: Expected and observed hashes
+      render: text
+    validations:
+      required: true
+  - type: dropdown
+    id: result
+    attributes:
+      label: Reproduction result
+      options:
+        - Reproduced
+        - Partially reproduced
+        - Not reproduced
+    validations:
+      required: true
+  - type: textarea
+    id: findings
+    attributes:
+      label: Findings and unresolved limitations
+      description: Separate software, method, domain, and claim-language findings.
+    validations:
+      required: true
+  - type: checkboxes
+    id: boundary
+    attributes:
+      label: Claim boundary
+      options:
+        - label: I have stated what this review does not establish.
+          required: true
+        - label: No real credentials, personal records, or restricted data are attached.
+          required: true

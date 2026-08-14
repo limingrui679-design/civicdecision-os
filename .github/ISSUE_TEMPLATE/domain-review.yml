@@ -1,0 +1,46 @@
+name: Urban-domain or method review
+description: Submit a scoped review of source semantics, assumptions, methods, or claim boundaries.
+title: "[Review]: "
+labels: [external-review, needs-triage]
+body:
+  - type: input
+    id: scope
+    attributes:
+      label: Review field and scope
+      placeholder: Urban planning · source semantics and facility assumptions
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Release or commit reviewed
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Files, artifacts, and commands examined
+    validations:
+      required: true
+  - type: textarea
+    id: findings
+    attributes:
+      label: Findings
+      description: Cite exact files or artifacts and separate confirmed defects from questions or recommendations.
+    validations:
+      required: true
+  - type: textarea
+    id: exclusions
+    attributes:
+      label: Outside scope and not established
+    validations:
+      required: true
+  - type: checkboxes
+    id: conduct
+    attributes:
+      label: Review declarations
+      options:
+        - label: I disclosed relevant conflicts or relationships.
+          required: true
+        - label: I did not treat aggregate public records as individual facts.
+          required: true

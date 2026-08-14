@@ -1,0 +1,50 @@
+name: Bug report
+description: Report a reproducible software or artifact defect.
+title: "[Bug]: "
+labels: [bug, needs-triage]
+body:
+  - type: markdown
+    attributes:
+      value: Do not include credentials, personal records, restricted data, or unredacted security findings.
+  - type: input
+    id: version
+    attributes:
+      label: Release or commit
+      placeholder: v0.8.0 or a full commit SHA
+    validations:
+      required: true
+  - type: textarea
+    id: observed
+    attributes:
+      label: Observed behavior
+      description: Include the exact error and the artifact or route involved.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Minimal reproduction
+      description: Include environment, installation path, exact commands, and exit codes.
+      render: shell
+    validations:
+      required: true
+  - type: textarea
+    id: boundary
+    attributes:
+      label: Evidence and claim impact
+      description: Does the defect affect evidence typing, release status, counts, hashes, or public claims?
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Submission checks
+      options:
+        - label: I removed credentials, personal data, and restricted records.
+          required: true
+        - label: This is not an unpatched exploitable vulnerability.
+          required: true

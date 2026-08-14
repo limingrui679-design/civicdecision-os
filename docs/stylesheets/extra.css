@@ -1,0 +1,16 @@
+:root {
+  --md-primary-fg-color: #102b32;
+  --md-primary-fg-color--light: #2f4b50;
+  --md-primary-fg-color--dark: #081d22;
+  --md-accent-fg-color: #ca4f3b;
+}
+
+[data-md-color-scheme="default"] {
+  --md-default-bg-color: #fffdf8;
+  --md-code-bg-color: #f6f0e5;
+}
+
+.md-header { border-bottom: 3px solid #ed765e; }
+.md-typeset h1, .md-typeset h2 { letter-spacing: -0.025em; }
+.md-typeset .md-button--primary { background-color: #ed765e; border-color: #ed765e; }
+.md-typeset table:not([class]) th { background: #102b32; color: #fffdf8; }

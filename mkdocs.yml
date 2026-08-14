@@ -1,0 +1,92 @@
+site_name: CivicDecision OS
+site_description: Evidence-typed urban intervention analysis and reproducible DecisionPacks
+site_url: https://limingrui679-design.github.io/civicdecision-os/
+site_dir: build/docs-site
+repo_url: https://github.com/limingrui679-design/civicdecision-os
+repo_name: limingrui679-design/civicdecision-os
+edit_uri: edit/main/docs/
+copyright: Public-data reference implementation · MIT
+
+theme:
+  name: material
+  logo: assets/favicon.svg
+  favicon: assets/favicon.svg
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+  features:
+    - navigation.instant
+    - navigation.sections
+    - navigation.top
+    - content.code.copy
+    - content.action.edit
+    - search.highlight
+    - search.suggest
+
+nav:
+  - Start here: START_HERE.md
+  - Tutorials:
+      - Build your first DecisionPack: tutorials/FIRST_DECISIONPACK.md
+      - Add and validate a city: tutorials/ADD_A_CITY.md
+      - Build and review a scenario: tutorials/BUILD_REVIEW_SCENARIO.md
+  - Concepts:
+      - Architecture: ARCHITECTURE.md
+      - Product surfaces: PRODUCT_SURFACES.md
+      - Data governance: DATA_GOVERNANCE.md
+      - Threat model: THREAT_MODEL.md
+  - Reference:
+      - REST API: API.md
+      - Python SDK: SDK.md
+      - Plugin SDK: PLUGIN_SDK.md
+      - Web explorer: WEB_EXPLORER.md
+      - Release process: RELEASE_PROCESS.md
+      - Installation and packaging: PACKAGING.md
+  - Evidence:
+      - Current status: STATUS.md
+      - Requirements and evidence: REQUIREMENTS.md
+      - Claim audit: CLAIM_AUDIT.md
+      - Analytical engine audit: ANALYTICAL_ENGINE_AUDIT.md
+      - Security assurance: SECURITY_ASSURANCE.md
+      - Independent review protocol: EXTERNAL_REVIEW.md
+      - Adoption and discovery metrics: ADOPTION_METRICS.md
+      - Evidence-first launch playbook: LAUNCH_PLAYBOOK.md
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - footnotes
+  - md_in_html
+  - pymdownx.details
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.superfences
+  - tables
+  - toc:
+      permalink: true
+
+extra_css:
+  - stylesheets/extra.css
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/limingrui679-design/civicdecision-os
+
+validation:
+  nav:
+    omitted_files: info
+  links:
+    not_found: info
+    unrecognized_links: info

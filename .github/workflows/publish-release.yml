@@ -1,0 +1,80 @@
+name: Publish release assets
+
+on:
+  push:
+    tags:
+      - "v*"
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: Existing immutable tag to publish
+        required: true
+        type: string
+
+permissions:
+  contents: write
+
+concurrency:
+  group: publish-release-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    env:
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - name: Resolve release tag
+        id: release
+        shell: bash
+        run: |
+          if [[ "${GITHUB_EVENT_NAME}" == "workflow_dispatch" ]]; then
+            tag="${{ inputs.tag }}"
+          else
+            tag="${GITHUB_REF_NAME}"
+          fi
+          if [[ ! "$tag" =~ ^v[0-9]+\.[0-9]+\.[0-9]+$ ]]; then
+            echo "Tag must use vMAJOR.MINOR.PATCH" >&2
+            exit 1
+          fi
+          echo "tag=$tag" >> "$GITHUB_OUTPUT"
+          echo "version=${tag#v}" >> "$GITHUB_OUTPUT"
+
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ steps.release.outputs.tag }}
+          fetch-depth: 0
+          persist-credentials: false
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install release toolchain
+        run: python -m pip install -e '.[dev,release]'
+
+      - name: Build and independently verify release candidate
+        run: >-
+          python scripts/build_release_candidate.py
+          --output-dir dist/release-${{ steps.release.outputs.version }}
+
+      - name: Publish direct and complete release assets
+        shell: bash
+        run: |
+          tag="${{ steps.release.outputs.tag }}"
+          version="${{ steps.release.outputs.version }}"
+          release_root="dist/release-${version}"
+          release_dir="${release_root}/civicdecision-${version}-release"
+          gh release view "$tag" >/dev/null 2>&1 || \
+            gh release create "$tag" --verify-tag --title "CivicDecision OS ${tag}" --generate-notes
+          gh release upload "$tag" --clobber \
+            "${release_dir}/civicdecision-${version}-py3-none-any.whl" \
+            "${release_dir}/civicdecision-${version}.tar.gz" \
+            "${release_dir}/civicdecision-${version}-source.zip" \
+            "${release_dir}/SHA256SUMS" \
+            "${release_dir}/sbom.cdx.json" \
+            "${release_dir}/release-report.json" \
+            "${release_root}/civicdecision-${version}-release-bundle.zip" \
+            "${release_root}/civicdecision-${version}-release-bundle.zip.sha256"

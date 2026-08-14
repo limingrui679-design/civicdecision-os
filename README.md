@@ -1,10 +1,97 @@
 # CivicDecision OS
 
-**A local, evidence-typed compiler for urban interventions.**
+<p align="center">
+  <img src="docs/assets/civicdecision-public-demo.png" alt="CivicDecision OS public walkthrough showing an evidence gate with 76 of 96 deep executions completed and 20 withheld" width="100%">
+</p>
 
-CivicDecision OS turns versioned public data, urban networks, policy constraints, simulation results, and optimization runs into reproducible `DecisionPack` artifacts.
+<p align="center">
+  <a href="https://github.com/limingrui679-design/civicdecision-os/actions/workflows/ci.yml"><img alt="CI" src="https://github.com/limingrui679-design/civicdecision-os/actions/workflows/ci.yml/badge.svg"></a>
+  <a href="https://github.com/limingrui679-design/civicdecision-os/releases/tag/v0.8.0"><img alt="Release v0.8.0" src="https://img.shields.io/badge/release-v0.8.0-ed765e"></a>
+  <img alt="Python 3.11 or newer" src="https://img.shields.io/badge/python-3.11%2B-102b32">
+  <a href="LICENSE"><img alt="MIT license" src="https://img.shields.io/badge/license-MIT-f5dfbb"></a>
+</p>
 
-The project is being built around one strict pipeline:
+**Build auditable urban intervention analyses that expose the evidence, assumptions,
+uncertainty—and when no recommendation is justified.**
+
+CivicDecision OS is an evidence-typed compiler and review surface for urban analysts and civic
+data teams. It turns versioned public data, policy constraints, simulations, and bounded
+optimization runs into reproducible `DecisionPack` artifacts without silently upgrading modeled
+results into observed impact.
+
+<p>
+  <a href="https://civicdecision-os.limingrui2.chatgpt.site"><strong>Open the public walkthrough →</strong></a>
+  · <a href="#five-minute-quickstart">Run the full local explorer</a>
+  · <a href="examples/outputs/suffolk-heat-access/decision-brief.md">Inspect one DecisionPack</a>
+  · <a href="docs/START_HERE.md">Choose a tutorial</a>
+</p>
+
+## What you can verify now
+
+| Surface | Verified v0.8.0 snapshot | Boundary |
+|---|---:|---|
+| City catalog | 258 highest-available records | Coverage does not establish local analytical readiness. |
+| Scenario design library | 240 designs in 30 families | Designs are not city executions or new-method claims. |
+| DecisionPack inventory | 98 artifacts | Includes completed and negative releases. |
+| Deep execution gate | 76 of 96 completed; 20 withheld | Completion is not accuracy, adoption, or policy success. |
+| Repository tests | 800 passing | Tests establish implementation behavior, not policy validity. |
+
+The public walkthrough starts with one bounded Suffolk County heat-access case. Its completed run
+evaluates 55 tract-centroid combinations and finds 16 feasible under declared constraints; the
+paired infeasible configuration evaluates 10 combinations, finds none feasible, and preserves the
+failure instead of manufacturing a recommendation. Both are methods demonstrations over committed
+public-data fixtures—not facility plans or municipal recommendations.
+
+## Five-minute quickstart
+
+### 1. Inspect before installing
+
+Open the [read-only public walkthrough](https://civicdecision-os.limingrui2.chatgpt.site) to see
+the evidence gate, completed/infeasible reference pair, claim boundaries, and current verified
+snapshot.
+
+### 2. Run the full local Evidence Explorer
+
+```bash
+git clone https://github.com/limingrui679-design/civicdecision-os.git
+cd civicdecision-os
+python -m venv .venv
+. .venv/bin/activate
+python -m pip install -e '.[api]'
+civicdecision serve --root . --host 127.0.0.1 --port 8000
+```
+
+Open `http://127.0.0.1:8000/`. The server is loopback-only by default. It exposes the same
+validated snapshot through the browser, REST API, SDK, and CLI.
+
+To install only the verified v0.8.0 Python package first:
+
+```bash
+python -m pip install \
+  https://github.com/limingrui679-design/civicdecision-os/releases/download/v0.8.0/civicdecision-0.8.0-py3-none-any.whl
+civicdecision version
+```
+
+The [release page](https://github.com/limingrui679-design/civicdecision-os/releases/tag/v0.8.0)
+also exposes the sdist, no-Git source ZIP, complete bundle, portable checksums, SBOM, and release
+report as direct assets.
+
+### 3. Reproduce the golden case
+
+```bash
+civicdecision demo heat-access \
+  --data examples/data/cdc-places/cdc-places-7ccf6e7d6dc3.json \
+  --manifest examples/data/cdc-places/cdc-places-7ccf6e7d6dc3.manifest.json \
+  --scenario examples/scenarios/suffolk-heat-access-demo.yaml \
+  --config examples/configs/suffolk-heat-access-default.yaml
+```
+
+Compare the generated artifact with the committed [DecisionPack](examples/outputs/suffolk-heat-access/decision-pack.json),
+[decision brief](examples/outputs/suffolk-heat-access/decision-brief.md), and
+[portable checksums](examples/outputs/suffolk-heat-access/SHA256SUMS). Then substitute
+`examples/configs/suffolk-heat-access-infeasible.yaml` to reproduce the explicit negative result.
+
+## One strict pipeline
 
 ```text
 intervention definition
@@ -13,7 +100,7 @@ intervention definition
   -> historical replay or simulation
   -> constrained optimization
   -> decision reversal and value of information
-  -> reproducible DecisionPack
+  -> reproducible DecisionPack or auditable negative release
 ```
 
 ## Current status
@@ -275,7 +362,7 @@ Every analytical output must be typed as one of:
 
 The type system intentionally rejects unsupported upgrades—for example, a simulated benefit cannot be serialized as an observed outcome, and a causal item requires an identification strategy plus diagnostics.
 
-## Development
+## Contributor development
 
 Use Python 3.11 or newer.
 

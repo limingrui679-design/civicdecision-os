@@ -12,6 +12,8 @@ build/
 dist/
 *.whl
 *.egg-info/
+!web-demo/build/
+!web-demo/build/sites-vite-plugin.ts
 data/raw/**
 data/bronze/**
 data/silver/**

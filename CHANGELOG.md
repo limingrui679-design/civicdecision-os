@@ -3,6 +3,36 @@
 All notable changes are recorded here. CivicDecision OS follows semantic versioning only after
 the first stable release; while the project is alpha, minor versions may include contract changes.
 
+## Unreleased
+
+### Public product and documentation
+
+- Published a public, read-only guided walkthrough at
+  `https://civicdecision-os.limingrui2.chatgpt.site` with an evidence-gate overview, completed and
+  deliberately infeasible Suffolk reference runs, explicit claim boundaries, and a local
+  quickstart. This is a static product walkthrough, not a hosted analytical service.
+- Rebuilt the README entry path around one user job, a verified snapshot table, the public
+  walkthrough, a five-minute local start, one golden case, direct release assets, and a captured
+  product image while retaining the full technical evidence inventory.
+- Added a strict MkDocs build with start routing, three task-oriented tutorials, packaging status,
+  an external-review protocol, a launch playbook, and adoption-metric boundaries.
+
+### Review, community, and distribution
+
+- Added citation metadata, a code of conduct, public roadmap, structured bug/reproduction/domain
+  review forms, pull-request evidence checklist, and weekly dependency configuration.
+- Added a bounded GitHub traffic snapshot script and scheduled artifact-only workflow; traffic,
+  clones, downloads, forks, and stars remain explicitly separated from adoption and impact.
+- Marked deterministic catalog, benchmark, schema, and verification projections as generated for
+  review presentation without removing any evidence files.
+- Added a tag-triggered GitHub Release workflow and exposed the verified v0.8.0 wheel, sdist,
+  no-Git source ZIP, checksums, and SBOM as direct assets on the existing release.
+
+### Boundaries
+
+- No external reviewer, independent reproduction, PyPI publication, municipal adoption,
+  production deployment, policy effectiveness, or real-world impact is claimed by these changes.
+
 ## 0.8.0 — 2026-08-13
 
 ### Scenario-design library

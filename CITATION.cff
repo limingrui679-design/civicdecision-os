@@ -1,0 +1,25 @@
+cff-version: 1.2.0
+message: >-
+  If CivicDecision OS supports your research or review, cite the software release and the exact
+  artifact hashes you used.
+title: CivicDecision OS
+abstract: >-
+  An evidence-typed compiler and review surface for reproducible urban intervention analysis,
+  bounded optimization, explicit negative releases, and auditable DecisionPack artifacts.
+type: software
+authors:
+  - family-names: Li
+    given-names: Mingrui
+repository-code: https://github.com/limingrui679-design/civicdecision-os
+url: https://civicdecision-os.limingrui2.chatgpt.site
+license: MIT
+version: 0.8.0
+date-released: 2026-08-14
+keywords:
+  - urban analytics
+  - urban planning
+  - decision support
+  - civic technology
+  - reproducibility
+  - geospatial analysis
+  - policy analysis

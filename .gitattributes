@@ -4,3 +4,13 @@
 *.md text eol=lf
 *.py text eol=lf
 *.yaml text eol=lf
+
+# Collapse deterministic projections and evidence inventories in review without
+# removing them from the repository or release archive.
+catalog/product/** linguist-generated=true
+catalog/deep-cities/** linguist-generated=true
+catalog/standardized-cities/** linguist-generated=true
+catalog/global-cities/** linguist-generated=true
+benchmarks/milestone-4/** linguist-generated=true
+verification/*.json linguist-generated=true
+schemas/*.json linguist-generated=true
