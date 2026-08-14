@@ -1,5 +1,5 @@
 {
-  "audit_completed_at": "2026-08-14T01:36:19Z",
+  "audit_completed_at": "2026-08-14T02:29:28Z",
   "checks": {
     "failed": 0,
     "passed": 136,
@@ -11,20 +11,20 @@
     "A public repository coordinate does not establish a hosted demo, remote CI success, external review, users, adoption, or impact."
   ],
   "evidence_sha256": {
-    "catalog/product/artifact-manifest.json": "sha256:6e48477aafec442fdd1d6c8c804321493888bd656aeba4ac1cdcd11b7118a865",
-    "catalog/product/catalog-summary.json": "sha256:27e039a24e0bb88bc601c057fc8d482677c2446a9bf6b9e118463af3a00fac5b",
-    "catalog/product/scenarios/all.json": "sha256:c32914ba455b221b5f6b8d7cf830b95b20b9e021a38abe0686b6979e0417d6a0",
-    "verification/milestone-8-coverage.json": "sha256:91ecb0ef5ccb42cd95927b22a9bf8e8e81132163a1503f0e9c79f3caaa00aa14",
-    "verification/milestone-8-performance.json": "sha256:e971f1814969655ae518246f475c954a68011118aa8b02f40921b021908f8b33",
+    "catalog/product/artifact-manifest.json": "sha256:71c09746290e6f5354389f1c7cdd67f71565bd2140ff4379ba592c148b4253f0",
+    "catalog/product/catalog-summary.json": "sha256:72586e7b24a95ffe9b6e71678513c36d651d3c1e3001859fd7d51834cdf77904",
+    "catalog/product/scenarios/all.json": "sha256:5da178b4910a0f06c71139f18d806e05c157ce9cc9800385d96d668aa91d09f8",
+    "verification/milestone-8-coverage.json": "sha256:b9886e8f2426eea8f301c0e86e4429c83b27bb8f68b8bb237c92592c4165286b",
+    "verification/milestone-8-performance.json": "sha256:908bc248a9cad8703004aecdf15196b80ac5075e35e23e357f50952a297e2926",
     "verification/milestone-8-public-state.json": "sha256:7c793ca8b2e4471a8091308b3fa7c74dbfc85e285c166bd89a78e182b0093c66",
-    "verification/milestone-8-quality.json": "sha256:f61c9b76820bafa9811828dc2b04e591f6f586175750a61f12e4e629428d6bf1",
-    "verification/milestone-8-repository.json": "sha256:837008aed601fd31462a46aae8341f00fcd750799aea926a241a995744f4ce1b"
+    "verification/milestone-8-quality.json": "sha256:9b8c9acefc76bed59ce923c443a0b89aa36d921eb408f112a5b23a67678bdf7c",
+    "verification/milestone-8-repository.json": "sha256:b19a36777d0095769ab6c73f4a1702610e97e736825e2c127f6776f545ceb6dd"
   },
   "failures": [],
   "governed_surface_sha256": {
-    "CHANGELOG.md": "sha256:14dc80e4bea28b90e340416f61e622a3728ed4027ff2452ddac8aa8baa22afb3",
+    "CHANGELOG.md": "sha256:2f72c8ddbe1f94948d635034f04eb232891974854a3bebc82f1d641f293870e4",
     "CONTRIBUTING.md": "sha256:c8622e1a630aafa47ee0284d32da41dbe240e9081c237a7d207318dfbd040de3",
-    "README.md": "sha256:f229424c0cdbbc9db0eeabd4e26a24643ba4279f9fa4e61f890fe3b708f7fc9b",
+    "README.md": "sha256:8c7d6d7e29746ca64c615e224701a742ae1a488eca7557bd36cb9023d16408cb",
     "SECURITY.md": "sha256:6d4ce198843863e34fe24e250f5d0c7ef0274bf87c4efb7ba3076af94c01f6a4",
     "docs/ANALYTICAL_ENGINE_AUDIT.md": "sha256:5c673dc493596576e5432577f2683c51f569ce65a8d601a5d627746c7b3a5aec",
     "docs/API.md": "sha256:1aa3cbbb37cd7e9496616b5c13a8cf874aecc0575667b3b5d1ab9583dc5032e2",
@@ -37,14 +37,14 @@
     "docs/PERFORMANCE.md": "sha256:669cf19ad4e5696f300780fa3ceb1a690d88e56e0cf24411dc68e78d3f2a04cc",
     "docs/PLUGIN_SDK.md": "sha256:3cf0e1d2314b43099fe7ae133b2ff42256a05c8251d3cd2c56562955517c4f42",
     "docs/PRODUCT_SURFACES.md": "sha256:7ea7f5832067df0021b3339e1c8b5a3016de9d177e8692cdc85f15cfaa7f9849",
-    "docs/RELEASE_NOTES_0.8.0.md": "sha256:32c61c6875537097fd07a3bb7eae288f223a4a08245ce5f3e69ab666cb63c1b2",
+    "docs/RELEASE_NOTES_0.8.0.md": "sha256:b68f01b4b32956e46472f9e54215bfe6ef10be641334a76e69563e8ba379fc3f",
     "docs/RELEASE_PROCESS.md": "sha256:85197d807074c71e0f169a4533619deca925060c3e7408d3cf884a05c4adefa0",
-    "docs/REQUIREMENTS.md": "sha256:7f6eff40c72e2f0c2915fd9eea40696e38f75c2d6d8792e471cb372be77ca895",
+    "docs/REQUIREMENTS.md": "sha256:3aacb9743f10850f94f1d75146675786bf13c50e30203793dbce2a2dfb8a901d",
     "docs/SCENARIO_LIBRARY.md": "sha256:6cda5fae4f9da4842ee5bec0ea21e51bd7fe99f680bd8476945a35077b92991f",
     "docs/SDK.md": "sha256:d492191ef59ae2ea1a7018fa3f771f631cc448a3ff8dd31096aaa28635ecc0d2",
     "docs/SECURITY_ASSURANCE.md": "sha256:90db3bf40eed0ff72e4a18b45e5540de409053b2c519c2a8f0062ffc6f66eb6d",
     "docs/STANDARDIZED_CITY_COVERAGE.md": "sha256:362be6ac6e9d1014ab0aaaff99e3935f163b5f47ece990e8566124c1b7052a62",
-    "docs/STATUS.md": "sha256:0fd33cd7c60e074c17b0037459ed48c2638fa838c2f890afb60caeb800bc388f",
+    "docs/STATUS.md": "sha256:9b73c2f86ce960211681830c2b8cfb1cd777bb77038dabb8be5a2addd27ea6bc",
     "docs/THREAT_MODEL.md": "sha256:93a4d8f24fb58199c333908f911259692d888c74ba0ec37ee88164576472bd0d",
     "docs/WEB_EXPLORER.md": "sha256:e7949c8dba956019150eeb93f02efecd607bd0d9d03633225cc750c93c3b3072",
     "docs/adr/0001-evidence-typed-compiler.md": "sha256:39fb8e99d9b77490137858dbb95a2fd294da053cf39077e0a64f9440b1c38192",
@@ -57,7 +57,7 @@
   },
   "policy": {
     "path": "governance/CLAIM_AUDIT_POLICY.json",
-    "sha256": "sha256:f23e23638812d43e1654cef21235eb28f96adfda221b1184cc9ddad7c8900b4e"
+    "sha256": "sha256:6c72c187f28f7172dcfc2eefa483b4c710914c62e643eda7a0a6a66d30d018cf"
   },
   "public_state": {
     "github_repository": "limingrui679-design/civicdecision-os",
@@ -79,7 +79,7 @@
     "benchmark-artifacts": 145,
     "benchmark-optimization-tasks": 100,
     "branch-coverage-percent": 91.12903225806451,
-    "combined-coverage-percent": 95.91071732833532,
+    "combined-coverage-percent": 95.91350246892559,
     "core-generated-schemas": 22,
     "decision-packs": 98,
     "declared-source-units": 258478,
@@ -104,7 +104,7 @@
     "scenario-library-files": 282,
     "software-version": "0.8.0",
     "source-manifests": 90,
-    "statement-coverage-percent": 97.1114900874014,
+    "statement-coverage-percent": 97.11395101171459,
     "tier-d-cities": 8,
     "tier-d-completed-executions": 76,
     "tier-d-negative-executions": 20,

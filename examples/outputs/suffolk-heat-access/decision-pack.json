@@ -1316,7 +1316,7 @@
     ],
     "environment": {
       "algorithm": "exhaustive-enumeration",
-      "python": "3.12.13"
+      "python": ">=3.11"
     },
     "parameters": {
       "budget": 16000.0,

@@ -54,7 +54,7 @@ the first stable release; while the project is alpha, minor versions may include
 
 - Preserved 800 automated tests while adding release-archive validation to an existing integrated
   test path.
-- The Milestone-8 snapshot records 97.111% statement coverage, 91.129% branch coverage, and 95.911%
+- The Milestone-8 snapshot records 97.114% statement coverage, 91.129% branch coverage, and 95.914%
   combined coverage after the release-assurance module and adversarial archive gates were added.
 - Exact repository regeneration now covers the original reference DecisionPacks, Tier-G catalog,
   30 Tier-S bundles, 145 analytical benchmark runs, 707 Tier-D files, 282 scenario-library files,

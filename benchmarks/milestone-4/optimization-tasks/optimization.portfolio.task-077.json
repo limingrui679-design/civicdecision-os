@@ -152,9 +152,9 @@
         "action-d": 4
       },
       "scenario_objectives": {
-        "adverse": 60.800000000000004,
-        "base": 113.19999999999999,
-        "favorable": 165.60000000000002
+        "adverse": 60.8,
+        "base": 113.2,
+        "favorable": 165.6
       },
       "selected_action_count": 4,
       "total_benefit": 172.0,
@@ -206,9 +206,9 @@
         "action-d": 4
       },
       "scenario_objectives": {
-        "adverse": 59.800000000000004,
-        "base": 111.19999999999999,
-        "favorable": 162.60000000000002
+        "adverse": 59.8,
+        "base": 111.2,
+        "favorable": 162.6
       },
       "selected_action_count": 4,
       "total_benefit": 170.0,
@@ -260,9 +260,9 @@
         "action-d": 4
       },
       "scenario_objectives": {
-        "adverse": 58.800000000000004,
-        "base": 109.19999999999999,
-        "favorable": 159.60000000000002
+        "adverse": 58.8,
+        "base": 109.2,
+        "favorable": 159.6
       },
       "selected_action_count": 4,
       "total_benefit": 168.0,
@@ -314,9 +314,9 @@
         "action-d": 3
       },
       "scenario_objectives": {
-        "adverse": 57.80000000000001,
-        "base": 107.19999999999999,
-        "favorable": 156.60000000000002
+        "adverse": 57.8,
+        "base": 107.2,
+        "favorable": 156.6
       },
       "selected_action_count": 4,
       "total_benefit": 166.0,
@@ -368,7 +368,7 @@
         "action-d": 4
       },
       "scenario_objectives": {
-        "adverse": 57.400000000000006,
+        "adverse": 57.4,
         "base": 107.1,
         "favorable": 156.8
       },
@@ -422,7 +422,7 @@
         "action-d": 4
       },
       "scenario_objectives": {
-        "adverse": 56.400000000000006,
+        "adverse": 56.4,
         "base": 105.1,
         "favorable": 153.8
       },
@@ -476,7 +476,7 @@
         "action-d": 4
       },
       "scenario_objectives": {
-        "adverse": 55.400000000000006,
+        "adverse": 55.4,
         "base": 103.1,
         "favorable": 150.8
       },
@@ -530,7 +530,7 @@
         "action-d": 4
       },
       "scenario_objectives": {
-        "adverse": 55.400000000000006,
+        "adverse": 55.4,
         "base": 103.1,
         "favorable": 150.8
       },
@@ -584,7 +584,7 @@
         "action-d": 3
       },
       "scenario_objectives": {
-        "adverse": 54.400000000000006,
+        "adverse": 54.4,
         "base": 101.1,
         "favorable": 147.8
       },
@@ -638,7 +638,7 @@
         "action-d": 4
       },
       "scenario_objectives": {
-        "adverse": 54.400000000000006,
+        "adverse": 54.4,
         "base": 101.1,
         "favorable": 147.8
       },
@@ -692,7 +692,7 @@
         "action-d": 4
       },
       "scenario_objectives": {
-        "adverse": 54.00000000000001,
+        "adverse": 54.0,
         "base": 101.0,
         "favorable": 148.0
       },
@@ -746,7 +746,7 @@
         "action-d": 3
       },
       "scenario_objectives": {
-        "adverse": 53.400000000000006,
+        "adverse": 53.4,
         "base": 99.1,
         "favorable": 144.8
       },
@@ -800,7 +800,7 @@
         "action-d": 4
       },
       "scenario_objectives": {
-        "adverse": 53.400000000000006,
+        "adverse": 53.4,
         "base": 99.1,
         "favorable": 144.8
       },
@@ -854,7 +854,7 @@
         "action-d": 4
       },
       "scenario_objectives": {
-        "adverse": 53.00000000000001,
+        "adverse": 53.0,
         "base": 99.0,
         "favorable": 145.0
       },
@@ -908,7 +908,7 @@
         "action-d": 3
       },
       "scenario_objectives": {
-        "adverse": 52.400000000000006,
+        "adverse": 52.4,
         "base": 97.1,
         "favorable": 141.8
       },
@@ -1016,7 +1016,7 @@
         "action-d": 4
       },
       "scenario_objectives": {
-        "adverse": 52.00000000000001,
+        "adverse": 52.0,
         "base": 97.0,
         "favorable": 142.0
       },
@@ -1070,7 +1070,7 @@
         "action-d": 2
       },
       "scenario_objectives": {
-        "adverse": 51.400000000000006,
+        "adverse": 51.4,
         "base": 95.1,
         "favorable": 138.8
       },
@@ -1124,7 +1124,7 @@
         "action-d": 3
       },
       "scenario_objectives": {
-        "adverse": 51.00000000000001,
+        "adverse": 51.0,
         "base": 95.0,
         "favorable": 139.0
       },
@@ -1232,9 +1232,9 @@
         "action-d": 4
       },
       "scenario_objectives": {
-        "adverse": 50.60000000000001,
-        "base": 94.89999999999999,
-        "favorable": 139.20000000000002
+        "adverse": 50.6,
+        "base": 94.9,
+        "favorable": 139.2
       },
       "selected_action_count": 3,
       "total_benefit": 139.0,
@@ -1286,8 +1286,8 @@
         "action-d": 3
       },
       "scenario_objectives": {
-        "adverse": 50.00000000000001,
-        "base": 92.99999999999999,
+        "adverse": 50.0,
+        "base": 93.0,
         "favorable": 136.0
       },
       "selected_action_count": 4,
@@ -1448,9 +1448,9 @@
         "action-d": 4
       },
       "scenario_objectives": {
-        "adverse": 49.60000000000001,
-        "base": 92.89999999999999,
-        "favorable": 136.20000000000002
+        "adverse": 49.6,
+        "base": 92.9,
+        "favorable": 136.2
       },
       "selected_action_count": 4,
       "total_benefit": 137.0,
@@ -1502,7 +1502,7 @@
         "action-d": 3
       },
       "scenario_objectives": {
-        "adverse": 49.00000000000001,
+        "adverse": 49.0,
         "base": 91.0,
         "favorable": 133.0
       },
@@ -1556,7 +1556,7 @@
         "action-d": 3
       },
       "scenario_objectives": {
-        "adverse": 49.00000000000001,
+        "adverse": 49.0,
         "base": 91.0,
         "favorable": 133.0
       },
@@ -1665,8 +1665,8 @@
       },
       "scenario_objectives": {
         "adverse": 48.6,
-        "base": 90.89999999999999,
-        "favorable": 133.20000000000002
+        "base": 90.9,
+        "favorable": 133.2
       },
       "selected_action_count": 4,
       "total_benefit": 135.0,
@@ -1718,9 +1718,9 @@
         "action-d": 4
       },
       "scenario_objectives": {
-        "adverse": 48.60000000000001,
-        "base": 90.89999999999999,
-        "favorable": 133.20000000000002
+        "adverse": 48.6,
+        "base": 90.9,
+        "favorable": 133.2
       },
       "selected_action_count": 3,
       "total_benefit": 135.0,
@@ -1772,7 +1772,7 @@
         "action-d": 2
       },
       "scenario_objectives": {
-        "adverse": 48.00000000000001,
+        "adverse": 48.0,
         "base": 89.0,
         "favorable": 130.0
       },
@@ -1826,7 +1826,7 @@
         "action-d": 3
       },
       "scenario_objectives": {
-        "adverse": 48.00000000000001,
+        "adverse": 48.0,
         "base": 89.0,
         "favorable": 130.0
       },
@@ -1934,9 +1934,9 @@
         "action-d": 3
       },
       "scenario_objectives": {
-        "adverse": 47.60000000000001,
-        "base": 88.89999999999999,
-        "favorable": 130.20000000000002
+        "adverse": 47.6,
+        "base": 88.9,
+        "favorable": 130.2
       },
       "selected_action_count": 4,
       "total_benefit": 133.0,
@@ -1989,8 +1989,8 @@
       },
       "scenario_objectives": {
         "adverse": 47.6,
-        "base": 88.89999999999999,
-        "favorable": 130.20000000000002
+        "base": 88.9,
+        "favorable": 130.2
       },
       "selected_action_count": 4,
       "total_benefit": 133.0,
@@ -2042,9 +2042,9 @@
         "action-d": 2
       },
       "scenario_objectives": {
-        "adverse": 47.00000000000001,
+        "adverse": 47.0,
         "base": 87.0,
-        "favorable": 127.00000000000001
+        "favorable": 127.0
       },
       "selected_action_count": 4,
       "total_benefit": 136.0,
@@ -2096,9 +2096,9 @@
         "action-d": 3
       },
       "scenario_objectives": {
-        "adverse": 47.00000000000001,
+        "adverse": 47.0,
         "base": 87.0,
-        "favorable": 127.00000000000001
+        "favorable": 127.0
       },
       "selected_action_count": 4,
       "total_benefit": 136.0,
@@ -2150,9 +2150,9 @@
         "action-d": 3
       },
       "scenario_objectives": {
-        "adverse": 46.60000000000001,
-        "base": 86.89999999999999,
-        "favorable": 127.20000000000002
+        "adverse": 46.6,
+        "base": 86.9,
+        "favorable": 127.2
       },
       "selected_action_count": 4,
       "total_benefit": 131.0,
@@ -2195,7 +2195,7 @@
         "Optimized values are mathematical outputs under declared inputs, not observed impact.",
         "Feasibility reflects only encoded constraints and does not establish implementability."
       ],
-      "objective_value": 86.89999999999999,
+      "objective_value": 86.9,
       "plan_id": "portfolio-plan-00000169",
       "quantities": {
         "action-a": 2,
@@ -2205,7 +2205,7 @@
       },
       "scenario_objectives": {
         "adverse": 46.6,
-        "base": 86.89999999999999,
+        "base": 86.9,
         "favorable": 127.2
       },
       "selected_action_count": 4,
@@ -2249,7 +2249,7 @@
         "Optimized values are mathematical outputs under declared inputs, not observed impact.",
         "Feasibility reflects only encoded constraints and does not establish implementability."
       ],
-      "objective_value": 86.89999999999999,
+      "objective_value": 86.9,
       "plan_id": "portfolio-plan-00000194",
       "quantities": {
         "action-a": 3,
@@ -2259,7 +2259,7 @@
       },
       "scenario_objectives": {
         "adverse": 46.6,
-        "base": 86.89999999999999,
+        "base": 86.9,
         "favorable": 127.2
       },
       "selected_action_count": 3,
@@ -2420,9 +2420,9 @@
         "action-d": 3
       },
       "scenario_objectives": {
-        "adverse": 45.60000000000001,
-        "base": 84.89999999999999,
-        "favorable": 124.20000000000002
+        "adverse": 45.6,
+        "base": 84.9,
+        "favorable": 124.2
       },
       "selected_action_count": 4,
       "total_benefit": 129.0,
@@ -2474,9 +2474,9 @@
         "action-d": 3
       },
       "scenario_objectives": {
-        "adverse": 45.60000000000001,
-        "base": 84.89999999999999,
-        "favorable": 124.20000000000002
+        "adverse": 45.6,
+        "base": 84.9,
+        "favorable": 124.2
       },
       "selected_action_count": 3,
       "total_benefit": 129.0,
@@ -2519,7 +2519,7 @@
         "Optimized values are mathematical outputs under declared inputs, not observed impact.",
         "Feasibility reflects only encoded constraints and does not establish implementability."
       ],
-      "objective_value": 84.89999999999999,
+      "objective_value": 84.9,
       "plan_id": "portfolio-plan-00000209",
       "quantities": {
         "action-a": 3,
@@ -2529,7 +2529,7 @@
       },
       "scenario_objectives": {
         "adverse": 45.6,
-        "base": 84.89999999999999,
+        "base": 84.9,
         "favorable": 124.2
       },
       "selected_action_count": 4,
@@ -2690,9 +2690,9 @@
         "action-d": 1
       },
       "scenario_objectives": {
-        "adverse": 45.00000000000001,
+        "adverse": 45.0,
         "base": 83.0,
-        "favorable": 121.00000000000001
+        "favorable": 121.0
       },
       "selected_action_count": 4,
       "total_benefit": 132.0,
@@ -2744,9 +2744,9 @@
         "action-d": 2
       },
       "scenario_objectives": {
-        "adverse": 44.60000000000001,
-        "base": 82.89999999999999,
-        "favorable": 121.20000000000002
+        "adverse": 44.6,
+        "base": 82.9,
+        "favorable": 121.2
       },
       "selected_action_count": 4,
       "total_benefit": 127.0,
@@ -2798,9 +2798,9 @@
         "action-d": 3
       },
       "scenario_objectives": {
-        "adverse": 44.60000000000001,
-        "base": 82.89999999999999,
-        "favorable": 121.20000000000002
+        "adverse": 44.6,
+        "base": 82.9,
+        "favorable": 121.2
       },
       "selected_action_count": 4,
       "total_benefit": 127.0,
@@ -2843,7 +2843,7 @@
         "Optimized values are mathematical outputs under declared inputs, not observed impact.",
         "Feasibility reflects only encoded constraints and does not establish implementability."
       ],
-      "objective_value": 82.89999999999999,
+      "objective_value": 82.9,
       "plan_id": "portfolio-plan-00000224",
       "quantities": {
         "action-a": 3,
@@ -2853,7 +2853,7 @@
       },
       "scenario_objectives": {
         "adverse": 44.6,
-        "base": 82.89999999999999,
+        "base": 82.9,
         "favorable": 121.2
       },
       "selected_action_count": 3,
@@ -2897,7 +2897,7 @@
         "Optimized values are mathematical outputs under declared inputs, not observed impact.",
         "Feasibility reflects only encoded constraints and does not establish implementability."
       ],
-      "objective_value": 82.89999999999999,
+      "objective_value": 82.9,
       "plan_id": "portfolio-plan-00000249",
       "quantities": {
         "action-a": 4,
@@ -2907,7 +2907,7 @@
       },
       "scenario_objectives": {
         "adverse": 44.6,
-        "base": 82.89999999999999,
+        "base": 82.9,
         "favorable": 121.2
       },
       "selected_action_count": 3,
@@ -3068,9 +3068,9 @@
         "action-d": 2
       },
       "scenario_objectives": {
-        "adverse": 43.60000000000001,
-        "base": 80.89999999999999,
-        "favorable": 118.20000000000002
+        "adverse": 43.6,
+        "base": 80.9,
+        "favorable": 118.2
       },
       "selected_action_count": 4,
       "total_benefit": 125.0,
@@ -3122,9 +3122,9 @@
         "action-d": 3
       },
       "scenario_objectives": {
-        "adverse": 43.60000000000001,
-        "base": 80.89999999999999,
-        "favorable": 118.20000000000002
+        "adverse": 43.6,
+        "base": 80.9,
+        "favorable": 118.2
       },
       "selected_action_count": 4,
       "total_benefit": 125.0,
@@ -3176,9 +3176,9 @@
         "action-d": 3
       },
       "scenario_objectives": {
-        "adverse": 43.60000000000001,
-        "base": 80.89999999999999,
-        "favorable": 118.20000000000002
+        "adverse": 43.6,
+        "base": 80.9,
+        "favorable": 118.2
       },
       "selected_action_count": 3,
       "total_benefit": 125.0,
@@ -3221,7 +3221,7 @@
         "Optimized values are mathematical outputs under declared inputs, not observed impact.",
         "Feasibility reflects only encoded constraints and does not establish implementability."
       ],
-      "objective_value": 80.89999999999999,
+      "objective_value": 80.9,
       "plan_id": "portfolio-plan-00000264",
       "quantities": {
         "action-a": 4,
@@ -3231,7 +3231,7 @@
       },
       "scenario_objectives": {
         "adverse": 43.6,
-        "base": 80.89999999999999,
+        "base": 80.9,
         "favorable": 118.2
       },
       "selected_action_count": 3,
@@ -3438,6 +3438,60 @@
         "Feasibility reflects only encoded constraints and does not establish implementability."
       ],
       "objective_value": 78.9,
+      "plan_id": "portfolio-plan-00000232",
+      "quantities": {
+        "action-a": 3,
+        "action-b": 2,
+        "action-c": 2,
+        "action-d": 2
+      },
+      "scenario_objectives": {
+        "adverse": 42.6,
+        "base": 78.9,
+        "favorable": 115.2
+      },
+      "selected_action_count": 4,
+      "total_benefit": 123.0,
+      "total_capacity": 13.0,
+      "total_cost": 48.0,
+      "total_risk": 22.0,
+      "violations": [
+        {
+          "bound": 1.0,
+          "constraint_id": "budget",
+          "details": "Total cost exceeds the declared budget.",
+          "excess": 47.0,
+          "measured": 48.0
+        },
+        {
+          "bound": 1000.0,
+          "constraint_id": "minimum-benefit",
+          "details": "Total modeled benefit is below the floor.",
+          "excess": 877.0,
+          "measured": 123.0
+        },
+        {
+          "bound": 500.0,
+          "constraint_id": "group-priority",
+          "details": "Modeled benefit for priority is below its floor.",
+          "excess": 470.0,
+          "measured": 30.0
+        }
+      ]
+    },
+    {
+      "binding_constraints": [],
+      "evidence_type": "optimized",
+      "feasible": false,
+      "group_benefits": {
+        "general": 48.0,
+        "priority": 30.0
+      },
+      "limitations": [
+        "Optimized values are mathematical outputs under declared inputs, not observed impact.",
+        "Feasibility reflects only encoded constraints and does not establish implementability."
+      ],
+      "objective_value": 78.9,
       "plan_id": "portfolio-plan-00000257",
       "quantities": {
         "action-a": 4,
@@ -3446,9 +3500,9 @@
         "action-d": 2
       },
       "scenario_objectives": {
-        "adverse": 42.60000000000001,
-        "base": 78.89999999999999,
-        "favorable": 115.20000000000002
+        "adverse": 42.6,
+        "base": 78.9,
+        "favorable": 115.2
       },
       "selected_action_count": 3,
       "total_benefit": 123.0,
@@ -3500,69 +3554,15 @@
         "action-d": 3
       },
       "scenario_objectives": {
-        "adverse": 42.60000000000001,
-        "base": 78.89999999999999,
-        "favorable": 115.20000000000002
-      },
-      "selected_action_count": 4,
-      "total_benefit": 123.0,
-      "total_capacity": 13.0,
-      "total_cost": 48.0,
-      "total_risk": 18.0,
-      "violations": [
-        {
-          "bound": 1.0,
-          "constraint_id": "budget",
-          "details": "Total cost exceeds the declared budget.",
-          "excess": 47.0,
-          "measured": 48.0
-        },
-        {
-          "bound": 1000.0,
-          "constraint_id": "minimum-benefit",
-          "details": "Total modeled benefit is below the floor.",
-          "excess": 877.0,
-          "measured": 123.0
-        },
-        {
-          "bound": 500.0,
-          "constraint_id": "group-priority",
-          "details": "Modeled benefit for priority is below its floor.",
-          "excess": 470.0,
-          "measured": 30.0
-        }
-      ]
-    },
-    {
-      "binding_constraints": [],
-      "evidence_type": "optimized",
-      "feasible": false,
-      "group_benefits": {
-        "general": 48.0,
-        "priority": 30.0
-      },
-      "limitations": [
-        "Optimized values are mathematical outputs under declared inputs, not observed impact.",
-        "Feasibility reflects only encoded constraints and does not establish implementability."
-      ],
-      "objective_value": 78.89999999999999,
-      "plan_id": "portfolio-plan-00000232",
-      "quantities": {
-        "action-a": 3,
-        "action-b": 2,
-        "action-c": 2,
-        "action-d": 2
-      },
-      "scenario_objectives": {
         "adverse": 42.6,
-        "base": 78.89999999999999,
+        "base": 78.9,
         "favorable": 115.2
       },
       "selected_action_count": 4,
       "total_benefit": 123.0,
       "total_capacity": 13.0,
       "total_cost": 48.0,
-      "total_risk": 22.0,
+      "total_risk": 18.0,
       "violations": [
         {
           "bound": 1.0,
@@ -3770,9 +3770,9 @@
         "action-d": 4
       },
       "scenario_objectives": {
-        "adverse": 41.800000000000004,
-        "base": 78.69999999999999,
-        "favorable": 115.60000000000001
+        "adverse": 41.8,
+        "base": 78.7,
+        "favorable": 115.6
       },
       "selected_action_count": 2,
       "total_benefit": 113.0,
@@ -3824,15 +3824,69 @@
         "action-d": 1
       },
       "scenario_objectives": {
-        "adverse": 41.60000000000001,
-        "base": 76.89999999999999,
-        "favorable": 112.20000000000002
+        "adverse": 41.6,
+        "base": 76.9,
+        "favorable": 112.2
       },
       "selected_action_count": 4,
       "total_benefit": 121.0,
       "total_capacity": 12.0,
       "total_cost": 47.0,
       "total_risk": 25.0,
+      "violations": [
+        {
+          "bound": 1.0,
+          "constraint_id": "budget",
+          "details": "Total cost exceeds the declared budget.",
+          "excess": 46.0,
+          "measured": 47.0
+        },
+        {
+          "bound": 1000.0,
+          "constraint_id": "minimum-benefit",
+          "details": "Total modeled benefit is below the floor.",
+          "excess": 879.0,
+          "measured": 121.0
+        },
+        {
+          "bound": 500.0,
+          "constraint_id": "group-priority",
+          "details": "Modeled benefit for priority is below its floor.",
+          "excess": 471.0,
+          "measured": 29.0
+        }
+      ]
+    },
+    {
+      "binding_constraints": [],
+      "evidence_type": "optimized",
+      "feasible": false,
+      "group_benefits": {
+        "general": 47.0,
+        "priority": 29.0
+      },
+      "limitations": [
+        "Optimized values are mathematical outputs under declared inputs, not observed impact.",
+        "Feasibility reflects only encoded constraints and does not establish implementability."
+      ],
+      "objective_value": 76.9,
+      "plan_id": "portfolio-plan-00000272",
+      "quantities": {
+        "action-a": 4,
+        "action-b": 1,
+        "action-c": 2,
+        "action-d": 2
+      },
+      "scenario_objectives": {
+        "adverse": 41.6,
+        "base": 76.9,
+        "favorable": 112.2
+      },
+      "selected_action_count": 4,
+      "total_benefit": 121.0,
+      "total_capacity": 12.0,
+      "total_cost": 47.0,
+      "total_risk": 21.0,
       "violations": [
         {
           "bound": 1.0,
@@ -3878,69 +3932,15 @@
         "action-d": 3
       },
       "scenario_objectives": {
-        "adverse": 41.60000000000001,
-        "base": 76.89999999999999,
-        "favorable": 112.20000000000002
+        "adverse": 41.6,
+        "base": 76.9,
+        "favorable": 112.2
       },
       "selected_action_count": 3,
       "total_benefit": 121.0,
       "total_capacity": 14.0,
       "total_cost": 47.0,
       "total_risk": 17.0,
-      "violations": [
-        {
-          "bound": 1.0,
-          "constraint_id": "budget",
-          "details": "Total cost exceeds the declared budget.",
-          "excess": 46.0,
-          "measured": 47.0
-        },
-        {
-          "bound": 1000.0,
-          "constraint_id": "minimum-benefit",
-          "details": "Total modeled benefit is below the floor.",
-          "excess": 879.0,
-          "measured": 121.0
-        },
-        {
-          "bound": 500.0,
-          "constraint_id": "group-priority",
-          "details": "Modeled benefit for priority is below its floor.",
-          "excess": 471.0,
-          "measured": 29.0
-        }
-      ]
-    },
-    {
-      "binding_constraints": [],
-      "evidence_type": "optimized",
-      "feasible": false,
-      "group_benefits": {
-        "general": 47.0,
-        "priority": 29.0
-      },
-      "limitations": [
-        "Optimized values are mathematical outputs under declared inputs, not observed impact.",
-        "Feasibility reflects only encoded constraints and does not establish implementability."
-      ],
-      "objective_value": 76.89999999999999,
-      "plan_id": "portfolio-plan-00000272",
-      "quantities": {
-        "action-a": 4,
-        "action-b": 1,
-        "action-c": 2,
-        "action-d": 2
-      },
-      "scenario_objectives": {
-        "adverse": 41.6,
-        "base": 76.89999999999999,
-        "favorable": 112.2
-      },
-      "selected_action_count": 4,
-      "total_benefit": 121.0,
-      "total_capacity": 12.0,
-      "total_cost": 47.0,
-      "total_risk": 21.0,
       "violations": [
         {
           "bound": 1.0,

@@ -10,60 +10,60 @@
     {
       "budget_ms": 5000.0,
       "metric": "cold_store_initialization_p95",
-      "observed_ms": 1770.643,
+      "observed_ms": 1637.475,
       "status": "passed"
     },
     {
       "budget_ms": 25.0,
       "metric": "store_compound_design_query_p95",
-      "observed_ms": 0.073,
+      "observed_ms": 0.227,
       "status": "passed"
     },
     {
       "budget_ms": 25.0,
       "metric": "store_design_detail_p95",
-      "observed_ms": 0.029,
+      "observed_ms": 0.034,
       "status": "passed"
     },
     {
       "budget_ms": 100.0,
       "metric": "api_meta_p95",
-      "observed_ms": 2.29,
+      "observed_ms": 1.306,
       "status": "passed"
     },
     {
       "budget_ms": 150.0,
       "metric": "api_compound_design_query_p95",
-      "observed_ms": 3.632,
+      "observed_ms": 1.847,
       "status": "passed"
     },
     {
       "budget_ms": 150.0,
       "metric": "api_design_detail_p95",
-      "observed_ms": 2.804,
+      "observed_ms": 1.822,
       "status": "passed"
     },
     {
       "budget_ms": 150.0,
       "metric": "api_family_detail_p95",
-      "observed_ms": 2.419,
+      "observed_ms": 1.873,
       "status": "passed"
     },
     {
       "budget_ms": 30000.0,
       "metric": "scenario_library_build",
-      "observed_ms": 899.136,
+      "observed_ms": 829.953,
       "status": "passed"
     },
     {
       "budget_ms": 30000.0,
       "metric": "product_build",
-      "observed_ms": 4366.497,
+      "observed_ms": 4167.291,
       "status": "passed"
     }
   ],
-  "catalog_fingerprint": "sha256:ccfd86a169d19ff8395220491259acfc2ef05a186e6a3467b238fb8ad007c667",
-  "checked_at": "2026-08-14T01:36:03.993431+00:00",
+  "catalog_fingerprint": "sha256:414e759ae9dae2eec9096147fe650397ecf50ec97eaf270514f0bbc69ce2c40c",
+  "checked_at": "2026-08-14T02:26:26.404644+00:00",
   "configuration": {
     "builds_included": true,
     "cold_store_iterations": 3,
@@ -80,22 +80,22 @@
   "observations": {
     "api": {
       "api_compound_design_query": {
-        "etag": "W/\"5bae67e10618e3a55e9a594d3fdda8f02f0619679f1ffe23c4f3dce5c839cc43\"",
+        "etag": "W/\"edd37e727736466e4fc6612d17b30b8d950727ba9dc378a1e15e3f9a13b0c00b\"",
         "response_bytes": 1521,
         "status_code": 200
       },
       "api_design_detail": {
-        "etag": "W/\"a7ecd28ab1c1fee98db38530825a6b44f56ebbdda8f731f575e7c42960033554\"",
+        "etag": "W/\"fd989fb4427050941500c22c610872c5560b55d7be598151730836662739cf15\"",
         "response_bytes": 8679,
         "status_code": 200
       },
       "api_family_detail": {
-        "etag": "W/\"f5ac2a486588d7023aa046cf8b9b818cfda2a2843306ba4ad6978ebfca7cfc1d\"",
+        "etag": "W/\"e4223c59df3ca0b3fe738f792ed974903765fb74fd8bd33b51659814d0a6c389\"",
         "response_bytes": 14118,
         "status_code": 200
       },
       "api_meta": {
-        "etag": "W/\"6dc4e5e13ca41f4a5fddfff85ce41a127a54bd795f9138f286b756da71d177d1\"",
+        "etag": "W/\"596e74c7164f08eee4389dc105dcb24d8603820b43e36cd7dd3dfd27ea83a17e\"",
         "response_bytes": 1455,
         "status_code": 200
       }
@@ -117,66 +117,66 @@
   "software_version": "0.8.0",
   "timing": {
     "api_compound_design_query": {
-      "max_ms": 5.233,
-      "median_ms": 1.705,
-      "min_ms": 1.119,
-      "p95_ms": 3.632,
+      "max_ms": 2.424,
+      "median_ms": 1.131,
+      "min_ms": 1.006,
+      "p95_ms": 1.847,
       "samples": 30
     },
     "api_design_detail": {
-      "max_ms": 2.815,
-      "median_ms": 1.346,
-      "min_ms": 0.981,
-      "p95_ms": 2.804,
+      "max_ms": 2.017,
+      "median_ms": 1.135,
+      "min_ms": 0.968,
+      "p95_ms": 1.822,
       "samples": 30
     },
     "api_family_detail": {
-      "max_ms": 2.576,
-      "median_ms": 1.199,
-      "min_ms": 1.029,
-      "p95_ms": 2.419,
+      "max_ms": 2.163,
+      "median_ms": 1.146,
+      "min_ms": 0.992,
+      "p95_ms": 1.873,
       "samples": 30
     },
     "api_meta": {
-      "max_ms": 2.417,
-      "median_ms": 0.988,
-      "min_ms": 0.801,
-      "p95_ms": 2.29,
+      "max_ms": 1.738,
+      "median_ms": 0.829,
+      "min_ms": 0.732,
+      "p95_ms": 1.306,
       "samples": 30
     },
     "cold_store_initialization": {
-      "max_ms": 1770.643,
-      "median_ms": 1671.01,
-      "min_ms": 1617.743,
-      "p95_ms": 1770.643,
+      "max_ms": 1637.475,
+      "median_ms": 1576.366,
+      "min_ms": 1561.195,
+      "p95_ms": 1637.475,
       "samples": 3
     },
     "product_build": {
-      "max_ms": 4366.497,
-      "median_ms": 4366.497,
-      "min_ms": 4366.497,
-      "p95_ms": 4366.497,
+      "max_ms": 4167.291,
+      "median_ms": 4167.291,
+      "min_ms": 4167.291,
+      "p95_ms": 4167.291,
       "samples": 1
     },
     "scenario_library_build": {
-      "max_ms": 899.136,
-      "median_ms": 899.136,
-      "min_ms": 899.136,
-      "p95_ms": 899.136,
+      "max_ms": 829.953,
+      "median_ms": 829.953,
+      "min_ms": 829.953,
+      "p95_ms": 829.953,
       "samples": 1
     },
     "store_compound_design_query": {
-      "max_ms": 23.813,
-      "median_ms": 0.054,
-      "min_ms": 0.053,
-      "p95_ms": 0.073,
+      "max_ms": 22.987,
+      "median_ms": 0.057,
+      "min_ms": 0.054,
+      "p95_ms": 0.227,
       "samples": 30
     },
     "store_design_detail": {
-      "max_ms": 0.083,
-      "median_ms": 0.018,
+      "max_ms": 0.102,
+      "median_ms": 0.019,
       "min_ms": 0.018,
-      "p95_ms": 0.029,
+      "p95_ms": 0.034,
       "samples": 30
     }
   }

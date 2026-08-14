@@ -53,8 +53,8 @@ pytest -q --cov=civicdecision --cov-branch \
   --cov-report=json:verification/milestone-8-coverage.json
 ```
 
-The final collection contains exactly 800 tests. The current report records 97.111% statement
-coverage, 91.129% branch coverage, and 95.911% under coverage.py's combined line-and-branch
+The final collection contains exactly 800 tests. The current report records 97.114% statement
+coverage, 91.129% branch coverage, and 95.914% under coverage.py's combined line-and-branch
 measure. In addition to the product and library gates, the collection validates real wheel and
 sdist outputs, complete wheel `RECORD` hashes and sizes, safe paths, bounded expansion, required
 release inventory, deterministic source ZIPs, portable checksums, and adversarial archive and

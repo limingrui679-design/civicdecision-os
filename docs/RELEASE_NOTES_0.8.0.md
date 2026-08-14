@@ -26,7 +26,7 @@ the audited 240-design scenario library, and reproducible supply-chain evidence.
 ## Quantified implementation evidence
 
 - 800 passing automated tests in the release-hardening tree.
-- Milestone-8 coverage: 97.111% statements, 91.129% branches, and 95.911% combined after the
+- Milestone-8 coverage: 97.114% statements, 91.129% branches, and 95.914% combined after the
   archive-assurance layer and its adversarial release tests are included.
 - 28,680 pairwise design comparisons with no collision and no pair above the declared 0.90 review
   threshold.

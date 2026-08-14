@@ -5,7 +5,7 @@ from __future__ import annotations
 from datetime import UTC, datetime, timedelta
 from enum import StrEnum
 from itertools import pairwise
-from math import ceil, sqrt
+from math import ceil, fsum, sqrt
 from statistics import fmean
 
 from pydantic import Field, field_validator, model_validator
@@ -16,9 +16,16 @@ from civicdecision.protocols.base import (
     StrictModel,
     canonical_json,
     ensure_aware,
+    normalize_float,
     sha256_bytes,
 )
 from civicdecision.protocols.evidence import EvidenceType
+
+PORTABLE_FLOAT_SIGNIFICANT_DIGITS = 12
+
+
+def _portable(value: float) -> float:
+    return normalize_float(value, significant_digits=PORTABLE_FLOAT_SIGNIFICANT_DIGITS)
 
 
 class ForecastMethod(StrEnum):
@@ -237,7 +244,7 @@ def _predict(
             prediction = extended[-config.seasonal_period]
         if config.require_nonnegative:
             prediction = max(0.0, prediction)
-        prediction = float(prediction)
+        prediction = _portable(float(prediction))
         predictions.append(prediction)
         extended.append(prediction)
     return predictions
@@ -248,7 +255,7 @@ def _conformal_radius(errors: list[float], level: float) -> float:
         raise AnalysisError("conformal calibration requires errors")
     ordered = sorted(errors)
     rank = min(len(ordered), ceil((len(ordered) + 1) * level))
-    return ordered[rank - 1]
+    return _portable(ordered[rank - 1])
 
 
 def _metrics(actual: list[float], predicted: list[float], radius: float) -> ForecastMetrics:
@@ -258,15 +265,17 @@ def _metrics(actual: list[float], predicted: list[float], radius: float) -> Fore
         prediction - observation for observation, prediction in zip(actual, predicted, strict=True)
     ]
     absolute = [abs(value) for value in errors]
-    denominator = sum(abs(value) for value in actual)
+    denominator = fsum(abs(value) for value in actual)
     return ForecastMetrics(
         observations=len(actual),
-        mae=fmean(absolute),
-        rmse=sqrt(fmean(value * value for value in errors)),
-        wape=sum(absolute) / denominator if denominator else None,
-        bias=fmean(errors),
-        empirical_interval_coverage=sum(value <= radius for value in absolute) / len(absolute),
-        mean_interval_width=2 * radius,
+        mae=_portable(fmean(absolute)),
+        rmse=_portable(sqrt(fmean(value * value for value in errors))),
+        wape=_portable(fsum(absolute) / denominator) if denominator else None,
+        bias=_portable(fmean(errors)),
+        empirical_interval_coverage=_portable(
+            sum(value <= radius for value in absolute) / len(absolute)
+        ),
+        mean_interval_width=_portable(2 * radius),
     )
 
 
@@ -408,8 +417,8 @@ def run_baseline_forecast(
             ForecastValue(
                 timestamp=points[-1].timestamp + index * step,
                 point=value,
-                lower=lower,
-                upper=value + winner.conformal_radius,
+                lower=_portable(lower),
+                upper=_portable(value + winner.conformal_radius),
             )
         )
     return ForecastRun(

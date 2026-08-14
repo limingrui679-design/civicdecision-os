@@ -153,7 +153,7 @@
         "Optimized values are mathematical outputs under declared inputs, not observed impact.",
         "Feasibility reflects only encoded constraints and does not establish implementability."
       ],
-      "objective_value": 31.400000000000002,
+      "objective_value": 31.4,
       "plan_id": "portfolio-plan-00000158",
       "quantities": {
         "action-a": 2,
@@ -162,7 +162,7 @@
         "action-d": 2
       },
       "scenario_objectives": {
-        "adverse": 31.400000000000002,
+        "adverse": 31.4,
         "base": 58.6,
         "favorable": 85.8
       },
@@ -188,7 +188,7 @@
         "Optimized values are mathematical outputs under declared inputs, not observed impact.",
         "Feasibility reflects only encoded constraints and does not establish implementability."
       ],
-      "objective_value": 31.200000000000003,
+      "objective_value": 31.2,
       "plan_id": "portfolio-plan-00000034",
       "quantities": {
         "action-a": 0,
@@ -197,8 +197,8 @@
         "action-d": 2
       },
       "scenario_objectives": {
-        "adverse": 31.200000000000003,
-        "base": 58.800000000000004,
+        "adverse": 31.2,
+        "base": 58.8,
         "favorable": 86.4
       },
       "selected_action_count": 3,
@@ -223,7 +223,7 @@
         "Optimized values are mathematical outputs under declared inputs, not observed impact.",
         "Feasibility reflects only encoded constraints and does not establish implementability."
       ],
-      "objective_value": 31.200000000000003,
+      "objective_value": 31.2,
       "plan_id": "portfolio-plan-00000039",
       "quantities": {
         "action-a": 0,
@@ -232,8 +232,8 @@
         "action-d": 3
       },
       "scenario_objectives": {
-        "adverse": 31.200000000000003,
-        "base": 58.800000000000004,
+        "adverse": 31.2,
+        "base": 58.8,
         "favorable": 86.4
       },
       "selected_action_count": 2,
@@ -255,7 +255,7 @@
         "Optimized values are mathematical outputs under declared inputs, not observed impact.",
         "Feasibility reflects only encoded constraints and does not establish implementability."
       ],
-      "objective_value": 30.400000000000002,
+      "objective_value": 30.4,
       "plan_id": "portfolio-plan-00000116",
       "quantities": {
         "action-a": 1,
@@ -264,7 +264,7 @@
         "action-d": 0
       },
       "scenario_objectives": {
-        "adverse": 30.400000000000002,
+        "adverse": 30.4,
         "base": 56.6,
         "favorable": 82.8
       },
@@ -287,7 +287,7 @@
         "Optimized values are mathematical outputs under declared inputs, not observed impact.",
         "Feasibility reflects only encoded constraints and does not establish implementability."
       ],
-      "objective_value": 30.400000000000002,
+      "objective_value": 30.4,
       "plan_id": "portfolio-plan-00000206",
       "quantities": {
         "action-a": 3,
@@ -296,7 +296,7 @@
         "action-d": 2
       },
       "scenario_objectives": {
-        "adverse": 30.400000000000002,
+        "adverse": 30.4,
         "base": 56.6,
         "favorable": 82.8
       },
@@ -319,7 +319,7 @@
         "Optimized values are mathematical outputs under declared inputs, not observed impact.",
         "Feasibility reflects only encoded constraints and does not establish implementability."
       ],
-      "objective_value": 30.200000000000003,
+      "objective_value": 30.2,
       "plan_id": "portfolio-plan-00000042",
       "quantities": {
         "action-a": 0,
@@ -328,7 +328,7 @@
         "action-d": 2
       },
       "scenario_objectives": {
-        "adverse": 30.200000000000003,
+        "adverse": 30.2,
         "base": 56.8,
         "favorable": 83.4
       },
@@ -351,7 +351,7 @@
         "Optimized values are mathematical outputs under declared inputs, not observed impact.",
         "Feasibility reflects only encoded constraints and does not establish implementability."
       ],
-      "objective_value": 30.200000000000003,
+      "objective_value": 30.2,
       "plan_id": "portfolio-plan-00000087",
       "quantities": {
         "action-a": 1,
@@ -360,9 +360,9 @@
         "action-d": 3
       },
       "scenario_objectives": {
-        "adverse": 30.200000000000003,
-        "base": 56.800000000000004,
-        "favorable": 83.39999999999999
+        "adverse": 30.2,
+        "base": 56.8,
+        "favorable": 83.4
       },
       "selected_action_count": 3,
       "total_benefit": 82.0,
@@ -383,7 +383,7 @@
         "Optimized values are mathematical outputs under declared inputs, not observed impact.",
         "Feasibility reflects only encoded constraints and does not establish implementability."
       ],
-      "objective_value": 30.200000000000003,
+      "objective_value": 30.2,
       "plan_id": "portfolio-plan-00000127",
       "quantities": {
         "action-a": 2,
@@ -392,9 +392,9 @@
         "action-d": 3
       },
       "scenario_objectives": {
-        "adverse": 30.200000000000003,
-        "base": 56.800000000000004,
-        "favorable": 83.39999999999999
+        "adverse": 30.2,
+        "base": 56.8,
+        "favorable": 83.4
       },
       "selected_action_count": 3,
       "total_benefit": 82.0,
@@ -415,7 +415,7 @@
         "Optimized values are mathematical outputs under declared inputs, not observed impact.",
         "Feasibility reflects only encoded constraints and does not establish implementability."
       ],
-      "objective_value": 29.400000000000002,
+      "objective_value": 29.4,
       "plan_id": "portfolio-plan-00000164",
       "quantities": {
         "action-a": 2,
@@ -424,9 +424,9 @@
         "action-d": 0
       },
       "scenario_objectives": {
-        "adverse": 29.400000000000002,
+        "adverse": 29.4,
         "base": 54.6,
-        "favorable": 79.80000000000001
+        "favorable": 79.8
       },
       "selected_action_count": 3,
       "total_benefit": 84.0,
@@ -447,7 +447,7 @@
         "Optimized values are mathematical outputs under declared inputs, not observed impact.",
         "Feasibility reflects only encoded constraints and does not establish implementability."
       ],
-      "objective_value": 29.400000000000002,
+      "objective_value": 29.4,
       "plan_id": "portfolio-plan-00000169",
       "quantities": {
         "action-a": 2,
@@ -456,7 +456,7 @@
         "action-d": 1
       },
       "scenario_objectives": {
-        "adverse": 29.400000000000002,
+        "adverse": 29.4,
         "base": 54.6,
         "favorable": 79.8
       },
@@ -479,7 +479,7 @@
         "Optimized values are mathematical outputs under declared inputs, not observed impact.",
         "Feasibility reflects only encoded constraints and does not establish implementability."
       ],
-      "objective_value": 29.200000000000003,
+      "objective_value": 29.2,
       "plan_id": "portfolio-plan-00000045",
       "quantities": {
         "action-a": 0,
@@ -488,7 +488,7 @@
         "action-d": 1
       },
       "scenario_objectives": {
-        "adverse": 29.200000000000003,
+        "adverse": 29.2,
         "base": 54.8,
         "favorable": 80.4
       },
@@ -511,7 +511,7 @@
         "Optimized values are mathematical outputs under declared inputs, not observed impact.",
         "Feasibility reflects only encoded constraints and does not establish implementability."
       ],
-      "objective_value": 29.200000000000003,
+      "objective_value": 29.2,
       "plan_id": "portfolio-plan-00000050",
       "quantities": {
         "action-a": 0,
@@ -520,7 +520,7 @@
         "action-d": 2
       },
       "scenario_objectives": {
-        "adverse": 29.200000000000003,
+        "adverse": 29.2,
         "base": 54.8,
         "favorable": 80.4
       },
@@ -543,7 +543,7 @@
         "Optimized values are mathematical outputs under declared inputs, not observed impact.",
         "Feasibility reflects only encoded constraints and does not establish implementability."
       ],
-      "objective_value": 29.200000000000003,
+      "objective_value": 29.2,
       "plan_id": "portfolio-plan-00000130",
       "quantities": {
         "action-a": 2,
@@ -552,8 +552,8 @@
         "action-d": 2
       },
       "scenario_objectives": {
-        "adverse": 29.200000000000003,
-        "base": 54.800000000000004,
+        "adverse": 29.2,
+        "base": 54.8,
         "favorable": 80.4
       },
       "selected_action_count": 3,
@@ -575,7 +575,7 @@
         "Optimized values are mathematical outputs under declared inputs, not observed impact.",
         "Feasibility reflects only encoded constraints and does not establish implementability."
       ],
-      "objective_value": 29.200000000000003,
+      "objective_value": 29.2,
       "plan_id": "portfolio-plan-00000135",
       "quantities": {
         "action-a": 2,
@@ -584,9 +584,9 @@
         "action-d": 3
       },
       "scenario_objectives": {
-        "adverse": 29.200000000000003,
-        "base": 54.800000000000004,
-        "favorable": 80.39999999999999
+        "adverse": 29.2,
+        "base": 54.8,
+        "favorable": 80.4
       },
       "selected_action_count": 3,
       "total_benefit": 80.0,
@@ -619,7 +619,7 @@
       },
       "scenario_objectives": {
         "adverse": 29.0,
-        "base": 55.00000000000001,
+        "base": 55.0,
         "favorable": 81.0
       },
       "selected_action_count": 2,
@@ -641,7 +641,7 @@
         "Optimized values are mathematical outputs under declared inputs, not observed impact.",
         "Feasibility reflects only encoded constraints and does not establish implementability."
       ],
-      "objective_value": 28.400000000000002,
+      "objective_value": 28.4,
       "plan_id": "portfolio-plan-00000172",
       "quantities": {
         "action-a": 2,
@@ -650,7 +650,7 @@
         "action-d": 0
       },
       "scenario_objectives": {
-        "adverse": 28.400000000000002,
+        "adverse": 28.4,
         "base": 52.6,
         "favorable": 76.8
       },
@@ -673,7 +673,7 @@
         "Optimized values are mathematical outputs under declared inputs, not observed impact.",
         "Feasibility reflects only encoded constraints and does not establish implementability."
       ],
-      "objective_value": 28.400000000000002,
+      "objective_value": 28.4,
       "plan_id": "portfolio-plan-00000212",
       "quantities": {
         "action-a": 3,
@@ -682,9 +682,9 @@
         "action-d": 0
       },
       "scenario_objectives": {
-        "adverse": 28.400000000000002,
+        "adverse": 28.4,
         "base": 52.6,
-        "favorable": 76.80000000000001
+        "favorable": 76.8
       },
       "selected_action_count": 3,
       "total_benefit": 82.0,
@@ -705,7 +705,7 @@
         "Optimized values are mathematical outputs under declared inputs, not observed impact.",
         "Feasibility reflects only encoded constraints and does not establish implementability."
       ],
-      "objective_value": 28.400000000000002,
+      "objective_value": 28.4,
       "plan_id": "portfolio-plan-00000217",
       "quantities": {
         "action-a": 3,
@@ -714,9 +714,9 @@
         "action-d": 1
       },
       "scenario_objectives": {
-        "adverse": 28.400000000000002,
-        "base": 52.599999999999994,
-        "favorable": 76.80000000000001
+        "adverse": 28.4,
+        "base": 52.6,
+        "favorable": 76.8
       },
       "selected_action_count": 3,
       "total_benefit": 82.0,
@@ -737,7 +737,7 @@
         "Optimized values are mathematical outputs under declared inputs, not observed impact.",
         "Feasibility reflects only encoded constraints and does not establish implementability."
       ],
-      "objective_value": 28.200000000000003,
+      "objective_value": 28.2,
       "plan_id": "portfolio-plan-00000053",
       "quantities": {
         "action-a": 0,
@@ -746,7 +746,7 @@
         "action-d": 1
       },
       "scenario_objectives": {
-        "adverse": 28.200000000000003,
+        "adverse": 28.2,
         "base": 52.8,
         "favorable": 77.4
       },
@@ -769,7 +769,7 @@
         "Optimized values are mathematical outputs under declared inputs, not observed impact.",
         "Feasibility reflects only encoded constraints and does not establish implementability."
       ],
-      "objective_value": 28.200000000000003,
+      "objective_value": 28.2,
       "plan_id": "portfolio-plan-00000098",
       "quantities": {
         "action-a": 1,
@@ -778,7 +778,7 @@
         "action-d": 2
       },
       "scenario_objectives": {
-        "adverse": 28.200000000000003,
+        "adverse": 28.2,
         "base": 52.8,
         "favorable": 77.4
       },
@@ -801,7 +801,7 @@
         "Optimized values are mathematical outputs under declared inputs, not observed impact.",
         "Feasibility reflects only encoded constraints and does not establish implementability."
       ],
-      "objective_value": 28.200000000000003,
+      "objective_value": 28.2,
       "plan_id": "portfolio-plan-00000183",
       "quantities": {
         "action-a": 3,
@@ -810,8 +810,8 @@
         "action-d": 3
       },
       "scenario_objectives": {
-        "adverse": 28.200000000000003,
-        "base": 52.800000000000004,
+        "adverse": 28.2,
+        "base": 52.8,
         "favorable": 77.4
       },
       "selected_action_count": 2,
@@ -843,7 +843,7 @@
       },
       "scenario_objectives": {
         "adverse": 28.0,
-        "base": 53.00000000000001,
+        "base": 53.0,
         "favorable": 78.0
       },
       "selected_action_count": 3,
@@ -865,7 +865,7 @@
         "Optimized values are mathematical outputs under declared inputs, not observed impact.",
         "Feasibility reflects only encoded constraints and does not establish implementability."
       ],
-      "objective_value": 27.400000000000002,
+      "objective_value": 27.4,
       "plan_id": "portfolio-plan-00000220",
       "quantities": {
         "action-a": 3,
@@ -874,9 +874,9 @@
         "action-d": 0
       },
       "scenario_objectives": {
-        "adverse": 27.400000000000002,
-        "base": 50.599999999999994,
-        "favorable": 73.80000000000001
+        "adverse": 27.4,
+        "base": 50.6,
+        "favorable": 73.8
       },
       "selected_action_count": 3,
       "total_benefit": 80.0,
@@ -897,7 +897,7 @@
         "Optimized values are mathematical outputs under declared inputs, not observed impact.",
         "Feasibility reflects only encoded constraints and does not establish implementability."
       ],
-      "objective_value": 27.200000000000003,
+      "objective_value": 27.2,
       "plan_id": "portfolio-plan-00000056",
       "quantities": {
         "action-a": 0,
@@ -906,7 +906,7 @@
         "action-d": 0
       },
       "scenario_objectives": {
-        "adverse": 27.200000000000003,
+        "adverse": 27.2,
         "base": 50.8,
         "favorable": 74.4
       },
@@ -929,7 +929,7 @@
         "Optimized values are mathematical outputs under declared inputs, not observed impact.",
         "Feasibility reflects only encoded constraints and does not establish implementability."
       ],
-      "objective_value": 27.200000000000003,
+      "objective_value": 27.2,
       "plan_id": "portfolio-plan-00000146",
       "quantities": {
         "action-a": 2,
@@ -938,7 +938,7 @@
         "action-d": 2
       },
       "scenario_objectives": {
-        "adverse": 27.200000000000003,
+        "adverse": 27.2,
         "base": 50.8,
         "favorable": 74.4
       },
@@ -961,7 +961,7 @@
         "Optimized values are mathematical outputs under declared inputs, not observed impact.",
         "Feasibility reflects only encoded constraints and does not establish implementability."
       ],
-      "objective_value": 27.200000000000003,
+      "objective_value": 27.2,
       "plan_id": "portfolio-plan-00000186",
       "quantities": {
         "action-a": 3,
@@ -970,7 +970,7 @@
         "action-d": 2
       },
       "scenario_objectives": {
-        "adverse": 27.200000000000003,
+        "adverse": 27.2,
         "base": 50.8,
         "favorable": 74.4
       },
@@ -1035,7 +1035,7 @@
       },
       "scenario_objectives": {
         "adverse": 27.0,
-        "base": 51.00000000000001,
+        "base": 51.0,
         "favorable": 75.0
       },
       "selected_action_count": 2,
@@ -1067,7 +1067,7 @@
       },
       "scenario_objectives": {
         "adverse": 27.0,
-        "base": 51.00000000000001,
+        "base": 51.0,
         "favorable": 75.0
       },
       "selected_action_count": 3,
@@ -1089,7 +1089,7 @@
         "Optimized values are mathematical outputs under declared inputs, not observed impact.",
         "Feasibility reflects only encoded constraints and does not establish implementability."
       ],
-      "objective_value": 26.400000000000002,
+      "objective_value": 26.4,
       "plan_id": "portfolio-plan-00000228",
       "quantities": {
         "action-a": 3,
@@ -1098,9 +1098,9 @@
         "action-d": 0
       },
       "scenario_objectives": {
-        "adverse": 26.400000000000002,
-        "base": 48.599999999999994,
-        "favorable": 70.80000000000001
+        "adverse": 26.4,
+        "base": 48.6,
+        "favorable": 70.8
       },
       "selected_action_count": 2,
       "total_benefit": 78.0,
@@ -1121,7 +1121,7 @@
         "Optimized values are mathematical outputs under declared inputs, not observed impact.",
         "Feasibility reflects only encoded constraints and does not establish implementability."
       ],
-      "objective_value": 26.200000000000003,
+      "objective_value": 26.2,
       "plan_id": "portfolio-plan-00000104",
       "quantities": {
         "action-a": 1,
@@ -1130,7 +1130,7 @@
         "action-d": 0
       },
       "scenario_objectives": {
-        "adverse": 26.200000000000003,
+        "adverse": 26.2,
         "base": 48.8,
         "favorable": 71.4
       },
@@ -1153,7 +1153,7 @@
         "Optimized values are mathematical outputs under declared inputs, not observed impact.",
         "Feasibility reflects only encoded constraints and does not establish implementability."
       ],
-      "objective_value": 26.200000000000003,
+      "objective_value": 26.2,
       "plan_id": "portfolio-plan-00000109",
       "quantities": {
         "action-a": 1,
@@ -1162,7 +1162,7 @@
         "action-d": 1
       },
       "scenario_objectives": {
-        "adverse": 26.200000000000003,
+        "adverse": 26.2,
         "base": 48.8,
         "favorable": 71.4
       },
@@ -1185,7 +1185,7 @@
         "Optimized values are mathematical outputs under declared inputs, not observed impact.",
         "Feasibility reflects only encoded constraints and does not establish implementability."
       ],
-      "objective_value": 26.200000000000003,
+      "objective_value": 26.2,
       "plan_id": "portfolio-plan-00000189",
       "quantities": {
         "action-a": 3,
@@ -1194,7 +1194,7 @@
         "action-d": 1
       },
       "scenario_objectives": {
-        "adverse": 26.200000000000003,
+        "adverse": 26.2,
         "base": 48.8,
         "favorable": 71.4
       },
@@ -1217,7 +1217,7 @@
         "Optimized values are mathematical outputs under declared inputs, not observed impact.",
         "Feasibility reflects only encoded constraints and does not establish implementability."
       ],
-      "objective_value": 26.200000000000003,
+      "objective_value": 26.2,
       "plan_id": "portfolio-plan-00000194",
       "quantities": {
         "action-a": 3,
@@ -1226,7 +1226,7 @@
         "action-d": 2
       },
       "scenario_objectives": {
-        "adverse": 26.200000000000003,
+        "adverse": 26.2,
         "base": 48.8,
         "favorable": 71.4
       },
@@ -1323,7 +1323,7 @@
       },
       "scenario_objectives": {
         "adverse": 26.0,
-        "base": 49.00000000000001,
+        "base": 49.0,
         "favorable": 72.0
       },
       "selected_action_count": 3,
@@ -1345,7 +1345,7 @@
         "Optimized values are mathematical outputs under declared inputs, not observed impact.",
         "Feasibility reflects only encoded constraints and does not establish implementability."
       ],
-      "objective_value": 25.200000000000003,
+      "objective_value": 25.2,
       "plan_id": "portfolio-plan-00000112",
       "quantities": {
         "action-a": 1,
@@ -1354,7 +1354,7 @@
         "action-d": 0
       },
       "scenario_objectives": {
-        "adverse": 25.200000000000003,
+        "adverse": 25.2,
         "base": 46.8,
         "favorable": 68.4
       },
@@ -1377,7 +1377,7 @@
         "Optimized values are mathematical outputs under declared inputs, not observed impact.",
         "Feasibility reflects only encoded constraints and does not establish implementability."
       ],
-      "objective_value": 25.200000000000003,
+      "objective_value": 25.2,
       "plan_id": "portfolio-plan-00000152",
       "quantities": {
         "action-a": 2,
@@ -1386,7 +1386,7 @@
         "action-d": 0
       },
       "scenario_objectives": {
-        "adverse": 25.200000000000003,
+        "adverse": 25.2,
         "base": 46.8,
         "favorable": 68.4
       },
@@ -1409,7 +1409,7 @@
         "Optimized values are mathematical outputs under declared inputs, not observed impact.",
         "Feasibility reflects only encoded constraints and does not establish implementability."
       ],
-      "objective_value": 25.200000000000003,
+      "objective_value": 25.2,
       "plan_id": "portfolio-plan-00000157",
       "quantities": {
         "action-a": 2,
@@ -1418,7 +1418,7 @@
         "action-d": 1
       },
       "scenario_objectives": {
-        "adverse": 25.200000000000003,
+        "adverse": 25.2,
         "base": 46.8,
         "favorable": 68.4
       },
@@ -1515,7 +1515,7 @@
       },
       "scenario_objectives": {
         "adverse": 25.0,
-        "base": 47.00000000000001,
+        "base": 47.0,
         "favorable": 69.0
       },
       "selected_action_count": 2,
@@ -1537,7 +1537,7 @@
         "Optimized values are mathematical outputs under declared inputs, not observed impact.",
         "Feasibility reflects only encoded constraints and does not establish implementability."
       ],
-      "objective_value": 24.200000000000003,
+      "objective_value": 24.2,
       "plan_id": "portfolio-plan-00000160",
       "quantities": {
         "action-a": 2,
@@ -1546,7 +1546,7 @@
         "action-d": 0
       },
       "scenario_objectives": {
-        "adverse": 24.200000000000003,
+        "adverse": 24.2,
         "base": 44.8,
         "favorable": 65.4
       },
@@ -1569,7 +1569,7 @@
         "Optimized values are mathematical outputs under declared inputs, not observed impact.",
         "Feasibility reflects only encoded constraints and does not establish implementability."
       ],
-      "objective_value": 24.200000000000003,
+      "objective_value": 24.2,
       "plan_id": "portfolio-plan-00000200",
       "quantities": {
         "action-a": 3,
@@ -1578,7 +1578,7 @@
         "action-d": 0
       },
       "scenario_objectives": {
-        "adverse": 24.200000000000003,
+        "adverse": 24.2,
         "base": 44.8,
         "favorable": 65.4
       },
@@ -1601,7 +1601,7 @@
         "Optimized values are mathematical outputs under declared inputs, not observed impact.",
         "Feasibility reflects only encoded constraints and does not establish implementability."
       ],
-      "objective_value": 24.200000000000003,
+      "objective_value": 24.2,
       "plan_id": "portfolio-plan-00000205",
       "quantities": {
         "action-a": 3,
@@ -1610,7 +1610,7 @@
         "action-d": 1
       },
       "scenario_objectives": {
-        "adverse": 24.200000000000003,
+        "adverse": 24.2,
         "base": 44.8,
         "favorable": 65.4
       },
@@ -1761,7 +1761,7 @@
         "Optimized values are mathematical outputs under declared inputs, not observed impact.",
         "Feasibility reflects only encoded constraints and does not establish implementability."
       ],
-      "objective_value": 23.200000000000003,
+      "objective_value": 23.2,
       "plan_id": "portfolio-plan-00000168",
       "quantities": {
         "action-a": 2,
@@ -1770,9 +1770,9 @@
         "action-d": 0
       },
       "scenario_objectives": {
-        "adverse": 23.200000000000003,
+        "adverse": 23.2,
         "base": 42.8,
-        "favorable": 62.400000000000006
+        "favorable": 62.4
       },
       "selected_action_count": 2,
       "total_benefit": 68.0,
@@ -1793,7 +1793,7 @@
         "Optimized values are mathematical outputs under declared inputs, not observed impact.",
         "Feasibility reflects only encoded constraints and does not establish implementability."
       ],
-      "objective_value": 23.200000000000003,
+      "objective_value": 23.2,
       "plan_id": "portfolio-plan-00000208",
       "quantities": {
         "action-a": 3,
@@ -1802,9 +1802,9 @@
         "action-d": 0
       },
       "scenario_objectives": {
-        "adverse": 23.200000000000003,
+        "adverse": 23.2,
         "base": 42.8,
-        "favorable": 62.400000000000006
+        "favorable": 62.4
       },
       "selected_action_count": 3,
       "total_benefit": 68.0,
@@ -1964,7 +1964,7 @@
       "scenario_objectives": {
         "adverse": 22.8,
         "base": 43.2,
-        "favorable": 63.599999999999994
+        "favorable": 63.6
       },
       "selected_action_count": 2,
       "total_benefit": 60.0,
@@ -1996,7 +1996,7 @@
       "scenario_objectives": {
         "adverse": 22.8,
         "base": 43.2,
-        "favorable": 63.599999999999994
+        "favorable": 63.6
       },
       "selected_action_count": 2,
       "total_benefit": 60.0,
@@ -2017,7 +2017,7 @@
         "Optimized values are mathematical outputs under declared inputs, not observed impact.",
         "Feasibility reflects only encoded constraints and does not establish implementability."
       ],
-      "objective_value": 22.200000000000003,
+      "objective_value": 22.2,
       "plan_id": "portfolio-plan-00000216",
       "quantities": {
         "action-a": 3,
@@ -2026,9 +2026,9 @@
         "action-d": 0
       },
       "scenario_objectives": {
-        "adverse": 22.200000000000003,
+        "adverse": 22.2,
         "base": 40.8,
-        "favorable": 59.400000000000006
+        "favorable": 59.4
       },
       "selected_action_count": 2,
       "total_benefit": 66.0,
@@ -2188,7 +2188,7 @@
       "scenario_objectives": {
         "adverse": 21.8,
         "base": 41.2,
-        "favorable": 60.599999999999994
+        "favorable": 60.6
       },
       "selected_action_count": 3,
       "total_benefit": 58.0,
@@ -2220,7 +2220,7 @@
       "scenario_objectives": {
         "adverse": 21.8,
         "base": 41.2,
-        "favorable": 60.599999999999994
+        "favorable": 60.6
       },
       "selected_action_count": 2,
       "total_benefit": 58.0,
@@ -2412,7 +2412,7 @@
       "scenario_objectives": {
         "adverse": 20.8,
         "base": 39.2,
-        "favorable": 57.599999999999994
+        "favorable": 57.6
       },
       "selected_action_count": 2,
       "total_benefit": 56.0,
@@ -2444,7 +2444,7 @@
       "scenario_objectives": {
         "adverse": 20.8,
         "base": 39.2,
-        "favorable": 57.599999999999994
+        "favorable": 57.6
       },
       "selected_action_count": 3,
       "total_benefit": 56.0,

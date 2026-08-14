@@ -3,7 +3,6 @@
 from __future__ import annotations
 
 import json
-import platform
 from pathlib import Path
 from typing import Literal
 
@@ -369,7 +368,7 @@ def build_heat_access_pack(
         software_version=__version__,
         command=command,
         random_seed=scenario.random_seed,
-        environment={"python": platform.python_version(), "algorithm": "exhaustive-enumeration"},
+        environment={"python": ">=3.11", "algorithm": "exhaustive-enumeration"},
         parameters=config.model_dump(mode="json"),
         source_hashes=[manifest.content_hash],
     )

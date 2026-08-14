@@ -593,7 +593,7 @@
       ]
     },
     {
-      "expected": 97.1114900874014,
+      "expected": 97.11395101171459,
       "id": "statement-coverage-percent",
       "renderings": [
         {
@@ -633,7 +633,7 @@
       ]
     },
     {
-      "expected": 95.91071732833532,
+      "expected": 95.91350246892559,
       "id": "combined-coverage-percent",
       "renderings": [
         {

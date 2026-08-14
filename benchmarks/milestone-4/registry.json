@@ -1,9 +1,9 @@
 {
-  "artifact_set_hash": "sha256:0079bbd5f3b9e7645431a8e6e371efdfc7a7e7f9629be0d0850bc2489444ce89",
+  "artifact_set_hash": "sha256:1b6c83559aef24c692f9fecfdafba193ef269c3c1ffafa47a6beba7c25a8f013",
   "artifacts": [
     {
       "artifact_id": "historical-replay-001",
-      "content_hash": "sha256:d19da4b1a31a5edaeb5da6b7fcf2971972e7ee126daf9bb063f3bbe37db0b1ad",
+      "content_hash": "sha256:7ddc7894807a8e47b1839d38ca994edd874da4b6936a2288c848759a19fd16f8",
       "evidence_boundary": "Held-out 2024 public gridded-point replay; estimated forecast evidence, not live performance, city exposure, or intervention impact.",
       "kind": "historical-replay",
       "relative_path": "historical-replays/historical-replay-001.json",
@@ -14,7 +14,7 @@
     },
     {
       "artifact_id": "historical-replay-002",
-      "content_hash": "sha256:a2621689e1c2ffb00ea20930b41c933975b30ea394663082ff967844c62cc66b",
+      "content_hash": "sha256:60e27e72546e090963605b57672df0c6d0d3990db6f690f78de362ea52236e42",
       "evidence_boundary": "Held-out 2024 public gridded-point replay; estimated forecast evidence, not live performance, city exposure, or intervention impact.",
       "kind": "historical-replay",
       "relative_path": "historical-replays/historical-replay-002.json",
@@ -25,7 +25,7 @@
     },
     {
       "artifact_id": "historical-replay-003",
-      "content_hash": "sha256:ccd15aace5ccc70be0aa86f602ca9d91261eb604432e00bb72740896f59f1a04",
+      "content_hash": "sha256:df70009bbd1ddd1641b3ba035befdcd8728339c68104033016e225e41aec6021",
       "evidence_boundary": "Held-out 2024 public gridded-point replay; estimated forecast evidence, not live performance, city exposure, or intervention impact.",
       "kind": "historical-replay",
       "relative_path": "historical-replays/historical-replay-003.json",
@@ -36,7 +36,7 @@
     },
     {
       "artifact_id": "historical-replay-004",
-      "content_hash": "sha256:72baa2d19b1c5f0a6174ffb54fe224b4ef69dc5f69db837e5488308dccee3295",
+      "content_hash": "sha256:36e9ab8ee8f6702fcf1fb3fa36fe0d07c85f935775d02290faddf1ef008a381c",
       "evidence_boundary": "Held-out 2024 public gridded-point replay; estimated forecast evidence, not live performance, city exposure, or intervention impact.",
       "kind": "historical-replay",
       "relative_path": "historical-replays/historical-replay-004.json",
@@ -47,7 +47,7 @@
     },
     {
       "artifact_id": "historical-replay-005",
-      "content_hash": "sha256:711bcf2fdf0b6922e248a48502d0f69ec2a27abc94e50e7f1f01be8911a6c281",
+      "content_hash": "sha256:91853669865543c7a5aab60247a9012829597e40d3848b43be524f063e062b3d",
       "evidence_boundary": "Held-out 2024 public gridded-point replay; estimated forecast evidence, not live performance, city exposure, or intervention impact.",
       "kind": "historical-replay",
       "relative_path": "historical-replays/historical-replay-005.json",
@@ -58,7 +58,7 @@
     },
     {
       "artifact_id": "historical-replay-006",
-      "content_hash": "sha256:15afa1fa5824fd4869a40e0c6daea8b1925214d9304b8d5c3b686ae003c0b3d8",
+      "content_hash": "sha256:0ff8b992c0dfc9e9f8dc87ac8424a67ebb6ac8163e1aa5665fecdae1a4981418",
       "evidence_boundary": "Held-out 2024 public gridded-point replay; estimated forecast evidence, not live performance, city exposure, or intervention impact.",
       "kind": "historical-replay",
       "relative_path": "historical-replays/historical-replay-006.json",
@@ -69,7 +69,7 @@
     },
     {
       "artifact_id": "historical-replay-007",
-      "content_hash": "sha256:5d98037566257b19bf11857fd8d44a3856679e11f3c0ed5419290137e5aed3b3",
+      "content_hash": "sha256:d3c6a691d847e989846092c5798a08f5cdb28bda5e17799f0f5c33c887c6054e",
       "evidence_boundary": "Held-out 2024 public gridded-point replay; estimated forecast evidence, not live performance, city exposure, or intervention impact.",
       "kind": "historical-replay",
       "relative_path": "historical-replays/historical-replay-007.json",
@@ -80,7 +80,7 @@
     },
     {
       "artifact_id": "historical-replay-008",
-      "content_hash": "sha256:ed33359895f20c425c4f7da8290d398a771ecb31ee8f2de09327eb975490c82b",
+      "content_hash": "sha256:0991bb321b0b462c97357de04b950a656b3c97cc9dd5d55e92d3190abcdffecf",
       "evidence_boundary": "Held-out 2024 public gridded-point replay; estimated forecast evidence, not live performance, city exposure, or intervention impact.",
       "kind": "historical-replay",
       "relative_path": "historical-replays/historical-replay-008.json",
@@ -91,7 +91,7 @@
     },
     {
       "artifact_id": "historical-replay-009",
-      "content_hash": "sha256:083c719cfc05ae253d5357b7194025c7635d90437c6462cb1f411887c8dd4333",
+      "content_hash": "sha256:52e2d2d47e96a3112e860e96e38f860055ba1c768be766d48b739fda02920240",
       "evidence_boundary": "Held-out 2024 public gridded-point replay; estimated forecast evidence, not live performance, city exposure, or intervention impact.",
       "kind": "historical-replay",
       "relative_path": "historical-replays/historical-replay-009.json",
@@ -102,7 +102,7 @@
     },
     {
       "artifact_id": "historical-replay-010",
-      "content_hash": "sha256:05285101d6e46fb3f9d5b20a7203ef0426865b9c743584c3d4d3c87dc11d2be0",
+      "content_hash": "sha256:3ef7b9895ae0eda6b444436ed0e3f772cbda637c949d207a02c759867ee6bc74",
       "evidence_boundary": "Held-out 2024 public gridded-point replay; estimated forecast evidence, not live performance, city exposure, or intervention impact.",
       "kind": "historical-replay",
       "relative_path": "historical-replays/historical-replay-010.json",
@@ -113,7 +113,7 @@
     },
     {
       "artifact_id": "historical-replay-011",
-      "content_hash": "sha256:dd7abb4866ff26cd95fe8ecd8b58a19fc06914b889b38049d12a35c136a1a375",
+      "content_hash": "sha256:63e364a26869800b5b159b13e65a2f3a328781fddc1b42a6a4982dbb9a8e2f04",
       "evidence_boundary": "Held-out 2024 public gridded-point replay; estimated forecast evidence, not live performance, city exposure, or intervention impact.",
       "kind": "historical-replay",
       "relative_path": "historical-replays/historical-replay-011.json",
@@ -124,7 +124,7 @@
     },
     {
       "artifact_id": "historical-replay-012",
-      "content_hash": "sha256:236a0da48a4027282365965a9c15a86ef45628c35f01b8363545fad4e27f65f7",
+      "content_hash": "sha256:61524c0f3150e722feb9e836007d26ab78881ad3fc2e75f0a44dfadd2bd15ba2",
       "evidence_boundary": "Held-out 2024 public gridded-point replay; estimated forecast evidence, not live performance, city exposure, or intervention impact.",
       "kind": "historical-replay",
       "relative_path": "historical-replays/historical-replay-012.json",
@@ -135,7 +135,7 @@
     },
     {
       "artifact_id": "historical-replay-013",
-      "content_hash": "sha256:ec5c73a85b294cdde13d6b0f3e6ebc22fd1d0a3d59cdc01e703307d08cc544b1",
+      "content_hash": "sha256:9ee22a143aa85ced03576126928a9f3231ae4f599a63a8b4bfdba46f81b71296",
       "evidence_boundary": "Held-out 2024 public gridded-point replay; estimated forecast evidence, not live performance, city exposure, or intervention impact.",
       "kind": "historical-replay",
       "relative_path": "historical-replays/historical-replay-013.json",
@@ -146,7 +146,7 @@
     },
     {
       "artifact_id": "historical-replay-014",
-      "content_hash": "sha256:e88f56c6005ae4c263c022ebc5349c7504d7ed1e0848f5f9ba8b801c43719b06",
+      "content_hash": "sha256:47632f0e8ff848e3d03aed4e8029b79405bc6fffd15e8c23d3f488a881684e12",
       "evidence_boundary": "Held-out 2024 public gridded-point replay; estimated forecast evidence, not live performance, city exposure, or intervention impact.",
       "kind": "historical-replay",
       "relative_path": "historical-replays/historical-replay-014.json",
@@ -157,7 +157,7 @@
     },
     {
       "artifact_id": "historical-replay-015",
-      "content_hash": "sha256:ecd78b203dafdf43ca0a94a43b3c8f39340cbcae3dec885168e54257af5431e6",
+      "content_hash": "sha256:a8300b73d5df9a92a0476435a1124148fc0b7e6d11afcab0e0cc723a0c9167e2",
       "evidence_boundary": "Held-out 2024 public gridded-point replay; estimated forecast evidence, not live performance, city exposure, or intervention impact.",
       "kind": "historical-replay",
       "relative_path": "historical-replays/historical-replay-015.json",
@@ -168,7 +168,7 @@
     },
     {
       "artifact_id": "historical-replay-016",
-      "content_hash": "sha256:859ad22813672d085e4b0820e4c94e056e6958d0309ddf77e9c5146c4b560058",
+      "content_hash": "sha256:52b9609aa2c597a2c7b8e004b2b09fbcf1dd54bc6783e9598ae45fdda930751e",
       "evidence_boundary": "Held-out 2024 public gridded-point replay; estimated forecast evidence, not live performance, city exposure, or intervention impact.",
       "kind": "historical-replay",
       "relative_path": "historical-replays/historical-replay-016.json",
@@ -179,7 +179,7 @@
     },
     {
       "artifact_id": "historical-replay-017",
-      "content_hash": "sha256:6f3a9ad315a21549e2c160512895dbc11a15db4fb2b85d8f3298db73c1c6a57d",
+      "content_hash": "sha256:3b9576f0923d54a855850d5f8e70886ed0a40becb62589587785509e1aa9da6d",
       "evidence_boundary": "Held-out 2024 public gridded-point replay; estimated forecast evidence, not live performance, city exposure, or intervention impact.",
       "kind": "historical-replay",
       "relative_path": "historical-replays/historical-replay-017.json",
@@ -190,7 +190,7 @@
     },
     {
       "artifact_id": "historical-replay-018",
-      "content_hash": "sha256:10ee1ecf53294080749bd9d89b5d6530fdefb7417d796e193503272aac95cdb6",
+      "content_hash": "sha256:694c6c4881edcd8233dec288679bcdb4f64b9738cf97268ff21957e05d56b72f",
       "evidence_boundary": "Held-out 2024 public gridded-point replay; estimated forecast evidence, not live performance, city exposure, or intervention impact.",
       "kind": "historical-replay",
       "relative_path": "historical-replays/historical-replay-018.json",
@@ -201,7 +201,7 @@
     },
     {
       "artifact_id": "historical-replay-019",
-      "content_hash": "sha256:839e2d3dd7f23d5c66a429b01e59cef8642485aeafb595ecb37fcef189ddc9c7",
+      "content_hash": "sha256:fef72c35cfa3c42b79caacf1827d34d60e2dab096e42116671307d127c863c86",
       "evidence_boundary": "Held-out 2024 public gridded-point replay; estimated forecast evidence, not live performance, city exposure, or intervention impact.",
       "kind": "historical-replay",
       "relative_path": "historical-replays/historical-replay-019.json",
@@ -212,7 +212,7 @@
     },
     {
       "artifact_id": "historical-replay-020",
-      "content_hash": "sha256:2fcd5c1faaa16688aa93b5c76f8cb5d151f252c3a42800f2406a1b308d270709",
+      "content_hash": "sha256:328e30099f4e94e15e6d78faa5c67a3d81790c4823ad1187e0faace8d7e0bbb9",
       "evidence_boundary": "Held-out 2024 public gridded-point replay; estimated forecast evidence, not live performance, city exposure, or intervention impact.",
       "kind": "historical-replay",
       "relative_path": "historical-replays/historical-replay-020.json",
@@ -223,7 +223,7 @@
     },
     {
       "artifact_id": "historical-replay-021",
-      "content_hash": "sha256:e96f892df33faa3c74f451b48328a359e2aa0a1a4d0c470b0d3e292a5f9499bb",
+      "content_hash": "sha256:e8f2e27fa40df558a68450e69fb824ef4047de3e4da213f62c22d9a8d2e553d8",
       "evidence_boundary": "Held-out 2024 public gridded-point replay; estimated forecast evidence, not live performance, city exposure, or intervention impact.",
       "kind": "historical-replay",
       "relative_path": "historical-replays/historical-replay-021.json",
@@ -234,7 +234,7 @@
     },
     {
       "artifact_id": "historical-replay-022",
-      "content_hash": "sha256:64a8fa548a8c866015a2967f8c9d5e3a0df4b184751d7c491967c6b8999bd630",
+      "content_hash": "sha256:fb79d9e4a1aa2bb98e73dad2fcf6eda86268cf41faf4e70312f41ebb3c6ee374",
       "evidence_boundary": "Held-out 2024 public gridded-point replay; estimated forecast evidence, not live performance, city exposure, or intervention impact.",
       "kind": "historical-replay",
       "relative_path": "historical-replays/historical-replay-022.json",
@@ -245,7 +245,7 @@
     },
     {
       "artifact_id": "historical-replay-023",
-      "content_hash": "sha256:bc0996d4fb9272a814e56e69051fdf2debb429d8117e7f523eb1e85f4852e133",
+      "content_hash": "sha256:59699fefb00471c5e467eac1d0d3dec790bb74eb1cd7e383ea49e7aea3b4d57a",
       "evidence_boundary": "Held-out 2024 public gridded-point replay; estimated forecast evidence, not live performance, city exposure, or intervention impact.",
       "kind": "historical-replay",
       "relative_path": "historical-replays/historical-replay-023.json",
@@ -256,7 +256,7 @@
     },
     {
       "artifact_id": "historical-replay-024",
-      "content_hash": "sha256:5373160756f56c1c34a9b50b406b36ced5026f7449ebd51ae1526b2bf40c9515",
+      "content_hash": "sha256:c7b2945af1a4695b50ae12c1cd6746de4f1d43631d8c6055c2a51349569e15d2",
       "evidence_boundary": "Held-out 2024 public gridded-point replay; estimated forecast evidence, not live performance, city exposure, or intervention impact.",
       "kind": "historical-replay",
       "relative_path": "historical-replays/historical-replay-024.json",
@@ -267,7 +267,7 @@
     },
     {
       "artifact_id": "historical-replay-025",
-      "content_hash": "sha256:383eeafef3649eedbe153548ef034021ddc2a014cf993f13e826741663085200",
+      "content_hash": "sha256:756e60e1f6fdbde8ce71ef45fb28cdcbeaf38131062d087c4da8785a07ad82a5",
       "evidence_boundary": "Held-out 2024 public gridded-point replay; estimated forecast evidence, not live performance, city exposure, or intervention impact.",
       "kind": "historical-replay",
       "relative_path": "historical-replays/historical-replay-025.json",
@@ -278,7 +278,7 @@
     },
     {
       "artifact_id": "historical-replay-026",
-      "content_hash": "sha256:9cb43763f054ce391710ca96ef9f39ed50763e3ff91288c7340a6ceb295e3c09",
+      "content_hash": "sha256:f6b9d47d97f39eeffaff343c4b020f40a163c0763c928d36fadc54b3df047151",
       "evidence_boundary": "Held-out 2024 public gridded-point replay; estimated forecast evidence, not live performance, city exposure, or intervention impact.",
       "kind": "historical-replay",
       "relative_path": "historical-replays/historical-replay-026.json",
@@ -289,7 +289,7 @@
     },
     {
       "artifact_id": "historical-replay-027",
-      "content_hash": "sha256:f675b9c6eb0d148a4eb3f6fa636a68a3ea6ce9de99f8045625b3fc255ce34d87",
+      "content_hash": "sha256:bd4d0649ff3ef1f0bc511220e58ac11a95c02c59b67c57192bfaa8eea11c518d",
       "evidence_boundary": "Held-out 2024 public gridded-point replay; estimated forecast evidence, not live performance, city exposure, or intervention impact.",
       "kind": "historical-replay",
       "relative_path": "historical-replays/historical-replay-027.json",
@@ -300,7 +300,7 @@
     },
     {
       "artifact_id": "historical-replay-028",
-      "content_hash": "sha256:dba6bb1973f59f3389ab02882100ff6a91fedfd0531fc561e4d09b029af66e7a",
+      "content_hash": "sha256:ef1f28d7f533738f1f03c4aabff6c1f101b45b93eea0cb92cffd677743cdb4aa",
       "evidence_boundary": "Held-out 2024 public gridded-point replay; estimated forecast evidence, not live performance, city exposure, or intervention impact.",
       "kind": "historical-replay",
       "relative_path": "historical-replays/historical-replay-028.json",
@@ -311,7 +311,7 @@
     },
     {
       "artifact_id": "historical-replay-029",
-      "content_hash": "sha256:fc335843a16a6d088caf1c7b0a6cd465e45bf0fc9bb73d3ffd7bb4ef282aeb1a",
+      "content_hash": "sha256:7f19b889e1030e11def6f7fd6de57996dd52a976921b0ef1936ae85a75db4053",
       "evidence_boundary": "Held-out 2024 public gridded-point replay; estimated forecast evidence, not live performance, city exposure, or intervention impact.",
       "kind": "historical-replay",
       "relative_path": "historical-replays/historical-replay-029.json",
@@ -322,7 +322,7 @@
     },
     {
       "artifact_id": "historical-replay-030",
-      "content_hash": "sha256:4e9983f617f032ca0f8b019e71631600cd3e8c5960e47eafbeeac8aa857d62ce",
+      "content_hash": "sha256:788ac000677ab6460dcdf8beec9129d86c2d4bc24c8b9bf767ffee60239a4125",
       "evidence_boundary": "Held-out 2024 public gridded-point replay; estimated forecast evidence, not live performance, city exposure, or intervention impact.",
       "kind": "historical-replay",
       "relative_path": "historical-replays/historical-replay-030.json",
@@ -333,7 +333,7 @@
     },
     {
       "artifact_id": "historical-replay-031",
-      "content_hash": "sha256:c7eeb91a7f4a2605c4b965522b0ea424f561115cc433b49be729e92f3ffc1173",
+      "content_hash": "sha256:e2187f6a0e80f626c89b2171bf99ea82f44b3059c7d9f38ca1827828a4458c93",
       "evidence_boundary": "Held-out 2024 public gridded-point replay; estimated forecast evidence, not live performance, city exposure, or intervention impact.",
       "kind": "historical-replay",
       "relative_path": "historical-replays/historical-replay-031.json",
@@ -344,7 +344,7 @@
     },
     {
       "artifact_id": "historical-replay-032",
-      "content_hash": "sha256:bceaad4867bcb9c5401fe9c235f4db9778064d9b140c880b898b0ba28d60deea",
+      "content_hash": "sha256:ec50dbdeb4f0434c651bb6ee90b813836da61d92b141146d7c594a233d5ed7c1",
       "evidence_boundary": "Held-out 2024 public gridded-point replay; estimated forecast evidence, not live performance, city exposure, or intervention impact.",
       "kind": "historical-replay",
       "relative_path": "historical-replays/historical-replay-032.json",
@@ -355,7 +355,7 @@
     },
     {
       "artifact_id": "historical-replay-033",
-      "content_hash": "sha256:89d632bb7e071be6ba98f683484740514b406c91ec4e29ef54ec79cce5801cb3",
+      "content_hash": "sha256:66b823f11448dadf066500f6e08e9703522ddf848d4947ba9422935c520bdd43",
       "evidence_boundary": "Held-out 2024 public gridded-point replay; estimated forecast evidence, not live performance, city exposure, or intervention impact.",
       "kind": "historical-replay",
       "relative_path": "historical-replays/historical-replay-033.json",
@@ -366,7 +366,7 @@
     },
     {
       "artifact_id": "historical-replay-034",
-      "content_hash": "sha256:61ea8cc87ce62c2c55f216cedb7e742f59d2cdfccc104b594ab30aca6349f47d",
+      "content_hash": "sha256:0b2c3b99c82f5e28034e0d6e46e155613b253397c7d7940bedd257a8567a423b",
       "evidence_boundary": "Held-out 2024 public gridded-point replay; estimated forecast evidence, not live performance, city exposure, or intervention impact.",
       "kind": "historical-replay",
       "relative_path": "historical-replays/historical-replay-034.json",
@@ -377,7 +377,7 @@
     },
     {
       "artifact_id": "historical-replay-035",
-      "content_hash": "sha256:433d0658b9db44755c838daecb5a8fc14ea865af0f2503fc5c1d31eacd794816",
+      "content_hash": "sha256:1e0c93a65206d5800312523cd7f9ce49b1e45cf8c678ddaa6f8fe7ac8e830333",
       "evidence_boundary": "Held-out 2024 public gridded-point replay; estimated forecast evidence, not live performance, city exposure, or intervention impact.",
       "kind": "historical-replay",
       "relative_path": "historical-replays/historical-replay-035.json",
@@ -388,7 +388,7 @@
     },
     {
       "artifact_id": "historical-replay-036",
-      "content_hash": "sha256:71187759f82091e7a760fdc0e1011e7b0dbc09ebe4088d0e223ecc6106bfd06a",
+      "content_hash": "sha256:3b1d4635c17d52f4f7bd99e6e1f4ca22b35720feedd29ba79dd32a02f5da7efe",
       "evidence_boundary": "Held-out 2024 public gridded-point replay; estimated forecast evidence, not live performance, city exposure, or intervention impact.",
       "kind": "historical-replay",
       "relative_path": "historical-replays/historical-replay-036.json",
@@ -399,7 +399,7 @@
     },
     {
       "artifact_id": "historical-replay-037",
-      "content_hash": "sha256:368346aa36aff4ad233bdbb1072bdb89744ba196331d2e125a206595469ce19b",
+      "content_hash": "sha256:23c194e455a818c06a3b76bc43441712ef6090fb15a2b276e7223797f6cb777e",
       "evidence_boundary": "Held-out 2024 public gridded-point replay; estimated forecast evidence, not live performance, city exposure, or intervention impact.",
       "kind": "historical-replay",
       "relative_path": "historical-replays/historical-replay-037.json",
@@ -410,7 +410,7 @@
     },
     {
       "artifact_id": "historical-replay-038",
-      "content_hash": "sha256:47bd82ac8f1a88e0a5c959bb172dd31ed5d17de3948ef65746a79fbf053f099b",
+      "content_hash": "sha256:53f186b7fd393a46e8db7388ab998fb91fcdf56f8ec12daa686867ed53965ba0",
       "evidence_boundary": "Held-out 2024 public gridded-point replay; estimated forecast evidence, not live performance, city exposure, or intervention impact.",
       "kind": "historical-replay",
       "relative_path": "historical-replays/historical-replay-038.json",
@@ -421,7 +421,7 @@
     },
     {
       "artifact_id": "historical-replay-039",
-      "content_hash": "sha256:9ba6bd8d018b0a7ae88fc90d8fa009447d955bf2467392eca9d92b751bb78ecb",
+      "content_hash": "sha256:f2eb43f99e1ac6315606f56a7416c04e01f6dab3d119c49c5773ead380b020ae",
       "evidence_boundary": "Held-out 2024 public gridded-point replay; estimated forecast evidence, not live performance, city exposure, or intervention impact.",
       "kind": "historical-replay",
       "relative_path": "historical-replays/historical-replay-039.json",
@@ -432,7 +432,7 @@
     },
     {
       "artifact_id": "historical-replay-040",
-      "content_hash": "sha256:050edf2be407c0ffac4539fe19f6fc34d1284cad4fd8131e22f280c11b69e61c",
+      "content_hash": "sha256:476f14c4dbe99620574ca7cc4948af67da125c6f064a6099271da614f132e03a",
       "evidence_boundary": "Held-out 2024 public gridded-point replay; estimated forecast evidence, not live performance, city exposure, or intervention impact.",
       "kind": "historical-replay",
       "relative_path": "historical-replays/historical-replay-040.json",
@@ -443,7 +443,7 @@
     },
     {
       "artifact_id": "optimization.portfolio.task-001",
-      "content_hash": "sha256:94544211382e2cfac5c73016f52612b3eb954019e3c17d4fb66963476488a265",
+      "content_hash": "sha256:1db9981bb825ec50a7f84121c8ba9b17700a0ce2355a6d74491f4caeb39a36e6",
       "evidence_boundary": "Synthetic solver qualification; optimized mathematical output, not a real action portfolio, implementation, or observed benefit.",
       "kind": "optimization-task",
       "relative_path": "optimization-tasks/optimization.portfolio.task-001.json",
@@ -454,7 +454,7 @@
     },
     {
       "artifact_id": "optimization.portfolio.task-002",
-      "content_hash": "sha256:7d25850ad1ed544efc8bfcb63456ad041aebf3bbb8f14d136e18bab2e99c3080",
+      "content_hash": "sha256:6e0ef91e721191c11c6619d6b4f2bfc5c0c7eb9b7a0612292c24dc59ee15efc5",
       "evidence_boundary": "Synthetic solver qualification; optimized mathematical output, not a real action portfolio, implementation, or observed benefit.",
       "kind": "optimization-task",
       "relative_path": "optimization-tasks/optimization.portfolio.task-002.json",
@@ -465,7 +465,7 @@
     },
     {
       "artifact_id": "optimization.portfolio.task-003",
-      "content_hash": "sha256:83484789a98d53a336be1cd00f89419929cf93f22c49ccad2842eddf71c2c39b",
+      "content_hash": "sha256:f92746da382390bc1786cbad0bd7203978edf25b7c39110c9d9befac5190f768",
       "evidence_boundary": "Synthetic solver qualification; optimized mathematical output, not a real action portfolio, implementation, or observed benefit.",
       "kind": "optimization-task",
       "relative_path": "optimization-tasks/optimization.portfolio.task-003.json",
@@ -476,7 +476,7 @@
     },
     {
       "artifact_id": "optimization.portfolio.task-004",
-      "content_hash": "sha256:718bc3604676955b1c8b98714efb2da5797b9788e15e1663fecd8d0c4e91caac",
+      "content_hash": "sha256:4222e497a1455037432d112a1d3d945bbfc612b5505dcc9c81abe511436a5338",
       "evidence_boundary": "Synthetic solver qualification; optimized mathematical output, not a real action portfolio, implementation, or observed benefit.",
       "kind": "optimization-task",
       "relative_path": "optimization-tasks/optimization.portfolio.task-004.json",
@@ -498,7 +498,7 @@
     },
     {
       "artifact_id": "optimization.portfolio.task-006",
-      "content_hash": "sha256:41c5b1e5e619c83725298ea3541eb7727f95dd9fa00c1309e5dcc745944607d2",
+      "content_hash": "sha256:f0ec997dd871cc94e9a95d7ab0b79f3fe2dc4b9d47f2dd9a670a069d71135cfc",
       "evidence_boundary": "Synthetic solver qualification; optimized mathematical output, not a real action portfolio, implementation, or observed benefit.",
       "kind": "optimization-task",
       "relative_path": "optimization-tasks/optimization.portfolio.task-006.json",
@@ -509,7 +509,7 @@
     },
     {
       "artifact_id": "optimization.portfolio.task-007",
-      "content_hash": "sha256:58d087191ffa742d2c445d391ab822eb12fb8302c09690ad8ed54cc30bd91d99",
+      "content_hash": "sha256:869bff849e631b48d793b4edfe219729bec41292a237f1b5a4daa0c9f200c2c9",
       "evidence_boundary": "Synthetic solver qualification; optimized mathematical output, not a real action portfolio, implementation, or observed benefit.",
       "kind": "optimization-task",
       "relative_path": "optimization-tasks/optimization.portfolio.task-007.json",
@@ -520,7 +520,7 @@
     },
     {
       "artifact_id": "optimization.portfolio.task-008",
-      "content_hash": "sha256:76fadcf0b3afc93b79f24530aab5c0525b66157bcf141322ca4be422c3741b99",
+      "content_hash": "sha256:4fccb7337fdaecb1dfc7b9a5f74c285933ef53fc65377478b246f63fde1cd13b",
       "evidence_boundary": "Synthetic solver qualification; optimized mathematical output, not a real action portfolio, implementation, or observed benefit.",
       "kind": "optimization-task",
       "relative_path": "optimization-tasks/optimization.portfolio.task-008.json",
@@ -553,7 +553,7 @@
     },
     {
       "artifact_id": "optimization.portfolio.task-011",
-      "content_hash": "sha256:57cefac5ab1c6002bdce6fd003acadff5d2577a0cd2cedc89fac38ca586a68dd",
+      "content_hash": "sha256:8ae576f992c7192e8432589211feb570a701eb60b33837b2e4ab7d3e7e57eed4",
       "evidence_boundary": "Synthetic solver qualification; optimized mathematical output, not a real action portfolio, implementation, or observed benefit.",
       "kind": "optimization-task",
       "relative_path": "optimization-tasks/optimization.portfolio.task-011.json",
@@ -564,7 +564,7 @@
     },
     {
       "artifact_id": "optimization.portfolio.task-012",
-      "content_hash": "sha256:742ce54d185bb83b325dc97e11a7bd63e34a45c211f0f4c0a289d5512dd6dea4",
+      "content_hash": "sha256:7fe875f9a33021ec69cc955503a2e2e4c445a0683987e2d79da3ab2e8bf44b9f",
       "evidence_boundary": "Synthetic solver qualification; optimized mathematical output, not a real action portfolio, implementation, or observed benefit.",
       "kind": "optimization-task",
       "relative_path": "optimization-tasks/optimization.portfolio.task-012.json",
@@ -575,7 +575,7 @@
     },
     {
       "artifact_id": "optimization.portfolio.task-013",
-      "content_hash": "sha256:3c5827c6be3425d7388903d9a58d4207ae584cdb2fb9d8d075257a2cb3fb4f2d",
+      "content_hash": "sha256:43cbf25d91dcf3d4c7e01ee721bb5de4b3a73d07bc94ac799b1dbf00a3d118fb",
       "evidence_boundary": "Synthetic solver qualification; optimized mathematical output, not a real action portfolio, implementation, or observed benefit.",
       "kind": "optimization-task",
       "relative_path": "optimization-tasks/optimization.portfolio.task-013.json",
@@ -586,7 +586,7 @@
     },
     {
       "artifact_id": "optimization.portfolio.task-014",
-      "content_hash": "sha256:4347f4acb299c33823f6d2ae61c3adff67944b7eaf8b17a802b70a20c0ccb7ce",
+      "content_hash": "sha256:36a5821a711e511607a7037626448ba0b296d236fc9892099a67b6fd97a37b88",
       "evidence_boundary": "Synthetic solver qualification; optimized mathematical output, not a real action portfolio, implementation, or observed benefit.",
       "kind": "optimization-task",
       "relative_path": "optimization-tasks/optimization.portfolio.task-014.json",
@@ -608,7 +608,7 @@
     },
     {
       "artifact_id": "optimization.portfolio.task-016",
-      "content_hash": "sha256:896791c669da551d5671bef3b7649b9f95b1b93bc70fa2d5a3b818a5f8d38bc5",
+      "content_hash": "sha256:88f68d0588b47dd4670f6c1e4ccbb5b9479c210a57103e9eade07a4673406ae4",
       "evidence_boundary": "Synthetic solver qualification; optimized mathematical output, not a real action portfolio, implementation, or observed benefit.",
       "kind": "optimization-task",
       "relative_path": "optimization-tasks/optimization.portfolio.task-016.json",
@@ -619,7 +619,7 @@
     },
     {
       "artifact_id": "optimization.portfolio.task-017",
-      "content_hash": "sha256:9d0bbba96bc019c2491e50c413cf0b3ea89c288c8e91e1fa665cab60a5562650",
+      "content_hash": "sha256:bdb728ad4a78cbc8fe7f537fee4ec95028378157fd696bf7b8b58b172388b4f6",
       "evidence_boundary": "Synthetic solver qualification; optimized mathematical output, not a real action portfolio, implementation, or observed benefit.",
       "kind": "optimization-task",
       "relative_path": "optimization-tasks/optimization.portfolio.task-017.json",
@@ -630,7 +630,7 @@
     },
     {
       "artifact_id": "optimization.portfolio.task-018",
-      "content_hash": "sha256:039f53f6f40ff06d671fc479de6c9ec39ae880f8991cdff5d83f96509cc9e4b9",
+      "content_hash": "sha256:60d8eccfc3a162eb5578a6679b68264e7e881dc152b84448478507a5a0c38389",
       "evidence_boundary": "Synthetic solver qualification; optimized mathematical output, not a real action portfolio, implementation, or observed benefit.",
       "kind": "optimization-task",
       "relative_path": "optimization-tasks/optimization.portfolio.task-018.json",
@@ -641,7 +641,7 @@
     },
     {
       "artifact_id": "optimization.portfolio.task-019",
-      "content_hash": "sha256:e04d46ebd885736ec19041ca61baa6f5aab8e37a33d98e6df1ffa11ac0c1354c",
+      "content_hash": "sha256:424e13ee9bdc52aa070d22834415c49ee07d58b778d8e5d962273d0fd05cf2cf",
       "evidence_boundary": "Synthetic solver qualification; optimized mathematical output, not a real action portfolio, implementation, or observed benefit.",
       "kind": "optimization-task",
       "relative_path": "optimization-tasks/optimization.portfolio.task-019.json",
@@ -663,7 +663,7 @@
     },
     {
       "artifact_id": "optimization.portfolio.task-021",
-      "content_hash": "sha256:c03691813b0293fff9720606572e97d199cb146a0cd995fb7ef444f0b2069050",
+      "content_hash": "sha256:a9836cbd6366e6764b1c18179b35f783f5f606aaa6e76f7d6117f6c50b1fb70d",
       "evidence_boundary": "Synthetic solver qualification; optimized mathematical output, not a real action portfolio, implementation, or observed benefit.",
       "kind": "optimization-task",
       "relative_path": "optimization-tasks/optimization.portfolio.task-021.json",
@@ -674,7 +674,7 @@
     },
     {
       "artifact_id": "optimization.portfolio.task-022",
-      "content_hash": "sha256:531ad90569733f686d4813e0c3d1e7f3febcb9353e3216241239fc8ade492283",
+      "content_hash": "sha256:29fa143bce9ab0453b76e4fc8b686e79a279470056e779ebaba801d2c958ca99",
       "evidence_boundary": "Synthetic solver qualification; optimized mathematical output, not a real action portfolio, implementation, or observed benefit.",
       "kind": "optimization-task",
       "relative_path": "optimization-tasks/optimization.portfolio.task-022.json",
@@ -685,7 +685,7 @@
     },
     {
       "artifact_id": "optimization.portfolio.task-023",
-      "content_hash": "sha256:6ab2d23540ad74646bb43dac391d5cdc0d28da505c09827818d996b2cce9d5f6",
+      "content_hash": "sha256:169af83a17e3a7540935b4faace5316c75dfc0fdcc8ceeedfea1b84f52d54f23",
       "evidence_boundary": "Synthetic solver qualification; optimized mathematical output, not a real action portfolio, implementation, or observed benefit.",
       "kind": "optimization-task",
       "relative_path": "optimization-tasks/optimization.portfolio.task-023.json",
@@ -696,7 +696,7 @@
     },
     {
       "artifact_id": "optimization.portfolio.task-024",
-      "content_hash": "sha256:711b451838d4925ab70faa4e652eea3bb70ab9412f7fcf1a353db21e0d1cd93a",
+      "content_hash": "sha256:80aae5436db08ec7000cc19512a2c2820f2a25287934d49d7e732e6f58990846",
       "evidence_boundary": "Synthetic solver qualification; optimized mathematical output, not a real action portfolio, implementation, or observed benefit.",
       "kind": "optimization-task",
       "relative_path": "optimization-tasks/optimization.portfolio.task-024.json",
@@ -718,7 +718,7 @@
     },
     {
       "artifact_id": "optimization.portfolio.task-026",
-      "content_hash": "sha256:add482870e98c5d2e0212e677929b0a36f59ab9361231b8cb85a924b5401c2ff",
+      "content_hash": "sha256:8527bf867648e74fa7b096561970f00661e784f08873d61e30bacfa9c688807e",
       "evidence_boundary": "Synthetic solver qualification; optimized mathematical output, not a real action portfolio, implementation, or observed benefit.",
       "kind": "optimization-task",
       "relative_path": "optimization-tasks/optimization.portfolio.task-026.json",
@@ -729,7 +729,7 @@
     },
     {
       "artifact_id": "optimization.portfolio.task-027",
-      "content_hash": "sha256:20c5b540bb37261080d937b392eaab2e0b6a07a1c0331c16e31c5daa95912024",
+      "content_hash": "sha256:17e926ca86b237951d3f0432ea38d13ebed76a3cfdec768bc89fdca13385878e",
       "evidence_boundary": "Synthetic solver qualification; optimized mathematical output, not a real action portfolio, implementation, or observed benefit.",
       "kind": "optimization-task",
       "relative_path": "optimization-tasks/optimization.portfolio.task-027.json",
@@ -740,7 +740,7 @@
     },
     {
       "artifact_id": "optimization.portfolio.task-028",
-      "content_hash": "sha256:8f07c2638f5b46ed89689a9e75a1dc11edd6b0fa270b4b215d28d3368d800f0e",
+      "content_hash": "sha256:5857e1c9c3378309a69b4147d77f865be0439075c3f7b7f92d3650a180507f0c",
       "evidence_boundary": "Synthetic solver qualification; optimized mathematical output, not a real action portfolio, implementation, or observed benefit.",
       "kind": "optimization-task",
       "relative_path": "optimization-tasks/optimization.portfolio.task-028.json",
@@ -751,7 +751,7 @@
     },
     {
       "artifact_id": "optimization.portfolio.task-029",
-      "content_hash": "sha256:2f643a3860d325f74c46b2f6dce0437176ff64ca3ec9360e1ead5d6556dab58a",
+      "content_hash": "sha256:5d668a5d9c420f020c8b4e7cb3900e2f89e5e7d81b6a40f77a482ec80235094f",
       "evidence_boundary": "Synthetic solver qualification; optimized mathematical output, not a real action portfolio, implementation, or observed benefit.",
       "kind": "optimization-task",
       "relative_path": "optimization-tasks/optimization.portfolio.task-029.json",
@@ -773,7 +773,7 @@
     },
     {
       "artifact_id": "optimization.portfolio.task-031",
-      "content_hash": "sha256:369fe8f9c42693e01ea713f9a6c662b9b6aaca1f4ae6e9015463625778de6a37",
+      "content_hash": "sha256:e222ae1e78f492c3b3addc2620a8411b7b51f50501d43d5afeb380906d89f4bc",
       "evidence_boundary": "Synthetic solver qualification; optimized mathematical output, not a real action portfolio, implementation, or observed benefit.",
       "kind": "optimization-task",
       "relative_path": "optimization-tasks/optimization.portfolio.task-031.json",
@@ -784,7 +784,7 @@
     },
     {
       "artifact_id": "optimization.portfolio.task-032",
-      "content_hash": "sha256:ea5a4a672bae3c0dbfe79063f724f3704bbf53ece3423d85d56ff7ee9754407e",
+      "content_hash": "sha256:0b3b5e063c3e3ad330f201a60f374da7e6c7315d5db03539e2b14442e895e40b",
       "evidence_boundary": "Synthetic solver qualification; optimized mathematical output, not a real action portfolio, implementation, or observed benefit.",
       "kind": "optimization-task",
       "relative_path": "optimization-tasks/optimization.portfolio.task-032.json",
@@ -795,7 +795,7 @@
     },
     {
       "artifact_id": "optimization.portfolio.task-033",
-      "content_hash": "sha256:559d576ba5c04b0245ce9e8000dc303872ed4edbfbec9f4abe650349a857e136",
+      "content_hash": "sha256:72c5684522a17ae2b9fb425664026d987320ec1d11dbd95e79fb6e93b3d1b0fd",
       "evidence_boundary": "Synthetic solver qualification; optimized mathematical output, not a real action portfolio, implementation, or observed benefit.",
       "kind": "optimization-task",
       "relative_path": "optimization-tasks/optimization.portfolio.task-033.json",
@@ -806,7 +806,7 @@
     },
     {
       "artifact_id": "optimization.portfolio.task-034",
-      "content_hash": "sha256:836255a2430e37edccbea16947bac059c9f2677f4bbd5a3fa68f3e6c4c81f06a",
+      "content_hash": "sha256:3cc7ed1785d90e4a83dad209074d15caf969a373c6d83bda8686e4d599cb0cd8",
       "evidence_boundary": "Synthetic solver qualification; optimized mathematical output, not a real action portfolio, implementation, or observed benefit.",
       "kind": "optimization-task",
       "relative_path": "optimization-tasks/optimization.portfolio.task-034.json",
@@ -828,7 +828,7 @@
     },
     {
       "artifact_id": "optimization.portfolio.task-036",
-      "content_hash": "sha256:9d8bf3cb9eb9723bcc849fdac091a9b5b5c53555aeac59ba56ca4e641d732dc3",
+      "content_hash": "sha256:ae2ea7a963206d9866e5c392ad7033f0751841126f3836d70b3a1a9c8bdbbf4a",
       "evidence_boundary": "Synthetic solver qualification; optimized mathematical output, not a real action portfolio, implementation, or observed benefit.",
       "kind": "optimization-task",
       "relative_path": "optimization-tasks/optimization.portfolio.task-036.json",
@@ -839,7 +839,7 @@
     },
     {
       "artifact_id": "optimization.portfolio.task-037",
-      "content_hash": "sha256:23cf652f2ecdbad027d057c4ffad84aa111e962da11a346885333da894a2b6ad",
+      "content_hash": "sha256:6d8a3ec443b2087da781e7d2689306133fe556795d2cb8ffcf4091830bd7622b",
       "evidence_boundary": "Synthetic solver qualification; optimized mathematical output, not a real action portfolio, implementation, or observed benefit.",
       "kind": "optimization-task",
       "relative_path": "optimization-tasks/optimization.portfolio.task-037.json",
@@ -850,7 +850,7 @@
     },
     {
       "artifact_id": "optimization.portfolio.task-038",
-      "content_hash": "sha256:f82734e01540eed47dbab91be73bdf55cf448d779e3b450240b097a354c073e2",
+      "content_hash": "sha256:5dbc32913780ddf36ba7bc483ec87dc6b68e203014b6829c55b99cbb2916c98c",
       "evidence_boundary": "Synthetic solver qualification; optimized mathematical output, not a real action portfolio, implementation, or observed benefit.",
       "kind": "optimization-task",
       "relative_path": "optimization-tasks/optimization.portfolio.task-038.json",
@@ -883,7 +883,7 @@
     },
     {
       "artifact_id": "optimization.portfolio.task-041",
-      "content_hash": "sha256:d17fff3d5db487f43937ba0e728f15b201bd4bb8ecd151e1ecebb80e37778e30",
+      "content_hash": "sha256:92d9a28223531b56972503b558b54b92dce608788e5a016d70c4db9aa052a4e0",
       "evidence_boundary": "Synthetic solver qualification; optimized mathematical output, not a real action portfolio, implementation, or observed benefit.",
       "kind": "optimization-task",
       "relative_path": "optimization-tasks/optimization.portfolio.task-041.json",
@@ -894,7 +894,7 @@
     },
     {
       "artifact_id": "optimization.portfolio.task-042",
-      "content_hash": "sha256:89a1fac220addd11f6d934081f1f0ac3ea2cb06c47b7138231020d657e946613",
+      "content_hash": "sha256:0e9ac12fa122698ce370934e83e0f429f983532d508ba14a3a8ec7059519a8b9",
       "evidence_boundary": "Synthetic solver qualification; optimized mathematical output, not a real action portfolio, implementation, or observed benefit.",
       "kind": "optimization-task",
       "relative_path": "optimization-tasks/optimization.portfolio.task-042.json",
@@ -905,7 +905,7 @@
     },
     {
       "artifact_id": "optimization.portfolio.task-043",
-      "content_hash": "sha256:346fe1ed35bfa5134f800ab575d12e4005d6377b5483612dcb9cd3e3cda8febb",
+      "content_hash": "sha256:37ed54682c75b169d198e48142cbdb083b5813b8690c4a1aeed9f5bf5beeed1b",
       "evidence_boundary": "Synthetic solver qualification; optimized mathematical output, not a real action portfolio, implementation, or observed benefit.",
       "kind": "optimization-task",
       "relative_path": "optimization-tasks/optimization.portfolio.task-043.json",
@@ -916,7 +916,7 @@
     },
     {
       "artifact_id": "optimization.portfolio.task-044",
-      "content_hash": "sha256:cddfa57b1e05fe42fc9b365e6a9e2a3357c92776f6094485db1b36ae2c14ed6e",
+      "content_hash": "sha256:b7224abdb76a05f611d100aea1314a8a264b5ce7c7aa42fa86aa4489fd6bee42",
       "evidence_boundary": "Synthetic solver qualification; optimized mathematical output, not a real action portfolio, implementation, or observed benefit.",
       "kind": "optimization-task",
       "relative_path": "optimization-tasks/optimization.portfolio.task-044.json",
@@ -938,7 +938,7 @@
     },
     {
       "artifact_id": "optimization.portfolio.task-046",
-      "content_hash": "sha256:5c627c68d11d3b97f53c5e6b5b8b8878d7f48458e2863769f991a0cd505dd1f3",
+      "content_hash": "sha256:c43005e8dc1125754b0ae1317f80dae4784ec23b43a16bcc55ec6eda038549d3",
       "evidence_boundary": "Synthetic solver qualification; optimized mathematical output, not a real action portfolio, implementation, or observed benefit.",
       "kind": "optimization-task",
       "relative_path": "optimization-tasks/optimization.portfolio.task-046.json",
@@ -949,7 +949,7 @@
     },
     {
       "artifact_id": "optimization.portfolio.task-047",
-      "content_hash": "sha256:1dedd4e31533636df7e8eb03fd6a8d2affa072d51f4c0a0ef2ccba6bb6031d0f",
+      "content_hash": "sha256:d839a09db1cd2e45eb498d054c88d8f06015fca48c8164582d847d811154dabe",
       "evidence_boundary": "Synthetic solver qualification; optimized mathematical output, not a real action portfolio, implementation, or observed benefit.",
       "kind": "optimization-task",
       "relative_path": "optimization-tasks/optimization.portfolio.task-047.json",
@@ -960,7 +960,7 @@
     },
     {
       "artifact_id": "optimization.portfolio.task-048",
-      "content_hash": "sha256:82c64429db54f65c9816b4a989a67fd5ead0b6777415d7885f152080c5c576ed",
+      "content_hash": "sha256:c0331522fc82c6df134cb3180b453e3a7265a677677a97639ac63925dd0b1213",
       "evidence_boundary": "Synthetic solver qualification; optimized mathematical output, not a real action portfolio, implementation, or observed benefit.",
       "kind": "optimization-task",
       "relative_path": "optimization-tasks/optimization.portfolio.task-048.json",
@@ -971,7 +971,7 @@
     },
     {
       "artifact_id": "optimization.portfolio.task-049",
-      "content_hash": "sha256:8fe162f11441a21317ea8c7ea46a0859de6c827131e27b2c89ce95c44096dadf",
+      "content_hash": "sha256:4601a81052a658c08c1d1dc9c9f9f3120e10a787cf76cc8d130b3bd0c57edc3a",
       "evidence_boundary": "Synthetic solver qualification; optimized mathematical output, not a real action portfolio, implementation, or observed benefit.",
       "kind": "optimization-task",
       "relative_path": "optimization-tasks/optimization.portfolio.task-049.json",
@@ -993,7 +993,7 @@
     },
     {
       "artifact_id": "optimization.portfolio.task-051",
-      "content_hash": "sha256:36430ddd48b7dafe105be3b5d6c34c43061650a2dab06db612ceecf9b42229c7",
+      "content_hash": "sha256:5e81372e6913a497745c91aa40dce59c5df15de8db686e7890c2600b75db7ee4",
       "evidence_boundary": "Synthetic solver qualification; optimized mathematical output, not a real action portfolio, implementation, or observed benefit.",
       "kind": "optimization-task",
       "relative_path": "optimization-tasks/optimization.portfolio.task-051.json",
@@ -1004,7 +1004,7 @@
     },
     {
       "artifact_id": "optimization.portfolio.task-052",
-      "content_hash": "sha256:69bf099d1be48c999f7a3fd9b8f2c18400c53dbc10a53aa190618ceed85238a0",
+      "content_hash": "sha256:8e1577ee21200d03dcee6601d67c1d2a29804de0f45af9cd624f3b848d4aee0e",
       "evidence_boundary": "Synthetic solver qualification; optimized mathematical output, not a real action portfolio, implementation, or observed benefit.",
       "kind": "optimization-task",
       "relative_path": "optimization-tasks/optimization.portfolio.task-052.json",
@@ -1015,7 +1015,7 @@
     },
     {
       "artifact_id": "optimization.portfolio.task-053",
-      "content_hash": "sha256:e3b5c004a56415e5ac929c70ad0338ad806cc5f4e6b5e41d87f6a4c56cbfc15c",
+      "content_hash": "sha256:fb40c56a0999e2efd407e93fcee799ae02cb2a8e61bcca765cce4f5dc7c1ca98",
       "evidence_boundary": "Synthetic solver qualification; optimized mathematical output, not a real action portfolio, implementation, or observed benefit.",
       "kind": "optimization-task",
       "relative_path": "optimization-tasks/optimization.portfolio.task-053.json",
@@ -1026,7 +1026,7 @@
     },
     {
       "artifact_id": "optimization.portfolio.task-054",
-      "content_hash": "sha256:9300fba8e5b96a13edb6df91369958761caca56e5bce498007e21d90ed686511",
+      "content_hash": "sha256:5ed4074bba91423a6bfddac5c362eab00f02ccae5eee41f0f778b77f28a3a9ca",
       "evidence_boundary": "Synthetic solver qualification; optimized mathematical output, not a real action portfolio, implementation, or observed benefit.",
       "kind": "optimization-task",
       "relative_path": "optimization-tasks/optimization.portfolio.task-054.json",
@@ -1048,7 +1048,7 @@
     },
     {
       "artifact_id": "optimization.portfolio.task-056",
-      "content_hash": "sha256:fd7921215c7d3ded603289f098c59ce0e26b12a8eeebdc0616e4731e0047c03a",
+      "content_hash": "sha256:dad580e1f20825b7426454581646366246b98eb23a201dd392616f211eb4b82a",
       "evidence_boundary": "Synthetic solver qualification; optimized mathematical output, not a real action portfolio, implementation, or observed benefit.",
       "kind": "optimization-task",
       "relative_path": "optimization-tasks/optimization.portfolio.task-056.json",
@@ -1059,7 +1059,7 @@
     },
     {
       "artifact_id": "optimization.portfolio.task-057",
-      "content_hash": "sha256:a6be8b6d47fb2f64efafadc719a8f7d1b1c1b9baea546b98f2846395f4c32650",
+      "content_hash": "sha256:19091ff1401cda3f271187f3eec201180df461b7edc747d4404174ed96a82b49",
       "evidence_boundary": "Synthetic solver qualification; optimized mathematical output, not a real action portfolio, implementation, or observed benefit.",
       "kind": "optimization-task",
       "relative_path": "optimization-tasks/optimization.portfolio.task-057.json",
@@ -1070,7 +1070,7 @@
     },
     {
       "artifact_id": "optimization.portfolio.task-058",
-      "content_hash": "sha256:a82eba5dc22ff45307770bc1d679365b52d59502cb8dc7c0836e382353778e6b",
+      "content_hash": "sha256:f103ab7d41830cf01013a1954702fc69d10056c0f677ba42a9b61d3db4d6de6b",
       "evidence_boundary": "Synthetic solver qualification; optimized mathematical output, not a real action portfolio, implementation, or observed benefit.",
       "kind": "optimization-task",
       "relative_path": "optimization-tasks/optimization.portfolio.task-058.json",
@@ -1081,7 +1081,7 @@
     },
     {
       "artifact_id": "optimization.portfolio.task-059",
-      "content_hash": "sha256:2228c067d213bc421087df378d8f584ee4f956d4c4a74d15fe8756d54962466b",
+      "content_hash": "sha256:468f58bba28b64a221f8cb14886f95178aeccde1e2d8ea2814c8b7e3014643f2",
       "evidence_boundary": "Synthetic solver qualification; optimized mathematical output, not a real action portfolio, implementation, or observed benefit.",
       "kind": "optimization-task",
       "relative_path": "optimization-tasks/optimization.portfolio.task-059.json",
@@ -1103,7 +1103,7 @@
     },
     {
       "artifact_id": "optimization.portfolio.task-061",
-      "content_hash": "sha256:5d423240065c6b1537c1fb32ac0cea5330b84f5fac5fd555cecb9dc60e49ea53",
+      "content_hash": "sha256:d3a1ce1c57ff81a399f256e29f2be74eeadb79e33cc7028e4126532ca993188f",
       "evidence_boundary": "Synthetic solver qualification; optimized mathematical output, not a real action portfolio, implementation, or observed benefit.",
       "kind": "optimization-task",
       "relative_path": "optimization-tasks/optimization.portfolio.task-061.json",
@@ -1114,7 +1114,7 @@
     },
     {
       "artifact_id": "optimization.portfolio.task-062",
-      "content_hash": "sha256:83936541a6345e79b991ab6cd7dbbf7c2de1443742d6814e182ef50635118ac5",
+      "content_hash": "sha256:82152861b72666f40a59339204d6f419a32a3db74cc7ad5ddcfbd7785df94a65",
       "evidence_boundary": "Synthetic solver qualification; optimized mathematical output, not a real action portfolio, implementation, or observed benefit.",
       "kind": "optimization-task",
       "relative_path": "optimization-tasks/optimization.portfolio.task-062.json",
@@ -1125,7 +1125,7 @@
     },
     {
       "artifact_id": "optimization.portfolio.task-063",
-      "content_hash": "sha256:5357c79496a5b0169e30769da9b231f2bcc05202f3d38f3ccc07dbc72ec6e7b8",
+      "content_hash": "sha256:bf8cb458b52179d29187854e11cf15a8aba392f20503043d6b30a6e623d3186d",
       "evidence_boundary": "Synthetic solver qualification; optimized mathematical output, not a real action portfolio, implementation, or observed benefit.",
       "kind": "optimization-task",
       "relative_path": "optimization-tasks/optimization.portfolio.task-063.json",
@@ -1136,7 +1136,7 @@
     },
     {
       "artifact_id": "optimization.portfolio.task-064",
-      "content_hash": "sha256:226b001759f92e77055a37e62f2dc49725a538c91ce46de2d4c12752cbd8e138",
+      "content_hash": "sha256:8854bcb99dc9f35156a0b75a6cce59e1bba3e65e088bfce633abc408baaa018a",
       "evidence_boundary": "Synthetic solver qualification; optimized mathematical output, not a real action portfolio, implementation, or observed benefit.",
       "kind": "optimization-task",
       "relative_path": "optimization-tasks/optimization.portfolio.task-064.json",
@@ -1158,7 +1158,7 @@
     },
     {
       "artifact_id": "optimization.portfolio.task-066",
-      "content_hash": "sha256:1f17113cc2f31964b56eae06f2378b293c6cda11627ff67271d0cbd32051fc07",
+      "content_hash": "sha256:b1d46eb025dc4fc39fe8bc393a8e07e19a8177281c98768152dbf988dc5563f7",
       "evidence_boundary": "Synthetic solver qualification; optimized mathematical output, not a real action portfolio, implementation, or observed benefit.",
       "kind": "optimization-task",
       "relative_path": "optimization-tasks/optimization.portfolio.task-066.json",
@@ -1169,7 +1169,7 @@
     },
     {
       "artifact_id": "optimization.portfolio.task-067",
-      "content_hash": "sha256:181f3bede672ff24bc335287516515ec583162cb2d2f7799c1c16055a80a07b4",
+      "content_hash": "sha256:f78c9187cd4a60298d48fe264703c25aa9ebbfca4ed4d56d3a973c2b13dbc2fa",
       "evidence_boundary": "Synthetic solver qualification; optimized mathematical output, not a real action portfolio, implementation, or observed benefit.",
       "kind": "optimization-task",
       "relative_path": "optimization-tasks/optimization.portfolio.task-067.json",
@@ -1180,7 +1180,7 @@
     },
     {
       "artifact_id": "optimization.portfolio.task-068",
-      "content_hash": "sha256:43c1a74e3305b042ae737acdb7ead0f1e4d31dd7fc3fd21056c2def39742cb33",
+      "content_hash": "sha256:7b55f4ad90a75210e215a9e556f9f946165450d602735baa7a82b236c6eb4c97",
       "evidence_boundary": "Synthetic solver qualification; optimized mathematical output, not a real action portfolio, implementation, or observed benefit.",
       "kind": "optimization-task",
       "relative_path": "optimization-tasks/optimization.portfolio.task-068.json",
@@ -1213,7 +1213,7 @@
     },
     {
       "artifact_id": "optimization.portfolio.task-071",
-      "content_hash": "sha256:a45422625562c50aa3459468ee95baa801fafd91a4436f3e2a2ffc2eeddeeae4",
+      "content_hash": "sha256:25211691f6096a77ad529d799084238f0a69c7cc9ba4e1c519ec55e8914cd879",
       "evidence_boundary": "Synthetic solver qualification; optimized mathematical output, not a real action portfolio, implementation, or observed benefit.",
       "kind": "optimization-task",
       "relative_path": "optimization-tasks/optimization.portfolio.task-071.json",
@@ -1224,7 +1224,7 @@
     },
     {
       "artifact_id": "optimization.portfolio.task-072",
-      "content_hash": "sha256:ef7fb5ac246d85dce9d364507d9a37b25896a4984d0960f65eeaaa09b44fdf0b",
+      "content_hash": "sha256:80fa330e5c5d86f02172297a30dd5af68eabcf6d8af49e1c255cc44e18d41171",
       "evidence_boundary": "Synthetic solver qualification; optimized mathematical output, not a real action portfolio, implementation, or observed benefit.",
       "kind": "optimization-task",
       "relative_path": "optimization-tasks/optimization.portfolio.task-072.json",
@@ -1235,7 +1235,7 @@
     },
     {
       "artifact_id": "optimization.portfolio.task-073",
-      "content_hash": "sha256:da7ebd99dde6eec39d0a2af7c99d115f6b5c2200df203d8eb858af1d328ff3fd",
+      "content_hash": "sha256:920a23b2ef6be5870ee7e8a629e71d10ca5a5717f1337782d4245d759d41bcae",
       "evidence_boundary": "Synthetic solver qualification; optimized mathematical output, not a real action portfolio, implementation, or observed benefit.",
       "kind": "optimization-task",
       "relative_path": "optimization-tasks/optimization.portfolio.task-073.json",
@@ -1246,7 +1246,7 @@
     },
     {
       "artifact_id": "optimization.portfolio.task-074",
-      "content_hash": "sha256:5318199b376d3ee92ecc62f23e88ed2e81e1d46272f28690fcfe6a7aeb57f1aa",
+      "content_hash": "sha256:aaf6935140fc77bf3424a1fa1934dd33cd2ce10da089a385c622671416023005",
       "evidence_boundary": "Synthetic solver qualification; optimized mathematical output, not a real action portfolio, implementation, or observed benefit.",
       "kind": "optimization-task",
       "relative_path": "optimization-tasks/optimization.portfolio.task-074.json",
@@ -1268,7 +1268,7 @@
     },
     {
       "artifact_id": "optimization.portfolio.task-076",
-      "content_hash": "sha256:c9e4cb7f48d416c2cbc8410fd9d3bc2315d2852dbea70bd2a94203e68e473812",
+      "content_hash": "sha256:6c095d16c209c4d13d0298fe6e096e02c4ebb00d080b1c98180143d40a09bece",
       "evidence_boundary": "Synthetic solver qualification; optimized mathematical output, not a real action portfolio, implementation, or observed benefit.",
       "kind": "optimization-task",
       "relative_path": "optimization-tasks/optimization.portfolio.task-076.json",
@@ -1279,7 +1279,7 @@
     },
     {
       "artifact_id": "optimization.portfolio.task-077",
-      "content_hash": "sha256:71a144e1ca8ba7e244f655a6760c2e4ceabf3e1f8af6d7e988d4c2142ad7305c",
+      "content_hash": "sha256:19d157347f7ad2a173d6fabbce81d67aa7e84b9e2fdaada1e0e714dccbd69087",
       "evidence_boundary": "Synthetic solver qualification; optimized mathematical output, not a real action portfolio, implementation, or observed benefit.",
       "kind": "optimization-task",
       "relative_path": "optimization-tasks/optimization.portfolio.task-077.json",
@@ -1290,7 +1290,7 @@
     },
     {
       "artifact_id": "optimization.portfolio.task-078",
-      "content_hash": "sha256:0d0a1c25e97a76d29920fcb88c1f7a3f689bcf42f8424e4d090bfe59a3d9e7c2",
+      "content_hash": "sha256:82b1fc54e8e9b80963a5a5de509de1363305d5de74642ce8c23f0927a402a7a2",
       "evidence_boundary": "Synthetic solver qualification; optimized mathematical output, not a real action portfolio, implementation, or observed benefit.",
       "kind": "optimization-task",
       "relative_path": "optimization-tasks/optimization.portfolio.task-078.json",
@@ -1301,7 +1301,7 @@
     },
     {
       "artifact_id": "optimization.portfolio.task-079",
-      "content_hash": "sha256:8455e6b720ab33fdab54cb5d424281401621074532be0c34e706d9fa79744ad5",
+      "content_hash": "sha256:6800a832c8a4d521f69aa1c604e3b052ec084ee8c5014ed2c312de2b334f99b7",
       "evidence_boundary": "Synthetic solver qualification; optimized mathematical output, not a real action portfolio, implementation, or observed benefit.",
       "kind": "optimization-task",
       "relative_path": "optimization-tasks/optimization.portfolio.task-079.json",
@@ -1323,7 +1323,7 @@
     },
     {
       "artifact_id": "optimization.portfolio.task-081",
-      "content_hash": "sha256:db9781b5a30ee846de75d0dac2ff9b4bfd1b045ed7c105fbb45c980c4ae0abb8",
+      "content_hash": "sha256:263a64206b335ea568986394e3ad8fe45e933414752c1d60c4316367181b885d",
       "evidence_boundary": "Synthetic solver qualification; optimized mathematical output, not a real action portfolio, implementation, or observed benefit.",
       "kind": "optimization-task",
       "relative_path": "optimization-tasks/optimization.portfolio.task-081.json",
@@ -1334,7 +1334,7 @@
     },
     {
       "artifact_id": "optimization.portfolio.task-082",
-      "content_hash": "sha256:1bbfc90371026f81b40e3b201cdbb2868a8d87da107f2d2cfd93941f158c921a",
+      "content_hash": "sha256:21b636d0567b7f8cd423d560695c0eda966ab3ea9eceda91542d7da68ed4ef0d",
       "evidence_boundary": "Synthetic solver qualification; optimized mathematical output, not a real action portfolio, implementation, or observed benefit.",
       "kind": "optimization-task",
       "relative_path": "optimization-tasks/optimization.portfolio.task-082.json",
@@ -1345,7 +1345,7 @@
     },
     {
       "artifact_id": "optimization.portfolio.task-083",
-      "content_hash": "sha256:f3d4b37cd84438773ee0dd808e59485e1e62d0885f28be16d390192d559c572c",
+      "content_hash": "sha256:4db7a98b739cdc66b9b620d7d759698ff337132cc14a7d832d963022ed865758",
       "evidence_boundary": "Synthetic solver qualification; optimized mathematical output, not a real action portfolio, implementation, or observed benefit.",
       "kind": "optimization-task",
       "relative_path": "optimization-tasks/optimization.portfolio.task-083.json",
@@ -1356,7 +1356,7 @@
     },
     {
       "artifact_id": "optimization.portfolio.task-084",
-      "content_hash": "sha256:2d6aaf84bbd48f5d6ed629eae8b99a83cf832e70f0568c37ce3e82d5af07892f",
+      "content_hash": "sha256:716d0b2f18c7e33b82750267a324b0b2ae5346da6c68b09c41f031da8e4fe7e3",
       "evidence_boundary": "Synthetic solver qualification; optimized mathematical output, not a real action portfolio, implementation, or observed benefit.",
       "kind": "optimization-task",
       "relative_path": "optimization-tasks/optimization.portfolio.task-084.json",
@@ -1378,7 +1378,7 @@
     },
     {
       "artifact_id": "optimization.portfolio.task-086",
-      "content_hash": "sha256:f12c124d0cbad55a8dcc7984738b32770d02b73595405a99d86a262e20d552ee",
+      "content_hash": "sha256:d6fdabff8da838e5430096cda087974666819bab12d5d2007af966cdd6a7c53a",
       "evidence_boundary": "Synthetic solver qualification; optimized mathematical output, not a real action portfolio, implementation, or observed benefit.",
       "kind": "optimization-task",
       "relative_path": "optimization-tasks/optimization.portfolio.task-086.json",
@@ -1389,7 +1389,7 @@
     },
     {
       "artifact_id": "optimization.portfolio.task-087",
-      "content_hash": "sha256:d8ad3938e37a6e1abfcdbb33251812bc1600c7512d50ce22627cbd46ab2f9d76",
+      "content_hash": "sha256:f5238a451dd503f06d4e8b91d4b582c65acff43e8e4abc845f9794313316d8aa",
       "evidence_boundary": "Synthetic solver qualification; optimized mathematical output, not a real action portfolio, implementation, or observed benefit.",
       "kind": "optimization-task",
       "relative_path": "optimization-tasks/optimization.portfolio.task-087.json",
@@ -1400,7 +1400,7 @@
     },
     {
       "artifact_id": "optimization.portfolio.task-088",
-      "content_hash": "sha256:bc2b7522126b8dc4da5803b95f6eae12e042be728e0f61891148c3adede321d4",
+      "content_hash": "sha256:5e816096ad2de4af0279d2d7b0323d66e432b7b01b21694ef6178ca07044f55d",
       "evidence_boundary": "Synthetic solver qualification; optimized mathematical output, not a real action portfolio, implementation, or observed benefit.",
       "kind": "optimization-task",
       "relative_path": "optimization-tasks/optimization.portfolio.task-088.json",
@@ -1411,7 +1411,7 @@
     },
     {
       "artifact_id": "optimization.portfolio.task-089",
-      "content_hash": "sha256:665a9614db4602fa3f6408b8bb03b1cd4fc8b29a27e821d3c52fc184aa90efbf",
+      "content_hash": "sha256:8b795cfd6f1c077cbf89cbd9dda217b599e92624fbf83335cf0f47e0dae0cc8a",
       "evidence_boundary": "Synthetic solver qualification; optimized mathematical output, not a real action portfolio, implementation, or observed benefit.",
       "kind": "optimization-task",
       "relative_path": "optimization-tasks/optimization.portfolio.task-089.json",
@@ -1433,7 +1433,7 @@
     },
     {
       "artifact_id": "optimization.portfolio.task-091",
-      "content_hash": "sha256:f2c1e162fd3cb8feac5c321c8782a6f3e62a41e9ccfecbb6129384a939082c20",
+      "content_hash": "sha256:6803170bfb491e63b0902f4f0ca4486ae8e24135ef3950465174fcc219ee6406",
       "evidence_boundary": "Synthetic solver qualification; optimized mathematical output, not a real action portfolio, implementation, or observed benefit.",
       "kind": "optimization-task",
       "relative_path": "optimization-tasks/optimization.portfolio.task-091.json",
@@ -1444,7 +1444,7 @@
     },
     {
       "artifact_id": "optimization.portfolio.task-092",
-      "content_hash": "sha256:44b37f29c1807a3f67d18b6db9ca08fbda746262618f06ba8204610d19d98935",
+      "content_hash": "sha256:b744e7c1bf95a517c7515d46dafa143fce14f90f3e2d34f751e925596ea0b3b1",
       "evidence_boundary": "Synthetic solver qualification; optimized mathematical output, not a real action portfolio, implementation, or observed benefit.",
       "kind": "optimization-task",
       "relative_path": "optimization-tasks/optimization.portfolio.task-092.json",
@@ -1455,7 +1455,7 @@
     },
     {
       "artifact_id": "optimization.portfolio.task-093",
-      "content_hash": "sha256:5fa83219b7f207db29ed7365984a9eeb79149c493fc47eb5e6ee998747fe2bc6",
+      "content_hash": "sha256:c4260c07d0f8e495dcef7e76e39a98108a275b6b81e4a7104d6622af8d17b907",
       "evidence_boundary": "Synthetic solver qualification; optimized mathematical output, not a real action portfolio, implementation, or observed benefit.",
       "kind": "optimization-task",
       "relative_path": "optimization-tasks/optimization.portfolio.task-093.json",
@@ -1466,7 +1466,7 @@
     },
     {
       "artifact_id": "optimization.portfolio.task-094",
-      "content_hash": "sha256:dcc0a485e34288ce74ccf4aaa435f1c159454fe6e331513a9f1274838a96d932",
+      "content_hash": "sha256:95e9f3f28d8dba05fc51867a5983a4e3b3393fa95740c37237727a80747401c8",
       "evidence_boundary": "Synthetic solver qualification; optimized mathematical output, not a real action portfolio, implementation, or observed benefit.",
       "kind": "optimization-task",
       "relative_path": "optimization-tasks/optimization.portfolio.task-094.json",
@@ -1488,7 +1488,7 @@
     },
     {
       "artifact_id": "optimization.portfolio.task-096",
-      "content_hash": "sha256:7f81d724d809940ab8fc88b554a9448e14cca24b2dc3f501696fdd71c14ddfc1",
+      "content_hash": "sha256:d24af7cd94ac9380c887d7dc6f138f89a8d2ca254fc5394cf11ba51119555e2c",
       "evidence_boundary": "Synthetic solver qualification; optimized mathematical output, not a real action portfolio, implementation, or observed benefit.",
       "kind": "optimization-task",
       "relative_path": "optimization-tasks/optimization.portfolio.task-096.json",
@@ -1499,7 +1499,7 @@
     },
     {
       "artifact_id": "optimization.portfolio.task-097",
-      "content_hash": "sha256:1d3b303de233fd73a1e277d78d7e54e70b20868f1a2f9bd0833fbdb0a6435553",
+      "content_hash": "sha256:c756feb680bd0dcf169400bfeb42054e72425ccc7a5b618408a0fc73dab010de",
       "evidence_boundary": "Synthetic solver qualification; optimized mathematical output, not a real action portfolio, implementation, or observed benefit.",
       "kind": "optimization-task",
       "relative_path": "optimization-tasks/optimization.portfolio.task-097.json",
@@ -1510,7 +1510,7 @@
     },
     {
       "artifact_id": "optimization.portfolio.task-098",
-      "content_hash": "sha256:39bb856c6c012aeb111ec7f67f5d9e134574ddd713fa0440ae7830e9da4e0e37",
+      "content_hash": "sha256:d77b0ee9f9dae415c8cde68efcf10abf54590bb21fdb50273cb9bdd0b0ed2cab",
       "evidence_boundary": "Synthetic solver qualification; optimized mathematical output, not a real action portfolio, implementation, or observed benefit.",
       "kind": "optimization-task",
       "relative_path": "optimization-tasks/optimization.portfolio.task-098.json",
@@ -1602,7 +1602,7 @@
   ],
   "created_at": "2026-08-12T10:07:41.052030Z",
   "engine_qualification_runs": 5,
-  "evidence_summary_content_hash": "sha256:8c94e281b30bca6bdbb213fbba22a0edeafe9543a315658b3ca983f90a56e214",
+  "evidence_summary_content_hash": "sha256:6e3f761fb417aa887951ecc734d26693d12b05f1898daf51d99771e6b7ab1e4e",
   "evidence_summary_ref": "evidence-summary.json",
   "historical_replays": 40,
   "limitations": [

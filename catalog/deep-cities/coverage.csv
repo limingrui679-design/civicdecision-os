@@ -1,9 +1,9 @@
 selection_order,city_id,display_name,platform,underlying_requests_deduplicated,aggregate_rows,population_estimate,quality_status,completed_scenarios,negative_scenarios,bundle_hash
-1,us.ny.new-york-city,New York City,socrata,1796655,25020,8483844,pass,10,2,sha256:bf94930f732fb8f58056e325bb7fb1755360acc757c57d2f5e5f4c797fabe5e1
-2,us.ma.boston,Boston,ckan-datastore,148160,23316,666442,warn,10,2,sha256:ff05e0b78f089c6e3e93a7418fa3d5fc4e10965ba0eb0b50be9ac4f23a609c20
-3,us.il.chicago,Chicago,socrata,1061921,29131,2711226,warn,10,2,sha256:7a140be5bc28590f3556f5f48dc283fc065edcd30a422d5e5769f0b4f4adc517
-4,us.ca.san-francisco,San Francisco,socrata,461576,12454,830235,warn,10,2,sha256:aeb841458c583f161571a5063bfa49347bc4103ab60541f290db77a3b42a1e4a
-5,us.wa.seattle,Seattle,socrata,186351,15883,754195,warn,9,3,sha256:a842e1f725e8d1f95e7104064b65cbaaeca175a479836a3ee562e04a9bb7d59b
-6,us.tx.austin,Austin,socrata,164333,24249,979539,warn,10,2,sha256:df5b9a21653772d05286283e41ba8a113b71f9d0def19d68257bbf6b55371ce8
-7,us.ca.los-angeles,Los Angeles,socrata,53194,4237,3857263,warn,7,5,sha256:8aa96db93be1a14a0c69b717a4cb51404e6fb589b9947f289931026394c707a6
-8,us.pa.philadelphia,Philadelphia,carto-sql,276443,14546,1579706,warn,10,2,sha256:f5d7bcde6be2cab49b4305d7e8ef8670d3a8e014f2065a503feba09b42deeb68
+1,us.ny.new-york-city,New York City,socrata,1796655,25020,8483844,pass,10,2,sha256:ab27a5287ec4024bf647b787d88ed16828e1d52f2fb9463bd01f846d52e7f4eb
+2,us.ma.boston,Boston,ckan-datastore,148160,23316,666442,warn,10,2,sha256:57e40cc982c12b4db80ec3a2c97de25258ffaf2604faa45929b42f5709292d0f
+3,us.il.chicago,Chicago,socrata,1061921,29131,2711226,warn,10,2,sha256:e4142c6fa72643152c03c77afc74b9faf681712b8bf495bf1b0280668f82b5b9
+4,us.ca.san-francisco,San Francisco,socrata,461576,12454,830235,warn,10,2,sha256:fc2203f30ef136dc8c5cb1090f4b1b40a164744e7607ca47a26e651857c6c50a
+5,us.wa.seattle,Seattle,socrata,186351,15883,754195,warn,9,3,sha256:1c19d48763161facfebfc3bd2c99a08ca7c99e07c14ff31d43d75e929a1aa55f
+6,us.tx.austin,Austin,socrata,164333,24249,979539,warn,10,2,sha256:eb2cd42f0102d04502ac9865505280508eca78f22209b2f5e6af28e7f4587fba
+7,us.ca.los-angeles,Los Angeles,socrata,53194,4237,3857263,warn,7,5,sha256:d306acc29cbd7c4b944243351c9ff7f69146a2fa9e10371d36949193aa978aba
+8,us.pa.philadelphia,Philadelphia,carto-sql,276443,14546,1579706,warn,10,2,sha256:577c89029dbc09e7cb6b7378291a1cc9fe7fa66cbe9df7b2c328e0376fbab105

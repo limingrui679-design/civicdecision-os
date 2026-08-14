@@ -1,6 +1,6 @@
 # Milestone 4 analytical-engine benchmark audit
 
-Registry content hash: `sha256:8ea10c750993908a89a4ebe92c9605cc61e92df15677ce389213c46ac27a40ad`
+Registry content hash: `sha256:c5a9010ec16cf2520ab9b7c13a8d9860ad6867cf253485761e0d374b2a2400ed`
 
 - Historical held-out public-data replays: 40
 - Synthetic portfolio optimization tasks: 100

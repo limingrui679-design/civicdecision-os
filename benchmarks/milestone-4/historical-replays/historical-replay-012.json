@@ -43,7 +43,7 @@
   "empirical_interval_coverage": 0.8,
   "evaluation_end": "2024-12-31T00:00:00Z",
   "evaluation_mae": 0.457,
-  "evaluation_rmse": 2.0580435693476784,
+  "evaluation_rmse": 2.05804356935,
   "evaluation_start": "2024-12-02T00:00:00Z",
   "evaluation_wape": 1.0,
   "forecast_run": {
@@ -1104,11 +1104,11 @@
         "method": "naive",
         "metrics": {
           "bias": -0.007,
-          "empirical_interval_coverage": 0.9666666666666667,
+          "empirical_interval_coverage": 0.966666666667,
           "mae": 0.007,
           "mean_interval_width": 0.0,
           "observations": 240,
-          "rmse": 0.03834057902536162,
+          "rmse": 0.0383405790254,
           "wape": 1.0
         }
       },
@@ -2168,11 +2168,11 @@
         "method": "drift",
         "metrics": {
           "bias": -0.007,
-          "empirical_interval_coverage": 0.9666666666666667,
+          "empirical_interval_coverage": 0.966666666667,
           "mae": 0.007,
           "mean_interval_width": 0.0,
           "observations": 240,
-          "rmse": 0.03834057902536162,
+          "rmse": 0.0383405790254,
           "wape": 1.0
         }
       },
@@ -3232,11 +3232,11 @@
         "method": "moving-average",
         "metrics": {
           "bias": -0.007,
-          "empirical_interval_coverage": 0.9666666666666667,
+          "empirical_interval_coverage": 0.966666666667,
           "mae": 0.007,
           "mean_interval_width": 0.0,
           "observations": 240,
-          "rmse": 0.03834057902536162,
+          "rmse": 0.0383405790254,
           "wape": 1.0
         }
       },
@@ -4296,11 +4296,11 @@
         "method": "seasonal-naive",
         "metrics": {
           "bias": -0.007,
-          "empirical_interval_coverage": 0.9666666666666667,
+          "empirical_interval_coverage": 0.966666666667,
           "mae": 0.007,
           "mean_interval_width": 0.0,
           "observations": 240,
-          "rmse": 0.03834057902536162,
+          "rmse": 0.0383405790254,
           "wape": 1.0
         }
       }

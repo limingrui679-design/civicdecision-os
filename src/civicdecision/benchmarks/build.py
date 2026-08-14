@@ -7,7 +7,7 @@ import json
 from collections import Counter
 from datetime import UTC, datetime
 from io import StringIO
-from math import sqrt
+from math import fsum, sqrt
 from pathlib import Path
 from statistics import fmean
 
@@ -60,7 +60,7 @@ from civicdecision.optimization.portfolio import (
     PortfolioProblem,
     optimize_portfolio,
 )
-from civicdecision.protocols.base import StrictModel, sha256_file
+from civicdecision.protocols.base import StrictModel, normalize_float, sha256_file
 from civicdecision.protocols.evidence import EvidenceType
 from civicdecision.protocols.source import SourceManifest
 from civicdecision.standardized.models import StandardizedCityBundle, TierSRegistry
@@ -76,6 +76,10 @@ class BenchmarkBuildArtifacts(StrictModel):
     summary_markdown_path: Path
     checksum_path: Path
     artifact_paths: list[Path]
+
+
+def _portable(value: float) -> float:
+    return normalize_float(value, significant_digits=12)
 
 
 def _write_model(path: Path, model: StrictModel) -> None:
@@ -239,7 +243,7 @@ def _replay(
         prediction - observation for observation, prediction in zip(actual, predicted, strict=True)
     ]
     absolute = [abs(value) for value in errors]
-    denominator = sum(abs(item) for item in actual)
+    denominator = fsum(abs(item) for item in actual)
     coverage = (
         sum(
             forecast.lower <= observation <= forecast.upper
@@ -262,10 +266,10 @@ def _replay(
         actual=actual,
         forecast_run=run,
         selected_method=run.selected_method,
-        evaluation_mae=fmean(absolute),
-        evaluation_rmse=sqrt(fmean(value * value for value in errors)),
-        evaluation_wape=sum(absolute) / denominator if denominator else None,
-        empirical_interval_coverage=coverage,
+        evaluation_mae=_portable(fmean(absolute)),
+        evaluation_rmse=_portable(sqrt(fmean(value * value for value in errors))),
+        evaluation_wape=_portable(fsum(absolute) / denominator) if denominator else None,
+        empirical_interval_coverage=_portable(coverage),
         status=ReplayStatus.COMPLETED,
         diagnostics=[
             f"Training uses {len(train)} observations ending before the {horizon}-day holdout.",

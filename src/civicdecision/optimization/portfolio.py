@@ -15,9 +15,16 @@ from civicdecision.protocols.base import (
     StrictModel,
     canonical_json,
     ensure_aware,
+    normalize_float,
     sha256_bytes,
 )
 from civicdecision.protocols.evidence import EvidenceType
+
+PORTABLE_FLOAT_SIGNIFICANT_DIGITS = 12
+
+
+def _portable(value: float) -> float:
+    return normalize_float(value, significant_digits=PORTABLE_FLOAT_SIGNIFICANT_DIGITS)
 
 
 class PortfolioRunStatus(StrEnum):
@@ -296,8 +303,11 @@ class PortfolioOptimizationRun(StrictModel):
 def _objective(scenario_values: dict[str, float], config: PortfolioConfig) -> float:
     if config.objective_strategy is ObjectiveStrategy.WORST_CASE:
         return min(scenario_values.values())
-    return sum(
-        scenario_values[scenario] * weight for scenario, weight in config.scenario_weights.items()
+    return _portable(
+        fsum(
+            scenario_values[scenario] * weight
+            for scenario, weight in config.scenario_weights.items()
+        )
     )
 
 
@@ -310,32 +320,47 @@ def _evaluate(
     quantity_map = {
         action.action_id: quantity for action, quantity in zip(actions, quantities, strict=True)
     }
-    total_cost = fsum(
-        action.unit_cost * quantity for action, quantity in zip(actions, quantities, strict=True)
+    total_cost = _portable(
+        fsum(
+            action.unit_cost * quantity
+            for action, quantity in zip(actions, quantities, strict=True)
+        )
     )
-    total_capacity = fsum(
-        action.unit_capacity * quantity
-        for action, quantity in zip(actions, quantities, strict=True)
+    total_capacity = _portable(
+        fsum(
+            action.unit_capacity * quantity
+            for action, quantity in zip(actions, quantities, strict=True)
+        )
     )
-    total_risk = fsum(
-        action.unit_risk * quantity for action, quantity in zip(actions, quantities, strict=True)
+    total_risk = _portable(
+        fsum(
+            action.unit_risk * quantity
+            for action, quantity in zip(actions, quantities, strict=True)
+        )
     )
-    total_benefit = fsum(
-        action.unit_benefit * quantity for action, quantity in zip(actions, quantities, strict=True)
+    total_benefit = _portable(
+        fsum(
+            action.unit_benefit * quantity
+            for action, quantity in zip(actions, quantities, strict=True)
+        )
     )
     group_ids = sorted(set().union(*(action.group_benefit_per_unit for action in actions)))
     group_benefits = {
-        group: fsum(
-            action.group_benefit_per_unit.get(group, 0) * quantity
-            for action, quantity in zip(actions, quantities, strict=True)
+        group: _portable(
+            fsum(
+                action.group_benefit_per_unit.get(group, 0) * quantity
+                for action, quantity in zip(actions, quantities, strict=True)
+            )
         )
         for group in group_ids
     }
     scenario_ids = sorted(actions[0].scenario_objective_per_unit)
     scenario_values = {
-        scenario: fsum(
-            action.scenario_objective_per_unit[scenario] * quantity
-            for action, quantity in zip(actions, quantities, strict=True)
+        scenario: _portable(
+            fsum(
+                action.scenario_objective_per_unit[scenario] * quantity
+                for action, quantity in zip(actions, quantities, strict=True)
+            )
         )
         for scenario in scenario_ids
     }
@@ -351,13 +376,14 @@ def _evaluate(
         excess: float,
         details: str,
     ) -> None:
-        if excess > tolerance:
+        normalized_excess = _portable(float(excess))
+        if normalized_excess > tolerance:
             violations.append(
                 ConstraintViolation(
                     constraint_id=identifier,
                     measured=measured,
                     bound=bound,
-                    excess=excess,
+                    excess=normalized_excess,
                     details=details,
                 )
             )
@@ -523,9 +549,11 @@ def optimize_portfolio(
         retained_ids = {item.plan_id for item in retained}
     frontier_all = _pareto_frontier(evaluated, problem.config.tolerance)
     frontier = [identifier for identifier in frontier_all if identifier in retained_ids]
-    theoretical_upper_bound = fsum(
-        max(action.scenario_objective_per_unit.values()) * action.max_units
-        for action in problem.actions
+    theoretical_upper_bound = _portable(
+        fsum(
+            max(action.scenario_objective_per_unit.values()) * action.max_units
+            for action in problem.actions
+        )
     )
     if complete and incumbent is not None:
         status = PortfolioRunStatus.OPTIMAL
@@ -573,7 +601,7 @@ def optimize_portfolio(
         baseline_plan=baseline,
         selected_plan_id=selected_plan_id,
         selected_objective_change_from_baseline=(
-            incumbent.objective_value - baseline.objective_value
+            _portable(incumbent.objective_value - baseline.objective_value)
             if status is PortfolioRunStatus.OPTIMAL and incumbent is not None
             else None
         ),

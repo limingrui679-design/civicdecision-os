@@ -3,13 +3,13 @@
   "artifacts": [
     {
       "byte_count": 1008,
-      "content_hash": "sha256:0fb719361ba03ab691472f86634f5915bfe1a2c583a0856f5b455cecfc00507e",
+      "content_hash": "sha256:daabdc8387e92cf251a4e8749dc86191c193ede236dc63ef270f7356e1145620",
       "media_type": "application/json",
       "path": "benchmarks/overview.json"
     },
     {
       "byte_count": 1609,
-      "content_hash": "sha256:27e039a24e0bb88bc601c057fc8d482677c2446a9bf6b9e118463af3a00fac5b",
+      "content_hash": "sha256:72586e7b24a95ffe9b6e71678513c36d651d3c1e3001859fd7d51834cdf77904",
       "media_type": "application/json",
       "path": "catalog-summary.json"
     },
@@ -2087,7 +2087,7 @@
     },
     {
       "byte_count": 141276,
-      "content_hash": "sha256:c05c62ced647c9d0dc203dceda01a00eaf8e9207bea6dfd1b1abfbd6b4433f52",
+      "content_hash": "sha256:9fd715369a32c3fd3de77e6e7ec91c655315b97cdf39b9f6160a06767a3f0ba7",
       "media_type": "application/json",
       "path": "evidence/tier-d-summary.json",
       "record_count": 96
@@ -2100,28 +2100,28 @@
     },
     {
       "byte_count": 251940,
-      "content_hash": "sha256:c32914ba455b221b5f6b8d7cf830b95b20b9e021a38abe0686b6979e0417d6a0",
+      "content_hash": "sha256:5da178b4910a0f06c71139f18d806e05c157ce9cc9800385d96d668aa91d09f8",
       "media_type": "application/json",
       "path": "scenarios/all.json",
       "record_count": 188
     },
     {
       "byte_count": 152904,
-      "content_hash": "sha256:62db1011d0e9f038732f75cf49a3432a6ff296428e95eefc4f4d8dcbb1efd98b",
+      "content_hash": "sha256:2c9a3d11300d185f9ccf752fb966a6b8f32af76412f92206a9e69f433a5f2d18",
       "media_type": "application/json",
       "path": "scenarios/decision-pack.json",
       "record_count": 98
     },
     {
       "byte_count": 150918,
-      "content_hash": "sha256:61be821abc4db9f9e2d37add624df652c9d6d0141010c9cb8f1a29befb75a2bc",
+      "content_hash": "sha256:cb964ffe6a6e39410470d0300fd154ec971805830e667f3cad86ddf1c4645df1",
       "media_type": "application/json",
       "path": "scenarios/deep-pack.json",
       "record_count": 96
     },
     {
       "byte_count": 2188,
-      "content_hash": "sha256:e7f3d36e726166b0e157360c3339e74f0f59ab3f100db0964082d53c01649cb4",
+      "content_hash": "sha256:21964beebf626ec285d231fcedc8ab40cda098cb666f22baf09c647474d902da",
       "media_type": "application/json",
       "path": "scenarios/reference-pack.json",
       "record_count": 2
@@ -2323,7 +2323,7 @@
       "record_count": 4
     }
   ],
-  "catalog_fingerprint": "sha256:ccfd86a169d19ff8395220491259acfc2ef05a186e6a3467b238fb8ad007c667",
+  "catalog_fingerprint": "sha256:414e759ae9dae2eec9096147fe650397ecf50ec97eaf270514f0bbc69ce2c40c",
   "claim_boundary": [
     "Public data and deterministic software runs are not client work or field deployment.",
     "Simulation and optimization are not observed impact or institutional adoption.",

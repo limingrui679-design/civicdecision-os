@@ -93,7 +93,7 @@
         "Optimized values are mathematical outputs under declared inputs, not observed impact.",
         "Feasibility reflects only encoded constraints and does not establish implementability."
       ],
-      "objective_value": 38.099999999999994,
+      "objective_value": 38.1,
       "plan_id": "portfolio-plan-00000003",
       "quantities": {
         "action-a": 0,
@@ -103,8 +103,8 @@
       },
       "scenario_objectives": {
         "adverse": 20.4,
-        "base": 38.099999999999994,
-        "favorable": 55.800000000000004
+        "base": 38.1,
+        "favorable": 55.8
       },
       "selected_action_count": 1,
       "total_benefit": 57.0,
@@ -409,7 +409,7 @@
     "enumeration_complete": false,
     "evaluated_plans": 5,
     "feasible_plans": 4,
-    "incumbent_objective": 38.099999999999994,
+    "incumbent_objective": 38.1,
     "retained_plans": 5,
     "search_space_size": 240,
     "theoretical_upper_bound": 166.2,
