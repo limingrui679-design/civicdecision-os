@@ -34,7 +34,7 @@ jobs:
         run: >-
           python scripts/build_release_candidate.py
           --output-dir dist/release-${{ github.sha }}
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v7
         with:
           name: civicdecision-release-candidate-${{ github.sha }}
           if-no-files-found: error
