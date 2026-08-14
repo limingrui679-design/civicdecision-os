@@ -26,9 +26,10 @@ describes those artifacts without upgrading their meaning.
    production deployment, external validation, real users, municipal adoption, and observed
    impact.
 4. **Public-state check.** A dated snapshot records the exact GitHub repository API endpoint,
-   returned status, declared local Git remote, matching package project URLs, and absent
+   returned status, declared local Git remote, matching package project URLs, and registered
    hosted-demo URL. A live run refreshes the GitHub status; an offline release run validates the
-   committed snapshot for deterministic packaging.
+   committed snapshot for deterministic packaging. URL availability does not establish domain
+   correctness, production use, external review, adoption, or impact.
 
 ## Run it
 

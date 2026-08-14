@@ -1,9 +1,9 @@
 {
-  "checked_at": "2026-08-14T01:34:21Z",
+  "checked_at": "2026-08-14T05:31:21Z",
   "claim_boundary": [
     "An HTTP 200 is a dated public-repository availability check, not proof that any workflow or release passed.",
-    "The declared local Git remote and package URLs identify publication coordinates; they do not prove deployment.",
-    "No hosted demo, remote CI success, external review, users, adoption, or impact is claimed."
+    "The declared local Git remote and package URLs identify publication coordinates; they do not prove production deployment.",
+    "The hosted-demo URL records a public read-only walkthrough; it does not establish production authentication, external review, users, adoption, or impact."
   ],
   "github_repository": "limingrui679-design/civicdecision-os",
   "github_repository_api": "https://api.github.com/repos/limingrui679-design/civicdecision-os",
@@ -14,11 +14,13 @@
     "origin\thttps://github.com/limingrui679-design/civicdecision-os.git (push)"
   ],
   "package_project_urls": {
-    "Documentation": "https://github.com/limingrui679-design/civicdecision-os#readme",
+    "Changelog": "https://github.com/limingrui679-design/civicdecision-os/blob/main/CHANGELOG.md",
+    "Documentation": "https://limingrui679-design.github.io/civicdecision-os/",
+    "Homepage": "https://civicdecision-os.limingrui2.chatgpt.site",
     "Issues": "https://github.com/limingrui679-design/civicdecision-os/issues",
     "Repository": "https://github.com/limingrui679-design/civicdecision-os"
   },
-  "public_hosted_demo_url": null,
+  "public_hosted_demo_url": "https://civicdecision-os.limingrui2.chatgpt.site",
   "schema_version": "1.0.0",
   "source": {
     "api": "GitHub REST API get-a-repository endpoint",

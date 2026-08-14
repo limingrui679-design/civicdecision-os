@@ -1,6 +1,6 @@
 # Verified status
 
-Updated: 2026-08-13
+Updated: 2026-08-14
 
 ## Current milestone
 
@@ -157,8 +157,9 @@ performance, security, SBOM, license, and checksum evidence.
   covers the bundle itself.
 - A governed claim audit reconciles core quantitative statements against committed JSON evidence,
   requires declared repository/package coordinates and explicit local/external boundaries, and
-  records the dated availability of the public repository plus the continuing absence of a hosted
-  demo. A live refresh uses the official GitHub repository API.
+  records dated availability for the public repository and read-only hosted walkthrough. A live
+  refresh uses the official GitHub repository API; public URLs remain separate from external
+  review, production use, adoption, or impact.
 
 ## Implementing next
 
@@ -169,8 +170,8 @@ performance, security, SBOM, license, and checksum evidence.
 - City-specific compilation pilots, external domain review, transportability review, and
   independently checkable execution evidence for selected design-only records.
 - Cryptographic signing or trusted provenance and independent verification of a published bundle.
-- Remote CI, security, CodeQL, and release-candidate workflows require real GitHub runs before
-  their results can be called verified.
+- Maintain current GitHub CI, security, CodeQL, documentation, and release-candidate evidence as
+  the implementation and dependency graph evolve.
 
 ## Explicitly not complete
 
@@ -179,6 +180,6 @@ performance, security, SBOM, license, and checksum evidence.
   performance. Tier-D action effects, costs, capacities, and risks remain hypothetical.
 - City-bound execution for the 228 design-only records. Their presence in the library establishes
   authored contracts and audited separation only.
-- Public hosted demo, production authentication/authorization, independent accessibility and
-  penetration testing, cryptographically signed release artifacts, and remote-CI verification.
+- Production authentication/authorization, independent accessibility and penetration testing,
+  and cryptographically signed release artifacts.
 - External review, real users, municipal adoption, or real-world impact.

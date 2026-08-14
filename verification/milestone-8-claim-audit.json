@@ -1,5 +1,5 @@
 {
-  "audit_completed_at": "2026-08-14T02:29:28Z",
+  "audit_completed_at": "2026-08-14T05:43:01Z",
   "checks": {
     "failed": 0,
     "passed": 136,
@@ -16,24 +16,28 @@
     "catalog/product/scenarios/all.json": "sha256:5da178b4910a0f06c71139f18d806e05c157ce9cc9800385d96d668aa91d09f8",
     "verification/milestone-8-coverage.json": "sha256:b9886e8f2426eea8f301c0e86e4429c83b27bb8f68b8bb237c92592c4165286b",
     "verification/milestone-8-performance.json": "sha256:908bc248a9cad8703004aecdf15196b80ac5075e35e23e357f50952a297e2926",
-    "verification/milestone-8-public-state.json": "sha256:7c793ca8b2e4471a8091308b3fa7c74dbfc85e285c166bd89a78e182b0093c66",
+    "verification/milestone-8-public-state.json": "sha256:217869c6ce20d42395609c74853a38437408ec5c07a38a0a6ffc3c7bc4477e5c",
     "verification/milestone-8-quality.json": "sha256:9b8c9acefc76bed59ce923c443a0b89aa36d921eb408f112a5b23a67678bdf7c",
     "verification/milestone-8-repository.json": "sha256:b19a36777d0095769ab6c73f4a1702610e97e736825e2c127f6776f545ceb6dd"
   },
   "failures": [],
   "governed_surface_sha256": {
-    "CHANGELOG.md": "sha256:2f72c8ddbe1f94948d635034f04eb232891974854a3bebc82f1d641f293870e4",
+    "CHANGELOG.md": "sha256:be9bce3c62060209f11f8be489c8bd73fb3fe4f5300ea6cf3c2c619d048fb833",
     "CONTRIBUTING.md": "sha256:c8622e1a630aafa47ee0284d32da41dbe240e9081c237a7d207318dfbd040de3",
-    "README.md": "sha256:8c7d6d7e29746ca64c615e224701a742ae1a488eca7557bd36cb9023d16408cb",
+    "README.md": "sha256:f9d55dc728389999e5c64aebb012386322be0f9f9eff97a659122d256b76b1a2",
     "SECURITY.md": "sha256:6d4ce198843863e34fe24e250f5d0c7ef0274bf87c4efb7ba3076af94c01f6a4",
+    "docs/ADOPTION_METRICS.md": "sha256:894a58fadc1238e409d7788b0a8ee76e3cc7f0d59f3bdb61661e52ddd182c214",
     "docs/ANALYTICAL_ENGINE_AUDIT.md": "sha256:5c673dc493596576e5432577f2683c51f569ce65a8d601a5d627746c7b3a5aec",
     "docs/API.md": "sha256:1aa3cbbb37cd7e9496616b5c13a8cf874aecc0575667b3b5d1ab9583dc5032e2",
     "docs/ARCHITECTURE.md": "sha256:ac19c0409d3a0263235b972702c1427f1db80f7003c508ed06c59621d3a7c8f8",
-    "docs/CLAIM_AUDIT.md": "sha256:df60479a467d5470f5358a16001410e0e71ea33c7963ab7ef6655e2e4e94f129",
+    "docs/CLAIM_AUDIT.md": "sha256:cc63f4dfd47b8a27e0d4b1512cb5d60da05baa836d04659718ad184ab3eb874a",
     "docs/DATA_ATTRIBUTION.md": "sha256:8f25018a3a5b1aaa7720a0284d36ec808c47491066c23a8a14b53fc153cb81bc",
     "docs/DATA_GOVERNANCE.md": "sha256:326cc184c4f8be76d5553f18d2bd019d8a6599ae5f14cd1921cd71ea3fa23f79",
     "docs/DEEP_CITY_COVERAGE.md": "sha256:7c1f92375e36e7e802c81f09d5bb61864dd95c5c5c24d7ccef505ef0b83b4d5f",
+    "docs/EXTERNAL_REVIEW.md": "sha256:dd6b6795156491a4fe7ea3bb8b5e91fc27619694111d3b1a549e3a0880596b83",
     "docs/GLOBAL_CITY_COVERAGE.md": "sha256:3c2d2b35a13de644df620a6d5885d565cf4564c7ee6d8575b4c1ffe18ccadb95",
+    "docs/LAUNCH_PLAYBOOK.md": "sha256:021832c805f73d477b558afbed94b3c46c0494c26ca7f811c35c3626d4ef8470",
+    "docs/PACKAGING.md": "sha256:9e6074aac55a5747b3b4315694a42e9d4d928a35eaf7ab4dbab208cc7af28c89",
     "docs/PERFORMANCE.md": "sha256:669cf19ad4e5696f300780fa3ceb1a690d88e56e0cf24411dc68e78d3f2a04cc",
     "docs/PLUGIN_SDK.md": "sha256:3cf0e1d2314b43099fe7ae133b2ff42256a05c8251d3cd2c56562955517c4f42",
     "docs/PRODUCT_SURFACES.md": "sha256:7ea7f5832067df0021b3339e1c8b5a3016de9d177e8692cdc85f15cfaa7f9849",
@@ -44,20 +48,24 @@
     "docs/SDK.md": "sha256:d492191ef59ae2ea1a7018fa3f771f631cc448a3ff8dd31096aaa28635ecc0d2",
     "docs/SECURITY_ASSURANCE.md": "sha256:90db3bf40eed0ff72e4a18b45e5540de409053b2c519c2a8f0062ffc6f66eb6d",
     "docs/STANDARDIZED_CITY_COVERAGE.md": "sha256:362be6ac6e9d1014ab0aaaff99e3935f163b5f47ece990e8566124c1b7052a62",
-    "docs/STATUS.md": "sha256:9b73c2f86ce960211681830c2b8cfb1cd777bb77038dabb8be5a2addd27ea6bc",
+    "docs/STATUS.md": "sha256:927cf9a6c56da4096ec72d8ab925cc049ab59c0d8261e2561050dc657a869344",
     "docs/THREAT_MODEL.md": "sha256:93a4d8f24fb58199c333908f911259692d888c74ba0ec37ee88164576472bd0d",
     "docs/WEB_EXPLORER.md": "sha256:e7949c8dba956019150eeb93f02efecd607bd0d9d03633225cc750c93c3b3072",
     "docs/adr/0001-evidence-typed-compiler.md": "sha256:39fb8e99d9b77490137858dbb95a2fd294da053cf39077e0a64f9440b1c38192",
     "docs/adr/0002-negative-evidence-releases.md": "sha256:d20caf131edb1092bf1755d1fc4fd8218fb83fc69eda521798dcc2dcbc85711c",
     "docs/adr/0003-one-validated-product-core.md": "sha256:996766f81f1bd2d8ec3954759b958a8d20dc3771f7ad15f9c178795170b5cff0",
+    "docs/index.md": "sha256:c637cc13aee9e3b13137aac3df0c3cc4cdc61672cfdcb7b278f4191a79a3923e",
+    "docs/tutorials/ADD_A_CITY.md": "sha256:7f5b9db4795a15e0fd812421df03a366d6a21529f655c496d45e8c3ade973d3b",
+    "docs/tutorials/BUILD_REVIEW_SCENARIO.md": "sha256:be14ce8deca18c0bbc3ef4ff3bd258e9f6c22c556709db9aa676b9561451317c",
+    "docs/tutorials/FIRST_DECISIONPACK.md": "sha256:071525b8e53285da00c600654fada4087ac192f91b3332ca691bce996105949b",
     "governance/CLAIM_BOUNDARIES.md": "sha256:8ca3bc54912599bf3ecb43da88d1feb7c83c6ba2a22cf6f3170f5e732f239bf0",
-    "pyproject.toml": "sha256:76fa3c0dc0b92e0f532ab58f79a7c80901ec82d2e11cfb500eafd29895c4f53e",
+    "pyproject.toml": "sha256:36e61a3bf6ba3c1ab40f12c9f86518f4e3708208b56108ec29c98df9acbfd2d8",
     "scripts/build_release_candidate.py": "sha256:737cf36a8dc5a17ee80c06b4fd02c4f5ac424ea4412b7abc5c9ea16facbe1361",
     "src/civicdecision/api/app.py": "sha256:cd0b37b13b2416d7bcb6763bae82cdfdbf46e1c22a163cef7d2a467d4e147859"
   },
   "policy": {
     "path": "governance/CLAIM_AUDIT_POLICY.json",
-    "sha256": "sha256:6c72c187f28f7172dcfc2eefa483b4c710914c62e643eda7a0a6a66d30d018cf"
+    "sha256": "sha256:febb70f308d94afcef347b1df12a3a311727dff3a984f736f22638d0f55b560d"
   },
   "public_state": {
     "github_repository": "limingrui679-design/civicdecision-os",
@@ -67,11 +75,13 @@
       "origin\thttps://github.com/limingrui679-design/civicdecision-os.git (push)"
     ],
     "package_project_urls": {
-      "Documentation": "https://github.com/limingrui679-design/civicdecision-os#readme",
+      "Changelog": "https://github.com/limingrui679-design/civicdecision-os/blob/main/CHANGELOG.md",
+      "Documentation": "https://limingrui679-design.github.io/civicdecision-os/",
+      "Homepage": "https://civicdecision-os.limingrui2.chatgpt.site",
       "Issues": "https://github.com/limingrui679-design/civicdecision-os/issues",
       "Repository": "https://github.com/limingrui679-design/civicdecision-os"
     },
-    "public_hosted_demo_url": null,
+    "public_hosted_demo_url": "https://civicdecision-os.limingrui2.chatgpt.site",
     "refreshed_http_status": 200,
     "snapshot_http_status": 200
   },
@@ -121,10 +131,10 @@
     "public_state_contract_fields": 7,
     "quantitative_claims": 36,
     "required_boundaries": 12,
-    "scanned_bytes": 241210,
-    "scanned_files": 32
+    "scanned_bytes": 259103,
+    "scanned_files": 40
   },
-  "snapshot_checked_at": "2026-08-14T01:34:21Z",
+  "snapshot_checked_at": "2026-08-14T05:31:21Z",
   "software_version": "0.8.0",
   "status": "passed"
 }

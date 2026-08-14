@@ -38,11 +38,13 @@
       "origin\thttps://github.com/limingrui679-design/civicdecision-os.git (push)"
     ],
     "package_project_urls": {
-      "Documentation": "https://github.com/limingrui679-design/civicdecision-os#readme",
+      "Changelog": "https://github.com/limingrui679-design/civicdecision-os/blob/main/CHANGELOG.md",
+      "Documentation": "https://limingrui679-design.github.io/civicdecision-os/",
+      "Homepage": "https://civicdecision-os.limingrui2.chatgpt.site",
       "Issues": "https://github.com/limingrui679-design/civicdecision-os/issues",
       "Repository": "https://github.com/limingrui679-design/civicdecision-os"
     },
-    "public_hosted_demo_url": null
+    "public_hosted_demo_url": "https://civicdecision-os.limingrui2.chatgpt.site"
   },
   "public_state_snapshot": "verification/milestone-8-public-state.json",
   "quantitative_claims": [
@@ -288,7 +290,7 @@
         },
         {
           "path": "README.md",
-          "template": "scenario designs in {value} families"
+          "template": "organized into {value} families"
         },
         {
           "path": "docs/PRODUCT_SURFACES.md",
