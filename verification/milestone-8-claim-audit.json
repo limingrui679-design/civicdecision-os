@@ -1,5 +1,5 @@
 {
-  "audit_completed_at": "2026-08-14T05:43:01Z",
+  "audit_completed_at": "2026-08-14T05:57:03Z",
   "checks": {
     "failed": 0,
     "passed": 136,
@@ -24,7 +24,7 @@
   "governed_surface_sha256": {
     "CHANGELOG.md": "sha256:be9bce3c62060209f11f8be489c8bd73fb3fe4f5300ea6cf3c2c619d048fb833",
     "CONTRIBUTING.md": "sha256:c8622e1a630aafa47ee0284d32da41dbe240e9081c237a7d207318dfbd040de3",
-    "README.md": "sha256:f9d55dc728389999e5c64aebb012386322be0f9f9eff97a659122d256b76b1a2",
+    "README.md": "sha256:e44b55d95af9b191b30bac708962776896b5857f417ee41ffbd9934b3543d6fa",
     "SECURITY.md": "sha256:6d4ce198843863e34fe24e250f5d0c7ef0274bf87c4efb7ba3076af94c01f6a4",
     "docs/ADOPTION_METRICS.md": "sha256:894a58fadc1238e409d7788b0a8ee76e3cc7f0d59f3bdb61661e52ddd182c214",
     "docs/ANALYTICAL_ENGINE_AUDIT.md": "sha256:5c673dc493596576e5432577f2683c51f569ce65a8d601a5d627746c7b3a5aec",
@@ -131,7 +131,7 @@
     "public_state_contract_fields": 7,
     "quantitative_claims": 36,
     "required_boundaries": 12,
-    "scanned_bytes": 259103,
+    "scanned_bytes": 260530,
     "scanned_files": 40
   },
   "snapshot_checked_at": "2026-08-14T05:31:21Z",

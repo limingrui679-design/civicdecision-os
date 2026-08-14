@@ -19,6 +19,7 @@
 
 <p align="center">
   <a href="https://civicdecision-os.limingrui2.chatgpt.site"><strong>Open the public walkthrough</strong></a>
+  · <a href="#end-to-end-workflow">Workflow</a>
   · <a href="#start-in-three-steps">Run it locally</a>
   · <a href="#one-reference-case-two-honest-outcomes">Inspect a DecisionPack</a>
   · <a href="https://limingrui679-design.github.io/civicdecision-os/">Read the docs</a>
@@ -49,6 +50,7 @@ observed impact.
 
 - [See the evidence gate](#see-the-evidence-gate)
 - [Why CivicDecision OS](#why-civicdecision-os)
+- [End-to-end workflow](#end-to-end-workflow)
 - [Start in three steps](#start-in-three-steps)
 - [One reference case, two honest outcomes](#one-reference-case-two-honest-outcomes)
 - [One product core, three evidence depths](#one-product-core-three-evidence-depths)
@@ -98,6 +100,31 @@ recommendation may need to be withheld**.
 | Optimization hides infeasible alternatives | Hard constraints, solver status, and negative releases remain first-class. |
 | A selected option looks stable by default | Reversal and value-of-information tests expose assumption sensitivity. |
 | A report cannot be rebuilt | DecisionPacks bind inputs, configuration, results, limitations, and portable checksums. |
+
+## End-to-end workflow
+
+```mermaid
+flowchart TD
+    A["1 · Official or public source"] --> B["2 · Bounded connector"]
+    B --> C["3 · Immutable raw artifact + SourceManifest"]
+    C --> D["4 · Semantic normalization + data-quality report"]
+    D --> E["5 · City Adapter + validated Policy Scenario"]
+    E --> F{"6 · Evidence and method gates pass?"}
+    F -->|"no"| N["Negative DecisionPack<br/>failed · insufficient_evidence · infeasible · timed_out"]
+    F -->|"yes"| G["7 · Descriptive · forecast · causal · simulation · optimization"]
+    G --> H["8 · Uncertainty · reversal · value of information"]
+    H --> I{"9 · Release gate"}
+    I -->|"completed"| J["Completed DecisionPack<br/>selected bounded option + limitations"]
+    I -->|"withhold"| N
+    J --> K["One validated snapshot<br/>Explorer · REST API · SDK · CLI · data-only plugin"]
+    N --> K
+    K --> L["Independent exact rebuild<br/>Schemas · artifacts · manifests · checksums"]
+```
+
+The path is fail-closed: a missing evidence role, failed identification gate, infeasible hard
+constraint, unstable result, or incomplete search remains a reviewable negative release. Both
+terminal states retain the same source lineage, typed outputs, limitations, and reproducibility
+evidence; no interface is allowed to manufacture a stronger answer.
 
 ## Start in three steps
 
