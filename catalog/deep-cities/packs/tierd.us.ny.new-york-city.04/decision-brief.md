@@ -3,7 +3,7 @@
 - Scenario: `tierd.us.ny.new-york-city.04`
 - Application suite: `climate-disaster-resilience`
 - Status: `completed`
-- DecisionPack content hash: `sha256:787dd5e5304ca6f9f54ed261217f75e1253fe2b82858153cd35dbf8218e244fb`
+- DecisionPack content hash: `sha256:411b396b6832cf9d70b5737a6dafc569dc3f6c10d0dfbeff15924bb81889cf88`
 
 ## Claim boundary
 

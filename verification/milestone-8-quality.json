@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-08-14T02:28:37Z",
+  "checked_at": "2026-08-14T10:29:00Z",
   "claim_boundary": [
     "This file is refreshed only after the full local suite and every named static check complete.",
     "Local quality checks do not establish remote CI, external review, production readiness, users, adoption, or impact."
@@ -8,7 +8,7 @@
     "branches_percent": 91.12903225806451,
     "combined_percent": 95.91350246892559,
     "report": "verification/milestone-8-coverage.json",
-    "report_sha256": "sha256:b9886e8f2426eea8f301c0e86e4429c83b27bb8f68b8bb237c92592c4165286b",
+    "report_sha256": "sha256:a7da3be7f9f14c7522a4e7950819732f122d2e99fa4a8fe50f4371163473ab1e",
     "statements_percent": 97.11395101171459,
     "claim_audit_module": {
       "branches_percent": 100.0,
@@ -20,7 +20,7 @@
     "package_count": 23
   },
   "schema_version": "1.0.0",
-  "software_version": "0.8.0",
+  "software_version": "0.8.1",
   "static_quality": {
     "git_diff_check": {
       "status": "passed"
@@ -30,7 +30,7 @@
       "status": "passed"
     },
     "json_documents": {
-      "files": 1668,
+      "files": 1672,
       "status": "passed"
     },
     "mypy_strict": {
@@ -38,14 +38,14 @@
       "status": "passed"
     },
     "python_syntax": {
-      "files": 121,
+      "files": 122,
       "status": "passed"
     },
     "ruff_check": {
       "status": "passed"
     },
     "ruff_format_check": {
-      "files": 257,
+      "files": 272,
       "status": "passed"
     },
     "toml_documents": {
@@ -53,7 +53,7 @@
       "status": "passed"
     },
     "workflow_yaml": {
-      "files": 4,
+      "files": 7,
       "status": "passed"
     }
   },
@@ -62,5 +62,21 @@
     "collected": 800,
     "failed": 0,
     "passed": 800
+  },
+  "web_demo": {
+    "dependency_audit": {
+      "known_vulnerabilities": 0,
+      "status": "passed"
+    },
+    "image_parser_adversarial_tests": {
+      "failed": 0,
+      "passed": 3
+    },
+    "lint": "passed",
+    "render_and_build_identity_tests": {
+      "failed": 0,
+      "passed": 2
+    },
+    "status": "passed"
   }
 }

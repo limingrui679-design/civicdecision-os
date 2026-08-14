@@ -1,6 +1,6 @@
 # Verification evidence
 
-The current repository-wide Milestone-8 exact-rebuild report is produced against 0.8.0 by:
+The current repository-wide Milestone-8 exact-rebuild report is produced against 0.8.1 by:
 
 ```bash
 python scripts/verify_repository.py \

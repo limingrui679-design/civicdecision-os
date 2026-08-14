@@ -226,8 +226,8 @@ def test_product_builder_rejects_stale_files_and_release_archives_fail_closed(
     )
     wheel = next(release_dist.glob("*.whl"))
     sdist = next(release_dist.glob("*.tar.gz"))
-    wheel_report = validate_wheel(wheel, version="0.8.0")
-    sdist_report = validate_sdist(sdist, version="0.8.0")
+    wheel_report = validate_wheel(wheel, version="0.8.1")
+    sdist_report = validate_sdist(sdist, version="0.8.1")
     assert wheel_report["record_complete"] is True
     assert wheel_report["safe_paths"] is True
     assert sdist_report["safe_paths"] is True
@@ -236,9 +236,9 @@ def test_product_builder_rejects_stale_files_and_release_archives_fail_closed(
     extracted = extract_validated_sdist(
         sdist,
         tmp_path / "extracted",
-        version="0.8.0",
+        version="0.8.1",
     )
-    assert extracted.name == "civicdecision-0.8.0"
+    assert extracted.name == "civicdecision-0.8.1"
     assert not (extracted / ".git").exists()
     first_zip = tmp_path / "source-one.zip"
     second_zip = tmp_path / "source-two.zip"
@@ -266,15 +266,15 @@ def test_product_builder_rejects_stale_files_and_release_archives_fail_closed(
     with zipfile.ZipFile(unsafe_wheel, mode="a") as archive:
         archive.writestr("../escape", b"unsafe")
     with pytest.raises(ReleaseValidationError, match="safe relative path"):
-        validate_wheel(unsafe_wheel, version="0.8.0")
+        validate_wheel(unsafe_wheel, version="0.8.1")
 
     unsafe_sdist = tmp_path / "unsafe.tar.gz"
     with tarfile.open(unsafe_sdist, mode="w:gz") as archive:
-        member = tarfile.TarInfo("civicdecision-0.8.0/../escape")
+        member = tarfile.TarInfo("civicdecision-0.8.1/../escape")
         member.size = 1
         archive.addfile(member, io.BytesIO(b"x"))
     with pytest.raises(ReleaseValidationError, match="safe relative path"):
-        validate_sdist(unsafe_sdist, version="0.8.0")
+        validate_sdist(unsafe_sdist, version="0.8.1")
 
     original_checksums = checksums.read_text(encoding="ascii")
     replacement = "1" if original_checksums[0] == "0" else "0"
@@ -289,7 +289,7 @@ def test_product_builder_rejects_stale_files_and_release_archives_fail_closed(
     nonempty.mkdir()
     (nonempty / "keep.txt").write_text("keep", encoding="utf-8")
     with pytest.raises(ReleaseValidationError, match="not empty"):
-        extract_validated_sdist(sdist, nonempty, version="0.8.0")
+        extract_validated_sdist(sdist, nonempty, version="0.8.1")
 
     for unsafe_name in ("", "unsafe\\path", "unsafe\x00path"):
         with pytest.raises(ReleaseValidationError, match="safe POSIX path"):
@@ -314,33 +314,33 @@ def test_product_builder_rejects_stale_files_and_release_archives_fail_closed(
             {
                 "metadata_version": "2.3",
                 "name": "civicdecision",
-                "version": "0.8.0",
+                "version": "0.8.1",
                 "requires_python": ">=3.11",
                 "license_expression": "MIT",
                 "license_files": ["LICENSE"],
             },
             name="civicdecision",
-            version="0.8.0",
+            version="0.8.1",
         )
     with pytest.raises(ReleaseValidationError, match="exactly the top-level LICENSE"):
         release_contract._assert_metadata(
             {
                 "metadata_version": "2.4",
                 "name": "civicdecision",
-                "version": "0.8.0",
+                "version": "0.8.1",
                 "requires_python": ">=3.11",
                 "license_expression": "MIT",
                 "license_files": [],
             },
             name="civicdecision",
-            version="0.8.0",
+            version="0.8.1",
         )
 
     missing_wheel = tmp_path / "missing.whl"
     with zipfile.ZipFile(missing_wheel, mode="w") as archive:
         archive.writestr("civicdecision/placeholder.txt", b"placeholder")
     with pytest.raises(ReleaseValidationError, match="missing required members"):
-        validate_wheel(missing_wheel, version="0.8.0")
+        validate_wheel(missing_wheel, version="0.8.1")
 
     symlink_wheel = tmp_path / "symlink.whl"
     shutil.copyfile(wheel, symlink_wheel)
@@ -350,14 +350,14 @@ def test_product_builder_rejects_stale_files_and_release_archives_fail_closed(
     with zipfile.ZipFile(symlink_wheel, mode="a") as archive:
         archive.writestr(link, b"target")
     with pytest.raises(ReleaseValidationError, match="symbolic link"):
-        validate_wheel(symlink_wheel, version="0.8.0")
+        validate_wheel(symlink_wheel, version="0.8.1")
 
     extra_root_wheel = tmp_path / "extra-root.whl"
     shutil.copyfile(wheel, extra_root_wheel)
     with zipfile.ZipFile(extra_root_wheel, mode="a") as archive:
         archive.writestr("unexpected/file.txt", b"unexpected")
     with pytest.raises(ReleaseValidationError, match="unexpected top-level"):
-        validate_wheel(extra_root_wheel, version="0.8.0")
+        validate_wheel(extra_root_wheel, version="0.8.1")
 
     def write_small_sdist(
         path: Path,
@@ -378,21 +378,21 @@ def test_product_builder_rejects_stale_files_and_release_archives_fail_closed(
     wrong_root = tmp_path / "wrong-root.tar.gz"
     write_small_sdist(wrong_root, [("other/file.txt", b"x", None)])
     with pytest.raises(ReleaseValidationError, match="one exact top-level"):
-        validate_sdist(wrong_root, version="0.8.0")
+        validate_sdist(wrong_root, version="0.8.1")
     linked_sdist = tmp_path / "linked.tar.gz"
     write_small_sdist(
         linked_sdist,
-        [("civicdecision-0.8.0/link", None, tarfile.SYMTYPE)],
+        [("civicdecision-0.8.1/link", None, tarfile.SYMTYPE)],
     )
     with pytest.raises(ReleaseValidationError, match="link or special file"):
-        validate_sdist(linked_sdist, version="0.8.0")
+        validate_sdist(linked_sdist, version="0.8.1")
     incomplete_sdist = tmp_path / "incomplete.tar.gz"
     write_small_sdist(
         incomplete_sdist,
-        [("civicdecision-0.8.0/placeholder.txt", b"x", None)],
+        [("civicdecision-0.8.1/placeholder.txt", b"x", None)],
     )
     with pytest.raises(ReleaseValidationError, match="missing required members"):
-        validate_sdist(incomplete_sdist, version="0.8.0")
+        validate_sdist(incomplete_sdist, version="0.8.1")
 
     with pytest.raises(ReleaseValidationError, match="regular directory"):
         write_deterministic_zip(inventory_wheel, tmp_path / "not-a-directory.zip", epoch=0)
@@ -458,7 +458,7 @@ def test_product_builder_rejects_stale_files_and_release_archives_fail_closed(
         ),
     )
     with pytest.raises(ReleaseValidationError, match="console entry point"):
-        validate_wheel(missing_entry_point, version="0.8.0")
+        validate_wheel(missing_entry_point, version="0.8.1")
 
     malformed_record = tmp_path / "malformed-record.whl"
     rewrite_wheel(
@@ -468,7 +468,7 @@ def test_product_builder_rejects_stale_files_and_release_archives_fail_closed(
         ),
     )
     with pytest.raises(ReleaseValidationError, match="three columns"):
-        validate_wheel(malformed_record, version="0.8.0")
+        validate_wheel(malformed_record, version="0.8.1")
 
     incomplete_record = tmp_path / "incomplete-record.whl"
     rewrite_wheel(
@@ -480,7 +480,7 @@ def test_product_builder_rejects_stale_files_and_release_archives_fail_closed(
         ),
     )
     with pytest.raises(ReleaseValidationError, match="exactly cover"):
-        validate_wheel(incomplete_record, version="0.8.0")
+        validate_wheel(incomplete_record, version="0.8.1")
 
     self_hashed_record = tmp_path / "self-hashed-record.whl"
     rewrite_wheel(
@@ -489,8 +489,8 @@ def test_product_builder_rejects_stale_files_and_release_archives_fail_closed(
             (
                 name,
                 payload.replace(
-                    b"civicdecision-0.8.0.dist-info/RECORD,,\n",
-                    b"civicdecision-0.8.0.dist-info/RECORD,sha256=invalid,1\n",
+                    b"civicdecision-0.8.1.dist-info/RECORD,,\n",
+                    b"civicdecision-0.8.1.dist-info/RECORD,sha256=invalid,1\n",
                 ),
             )
             if name.endswith("/RECORD")
@@ -498,7 +498,7 @@ def test_product_builder_rejects_stale_files_and_release_archives_fail_closed(
         ),
     )
     with pytest.raises(ReleaseValidationError, match="leave its own hash"):
-        validate_wheel(self_hashed_record, version="0.8.0")
+        validate_wheel(self_hashed_record, version="0.8.1")
 
     digest_mismatch_wheel = tmp_path / "digest-mismatch.whl"
     rewrite_wheel(
@@ -508,7 +508,7 @@ def test_product_builder_rejects_stale_files_and_release_archives_fail_closed(
         ),
     )
     with pytest.raises(ReleaseValidationError, match="digest or size mismatch"):
-        validate_wheel(digest_mismatch_wheel, version="0.8.0")
+        validate_wheel(digest_mismatch_wheel, version="0.8.1")
 
     duplicate_wheel = tmp_path / "duplicate.whl"
     shutil.copyfile(wheel, duplicate_wheel)
@@ -518,7 +518,7 @@ def test_product_builder_rejects_stale_files_and_release_archives_fail_closed(
     ):
         archive.writestr("civicdecision/__init__.py", b"duplicate")
     with pytest.raises(ReleaseValidationError, match="duplicate member"):
-        validate_wheel(duplicate_wheel, version="0.8.0")
+        validate_wheel(duplicate_wheel, version="0.8.1")
 
     encrypted_wheel = tmp_path / "encrypted.whl"
     with zipfile.ZipFile(wheel) as original, zipfile.ZipFile(encrypted_wheel, mode="w") as archive:
@@ -563,7 +563,7 @@ def test_product_builder_rejects_stale_files_and_release_archives_fail_closed(
     release_contract.zipfile.ZipFile = lambda *args, **kwargs: EncryptedArchive()  # type: ignore[assignment]
     try:
         with pytest.raises(ReleaseValidationError, match="encrypted member"):
-            validate_wheel(encrypted_wheel, version="0.8.0")
+            validate_wheel(encrypted_wheel, version="0.8.1")
     finally:
         release_contract.zipfile.ZipFile = original_zipfile
 
@@ -571,12 +571,12 @@ def test_product_builder_rejects_stale_files_and_release_archives_fail_closed(
     write_small_sdist(
         duplicate_sdist,
         [
-            ("civicdecision-0.8.0/same.txt", b"a", None),
-            ("civicdecision-0.8.0/same.txt", b"b", None),
+            ("civicdecision-0.8.1/same.txt", b"a", None),
+            ("civicdecision-0.8.1/same.txt", b"b", None),
         ],
     )
     with pytest.raises(ReleaseValidationError, match="duplicate member"):
-        validate_sdist(duplicate_sdist, version="0.8.0")
+        validate_sdist(duplicate_sdist, version="0.8.1")
 
     audit_root = tmp_path / "claim-audit"
     (audit_root / "governance").mkdir(parents=True)

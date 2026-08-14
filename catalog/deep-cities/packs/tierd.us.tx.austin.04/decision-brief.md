@@ -3,7 +3,7 @@
 - Scenario: `tierd.us.tx.austin.04`
 - Application suite: `climate-disaster-resilience`
 - Status: `completed`
-- DecisionPack content hash: `sha256:3f0d17e8911c6da43e83679bb7b47e6580fa146fdb830ee13566eccf12eae48e`
+- DecisionPack content hash: `sha256:b0e4c56ba76d4631b9c604575f315bf8dabd4d345d4cd4282f73d07185d68a2c`
 
 ## Claim boundary
 

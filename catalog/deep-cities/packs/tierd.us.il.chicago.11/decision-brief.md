@@ -3,7 +3,7 @@
 - Scenario: `tierd.us.il.chicago.11`
 - Application suite: `behavioral-policy-equity`
 - Status: `insufficient_evidence`
-- DecisionPack content hash: `sha256:81076bb3876c62164109ef1c77f8899777a75356229b1652c4a998d6da16663c`
+- DecisionPack content hash: `sha256:acff7ed61bbd7d13dcc570cc191a5f8a81c3899009f602bb0ef734cd0ca0bcfb`
 
 ## Claim boundary
 

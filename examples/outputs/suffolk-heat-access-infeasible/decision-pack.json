@@ -355,7 +355,7 @@
       "service_radius_km": 0.001
     },
     "random_seed": 20260812,
-    "software_version": "0.8.0",
+    "software_version": "0.8.1",
     "source_hashes": [
       "sha256:f6e3d27428c3a4fa913eeb06384b782509aab5e8491159c3c5476be5e5c75321"
     ]

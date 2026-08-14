@@ -29,13 +29,13 @@ Links to include:
 
 - Public walkthrough: <https://civicdecision-os.limingrui2.chatgpt.site>
 - Repository: <https://github.com/limingrui679-design/civicdecision-os>
-- Release: <https://github.com/limingrui679-design/civicdecision-os/releases/tag/v0.8.0>
+- Release: <https://github.com/limingrui679-design/civicdecision-os/releases/tag/v0.8.1>
 - Reviewer protocol: <https://github.com/limingrui679-design/civicdecision-os/blob/main/docs/EXTERNAL_REVIEW.md>
 
 ## Technical-community version
 
 > CivicDecision OS is an evidence-typed Python compiler and read-only explorer for urban
-> intervention screening. The v0.8.0 snapshot keeps negative releases, hard-constraint failures,
+> intervention screening. The v0.8.1 snapshot keeps negative releases, hard-constraint failures,
 > reversal tests, source hashes, and value-of-information inside reproducible DecisionPacks. The
 > release provides a wheel, sdist, no-Git source ZIP, SBOM, checksums, and a full verifier. I am
 > looking for scoped reproduction and urban-domain review—not endorsements or unqualified impact

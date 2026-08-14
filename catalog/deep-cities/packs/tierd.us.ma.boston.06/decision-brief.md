@@ -3,7 +3,7 @@
 - Scenario: `tierd.us.ma.boston.06`
 - Application suite: `housing-land-use-regeneration`
 - Status: `completed`
-- DecisionPack content hash: `sha256:66357fc721c5d66839d57530043107233eedbd455e8f0b141add9e6b9fc9d483`
+- DecisionPack content hash: `sha256:258dd4a77a725087dc0f6f6cf5a0a31305614f5852e032352ac31a27daf3bda6`
 
 ## Claim boundary
 

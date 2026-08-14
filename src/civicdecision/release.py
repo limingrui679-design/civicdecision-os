@@ -254,7 +254,7 @@ def validate_sdist(
         "docs/RELEASE_PROCESS.md",
         "docs/CLAIM_AUDIT.md",
         "docs/PERFORMANCE.md",
-        "docs/RELEASE_NOTES_0.8.0.md",
+        "docs/RELEASE_NOTES_0.8.1.md",
         "docs/SECURITY_ASSURANCE.md",
         "examples/outputs/suffolk-heat-access/SHA256SUMS",
         "governance/CLAIM_BOUNDARIES.md",

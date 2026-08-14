@@ -31,7 +31,7 @@ runner = CliRunner()
 def test_cli_version() -> None:
     result = runner.invoke(app, ["version"])
     assert result.exit_code == 0
-    assert result.output.strip() == __version__ == version("civicdecision") == "0.8.0"
+    assert result.output.strip() == __version__ == version("civicdecision") == "0.8.1"
 
 
 def test_cli_builds_schemas(tmp_path: Path) -> None:

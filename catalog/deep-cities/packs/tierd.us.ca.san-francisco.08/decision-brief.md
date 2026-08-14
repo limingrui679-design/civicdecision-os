@@ -3,7 +3,7 @@
 - Scenario: `tierd.us.ca.san-francisco.08`
 - Application suite: `infrastructure-finance-asset-risk`
 - Status: `completed`
-- DecisionPack content hash: `sha256:3bb81f0abaa3c5c6713ad827d433ea1ab4317feff46da6580cec91da9c9db208`
+- DecisionPack content hash: `sha256:95438811c1c25f442d3b043c3942e9acb8a06c6fb7891cef0dc3e4029405b26d`
 
 ## Claim boundary
 

@@ -3,7 +3,7 @@
 - Scenario: `tierd.us.wa.seattle.06`
 - Application suite: `housing-land-use-regeneration`
 - Status: `insufficient_evidence`
-- DecisionPack content hash: `sha256:4302e0bc39fac91fb59469553762b3360504380b74daf632bb324d67b3fbf3b9`
+- DecisionPack content hash: `sha256:c988e997c2aa80873c7c07325c654428167d66dfb337ae31426a4520dd3a4159`
 
 ## Claim boundary
 

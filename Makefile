@@ -27,6 +27,6 @@ performance:
 	python scripts/benchmark_product.py --output verification/milestone-8-performance.json
 
 release-candidate:
-	python scripts/build_release_candidate.py --output-dir dist/release-0.8.0
+	python scripts/build_release_candidate.py --output-dir dist/release-0.8.1
 
 check: lint typecheck test verify-artifacts

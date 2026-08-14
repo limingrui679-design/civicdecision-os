@@ -10,7 +10,7 @@
       "artifact_count": 2,
       "city_id": "us.ma.suffolk",
       "city_name": "Suffolk County reference sample",
-      "content_hash": "sha256:f0d6f6f9bbafb3fd0a9922fcc306755785a7af321aef3c7216b97c4ae69652da",
+      "content_hash": "sha256:ec269343abf702f3912e691a9f0d3b2ce879bef1a8328360a9e2d03092ce0ed0",
       "evidence_types": [
         "estimated",
         "observed",
@@ -40,7 +40,7 @@
       "artifact_count": 2,
       "city_id": "us.ma.suffolk",
       "city_name": "Suffolk County reference sample",
-      "content_hash": "sha256:523e0d0aa92f3810805bbd9e4185d12dce31e871031ad7f37dd5c96dc2387427",
+      "content_hash": "sha256:909e6c26c686ef688bca83073438c49b79d4b412069dbcb8682c1e8d70ed372b",
       "evidence_types": [
         "estimated",
         "observed",

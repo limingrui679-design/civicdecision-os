@@ -1,6 +1,7 @@
 import vinext from "vinext";
 import { defineConfig } from "vite";
 import hostingConfig from "./.openai/hosting.json" with { type: "json" };
+import packageManifest from "./package.json" with { type: "json" };
 import { sites } from "./build/sites-vite-plugin.ts";
 
 const SITE_CREATOR_PLACEHOLDER_DATABASE_ID =
@@ -44,6 +45,25 @@ export default defineConfig(async () => {
   const { cloudflare } = await import("@cloudflare/vite-plugin");
 
   return {
+    define: {
+      __CIVICDECISION_BUILD_COMMIT__: JSON.stringify(
+        process.env.CIVICDECISION_BUILD_COMMIT ?? "unavailable",
+      ),
+      __CIVICDECISION_BUILD_TREE__: JSON.stringify(
+        process.env.CIVICDECISION_BUILD_TREE ?? "unavailable",
+      ),
+      __CIVICDECISION_BUILD_TAG__: JSON.stringify(
+        process.env.CIVICDECISION_BUILD_TAG ?? "untagged",
+      ),
+      __CIVICDECISION_BUILD_DIRTY__: JSON.stringify(
+        process.env.CIVICDECISION_BUILD_DIRTY ?? "unknown",
+      ),
+      __CIVICDECISION_BUILD_TIME__: JSON.stringify(
+        process.env.CIVICDECISION_BUILD_TIME ?? "unavailable",
+      ),
+      __CIVICDECISION_PACKAGE_VERSION__: JSON.stringify(packageManifest.version),
+      __CIVICDECISION_HOSTING_PROJECT_ID__: JSON.stringify(hostingConfig.id),
+    },
     server: isCodexSeatbeltSandbox
       ? { watch: { useFsEvents: false, usePolling: true } }
       : undefined,

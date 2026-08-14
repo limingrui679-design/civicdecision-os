@@ -10,60 +10,60 @@
     {
       "budget_ms": 5000.0,
       "metric": "cold_store_initialization_p95",
-      "observed_ms": 1637.475,
+      "observed_ms": 1615.825,
       "status": "passed"
     },
     {
       "budget_ms": 25.0,
       "metric": "store_compound_design_query_p95",
-      "observed_ms": 0.227,
+      "observed_ms": 0.093,
       "status": "passed"
     },
     {
       "budget_ms": 25.0,
       "metric": "store_design_detail_p95",
-      "observed_ms": 0.034,
+      "observed_ms": 0.028,
       "status": "passed"
     },
     {
       "budget_ms": 100.0,
       "metric": "api_meta_p95",
-      "observed_ms": 1.306,
+      "observed_ms": 1.116,
       "status": "passed"
     },
     {
       "budget_ms": 150.0,
       "metric": "api_compound_design_query_p95",
-      "observed_ms": 1.847,
+      "observed_ms": 1.256,
       "status": "passed"
     },
     {
       "budget_ms": 150.0,
       "metric": "api_design_detail_p95",
-      "observed_ms": 1.822,
+      "observed_ms": 1.485,
       "status": "passed"
     },
     {
       "budget_ms": 150.0,
       "metric": "api_family_detail_p95",
-      "observed_ms": 1.873,
+      "observed_ms": 1.363,
       "status": "passed"
     },
     {
       "budget_ms": 30000.0,
       "metric": "scenario_library_build",
-      "observed_ms": 829.953,
+      "observed_ms": 823.641,
       "status": "passed"
     },
     {
       "budget_ms": 30000.0,
       "metric": "product_build",
-      "observed_ms": 4167.291,
+      "observed_ms": 4144.731,
       "status": "passed"
     }
   ],
-  "catalog_fingerprint": "sha256:414e759ae9dae2eec9096147fe650397ecf50ec97eaf270514f0bbc69ce2c40c",
-  "checked_at": "2026-08-14T02:26:26.404644+00:00",
+  "catalog_fingerprint": "sha256:898d5a460cffb98b394f63daec4f10e73cd36a0a37d675c6a7557da7fad6340e",
+  "checked_at": "2026-08-14T10:28:03.136311+00:00",
   "configuration": {
     "builds_included": true,
     "cold_store_iterations": 3,
@@ -80,22 +80,22 @@
   "observations": {
     "api": {
       "api_compound_design_query": {
-        "etag": "W/\"edd37e727736466e4fc6612d17b30b8d950727ba9dc378a1e15e3f9a13b0c00b\"",
+        "etag": "W/\"f1d2f2f579e8a014e351aca9ed9cb60b6f7d17177fa9e4394ddeaedd2a7fdebb\"",
         "response_bytes": 1521,
         "status_code": 200
       },
       "api_design_detail": {
-        "etag": "W/\"fd989fb4427050941500c22c610872c5560b55d7be598151730836662739cf15\"",
+        "etag": "W/\"c0109849cab77fd6fe4d57db7bfe6c6fd97d5b18ca034c48204ff5555295c7f7\"",
         "response_bytes": 8679,
         "status_code": 200
       },
       "api_family_detail": {
-        "etag": "W/\"e4223c59df3ca0b3fe738f792ed974903765fb74fd8bd33b51659814d0a6c389\"",
+        "etag": "W/\"e7103a7c5122a54758b77dd66df38e87f3c1483c65997b34f7307b1a53057b32\"",
         "response_bytes": 14118,
         "status_code": 200
       },
       "api_meta": {
-        "etag": "W/\"596e74c7164f08eee4389dc105dcb24d8603820b43e36cd7dd3dfd27ea83a17e\"",
+        "etag": "W/\"f204824db74073683b175b7baf63758509c78cb8ee636c46242dc63bae1cb4a9\"",
         "response_bytes": 1455,
         "status_code": 200
       }
@@ -114,69 +114,69 @@
     "design_detail_id": "scenario.climate.extreme-heat.cooling-center-network.v1"
   },
   "schema_version": "1.0.0",
-  "software_version": "0.8.0",
+  "software_version": "0.8.1",
   "timing": {
     "api_compound_design_query": {
-      "max_ms": 2.424,
-      "median_ms": 1.131,
-      "min_ms": 1.006,
-      "p95_ms": 1.847,
+      "max_ms": 1.923,
+      "median_ms": 1.02,
+      "min_ms": 0.973,
+      "p95_ms": 1.256,
       "samples": 30
     },
     "api_design_detail": {
-      "max_ms": 2.017,
-      "median_ms": 1.135,
-      "min_ms": 0.968,
-      "p95_ms": 1.822,
+      "max_ms": 1.673,
+      "median_ms": 1.086,
+      "min_ms": 0.922,
+      "p95_ms": 1.485,
       "samples": 30
     },
     "api_family_detail": {
-      "max_ms": 2.163,
-      "median_ms": 1.146,
-      "min_ms": 0.992,
-      "p95_ms": 1.873,
+      "max_ms": 1.385,
+      "median_ms": 1.097,
+      "min_ms": 0.957,
+      "p95_ms": 1.363,
       "samples": 30
     },
     "api_meta": {
-      "max_ms": 1.738,
-      "median_ms": 0.829,
-      "min_ms": 0.732,
-      "p95_ms": 1.306,
+      "max_ms": 1.876,
+      "median_ms": 0.818,
+      "min_ms": 0.727,
+      "p95_ms": 1.116,
       "samples": 30
     },
     "cold_store_initialization": {
-      "max_ms": 1637.475,
-      "median_ms": 1576.366,
-      "min_ms": 1561.195,
-      "p95_ms": 1637.475,
+      "max_ms": 1615.825,
+      "median_ms": 1603.876,
+      "min_ms": 1553.807,
+      "p95_ms": 1615.825,
       "samples": 3
     },
     "product_build": {
-      "max_ms": 4167.291,
-      "median_ms": 4167.291,
-      "min_ms": 4167.291,
-      "p95_ms": 4167.291,
+      "max_ms": 4144.731,
+      "median_ms": 4144.731,
+      "min_ms": 4144.731,
+      "p95_ms": 4144.731,
       "samples": 1
     },
     "scenario_library_build": {
-      "max_ms": 829.953,
-      "median_ms": 829.953,
-      "min_ms": 829.953,
-      "p95_ms": 829.953,
+      "max_ms": 823.641,
+      "median_ms": 823.641,
+      "min_ms": 823.641,
+      "p95_ms": 823.641,
       "samples": 1
     },
     "store_compound_design_query": {
-      "max_ms": 22.987,
-      "median_ms": 0.057,
-      "min_ms": 0.054,
-      "p95_ms": 0.227,
+      "max_ms": 21.183,
+      "median_ms": 0.055,
+      "min_ms": 0.052,
+      "p95_ms": 0.093,
       "samples": 30
     },
     "store_design_detail": {
-      "max_ms": 0.102,
-      "median_ms": 0.019,
+      "max_ms": 0.182,
+      "median_ms": 0.018,
       "min_ms": 0.018,
-      "p95_ms": 0.034,
+      "p95_ms": 0.028,
       "samples": 30
     }
   }

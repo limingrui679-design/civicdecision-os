@@ -101,7 +101,7 @@ def smoke(repository_root: Path) -> dict[str, Any]:
     distribution = importlib.metadata.distribution("civicdecision")
     distribution_files = list(distribution.files or [])
     installed_version = distribution.version
-    require(installed_version == __version__ == "0.8.0", "installed version sources disagree")
+    require(installed_version == __version__ == "0.8.1", "installed version sources disagree")
     require(_run_cli("version") == __version__, "installed CLI version output disagrees")
     require(
         any(str(path) == "civicdecision/web/index.html" for path in distribution_files),

@@ -10,7 +10,7 @@
       "artifact_count": 7,
       "city_id": "us.tx.austin",
       "city_name": "Austin",
-      "content_hash": "sha256:e995fa1b487a8617d766061eb4e3dbe2059541e7f6cc6858a58d62a909d2062b",
+      "content_hash": "sha256:1b1eb82638c17c0852ed90b28b7cdd48570ebf87a9f170fceeb3e833a95a3bd1",
       "evidence_types": [
         "estimated",
         "observed",
@@ -48,7 +48,7 @@
       "artifact_count": 7,
       "city_id": "us.tx.austin",
       "city_name": "Austin",
-      "content_hash": "sha256:7e1b5087e8c5e91c49e8633dbf13b2f063c7bcbb6c183b885455dd5978ecf4cc",
+      "content_hash": "sha256:19b488d47c4f209ee0a58c387a74713386dc1e8bfa7a17be1112dd993e8f657d",
       "evidence_types": [
         "estimated",
         "observed",
@@ -86,7 +86,7 @@
       "artifact_count": 7,
       "city_id": "us.tx.austin",
       "city_name": "Austin",
-      "content_hash": "sha256:6c8a278150f6d531859aa07fd48f6cf7def88a82adee2f589685c1211f7207f6",
+      "content_hash": "sha256:77fd0fef1e7ea5a07160de58c680b38b8fb13f669d0af4e6e49e415b905da6e1",
       "evidence_types": [
         "estimated",
         "observed",
@@ -124,7 +124,7 @@
       "artifact_count": 7,
       "city_id": "us.tx.austin",
       "city_name": "Austin",
-      "content_hash": "sha256:6f429949901c5bf4b5c8a11491eca4fd62a057020e3f38ed6f98213b70827699",
+      "content_hash": "sha256:c17ba0587bbfde97b9dc07348a405faede7c711d02878f8843f9550108729b2c",
       "evidence_types": [
         "estimated",
         "observed",
@@ -162,7 +162,7 @@
       "artifact_count": 7,
       "city_id": "us.tx.austin",
       "city_name": "Austin",
-      "content_hash": "sha256:de2df4c3fc5ceb0950e498ea99a0f3ada26f77ad790076aefe3c45a271972883",
+      "content_hash": "sha256:f76e93f0d8d1c0187399c7279f83ef1fda54bdb52002ed1478e90470e40835a0",
       "evidence_types": [
         "estimated",
         "observed",
@@ -200,7 +200,7 @@
       "artifact_count": 7,
       "city_id": "us.tx.austin",
       "city_name": "Austin",
-      "content_hash": "sha256:e660b0c5caabdf2597cf6cd4accf9a57afba6b6c0073720b9f937a42268d0e2e",
+      "content_hash": "sha256:d63bb1ac01a90e8cdf978b248208dd6bf12ab0e39678b208fbc6baa5cb877ca2",
       "evidence_types": [
         "estimated",
         "observed",
@@ -238,7 +238,7 @@
       "artifact_count": 7,
       "city_id": "us.tx.austin",
       "city_name": "Austin",
-      "content_hash": "sha256:00787b9b0ce41099d86a40414228976579b7b0f5a127032bb100adce50e96048",
+      "content_hash": "sha256:2ed47248ae315db6991871b551442fe33eec1ffe77a93b6e04d06ee340c1f9a7",
       "evidence_types": [
         "estimated",
         "observed",
@@ -276,7 +276,7 @@
       "artifact_count": 7,
       "city_id": "us.tx.austin",
       "city_name": "Austin",
-      "content_hash": "sha256:693bcd7a4bc3c930fb8ffb5f5add7be85f899c6693dccbcfef504adba2aacc90",
+      "content_hash": "sha256:3c9218e3003003e2fb19097813b5408c0f88d959daeed8f220085bc99dae8ebe",
       "evidence_types": [
         "estimated",
         "observed",
@@ -314,7 +314,7 @@
       "artifact_count": 7,
       "city_id": "us.tx.austin",
       "city_name": "Austin",
-      "content_hash": "sha256:8c3f9ef75e0c8cb82ba37494b4edad163b4a859799413136e097c669f384360b",
+      "content_hash": "sha256:717eac022f8f8c896bc81431e96e76e4b9dd37b6227c5e6ae7b313daf461fb81",
       "evidence_types": [
         "estimated",
         "observed",
@@ -352,7 +352,7 @@
       "artifact_count": 7,
       "city_id": "us.tx.austin",
       "city_name": "Austin",
-      "content_hash": "sha256:ba248ecc9d1f23891a39843b435c4e16ecb1ce7e56ff2726f78832cb8de28edf",
+      "content_hash": "sha256:1880e4f42b4056a3a974b297d679df8613bdc7bd2ba02c2ae1b9f19852572097",
       "evidence_types": [
         "estimated",
         "observed",
@@ -389,7 +389,7 @@
       "artifact_count": 3,
       "city_id": "us.tx.austin",
       "city_name": "Austin",
-      "content_hash": "sha256:542cc9768d455c92b4d41fe7af1a7b9085257f35a41e0ebe3e897f89ab738472",
+      "content_hash": "sha256:8b5ed3530223116543ed0635a1e9bff24eaffe27bdb71cdd9e480e6fb0b85d58",
       "evidence_types": [
         "causal",
         "observed"
@@ -420,7 +420,7 @@
       "artifact_count": 3,
       "city_id": "us.tx.austin",
       "city_name": "Austin",
-      "content_hash": "sha256:579b9c29842af6b82122c5abc0b4884584774e4fd7bdb1b3ad931bba997b4055",
+      "content_hash": "sha256:ba4e146e3e6dde36bd4481df5ee84581efbabfc877d638b691679b3287412caf",
       "evidence_types": [
         "observed",
         "proposed"
@@ -452,7 +452,7 @@
       "artifact_count": 7,
       "city_id": "us.ma.boston",
       "city_name": "Boston",
-      "content_hash": "sha256:4e656ac63f0312e4ecc5982559c447945402588a9c90187f7b6a2bcdc6fff6c1",
+      "content_hash": "sha256:a07bc8ee77d5a00ac3f7aa67e5d5584b934a6f944c5a5a67f0d58069f9a5b3b2",
       "evidence_types": [
         "estimated",
         "observed",
@@ -490,7 +490,7 @@
       "artifact_count": 7,
       "city_id": "us.ma.boston",
       "city_name": "Boston",
-      "content_hash": "sha256:0094c50f800784bec486641f90e0292bcea6815315d457fc245f002826f1cebf",
+      "content_hash": "sha256:2b05121762de20ae86b4ae6ea549cd60f942cb8065617338ea42e0c7e8b86991",
       "evidence_types": [
         "estimated",
         "observed",
@@ -528,7 +528,7 @@
       "artifact_count": 7,
       "city_id": "us.ma.boston",
       "city_name": "Boston",
-      "content_hash": "sha256:b1c65995cd6bcd6392e216e4bf212c14d184f66fc37b6da9e8b2c3ebfd13f232",
+      "content_hash": "sha256:55c41016ad6cdbcfddde3e59874bbb06331ae8899600f20bc3ec1873e12bbbb6",
       "evidence_types": [
         "estimated",
         "observed",
@@ -566,7 +566,7 @@
       "artifact_count": 7,
       "city_id": "us.ma.boston",
       "city_name": "Boston",
-      "content_hash": "sha256:19ba8205b3d931690e2c28df4c0e1be90b75da51f48895a31be5ca7e707ae52c",
+      "content_hash": "sha256:de9248dcee781d9ee41f8bf7ca01530785a7803a83f8bc61ad7597b7a24d1697",
       "evidence_types": [
         "estimated",
         "observed",
@@ -604,7 +604,7 @@
       "artifact_count": 7,
       "city_id": "us.ma.boston",
       "city_name": "Boston",
-      "content_hash": "sha256:d9d5c00039c712cb49276ab9c4bf7261ba2b9dba2e0fe89180142b7f0ded5f2d",
+      "content_hash": "sha256:b91cfa07ad7a15ee2a5606ea0715ca711876b156c0fadf885d18873a298949e8",
       "evidence_types": [
         "estimated",
         "observed",
@@ -642,7 +642,7 @@
       "artifact_count": 7,
       "city_id": "us.ma.boston",
       "city_name": "Boston",
-      "content_hash": "sha256:3206d660162ac65aaa5ea6250320b07c588cb1d0274e3b5ed3b88ad0d4b95a18",
+      "content_hash": "sha256:440d9f75fa2888ae1cf56d4f2a1bf69e5638cee576a5b7227e0a6f06784503ef",
       "evidence_types": [
         "estimated",
         "observed",
@@ -680,7 +680,7 @@
       "artifact_count": 7,
       "city_id": "us.ma.boston",
       "city_name": "Boston",
-      "content_hash": "sha256:c9df43c1c5fd81892d132c2702218b72873bb99be7486e0bb9b3720a141bba66",
+      "content_hash": "sha256:8963a9bb7c2658b6dc97724e2742550cd886bbcf00c99e16ec965d25f5bbff9c",
       "evidence_types": [
         "estimated",
         "observed",
@@ -718,7 +718,7 @@
       "artifact_count": 7,
       "city_id": "us.ma.boston",
       "city_name": "Boston",
-      "content_hash": "sha256:f0539832c3faca077bac97ac2f9123328eb6359cfffcaf803603f65407da637c",
+      "content_hash": "sha256:762a6cdaaec5c01468e472036f75c5aede343d0723a98c4434cc10f8499e5336",
       "evidence_types": [
         "estimated",
         "observed",
@@ -756,7 +756,7 @@
       "artifact_count": 7,
       "city_id": "us.ma.boston",
       "city_name": "Boston",
-      "content_hash": "sha256:5ceab1c8d8e17b95f7a0a4e54e443fab6f1dca4ac172cfaa537fb1ee145c054f",
+      "content_hash": "sha256:a7fa1e52c48ed3c446434c76db64a3bd500fff535f0644416244007d1fc339a4",
       "evidence_types": [
         "estimated",
         "observed",
@@ -794,7 +794,7 @@
       "artifact_count": 7,
       "city_id": "us.ma.boston",
       "city_name": "Boston",
-      "content_hash": "sha256:caae5e6e8ec6995a4d643a5b1a9899fdee97864bad0b3eb8eaa063587526c407",
+      "content_hash": "sha256:2be8f6a3076c2785efb86dd0da9da591cf9a1277e607f02eb8b9847ba367b77e",
       "evidence_types": [
         "estimated",
         "observed",
@@ -831,7 +831,7 @@
       "artifact_count": 3,
       "city_id": "us.ma.boston",
       "city_name": "Boston",
-      "content_hash": "sha256:d80897a7e8ecd1ab478357657e08d04cc6d1f11b11a455a9f207ef25c9692bae",
+      "content_hash": "sha256:cd009a2ee0780beb641f0e1f4c0b91e5a8b1e2671c633a24709ab0a7cef0599e",
       "evidence_types": [
         "causal",
         "observed"
@@ -862,7 +862,7 @@
       "artifact_count": 3,
       "city_id": "us.ma.boston",
       "city_name": "Boston",
-      "content_hash": "sha256:027f06b77b5b1ea57c900c72d1dbc7ba7787d4dc744116a82c51b6a778f6cf02",
+      "content_hash": "sha256:0cd20da5e1ead4a0a6010a2f7d8fea2b35f3c1da1955cb27b5aa112c207d29d6",
       "evidence_types": [
         "observed",
         "proposed"
@@ -894,7 +894,7 @@
       "artifact_count": 7,
       "city_id": "us.il.chicago",
       "city_name": "Chicago",
-      "content_hash": "sha256:9103a4d95183fe0c98806636f0ae48637933efcdaf1522377f2241b6d72bdc76",
+      "content_hash": "sha256:01f9f3e131a1983f1f290ee94ea52ab6a942c00e4ab513898755da6a5ab5c1ad",
       "evidence_types": [
         "estimated",
         "observed",
@@ -932,7 +932,7 @@
       "artifact_count": 7,
       "city_id": "us.il.chicago",
       "city_name": "Chicago",
-      "content_hash": "sha256:e8e8f28a1a356c7b6e7e98eddb90a07136d6a6c72a3347d409b6c21370f8e3cc",
+      "content_hash": "sha256:cc674d23097cd11b32225188d5740b78869a40a8f739380b2592fcb9905a3cf2",
       "evidence_types": [
         "estimated",
         "observed",
@@ -970,7 +970,7 @@
       "artifact_count": 7,
       "city_id": "us.il.chicago",
       "city_name": "Chicago",
-      "content_hash": "sha256:9cb6417607183354e000c5171ed2b656bd0c9cd68e99dbffaecc67e847e1e79e",
+      "content_hash": "sha256:b045ca066024d8a3affb613c07a7f3d76fe21022033f6b53eca89b54ddd8949d",
       "evidence_types": [
         "estimated",
         "observed",
@@ -1008,7 +1008,7 @@
       "artifact_count": 7,
       "city_id": "us.il.chicago",
       "city_name": "Chicago",
-      "content_hash": "sha256:07910fbfe70e3f18a853b021ad880431796b239cdac18db2132ac5b8059269fa",
+      "content_hash": "sha256:32dcc15e6f6d8065a83e53a098d264914073020c6c2327ebc84b25d4fcdbece6",
       "evidence_types": [
         "estimated",
         "observed",
@@ -1046,7 +1046,7 @@
       "artifact_count": 7,
       "city_id": "us.il.chicago",
       "city_name": "Chicago",
-      "content_hash": "sha256:7ccc8849db0ff0e8956404d50d6a2fe3abc831518e851e5381c2acef03d0655e",
+      "content_hash": "sha256:b118176469bca86f4d2b921064216e944dc7a66cecb51ff204148a321ef66111",
       "evidence_types": [
         "estimated",
         "observed",
@@ -1084,7 +1084,7 @@
       "artifact_count": 7,
       "city_id": "us.il.chicago",
       "city_name": "Chicago",
-      "content_hash": "sha256:a5ca80526a1f69620083798aaa4917bfc2c3f3a2d82c6eea74a36f053d480179",
+      "content_hash": "sha256:b4057cf1c825baff907ec04edd33a3da74fd68b77a11744e602f34753b40e2a4",
       "evidence_types": [
         "estimated",
         "observed",
@@ -1122,7 +1122,7 @@
       "artifact_count": 7,
       "city_id": "us.il.chicago",
       "city_name": "Chicago",
-      "content_hash": "sha256:64321e2d421e0732a0e594315b8391a3ffcdad484e7ec740c063043441d41507",
+      "content_hash": "sha256:21f784999360d3ade281d9924349e0465be95a9f8d8146bfdc779c204fdaf763",
       "evidence_types": [
         "estimated",
         "observed",
@@ -1160,7 +1160,7 @@
       "artifact_count": 7,
       "city_id": "us.il.chicago",
       "city_name": "Chicago",
-      "content_hash": "sha256:ca96a06f0332ea84d5bbb06f5665e25221259d8320dae9b33df591f0397ab858",
+      "content_hash": "sha256:b53c8f9e1aecc62ad92437085323eca6591e877ea949565f7682e50fde594885",
       "evidence_types": [
         "estimated",
         "observed",
@@ -1198,7 +1198,7 @@
       "artifact_count": 7,
       "city_id": "us.il.chicago",
       "city_name": "Chicago",
-      "content_hash": "sha256:6d0352df136bec9d2c8a7501f6ec11a1371e4b18aea2ee4cb16e8f49bce5383d",
+      "content_hash": "sha256:60b0cdc47abe263abfb26ed9a538a0790b0d97a548953c679a804d0eb3a57f3f",
       "evidence_types": [
         "estimated",
         "observed",
@@ -1236,7 +1236,7 @@
       "artifact_count": 7,
       "city_id": "us.il.chicago",
       "city_name": "Chicago",
-      "content_hash": "sha256:07f46560d68c0e54f02abf0e077b29f1bbcd6df46bc041e7fe562180c1732d78",
+      "content_hash": "sha256:512d57ef4bf67979caae5e8bb737ba6bd5c26c13e3c9885d3ca8a9a338401b55",
       "evidence_types": [
         "estimated",
         "observed",
@@ -1273,7 +1273,7 @@
       "artifact_count": 3,
       "city_id": "us.il.chicago",
       "city_name": "Chicago",
-      "content_hash": "sha256:ecdf2fb198de605136243ff4ae3ad135192cf4aef8c5e7e49cd838e28ce05975",
+      "content_hash": "sha256:c47cc8c2b335aa5674a1a88d88e71aab6847f605d5c0d1333d1db266c45fc7a6",
       "evidence_types": [
         "causal",
         "observed"
@@ -1304,7 +1304,7 @@
       "artifact_count": 3,
       "city_id": "us.il.chicago",
       "city_name": "Chicago",
-      "content_hash": "sha256:d2ffa0f01078209502c3c8d42de06f98864aea609656b6d7890b13bf2c8fdb37",
+      "content_hash": "sha256:f6d412b6e7b1ef5ef5327efaf3987e408d8bdb4362cd760fcdd0b1c42b553773",
       "evidence_types": [
         "observed",
         "proposed"
@@ -1336,7 +1336,7 @@
       "artifact_count": 7,
       "city_id": "us.ca.los-angeles",
       "city_name": "Los Angeles",
-      "content_hash": "sha256:bc29cf3db889021735974736983d89c9144cf868055e11472b63ad731a940227",
+      "content_hash": "sha256:ae8b159bc0fbd20ecc2c77bdb5c945d39caf40f031af39844c180054521ffeb7",
       "evidence_types": [
         "estimated",
         "observed",
@@ -1374,7 +1374,7 @@
       "artifact_count": 7,
       "city_id": "us.ca.los-angeles",
       "city_name": "Los Angeles",
-      "content_hash": "sha256:ae00a2d3978d627d51827870fe6f5a00127336eadf5471060c96809e7bf8fa3f",
+      "content_hash": "sha256:c0906f0ae67931a6a602e3d4386f84f88afe8cb821413d4b653698a8164c2264",
       "evidence_types": [
         "estimated",
         "observed",
@@ -1412,7 +1412,7 @@
       "artifact_count": 7,
       "city_id": "us.ca.los-angeles",
       "city_name": "Los Angeles",
-      "content_hash": "sha256:d432203c820ef142918d001c9971acd35d05bab564a4c181b86e125c8a46c671",
+      "content_hash": "sha256:dac89a6d91f5db6e10fac4e565bf23cf6b6b1b2e40336b59c4be08ddbc5562e9",
       "evidence_types": [
         "estimated",
         "observed",
@@ -1450,7 +1450,7 @@
       "artifact_count": 7,
       "city_id": "us.ca.los-angeles",
       "city_name": "Los Angeles",
-      "content_hash": "sha256:e4fbc21eac9b9b33c303fbaa0bdea05de729b38e587c5037c33eb2ab61cfa000",
+      "content_hash": "sha256:233522b3343d73c20d90c4ebf9b3c6f2ffca638b16a7d11de657e2b95edbec3b",
       "evidence_types": [
         "estimated",
         "observed",
@@ -1488,7 +1488,7 @@
       "artifact_count": 7,
       "city_id": "us.ca.los-angeles",
       "city_name": "Los Angeles",
-      "content_hash": "sha256:10f95672cfa74ae15d1f71b879c68952e83ac24b6e9657e360261f1be9b9c9fc",
+      "content_hash": "sha256:0914ab0ec55b6378e2919e818bdc4bb525c29c4972340f91af69557b52938e81",
       "evidence_types": [
         "estimated",
         "observed",
@@ -1526,7 +1526,7 @@
       "artifact_count": 3,
       "city_id": "us.ca.los-angeles",
       "city_name": "Los Angeles",
-      "content_hash": "sha256:21ef2b357825f4e1dc664007016549bf726b97dc63bdbf209bc25200410ed8bc",
+      "content_hash": "sha256:7d84fe20e7598b6489a490037d6f1020a62cc25b734015ac950907617052bda1",
       "evidence_types": [
         "observed",
         "proposed"
@@ -1560,7 +1560,7 @@
       "artifact_count": 7,
       "city_id": "us.ca.los-angeles",
       "city_name": "Los Angeles",
-      "content_hash": "sha256:6ec7d423502f1a045e421aad68e9befe9a0d542ca29870710967d68107c51696",
+      "content_hash": "sha256:b7137e9d342ae605dd3959a816dd3df585afecaf3c31607e89981673457c87a7",
       "evidence_types": [
         "estimated",
         "observed",
@@ -1598,7 +1598,7 @@
       "artifact_count": 3,
       "city_id": "us.ca.los-angeles",
       "city_name": "Los Angeles",
-      "content_hash": "sha256:4da4942103f10e61114239204c6a725e5408529f7cd441e0d9bcaccc9a0e17b4",
+      "content_hash": "sha256:d24c12de92fac7b9f937c6043fa0438e7016a2d70faa056b7bb79eeb1858e9b2",
       "evidence_types": [
         "observed",
         "proposed"
@@ -1632,7 +1632,7 @@
       "artifact_count": 7,
       "city_id": "us.ca.los-angeles",
       "city_name": "Los Angeles",
-      "content_hash": "sha256:4fe35dd8b84c1829b4ba32a4ba142d70d144c0407948d985025e1f405e4d83cd",
+      "content_hash": "sha256:cb1c726762bc499d753cc41cbd3872c82146ed57fec0abe286149272639b134e",
       "evidence_types": [
         "estimated",
         "observed",
@@ -1670,7 +1670,7 @@
       "artifact_count": 3,
       "city_id": "us.ca.los-angeles",
       "city_name": "Los Angeles",
-      "content_hash": "sha256:b5e059cfd8edaa036a2939ab52c5d25b8714239874e31431e01b7ce76939ab1c",
+      "content_hash": "sha256:473ea98d8011822d94a1b0e229b2826e7fc226cb6caff6efda750ab6b492c448",
       "evidence_types": [
         "observed",
         "proposed"
@@ -1703,7 +1703,7 @@
       "artifact_count": 3,
       "city_id": "us.ca.los-angeles",
       "city_name": "Los Angeles",
-      "content_hash": "sha256:07ccaa48999cbb356d16911e8ca359730fd8f3d4e909c172bf173c8f89a78f6e",
+      "content_hash": "sha256:1f2eebb27dd864262140dc62a5cb8a607f62f36c04268fd1afba189883eae85e",
       "evidence_types": [
         "causal",
         "observed"
@@ -1734,7 +1734,7 @@
       "artifact_count": 3,
       "city_id": "us.ca.los-angeles",
       "city_name": "Los Angeles",
-      "content_hash": "sha256:58871ee6541d279cdab194cd338b610b8eae323b73f50a0f7ecbc1919078c4e9",
+      "content_hash": "sha256:acc004fadf63558820bad3209c425e9d27be45b091750a661aa0686559c861c2",
       "evidence_types": [
         "observed",
         "proposed"
@@ -1766,7 +1766,7 @@
       "artifact_count": 7,
       "city_id": "us.ny.new-york-city",
       "city_name": "New York City",
-      "content_hash": "sha256:ffd753d851f6636c93eb4e0a2e68bfac1d4a98a5fe18dc1f3e0148680b3ff5ec",
+      "content_hash": "sha256:62c0a8dfa43f7322f6cb9a81a05343a54cc7ea92a449c3f4581f223e59654fb3",
       "evidence_types": [
         "estimated",
         "observed",
@@ -1804,7 +1804,7 @@
       "artifact_count": 7,
       "city_id": "us.ny.new-york-city",
       "city_name": "New York City",
-      "content_hash": "sha256:2444b682dce6c9f91875bed888093c5d67dd21279a448db60a9a67d268d6ff2a",
+      "content_hash": "sha256:a7d63a408a74a0ec1e14b586d4d5ba33c0b46b425c5fdb477c9942c652e3f6a6",
       "evidence_types": [
         "estimated",
         "observed",
@@ -1842,7 +1842,7 @@
       "artifact_count": 7,
       "city_id": "us.ny.new-york-city",
       "city_name": "New York City",
-      "content_hash": "sha256:63cba3120a24af6a04733776c11bdedbc7cb5d223a86d0f649f3c837c90ce66e",
+      "content_hash": "sha256:8d3b8611fb6713691453d5d0e260965a7e3fc9bdfbffef79953912a7ed55e28b",
       "evidence_types": [
         "estimated",
         "observed",
@@ -1880,7 +1880,7 @@
       "artifact_count": 7,
       "city_id": "us.ny.new-york-city",
       "city_name": "New York City",
-      "content_hash": "sha256:b34445fc5cab6ded01955243d78010cbb2e3e1eae46300b3ff0b4f00ded7c811",
+      "content_hash": "sha256:3328819f20e26ab82246bb3c6ccbc7982cbfdf371aa7df081508305dfde86ce2",
       "evidence_types": [
         "estimated",
         "observed",
@@ -1918,7 +1918,7 @@
       "artifact_count": 7,
       "city_id": "us.ny.new-york-city",
       "city_name": "New York City",
-      "content_hash": "sha256:ddaf691de2727a83b24233599f06d0debcbdbac5726ac969df985b58fa23f7be",
+      "content_hash": "sha256:a75b67ec339fb0d0d3a49aeec131bcc61e18d4031f843eb6d83e7c7fa49bc2a0",
       "evidence_types": [
         "estimated",
         "observed",
@@ -1956,7 +1956,7 @@
       "artifact_count": 7,
       "city_id": "us.ny.new-york-city",
       "city_name": "New York City",
-      "content_hash": "sha256:98cd828ced8abf19ef6d07be6a71656f74654d14f6db6e5910173e73c0bf9adc",
+      "content_hash": "sha256:3cd9974f2c62c4f3eb15feafae6aead2f2c8681da458a87d1ff7c5ddfcbbcba1",
       "evidence_types": [
         "estimated",
         "observed",
@@ -1994,7 +1994,7 @@
       "artifact_count": 7,
       "city_id": "us.ny.new-york-city",
       "city_name": "New York City",
-      "content_hash": "sha256:a1b4698351f6babb9b25011cc89eef922ab24a737c110c79b6c72282eee520de",
+      "content_hash": "sha256:6258760359e1125519d288aa51ddd07345e29b8c97c39a109549b0350de6eeab",
       "evidence_types": [
         "estimated",
         "observed",
@@ -2032,7 +2032,7 @@
       "artifact_count": 7,
       "city_id": "us.ny.new-york-city",
       "city_name": "New York City",
-      "content_hash": "sha256:81b832ba0040e28bbee7faec95db9176fcf5144a9e81fdf2fd27f42cf474aaf2",
+      "content_hash": "sha256:3f6529ff11bd1b5d600a2df176775e8adcd63c3cb4ad3ac4571b43b037d35c30",
       "evidence_types": [
         "estimated",
         "observed",
@@ -2070,7 +2070,7 @@
       "artifact_count": 7,
       "city_id": "us.ny.new-york-city",
       "city_name": "New York City",
-      "content_hash": "sha256:6169ec9fbe41931b7dcd84af2c4260c2e67421103fe3d0c858d930f8aa48c7b9",
+      "content_hash": "sha256:1aabf395a958bfcf078309304adcf0201c67942bf350135e91edb46e13a87b59",
       "evidence_types": [
         "estimated",
         "observed",
@@ -2108,7 +2108,7 @@
       "artifact_count": 7,
       "city_id": "us.ny.new-york-city",
       "city_name": "New York City",
-      "content_hash": "sha256:f3e903fdd232ab011227c4304bc6e4636fb8dd2e086ba893950e40cb91340977",
+      "content_hash": "sha256:24003aa0c4673c793ebe8bb2b3c932265bf287252753a27f3183b1b55e6badb2",
       "evidence_types": [
         "estimated",
         "observed",
@@ -2145,7 +2145,7 @@
       "artifact_count": 3,
       "city_id": "us.ny.new-york-city",
       "city_name": "New York City",
-      "content_hash": "sha256:5044207834e8b68c12f78602c2f06c4145dc2808611eea769e49839914a84359",
+      "content_hash": "sha256:c373517c01021d4b34eefe9bd898eb1e3ddf1be6e1f685a14b0f8fc02e29023e",
       "evidence_types": [
         "causal",
         "observed"
@@ -2176,7 +2176,7 @@
       "artifact_count": 3,
       "city_id": "us.ny.new-york-city",
       "city_name": "New York City",
-      "content_hash": "sha256:53e61cd0de44535e1036ed36068687df94af49abc747428b76f0425d886aab27",
+      "content_hash": "sha256:9355fa374b43c0e565b254d278dc93c7fb09af6b7a036842e761d280b413acc6",
       "evidence_types": [
         "observed",
         "proposed"
@@ -2208,7 +2208,7 @@
       "artifact_count": 7,
       "city_id": "us.pa.philadelphia",
       "city_name": "Philadelphia",
-      "content_hash": "sha256:327f58e6cb49bf5f32c241fb857ab89258d36e6d8a3d3262d8043e746a80d852",
+      "content_hash": "sha256:ede859432ca165837d28161ec23bd002fc108a695f1484e8660c23d191b6f862",
       "evidence_types": [
         "estimated",
         "observed",
@@ -2246,7 +2246,7 @@
       "artifact_count": 7,
       "city_id": "us.pa.philadelphia",
       "city_name": "Philadelphia",
-      "content_hash": "sha256:fbc5cdf741be7ded4d46ef16096ea6e5823cf58705356d7a13f12b932ab6d3dd",
+      "content_hash": "sha256:c7110bdb25a140a912958f0621ab2104dfe6f68099062cc57e458099daa59504",
       "evidence_types": [
         "estimated",
         "observed",
@@ -2284,7 +2284,7 @@
       "artifact_count": 7,
       "city_id": "us.pa.philadelphia",
       "city_name": "Philadelphia",
-      "content_hash": "sha256:315ac24aa7280e38cb99141f3c00c8f240535f3674f67e480ec7acd58aee2256",
+      "content_hash": "sha256:cc4a2fc9e679c706cb742e25d7a4bb51c46fcfad8a74cd80a5ee3b5bee6eb6ca",
       "evidence_types": [
         "estimated",
         "observed",
@@ -2322,7 +2322,7 @@
       "artifact_count": 7,
       "city_id": "us.pa.philadelphia",
       "city_name": "Philadelphia",
-      "content_hash": "sha256:14be37b58e3543041725ab658b453e4101604732f143118fc760ebdc807d482a",
+      "content_hash": "sha256:3953fa85bdc288a05e9a42212fffe04900334e0e101f89a5b6dd8bb89685ecdc",
       "evidence_types": [
         "estimated",
         "observed",
@@ -2360,7 +2360,7 @@
       "artifact_count": 7,
       "city_id": "us.pa.philadelphia",
       "city_name": "Philadelphia",
-      "content_hash": "sha256:feeef24d0e0f8d4481df395d86c600ccda41da3e623bc9b2670c9173e319740c",
+      "content_hash": "sha256:cca39c075ce3810d9f8a0db5118ed3b682967beb7e2c9cfac463ad300a5cae76",
       "evidence_types": [
         "estimated",
         "observed",
@@ -2398,7 +2398,7 @@
       "artifact_count": 7,
       "city_id": "us.pa.philadelphia",
       "city_name": "Philadelphia",
-      "content_hash": "sha256:a7e547e3878f5a0f923e644a19ed810fa9ebc1c4d61fc881f29e49c358c2a640",
+      "content_hash": "sha256:f71935db1d226270ace79e3b22f5022b107c308b85179e34d66d3af6c876c1b4",
       "evidence_types": [
         "estimated",
         "observed",
@@ -2436,7 +2436,7 @@
       "artifact_count": 7,
       "city_id": "us.pa.philadelphia",
       "city_name": "Philadelphia",
-      "content_hash": "sha256:d59334be0bc11fa44e533dfd7725c8e5dff1ba96e5a3c3b5dbe4a84132e2c911",
+      "content_hash": "sha256:1d6a6e746f873944a59934c51d74203b6ed6600191859e0fa72bc3def50794ce",
       "evidence_types": [
         "estimated",
         "observed",
@@ -2474,7 +2474,7 @@
       "artifact_count": 7,
       "city_id": "us.pa.philadelphia",
       "city_name": "Philadelphia",
-      "content_hash": "sha256:ca7cfea9f6f10bb7d59a43c6ad1e4b1970b5e3d0cfae172727efcaed397e18f5",
+      "content_hash": "sha256:2b97a3112d9f46a77262fe891cf5e1844e944e8a35ee7bcf531ba1effe673852",
       "evidence_types": [
         "estimated",
         "observed",
@@ -2512,7 +2512,7 @@
       "artifact_count": 7,
       "city_id": "us.pa.philadelphia",
       "city_name": "Philadelphia",
-      "content_hash": "sha256:4c2d93ea8f7dace3db1e870797a63e481c38341b34cbbf1592cad06cfb08d6f5",
+      "content_hash": "sha256:027c68a6797244467467cbce50b45d1b7b0c37d4f7668ffd77ac13836b326d25",
       "evidence_types": [
         "estimated",
         "observed",
@@ -2550,7 +2550,7 @@
       "artifact_count": 7,
       "city_id": "us.pa.philadelphia",
       "city_name": "Philadelphia",
-      "content_hash": "sha256:30f1d34f27a63d4e271c08a9772fc815defbb2d0d8081838c30bef605493ff9d",
+      "content_hash": "sha256:89fcbe883952a44f5ff368ba912764b164d73e9cf5b8e4c458f9e2d0bc2e711f",
       "evidence_types": [
         "estimated",
         "observed",
@@ -2587,7 +2587,7 @@
       "artifact_count": 3,
       "city_id": "us.pa.philadelphia",
       "city_name": "Philadelphia",
-      "content_hash": "sha256:4b297b1d9545dc9cae978e9c83b8b834122b4e4f51968530e7503a02a27dab26",
+      "content_hash": "sha256:d2a8ad9015e9d7a4c4c163782256efdbc2e339eb14be34ccb9dda93e92069cb5",
       "evidence_types": [
         "causal",
         "observed"
@@ -2618,7 +2618,7 @@
       "artifact_count": 3,
       "city_id": "us.pa.philadelphia",
       "city_name": "Philadelphia",
-      "content_hash": "sha256:c98205f620a8f071a7f065979a4b4e46dbeecf881ef3f97dd2e78bb0c30cdcbb",
+      "content_hash": "sha256:766c8f2c9e588fda4841696b328cf4e5931d64ccf17c1d9da72a8506a912fd47",
       "evidence_types": [
         "observed",
         "proposed"
@@ -2650,7 +2650,7 @@
       "artifact_count": 7,
       "city_id": "us.ca.san-francisco",
       "city_name": "San Francisco",
-      "content_hash": "sha256:99fa74f0571ac2299312b3e17deafaaeb2967570b216b3e151ca1222d1cab615",
+      "content_hash": "sha256:b4b1afce727e0a592c2836817cab65e95cf2127250b38e75858ad2066619176b",
       "evidence_types": [
         "estimated",
         "observed",
@@ -2688,7 +2688,7 @@
       "artifact_count": 7,
       "city_id": "us.ca.san-francisco",
       "city_name": "San Francisco",
-      "content_hash": "sha256:cb22adda74787b326d2b9972574ea257c1a443c5f2c7aba8ff03eaf3a0202892",
+      "content_hash": "sha256:e9fb59665ec7fdc73f9bfd891d8f639bd6ab38de7ce164d92752315165cae67b",
       "evidence_types": [
         "estimated",
         "observed",
@@ -2726,7 +2726,7 @@
       "artifact_count": 7,
       "city_id": "us.ca.san-francisco",
       "city_name": "San Francisco",
-      "content_hash": "sha256:48c95783da026594a7f1c94a60b9eb504d46558b518602896c1a584c3250d3a1",
+      "content_hash": "sha256:74036ba2e1647157a03bf98e4c3ac85fc9b6cceb69d88892d344f2d25a68d0b3",
       "evidence_types": [
         "estimated",
         "observed",
@@ -2764,7 +2764,7 @@
       "artifact_count": 7,
       "city_id": "us.ca.san-francisco",
       "city_name": "San Francisco",
-      "content_hash": "sha256:122637a8d56231e69a2414ed2ab7f62eb1d00c4c5054f4e56bf7411e716d0b57",
+      "content_hash": "sha256:4abfbe1ab46f7056df64597d0c4ac8b052d731f627d376fc041ec37accba579a",
       "evidence_types": [
         "estimated",
         "observed",
@@ -2802,7 +2802,7 @@
       "artifact_count": 7,
       "city_id": "us.ca.san-francisco",
       "city_name": "San Francisco",
-      "content_hash": "sha256:89dfb378bbf11c09eb0a356cda2fcc64a2fc7677989603bc306c7c9e125650b9",
+      "content_hash": "sha256:b42a2723575ad55ed415a0ab85c3b0769f0e7234a8a1ec6b8437ba200dfff563",
       "evidence_types": [
         "estimated",
         "observed",
@@ -2840,7 +2840,7 @@
       "artifact_count": 7,
       "city_id": "us.ca.san-francisco",
       "city_name": "San Francisco",
-      "content_hash": "sha256:b6bbefdfb5f2404624fdb64ae443eba3fab330af658aefdb573b76cd8c31c237",
+      "content_hash": "sha256:de29ac22d645c6854a901402b925351d7ff06a7a0fecaa8e1886de5402beece9",
       "evidence_types": [
         "estimated",
         "observed",
@@ -2878,7 +2878,7 @@
       "artifact_count": 7,
       "city_id": "us.ca.san-francisco",
       "city_name": "San Francisco",
-      "content_hash": "sha256:28bcf618b3f6b7ce2a7dae802c25e535d735f6bb3349e02da94959548dc5ccf8",
+      "content_hash": "sha256:87dd88330c65bf40d0344fc1d0adf51dad11574ff9ee9710963f52876332bb20",
       "evidence_types": [
         "estimated",
         "observed",
@@ -2916,7 +2916,7 @@
       "artifact_count": 7,
       "city_id": "us.ca.san-francisco",
       "city_name": "San Francisco",
-      "content_hash": "sha256:1584ca2009de3a46233462ee43117c7356fe53401917535aeedc4a6e4743add4",
+      "content_hash": "sha256:7b896638a2b74a4a6323d89a7c951f8a7e8e49127279e3e1cce4daeea812a765",
       "evidence_types": [
         "estimated",
         "observed",
@@ -2954,7 +2954,7 @@
       "artifact_count": 7,
       "city_id": "us.ca.san-francisco",
       "city_name": "San Francisco",
-      "content_hash": "sha256:3a67893d2b5d687da8d54828a0841311e5fe9b01a792ad45a7d70c3164684093",
+      "content_hash": "sha256:98eb78a075fb6e155200d9f4d4ff624f7933a51d9d840b60fd2c960d0ffc57de",
       "evidence_types": [
         "estimated",
         "observed",
@@ -2992,7 +2992,7 @@
       "artifact_count": 7,
       "city_id": "us.ca.san-francisco",
       "city_name": "San Francisco",
-      "content_hash": "sha256:19bd9be8f171fc84f151c60daaec33b9af6273c5e31dde07da42eefe4fd403fa",
+      "content_hash": "sha256:031f3f73d02931dc37bc072fac3dabbde0fbf49bada16f9af4e176129d4f5aae",
       "evidence_types": [
         "estimated",
         "observed",
@@ -3029,7 +3029,7 @@
       "artifact_count": 3,
       "city_id": "us.ca.san-francisco",
       "city_name": "San Francisco",
-      "content_hash": "sha256:5d96976bed6d2934814d8c681ee979ad4e930e5512b9ec0c0064052e9f921cf8",
+      "content_hash": "sha256:e2f0557fc5e52f49a4d2ffac46ef1aacf4bbba0d781ef106871e0bbe91ddfeb1",
       "evidence_types": [
         "causal",
         "observed"
@@ -3060,7 +3060,7 @@
       "artifact_count": 3,
       "city_id": "us.ca.san-francisco",
       "city_name": "San Francisco",
-      "content_hash": "sha256:9943687a91322941221709d9af37caf979454813a10cb0e9eb75a7e85dfa40c2",
+      "content_hash": "sha256:a874e3f0363f95390a24676720f330193ba0fea1f3aabb64960d1ab222e228c0",
       "evidence_types": [
         "observed",
         "proposed"
@@ -3092,7 +3092,7 @@
       "artifact_count": 7,
       "city_id": "us.wa.seattle",
       "city_name": "Seattle",
-      "content_hash": "sha256:67b5d7ab3fdf852f72bba7d955460f390a3db5556499f3cf7a82974b0d1e5fcc",
+      "content_hash": "sha256:bcfe3e4916210c83952a37ebcf565ad709c4286ab84b5e34d633ad3267590502",
       "evidence_types": [
         "estimated",
         "observed",
@@ -3130,7 +3130,7 @@
       "artifact_count": 7,
       "city_id": "us.wa.seattle",
       "city_name": "Seattle",
-      "content_hash": "sha256:c715ba010c532241a0ee3609285720b7da6828b80b2cf61d81f71f9c6e1daaea",
+      "content_hash": "sha256:84de1358f4deedeadd6ed1d9daa0aa1de62ce140695469d810bf87417b0e6a1b",
       "evidence_types": [
         "estimated",
         "observed",
@@ -3168,7 +3168,7 @@
       "artifact_count": 7,
       "city_id": "us.wa.seattle",
       "city_name": "Seattle",
-      "content_hash": "sha256:003449b2b5430bf1dc4385084f4a16b6b50ec908b9c91803a9ad8cf8af002c88",
+      "content_hash": "sha256:a8ce92a04e304ece970d8bfae86fd728b920a62445e20e7adb69bb7d8a793e56",
       "evidence_types": [
         "estimated",
         "observed",
@@ -3206,7 +3206,7 @@
       "artifact_count": 7,
       "city_id": "us.wa.seattle",
       "city_name": "Seattle",
-      "content_hash": "sha256:30d95df67a5fc6018d9f8a42f4b8e5e86b22546c0f09367a2911281b5994b974",
+      "content_hash": "sha256:bfedf702969c56a26e6b883af1beca88bbdfc8ec74621e2a75804e7ade3d0f27",
       "evidence_types": [
         "estimated",
         "observed",
@@ -3244,7 +3244,7 @@
       "artifact_count": 7,
       "city_id": "us.wa.seattle",
       "city_name": "Seattle",
-      "content_hash": "sha256:ce4623c841ff87f965e2ac069887ed24055588d12c31f0a959c39a431d7aee94",
+      "content_hash": "sha256:b3bb9ed53e622eceac7bbde33d6c724865ed118379a3a2a9a65ad7fca14ea34b",
       "evidence_types": [
         "estimated",
         "observed",
@@ -3282,7 +3282,7 @@
       "artifact_count": 3,
       "city_id": "us.wa.seattle",
       "city_name": "Seattle",
-      "content_hash": "sha256:a671298ae7a39146e9e20984a0cb46e0b6c813bc849aeb716cd4edac8b7ce241",
+      "content_hash": "sha256:e2a80e211b9d3060ce79f2ef24feab2cdd15bb95b8da1970811fc70b70352fb0",
       "evidence_types": [
         "observed",
         "proposed"
@@ -3316,7 +3316,7 @@
       "artifact_count": 7,
       "city_id": "us.wa.seattle",
       "city_name": "Seattle",
-      "content_hash": "sha256:9cfd8b691d2a5d3590fb53b3595874ea8908f020883efbe9b8d07cd505d78a7e",
+      "content_hash": "sha256:f0cb56becf267855b3cd0a547a9fb05fd3cbd54f5d9e11874bda814e27099f93",
       "evidence_types": [
         "estimated",
         "observed",
@@ -3354,7 +3354,7 @@
       "artifact_count": 7,
       "city_id": "us.wa.seattle",
       "city_name": "Seattle",
-      "content_hash": "sha256:bc3479d18bd0e82ca7811ce8216a12f38ee532e3215cc7b4133986ee8a522290",
+      "content_hash": "sha256:2e0b08642985057f0e1188b169185f85b3020774fc5500ac4f8147c5378e6287",
       "evidence_types": [
         "estimated",
         "observed",
@@ -3392,7 +3392,7 @@
       "artifact_count": 7,
       "city_id": "us.wa.seattle",
       "city_name": "Seattle",
-      "content_hash": "sha256:0a70c69422b14eb146111a07648db78c97ead4aa93b13e2da5c126f009054cc9",
+      "content_hash": "sha256:e413f7330dfffb9ccc4e44e36bf366ccab4d3e6db53add8fb091a75cc96ee2a7",
       "evidence_types": [
         "estimated",
         "observed",
@@ -3430,7 +3430,7 @@
       "artifact_count": 7,
       "city_id": "us.wa.seattle",
       "city_name": "Seattle",
-      "content_hash": "sha256:8db616ce73cf4d9c1afbee11ee6d2feef227b2f7f906e3b4a5a8d143763f48c2",
+      "content_hash": "sha256:fd9f2c6d7246da2adfdec2d994d8e72b16d699ead3271d06f512d580bab6d9ae",
       "evidence_types": [
         "estimated",
         "observed",
@@ -3467,7 +3467,7 @@
       "artifact_count": 3,
       "city_id": "us.wa.seattle",
       "city_name": "Seattle",
-      "content_hash": "sha256:6fa9b31332a6848e951240ef3d3db89038d2052bb8c9cef5d6e0e65c83e605a1",
+      "content_hash": "sha256:c9fb0d556fd7fe2d28ce4ccd28186ecc29ab0967b42811a4cb0800c6c2d39b92",
       "evidence_types": [
         "causal",
         "observed"
@@ -3498,7 +3498,7 @@
       "artifact_count": 3,
       "city_id": "us.wa.seattle",
       "city_name": "Seattle",
-      "content_hash": "sha256:354fed4d39af2f88d94d314d5ee8ea018fd62397dc0a2ac3f9297b9ff29a9ff4",
+      "content_hash": "sha256:61e6891405934792501c9cf1345c27d19349c22ee3945cdfa68c8bd0585804e5",
       "evidence_types": [
         "observed",
         "proposed"
@@ -3530,7 +3530,7 @@
       "artifact_count": 2,
       "city_id": "us.ma.suffolk",
       "city_name": "Suffolk County reference sample",
-      "content_hash": "sha256:f0d6f6f9bbafb3fd0a9922fcc306755785a7af321aef3c7216b97c4ae69652da",
+      "content_hash": "sha256:ec269343abf702f3912e691a9f0d3b2ce879bef1a8328360a9e2d03092ce0ed0",
       "evidence_types": [
         "estimated",
         "observed",
@@ -3560,7 +3560,7 @@
       "artifact_count": 2,
       "city_id": "us.ma.suffolk",
       "city_name": "Suffolk County reference sample",
-      "content_hash": "sha256:523e0d0aa92f3810805bbd9e4185d12dce31e871031ad7f37dd5c96dc2387427",
+      "content_hash": "sha256:909e6c26c686ef688bca83073438c49b79d4b412069dbcb8682c1e8d70ed372b",
       "evidence_types": [
         "estimated",
         "observed",

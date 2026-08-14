@@ -23,7 +23,7 @@ body:
     id: version
     attributes:
       label: Immutable release and commit
-      placeholder: v0.8.0 · 219e6f75298fe02e360c36faceeea17ea38f64b0
+      placeholder: v0.8.1 or a full commit SHA
     validations:
       required: true
   - type: textarea

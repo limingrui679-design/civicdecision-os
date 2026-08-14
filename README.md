@@ -33,7 +33,7 @@ observed impact.
 
 <table>
   <tr>
-    <td align="center"><strong>258</strong><br><sub>highest-available city records</sub></td>
+    <td align="center"><strong>258</strong><br><sub>distinct highest-tier city records</sub></td>
     <td align="center"><strong>240</strong><br><sub>audited scenario designs</sub></td>
     <td align="center"><strong>98</strong><br><sub>positive + negative DecisionPacks</sub></td>
     <td align="center"><strong>800</strong><br><sub>passing repository tests</sub></td>
@@ -41,7 +41,7 @@ observed impact.
 </table>
 
 > [!IMPORTANT]
-> Verified release: **[`v0.8.0`](https://github.com/limingrui679-design/civicdecision-os/releases/tag/v0.8.0)**.
+> Verified release: **[`v0.8.1`](https://github.com/limingrui679-design/civicdecision-os/releases/tag/v0.8.1)**.
 > The deep evidence gate completed **76 of 96** executions and withheld **20**. These are
 > implementation and reproducibility counts—not accuracy, adoption, policy success, or impact.
 
@@ -120,7 +120,7 @@ Open the [public walkthrough](https://civicdecision-os.limingrui2.chatgpt.site) 
 
 ```bash
 python -m pip install \
-  https://github.com/limingrui679-design/civicdecision-os/releases/download/v0.8.0/civicdecision-0.8.0-py3-none-any.whl
+  https://github.com/limingrui679-design/civicdecision-os/releases/download/v0.8.1/civicdecision-0.8.1-py3-none-any.whl
 civicdecision version
 ```
 
@@ -281,10 +281,10 @@ source-ZIP builds.
 [Release process](docs/RELEASE_PROCESS.md) ·
 [Security assurance](docs/SECURITY_ASSURANCE.md) ·
 [Claim audit](docs/CLAIM_AUDIT.md) ·
-[v0.8.0 assets](https://github.com/limingrui679-design/civicdecision-os/releases/tag/v0.8.0)
+[v0.8.1 assets](https://github.com/limingrui679-design/civicdecision-os/releases/tag/v0.8.1)
 
 <details>
-<summary><strong>Governed v0.8.0 workload and anti-inflation ledger</strong></summary>
+<summary><strong>Governed v0.8.1 workload and anti-inflation ledger</strong></summary>
 
 The 90 committed source manifests cover 258,478 declared heterogeneous units. The 32 municipal
 views re-express the same 4,148,633 underlying requests; they are never summed as independent

@@ -27,7 +27,7 @@ pip-compile pyproject.toml --extra api --strip-extras --resolver backtracking \
 From a clean checkout:
 
 ```bash
-python scripts/build_release_candidate.py --output-dir dist/release-0.8.0
+python scripts/build_release_candidate.py --output-dir dist/release-0.8.1
 ```
 
 The builder derives `SOURCE_DATE_EPOCH` from the subject commit. An explicit epoch may be supplied
@@ -36,7 +36,7 @@ for an independent repeat:
 ```bash
 python scripts/build_release_candidate.py \
   --source-date-epoch 1786579200 \
-  --output-dir dist/release-0.8.0-repeat
+  --output-dir dist/release-0.8.1-repeat
 ```
 
 `--allow-dirty` exists only for development of the release process. Its use is recorded as
@@ -109,11 +109,11 @@ python scripts/build_release_candidate.py \
 The builder publishes only after every gate passes:
 
 ```text
-dist/release-0.8.0/
-├── civicdecision-0.8.0-release/
-│   ├── civicdecision-0.8.0-py3-none-any.whl
-│   ├── civicdecision-0.8.0.tar.gz
-│   ├── civicdecision-0.8.0-source.zip
+dist/release-0.8.1/
+├── civicdecision-0.8.1-release/
+│   ├── civicdecision-0.8.1-py3-none-any.whl
+│   ├── civicdecision-0.8.1.tar.gz
+│   ├── civicdecision-0.8.1-source.zip
 │   ├── release-report.json
 │   ├── installed-wheel-smoke.json
 │   ├── no-git-verification.json
@@ -131,8 +131,8 @@ dist/release-0.8.0/
 │   ├── runtime-api.lock
 │   ├── RELEASE_NOTES.md
 │   └── SHA256SUMS
-├── civicdecision-0.8.0-release-bundle.zip
-└── civicdecision-0.8.0-release-bundle.zip.sha256
+├── civicdecision-0.8.1-release-bundle.zip
+└── civicdecision-0.8.1-release-bundle.zip.sha256
 ```
 
 `SHA256SUMS` covers every individual asset by portable basename. The detached sidecar covers the
@@ -144,7 +144,7 @@ hash for the same reason.
 Verify the bundle hash before extraction:
 
 ```bash
-shasum -a 256 -c civicdecision-0.8.0-release-bundle.zip.sha256
+shasum -a 256 -c civicdecision-0.8.1-release-bundle.zip.sha256
 ```
 
 Then verify the individual assets from inside the extracted release directory:

@@ -37,7 +37,7 @@ authorization.
 
 ## Read the numbers correctly
 
-The current v0.8.0 snapshot exposes 258 highest-available city records, 240 scenario designs, 98
+The current v0.8.1 snapshot exposes 258 highest-available city records, 240 scenario designs, 98
 DecisionPacks, and 800 passing tests. These establish catalog scope and implementation behavior.
 They do **not** establish municipal deployment, adoption, external review, causal impact, or
 policy effectiveness.

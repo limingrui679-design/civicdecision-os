@@ -672,7 +672,7 @@
       ]
     },
     {
-      "expected": "0.8.0",
+      "expected": "0.8.1",
       "id": "software-version",
       "renderings": [
         {
@@ -680,8 +680,8 @@
           "template": "Milestone 8—the {value} release-assurance layer"
         },
         {
-          "path": "docs/RELEASE_NOTES_0.8.0.md",
-          "template": "Version {value} is the first release candidate"
+          "path": "docs/RELEASE_NOTES_0.8.1.md",
+          "template": "Version {value} binds the public walkthrough"
         }
       ],
       "sources": [
@@ -790,9 +790,9 @@
       "path": "docs/STATUS.md"
     },
     {
-      "contains": "It does not establish public hosting, production readiness, external validation",
+      "contains": "A public URL and internal reproducibility do not establish production deployment, external validation",
       "id": "release-notes-publication-boundary",
-      "path": "docs/RELEASE_NOTES_0.8.0.md"
+      "path": "docs/RELEASE_NOTES_0.8.1.md"
     },
     {
       "contains": "These are regression budgets, not service-level objectives.",

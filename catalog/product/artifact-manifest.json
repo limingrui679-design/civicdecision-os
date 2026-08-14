@@ -9,7 +9,7 @@
     },
     {
       "byte_count": 1609,
-      "content_hash": "sha256:72586e7b24a95ffe9b6e71678513c36d651d3c1e3001859fd7d51834cdf77904",
+      "content_hash": "sha256:f8a2f7237157bd2e0eed56e6f4703c16d1cb5e46e77c9251f07b2b8b782f05de",
       "media_type": "application/json",
       "path": "catalog-summary.json"
     },
@@ -2087,41 +2087,41 @@
     },
     {
       "byte_count": 141276,
-      "content_hash": "sha256:9fd715369a32c3fd3de77e6e7ec91c655315b97cdf39b9f6160a06767a3f0ba7",
+      "content_hash": "sha256:c2d9119306ee85552c414af0a60f5033ad978031c68697d35ff96ba049455a3e",
       "media_type": "application/json",
       "path": "evidence/tier-d-summary.json",
       "record_count": 96
     },
     {
       "byte_count": 120703,
-      "content_hash": "sha256:aa86394b1680e7ef792cd739073614918262cf4ee0ec6bd43f667f643b6dc1c3",
+      "content_hash": "sha256:e1885b02ae9d3d44d07249c9cb39285bcdc8b7deedb2abf9437612ab74255fbf",
       "media_type": "application/json",
       "path": "openapi-v1.json"
     },
     {
       "byte_count": 251940,
-      "content_hash": "sha256:5da178b4910a0f06c71139f18d806e05c157ce9cc9800385d96d668aa91d09f8",
+      "content_hash": "sha256:4539e2bb25f02e0618a072c1fa3dbf90d1fc5a53b1b520b18d2f6fb385f27fbd",
       "media_type": "application/json",
       "path": "scenarios/all.json",
       "record_count": 188
     },
     {
       "byte_count": 152904,
-      "content_hash": "sha256:2c9a3d11300d185f9ccf752fb966a6b8f32af76412f92206a9e69f433a5f2d18",
+      "content_hash": "sha256:14858e29612baf2cd97a2b1eca380cabbde1cb158db96f5fedffe6ce1f5da331",
       "media_type": "application/json",
       "path": "scenarios/decision-pack.json",
       "record_count": 98
     },
     {
       "byte_count": 150918,
-      "content_hash": "sha256:cb964ffe6a6e39410470d0300fd154ec971805830e667f3cad86ddf1c4645df1",
+      "content_hash": "sha256:2253d38673c789023e0cafb903d0fe7e7ae0520fa128a6df61403d2fc81e9ba4",
       "media_type": "application/json",
       "path": "scenarios/deep-pack.json",
       "record_count": 96
     },
     {
       "byte_count": 2188,
-      "content_hash": "sha256:21964beebf626ec285d231fcedc8ab40cda098cb666f22baf09c647474d902da",
+      "content_hash": "sha256:4e6d8e8c93517f723bf313155020611d8014a1a6a162dd9e84381509964da78d",
       "media_type": "application/json",
       "path": "scenarios/reference-pack.json",
       "record_count": 2
@@ -2323,7 +2323,7 @@
       "record_count": 4
     }
   ],
-  "catalog_fingerprint": "sha256:414e759ae9dae2eec9096147fe650397ecf50ec97eaf270514f0bbc69ce2c40c",
+  "catalog_fingerprint": "sha256:898d5a460cffb98b394f63daec4f10e73cd36a0a37d675c6a7557da7fad6340e",
   "claim_boundary": [
     "Public data and deterministic software runs are not client work or field deployment.",
     "Simulation and optimization are not observed impact or institutional adoption.",
@@ -2332,5 +2332,5 @@
     "Negative and insufficient-evidence releases remain visible and selectable."
   ],
   "schema_version": "1.0.0",
-  "software_version": "0.8.0"
+  "software_version": "0.8.1"
 }

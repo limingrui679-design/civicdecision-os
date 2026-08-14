@@ -3,7 +3,7 @@
 - Run: `run-8a6e1c70ae7a`
 - Scenario: `us.ma.suffolk.heat-access-demo.v1`
 - Status: `infeasible`
-- DecisionPack content hash: `sha256:f0d6f6f9bbafb3fd0a9922fcc306755785a7af321aef3c7216b97c4ae69652da`
+- DecisionPack content hash: `sha256:ec269343abf702f3912e691a9f0d3b2ce879bef1a8328360a9e2d03092ce0ed0`
 
 ## Claim boundary
 

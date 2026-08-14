@@ -5,6 +5,8 @@ the first stable release; while the project is alpha, minor versions may include
 
 ## Unreleased
 
+## 0.8.1 — 2026-08-14
+
 ### Public product and documentation
 
 - Published a public, read-only guided walkthrough at
@@ -27,6 +29,12 @@ the first stable release; while the project is alpha, minor versions may include
   review presentation without removing any evidence files.
 - Added a tag-triggered GitHub Release workflow and exposed the verified v0.8.0 wheel, sdist,
   no-Git source ZIP, checksums, and SBOM as direct assets on the existing release.
+- Added a machine-readable hosted-build identity endpoint that binds the public walkthrough to its
+  clean commit, tree, release tag, package version, build time, and hosting project identifier.
+- Pinned every third-party GitHub Action to an immutable reviewed commit.
+- Backported the two upstream `image-size` zero-length parser fixes into a checksum-bound local
+  package while upstream has no patched release; three hard-timeout adversarial tests cover ICNS,
+  JXL, and HEIF inputs, and the web dependency audit reports zero known vulnerabilities.
 
 ### Boundaries
 

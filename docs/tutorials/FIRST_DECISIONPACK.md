@@ -38,7 +38,7 @@ civicdecision protocol validate decision-pack \
 Expected committed content hash:
 
 ```text
-sha256:523e0d0aa92f3810805bbd9e4185d12dce31e871031ad7f37dd5c96dc2387427
+sha256:909e6c26c686ef688bca83073438c49b79d4b412069dbcb8682c1e8d70ed372b
 ```
 
 ## 3. Inspect the evidence layers

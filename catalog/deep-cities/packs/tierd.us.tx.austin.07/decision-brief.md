@@ -3,7 +3,7 @@
 - Scenario: `tierd.us.tx.austin.07`
 - Application suite: `population-health-environmental-exposure`
 - Status: `completed`
-- DecisionPack content hash: `sha256:920e99484a2bfb861a3cd2d2ef508134442c682397df0169db7c0352d8a8777e`
+- DecisionPack content hash: `sha256:291528d4ba16392c1ed181493e40f8d50e8fcfecd617bbe333b5f5940b6887af`
 
 ## Claim boundary
 

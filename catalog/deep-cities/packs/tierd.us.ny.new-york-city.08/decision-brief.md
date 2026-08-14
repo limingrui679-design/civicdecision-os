@@ -3,7 +3,7 @@
 - Scenario: `tierd.us.ny.new-york-city.08`
 - Application suite: `infrastructure-finance-asset-risk`
 - Status: `completed`
-- DecisionPack content hash: `sha256:39e23a9f320bca562df488b3081552d0f3977455acda88f520cc73b7fa6f9408`
+- DecisionPack content hash: `sha256:f1bdff13633bc2b3399fe79e012752e6426259b130214b43e4473f378eb83b0e`
 
 ## Claim boundary
 

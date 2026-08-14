@@ -1,5 +1,5 @@
 {
-  "audit_completed_at": "2026-08-14T06:16:04Z",
+  "audit_completed_at": "2026-08-14T10:28:57Z",
   "checks": {
     "failed": 0,
     "passed": 136,
@@ -11,20 +11,20 @@
     "A public repository coordinate does not establish a hosted demo, remote CI success, external review, users, adoption, or impact."
   ],
   "evidence_sha256": {
-    "catalog/product/artifact-manifest.json": "sha256:71c09746290e6f5354389f1c7cdd67f71565bd2140ff4379ba592c148b4253f0",
-    "catalog/product/catalog-summary.json": "sha256:72586e7b24a95ffe9b6e71678513c36d651d3c1e3001859fd7d51834cdf77904",
-    "catalog/product/scenarios/all.json": "sha256:5da178b4910a0f06c71139f18d806e05c157ce9cc9800385d96d668aa91d09f8",
-    "verification/milestone-8-coverage.json": "sha256:b9886e8f2426eea8f301c0e86e4429c83b27bb8f68b8bb237c92592c4165286b",
-    "verification/milestone-8-performance.json": "sha256:908bc248a9cad8703004aecdf15196b80ac5075e35e23e357f50952a297e2926",
+    "catalog/product/artifact-manifest.json": "sha256:c900bbcd921488d13fd80a5921b7e3a9cb7f83e535792ecc73e1cb40fa7bfe71",
+    "catalog/product/catalog-summary.json": "sha256:f8a2f7237157bd2e0eed56e6f4703c16d1cb5e46e77c9251f07b2b8b782f05de",
+    "catalog/product/scenarios/all.json": "sha256:4539e2bb25f02e0618a072c1fa3dbf90d1fc5a53b1b520b18d2f6fb385f27fbd",
+    "verification/milestone-8-coverage.json": "sha256:a7da3be7f9f14c7522a4e7950819732f122d2e99fa4a8fe50f4371163473ab1e",
+    "verification/milestone-8-performance.json": "sha256:201267b53b57c9c82cdf105d53435bd3c09d02d74039f7c9e128540288b43625",
     "verification/milestone-8-public-state.json": "sha256:217869c6ce20d42395609c74853a38437408ec5c07a38a0a6ffc3c7bc4477e5c",
-    "verification/milestone-8-quality.json": "sha256:9b8c9acefc76bed59ce923c443a0b89aa36d921eb408f112a5b23a67678bdf7c",
-    "verification/milestone-8-repository.json": "sha256:b19a36777d0095769ab6c73f4a1702610e97e736825e2c127f6776f545ceb6dd"
+    "verification/milestone-8-quality.json": "sha256:d5a3fc400bd40eb405659fdb69da2f941d9bc67627c6899668251412fda59ecc",
+    "verification/milestone-8-repository.json": "sha256:369ece5c7689de0fc89e42c4773a879f41d34315623fd1236603f1e62dfc5710"
   },
   "failures": [],
   "governed_surface_sha256": {
-    "CHANGELOG.md": "sha256:be9bce3c62060209f11f8be489c8bd73fb3fe4f5300ea6cf3c2c619d048fb833",
+    "CHANGELOG.md": "sha256:ad63bbb5e637e00b896c0ef5cc1637578636404b5b8c690f3735a1d5dcd4c649",
     "CONTRIBUTING.md": "sha256:c8622e1a630aafa47ee0284d32da41dbe240e9081c237a7d207318dfbd040de3",
-    "README.md": "sha256:dc2484bcef480580b7ff25d57915f608432945a47242bf0a4610dfe5a218f6a5",
+    "README.md": "sha256:4cf09caab89c904184d2f5872e286971c809d9e644b142c122cd8c5ad64e7ede",
     "SECURITY.md": "sha256:6d4ce198843863e34fe24e250f5d0c7ef0274bf87c4efb7ba3076af94c01f6a4",
     "docs/ADOPTION_METRICS.md": "sha256:894a58fadc1238e409d7788b0a8ee76e3cc7f0d59f3bdb61661e52ddd182c214",
     "docs/ANALYTICAL_ENGINE_AUDIT.md": "sha256:5c673dc493596576e5432577f2683c51f569ce65a8d601a5d627746c7b3a5aec",
@@ -36,36 +36,37 @@
     "docs/DEEP_CITY_COVERAGE.md": "sha256:7c1f92375e36e7e802c81f09d5bb61864dd95c5c5c24d7ccef505ef0b83b4d5f",
     "docs/EXTERNAL_REVIEW.md": "sha256:dd6b6795156491a4fe7ea3bb8b5e91fc27619694111d3b1a549e3a0880596b83",
     "docs/GLOBAL_CITY_COVERAGE.md": "sha256:3c2d2b35a13de644df620a6d5885d565cf4564c7ee6d8575b4c1ffe18ccadb95",
-    "docs/LAUNCH_PLAYBOOK.md": "sha256:021832c805f73d477b558afbed94b3c46c0494c26ca7f811c35c3626d4ef8470",
-    "docs/PACKAGING.md": "sha256:9e6074aac55a5747b3b4315694a42e9d4d928a35eaf7ab4dbab208cc7af28c89",
+    "docs/LAUNCH_PLAYBOOK.md": "sha256:7fc683ef0e566fa6f16e97329284e4e1faf710a5a18cd6500feb9949f07f90d1",
+    "docs/PACKAGING.md": "sha256:371df1f357bb0669292526554c821c13136e109d85925e9518737821786a690b",
     "docs/PERFORMANCE.md": "sha256:669cf19ad4e5696f300780fa3ceb1a690d88e56e0cf24411dc68e78d3f2a04cc",
     "docs/PLUGIN_SDK.md": "sha256:3cf0e1d2314b43099fe7ae133b2ff42256a05c8251d3cd2c56562955517c4f42",
     "docs/PRODUCT_SURFACES.md": "sha256:7ea7f5832067df0021b3339e1c8b5a3016de9d177e8692cdc85f15cfaa7f9849",
     "docs/RELEASE_NOTES_0.8.0.md": "sha256:b68f01b4b32956e46472f9e54215bfe6ef10be641334a76e69563e8ba379fc3f",
-    "docs/RELEASE_PROCESS.md": "sha256:85197d807074c71e0f169a4533619deca925060c3e7408d3cf884a05c4adefa0",
-    "docs/REQUIREMENTS.md": "sha256:3aacb9743f10850f94f1d75146675786bf13c50e30203793dbce2a2dfb8a901d",
+    "docs/RELEASE_NOTES_0.8.1.md": "sha256:e856aa410d28bd612d21647d17f2933eb11a65fd01092385298e97657ee37e66",
+    "docs/RELEASE_PROCESS.md": "sha256:016886467afc2aaad37fcc9a41601ff0e5cdf72c8019f569c489c243a86d33a6",
+    "docs/REQUIREMENTS.md": "sha256:90e23a1cdb9248c7e600e2ca5f62e767dfb1fb95f6b8ab861acf6ac5493c5dcf",
     "docs/SCENARIO_LIBRARY.md": "sha256:6cda5fae4f9da4842ee5bec0ea21e51bd7fe99f680bd8476945a35077b92991f",
     "docs/SDK.md": "sha256:d492191ef59ae2ea1a7018fa3f771f631cc448a3ff8dd31096aaa28635ecc0d2",
     "docs/SECURITY_ASSURANCE.md": "sha256:90db3bf40eed0ff72e4a18b45e5540de409053b2c519c2a8f0062ffc6f66eb6d",
     "docs/STANDARDIZED_CITY_COVERAGE.md": "sha256:362be6ac6e9d1014ab0aaaff99e3935f163b5f47ece990e8566124c1b7052a62",
-    "docs/STATUS.md": "sha256:927cf9a6c56da4096ec72d8ab925cc049ab59c0d8261e2561050dc657a869344",
+    "docs/STATUS.md": "sha256:881e01ad78eb3ea7474138794be2ad650a28f81196896b0d8281a86ee50b211d",
     "docs/THREAT_MODEL.md": "sha256:93a4d8f24fb58199c333908f911259692d888c74ba0ec37ee88164576472bd0d",
     "docs/WEB_EXPLORER.md": "sha256:e7949c8dba956019150eeb93f02efecd607bd0d9d03633225cc750c93c3b3072",
     "docs/adr/0001-evidence-typed-compiler.md": "sha256:39fb8e99d9b77490137858dbb95a2fd294da053cf39077e0a64f9440b1c38192",
     "docs/adr/0002-negative-evidence-releases.md": "sha256:d20caf131edb1092bf1755d1fc4fd8218fb83fc69eda521798dcc2dcbc85711c",
     "docs/adr/0003-one-validated-product-core.md": "sha256:996766f81f1bd2d8ec3954759b958a8d20dc3771f7ad15f9c178795170b5cff0",
-    "docs/index.md": "sha256:c637cc13aee9e3b13137aac3df0c3cc4cdc61672cfdcb7b278f4191a79a3923e",
+    "docs/index.md": "sha256:446edbb305a6797ad2f24b85d8628c791a4b5f0581f498177ab0e33d8fb05aa9",
     "docs/tutorials/ADD_A_CITY.md": "sha256:7f5b9db4795a15e0fd812421df03a366d6a21529f655c496d45e8c3ade973d3b",
     "docs/tutorials/BUILD_REVIEW_SCENARIO.md": "sha256:be14ce8deca18c0bbc3ef4ff3bd258e9f6c22c556709db9aa676b9561451317c",
-    "docs/tutorials/FIRST_DECISIONPACK.md": "sha256:071525b8e53285da00c600654fada4087ac192f91b3332ca691bce996105949b",
+    "docs/tutorials/FIRST_DECISIONPACK.md": "sha256:c06c3f046e4c15bc1e0592487c182e411f41363ab393abc688b173feb5c629be",
     "governance/CLAIM_BOUNDARIES.md": "sha256:8ca3bc54912599bf3ecb43da88d1feb7c83c6ba2a22cf6f3170f5e732f239bf0",
     "pyproject.toml": "sha256:36e61a3bf6ba3c1ab40f12c9f86518f4e3708208b56108ec29c98df9acbfd2d8",
-    "scripts/build_release_candidate.py": "sha256:737cf36a8dc5a17ee80c06b4fd02c4f5ac424ea4412b7abc5c9ea16facbe1361",
+    "scripts/build_release_candidate.py": "sha256:2129a05edf47717d62fe049cb40afd3b096a851483dd4b627bd08d016daf86e3",
     "src/civicdecision/api/app.py": "sha256:cd0b37b13b2416d7bcb6763bae82cdfdbf46e1c22a163cef7d2a467d4e147859"
   },
   "policy": {
     "path": "governance/CLAIM_AUDIT_POLICY.json",
-    "sha256": "sha256:febb70f308d94afcef347b1df12a3a311727dff3a984f736f22638d0f55b560d"
+    "sha256": "sha256:9494292348c74ed013b379d47fe54e236ecf4f98b5fb75014cb08f30ba9794c4"
   },
   "public_state": {
     "github_repository": "limingrui679-design/civicdecision-os",
@@ -112,7 +113,7 @@
     "scenario-executions": 188,
     "scenario-families": 30,
     "scenario-library-files": 282,
-    "software-version": "0.8.0",
+    "software-version": "0.8.1",
     "source-manifests": 90,
     "statement-coverage-percent": 97.11395101171459,
     "tier-d-cities": 8,
@@ -131,10 +132,10 @@
     "public_state_contract_fields": 7,
     "quantitative_claims": 36,
     "required_boundaries": 12,
-    "scanned_bytes": 259701,
-    "scanned_files": 40
+    "scanned_bytes": 262714,
+    "scanned_files": 41
   },
   "snapshot_checked_at": "2026-08-14T05:31:21Z",
-  "software_version": "0.8.0",
+  "software_version": "0.8.1",
   "status": "passed"
 }

@@ -4,10 +4,10 @@ Updated: 2026-08-14
 
 ## Current milestone
 
-Milestone 8—the 0.8.0 release-assurance layer over the audited 240-design scenario library and all
+Milestone 8—the 0.8.1 release-assurance layer over the audited 240-design scenario library and all
 five product surfaces—is implemented and locally verified. It preserves the earlier twelve Tier-D
 templates as bounded reference implementations, synchronizes every generated DecisionPack and
-product artifact to 0.8.0, and adds reproducible packaging, clean-install, no-Git reconstruction,
+product artifact to 0.8.1, and adds reproducible packaging, clean-install, no-Git reconstruction,
 performance, security, SBOM, license, and checksum evidence.
 
 ## Verified now
@@ -140,7 +140,7 @@ performance, security, SBOM, license, and checksum evidence.
 - Nine local performance budgets pass on the recorded CPython 3.12 / macOS arm64 environment:
   cold store initialization, two direct-store reads, four API reads, and exact 282-/338-file
   builds. These are single-process regression measurements rather than service-level evidence.
-- Two independent 0.8.0 wheel and sdist builds are byte-identical under the recorded epoch. The
+- Two independent 0.8.1 wheel and sdist builds are byte-identical under the recorded epoch. The
   wheel has complete `RECORD` hashes/sizes; the sdist contains only validated regular files; and
   two normalized source ZIP writes are byte-identical. Exact archive counts and hashes live in the
   candidate's embedded release report rather than a source document that can drift as files change.

@@ -913,7 +913,7 @@ def build_release(
             source_root / "verification/milestone-8-public-state.json": (
                 asset_directory / "public-state.json"
             ),
-            ROOT / "docs/RELEASE_NOTES_0.8.0.md": asset_directory / "RELEASE_NOTES.md",
+            ROOT / "docs/RELEASE_NOTES_0.8.1.md": asset_directory / "RELEASE_NOTES.md",
         }
         for source, target in copy_map.items():
             shutil.copyfile(source, target)

@@ -9,7 +9,7 @@ committed artifact catalog and golden rebuild workflows.
 
 ```bash
 python -m pip install \
-  https://github.com/limingrui679-design/civicdecision-os/releases/download/v0.8.0/civicdecision-0.8.0-py3-none-any.whl
+  https://github.com/limingrui679-design/civicdecision-os/releases/download/v0.8.1/civicdecision-0.8.1-py3-none-any.whl
 civicdecision version
 ```
 

@@ -3,7 +3,7 @@
 - Scenario: `tierd.us.ca.san-francisco.06`
 - Application suite: `housing-land-use-regeneration`
 - Status: `completed`
-- DecisionPack content hash: `sha256:0dab06191a9dc90080a26785f51c97e7a83086737e22c955c3f24f048cf68507`
+- DecisionPack content hash: `sha256:cfe91e560b6ef4f262d29005ba7b1e97e17faafed6b01be8db5cbbb9eb24c707`
 
 ## Claim boundary
 

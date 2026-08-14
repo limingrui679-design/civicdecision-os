@@ -48,7 +48,7 @@ export default function Home() {
           </div>
           <div className="snapshot-stamp">
             <span><i className="status-dot" /> Read-only public walkthrough</span>
-            <span>Verified release snapshot · v0.8.0</span>
+            <span>Verified release snapshot · v0.8.1</span>
           </div>
         </div>
 
@@ -146,7 +146,7 @@ export default function Home() {
       </section>
 
       <footer>
-        <div className="brand footer-brand"><span className="brand-mark" aria-hidden="true"><i /></span><span><strong>CivicDecision</strong><small>Evidence OS · v0.8.0</small></span></div>
+        <div className="brand footer-brand"><span className="brand-mark" aria-hidden="true"><i /></span><span><strong>CivicDecision</strong><small>Evidence OS · v0.8.1</small></span></div>
         <p>Public-data reference implementation. No deployment, adoption, external review, or real-world impact is claimed.</p>
         <nav aria-label="Footer navigation"><a href={repository}>Repository</a><a href={`${repository}/tree/main/docs`}>Documentation</a><a href={`${repository}/blob/main/LICENSE`}>MIT License</a></nav>
       </footer>
