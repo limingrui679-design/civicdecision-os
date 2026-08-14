@@ -36,7 +36,7 @@ theme:
     - search.suggest
 
 nav:
-  - Start here: START_HERE.md
+  - Start here: index.md
   - Tutorials:
       - Build your first DecisionPack: tutorials/FIRST_DECISIONPACK.md
       - Add and validate a city: tutorials/ADD_A_CITY.md

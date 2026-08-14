@@ -23,7 +23,7 @@ results into observed impact.
   <a href="https://civicdecision-os.limingrui2.chatgpt.site"><strong>Open the public walkthrough →</strong></a>
   · <a href="#five-minute-quickstart">Run the full local explorer</a>
   · <a href="examples/outputs/suffolk-heat-access/decision-brief.md">Inspect one DecisionPack</a>
-  · <a href="docs/START_HERE.md">Choose a tutorial</a>
+  · <a href="docs/index.md">Choose a tutorial</a>
 </p>
 
 ## What you can verify now
