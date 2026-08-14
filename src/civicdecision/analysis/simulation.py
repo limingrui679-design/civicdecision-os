@@ -7,7 +7,7 @@ import json
 import random
 from datetime import UTC, datetime
 from enum import StrEnum
-from math import isfinite, sqrt
+from math import fsum, isfinite, sqrt
 from statistics import fmean
 
 from pydantic import Field, field_validator, model_validator
@@ -310,16 +310,16 @@ def _correlation(left: list[float], right: list[float]) -> float:
         raise AnalysisError("sensitivity vectors must be non-empty and aligned")
     left_mean = fmean(left)
     right_mean = fmean(right)
-    covariance = sum((a - left_mean) * (b - right_mean) for a, b in zip(left, right, strict=True))
-    left_scale = sqrt(sum((value - left_mean) ** 2 for value in left))
-    right_scale = sqrt(sum((value - right_mean) ** 2 for value in right))
+    covariance = fsum((a - left_mean) * (b - right_mean) for a, b in zip(left, right, strict=True))
+    left_scale = sqrt(fsum((value - left_mean) ** 2 for value in left))
+    right_scale = sqrt(fsum((value - right_mean) ** 2 for value in right))
     if left_scale == 0 or right_scale == 0:
         return 0.0
     return covariance / (left_scale * right_scale)
 
 
 def _outcome(model: SimulationModel, values: dict[str, float]) -> float:
-    output = model.intercept + sum(
+    output = model.intercept + fsum(
         term.coefficient * values[term.parameter_id] for term in model.terms
     )
     if model.floor is not None:
@@ -398,7 +398,7 @@ def run_monte_carlo(
     raw_mean = fmean(outcomes)
     mean = portable(raw_mean)
     deviation = portable(
-        sqrt(sum((value - raw_mean) ** 2 for value in outcomes) / (len(outcomes) - 1))
+        sqrt(fsum((value - raw_mean) ** 2 for value in outcomes) / (len(outcomes) - 1))
     )
     threshold_probability = None
     if active.threshold is not None:

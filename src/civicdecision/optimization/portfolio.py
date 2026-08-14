@@ -5,7 +5,7 @@ from __future__ import annotations
 from datetime import UTC, datetime
 from enum import StrEnum
 from itertools import product
-from math import isclose, prod
+from math import fsum, isclose, prod
 
 from pydantic import Field, field_validator, model_validator
 
@@ -310,22 +310,22 @@ def _evaluate(
     quantity_map = {
         action.action_id: quantity for action, quantity in zip(actions, quantities, strict=True)
     }
-    total_cost = sum(
+    total_cost = fsum(
         action.unit_cost * quantity for action, quantity in zip(actions, quantities, strict=True)
     )
-    total_capacity = sum(
+    total_capacity = fsum(
         action.unit_capacity * quantity
         for action, quantity in zip(actions, quantities, strict=True)
     )
-    total_risk = sum(
+    total_risk = fsum(
         action.unit_risk * quantity for action, quantity in zip(actions, quantities, strict=True)
     )
-    total_benefit = sum(
+    total_benefit = fsum(
         action.unit_benefit * quantity for action, quantity in zip(actions, quantities, strict=True)
     )
     group_ids = sorted(set().union(*(action.group_benefit_per_unit for action in actions)))
     group_benefits = {
-        group: sum(
+        group: fsum(
             action.group_benefit_per_unit.get(group, 0) * quantity
             for action, quantity in zip(actions, quantities, strict=True)
         )
@@ -333,7 +333,7 @@ def _evaluate(
     }
     scenario_ids = sorted(actions[0].scenario_objective_per_unit)
     scenario_values = {
-        scenario: sum(
+        scenario: fsum(
             action.scenario_objective_per_unit[scenario] * quantity
             for action, quantity in zip(actions, quantities, strict=True)
         )
@@ -523,7 +523,7 @@ def optimize_portfolio(
         retained_ids = {item.plan_id for item in retained}
     frontier_all = _pareto_frontier(evaluated, problem.config.tolerance)
     frontier = [identifier for identifier in frontier_all if identifier in retained_ids]
-    theoretical_upper_bound = sum(
+    theoretical_upper_bound = fsum(
         max(action.scenario_objective_per_unit.values()) * action.max_units
         for action in problem.actions
     )
