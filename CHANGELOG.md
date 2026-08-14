@@ -44,6 +44,9 @@ the first stable release; while the project is alpha, minor versions may include
   rebuild.
 - Added Bandit, offline secret scanning, advisory-based dependency audit, a CycloneDX 1.6 SBOM,
   third-party license inventory, complete SHA-256 inventories, and a deterministic release bundle.
+- Added a recorded 12-significant-digit Tier-D numeric contract, including pre-hash stochastic
+  normalization, and aligned CI secret scanning with the release builder's controlled source-file
+  inventory so supported operating systems verify the same evidence scope.
 - Added nine measured local performance budgets. All passed on the recorded macOS arm64 / CPython
   3.12 environment; these measurements are not production load or SLA evidence.
 
@@ -51,7 +54,7 @@ the first stable release; while the project is alpha, minor versions may include
 
 - Preserved 800 automated tests while adding release-archive validation to an existing integrated
   test path.
-- The Milestone-8 snapshot records 97.102% statement coverage, 91.091% branch coverage, and 95.896%
+- The Milestone-8 snapshot records 97.111% statement coverage, 91.129% branch coverage, and 95.911%
   combined coverage after the release-assurance module and adversarial archive gates were added.
 - Exact repository regeneration now covers the original reference DecisionPacks, Tier-G catalog,
   30 Tier-S bundles, 145 analytical benchmark runs, 707 Tier-D files, 282 scenario-library files,

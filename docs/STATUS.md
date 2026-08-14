@@ -133,7 +133,7 @@ performance, security, SBOM, license, and checksum evidence.
 - Current local browser inspection passed at the default desktop viewport and 390×844, including
   family-to-eight-design filtering, compound search, design and audit drawers, mobile navigation,
   zero horizontal scroll, and zero browser warnings/errors.
-- 800 automated tests pass. Coverage is 97.102% for statements, 91.091% for branches, and 95.896%
+- 800 automated tests pass. Coverage is 97.111% for statements, 91.129% for branches, and 95.911%
   under coverage.py's combined line-and-branch measure. The release module alone reaches 96%
   combined coverage and is exercised against real wheel/sdist files plus adversarial paths,
   members, metadata, hashes, inventories, links, budgets, and checksum failures.

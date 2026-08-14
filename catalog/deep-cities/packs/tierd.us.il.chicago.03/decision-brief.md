@@ -3,7 +3,7 @@
 - Scenario: `tierd.us.il.chicago.03`
 - Application suite: `public-service-operations`
 - Status: `completed`
-- DecisionPack content hash: `sha256:2e26965fbee5387e8e8f64d7cf3bdf322c85b8694e5817ff7f887cc05864a925`
+- DecisionPack content hash: `sha256:10103f87738541accf888daa2a379e1b2e396384d3930b006fbc24242f06d78a`
 
 ## Claim boundary
 
@@ -21,7 +21,7 @@ Selected bounded planning option: `bounded-portfolio`
 |---|---:|
 | probability-best-under-declared-draws | 1.0 |
 | expected-regret-index | 0.0 |
-| modeled-objective | 18.67378754098361 |
+| modeled-objective | 18.673787541 |
 | abstract-cost-units | 11.9 |
 | selected-action-types | 3 |
 | solver-plan-id | portfolio-plan-00001902 |

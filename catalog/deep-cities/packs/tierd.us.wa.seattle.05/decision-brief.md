@@ -3,7 +3,7 @@
 - Scenario: `tierd.us.wa.seattle.05`
 - Application suite: `climate-disaster-resilience`
 - Status: `completed`
-- DecisionPack content hash: `sha256:afdd594cab86263adc8428bd424610699297d784a9f73cf823ed1cde1eb725a2`
+- DecisionPack content hash: `sha256:bcb5f88b4858b5893d5c3f415120efcb93421ab8bb755d9cfe092d3bfa6bb392`
 
 ## Claim boundary
 
@@ -20,8 +20,8 @@ Selected bounded planning option: `bounded-portfolio`
 | Metric | Value |
 |---|---:|
 | probability-best-under-declared-draws | 0.999 |
-| expected-regret-index | 3.7548232653096035e-05 |
-| modeled-objective | 32.9321931147541 |
+| expected-regret-index | 3.7548232653e-05 |
+| modeled-objective | 32.9321931148 |
 | abstract-cost-units | 11.9 |
 | selected-action-types | 3 |
 | solver-plan-id | portfolio-plan-00001902 |

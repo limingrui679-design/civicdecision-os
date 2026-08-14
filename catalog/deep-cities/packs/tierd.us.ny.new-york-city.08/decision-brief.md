@@ -3,7 +3,7 @@
 - Scenario: `tierd.us.ny.new-york-city.08`
 - Application suite: `infrastructure-finance-asset-risk`
 - Status: `completed`
-- DecisionPack content hash: `sha256:e33a7174beefb56c3edac64650546e214537074eeab7d8f814d076cdfbf5e546`
+- DecisionPack content hash: `sha256:39e23a9f320bca562df488b3081552d0f3977455acda88f520cc73b7fa6f9408`
 
 ## Claim boundary
 
@@ -21,7 +21,7 @@ Selected bounded planning option: `bounded-portfolio`
 |---|---:|
 | probability-best-under-declared-draws | 1.0 |
 | expected-regret-index | 0.0 |
-| modeled-objective | 63.26958721311477 |
+| modeled-objective | 63.2695872131 |
 | abstract-cost-units | 11.9 |
 | selected-action-types | 3 |
 | solver-plan-id | portfolio-plan-00001902 |

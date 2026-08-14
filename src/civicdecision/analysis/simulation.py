@@ -18,6 +18,7 @@ from civicdecision.protocols.base import (
     StrictModel,
     canonical_json,
     ensure_aware,
+    normalize_float,
     sha256_bytes,
 )
 from civicdecision.protocols.evidence import EvidenceType
@@ -137,6 +138,7 @@ class SimulationConfig(StrictModel):
     retained_draws: int = Field(default=25, ge=0, le=1_000)
     threshold: float | None = None
     threshold_direction: ThresholdDirection = ThresholdDirection.AT_LEAST
+    portable_float_significant_digits: int | None = Field(default=None, ge=10, le=17)
 
     @field_validator("quantiles")
     @classmethod
@@ -362,9 +364,17 @@ def run_monte_carlo(
     retained: list[RetainedSimulationDraw] = []
     stream_digest = hashlib.sha256()
     ordered = sorted(parameters, key=lambda item: item.parameter_id)
+
+    def portable(value: float) -> float:
+        return (
+            normalize_float(value, significant_digits=active.portable_float_significant_digits)
+            if active.portable_float_significant_digits is not None
+            else value
+        )
+
     for iteration in range(active.iterations):
-        draw = {item.parameter_id: _sample(item, generator) for item in ordered}
-        output = _outcome(model, draw)
+        draw = {item.parameter_id: portable(_sample(item, generator)) for item in ordered}
+        output = portable(_outcome(model, draw))
         for identifier, value in draw.items():
             parameter_draws[identifier].append(value)
         outcomes.append(output)
@@ -385,22 +395,25 @@ def run_monte_carlo(
                     outcome=output,
                 )
             )
-    mean = fmean(outcomes)
-    deviation = sqrt(sum((value - mean) ** 2 for value in outcomes) / (len(outcomes) - 1))
+    raw_mean = fmean(outcomes)
+    mean = portable(raw_mean)
+    deviation = portable(
+        sqrt(sum((value - raw_mean) ** 2 for value in outcomes) / (len(outcomes) - 1))
+    )
     threshold_probability = None
     if active.threshold is not None:
         if active.threshold_direction is ThresholdDirection.AT_LEAST:
-            threshold_probability = sum(value >= active.threshold for value in outcomes) / len(
-                outcomes
+            threshold_probability = portable(
+                sum(value >= active.threshold for value in outcomes) / len(outcomes)
             )
         else:
-            threshold_probability = sum(value <= active.threshold for value in outcomes) / len(
-                outcomes
+            threshold_probability = portable(
+                sum(value <= active.threshold for value in outcomes) / len(outcomes)
             )
     sensitivity_values = [
         (
             identifier,
-            _correlation(parameter_draws[identifier], outcomes),
+            portable(_correlation(parameter_draws[identifier], outcomes)),
         )
         for identifier in parameter_ids
     ]
@@ -428,7 +441,10 @@ def run_monte_carlo(
             minimum=min(outcomes),
             maximum=max(outcomes),
             quantiles=[
-                QuantileEstimate(probability=probability, value=_quantile(outcomes, probability))
+                QuantileEstimate(
+                    probability=probability,
+                    value=portable(_quantile(outcomes, probability)),
+                )
                 for probability in active.quantiles
             ],
             threshold_probability=threshold_probability,

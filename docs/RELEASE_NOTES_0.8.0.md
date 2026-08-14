@@ -15,6 +15,10 @@ the audited 240-design scenario library, and reproducible supply-chain evidence.
   evidence explorer, and data-only plugin SDK.
 - Exact isolated reconstruction of the Tier-G, Tier-S, benchmark, Tier-D, scenario-library, and
   product trees from committed inputs.
+- A Tier-D cross-platform numeric contract that records 12 significant digits, normalizes seeded
+  stochastic values before statistics and draw-stream hashing, and keeps JSON, CSV, and decision
+  briefs byte-stable across supported operating systems without changing scenario status,
+  selected options, evidence counts, or workload totals.
 - A release bundle with a hash-locked runtime, strict wheel/sdist validation, installed-product
   smoke evidence, no-Git reconstruction evidence, advisory audit, secret scan, Bandit report,
   CycloneDX 1.6 SBOM, license inventory, local performance evidence, and portable checksums.
@@ -22,7 +26,7 @@ the audited 240-design scenario library, and reproducible supply-chain evidence.
 ## Quantified implementation evidence
 
 - 800 passing automated tests in the release-hardening tree.
-- Milestone-8 coverage: 97.102% statements, 91.091% branches, and 95.896% combined after the
+- Milestone-8 coverage: 97.111% statements, 91.129% branches, and 95.911% combined after the
   archive-assurance layer and its adversarial release tests are included.
 - 28,680 pairwise design comparisons with no collision and no pair above the declared 0.90 review
   threshold.
@@ -30,6 +34,8 @@ the audited 240-design scenario library, and reproducible supply-chain evidence.
   are computational results, not observed policy outcomes.
 - Nine passing local performance budgets covering cold catalog initialization, store/API reads,
   compound filters, details, and exact library/product builds.
+- The CI secret scan and release-builder secret scan use the same explicit source-file inventory;
+  caches, virtual environments, generated catalogs, and build products are outside that inventory.
 
 ## Scope boundary
 

@@ -3,7 +3,7 @@
 - Scenario: `tierd.us.ny.new-york-city.09`
 - Application suite: `behavioral-policy-equity`
 - Status: `completed`
-- DecisionPack content hash: `sha256:779b122d7416b7affb9db78a7dcf4ea53667d29083fcc9c1112965d8aced7aa8`
+- DecisionPack content hash: `sha256:f54dbafc14701185d9fba47360add9e161677555a541e0f5f9235eec74ab4734`
 
 ## Claim boundary
 
@@ -21,7 +21,7 @@ Selected bounded planning option: `bounded-portfolio`
 |---|---:|
 | probability-best-under-declared-draws | 1.0 |
 | expected-regret-index | 0.0 |
-| modeled-objective | 317.5072278688525 |
+| modeled-objective | 317.507227869 |
 | abstract-cost-units | 11.9 |
 | selected-action-types | 3 |
 | solver-plan-id | portfolio-plan-00001902 |

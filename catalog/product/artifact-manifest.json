@@ -9,7 +9,7 @@
     },
     {
       "byte_count": 1609,
-      "content_hash": "sha256:e22b8ecb0b35b6047d367d2fdce5260c0209dbb7c5f8ca4377fdc68fa8e04d3d",
+      "content_hash": "sha256:27e039a24e0bb88bc601c057fc8d482677c2446a9bf6b9e118463af3a00fac5b",
       "media_type": "application/json",
       "path": "catalog-summary.json"
     },
@@ -2087,7 +2087,7 @@
     },
     {
       "byte_count": 141276,
-      "content_hash": "sha256:1b119e4a62ec5b91c4b7a420af081d8db222c24a83c2db3692c638a2383bc2d7",
+      "content_hash": "sha256:c05c62ced647c9d0dc203dceda01a00eaf8e9207bea6dfd1b1abfbd6b4433f52",
       "media_type": "application/json",
       "path": "evidence/tier-d-summary.json",
       "record_count": 96
@@ -2100,21 +2100,21 @@
     },
     {
       "byte_count": 251940,
-      "content_hash": "sha256:fb1d13082ad3a8e717473dcce6cb966f19d85117cf6318855cb17e03d7dc0f97",
+      "content_hash": "sha256:c32914ba455b221b5f6b8d7cf830b95b20b9e021a38abe0686b6979e0417d6a0",
       "media_type": "application/json",
       "path": "scenarios/all.json",
       "record_count": 188
     },
     {
       "byte_count": 152904,
-      "content_hash": "sha256:faef052adefe57cf8463692bea51e44c3fb252dab56f2fdaba61b668bf61cd52",
+      "content_hash": "sha256:62db1011d0e9f038732f75cf49a3432a6ff296428e95eefc4f4d8dcbb1efd98b",
       "media_type": "application/json",
       "path": "scenarios/decision-pack.json",
       "record_count": 98
     },
     {
       "byte_count": 150918,
-      "content_hash": "sha256:ac2573aea9196cef1a1dbc6d20f9527fbbeb057945a753ec965b7028346f1b77",
+      "content_hash": "sha256:61be821abc4db9f9e2d37add624df652c9d6d0141010c9cb8f1a29befb75a2bc",
       "media_type": "application/json",
       "path": "scenarios/deep-pack.json",
       "record_count": 96
@@ -2323,7 +2323,7 @@
       "record_count": 4
     }
   ],
-  "catalog_fingerprint": "sha256:2f287e2349a6a091d280f15a2578d3dcad76e59ee044b5524015622bb9793429",
+  "catalog_fingerprint": "sha256:ccfd86a169d19ff8395220491259acfc2ef05a186e6a3467b238fb8ad007c667",
   "claim_boundary": [
     "Public data and deterministic software runs are not client work or field deployment.",
     "Simulation and optimization are not observed impact or institutional adoption.",

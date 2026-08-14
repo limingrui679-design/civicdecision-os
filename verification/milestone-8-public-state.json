@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-08-13T12:15:16Z",
+  "checked_at": "2026-08-14T01:34:21Z",
   "claim_boundary": [
     "An HTTP 200 is a dated public-repository availability check, not proof that any workflow or release passed.",
     "The declared local Git remote and package URLs identify publication coordinates; they do not prove deployment.",

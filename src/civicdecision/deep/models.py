@@ -6,7 +6,7 @@ import re
 from datetime import date, datetime
 from enum import StrEnum
 from pathlib import PurePosixPath
-from typing import Literal
+from typing import Any, Literal, cast
 
 from pydantic import Field, field_validator, model_validator
 
@@ -20,6 +20,8 @@ from civicdecision.protocols.base import (
     StrictModel,
     canonical_json,
     ensure_aware,
+    normalize_float,
+    normalize_json_floats,
     sha256_bytes,
 )
 from civicdecision.protocols.city import CityAdapterManifest, CityTier
@@ -30,6 +32,43 @@ from civicdecision.protocols.source import SourceManifest
 from civicdecision.standardized.models import DataQualityReport, QualityStatus
 
 SHA256_VALUE_PATTERN = r"^sha256:[0-9a-f]{64}$"
+TIER_D_FLOAT_SIGNIFICANT_DIGITS = 12
+
+
+def tier_d_canonical_json(value: StrictModel | JsonValue | dict[str, Any]) -> bytes:
+    """Serialize Tier-D evidence with platform-neutral float precision."""
+
+    return canonical_json(
+        value,
+        float_significant_digits=TIER_D_FLOAT_SIGNIFICANT_DIGITS,
+    )
+
+
+def tier_d_content_hash(value: StrictModel) -> str:
+    """Hash the platform-neutral Tier-D representation."""
+
+    return sha256_bytes(tier_d_canonical_json(value))
+
+
+def tier_d_json_value(value: JsonValue) -> JsonValue:
+    """Normalize one JSON value for Tier-D text and tabular artifacts."""
+
+    return cast(
+        JsonValue,
+        normalize_json_floats(
+            value,
+            significant_digits=TIER_D_FLOAT_SIGNIFICANT_DIGITS,
+        ),
+    )
+
+
+def tier_d_float(value: float) -> float:
+    """Normalize a Tier-D calculation before statistics or hashing."""
+
+    return normalize_float(
+        value,
+        significant_digits=TIER_D_FLOAT_SIGNIFICANT_DIGITS,
+    )
 
 
 class ApplicationSuite(StrEnum):
@@ -279,7 +318,7 @@ class DeepScenarioPack(StrictModel):
         return self
 
     def content_hash(self) -> str:
-        return sha256_bytes(canonical_json(self))
+        return tier_d_content_hash(self)
 
 
 class DeepCityBundle(StrictModel):
@@ -366,7 +405,7 @@ class DeepCityBundle(StrictModel):
         return self
 
     def content_hash(self) -> str:
-        return sha256_bytes(canonical_json(self))
+        return tier_d_content_hash(self)
 
 
 class TierDRegistryEntry(StrictModel):
@@ -453,7 +492,7 @@ class TierDRegistry(StrictModel):
         return self
 
     def content_hash(self) -> str:
-        return sha256_bytes(canonical_json(self))
+        return tier_d_content_hash(self)
 
 
 class TierDScenarioEvidence(StrictModel):

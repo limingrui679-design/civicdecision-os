@@ -136,3 +136,12 @@ python scripts/verify_repository.py \
 The fetch commands verify and reuse matching committed artifacts by default. The build performs no
 network access. The repository verifier rebuilds into a temporary directory and compares every
 path and byte with the committed tree.
+
+## Cross-platform numeric contract
+
+Tier-D files normalize finite floating-point outputs to 12 significant digits before canonical
+serialization. Seeded simulation draws and outcomes are normalized before summary statistics and
+the complete draw-stream hash are computed; the precision is serialized in `SimulationConfig`.
+Decision briefs and CSV ledgers use the same rule. This removes operating-system math-library
+last-bit drift while retaining substantially more precision than the displayed planning outputs
+require. It does not turn simulated or optimized values into observations or validated effects.

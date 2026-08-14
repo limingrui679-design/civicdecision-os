@@ -194,7 +194,7 @@
     }
   ],
   "product_artifacts": 338,
-  "product_catalog_fingerprint": "sha256:2f287e2349a6a091d280f15a2578d3dcad76e59ee044b5524015622bb9793429",
+  "product_catalog_fingerprint": "sha256:ccfd86a169d19ff8395220491259acfc2ef05a186e6a3467b238fb8ad007c667",
   "product_checksum_entries": 337,
   "product_exactly_rebuilt": true,
   "product_openapi_paths": 19,
@@ -232,7 +232,7 @@
   "tier_d_decision_packs": 96,
   "tier_d_deduplicated_underlying_requests": 4148633,
   "tier_d_distinct_source_datasets": 11,
-  "tier_d_evidence_summary_content_hash": "sha256:3b6828670ec4c9a903acad15a8d1a74680139d5627c6eedfa1613b339e007060",
+  "tier_d_evidence_summary_content_hash": "sha256:ac30386f360970fd09b26176c58b9d2815156c4fc6b035baaf94a624006c1448",
   "tier_d_exactly_rebuilt": true,
   "tier_d_forecast_input_observations": 13908,
   "tier_d_forecast_runs": 76,
@@ -243,7 +243,7 @@
   "tier_d_optimization_tasks": 76,
   "tier_d_quality_passes": 1,
   "tier_d_quality_warnings": 7,
-  "tier_d_registry_content_hash": "sha256:f0f28b721d4a3b9af50ba4ad54988be93fe8a69d83ca5cc2475bb66f3dc4d884",
+  "tier_d_registry_content_hash": "sha256:541fe6bec5cd566b30e0c3fd4cfa5149ada1d870f2b96efce2a6f85eef1800df",
   "tier_d_scenario_packs": 96,
   "tier_d_scenario_statuses": {
     "completed": 76,

@@ -94,7 +94,7 @@ Current repository and local-browser evidence is recorded in
 [`verification/milestone-8-performance.json`](verification/milestone-8-performance.json). The
 machine-readable claim and dated public-state checks are documented in
 [`docs/CLAIM_AUDIT.md`](docs/CLAIM_AUDIT.md). Exactly
-800 tests pass with 97.102% statement, 91.091% branch, and 95.896% combined line-and-branch
+800 tests pass with 97.111% statement, 91.129% branch, and 95.911% combined line-and-branch
 coverage. The independent verifier regenerates Schemas, both earlier reference outputs, all four
 global-city artifacts, the complete standardized-city and analytical-benchmark trees, all 707
 Tier-D artifacts, the 282-file scenario library, and the 338-file product projection in a

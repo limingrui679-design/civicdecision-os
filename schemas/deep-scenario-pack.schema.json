@@ -2295,6 +2295,20 @@
           "title": "Iterations",
           "type": "integer"
         },
+        "portable_float_significant_digits": {
+          "anyOf": [
+            {
+              "maximum": 17,
+              "minimum": 10,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Portable Float Significant Digits"
+        },
         "quantiles": {
           "items": {
             "type": "number"

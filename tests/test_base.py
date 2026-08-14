@@ -17,6 +17,15 @@ from civicdecision.protocols.evidence import EvidenceItem, EvidenceStatus, Evide
 
 def test_canonical_json_is_order_independent() -> None:
     assert canonical_json({"b": 2, "a": 1}) == canonical_json({"a": 1, "b": 2})
+    assert (
+        canonical_json(
+            {"value": 1.23456789012345, "nested": [4.263872967422037e-16, -0.0]},
+            float_significant_digits=12,
+        )
+        == b'{"nested":[4.26387296742e-16,0.0],"value":1.23456789012}'
+    )
+    with pytest.raises(ValueError, match="between 1 and 17"):
+        canonical_json({"value": 1.0}, float_significant_digits=0)
 
 
 def test_canonical_json_rejects_nan() -> None:

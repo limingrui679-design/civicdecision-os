@@ -3,7 +3,7 @@
 - Scenario: `tierd.us.ny.new-york-city.07`
 - Application suite: `population-health-environmental-exposure`
 - Status: `completed`
-- DecisionPack content hash: `sha256:6cb4063f61cd02a56046e305a461a3301bd76b714871f29b742a899f96132740`
+- DecisionPack content hash: `sha256:6054745130d9b217d5a2641df0149c76df7f58c8a2377e8d9a3c3dfe24d7aeee`
 
 ## Claim boundary
 
@@ -20,8 +20,8 @@ Selected bounded planning option: `bounded-portfolio`
 | Metric | Value |
 |---|---:|
 | probability-best-under-declared-draws | 0.998 |
-| expected-regret-index | 8.84149428906984e-05 |
-| modeled-objective | 121.29585311475411 |
+| expected-regret-index | 8.841494289e-05 |
+| modeled-objective | 121.295853115 |
 | abstract-cost-units | 11.9 |
 | selected-action-types | 3 |
 | solver-plan-id | portfolio-plan-00001902 |

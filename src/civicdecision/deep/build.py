@@ -29,10 +29,12 @@ from civicdecision.deep.models import (
     TierDRegistry,
     TierDRegistryEntry,
     TierDScenarioEvidence,
+    tier_d_canonical_json,
+    tier_d_json_value,
 )
 from civicdecision.deep.templates import DEEP_SCENARIO_TEMPLATES
 from civicdecision.errors import AnalysisError
-from civicdecision.protocols.base import StrictModel, canonical_json, sha256_bytes, sha256_file
+from civicdecision.protocols.base import StrictModel, sha256_bytes, sha256_file
 from civicdecision.protocols.city import CityAdapterManifest, CityTier, CoverageWindow
 from civicdecision.protocols.source import SourceManifest
 from civicdecision.standardized.models import QualityStatus
@@ -65,7 +67,7 @@ class TierDBuildArtifacts(StrictModel):
 
 
 def _model_bytes(model: StrictModel) -> bytes:
-    return canonical_json(model) + b"\n"
+    return tier_d_canonical_json(model) + b"\n"
 
 
 def _adapter(city: LoadedDeepCity) -> CityAdapterManifest:
@@ -345,7 +347,7 @@ def _coverage_csv(compilation: TierDCompilation) -> bytes:
                 entry.platform,
                 entry.underlying_request_count,
                 sum(item.aggregate_row_count for item in city.municipal.values()),
-                city.population_row.estimate,
+                tier_d_json_value(city.population_row.estimate),
                 entry.quality_status.value,
                 entry.completed_scenarios,
                 entry.negative_scenarios,
@@ -463,7 +465,7 @@ def _metric_ledger_csv(compilation: TierDCompilation) -> bytes:
                 [
                     bundle.adapter.city_id,
                     metric.id,
-                    metric.value,
+                    tier_d_json_value(metric.value),
                     metric.unit,
                     metric.evidence_type.value,
                     ";".join(metric.source_refs),

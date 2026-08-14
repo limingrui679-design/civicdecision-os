@@ -3,7 +3,7 @@
 - Scenario: `tierd.us.pa.philadelphia.10`
 - Application suite: `mobility-accessibility-operations`
 - Status: `completed`
-- DecisionPack content hash: `sha256:52418978ade9938bdf4be4245e92d1dbf60a0fcaf1218abc01fd8106d9fefc63`
+- DecisionPack content hash: `sha256:2ba9032599530bff6a6b4f5087ee552eadf08bd9eb0ab6484c1e49a886a36afa`
 
 ## Claim boundary
 
@@ -21,7 +21,7 @@ Selected bounded planning option: `bounded-portfolio`
 |---|---:|
 | probability-best-under-declared-draws | 1.0 |
 | expected-regret-index | 0.0 |
-| modeled-objective | 3.2340000000000004 |
+| modeled-objective | 3.234 |
 | abstract-cost-units | 11.9 |
 | selected-action-types | 3 |
 | solver-plan-id | portfolio-plan-00001902 |

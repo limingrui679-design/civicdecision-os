@@ -101,6 +101,30 @@ def test_seeded_monte_carlo_is_reproducible_and_typed_simulated() -> None:
     assert len(first.retained_draws) == 10
     assert first.summary is not None
     assert 0 <= (first.summary.threshold_probability or 0) <= 1
+    portable_config = SimulationConfig(
+        iterations=100,
+        random_seed=42,
+        retained_draws=10,
+        portable_float_significant_digits=12,
+    )
+    portable_first = run_monte_carlo(
+        run_id="simulation.synthetic.portable",
+        model=model(),
+        parameters=parameters(),
+        config=portable_config,
+        created_at=CREATED,
+    )
+    portable_second = run_monte_carlo(
+        run_id="simulation.synthetic.portable",
+        model=model(),
+        parameters=parameters(),
+        config=portable_config,
+        created_at=CREATED,
+    )
+    assert portable_first.draw_stream_hash == portable_second.draw_stream_hash
+    assert portable_first.retained_draws[0].parameters["exposure"] == float(
+        format(portable_first.retained_draws[0].parameters["exposure"], ".12g")
+    )
 
 
 def test_sensitivity_ranks_cover_every_parameter_without_causal_language() -> None:

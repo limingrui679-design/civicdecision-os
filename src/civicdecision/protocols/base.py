@@ -48,13 +48,48 @@ def ensure_aware(value: datetime, field_name: str) -> datetime:
     return value
 
 
-def canonical_json(value: BaseModel | JsonValue | dict[str, Any]) -> bytes:
+def normalize_float(value: float, *, significant_digits: int) -> float:
+    """Round one finite float to a portable number of significant digits."""
+
+    if not 1 <= significant_digits <= 17:
+        raise ValueError("significant_digits must be between 1 and 17")
+    normalized = float(format(value, f".{significant_digits}g"))
+    return 0.0 if normalized == 0.0 else normalized
+
+
+def normalize_json_floats(value: Any, *, significant_digits: int) -> Any:
+    """Round every float in a JSON-compatible value."""
+
+    if isinstance(value, float):
+        return normalize_float(value, significant_digits=significant_digits)
+    if isinstance(value, list):
+        return [
+            normalize_json_floats(item, significant_digits=significant_digits) for item in value
+        ]
+    if isinstance(value, dict):
+        return {
+            key: normalize_json_floats(item, significant_digits=significant_digits)
+            for key, item in value.items()
+        }
+    return value
+
+
+def canonical_json(
+    value: BaseModel | JsonValue | dict[str, Any],
+    *,
+    float_significant_digits: int | None = None,
+) -> bytes:
     """Serialize JSON deterministically for hashing and golden vectors."""
 
     if isinstance(value, BaseModel):
         payload: Any = value.model_dump(mode="json", exclude_none=True)
     else:
         payload = value
+    if float_significant_digits is not None:
+        payload = normalize_json_floats(
+            payload,
+            significant_digits=float_significant_digits,
+        )
     return json.dumps(
         payload,
         ensure_ascii=False,

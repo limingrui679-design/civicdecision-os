@@ -38,12 +38,17 @@ from civicdecision.analysis.uncertainty import (
 from civicdecision.connectors.municipal_service import MunicipalAggregation
 from civicdecision.deep.load import LoadedDeepCity
 from civicdecision.deep.models import (
+    TIER_D_FLOAT_SIGNIFICANT_DIGITS,
     DeepScenarioPack,
     DeepScenarioStatus,
     DeepScenarioTemplate,
     ReadinessLevel,
     ScenarioArtifactRef,
     ScenarioCompletionStrategy,
+    tier_d_canonical_json,
+    tier_d_content_hash,
+    tier_d_float,
+    tier_d_json_value,
 )
 from civicdecision.errors import AnalysisError
 from civicdecision.optimization.portfolio import (
@@ -57,7 +62,7 @@ from civicdecision.optimization.portfolio import (
     PortfolioRunStatus,
     optimize_portfolio,
 )
-from civicdecision.protocols.base import JsonValue, StrictModel, canonical_json, sha256_bytes
+from civicdecision.protocols.base import JsonValue, StrictModel, sha256_bytes
 from civicdecision.protocols.decision import (
     DecisionOption,
     DecisionPack,
@@ -83,7 +88,7 @@ def _seed(identifier: str) -> int:
 
 
 def _model_bytes(model: StrictModel) -> bytes:
-    return canonical_json(model) + b"\n"
+    return tier_d_canonical_json(model) + b"\n"
 
 
 def _scenario_id(city: LoadedDeepCity, template: DeepScenarioTemplate) -> str:
@@ -304,6 +309,7 @@ def _simulation(
             retained_draws=50,
             threshold=daily_mean,
             threshold_direction=ThresholdDirection.AT_MOST,
+            portable_float_significant_digits=TIER_D_FLOAT_SIGNIFICANT_DIGITS,
         ),
         created_at=created_at,
     )
@@ -403,10 +409,13 @@ def _uncertainty(
         "bounded-portfolio": [],
     }
     for _ in range(1_000):
-        common = generator.gauss(0.0, 0.04)
-        values["no-action"].append(common + generator.gauss(0.0, 0.02))
-        values["conservative-plan"].append(0.45 + common + generator.gauss(0.0, 0.08))
-        values["bounded-portfolio"].append(1.00 + common + generator.gauss(0.0, 0.12))
+        common = tier_d_float(generator.gauss(0.0, 0.04))
+        no_action = common + generator.gauss(0.0, 0.02)
+        conservative = 0.45 + common + generator.gauss(0.0, 0.08)
+        bounded = 1.00 + common + generator.gauss(0.0, 0.12)
+        values["no-action"].append(tier_d_float(no_action))
+        values["conservative-plan"].append(tier_d_float(conservative))
+        values["bounded-portfolio"].append(tier_d_float(bounded))
     options = [
         OptionDraws(
             option_id=identifier,
@@ -873,7 +882,7 @@ def render_deep_decision_brief(
         f"- Scenario: `{pack.scenario_id}`",
         f"- Application suite: `{template.suite.value}`",
         f"- Status: `{pack.status.value}`",
-        f"- DecisionPack content hash: `{pack.content_hash()}`",
+        f"- DecisionPack content hash: `{tier_d_content_hash(pack)}`",
         "",
         "## Claim boundary",
         "",
@@ -900,7 +909,10 @@ def render_deep_decision_brief(
                 "",
                 "| Metric | Value |",
                 "|---|---:|",
-                *(f"| {key} | {value} |" for key, value in selected.metrics.items()),
+                *(
+                    f"| {key} | {tier_d_json_value(value)} |"
+                    for key, value in selected.metrics.items()
+                ),
             ]
         )
     lines.extend(["", "## Evidence ledger", ""])
@@ -910,7 +922,8 @@ def render_deep_decision_brief(
     lines.extend(["", "## Reversal diagnostics", ""])
     if pack.reversal_tests:
         lines.extend(
-            f"- `{item.id}`: {item.outcome.value}; tested {item.parameter} = {item.tested_value}."
+            f"- `{item.id}`: {item.outcome.value}; tested {item.parameter} = "
+            f"{tier_d_json_value(item.tested_value)}."
             for item in pack.reversal_tests
         )
     else:

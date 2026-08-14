@@ -36,8 +36,32 @@ jobs:
           --format json --output verification/ci-bandit.json
       - name: Verify committed secret baseline remains empty
         run: |
-          detect-secrets scan --baseline .secrets.baseline --force-use-all-plugins --all-files
-          python -c "import json; assert json.load(open('.secrets.baseline'))['results'] == {}"
+          python - <<'PY'
+          import json
+          import shutil
+          import subprocess
+          from pathlib import Path
+
+          from scripts.build_release_candidate import _scan_candidates
+
+          root = Path.cwd()
+          report = root / "verification/ci-detect-secrets.json"
+          shutil.copyfile(root / ".secrets.baseline", report)
+          subprocess.run(
+              [
+                  "detect-secrets",
+                  "scan",
+                  "--baseline",
+                  str(report),
+                  "--force-use-all-plugins",
+                  "--no-verify",
+                  *_scan_candidates(root),
+              ],
+              check=True,
+              cwd=root,
+          )
+          assert json.loads(report.read_text(encoding="utf-8"))["results"] == {}
+          PY
       - name: Audit exact hashed runtime lock
         run: >-
           pip-audit -r requirements/runtime-api.lock --require-hashes --no-deps
@@ -53,6 +77,6 @@ jobs:
           if-no-files-found: warn
           retention-days: 30
           path: |
-            .secrets.baseline
+            verification/ci-detect-secrets.json
             verification/ci-bandit.json
             verification/ci-dependency-audit.json
