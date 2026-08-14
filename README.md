@@ -89,10 +89,6 @@ Most urban analytics demos end with a score, forecast, or selected option. Civic
 records **why the output is permitted**, **which assumptions can reverse it**, and **why a
 recommendation may need to be withheld**.
 
-<p align="center">
-  <img src="docs/assets/readme/evidence-pipeline.svg" alt="CivicDecision OS evidence-to-release pipeline" width="100%">
-</p>
-
 | Common failure | CivicDecision control |
 |---|---|
 | Public data appears without version or scope | Manifests retain source, retrieval, hash, license, coverage, and limitations. |
@@ -103,28 +99,15 @@ recommendation may need to be withheld**.
 
 ## End-to-end workflow
 
-```mermaid
-flowchart TD
-    A["1 · Official or public source"] --> B["2 · Bounded connector"]
-    B --> C["3 · Immutable raw artifact + SourceManifest"]
-    C --> D["4 · Semantic normalization + data-quality report"]
-    D --> E["5 · City Adapter + validated Policy Scenario"]
-    E --> F{"6 · Evidence and method gates pass?"}
-    F -->|"no"| N["Negative DecisionPack<br/>failed · insufficient_evidence · infeasible · timed_out"]
-    F -->|"yes"| G["7 · Descriptive · forecast · causal · simulation · optimization"]
-    G --> H["8 · Uncertainty · reversal · value of information"]
-    H --> I{"9 · Release gate"}
-    I -->|"completed"| J["Completed DecisionPack<br/>selected bounded option + limitations"]
-    I -->|"withhold"| N
-    J --> K["One validated snapshot<br/>Explorer · REST API · SDK · CLI · data-only plugin"]
-    N --> K
-    K --> L["Independent exact rebuild<br/>Schemas · artifacts · manifests · checksums"]
-```
+<p align="center">
+  <img src="docs/assets/readme/evidence-pipeline.svg" alt="CivicDecision OS compact end-to-end workflow" width="100%">
+</p>
 
 The path is fail-closed: a missing evidence role, failed identification gate, infeasible hard
 constraint, unstable result, or incomplete search remains a reviewable negative release. Both
 terminal states retain the same source lineage, typed outputs, limitations, and reproducibility
-evidence; no interface is allowed to manufacture a stronger answer.
+evidence. Explorer, REST API, SDK, CLI, and the data-only plugin all project the same validated
+snapshot; the independent verifier then rebuilds its Schemas, artifacts, manifests, and checksums.
 
 ## Start in three steps
 
