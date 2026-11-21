@@ -5,8 +5,7 @@
 <h1 align="center">CivicDecision OS</h1>
 
 <p align="center">
-  <strong>Compile public evidence, bounded methods, and policy constraints into a reviewable decision—or an explicit no.</strong><br>
-  Evidence-typed urban analysis · reversible decisions · reproducible DecisionPacks
+  <strong>Compare where a city could place services and show whom each option would reach.</strong><br>
 </p>
 
 <p align="center">
@@ -26,10 +25,9 @@
   · <a href="CONTRIBUTING.md">Contribute</a>
 </p>
 
-CivicDecision OS is an evidence-typed compiler and review surface for urban analysts and civic
-data teams. It keeps public observations, estimates, simulations, optimization results, and
-proposed actions distinct from source to release—so a modeled benefit never silently becomes an
-observed impact.
+A city choosing heat-relief sites has to balance reach, cost and the needs of underserved areas. CivicDecision OS gives planners a way to compare sites under the same rules. It maps public observations to candidate locations, evaluates combinations against the budget and access constraints, and exports the inputs, alternatives and selection rationale in a DecisionPack.
+
+In the Suffolk County heat-access example, 16 of 55 candidate combinations meet the stated constraints. Varying the service radius produces three different site selections across five runs. A planner can see exactly which choice depends on the distance residents are assumed able to travel. [Inspect the worked site comparison](examples/outputs/suffolk-heat-access/decision-brief.md)
 
 <table>
   <tr>
@@ -40,10 +38,7 @@ observed impact.
   </tr>
 </table>
 
-> [!IMPORTANT]
-> Verified release: **[`v0.8.1`](https://github.com/limingrui679-design/civicdecision-os/releases/tag/v0.8.1)**.
-> The deep evidence gate completed **76 of 96** executions and withheld **20**. These are
-> implementation and reproducibility counts—not accuracy, adoption, policy success, or impact.
+[Release v0.8.1 and its verification results](https://github.com/limingrui679-design/civicdecision-os/releases/tag/v0.8.1)
 
 <details>
 <summary><strong>Table of contents</strong></summary>
