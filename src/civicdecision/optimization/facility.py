@@ -198,3 +198,69 @@ def select_robust_plan(
 
     chosen = min(shared, key=ordering)
     return chosen, {name: results[chosen] for name, results in regrets.items()}
+
+
+class ReliableAccessPlan(StrictModel):
+    selected_ids: tuple[str, ...]
+    observed_departures: int
+    required_departures: int
+    reliable_ids: tuple[str, ...]
+    departures_covered_by_origin: dict[str, int]
+    reliable_need_share: float
+    mean_need_share: float
+
+
+def rank_reliable_access(
+    points: list[DemandPoint],
+    scenarios: dict[str, list[FacilityPlan]],
+    *,
+    required_departures: int,
+) -> list[ReliableAccessPlan]:
+    """Rank fixed sites by the need of origins served on at least k departure times.
+
+    Each equally weighted scenario represents one departure time. An unserved origin
+    receives zero for that departure; the denominator includes every supplied origin.
+    """
+    if type(required_departures) is not int or not 1 <= required_departures <= len(scenarios):
+        raise AnalysisError("required_departures must be between one and the scenario count")
+    need = {point.id: point.estimated_need for point in points}
+    total = sum(need.values())
+    if len(need) != len(points) or total <= 0:
+        raise AnalysisError("provide unique demand points with positive total need")
+
+    indexed = []
+    for name, plans in scenarios.items():
+        if not name or len({plan.selected_ids for plan in plans}) != len(plans):
+            raise AnalysisError("scenario names and plan keys must be unambiguous")
+        snapshot = {}
+        for plan in plans:
+            served = set(plan.covered_ids)
+            if not served <= need.keys() or len(served) != len(plan.covered_ids):
+                raise AnalysisError("plan coverage must contain unique, known demand points")
+            if plan.feasible:
+                snapshot[plan.selected_ids] = served
+        indexed.append(snapshot)
+
+    ranking = []
+    for sites in set.intersection(*(set(snapshot) for snapshot in indexed)):
+        counts = dict.fromkeys(need, 0)
+        for snapshot in indexed:
+            for origin in snapshot[sites]:
+                counts[origin] += 1
+        reliable = tuple(sorted(origin for origin, k in counts.items() if k >= required_departures))
+        ranking.append(
+            ReliableAccessPlan(
+                selected_ids=sites,
+                observed_departures=len(indexed),
+                required_departures=required_departures,
+                reliable_ids=reliable,
+                departures_covered_by_origin=counts,
+                reliable_need_share=sum(need[origin] for origin in reliable) / total,
+                mean_need_share=sum(need[origin] * k for origin, k in counts.items())
+                / (len(indexed) * total),
+            )
+        )
+    return sorted(
+        ranking,
+        key=lambda row: (-row.reliable_need_share, -row.mean_need_share, row.selected_ids),
+    )
