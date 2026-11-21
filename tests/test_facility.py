@@ -10,6 +10,7 @@ from civicdecision.optimization.facility import (
     FacilityPlanningConfig,
     enumerate_facility_plans,
     select_best_plan,
+    select_robust_plan,
 )
 
 
@@ -107,3 +108,35 @@ def test_zero_need_priority_group_uses_safe_coverage_denominator() -> None:
         ),
     )
     assert all(plan.priority_coverage_rate == 1 for plan in plans)
+
+
+def test_access_standard_can_change_the_investment_choice() -> None:
+    points = [point("a", 0, 0, 80, 10), point("b", 0, 0.001, 20, 5)]
+    config = FacilityPlanningConfig(max_facilities=1, minimum_priority_coverage=0)
+    geographic = enumerate_facility_plans(points, config)
+    routes = {"a": {"a": 0, "b": 15}, "b": {"b": 0}}
+    network = enumerate_facility_plans(points, config, travel_minutes=routes, minute_limit=15)
+    assert [plan.covered_ids for plan in geographic] == [("a", "b"), ("a", "b")]
+    assert [plan.covered_ids for plan in network] == [("a",), ("a", "b")]
+    assert network[1].overall_coverage_rate == 1
+    assert select_best_plan(network) == network[1]
+    with pytest.raises(AnalysisError):
+        enumerate_facility_plans(points, config, travel_minutes={"x": {}}, minute_limit=15)
+
+
+def test_robust_choice_can_win_neither_period_and_must_satisfy_each_constraint() -> None:
+    points = [point(x, 42, -71, 100, 50) for x in ("a", "b", "c")]
+    plans = enumerate_facility_plans(points, FacilityPlanningConfig(max_facilities=1))
+
+    def scored(values: list[float]):
+        return [
+            p.model_copy(update={"objective_score": v}) for p, v in zip(plans, values, strict=True)
+        ]
+
+    a, b = scored([1, 0.55, 0]), scored([0, 0.55, 1])
+    choice = select_robust_plan({"am": a, "pm": b})
+    assert choice and choice[0] == ("b",)
+    assert choice[1]["am"] == pytest.approx(0.45)
+    assert select_robust_plan({"am": a[:1], "pm": b[1:]}) is None
+    with pytest.raises(AnalysisError):
+        select_robust_plan({})

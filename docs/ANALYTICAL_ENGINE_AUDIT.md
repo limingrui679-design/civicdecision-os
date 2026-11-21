@@ -171,3 +171,9 @@ external methodological review, or domain validation. Those remain separate rele
 - No engine result establishes municipal adoption, institutional integration, users, or impact.
 - Deep-city data, network routing, seven application suites, API/web product surfaces, large-scale
   performance work, and public release assurance remain later milestones.
+
+### Directed access at two departure times
+
+The Blue Line example reads the MBTA's archived [November 2026 feed](https://cdn.mbtace.com/archive/20261112.zip), checks the service calendar and day exceptions, and respects stop sequence and allowed boarding/alighting. Run `python scripts/compare_mbta_catchments.py MBTA_GTFS.zip --date 2026-11-19`. The observed input has SHA-256 `04cd2571fed0494c0c0dd2e30fa770140fd87ad7b6eb3c40265426c3c43d0772`, 430 scheduled trips and 12 station origins. Each origin has weight one. Wait time counts from a common ready time, and only a single ride or co-location is allowed.
+
+At 08:00 and 22:00, respectively, the best eligible one-site plan covered 12 and 11 stations within 15 minutes. The deterministic minimax selection was Airport. A 1.25 km geographic radius selected Aquarium and counted four stations. Evaluating Aquarium under the same timetables also yielded 12 and 11: these two sites tied under this objective. Station counts measure scheduled access, independently of population, actual delays, walking, transfers or facility utilization.

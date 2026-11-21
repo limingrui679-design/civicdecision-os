@@ -346,3 +346,7 @@ and the [Code of Conduct](CODE_OF_CONDUCT.md). Report vulnerabilities through
 Use [`CITATION.cff`](CITATION.cff) to cite the exact reviewed release. Code and documentation are
 licensed under [MIT](LICENSE). Downloaded data retain upstream licenses, terms, and attribution;
 see [Data attribution](docs/DATA_ATTRIBUTION.md). © 2026 Mingrui Li.
+
+### Service access by travel time
+
+The facility planner accepts a directed travel-time matrix in addition to geographic radii. Call `enumerate_facility_plans(points, config, travel_minutes=routes, minute_limit=15)` with `routes[resident_origin][candidate_site]` in minutes. Unobserved routes receive no coverage credit. Include a zero-minute route when the resident and site are co-located. Each site catchment is built once and overlapping service areas count residents once. Compare the same feasible plans under both standards to see which equity or investment conclusions depend on the travel assumption.
