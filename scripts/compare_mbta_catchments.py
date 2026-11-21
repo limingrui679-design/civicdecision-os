@@ -9,6 +9,8 @@ import io
 import json
 from collections import defaultdict
 from datetime import date
+from functools import lru_cache
+from math import ceil
 from pathlib import Path
 from zipfile import ZipFile
 
@@ -16,6 +18,7 @@ from civicdecision.optimization.facility import (
     DemandPoint,
     FacilityPlanningConfig,
     enumerate_facility_plans,
+    rank_reliable_access,
     select_best_plan,
     select_robust_plan,
 )
@@ -91,20 +94,29 @@ def compare(path: Path, day: date) -> dict[str, object]:
     config = FacilityPlanningConfig(
         max_facilities=1, facility_cost=1, budget=1, minimum_priority_coverage=0, cost_penalty=0
     )
-    scenarios = {}
-    info = {}
-    for stamp in ("08:00:00", "22:00:00"):
-        ready = seconds(stamp)
+
+    @lru_cache(maxsize=256)
+    def travel_times_at(ready: int):
         times: dict[str, dict[str, float]] = {s: {s: 0.0} for s in ids}
         for rows in trips.values():
             for i, (_, origin, _, depart, board, _) in enumerate(rows):
-                if not board or not ready <= depart <= ready + 900:
+                if not board or not ready <= depart <= ready + 25 * 60:
                     continue
                 for _, site, arrive, _, _, alight in rows[i + 1 :]:
                     if alight and arrive >= depart:
                         minutes = (arrive - ready) / 60
                         times[origin][site] = min(minutes, times[origin].get(site, float("inf")))
-        plans = enumerate_facility_plans(pts, config, travel_minutes=times, minute_limit=15)
+        return times
+
+    def plans_at(ready: int, minutes: int = 15):
+        return enumerate_facility_plans(
+            pts, config, travel_minutes=travel_times_at(ready), minute_limit=minutes
+        )
+
+    scenarios = {}
+    info = {}
+    for stamp in ("08:00:00", "22:00:00"):
+        plans = plans_at(seconds(stamp))
         scenarios[stamp] = plans
         best = select_best_plan(plans)
         assert best
@@ -112,7 +124,56 @@ def compare(path: Path, day: date) -> dict[str, object]:
     geographic = select_best_plan(enumerate_facility_plans(pts, config))
     robust = select_robust_plan(scenarios)
     assert robust and geographic
+
+    def departure_grid(offset_minutes: int, minutes: int):
+        snapshots = {
+            str(t): plans_at(t, minutes) for t in range((360 + offset_minutes) * 60, 23 * 3600, 600)
+        }
+        return rank_reliable_access(pts, snapshots, required_departures=ceil(0.90 * len(snapshots)))
+
+    grids = {
+        minutes: (departure_grid(0, minutes), departure_grid(5, minutes))
+        for minutes in (8, 10, 12, 15, 20, 25)
+    }
+    standards = []
+    for minutes, (train, validation) in grids.items():
+        selected = train[0].selected_ids
+        frozen = next(row for row in validation if row.selected_ids == selected)
+        standards.append(
+            {
+                "minute_limit": minutes,
+                "site": selected,
+                "fit_reliable_stations": len(train[0].reliable_ids),
+                "holdout_reliable_stations": len(frozen.reliable_ids),
+            }
+        )
+    training, held_out = grids[15]
+    mean_choice = min(training, key=lambda plan: (-plan.mean_need_share, plan.selected_ids))
+    selections = {
+        "reliable_access": training[0].selected_ids,
+        "mean_access": mean_choice.selected_ids,
+        "two_instant_minimax": robust[0],
+        "geographic_radius": geographic.selected_ids,
+    }
+    held_by_site = {plan.selected_ids: plan for plan in held_out}
+    policies = {}
+    for policy, sites in selections.items():
+        result = held_by_site[sites]
+        policies[policy] = {
+            "sites": sites,
+            "holdout_reliable_stations": len(result.reliable_ids),
+            "holdout_mean_covered_stations": result.mean_need_share * len(ids),
+            "holdout_departures_per_origin": result.departures_covered_by_origin,
+        }
     return {
+        "departure_reliability": {
+            "departure_grid": "06:00-22:50 every 10 minutes; validation offset +5 minutes",
+            "fit_departures": training[0].observed_departures,
+            "holdout_departures": held_out[0].observed_departures,
+            "required_departures": held_out[0].required_departures,
+            "policies": policies,
+            "service_standard_frontier": standards,
+        },
         "archive_sha256": hashlib.sha256(path.read_bytes()).hexdigest(),
         "service_date": day.isoformat(),
         "stations": len(ids),

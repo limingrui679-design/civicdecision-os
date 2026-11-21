@@ -140,3 +140,36 @@ def test_robust_choice_can_win_neither_period_and_must_satisfy_each_constraint()
     assert select_robust_plan({"am": a[:1], "pm": b[1:]}) is None
     with pytest.raises(AnalysisError):
         select_robust_plan({})
+
+
+def test_departure_reliability_counts_the_same_origins_across_departures() -> None:
+    from civicdecision.optimization.facility import rank_reliable_access
+
+    pts = [point(k, 0, i, 1, 0) for i, k in enumerate(("a", "b", "c"))]
+    config = FacilityPlanningConfig(max_facilities=1, minimum_priority_coverage=0)
+    # Both sites cover two origins on average. Only site B serves its pair at both times.
+    scenarios = {}
+    for name, intermittent in [("first", "a"), ("second", "c")]:
+        matrix: dict[str, dict[str, float]] = {p.id: {} for p in pts}
+        for origin in [intermittent, "b"]:
+            matrix[origin]["a"] = 5.0
+        for origin in ["a", "b"]:
+            matrix[origin]["b"] = 5.0
+        scenarios[name] = enumerate_facility_plans(
+            pts, config, travel_minutes=matrix, minute_limit=5
+        )
+    ranking = rank_reliable_access(pts, scenarios, required_departures=2)
+    assert [r.selected_ids for r in ranking] == [("b",), ("a",), ("c",)]
+    assert ranking[0].mean_need_share == ranking[1].mean_need_share
+    assert ranking[1].reliable_ids == ("b",)
+    assert ranking[1].departures_covered_by_origin == {"a": 1, "b": 2, "c": 1}
+    assert rank_reliable_access(pts, {"empty": []}, required_departures=1) == []
+    with pytest.raises(AnalysisError, match="scenario count"):
+        rank_reliable_access(pts, scenarios, required_departures=3)
+    with pytest.raises(AnalysisError, match="positive total"):
+        rank_reliable_access([], scenarios, required_departures=1)
+    with pytest.raises(AnalysisError, match="unambiguous"):
+        rank_reliable_access(pts, {"": []}, required_departures=1)
+    bogus = scenarios["first"][0].model_copy(update={"covered_ids": ("unknown",)})
+    with pytest.raises(AnalysisError, match="known demand"):
+        rank_reliable_access(pts, {"first": [bogus]}, required_departures=1)
