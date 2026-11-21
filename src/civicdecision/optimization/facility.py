@@ -171,3 +171,30 @@ def select_best_plan(plans: list[FacilityPlan]) -> FacilityPlan | None:
             plan.selected_ids,
         ),
     )[0]
+
+
+def select_robust_plan(
+    scenarios: dict[str, list[FacilityPlan]],
+) -> tuple[tuple[str, ...], dict[str, float]] | None:
+    """Minimize worst loss against each scenario's best feasible plan, then mean loss and ID."""
+    if not scenarios:
+        raise AnalysisError("provide at least one planning scenario")
+    regrets: dict[str, dict[tuple[str, ...], float]] = {}
+    for name, plans in sorted(scenarios.items()):
+        if not name or len({p.selected_ids for p in plans}) != len(plans):
+            raise AnalysisError("scenario names and plan keys must be unambiguous")
+        feasible = {p.selected_ids: p.objective_score for p in plans if p.feasible}
+        if not feasible:
+            return None
+        best = max(feasible.values())
+        regrets[name] = {ids: best - score for ids, score in feasible.items()}
+    shared = set.intersection(*(set(result) for result in regrets.values()))
+    if not shared:
+        return None
+
+    def ordering(ids: tuple[str, ...]) -> tuple[float, float, tuple[str, ...]]:
+        losses = [result[ids] for result in regrets.values()]
+        return max(losses), sum(losses), ids
+
+    chosen = min(shared, key=ordering)
+    return chosen, {name: results[chosen] for name, results in regrets.items()}
