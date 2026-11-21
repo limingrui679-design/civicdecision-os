@@ -107,3 +107,17 @@ def test_zero_need_priority_group_uses_safe_coverage_denominator() -> None:
         ),
     )
     assert all(plan.priority_coverage_rate == 1 for plan in plans)
+
+
+def test_access_standard_can_change_the_investment_choice() -> None:
+    points = [point("a", 0, 0, 80, 10), point("b", 0, 0.001, 20, 5)]
+    config = FacilityPlanningConfig(max_facilities=1, minimum_priority_coverage=0)
+    geographic = enumerate_facility_plans(points, config)
+    routes = {"a": {"a": 0, "b": 15}, "b": {"b": 0}}
+    network = enumerate_facility_plans(points, config, travel_minutes=routes, minute_limit=15)
+    assert [plan.covered_ids for plan in geographic] == [("a", "b"), ("a", "b")]
+    assert [plan.covered_ids for plan in network] == [("a",), ("a", "b")]
+    assert network[1].overall_coverage_rate == 1
+    assert select_best_plan(network) == network[1]
+    with pytest.raises(AnalysisError):
+        enumerate_facility_plans(points, config, travel_minutes={"x": {}}, minute_limit=15)

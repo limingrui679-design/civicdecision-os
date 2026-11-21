@@ -3,7 +3,7 @@
 from __future__ import annotations
 
 from itertools import combinations
-from math import ceil
+from math import ceil, isfinite
 
 from pydantic import Field, model_validator
 
@@ -53,29 +53,52 @@ class FacilityPlan(StrictModel):
         return "plan-" + "-".join(self.selected_ids)
 
 
-def _covered_points(
-    points: list[DemandPoint], selected: tuple[DemandPoint, ...], radius_km: float
-) -> tuple[DemandPoint, ...]:
-    return tuple(
-        point
-        for point in points
-        if any(
-            haversine_km(
-                point.latitude,
-                point.longitude,
-                facility.latitude,
-                facility.longitude,
-            )
-            <= radius_km
-            for facility in selected
-        )
-    )
+def _catchments(
+    points: list[DemandPoint],
+    radius: float,
+    travel_minutes: dict[str, dict[str, float]] | None,
+    minute_limit: float | None,
+) -> dict[str, frozenset[str]]:
+    """Index reachable residents once per candidate site, before plan enumeration."""
+    if travel_minutes is None and minute_limit is None:
+        neighbors: dict[str, set[str]] = {point.id: {point.id} for point in points}
+        for a, b in combinations(points, 2):
+            if haversine_km(a.latitude, a.longitude, b.latitude, b.longitude) <= radius:
+                neighbors[a.id].add(b.id)
+                neighbors[b.id].add(a.id)
+        return {site: frozenset(ids) for site, ids in neighbors.items()}
+    if (
+        travel_minutes is None
+        or minute_limit is None
+        or not isfinite(minute_limit)
+        or minute_limit < 0
+    ):
+        raise AnalysisError("provide a travel-time matrix and a finite nonnegative minute limit")
+    ids = {point.id for point in points}
+    if set(travel_minutes) - ids:
+        raise AnalysisError("travel-time matrix contains an unknown origin")
+    by_site: dict[str, set[str]] = {site: set() for site in ids}
+    for origin, destinations in travel_minutes.items():
+        for site, minutes in destinations.items():
+            if site not in ids or not isfinite(minutes) or minutes < 0:
+                raise AnalysisError("invalid travel-time destination or minutes")
+            if minutes <= minute_limit:
+                by_site[site].add(origin)
+    return {site: frozenset(origins) for site, origins in by_site.items()}
 
 
 def enumerate_facility_plans(
-    points: list[DemandPoint], config: FacilityPlanningConfig
+    points: list[DemandPoint],
+    config: FacilityPlanningConfig,
+    *,
+    travel_minutes: dict[str, dict[str, float]] | None = None,
+    minute_limit: float | None = None,
 ) -> list[FacilityPlan]:
-    """Enumerate every bounded candidate combination and retain infeasible plans."""
+    """Enumerate plans using a geographic radius or directed origin-to-site travel times.
+
+    In travel-time mode only supplied routes with times within the limit count;
+    provide explicit zero-minute routes for co-located origins where appropriate.
+    """
 
     if not points:
         raise AnalysisError("facility optimization requires at least one demand point")
@@ -94,12 +117,13 @@ def enumerate_facility_plans(
     priority_ids = {point.id for point in priority_points}
     total_priority_need = sum(point.estimated_need for point in priority_points)
 
+    catchments = _catchments(ordered_points, config.service_radius_km, travel_minutes, minute_limit)
     plans: list[FacilityPlan] = []
     maximum = min(config.max_facilities, len(ordered_points))
     for count in range(1, maximum + 1):
         for selected in combinations(ordered_points, count):
-            covered = _covered_points(ordered_points, selected, config.service_radius_km)
-            covered_ids = {point.id for point in covered}
+            covered_ids = frozenset().union(*(catchments[site.id] for site in selected))
+            covered = [point for point in ordered_points if point.id in covered_ids]
             need_covered = sum(point.estimated_need for point in covered)
             priority_need_covered = sum(
                 point.estimated_need for point in covered if point.id in priority_ids
